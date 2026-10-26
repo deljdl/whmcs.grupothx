@@ -9,6 +9,15 @@ if (!defined("WHMCS")){
 	die("Acesso restrito!");
 }
 
+
+die(
+    '__DIR__: ' . __DIR__ .
+    ' | dirname 1: ' . dirname(__DIR__) .
+    ' | dirname 2: ' . dirname(__DIR__, 2) .
+    ' | dirname 3: ' . dirname(__DIR__, 3)
+);
+
+
 require_once dirname(__FILE__, 3) . '/tarifasTHX.php';
 
 add_hook('InvoiceCreationPreEmail', 1, function($vars) {
