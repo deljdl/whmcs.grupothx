@@ -9,12 +9,7 @@ if (!defined("WHMCS")){
 	die("Acesso restrito!");
 }
 
-#REQUIRE TARIFAS OBRIGATÓRIO PARA NÃO DAR ERRO NO CRON
-if(empty($_SERVER['DOCUMENT_ROOT']))
-{
-    $_SERVER['DOCUMENT_ROOT'] = '/home/thxcom/public_html';
-}
-require_once($_SERVER['DOCUMENT_ROOT'].'/tarifasTHX.php');
+require_once dirname(__DIR__, 2) . '/tarifasTHX.php';
 
 add_hook('InvoiceCreationPreEmail', 1, function($vars) {
 
@@ -176,7 +171,7 @@ word-break:break-all;
 ';
 
 
-        require_once($_SERVER['DOCUMENT_ROOT'].'/thx/vendor/phpmailer/phpmailer/PHPMailerAutoload.php');
+        require_once dirname(__DIR__, 3) . '/vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
         $email = new PHPMailer();
         $email->WordWrap = 50;               // set word wrap
         $email->Priority = 1;
