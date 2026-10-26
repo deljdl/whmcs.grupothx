@@ -172,7 +172,7 @@ word-break:break-all;
 ';
 
 
-        require_once dirname(dirname(dirname(__DIR__))) . '/vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
+        require_once ROOT_WHMCS . 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
         $email = new PHPMailer();
         $email->WordWrap = 50;               // set word wrap
         $email->Priority = 1;
