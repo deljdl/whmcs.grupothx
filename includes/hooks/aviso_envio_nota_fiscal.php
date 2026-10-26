@@ -10,15 +10,7 @@ if (!defined("WHMCS")){
 }
 
 
-die(
-    '__DIR__: ' . __DIR__ .
-    ' | dirname 1: ' . dirname(__DIR__) .
-    ' | dirname 2: ' . dirname(__DIR__, 2) .
-    ' | dirname 3: ' . dirname(__DIR__, 3)
-);
-
-
-require_once dirname(__FILE__, 3) . '/tarifasTHX.php';
+require_once dirname(dirname(__DIR__)) . '/tarifasTHX.php';
 
 add_hook('InvoiceCreationPreEmail', 1, function($vars) {
 
@@ -180,7 +172,7 @@ word-break:break-all;
 ';
 
 
-        require_once dirname(__DIR__, 3) . '/vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
+        require_once dirname(dirname(dirname(__DIR__))) . '/vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
         $email = new PHPMailer();
         $email->WordWrap = 50;               // set word wrap
         $email->Priority = 1;
