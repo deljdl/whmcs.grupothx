@@ -5,12 +5,7 @@ use WHMCS\Database\Capsule;
 
 
 
-#REQUIRE TARIFAS OBRIGATÓRIO PARA NÃO DAR ERRO NO CRON
-if(empty($_SERVER['DOCUMENT_ROOT']))
-{
-    $_SERVER['DOCUMENT_ROOT'] = '/home/thxcom/public_html';
-}
-require_once($_SERVER['DOCUMENT_ROOT'].'/thx/tarifasTHX.php');
+require_once dirname(dirname(__DIR__)) . '/tarifasTHX.php';
 
 /**
  *
