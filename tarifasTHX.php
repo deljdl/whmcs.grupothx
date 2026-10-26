@@ -60,7 +60,7 @@ function linhaDigitavelParaCodigoBarras($linha)
 }
 function getBarCode($codigo, $imgStyle = 'display: block')
 {
-    require_once __DIR__ . '/../barcode/I2of5.php';
+    require_once ROOT_WHMCS . '/barcode/I2of5.php';
 
     $codigo = linhaDigitavelParaCodigoBarras($codigo);
 
@@ -99,7 +99,7 @@ function getNotaFiscal($idFatura, $class='btn-copy btn-nota', $style = 'display:
 {
     $arquivo = md5(NOTAS_TOKEN . $idFatura) . '.pdf';
 
-    $path = ROOT_WHMCS . 'thx/notasfiscais/' . $arquivo;
+    $path = ROOT_WHMCS . '/thx/notasfiscais/' . $arquivo;
 
     if (!file_exists($path)) {
         return '';
