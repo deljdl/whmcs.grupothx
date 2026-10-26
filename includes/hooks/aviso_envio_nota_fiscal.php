@@ -10,7 +10,7 @@ if (!defined("WHMCS")){
 }
 
 
-require_once dirname(dirname(__DIR__)) . '/tarifasTHX.php';
+require_once ROOT_WHMCS . '/tarifasTHX.php';
 
 add_hook('InvoiceCreationPreEmail', 1, function($vars) {
 
@@ -172,7 +172,7 @@ word-break:break-all;
 ';
 
 
-        require_once ROOT_WHMCS . 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
+        require_once ROOT_WHMCS . '/vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
         $email = new PHPMailer();
         $email->WordWrap = 50;               // set word wrap
         $email->Priority = 1;
