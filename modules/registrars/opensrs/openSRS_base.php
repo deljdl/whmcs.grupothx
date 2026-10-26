@@ -236,7 +236,7 @@ class openSRS_base extends PEAR {
      *
      */
 
-    function openSRS_base( $environment=NULL, $protocol=NULL, $regusername=NULL, $regprivatekey=NULL )
+    function __construct( $environment=NULL, $protocol=NULL, $regusername=NULL, $regprivatekey=NULL )
     {
 
         $this->PEAR();
@@ -335,7 +335,6 @@ class openSRS_base extends PEAR {
 #
 
     function send_cmd($request) {
-        global $HTTP_SERVER_VARS;
 
         if (!is_array($request)) {
             $data = array(
@@ -403,7 +402,7 @@ class openSRS_base extends PEAR {
             return $data;
         }
 
-        $request['registrant_ip'] = $HTTP_SERVER_VARS['REMOTE_ADDR'];
+        $request['registrant_ip'] = $_SERVER['REMOTE_ADDR'] ?? null;
 
         if ( strstr($request['action'], 'lookup') ) {
             # lookups are treated specially 
@@ -864,10 +863,10 @@ class openSRS_base extends PEAR {
             $this->_log('i',$data);
         } else {
             $data = $this->_CBC ? $this->_CBC->decrypt($buf) : $buf;
-            if (!$args['no_xml']) {
+            if (empty($args['no_xml'])) {
                 $data = $this->_OPS->decode($data);
             }
-            if ($args['binary']) {
+            if (!empty($args['binary'])) {
                 $temp = unpack('H*temp', $data);
                 $this->_log('r', 'BINARY: ' . $temp['temp'] );
             } else {
@@ -886,7 +885,7 @@ class openSRS_base extends PEAR {
 
     function send_data($message, $args=array()) {
 
-        if (!$args['no_xml']) {
+        if (empty($args['no_xml'])) {
             $message['protocol'] = $this->protocol;
             $data_to_send = $this->_OPS->encode( $message );
 
@@ -900,7 +899,7 @@ class openSRS_base extends PEAR {
             $data_to_send = $message;
         }
 
-        if ($args['binary']) {
+        if (!empty($args['binary'])) {
             $temp = unpack('H*temp', $message);
             $this->_log('s', 'BINARY: ' . $temp['temp'] );
         } else {
@@ -1130,7 +1129,7 @@ class openSRS_base extends PEAR {
             }
             
             if (preg_match('/^\s*Content-Length:\s+(\d+)\s*\r\n/i', $line, $matches ) ) {
-                $header{'content-length'} = (int)$matches[1];
+                $header['content-length'] = (int)$matches[1];
             } else {
                 $this->_OPS->_log('raw', 'e', 'UNEXPECTED READ: No Content-Length' );
                 $this->_OPS->_log('raw', 'r', $line);
@@ -1175,11 +1174,11 @@ class openSRS_base extends PEAR {
     
         $header = $this->readHeader($fh, $timeout);
     
-        if (!$header || !isset($header{'content-length'}) || (empty($header{'content-length'}))) {
+        if (!$header || !isset($header['content-length']) || (empty($header['content-length']))) {
             $this->_OPS->_log('raw', 'e', 'UNEXPECTED ERROR: No Content-Length header provided!' );
         }
     
-        $len = (int)$header{'content-length'};
+        $len = (int)$header['content-length'];
     
         $line = '';
         while (strlen($line) < $len) {

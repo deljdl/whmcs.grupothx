@@ -50,7 +50,7 @@
 <div class="row health-status-col-margin">
     <div class="health-status-col health-status-col-danger">
 
-        <div id="{$id}" class="panel panel-health-check panel-health-check-danger">
+        <div class="panel panel-health-check panel-health-check-danger">
             <div class="panel-heading">
                 <i class="fas fa-times-circle"></i>
                 {lang key="healthCheck.dangerChecks"}
@@ -60,8 +60,8 @@
             </div>
             <div class="panel-body">
 
-                {foreach $checks.danger as $id => $check}
-                    <div id="{$id}" class="panel">
+                {foreach $checks.danger as $check}
+                    <div id="{$check->getName()}" class="panel">
                         <div class="panel-heading">
 
                             {$check->getTitle()}
@@ -71,7 +71,7 @@
                         </div>
                     </div>
                 {foreachelse}
-                    <div id="{$id}" class="panel">
+                    <div id="health-check-danger-no-failure" class="panel">
                         <div class="panel-heading">
                             {lang key="healthCheck.noChecksFailedTitle"}
                         </div>
@@ -86,7 +86,7 @@
     </div>
     <div class="health-status-col">
 
-        <div id="{$id}" class="panel panel-health-check panel-health-check-warning">
+        <div class="panel panel-health-check panel-health-check-warning">
             <div class="panel-heading">
                 <i class="fas fa-exclamation-triangle"></i>
                 {lang key="healthCheck.warningChecks"}
@@ -96,8 +96,8 @@
             </div>
             <div class="panel-body">
 
-                {foreach $checks.warning as $id => $check}
-                    <div id="{$id}" class="panel">
+                {foreach $checks.warning as $check}
+                    <div id="{$check->getName()}" class="panel">
                         <div class="panel-heading">
                             {$check->getTitle()}
                         </div>
@@ -106,7 +106,7 @@
                         </div>
                     </div>
                 {foreachelse}
-                    <div id="{$id}" class="panel">
+                    <div id="health-check-warning-no-failure" class="panel">
                         <div class="panel-heading">
                             {lang key="healthCheck.noChecksFailedTitle"}
                         </div>
@@ -131,8 +131,8 @@
             </div>
             <div class="panel-body">
 
-                {foreach $checks.success as $id => $check}
-                    <div id="{$id}" class="panel">
+                {foreach $checks.success as $check}
+                    <div id="{$check->getName()}" class="panel">
                         <div class="panel-heading">
                             {$check->getTitle()}
                         </div>
@@ -157,3 +157,16 @@
         {lang key="healthCheck.exportAsText"}
     </a>
 </div>
+
+<div class="hidden">
+    <span class="cloneable-alert icon-alert pull-right"><i class="fas fa-exclamation-circle"></i></span>
+</div>
+
+<script>
+    jQuery(window).load(function() {
+        var targetElement = jQuery('.health-status-col .panel :target');
+        var clonedAlert = jQuery('.cloneable-alert').clone().removeClass('cloneable-alert');
+        targetElement.addClass('check-highlight');
+        targetElement.find('.panel-heading').append(clonedAlert);
+    });
+</script>

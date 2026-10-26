@@ -6,8 +6,10 @@
 <link type="text/css" rel="stylesheet" href="{$BASE_PATH_CSS}/ion.rangeSlider.css" property="stylesheet" />
 <!-- RangeSlider CSS -->
 <link type="text/css" rel="stylesheet" href="{$BASE_PATH_CSS}/ion.rangeSlider.skinHTML5.css" property="stylesheet" />
+<!-- Product Recommendations CSS -->
+<link type="text/css" rel="stylesheet" href="{$BASE_PATH_CSS}/recommendations.min.css" property="stylesheet" />
 <!-- Core CSS -->
-<link type="text/css" rel="stylesheet" href="{$WEB_ROOT}/templates/orderforms/{$carttpl}/css/style.css" property="stylesheet" />
+<link type="text/css" rel="stylesheet" href="{assetPath file="style.css"}" property="stylesheet" />
 
 <script>
 jQuery(document).ready(function () {
@@ -32,15 +34,15 @@ jQuery(document).ready(function () {
 {else}
 
     <div class="row row-product-selection">
-        <div class="col-xs-3 product-selection-sidebar" id="premiumComparisonSidebar">
+        <div class="col-md-3 sidebar product-selection-sidebar" id="premiumComparisonSidebar">
             {include file="orderforms/standard_cart/sidebar-categories.tpl"}
         </div>
-        <div class="col-xs-12">
+        <div class="col-md-12">
 
             <div id="order-cloud_slider">
                 <section class="plans-full-main">
                     {if $showSidebarToggle}
-                        <div class="pull-left">
+                        <div class="pull-left float-left">
                             <button type="button" class="btn btn-default btn-sm" id="btnShowSidebar">
                                 <i class="fas fa-arrow-circle-right"></i>
                                 {$LANG.showMenu}
@@ -63,13 +65,13 @@ jQuery(document).ready(function () {
                                         {/if}
                                     </div>
                                     <div class="images-container">
-                                        <img src="{$WEB_ROOT}/templates/orderforms/{$carttpl}/img/sky-hr.png" alt="">
+                                        <img src="{assetPath ns="img" file="sky-hr.png"}" alt="">
                                     </div>
                                 </div>
 
                                 {if $productGroup.tagline}
                                     <div id="tagline" class="tag-line-head">
-                                        <h5>{$productGroup.tagline}</h5>
+                                        <h5 class="font-size-14">{$productGroup.tagline}</h5>
                                     </div>
                                 {/if}
 
@@ -134,9 +136,9 @@ jQuery(document).ready(function () {
                                     <!-- Start: Feature 01 -->
                                     <div class="col-md-12 feature-container clearfix">
                                         <div class="left-img">
-                                            <img src="{$WEB_ROOT}/templates/orderforms/{$carttpl}/img/feat-img-01.png" alt="">
+                                            <img src="{assetPath ns="img" file="feat-img-01.png"}" alt="">
                                         </div>
-                                        <h4>
+                                        <h4 class="font-size-18">
                                             {$LANG.cloudSlider.feature01Title}
                                         </h4>
                                         <p>
@@ -151,9 +153,9 @@ jQuery(document).ready(function () {
                                     <!-- Start: Feature 02 -->
                                     <div class="col-md-12 feature-container clearfix">
                                         <div class="right-img">
-                                            <img src="{$WEB_ROOT}/templates/orderforms/{$carttpl}/img/feat-img-02.png" alt="">
+                                            <img src="{assetPath ns="img" file="feat-img-02.png"}" alt="">
                                         </div>
-                                        <h4>
+                                        <h4 class="font-size-18">
                                             {$LANG.cloudSlider.feature02Title}
                                         </h4>
                                         <p>
@@ -170,7 +172,7 @@ jQuery(document).ready(function () {
                                         <div class="left-img">
                                             <img src="{$WEB_ROOT}/templates/orderforms/{$carttpl}/img/feat-img-03.jpg" alt="">
                                         </div>
-                                        <h4>
+                                        <h4 class="font-size-18">
                                             {$LANG.cloudSlider.feature03Title}
                                         </h4>
                                         <p>
@@ -187,7 +189,7 @@ jQuery(document).ready(function () {
                             <!-- End: Features Content -->
 
                             {if $productGroup}
-                                <h3 class="text-center">{$LANG.cloudSlider.selectProductLevel}</h3>
+                                <h3 class="text-center font-size-24">{$LANG.cloudSlider.selectProductLevel}</h3>
 
                                 <!-- Start: Price Calculation Box -->
                                 <div class="price-calc-container">
@@ -224,6 +226,8 @@ jQuery(document).ready(function () {
 
         </div>
     </div>
+
+    {include file="orderforms/cloud_slider/recommendations-modal.tpl"}
 {/if}
 <!-- RangeSlider JS -->
 <script type="text/javascript" src="{$BASE_PATH_JS}/ion.rangeSlider.js"></script>
@@ -241,7 +245,7 @@ var allProducts = {
     {foreach $products as $num => $product}
         "{$num}": {
             "name": "{$product.name}",
-            "desc": "{$product.featuresdesc|nl2br|trim}",
+            "desc": "{$product.featuresdesc|nl2br|trim|regex_replace:"/[\r\n]/":''}",
             {if isset($product.pid)}
                 "pid": "{$product.pid}",
                 "displayPrice": "{$product.pricing.minprice.price}",
@@ -262,7 +266,9 @@ var allProducts = {
                         "{$featureKey}": "{$feature.$num}",
                     {/if}
                 {/foreach}
-            }
+            },
+            productUrl: '{$product.productUrl}',
+            hasRecommendations: '{$product.hasRecommendations}'
         },
     {/foreach}
 };
@@ -304,29 +310,27 @@ var rangeSliderValues = {
 
 function updateFeaturesList(data)
 {
-    var featureName = "";
-    var featureMarkup = "";
-    var i = parseInt(data.from);
+    var featureName = "",
+        featureMarkup = "",
+        i = parseInt(data.from);
     if (isNaN(i)) {
         i = 0;
         jQuery(".irs-single").text(sliderProductNames[0]);
         jQuery(".irs-grid-text").text('');
     }
-
-    var pid = allProducts[i].pid;
-    var bid = allProducts[i].bid;
-    var desc = allProducts[i].desc;
-    var features = allProducts[i].features;
-    var featurePercentages = allProducts[i].featurePercentages;
-    var displayCycle = '<br><small>' + allProducts[i].displayCycle + '</small>';
-    var displayPrice = allProducts[i].displayPrice + displayCycle;
-
-    var selectedId = data.input[0].id;
-    var featuresTargetArea = "";
-    var priceTargetArea = "";
-    var orderNowArea = "";
-    var selfLink = "{$smarty.server.PHP_SELF}";
-    var buyLink = "";
+    var pid = allProducts[i].pid,
+        bid = allProducts[i].bid,
+        desc = allProducts[i].desc,
+        features = allProducts[i].features,
+        featurePercentages = allProducts[i].featurePercentages,
+        displayCycle = '<br><small>' + allProducts[i].displayCycle + '</small>',
+        displayPrice = allProducts[i].displayPrice + displayCycle,
+        selectedId = data.input[0].id,
+        featuresTargetArea = "",
+        priceTargetArea = "",
+        orderNowArea = "",
+        buyLink = allProducts[i].productUrl,
+        hasRecommendations = allProducts[i].hasRecommendations;
 
     if (selectedId == 'scroll-top') {
         if (sliderActivated) {
@@ -342,13 +346,6 @@ function updateFeaturesList(data)
         }
     }
 
-    // Create the Order Now link.
-    if (typeof pid !== "undefined") {
-        buyLink = selfLink + "?a=add&pid=" + pid;
-    } else {
-        buyLink = selfLink + "?a=add&bid=" + bid;
-    }
-
     // Clear the description.
     jQuery("#productFeaturesTop").empty();
     jQuery("#productFeaturesBottom").empty();
@@ -360,6 +357,11 @@ function updateFeaturesList(data)
     // Update the href for the Order Now button.
     jQuery("#product-order-button").attr("href", buyLink);
     jQuery("#product-order-button-bottom").attr("href", buyLink);
+
+    // Update data-has-recommendations attribute
+    if (hasRecommendations) {
+        jQuery('#product-order-button').attr('data-has-recommendations', hasRecommendations);
+    }
 
     for (featureName in features) {
         featureMarkup = '<div class="col-md-3 container-with-progress-bar">' +
@@ -388,4 +390,4 @@ jQuery("#scroll-bottom").ionRangeSlider(rangeSliderValues);
 
 sliderActivated = true;
 </script>
-
+<script src="{$BASE_PATH_JS}/whmcs/recommendations.min.js"></script>

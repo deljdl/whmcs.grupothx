@@ -1,5 +1,100 @@
 # PHPMailer Change Log
 
+## Version 6.2.0
+* PHP 8.0 compatibility, many thanks to @jrf_nl!
+* Switch from PHP CS Fixer to PHP CodeSniffer for coding standards
+* Create class constants for the debug levels in the POP3 class
+* Improve French, Slovenian, and Ukrainian translations
+* Improve file upload examples so file extensions are retained
+* Resolve PHP 8 line break issues due to a very old PHP bug being fixed
+* Avoid warnings when using old openssl functions
+* Improve Travis-CI build configuration
+
+## Version 6.1.8 (October 9th, 2020)
+* Mark `ext-hash` as required in composer.json. This has long been required, but now it will cause an error at install time rather than runtime, making it easier to diagnose
+* Make file upload examples safer
+* Update links to SMTP testing servers
+* Avoid errors when set_time_limit is disabled (you need better hosting!)
+* Allow overriding auth settings for local tests; makes it easy to run tests using HELO
+* Recover gracefully from errors during keepalive sessions
+* Add AVIF MIME type mapping
+* Prevent duplicate `To` headers in BCC-only messages when using `mail()`
+* Avoid file function problems when attaching files from Windows UNC paths
+* Improve German, Bahasa Indonesian, Filipino translations
+* Add Javascript-based example
+* Increased test coverage
+
+## Version 6.1.7 (July 14th, 2020)
+* Split SMTP connection into two separate methods
+* Undo BC break in PHP versions 5.2.3 - 7.0.0 introduced in 6.1.2 when injecting callables for address validation and HTML to text conversion
+* Save response to SMTP welcome banner as other responses are saved
+* Retry stream_select if interrupted by a signal
+
+## Version 6.1.6 (May 27th, 2020)
+* **SECURITY** Fix insufficient output escaping bug in file attachment names. CVE-2020-13625. Reported by Elar Lang of Clarified Security.
+* Correct Armenian ISO language code from `am` to `hy`, add mapping for fallback
+* Use correct timeout property in debug output
+
+## Version 6.1.5 (March 14th, 2020)
+* Reject invalid custom headers that are empty or contain breaks
+* Various fixes for DKIM issues, especially when using `mail()` transport
+* Drop the `l=` length tag from DKIM signatures; it's a mild security risk
+* Ensure CRLF is used explicitly when needed, rather than `static::$LE`
+* Add a method for trimming header content consistently
+* Some minor tweaks to resolve static analyser complaints
+* Check that attachment files are readable both when adding *and* when sending
+* Work around Outlook bug in mishandling MIME preamble
+* Danish translation improvements
+
+## Version 6.1.4 (December 10th, 2019)
+* Clean up hostname handling
+* Avoid IDN error on older PHP versions, prep for PHP 8.0
+* Don't force RFC2047 folding unnecessarily
+* Enable tests on full release of PHP 7.4
+
+## Version 6.1.3 (November 21st, 2019) 
+* Fix an issue preventing injected debug handlers from working
+* Fix an issue relating to connection timeout
+* Add `SMTP::MAX_REPLY_LENGTH` constant
+* Remove some dev dependencies; phpdoc no longer included
+* Fix an issue where non-compliant servers returning bare codes caused an SMTP hang
+
+## Version 6.1.2 (November 13th, 2019) 
+* Substantial revision of DKIM header generation
+* Use shorter hashes for auto-generated CID values
+* Fix format of content-id headers, and only use them for inline attachments
+* Remove all use of XHTML
+* Lots of coding standards cleanup
+* API docs are now auto-updated via GitHub actions
+* Fix header separation bug created in 6.1.1
+* Fix misidentification of background attributes in SVG images in msgHTML
+
+## Version 6.1.1 (September 27th 2019)
+* Fix misordered version tag
+
+## Version 6.1.0 (September 27th 2019)
+* Multiple bug fixes for folding of long header lines, thanks to @caugner
+* Add support for [RFC2387 child element content-type hint](https://tools.ietf.org/html/rfc2387#section-3.1) in `multipart/related` structures.
+* Support for Ical event methods other than `REQUEST`, thanks to @puhr-mde
+* Change header folding and param separation to use spaces instead of tabs
+* Use ; to separate multiple MIME header params
+* Add support for RFC3461 DSN messages
+* IMAP example code fixed
+* Use PHP temp streams instead of temp files
+* Allow for longer SMTP error codes
+* Updated Brazilian Portuguese translation
+* Throw exceptions on invalid encoding values
+* Add Afrikaans translation, thanks to @Donno191
+* Updated Farsi/Persian translation
+* Add PHP 7.4 to test config
+* Remove some ambiguity about setting XMailer property
+* Improve error checking in mailing list example
+* Drop PHP 5.5 from CI config as it's no longer supported by Travis-CI
+* Fix S/MIME signing
+* Add constants for encryption type
+* More consistent use of constants for encryption, charset, encoding
+* Add PHPMailer logo images
+
 ## Version 6.0.7 (February 1st 2019)
 * Include RedHat GPL Cooperation Commitment - see the `COMMITMENT` file for details.
 * Don't exclude composer.json from git exports as it breaks composer updates in projects that use PHPMailer

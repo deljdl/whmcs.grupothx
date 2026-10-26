@@ -11,9 +11,16 @@ jQuery(document).ready(function() {
                 {
                     'bSortable': false,
                     'aTargets': [0, 1, 3]
+                },
+                {
+                    "className": "dt-body-center",
+                    "targets": [0, 1]
                 }
             ],
-            'order': [5, 'desc']
+            'order': [5, 'desc'],
+            "oLanguage": {
+                "sSearch": "Search Subject:",
+            }
         }
     );
 
@@ -36,6 +43,9 @@ jQuery(document).ready(function() {
     jQuery(document).on('click', '#ticketsClose,#ticketsDelete,#ticketsMerge', function (event)
     {
         event.preventDefault();
+        if (jQuery(this).attr('disabled')) {
+            return;
+        }
         var type = jQuery(this).attr('id'),
             name = eval(type);
 

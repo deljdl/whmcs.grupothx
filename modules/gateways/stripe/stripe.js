@@ -34,9 +34,9 @@ function initStripe() {
             enable_stripe();
             if (selectedCard.val() !== 'new') {
                 get_existing_token(selectedCard.val());
-                elementsDiv.hide();
+                elementsDiv.slideUp();
                 frm.off('submit.stripe');
-                existingCvv.hide();
+                existingCvv.slideUp();
                 if (amount !== '000') {
                     frm.on('submit.stripe', processExisting);
                 }
@@ -51,7 +51,7 @@ function initStripe() {
                 enable_stripe();
                 if (newOrExistingValue !== 'new') {
                     get_existing_token(newOrExistingValue);
-                    elementsDiv.hide();
+                    elementsDiv.slideUp();
                     frm.off('submit.stripe');
                     if (amount !== '000') {
                         frm.on('submit.stripe', processExisting);
@@ -61,7 +61,7 @@ function initStripe() {
                 disable_stripe();
             }
         });
-        newOrExisting.on('ifChecked', function() {
+        jQuery(document).on('ifChecked', 'input[name="ccinfo"]', function() {
             frm.off('submit.stripe');
             selectedPaymentMethod = jQuery('input[name="paymentmethod"]:checked').val();
             if (selectedPaymentMethod !== 'stripe') {
@@ -72,7 +72,7 @@ function initStripe() {
                 enable_stripe();
             } else {
                 get_existing_token(jQuery(this).val());
-                elementsDiv.hide();
+                elementsDiv.slideUp();
                 frm.off('submit.stripe');
                 if (amount !== '000') {
                     frm.on('submit.stripe', processExisting);
@@ -86,7 +86,7 @@ function initStripe() {
             );
             elementsDiv = jQuery('#stripeElements');
             hide_cc_fields();
-            elementsDiv.hide().removeClass('hidden').show();
+            elementsDiv.slideDown();
 
             card.addEventListener('change', cardListener);
             cardExpiryElements.addEventListener('change', cardListener);
@@ -100,7 +100,7 @@ function initStripe() {
                 );
                 elementsDiv = jQuery('#stripeElements');
                 hide_cc_fields();
-                elementsDiv.hide().removeClass('hidden').show();
+                elementsDiv.slideDown();
 
                 newCcForm.off('submit.stripe');
                 newCcForm.on('submit.stripe', addNewCardClientSide);
@@ -109,7 +109,7 @@ function initStripe() {
                 cardCvcElements.addEventListener('change', cardListener);
             } else {
                 disable_stripe();
-                newCcForm.find('.cc-details').show();
+                newCcForm.find('.cc-details').slideDown();
             }
         });
     } else if (paymentForm.length) {
@@ -127,7 +127,7 @@ function initStripe() {
                 enable_payment_stripe();
             } else {
                 get_existing_token(jQuery(this).val());
-                jQuery('#stripeElements').hide();
+                jQuery('#stripeElements').slideUp();
                 paymentForm.off('submit.stripe');
                 paymentForm.on('submit.stripe', processExisting);
                 if (card.hasRegisteredListener('change')) {
@@ -137,7 +137,7 @@ function initStripe() {
         });
         enablePaymentRequestButton();
     } else if (adminCreditCard.length) {
-        adminCreditCard.find('#cctype').closest('tr').hide().remove();
+        adminCreditCard.find('#cctype').closest('tr').slideUp().remove();
         adminCreditCard.find('#inputCardNumber')
             .closest('div')
             .html('<div id="elementCardNumber" class="form-control"></div>');
@@ -171,7 +171,16 @@ function initStripe() {
 }
 
 function validateStripe(event) {
-    var paymentMethod = jQuery('input[name="paymentmethod"]:checked'),
+    if (
+        typeof recaptchaValidationComplete !== 'undefined'
+        && typeof recaptchaType !== 'undefined'
+        && recaptchaType === 'invisible'
+        && recaptchaValidationComplete === false
+    ) {
+        event.preventDefault();
+        return;
+    }
+    let paymentMethod = jQuery('input[name="paymentmethod"]:checked'),
         frm = elementsDiv.closest('form'),
         displayError = jQuery('.gateway-errors,.assisted-cc-input-feedback').first();
 
@@ -183,127 +192,142 @@ function validateStripe(event) {
     frm.find('button[type="submit"],input[type="submit"]')
         .prop('disabled', true)
         .addClass('disabled')
-        .find('span').toggleClass('hidden');
+        .find('span').toggle();
 
-    stripe.createPaymentMethod(
-        'card',
-        card
-    ).then(function(result) {
-        if (result.error) {
-            var error = result.error.message;
-            if (error) {
-                displayError.html(error);
-                if (displayError.hasClass('hidden')) {
-                    displayError.removeClass('hidden').show();
-                }
-                scrollToGatewayInputError();
-            }
-        } else {
-            WHMCS.http.jqClient.jsonPost({
-                url: WHMCS.utils.getRouteUrl('/stripe/payment/intent'),
-                data: frm.serialize() + '&payment_method_id=' + result.paymentMethod.id,
-                success: function(response) {
-                    if (response.success) {
-                        //payment has been successful already at this point
-                        stripeResponseHandler(response.token);
-                    } else if (response.two_factor) {
-                        stripeResponseHandler('');
-                    } else {
-                        stripe.handleCardPayment(
-                            response.token,
-                            card
-                        ).then(function(result) {
-                            if (result.error) {
-                                var error = result.error.message;
-                                if (error) {
-                                    displayError.html(error);
-                                    if (displayError.hasClass('hidden')) {
-                                        displayError.removeClass('hidden').show();
-                                    }
-                                    scrollToGatewayInputError();
-                                }
-                            } else {
-                                stripeResponseHandler(result.paymentIntent.id);
-                            }
-                        });
-
-                    }
-                },
-                warning: function(error) {
-                    WHMCS.form.reloadCaptcha();
-                    displayError.html(error);
-                    if (displayError.hasClass('hidden')) {
-                        displayError.removeClass('hidden').show();
-                    }
-                    scrollToGatewayInputError();
-                },
-                fail: function(error) {
-                    displayError.html(error);
-                    if (displayError.hasClass('hidden')) {
-                        displayError.removeClass('hidden').show();
-                    }
-                    scrollToGatewayInputError();
-                }
-            });
-        }
-    });
-    // Prevent the form from being submitted:
-    return false;
-}
-
-function processExisting(event)
-{
-    var frm = elementsDiv.closest('form'),
-        displayError = jQuery('.gateway-errors,.assisted-cc-input-feedback').first();
-
-    frm.find('.gateway-errors').html('').addClass('hidden');
-    event.preventDefault();
-
-    // Disable the submit button to prevent repeated clicks:
-    frm.find('button[type="submit"],input[type="submit"]')
-        .prop('disabled', true)
-        .addClass('disabled')
-        .find('span').toggleClass('hidden');;
 
     WHMCS.http.jqClient.jsonPost({
         url: WHMCS.utils.getRouteUrl('/stripe/payment/intent'),
-        data: frm.serialize() + '&payment_method_id=' + existingToken,
+        data: frm.serialize(),
         success: function(response) {
             if (response.success) {
-                //payment has been successful already at this point
-                stripeResponseHandler(response.token);
-            } else {
-                stripe.handleCardPayment(
-                    response.token
+                stripeResponseHandler(null);
+            } else if (response.two_factor) {
+                stripeResponseHandler(null);
+            } else if (response.validation_feedback) {
+                showCheckoutError(response.validation_feedback, displayError);
+                scrollToGatewayInputError();
+                WHMCS.form.reloadCaptcha();
+            } else if (response.requires_payment) {
+                stripe.confirmCardPayment(
+                    response.token,
+                    {
+                        payment_method: {
+                            'card': card,
+                            'billing_details': response.billing_details,
+                            'metadata': response.metadata
+                        }
+                    },
                 ).then(function(result) {
                     if (result.error) {
                         var error = result.error.message;
                         if (error) {
-                            displayError.html(error);
-                            if (displayError.hasClass('hidden')) {
-                                displayError.removeClass('hidden').show();
-                            }
+                            showCheckoutError(error, displayError);
                             scrollToGatewayInputError();
+                            WHMCS.form.reloadCaptcha();
                         }
                     } else {
-                        stripeResponseHandler(result.paymentIntent.id);
+                        stripeResponseHandler(null);
+                    }
+                });
+            } else {
+                stripe.confirmCardPayment(
+                    response.token
+                ).then(function(result) {
+                    if (result.error) {
+                        showCheckoutError(result.error?.message, displayError);
+                        scrollToGatewayInputError();
+                        WHMCS.form.reloadCaptcha();
+                    } else {
+                        stripeResponseHandler(null);
                     }
                 });
 
             }
         },
         warning: function(error) {
+            showCheckoutError(defaultErrorMessage, displayError);
+            scrollToGatewayInputError();
             WHMCS.form.reloadCaptcha();
-            displayError.html(error);
-            if (displayError.hasClass('hidden')) {
-                displayError.removeClass('hidden').show();
+        },
+        fail: function(error) {
+            showCheckoutError(defaultErrorMessage, displayError);
+            scrollToGatewayInputError();
+        }
+    });
+
+    // Prevent the form from being submitted:
+    return false;
+}
+
+function processExisting(event)
+{
+    if (
+        typeof recaptchaValidationComplete !== 'undefined'
+        && typeof recaptchaType !== 'undefined'
+        && recaptchaType === 'invisible'
+        && recaptchaValidationComplete === false
+    ) {
+        event.preventDefault();
+        return;
+    }
+    var frm = elementsDiv.closest('form'),
+        displayError = jQuery('.gateway-errors,.assisted-cc-input-feedback').first();
+
+    frm.find('.gateway-errors').html('').slideUp();
+    event.preventDefault();
+
+    // Disable the submit button to prevent repeated clicks:
+    frm.find('button[type="submit"],input[type="submit"]')
+        .prop('disabled', true)
+        .addClass('disabled')
+        .find('span').toggle();
+
+    WHMCS.http.jqClient.jsonPost({
+        url: WHMCS.utils.getRouteUrl('/stripe/payment/intent'),
+        data: frm.serialize() + '&payment_method_id=' + existingToken,
+        success: function(response) {
+            if (response.success) {
+                stripeResponseHandler(null);
+            } else if (response.validation_feedback) {
+                // An error has been received.
+                displayError.html(response.validation_feedback);
+                if (displayError.not(':visible')) {
+                    displayError.slideDown();
+                }
+                scrollToGatewayInputError();
+                WHMCS.form.reloadCaptcha();
+            } else {
+                stripe.confirmCardPayment(
+                    response.token
+                ).then(function(result) {
+                    if (result.error) {
+                        var error = result.error.message;
+                        if (error) {
+                            displayError.html(error);
+                            if (displayError.not(':visible')) {
+                                displayError.slideDown();
+                            }
+                            scrollToGatewayInputError();
+                            WHMCS.form.reloadCaptcha();
+                        }
+                    } else {
+                        stripeResponseHandler(null);
+                    }
+                });
+            }
+        },
+        warning: function(error) {
+            WHMCS.form.reloadCaptcha();
+            displayError.html(defaultErrorMessage);
+            if (displayError.not(':visible')) {
+                displayError.slideDown();
             }
             scrollToGatewayInputError();
         },
         fail: function(error) {
-            displayError.html(error);
-            if (displayError.hasClass('hidden')) {
-                displayError.removeClass('hidden').show();
+            displayError.html(defaultErrorMessage);
+            if (displayError.not(':visible')) {
+                displayError.slideDown();
             }
             scrollToGatewayInputError();
         }
@@ -312,16 +336,17 @@ function processExisting(event)
 
 function stripeResponseHandler(token) {
     var frm = elementsDiv.closest('form');
-    frm.find('.gateway-errors,.assisted-cc-input-feedback').html('').addClass('hidden');
-    // Insert the token ID into the form so it gets submitted to the server:
-    frm.append(jQuery('<input type="hidden" name="remoteStorageToken">').val(token));
+    frm.find('.gateway-errors,.assisted-cc-input-feedback').html('').slideUp();
+    if (token !== null) {
+        frm.append(jQuery('<input type="hidden" name="remoteStorageToken">').val(token));
+    }
     frm.find('button[type="submit"],input[type="submit"]')
         .find('i.fas,i.far,i.fal,i.fab')
         .removeAttr('class')
         .addClass('fas fa-spinner fa-spin');
 
     if (!modalInput) {
-        elementsDiv.hide();
+        elementsDiv.slideUp();
     }
 
     // Submit the form:
@@ -361,7 +386,7 @@ function enable_stripe() {
         inputDescriptionContainer = jQuery('#inputDescriptionContainer');
     hide_cc_fields();
 
-    elementsDiv.hide().removeClass('hidden').show();
+    elementsDiv.slideDown();
     card.addEventListener('change', cardListener);
     cardExpiryElements.addEventListener('change', cardListener);
     cardCvcElements.addEventListener('change', cardListener);
@@ -371,7 +396,7 @@ function enable_stripe() {
     } else {
         frm.on('submit.stripe', validateStripe);
     }
-    inputDescriptionContainer.addClass('col-md-offset-3');
+    inputDescriptionContainer.addClass('col-md-offset-3 offset-md-3');
 }
 
 function disable_stripe() {
@@ -395,7 +420,7 @@ function disable_stripe() {
         var firstVisible = jQuery('input[name="ccinfo"]:visible').first();
         if (firstVisible.val() === 'new') {
             if (showLocal) {
-                cardInputs.show();
+                cardInputs.slideDown();
             }
         } else {
             firstVisible.click();
@@ -412,7 +437,7 @@ function disable_stripe() {
     if (cardCvcElements.hasRegisteredListener('change')) {
         cardCvcElements.removeEventListener('change', cardListener);
     }
-    inputDescriptionContainer.removeClass('col-md-offset-3');
+    inputDescriptionContainer.removeClass('col-md-offset-3 offset-md-3');
 }
 
 function enable_payment_stripe() {
@@ -420,7 +445,7 @@ function enable_payment_stripe() {
 
     paymentForm.find('#inputCardNumber').closest('div.form-group').remove();
     paymentForm.find('#inputCardExpiry').closest('div.form-group').remove();
-    elementsDiv.hide().removeClass('hidden').show();
+    elementsDiv.slideDown();
     card.addEventListener('change', cardListener);
     cardExpiryElements.addEventListener('change', cardListener);
     cardCvcElements.addEventListener('change', cardListener);
@@ -455,7 +480,7 @@ function enablePaymentRequestButton() {
                 }
                 if (jQuery('#paymentRequestButton').length === 0) {
                     elementsDiv.prepend(
-                        '<div class="row"><div class="col-md-4 col-md-offset-4">' +
+                        '<div class="row"><div class="col-md-4 col-md-offset-4 offset-md-4">' +
                         '<div id="paymentRequestButton"></div>' +
                         '</div></div>'
                     );
@@ -464,62 +489,133 @@ function enablePaymentRequestButton() {
             }
         });
 
-        paymentRequest.on('paymentmethod', function(ev) {
-            var paymentMethodId = ev.paymentMethod.id,
-                paymentIntentId = null,
-                event = ev,
-                frm = elementsDiv.closest('form');
-            frm.find('.gateway-errors,.assisted-cc-input-feedback').html('').addClass('hidden');
-            frm.find('button[type="submit"],input[type="submit"]')
-                .addClass('disabled')
-                .prop('disabled', true)
-                .find('i.fas,i.far,i.fal,i.fab')
-                .removeAttr('class')
-                .addClass('fas fa-spinner fa-spin');
-            WHMCS.http.jqClient.jsonPost({
-                url: WHMCS.utils.getRouteUrl('/stripe/payment/intent'),
-                data: frm.serialize() + '&payment_method_id=' + paymentMethodId,
-                success: function(response) {
-                    paymentIntentId = response.token;
-                    if (response.success) {
-                        event.complete('success');
-                        stripeResponseHandler(response.token);
-                    } else {
-                        // Let Stripe.js handle the rest of the payment flow.
-                        stripe.handleCardPayment(paymentIntentId).then(function(result) {
-                            if (result.error) {
-                                var error = result.error.message;
-                                if (error) {
-                                    displayError.html(error);
-                                    if (displayError.hasClass('hidden')) {
-                                        displayError.removeClass('hidden').show();
-                                    }
-                                    scrollToGatewayInputError();
-                                }
-                            } else {
-                                stripeResponseHandler(result.paymentIntent.id);
-                            }
-                        });
-                    }
-                },
-                warning: function(error) {
-                    WHMCS.form.reloadCaptcha();
-                    displayError.html(error);
-                    if (displayError.hasClass('hidden')) {
-                        displayError.removeClass('hidden').show();
-                    }
-                    scrollToGatewayInputError();
-                },
-                fail: function(error) {
-                    displayError.html(error);
-                    if (displayError.hasClass('hidden')) {
-                        displayError.removeClass('hidden').show();
-                    }
-                    scrollToGatewayInputError();
-                }
-            });
-        });
+        if (amount === '000') {
+            paymentRequest.on('paymentmethod', handlePaymentRequestAsSetupIntent);
+        } else {
+            paymentRequest.on('paymentmethod', handlePaymentRequestAsPaymentIntent);
+        }
     }
+}
+
+function handlePaymentRequestAsPaymentIntent(event) {
+    var paymentMethodId = event.paymentMethod.id,
+        paymentIntentId = null,
+        frm = elementsDiv.closest('form');
+
+    frm.find('.gateway-errors,.assisted-cc-input-feedback').html('').slideUp();
+    frm.find('button[type="submit"],input[type="submit"]')
+        .addClass('disabled')
+        .prop('disabled', true)
+        .find('i.fas,i.far,i.fal,i.fab')
+        .removeAttr('class')
+        .addClass('fas fa-spinner fa-spin');
+
+    WHMCS.http.jqClient.jsonPost({
+        url: WHMCS.utils.getRouteUrl('/stripe/payment/intent'),
+        data: frm.serialize(),
+        success: function (response) {
+            paymentIntentId = response.token;
+            if (response.success) {
+                event.complete('success');
+                stripeResponseHandler(null);
+            } else if (response.validation_feedback) {
+                // An error has been received.
+                displayError.html(response.validation_feedback);
+                if (displayError.not(':visible')) {
+                    displayError.slideDown();
+                }
+                scrollToGatewayInputError();
+                WHMCS.form.reloadCaptcha();
+            } else {
+                // Let Stripe.js handle the rest of the payment flow.
+                stripe.confirmCardPayment(
+                    paymentIntentId,
+                    {payment_method: paymentMethodId}
+                ).then(function (result) {
+                    if (result.error) {
+                        var error = result.error.message;
+                        if (error) {
+                            displayError.html(error);
+                            if (displayError.not(':visible')) {
+                                displayError.slideDown();
+                            }
+                            scrollToGatewayInputError();
+                            WHMCS.form.reloadCaptcha();
+                        }
+                    } else {
+                        stripeResponseHandler(null);
+                    }
+                });
+            }
+            WHMCS.form.reloadCaptcha();
+        },
+        warning: function(error) {
+            WHMCS.form.reloadCaptcha();
+            displayError.html(defaultErrorMessage);
+            if (displayError.not(':visible')) {
+                displayError.slideDown();
+            }
+            scrollToGatewayInputError();
+        },
+        fail: function(error) {
+            displayError.html(defaultErrorMessage);
+            if (displayError.not(':visible')) {
+                displayError.slideDown();
+            }
+            scrollToGatewayInputError();
+        }
+    });
+}
+
+function handlePaymentRequestAsSetupIntent(event) {
+    var paymentMethodId = event.paymentMethod.id,
+        frm = elementsDiv.closest('form');
+
+    frm.find('.gateway-errors,.assisted-cc-input-feedback').html('').slideUp();
+    frm.find('button[type="submit"],input[type="submit"]')
+        .addClass('disabled')
+        .prop('disabled', true)
+        .find('i.fas,i.far,i.fal,i.fab')
+        .removeAttr('class')
+        .addClass('fas fa-spinner fa-spin');
+
+    WHMCS.http.jqClient.jsonPost({
+        url: WHMCS.utils.getRouteUrl('/stripe/setup/intent'),
+        data: frm.serialize(),
+        success: function (response) {
+            if (response.success) {
+                stripe.handleCardSetup(
+                    response.setup_intent,
+                    {payment_method: paymentMethodId}
+                ).then(function (result) {
+                    if (result.error) {
+                        displayError.html(result.error.message);
+                        if (displayError.not(':visible')) {
+                            displayError.slideDown();
+                        }
+                        scrollToGatewayInputError();
+                        WHMCS.form.reloadCaptcha();
+                    } else {
+                        stripeResponseHandler(null);
+                    }
+                });
+            }
+        },
+        warning: function (error) {
+            displayError.html(error);
+            if (displayError.not(':visible')) {
+                displayError.slideDown();
+            }
+            scrollToGatewayInputError();
+        },
+        fail: function (error) {
+            displayError.html(error);
+            if (displayError.not(':visible')) {
+                displayError.slideDown();
+            }
+            scrollToGatewayInputError();
+        }
+    });
 }
 
 function insertAndMountElementsDivAfterInput(input) {
@@ -567,8 +663,8 @@ function stripe_cc_html(input)
         html = '';
 
     if (frm.id === 'frmCheckout') {
-        html = '<div id="stripeElements" class="form-group hidden">' +
-            '<div class="stripe-cards-inputs col-md-8 col-md-offset-2">' +
+        html = '<div id="stripeElements" class="form-group" style="display: none;">' +
+            '<div class="stripe-cards-inputs col-md-8 col-md-offset-2 offset-md-2">' +
             '<div class="row">' +
             '<div class="col-md-6">' +
             '<label for="stripeCreditCard">' + lang.creditCardInput + '</label>' +
@@ -588,8 +684,8 @@ function stripe_cc_html(input)
     } else {
         elementsClass = '';
 
-        html = '<div id="stripeElements" class="hidden">' +
-            '<div class="form-group cc-billing-address">' +
+        html = '<div id="stripeElements" style="display: none;">' +
+            '<div class="form-group row cc-billing-address">' +
             '<label for="stripeCreditCard" class="col-sm-4 control-label">' +
             lang.creditCardInput + '</label>' +
             '<div class="col-sm-7">' +
@@ -598,7 +694,7 @@ function stripe_cc_html(input)
             '</div>' + //col-sm-6
             '<div class="col-sm-4"></div>' +
             '</div>' + //form-group
-            '<div class="form-group cc-billing-address">' +
+            '<div class="form-group row cc-billing-address">' +
             '<label for="stripeExpiryDate" class="col-sm-4 control-label">' +
             lang.creditCardExpiry + '</label>' +
             '<div class="col-sm-2">' +
@@ -606,7 +702,7 @@ function stripe_cc_html(input)
             '</div>' + //col-sm-6
             '<div class="col-sm-6"></div>' +
             '</div>' + //form-group
-            '<div class="form-group cc-billing-address">' +
+            '<div class="form-group row cc-billing-address">' +
             '<label for="stripeCvc" class="col-sm-4 control-label">' +
             lang.creditCardCvc + '</label>' +
             '<div class="col-sm-2">' +
@@ -631,13 +727,13 @@ function cardListener(event) {
 
         if (error) {
             displayError.html(error);
-            if (displayError.hasClass('hidden')) {
-                displayError.removeClass('hidden').show();
+            if (displayError.not(':visible')) {
+                displayError.slideDown();
             }
             scrollToGatewayInputError();
         }
     } else {
-        displayError.hide().addClass('hidden').html('');
+        displayError.slideUp().html('');
     }
     if (typeof event.brand !== 'undefined') {
         // var cardType = jQuery('#stripeCardType');
@@ -658,7 +754,7 @@ function addNewCardClientSide(event)
     frm.find('button[type="submit"],input[type="submit"]')
         .prop('disabled', true)
         .addClass('disabled')
-        .find('span').toggleClass('hidden');
+        .find('span').toggle();
 
 
     // We need to submit first to our endpoint to start a SetupIntent
@@ -673,27 +769,28 @@ function addNewCardClientSide(event)
                 ).then(function(result) {
                     if (result.error) {
                         displayError.html(result.error.message);
-                        if (displayError.hasClass('hidden')) {
-                            displayError.removeClass('hidden').show();
+                        if (displayError.not(':visible')) {
+                            displayError.slideDown();
                         }
                         scrollToGatewayInputError();
+                        WHMCS.form.reloadCaptcha();
                     } else {
-                        stripeResponseHandler(result.setupIntent.id);
+                        stripeResponseHandler(null);
                     }
                 });
             }
         },
         warning: function(error) {
             displayError.html(error);
-            if (displayError.hasClass('hidden')) {
-                displayError.removeClass('hidden').show();
+            if (displayError.not(':visible')) {
+                displayError.slideDown();
             }
             scrollToGatewayInputError();
         },
         fail: function(error) {
             displayError.html(error);
-            if (displayError.hasClass('hidden')) {
-                displayError.removeClass('hidden').show();
+            if (displayError.not(':visible')) {
+                displayError.slideDown();
             }
             scrollToGatewayInputError();
         }
@@ -709,7 +806,7 @@ function validateChangeCard(event)
     frm.find('button[type="submit"],input[type="submit"]')
         .prop('disabled', true)
         .addClass('disabled')
-        .find('span').toggleClass('hidden');
+        .find('span').toggle();
 
     stripe.createPaymentMethod(
         'card',
@@ -719,8 +816,8 @@ function validateChangeCard(event)
             var error = result.error.message;
             if (error) {
                 displayError.html(error);
-                if (displayError.hasClass('hidden')) {
-                    displayError.removeClass('hidden').show();
+                if (displayError.not(':visible')) {
+                    displayError.slideDown();
                 }
                 scrollToGatewayInputError();
             }
@@ -728,7 +825,7 @@ function validateChangeCard(event)
             if (modalInput) {
                 var btnSubmit = jQuery('#btnSave');
                 btnSubmit.addClass('disabled');
-                jQuery('#modalAjax .loader').show();
+                jQuery('#modalAjax .loader').slideDown();
             }
             if (typeof WHMCS.utils !== 'undefined') {
                 var url = WHMCS.utils.getRouteUrl('/stripe/payment/add');
@@ -741,21 +838,26 @@ function validateChangeCard(event)
                     + '&payment_method_id=' + result.paymentMethod.id,
                 success: function(response) {
                     if (response.success) {
-                        //payment has been successful already at this point
                         stripeResponseHandler(response.token);
+                    }
+                    if (response.validation_feedback) {
+                        displayError.text(response.validation_feedback);
+                        if (displayError.not(':visible')) {
+                            displayError.slideDown();
+                        }
                     }
                 },
                 warning: function(error) {
                     displayError.html(error);
-                    if (displayError.hasClass('hidden')) {
-                        displayError.removeClass('hidden').show();
+                    if (displayError.not(':visible')) {
+                        displayError.slideDown();
                     }
                     scrollToGatewayInputError();
                 },
                 fail: function(error) {
                     displayError.html(error);
-                    if (displayError.hasClass('hidden')) {
-                        displayError.removeClass('hidden').show();
+                    if (displayError.not(':visible')) {
+                        displayError.slideDown();
                     }
                     scrollToGatewayInputError();
                 },
@@ -788,7 +890,7 @@ function get_existing_token(tokenId)
     frm.find('button[type="submit"],input[type="submit"]')
         .prop('disabled', true)
         .addClass('disabled')
-        .find('span').toggleClass('hidden');
+        .find('span').toggle();
     WHMCS.http.jqClient.jsonPost({
         url: WHMCS.utils.getRouteUrl('/payment/stripe/token/get'),
         data: 'paymethod_id=' + tokenId + '&token=' + csrfToken,
@@ -797,20 +899,20 @@ function get_existing_token(tokenId)
             frm.find('button[type="submit"],input[type="submit"]')
                 .prop('disabled', false)
                 .removeClass('disabled')
-                .find('span').toggleClass('hidden');
+                .find('span').toggle();
         },
         warning: function(error) {
             displayError.html(error);
-            if (displayError.hasClass('hidden')) {
-                displayError.removeClass('hidden').show();
+            if (displayError.not(':visible')) {
+                displayError.slideDown();
             }
             scrollToGatewayInputError();
             reset_input_to_new();
         },
         fail: function(error) {
             displayError.html(error);
-            if (displayError.hasClass('hidden')) {
-                displayError.removeClass('hidden').show();
+            if (displayError.not(':visible')) {
+                displayError.slideDown();
             }
             scrollToGatewayInputError();
             reset_input_to_new();
@@ -822,10 +924,10 @@ function reset_input_to_new()
 {
     jQuery('input[name="ccinfo"][value="new"]').iCheck('check');
     if (jQuery('#existingCardInfo').is(':visible')) {
-        jQuery('#existingCardInfo').hide();
+        jQuery('#existingCardInfo').slideUp();
     }
 
     setTimeout(function() {
-        jQuery('.gateway-errors,.assisted-cc-input-feedback').hide().addClass('hidden');
+        jQuery('.gateway-errors,.assisted-cc-input-feedback').slideUp();
     }, 4000);
 }

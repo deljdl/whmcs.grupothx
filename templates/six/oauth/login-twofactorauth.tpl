@@ -4,7 +4,7 @@
 
     <h2 class="text-center">{$LANG.twofactorauth}</h2>
 
-    <form method="post" action="{$issuerurl}dologin.php" role="form">
+    <form method="post" action="{routePath('login-two-factor-challenge-verify')}" role="form">
 
         <div id="loginWithBackupCode"{if !$backupcode} class="hidden"{/if}>
             <div class="content-padded">
@@ -50,5 +50,5 @@
 
 <form method="post" action="{$issuerurl}oauth/authorize.php" id="frmCancelLogin">
     <input type="hidden" name="login_declined" value="yes"/>
-    <input type="hidden" name="request_hash" value="{$request_hash}"/>
+    <input type="hidden" name="request_hash" value="{$request_hash|escape:'html'}"/>
 </form>

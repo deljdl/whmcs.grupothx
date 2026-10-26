@@ -1,13 +1,13 @@
 {$infobox}
 
-<h2 class="pull-left">
-    #{$tid} - {$subject}
-    <select name="ticketstatus" id="ticketstatus" class="form-control select-inline">
+<h2 class="ticket-subject">
+    #{$tid} - {if !$subject}({AdminLang::trans('emails.nosubject')}){else}{$subject}{/if}
+    <select name="ticketstatus" id="ticketstatus" class="form-control select-inline ticket-status">
         {foreach $statuses as $statusitem}
             <option value="{$statusitem.title}"{if $statusitem.title eq $status} selected{/if} style="color:{$statusitem.color}">{$statusitem.title}</option>
         {/foreach}
     </select>
-    <a href="supporttickets.php#" onclick="$('#ticketstatus').val('Closed');$('#ticketstatus').trigger('change');return false">{$_ADMINLANG.global.close}</a>
+    <a href="supporttickets.php#" onclick="$('#ticketstatus').val('Closed');$('#ticketstatus').trigger('change');return false" class="close-ticket">{$_ADMINLANG.global.close}</a>
 </h2>
 
 <span class="ticketlastreply">{$_ADMINLANG.support.lastreply}: {$lastreply}</span>
@@ -47,7 +47,7 @@
 {/foreach}
 
 <div class="alert alert-info text-center{if !$replyingadmin} hidden{/if}" role="alert" id="replyingAdminMsg">
-    {$replyingadmin.name} {$_ADMINLANG.support.viewedandstarted} @ {$replyingadmin.time}
+    {if isset($replyingadmin.name)}{$replyingadmin.name}{/if} {$_ADMINLANG.support.viewedandstarted} @ {if isset($replyingadmin.time)}{$replyingadmin.time}{/if}
 </div>
 
 <ul class="nav nav-tabs admin-tabs" role="tablist">
@@ -58,11 +58,15 @@
     <li><a href="#tab4" role="tab" data-toggle="tab" onclick="loadTab(4, 'clientlog', 0)">{$_ADMINLANG.support.clientlog}</a></li>
     <li><a href="#tab5" role="tab" data-toggle="tab">{$_ADMINLANG.fields.options}</a></li>
     <li><a href="#tab6" role="tab" data-toggle="tab" onclick="loadTab(6, 'ticketlog', 0)">{$_ADMINLANG.support.ticketlog}</a></li>
+    <li>
+        <a href="#tab7" role="tab" data-toggle="tab" onclick="loadTab(7, 'ticketactions', 0)"
+            >{$_ADMINLANG.support.ticketactions} <span class="label ticket-actions-count">{$numScheduledActions}</span></a>
+    </li>
 </ul>
 <div class="tab-content admin-tabs">
   <div class="tab-pane active" id="tab0">
 
-    <form method="post" action="{$smarty.server.PHP_SELF}?action=viewticket&id={$ticketid}" enctype="multipart/form-data" name="replyfrm" id="frmAddTicketReply" data-no-clear="true">
+    <form method="post" action="{$smarty.server.PHP_SELF}?action=viewticket&id={$ticketid}&amp;postreply=1" enctype="multipart/form-data" name="replyfrm" id="frmAddTicketReply" data-no-clear="true">
         <input type="hidden" name="postreply" value="1" />
 
         <textarea name="message" id="replymessage" rows="14" class="form-control bottom-margin-10">{if $signature}
@@ -117,6 +121,12 @@
                     &nbsp;
                     {$_ADMINLANG.support.insertpredef}
                 </button>
+                {if in_array('Create Scheduled Ticket Actions', $admin_perms)}
+                <button type="button"
+                        class="btn btn-default btns-padded btn-schedule-actions btn-scheduled-actions-manage">
+                    <i class="fal fa-calendar" aria-hidden="true"></i>{$_ADMINLANG.support.ticket.action.manageactions}
+                </button>
+                {/if}
                 <div class="dropdown btns-padded">
                     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMoreOptions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         <i class="fas fa-cog"></i>
@@ -150,11 +160,19 @@
                     {$predefinedreplies}
                 </div>
             </div>
+            {if in_array('Create Scheduled Ticket Actions', $admin_perms)}
+            <div id="ticketReplyScheduledActions" class="inner-container">
+                {$scheduledActionsAndActionsPanel}
+            </div>
+            {/if}
             <div id="ticketReplyAttachments" class="inner-container">
                 <div class="row">
                     <div class="col-sm-9">
                         <input type="file" name="attachments[]" class="form-control" />
                         <div id="fileuploads"></div>
+                        <p class="text-muted">
+                            <small>{lang key="system.maxFileSize" fileSize="$uploadMaxFileSize"}</small>
+                        </p>
                     </div>
                     <div class="col-sm-3">
                         <a href="#" id="add-file-upload" class="btn btn-success btn-block add-file-upload" data-more-id="fileuploads"><i class="fas fa-plus"></i> {$_ADMINLANG.support.addmore}</a>
@@ -269,17 +287,20 @@
   </div>
   <div class="tab-pane" id="tab2">
 
-    <img src="images/loading.gif" align="top" /> {$_ADMINLANG.global.loading}
+    <i class="fa fa-spinner fa-spin"></i>
+    {$_ADMINLANG.global.loading}
 
   </div>
   <div class="tab-pane" id="tab3">
 
-    <img src="images/loading.gif" align="top" /> {$_ADMINLANG.global.loading}
+    <i class="fa fa-spinner fa-spin"></i>
+    {$_ADMINLANG.global.loading}
 
   </div>
   <div class="tab-pane" id="tab4">
 
-    <img src="images/loading.gif" align="top" /> {$_ADMINLANG.global.loading}
+    <i class="fa fa-spinner fa-spin"></i>
+    {$_ADMINLANG.global.loading}
 
   </div>
   <div class="tab-pane" id="tab5">
@@ -358,6 +379,19 @@
                     <input type="text" name="mergetid"  class="form-control input-150 input-inline"> ({$_ADMINLANG.support.notocombine})
                 </td>
             </tr>
+            <tr>
+                <td class="fieldlabel">
+                    {$_ADMINLANG.support.preventClientClosure}
+                </td>
+                <td class="fieldarea">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="preventClientClosure"{if $preventClientClosure} checked="checked"{/if}>
+                        {$_ADMINLANG.support.preventClientClosureDescription}
+                    </label>
+                </td>
+                <td class="fieldlabel form-field-hidden-on-respond">&nbsp;</td>
+                <td class="fieldarea form-field-hidden-on-respond">&nbsp;</td>
+            </tr>
         </table>
         <div class="btn-container">
             <button id="btnSaveChanges" type="submit" class="btn btn-primary" value="save">
@@ -370,13 +404,18 @@
   </div>
   <div class="tab-pane" id="tab6">
 
-    <img src="images/loading.gif" align="top" /> {$_ADMINLANG.global.loading}
+    <i class="fa fa-spinner fa-spin"></i>
+    {$_ADMINLANG.global.loading}
 
+  </div>
+  <div class="tab-pane" id="tab7">
+    <i class="fa fa-spinner fa-spin"></i>
+    {$_ADMINLANG.global.loading}
   </div>
 </div>
 
-{if $relatedservices}
-    <div class="tablebg">
+{if !empty($relatedservices)}
+    <div class="tablebg" style="margin-bottom:0;">
         <table class="datatable" id="relatedservicestbl" width="100%" border="0" cellspacing="1" cellpadding="3">
             <tr data-original="true">
                 <th class="hidden related-service" width="20"></th>
@@ -405,7 +444,7 @@
         </table>
     </div>
     <div id="relatedservicesexpand" class="ticket-action-buttons pull-right">
-        <button id="btnRelatedServiceExpand" class="btn btn-default btn-xs{if !$relatedservicesexpand} disabled" disabled="disabled{/if}">
+        <button id="btnRelatedServiceExpand" class="btn btn-default btn-xs{if !isset($relatedservicesexpand) || !$relatedservicesexpand} disabled" disabled="disabled{/if}">
             <span>
                 <i class="far fa-stream"></i>
                 {$_ADMINLANG.support.viewAllServices}
@@ -416,8 +455,8 @@
             </span>
         </button>
     </div>
-    <div id="selectRelatedService" class="ticket-action-buttons">
-        <button id="btnSelectRelatedService" type="button" class="btn btn-default btn-xs{if !count($relatedservice)} disabled" disabled="disabled{/if}" data-expandable="{$relatedservicesexpand}">
+    <div id="selectRelatedService" class="ticket-action-buttons" style="margin-bottom:15px;">
+        <button id="btnSelectRelatedService" type="button" class="btn btn-default btn-xs{if !count($relatedservice)} disabled" disabled="disabled{/if}"{if isset($relatedservicesexpand)} data-expandable="{$relatedservicesexpand}"{/if}>
             <i class="fas fa-tasks"></i>
             {lang key='support.associateService'}
         </button>
@@ -442,33 +481,51 @@
             <div class="reply {if $reply.note} note{elseif $reply.admin} staff{/if}">
                 <div class="leftcol">
                     <div class="submitter">
-                        {if $reply.admin}
-                            <div class="name">{$reply.admin}</div>
-                            <div class="title">
-                                {if $reply.note}
-                                    {$_ADMINLANG.support.privateNote}
+                        <div class="name">
+                            <div class="requestor-name">
+                                {if !$reply.admin && $reply.userid > 0}
+                                    <a href="clientssummary.php?userid={$reply.userid}">
+                                        {$reply.requestor.name}
+                                    </a>
                                 {else}
-                                    {$_ADMINLANG.support.staff}
+                                    {$reply.requestor.name}
                                 {/if}
                             </div>
+                            <span class="label requestor-type-{$reply.requestor.type_normalised}">
+                                {if $reply.requestor.type_normalised eq 'operator'}
+                                    {lang key='support.requestor.operator'}
+                                {elseif $reply.requestor.type_normalised eq 'owner'}
+                                    {lang key='support.requestor.owner'}
+                                {elseif $reply.requestor.type_normalised eq 'authorizeduser'}
+                                    {lang key='support.requestor.authorizeduser'}
+                                {elseif $reply.requestor.type_normalised eq 'registereduser'}
+                                    {lang key='support.requestor.registereduser'}
+                                {elseif $reply.requestor.type_normalised eq 'subaccount'}
+                                    {lang key='support.requestor.subaccount'}
+                                {elseif $reply.requestor.type_normalised eq 'guest'}
+                                    {lang key='support.requestor.guest'}
+                                {/if}
+                            </span>
+                        </div>
+                        <div class="title">
+                            {if $reply.email}
+                                <a href="mailto:{$reply.email}">{$reply.email}</a>
+                                <br>
+                            {/if}
+                            {if $reply.note}
+                                {$_ADMINLANG.support.privateNote}
+                            {/if}
                             {if $reply.rating}
-                                <br />{$reply.rating}<br /><br />
+                                <div class="user-rating">
+                                    {$reply.rating}
+                                </div>
                             {/if}
-                        {else}
-                            <div class="name">{$reply.clientname}</div>
-                            <div class="title">
-                                {if $reply.contactid}
-                                    {$_ADMINLANG.fields.contact}
-                                {elseif $reply.userid}
-                                    {$_ADMINLANG.fields.client}
-                                {else}
-                                    <a href="mailto:{$reply.clientemail}">{$reply.clientemail}</a>
-                                {/if}
-                            </div>
-                            {if !$reply.userid && !$reply.contactid}
-                                <a href="supporttickets.php?action=viewticket&amp;id={$ticketid}&amp;blocksender=true&amp;token={$csrfToken}" class="btn btn-xs btn-small">{$_ADMINLANG.support.blocksender}</a>
+                            {if !$reply.admin && !$reply.userid && !$reply.contactid}
+                                <div>
+                                    <a href="supporttickets.php?action=viewticket&amp;id={$ticketid}&amp;blocksender=true&amp;token={$csrfToken}" class="btn btn-xs btn-small">{$_ADMINLANG.support.blocksender}</a>
+                                </div>
                             {/if}
-                        {/if}
+                        </div>
                     </div>
                     <div class="tools">
                         <div class="editbtns{if $reply.id}r{$reply.id}{else}t{$ticketid}{/if}">
@@ -488,14 +545,19 @@
                     </div>
                 </div>
                 <div class="rightcol">
-                    {if !$reply.note}
-                        <div class="quoteicon">
+                    <div class="ticketcontextlinks">
+                        {if checkPermission('Manage Users', true) && $securityQuestionsEnabled && $reply.requestor.id}
+                            <a href="{routePath('admin-user-security-question', $reply.requestor.id)}" class="btn btn-xs btn-default open-modal{if !$reply.requestor.securityQuestionEnabled} disabled{/if}" data-modal-title="{$_ADMINLANG.fields.securityquestion}">
+                                {$_ADMINLANG.global.view} {$_ADMINLANG.fields.securityquestion}
+                            </a>
+                        {/if}
+                        {if !$reply.note}
                             <a href="#" onClick="quoteTicket('{if !$reply.id}{$ticketid}{/if}','{if $reply.id}{$reply.id}{/if}'); return false;"><img src="images/icons/quote.png" border="0" /></a>
-                            {if $reply.id}
-                                <input type="checkbox" name="rids[]" value="{$reply.id}" />
-                            {/if}
-                        </div>
-                    {/if}
+                        {/if}
+                        {if $reply.id}
+                            <input type="checkbox" name="{if $reply.note}nids[]{else}rids[]{/if}" value="{$reply.id}" />
+                        {/if}
+                    </div>
                     <div class="postedon">
                         {if $reply.note}
                             {$reply.admin} {$_ADMINLANG.support.postedANote}
@@ -512,6 +574,10 @@
                     <div class="msgwrap" id="content{if $reply.id}r{$reply.id}{else}t{$ticketid}{/if}">
                         <div class="message markdown-content">
                             {$reply.message}
+                            {if $reply.ipaddress}
+                                <hr>
+                                {lang key='fields.ipaddress'}: {$reply.ipaddress}
+                            {/if}
                         </div>
                         {if $reply.numattachments && !$reply.attachments_removed}
                             <br />
@@ -596,5 +662,3 @@
     <input type="hidden" name="splitpriority" id="splitpriority" />
     <input type="hidden" name="splitnotifyclient" id="splitnotifyclient" />
 </form>
-
-<script src="../assets/js/lightbox.js"></script>

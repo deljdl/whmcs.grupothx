@@ -3,6 +3,7 @@
 # Logo
 if (file_exists(ROOTDIR.'/assets/img/logo.png')) $pdf->Image(ROOTDIR.'/assets/img/logo.png', 20, 25, 75);
 elseif (file_exists(ROOTDIR.'/assets/img/logo.jpg')) $pdf->Image(ROOTDIR.'/assets/img/logo.jpg', 20, 25, 75);
+elseif (file_exists(ROOTDIR.'/assets/img/logo.jpeg')) $pdf->Image(ROOTDIR.'/assets/img/logo.jpeg', 20, 25, 75);
 else $pdf->Image(ROOTDIR.'/assets/img/placeholder.png', 20, 25, 75);
 
 # Company Details
@@ -10,7 +11,7 @@ $pdf->SetFont($pdfFont,'',13);
 $pdf->Cell(0,6,trim($companyaddress[0]),0,1,'R');
 $pdf->SetFont($pdfFont,'',9);
 for ( $i = 1; $i <= ((count($companyaddress)>6) ? count($companyaddress) : 6); $i += 1) {
-    $pdf->Cell(0,4,trim($companyaddress[$i]),0,1,'R');
+    $pdf->Cell(0, 4, trim($companyaddress[$i] ?? ''), 0, 1, 'R');
 }
 $pdf->Ln(5);
 

@@ -27,7 +27,7 @@ CREATE TABLE `tblclients` (
   `authdata` text COLLATE utf8_unicode_ci NOT NULL,
   `currency` int(10) NOT NULL,
   `defaultgateway` text COLLATE utf8_unicode_ci NOT NULL,
-  `credit` decimal(10,2) NOT NULL,
+  `credit` decimal(16,2) NOT NULL,
   `taxexempt` tinyint(1) NOT NULL,
   `latefeeoveride` tinyint(1) NOT NULL,
   `overideduenotices` tinyint(1) NOT NULL,
@@ -67,7 +67,9 @@ CREATE TABLE `tblclients` (
   `pwresetexpiry` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   KEY `firstname_lastname` (`firstname`(32),`lastname`(32)),
-  KEY `email` (`email`(64))
+  KEY `email` (`email`(64)),
+  KEY `client_status_id` (`status`, `id`),
+  KEY `lastlogin` (`lastlogin`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

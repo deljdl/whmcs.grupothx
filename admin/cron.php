@@ -14,7 +14,7 @@ use WHMCS\Terminus;
  *
  * The crons folder may be moved to any place above or below the docroot.
  *
- * For more information please see https://docs.whmcs.com/Custom_Crons_Directory
+ * For more information please see https://go.whmcs.com/1881/move-the-cron-directory
  */
 /** @var WHMCS\Application $whmcs */
 

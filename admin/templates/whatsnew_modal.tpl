@@ -7,7 +7,7 @@
             mouseDrag: true,
             touchDrag: true,
             autoplay: true,
-            autoplayTimeout: 4000,
+            autoplayTimeout: 5000,
             autoplayHoverPause: true
         });
 
@@ -25,7 +25,7 @@
     <div class="feature-highlights-carousel owl-carousel owl-theme">
         {foreach $features as $featureId => $feature}
             <div class="feature{if $featureId > 0} hidden{/if}" id="featureHighlight{$featureId}">
-                <div class="icon-image">
+                <div class="icon-image{if $feature->isIconBackgroundEnabled()} background{/if}">
                     <img src="{$feature->getIcon()}">
                 </div>
                 <h1{if $feature->hasHeadlineImage()} class="with-headline"{/if}>{$feature->getTitle()}</h1>

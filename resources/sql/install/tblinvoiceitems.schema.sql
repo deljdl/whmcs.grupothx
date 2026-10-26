@@ -9,12 +9,12 @@ DROP TABLE IF EXISTS `tblinvoiceitems`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tblinvoiceitems` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `invoiceid` int(10) NOT NULL DEFAULT '0',
+  `invoiceid` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `userid` int(10) NOT NULL,
   `type` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `relid` int(10) NOT NULL,
   `description` text COLLATE utf8_unicode_ci NOT NULL,
-  `amount` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `amount` decimal(16,2) NOT NULL DEFAULT '0.00',
   `taxed` int(1) NOT NULL,
   `duedate` date DEFAULT NULL,
   `paymentmethod` text COLLATE utf8_unicode_ci NOT NULL,

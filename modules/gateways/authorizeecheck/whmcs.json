@@ -9,7 +9,7 @@
     "tagline": "Accept virtual e-check payments via Auth.net."
   },
   "support": {
-    "docs_url": "https:\/\/docs.whmcs.com\/Authorize.net#Echeck_Module"
+    "docs_url": "https:\/\/go.whmcs.com\/2037\/authorizenet-echeck"
   },
   "authors": [
     {

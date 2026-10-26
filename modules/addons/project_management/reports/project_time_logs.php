@@ -3,6 +3,7 @@
 use Illuminate\Database\Query\Builder;
 use WHMCS\Carbon;
 use WHMCS\Database\Capsule;
+use WHMCS\User\Admin;
 
 if (!defined("WHMCS")) {
     die("This file cannot be accessed directly");
@@ -10,34 +11,31 @@ if (!defined("WHMCS")) {
 
 $reportdata["title"] = "Project Management Project Time Logs";
 $reportdata["description"] = "This report shows the amount of time logged on a per task basis, per staff member, for a given date range.";
+$reportdata['headertext'] = '';
+$reportdata["tableheadings"] = array(
+    "Project Name",
+    "Task Name",
+    "Total Time"
+);
+$reportdata["tablevalues"] = [];
 
 $range = App::getFromRequest('range');
+$staffId = App::getFromRequest('staffid');
+
 if (!$range) {
     $today = Carbon::today()->endOfDay();
     $lastWeek = Carbon::today()->subDays(6)->startOfDay();
     $range = $lastWeek->toAdminDateFormat() . ' - ' . $today->toAdminDateFormat();
 }
 
-$admins = Capsule::table('tbladmins')
-    ->orderBy('firstname')
-    ->pluck(
-        Capsule::raw(
-            'CONCAT_WS(\' \', tbladmins.firstname, tbladmins.lastname) as name'
-        ),
-        'id'
-    );
-
-$adminDropdown = '';
-foreach ($admins as $adminId => $adminName) {
-    $selected = '';
-    if ($adminId == $staffid) {
-        $selected = ' selected="selected"';
-    }
-    $adminDropdown .= "<option value=\"{$adminId}\"{$selected}>{$adminName}</option>";
+$unassignedSelected = ($staffId == 'unassigned') ? ' selected="selected"' : '';
+$staffDropdown = '';
+foreach (Admin::all() as $admin) {
+    $selected = ($admin->id == $staffId) ? ' selected="selected"' : '';
+    $staffDropdown .= "<option value=\"{$admin->id}\"{$selected}>{$admin->fullName}</option>";
 }
 
-$reportdata['headertext'] = '';
-if (!$print) {
+if (!App::getFromRequest('print')) {
     $reportdata['headertext'] = <<<HTML
 <form method="post" action="{$requeststr}">
     <div class="report-filters-wrapper">
@@ -63,9 +61,10 @@ if (!$print) {
                 <div class="col-md-3 col-sm-6">
                     <div class="form-group">
                         <label for="inputFilterStaff">Staff Member</label>
-                        <select id="inputFilterStaff" name="adminid" class="form-control">
-                            <option value="0">- Any -</option>
-                            {$adminDropdown}
+                        <select id="inputFilterStaff" name="staffid" class="form-control">
+                            <option value="any">- Any -</option>
+                            <option value="unassigned"{$unassignedSelected}>- Unassigned -</option>
+                            {$staffDropdown}
                         </select>
                     </div>
                 </div>
@@ -79,124 +78,127 @@ if (!$print) {
 HTML;
 }
 
-$reportdata["tableheadings"] = array(
-    "Project Name",
-    "Task Name",
-    "Total Time"
-);
-
-$i = 0;
 $dateRange = Carbon::parseDateRangeValue($range);
 $datefrom = $dateRange['from']->timestamp;
 $dateto = $dateRange['to']->timestamp;
+$totalDuration = 0;
+$prevStaff = $prevProject = null;
 
-$adminquery = ($adminid) ? " AND adminid='".(int)$adminid."'" : '';
-$results = Capsule::table('tbladmins')
-    ->orderBy('firstname', 'asc')
-    ->get(['id', 'firstname', 'lastname']);
-foreach ($results as $data) {
-    $adminid = $data->id;
-    $adminfirstname = $data->firstname;
-    $adminlastname = $data->lastname;
-
-    $projectData = Capsule::table('mod_projecttimes')
-        ->where(function (Builder $query) use ($datefrom, $dateto) {
-            $query->where('mod_projecttimes.start', '>=', $datefrom)
-                ->where('mod_projecttimes.end', '<=', $dateto);
-        })
-        ->where('mod_projecttimes.adminid', $adminid)
-        ->join('mod_project', 'mod_project.id', '=', 'mod_projecttimes.projectid')
-        ->join('mod_projecttasks', 'mod_projecttasks.id', '=', 'mod_projecttimes.taskid')
-        ->orderBy('start')
-        ->get(
+$projectData = Capsule::table('mod_projecttimes')
+    ->join('mod_project', 'mod_project.id', '=', 'mod_projecttimes.projectid')
+    ->leftjoin('mod_projecttasks', 'mod_projecttasks.id', '=', 'mod_projecttimes.taskid')
+    ->where(function (Builder $query) use ($datefrom, $dateto) {
+        return $query->where(
             [
-                'mod_project.id',
-                'mod_projecttimes.start',
-                'mod_projecttimes.end',
-                'mod_project.title',
-                'mod_project.created',
-                'mod_project.duedate',
-                'mod_projecttasks.task',
+                ['mod_projecttimes.start', '>=', $datefrom],
+                ['mod_projecttimes.end', '<=', $dateto],
+                ['mod_projecttimes.end', '!=', ''],
             ]
         );
+    })
+    ->when(is_numeric($staffId), function (Builder $query) use ($staffId) {
+        return $query->where('mod_projecttimes.adminid', $staffId);
+    })
+    ->when(($staffId == 'unassigned'), function (Builder $query) {
+        return $query->where('mod_projecttimes.adminid', 0);
+    })
+    ->select(
+        'mod_project.id',
+        'mod_projecttimes.adminid',
+        'mod_projecttimes.projectid',
+        'mod_projecttimes.taskid',
+        'mod_project.title',
+        'mod_project.created',
+        'mod_project.duedate',
+        'mod_projecttasks.task'
+    )
+    ->selectRaw("SUM(mod_projecttimes.end - mod_projecttimes.start) as time")
+    ->groupBy(['mod_projecttimes.adminid', 'mod_projecttimes.projectid', 'mod_projecttimes.taskid'])
+    ->orderBy('mod_projecttimes.adminid', 'ASC')
+    ->orderBy('mod_projecttimes.projectid', 'ASC')
+    ->get();
 
-    $projectTimes = [];
-    foreach ($projectData as $data) {
-        $projectid = $data->id;
-        $projecttitle = $data->title;
-        $projecttask = $data->task;
-        $projectCreated = $data->created;
-        $projectDueDate = $data->duedate;
-        if ($projectCreated != '0000-00-00') {
-            $projectCreated = Carbon::createFromFormat('Y-m-d', $projectCreated)
-                ->toAdminDateFormat();
-        }
-        if ($projectDueDate != '0000-00-00') {
-            $projectDueDate = Carbon::createFromFormat('Y-m-d', $projectDueDate)
-                ->toAdminDateFormat();
-        }
-        if ($projectDueDate == '0000-00-00') {
-            $projectDueDate = 'N/A';
-        }
+foreach ($projectData as $data) {
+    $projectId = $data->id;
+    $projectTitle = $data->title;
+    $taskTitle = $data->task;
+    $projectCreated = $data->created;
+    $projectDueDate = $data->duedate;
 
-        $time = ($data->end - $data->start);
-
-        $projectTimes[$projectid][] = [
-            'projectName' => $projecttitle,
-            'projectTask' => $projecttask,
-            'time' => $time,
-            'projectStart' => $projectCreated,
-            'projectDueDate' => $projectDueDate,
-        ];
+    if ($projectCreated != '0000-00-00') {
+        $projectCreated = Carbon::createFromFormat('Y-m-d', $projectCreated)
+            ->toAdminDateFormat();
     }
-    $reportdata["tablevalues"][$i] = array("**<strong>$adminfirstname $adminlastname</strong>");
-    $i++;
-    if (count($projectTimes) === 0) {
-        $reportdata["tablevalues"][$i] = array(
-            '',
-            '',
-            '<strong>0:00:00</strong>'
-        );
-        $i++;
-        continue;
+    if ($projectDueDate != '0000-00-00') {
+        $projectDueDate = Carbon::createFromFormat('Y-m-d', $projectDueDate)
+            ->toAdminDateFormat();
+    }
+    if ($projectDueDate == '0000-00-00') {
+        $projectDueDate = 'N/A';
     }
 
-    $totalduration = 0;
-    foreach ($projectTimes as $projectId => $projectData) {
-        $link = '<a href="addonmodules.php?module=project_management&m=view&projectid='.$projectId.'">'
-            . $projectData[0]['projectName']
-            . '</a>';
-        $projectHead = "<div class=\"row\">
-    <div class=\"col-sm-3\">{$link}</div>
-    <div class=\"col-sm-3\">Created: {$projectData[0]['projectStart']}</div>
-    <div class=\"col-sm-3\">Due Date: {$projectData[0]['projectDueDate']}</div>
-</div>";
-
-        $reportdata["tablevalues"][$i] = array("+*{$projectHead}");
-
-        $i++;
-        foreach ($projectData as $data) {
-            $totalduration += $data['time'];
-            $reportdata["tablevalues"][$i] = array(
+    if ($prevStaff !== $data->adminid) {
+        if ($prevStaff != null) {
+            $reportdata["tablevalues"][] = [
                 '',
-                $data['projectTask'],
-                project_task_logs_time($data['time'])
-            );
-
-            $i++;
+                '',
+                '<strong>' . project_management_format_duration($totalDuration) . '</strong>'
+            ];
+            $totalDuration = 0;
+            $prevProject = null;
         }
-        $reportdata["tablevalues"][$i] = array(
-            '',
-            '',
-            '<strong>' . project_task_logs_time($totalduration) . '</strong>'
-        );
-        $i++;
+
+        $fullName = ($data->adminid) ? getAdminName($data->adminid) : "Unassigned";
+        $reportdata["tablevalues"][] = ["**<strong>{$fullName}</strong>"];
+        $prevStaff = $data->adminid;
     }
+
+    if ($prevProject !== $projectId) {
+        if ($prevProject != null) {
+            $reportdata["tablevalues"][] = [
+                '',
+                '',
+                '<strong>' . project_management_format_duration($totalDuration) . '</strong>'
+            ];
+            $totalDuration = 0;
+        }
+
+        $fmtString = '<a href="addonmodules.php?module=project_management&m=view&projectid=%s">%s</a>'
+            . '&nbsp;<span>(Created: %s Due: %s)</span>';
+
+        $projectHead = sprintf(
+            $fmtString,
+            $projectId,
+            $projectTitle,
+            $projectCreated,
+            $projectDueDate
+        );
+        $reportdata["tablevalues"][] = ["+*{$projectHead}"];
+
+        $prevProject = $projectId;
+    }
+
+    $totalDuration += $data->time;
+
+    $reportdata["tablevalues"][] = [
+        '',
+        ($taskTitle ?? "Unassigned"),
+        project_management_format_duration($data->time)
+    ];
 }
 
-function project_task_logs_time ($sec, $padHours = false){
+$reportdata["tablevalues"][] = [
+    '',
+    '',
+    '<strong>' . project_management_format_duration($totalDuration) . '</strong>'
+];
 
-    if($sec <= 0) { $sec = 0; } $hms = "";
+function project_management_format_duration(int $sec, $padHours = false): string
+{
+    if ($sec <= 0) {
+        $sec = 0;
+    }
+    $hms = "";
     $hours = intval(intval($sec) / 3600);
     $hms .= ($padHours) ? str_pad($hours, 2, "0", STR_PAD_LEFT). ":" : $hours. ":";
     $minutes = intval(($sec / 60) % 60);
@@ -205,5 +207,4 @@ function project_task_logs_time ($sec, $padHours = false){
     $hms .= str_pad($seconds, 2, "0", STR_PAD_LEFT);
 
     return $hms;
-
 }

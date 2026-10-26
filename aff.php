@@ -23,7 +23,7 @@ if ($aff = $whmcs->get_req_var('aff')) {
     update_query("tblaffiliates",array("visitors"=>"+1"),array("id"=>$aff));
     Cookie::set('AffiliateID',$aff,'3m');
 
-    $referrer = trim($_SERVER['HTTP_REFERER']);
+    $referrer = trim($_SERVER['HTTP_REFERER'] ?? '');
     Referrer::firstOrCreate([
         'affiliate_id' => $aff,
         'referrer' => $referrer,

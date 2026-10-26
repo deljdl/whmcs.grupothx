@@ -16,8 +16,9 @@ CREATE TABLE `tblhosting` (
   `regdate` date NOT NULL,
   `domain` text COLLATE utf8_unicode_ci NOT NULL,
   `paymentmethod` text COLLATE utf8_unicode_ci NOT NULL,
-  `firstpaymentamount` decimal(10,2) NOT NULL DEFAULT '0.00',
-  `amount` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `qty` int unsigned NOT NULL DEFAULT '1',
+  `firstpaymentamount` decimal(16,2) NOT NULL DEFAULT '0.00',
+  `amount` decimal(16,2) NOT NULL DEFAULT '0.00',
   `billingcycle` text COLLATE utf8_unicode_ci NOT NULL,
   `nextduedate` date DEFAULT NULL,
   `nextinvoicedate` date NOT NULL,
@@ -28,6 +29,7 @@ CREATE TABLE `tblhosting` (
   `password` text COLLATE utf8_unicode_ci NOT NULL,
   `notes` text COLLATE utf8_unicode_ci NOT NULL,
   `subscriptionid` text COLLATE utf8_unicode_ci NOT NULL,
+  `recommendation_source_product_id` int(10) unsigned NULL DEFAULT NULL,
   `promoid` int(10) NOT NULL,
   `promocount` int(10) NULL DEFAULT '0',
   `suspendreason` text COLLATE utf8_unicode_ci NOT NULL,
@@ -41,6 +43,7 @@ CREATE TABLE `tblhosting` (
   `disklimit` int(10) NOT NULL DEFAULT '0',
   `bwusage` int(10) NOT NULL DEFAULT '0',
   `bwlimit` int(10) NOT NULL DEFAULT '0',
+  `upsell_from_products` varchar(40) DEFAULT NULL,
   `lastupdate` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -51,7 +54,8 @@ CREATE TABLE `tblhosting` (
   KEY `productid` (`packageid`),
   KEY `serverid` (`server`),
   KEY `domain` (`domain`(64)),
-  KEY `domainstatus` (`domainstatus`)
+  KEY `domainstatus` (`domainstatus`),
+  KEY `username` (`username`(8))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

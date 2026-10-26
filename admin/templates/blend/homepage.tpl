@@ -1,12 +1,5 @@
 <div class="clearfix"></div>
 
-{if !empty($maintenancemode)}
-    <div class="errorbox" style="font-size:14px;">
-        {$_ADMINLANG.home.maintenancemode}
-    </div>
-    <br />
-{/if}
-
 {$infobox}
 
 {foreach from=$addons_html item=addon_html}
@@ -41,6 +34,10 @@
         {/foreach}
     </ul>
 </div>
+
+{$homepagePromotionCarousel}
+
+{$mixPanelBanner}
 
 {foreach $staticWidgets as $widget}
     <div id="panel{$widget->getId()}" class="dashboard-panel-static-item dashboard-panel-item-columns-{$widget->getColumnSize()}{if in_array($widget->getId(), $hiddenWidgets)} hidden{/if}">

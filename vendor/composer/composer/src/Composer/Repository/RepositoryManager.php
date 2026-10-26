@@ -54,6 +54,7 @@ class RepositoryManager
     public function findPackage($name, $constraint)
     {
         foreach ($this->repositories as $repository) {
+            /** @var RepositoryInterface $repository */
             if ($package = $repository->findPackage($name, $constraint)) {
                 return $package;
             }
@@ -68,13 +69,13 @@ class RepositoryManager
      * @param string                                                 $name       package name
      * @param string|\Composer\Semver\Constraint\ConstraintInterface $constraint package version or version constraint to match against
      *
-     * @return array
+     * @return PackageInterface[]
      */
     public function findPackages($name, $constraint)
     {
         $packages = array();
 
-        foreach ($this->repositories as $repository) {
+        foreach ($this->getRepositories() as $repository) {
             $packages = array_merge($packages, $repository->findPackages($name, $constraint));
         }
 
@@ -108,21 +109,38 @@ class RepositoryManager
      *
      * @param  string                    $type   repository type
      * @param  array                     $config repository configuration
+     * @param  string                    $name   repository name
      * @throws \InvalidArgumentException if repository for provided type is not registered
      * @return RepositoryInterface
      */
-    public function createRepository($type, $config)
+    public function createRepository($type, $config, $name = null)
     {
         if (!isset($this->repositoryClasses[$type])) {
             throw new \InvalidArgumentException('Repository type is not registered: '.$type);
+        }
+
+        if (isset($config['packagist']) && false === $config['packagist']) {
+            $this->io->writeError('<warning>Repository "'.$name.'" ('.json_encode($config).') has a packagist key which should be in its own repository definition</warning>');
         }
 
         $class = $this->repositoryClasses[$type];
 
         $reflMethod = new \ReflectionMethod($class, '__construct');
         $params = $reflMethod->getParameters();
-        if (isset($params[4]) && $params[4]->getClass() && $params[4]->getClass()->getName() === 'Composer\Util\RemoteFilesystem') {
-            return new $class($config, $this->io, $this->config, $this->eventDispatcher, $this->rfs);
+        if (isset($params[4])) {
+            $paramType = null;
+            if (\PHP_VERSION_ID >= 70000) {
+                $reflectionType = $params[4]->getType();
+                if ($reflectionType) {
+                    $paramType = $reflectionType instanceof \ReflectionNamedType ? $reflectionType->getName() : (string)$reflectionType;
+                }
+            } else {
+                $paramType = $params[4]->getClass() ? $params[4]->getClass()->getName() : null;
+            }
+
+            if ($paramType  === 'Composer\Util\RemoteFilesystem') {
+                return new $class($config, $this->io, $this->config, $this->eventDispatcher, $this->rfs);
+            }
         }
 
         return new $class($config, $this->io, $this->config, $this->eventDispatcher);
@@ -142,7 +160,7 @@ class RepositoryManager
     /**
      * Returns all repositories, except local one.
      *
-     * @return array
+     * @return RepositoryInterface[]
      */
     public function getRepositories()
     {

@@ -10,7 +10,7 @@
     "long": "Allows you to enter the endpoint for processing enabling you to process credit card payments online with any Authorize.net compatible API gateway."
   },
   "support": {
-    "docs_url": "https:\/\/docs.whmcs.com\/Planet_Authorize"
+    "docs_url": "https:\/\/go.whmcs.com\/2113\/planet-authorize"
   },
   "authors": [
     {

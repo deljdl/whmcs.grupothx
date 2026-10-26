@@ -1,5 +1,5 @@
 /*!
- * iCheck v1.0.2, http://git.io/arlzeA
+ * iCheck v1.0.3, http://git.io/arlzeA
  * ===================================
  * Powerful jQuery and Zepto plugin for checkboxes and radio buttons customization
  *
@@ -16,7 +16,7 @@
     _radio = 'radio',
     _checked = 'checked',
     _unchecked = 'un' + _checked,
-    _disabled = 'disabled',a
+    _disabled = 'disabled',
     _determinate = 'determinate',
     _indeterminate = 'in' + _determinate,
     _update = 'update',
@@ -28,7 +28,7 @@
     _callback = 'trigger',
     _label = 'label',
     _cursor = 'cursor',
-    _mobile = /ipad|iphone|ipod|android|blackberry|windows phone|opera mini|silk/i.test(navigator.userAgent);
+    _mobile = /ip(hone|od|ad)|android|blackberry|windows phone|opera mini|silk/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 
   // Plugin init
   $.fn[_iCheck] = function(options, fire) {
@@ -503,7 +503,7 @@
         input[_callback]('ifToggled');
       }
 
-      input[_callback]('ifChanged')[_callback]('if' + capitalize(callback));
+      input[_callback]('change')[_callback]('ifChanged')[_callback]('if' + capitalize(callback));
     }
   }
 })(window.jQuery || window.Zepto);
@@ -557,6 +557,9 @@ jQuery(document).ready(function() {
                 .removeAttr('class')
                 .addClass('fas fa-spinner fa-spin');
         }
+    })
+    .on('click', '#openTicketSubmit.disabled', function () {
+        return false;
     });
 });
 
@@ -572,15 +575,50 @@ function scrollToGatewayInputError() {
         .find('i.fas,i.far,i.fal,i.fab')
         .removeAttr('class')
         .addClass('fas fa-arrow-circle-right')
-        .find('span').toggleClass('hidden');
+        .find('span').toggle();
 
     if (displayError.length) {
-        jQuery('html, body').animate(
-            {
-                scrollTop: displayError.offset().top - 50
-            },
-            500
-        );
+        if (elementOutOfViewPort(displayError[0])) {
+            jQuery('html, body').animate(
+                {
+                    scrollTop: displayError.offset().top - 50
+                },
+                500
+            );
+        }
+    }
+}
+
+function elementOutOfViewPort(element) {
+    // Get element's bounding
+    var bounding = element.getBoundingClientRect();
+    // Check if it's out of the viewport on each side
+    var out = {};
+    out.top = bounding.top < 0;
+    out.left = bounding.left < 0;
+    out.bottom = bounding.bottom > (window.innerHeight || document.documentElement.clientHeight);
+    out.right = bounding.right > (window.innerWidth || document.documentElement.clientWidth);
+    out.any = out.top || out.left || out.bottom || out.right;
+
+    return out.any;
+}
+
+function showCheckoutError(errorMessage, container = null) {
+    jQuery('.alert-danger').hide();
+
+    const selectors = [
+        '.checkout-error-feedback',
+        '#existingLoginMessage',
+        '.gateway-errors',
+        '.assisted-cc-input-feedback'
+    ];
+
+    if (!container) {
+        container = jQuery(selectors.join(', ')).first();
+    }
+
+    if (container.length) {
+        container.html(errorMessage).slideDown('fast');
     }
 }
 
@@ -872,7 +910,160 @@ registration: function () {
     };
 
     return this;
-}});
+},
+
+tokenProcessor: function () {
+    this.hostOrigin = window.location.origin;
+    this.postForm = null;
+
+    /**
+     * @return Object A jQuery instance of auto-POST form
+     */
+    this.getAutoPostForm = function () {
+        if (!this.postForm) {
+            this.postForm = jQuery('<form>')
+                .attr('id', 'whmcsAutoPostForm')
+                .attr('target', '_self')
+                .attr('method', 'POST')
+                .append(
+                    jQuery('<input>')
+                        .attr('type', 'hidden')
+                        .attr('name', 'token')
+                        .attr('value', csrfToken)
+                );
+
+            jQuery('body').append(this.postForm);
+        }
+
+        return this.postForm;
+    },
+
+    /**
+     * @param {URL} url
+     * @return boolean
+     */
+    this.isSameOrigin = function (url) {
+        return url.origin && (url.origin === this.hostOrigin);
+    },
+
+    /**
+     * @param {URL} url
+     * @return boolean
+     */
+    this.isClientModopCustom = function (url) {
+        if (!url.pathname || !url.pathname.match(/\/clientarea.php$/)) {
+            return false;
+        }
+
+        if (!url.searchParams || (url.searchParams.get('modop') !== 'custom')) {
+            return false;
+        }
+
+        return true;
+    },
+
+    /**
+     * Normalizes a string URL by converting it to a URL object and appending origin as necessary
+     *
+     * @param {string} urlString
+     * @return URL
+     */
+    this.getFqUrl = function(urlString) {
+        try {
+            if (!urlString.match(/[a-z]+:\/\//i)) {
+                // URLs without origin will not parse
+
+                if (urlString.indexOf('/') !== 0) {
+                    const whmcsPath = window.location.pathname.split('/').slice(0, -1).join('/');
+
+                    urlString = `${whmcsPath}/${urlString}`;
+                }
+
+                urlString = `${this.hostOrigin}${urlString}`;
+            }
+
+            return url = new URL(urlString);
+        } catch (e) {
+            return null;
+        }
+    }
+
+    /**
+     * @param {URL|string} url
+     * @return boolean
+     */
+    this.isUrlEligibleForToken = function (url) {
+        if (typeof url === 'string') {
+            url = this.getFqUrl(url);
+
+            if (!url) {
+                return false;
+            }
+        }
+
+        if ((typeof url !== 'object')) {
+            return false;
+        }
+
+        if (!this.isSameOrigin(url)) {
+            return false;
+        }
+
+        return this.isClientModopCustom(url);
+    },
+
+    /**
+     * @param {string} urlString
+     * @param {string|null} target
+     * @return void
+     */
+    this.submitUrlViaPost = function (urlString, target) {
+        jQuery(this.getAutoPostForm())
+            .attr('target', target || '_self')
+            .attr('action', urlString)
+            .submit();
+    };
+
+    /**
+     * @return void
+     */
+    this.processTokenSubmitters = function () {
+        jQuery('a').each((index, link) => {
+            const urlString = jQuery(link).attr('href');
+
+            if (!urlString) {
+                return;
+            }
+
+            if (!this.isUrlEligibleForToken(urlString)) {
+                return;
+            }
+
+            if (!jQuery(link).data('whmcs-tokenized')) {
+                jQuery(link).data('whmcs-tokenized', true);
+
+                jQuery(link).attr('href', '#');
+
+                jQuery(link).on('click', (e) => {
+                    let target = jQuery(link).attr('target');
+
+                    if (e.metaKey || e.ctrlKey) {
+                        target = '_blank';
+                    }
+
+                    e.preventDefault();
+                    this.submitUrlViaPost(urlString, target);
+                });
+
+                jQuery(link).on('contextmenu', (e) => {
+                    e.preventDefault();
+                    return false;
+                });
+            }
+        });
+    }
+}
+});
 
 /**
  * WHMCS HTTP module
@@ -989,30 +1180,30 @@ jqClient: function () {
      */
     this.jsonPost = function (options) {
         options = options || {};
-        this.post(options.url, options.data, function(response) {
-            if (response.warning) {
-                console.log('[WHMCS] Warning: ' + response.warning);
+        this.post(options.url, options.data, function(jsonResponse, httpStatusText, jqXHR) {
+            if (jsonResponse.warning) {
+                console.log('[WHMCS] Warning: ' + jsonResponse.warning);
                 if (typeof options.warning === 'function') {
-                    options.warning(response.warning);
+                    options.warning(jsonResponse.warning, jsonResponse, jqXHR);
                 }
-            } else if (response.error) {
-                console.log('[WHMCS] Error: ' + response.error);
+            } else if (jsonResponse.error) {
+                console.log('[WHMCS] Error: ' + jsonResponse.error);
                 if (typeof options.error === 'function') {
-                    options.error(response.error);
+                    options.error(jsonResponse.error, jsonResponse, jqXHR);
                 }
-            } else {
-                if (typeof options.success === 'function') {
-                    options.success(response);
-                }
+            } else if (typeof options.success === 'function') {
+                options.success(jsonResponse, jqXHR);
             }
-        }, 'json').error(function(xhr, errorMsg){
-            console.log('[WHMCS] Error: ' + errorMsg);
+        }, 'json')
+        .fail(function(jqXHR, jqResponseType, httpStatusText){
+            console.log('[WHMCS] Fail: ' + jqResponseType);
             if (typeof options.fail === 'function') {
-                options.fail(errorMsg);
+                options.fail(jqResponseType, jqXHR.responseJSON, jqXHR);
             }
-        }).always(function() {
+        })
+        .always(function(jqXHR, jqResponseType, httpStatusText) {
             if (typeof options.always === 'function') {
-                options.always();
+                options.always(jqXHR);
             }
         });
     };
@@ -1160,58 +1351,53 @@ dataTable: function () {
                     ordering: true,
                     info: false,
                     autoWidth: true,
+                    columns: [],
+                    lengthMenu: [10, 25, 50, 100, 500, 1000],
                     language: {
-                        emptyTable: (el.data('lang-empty-table')) ? el.data('lang-empty-table') : "No records found"
+                        emptyTable: (el.data('langEmptyTable')) ? el.data('langEmptyTable') : "No records found"
                     }
                 };
             }
-            var ajaxUrl = el.data('ajax-url');
-            if (typeof ajaxUrl !== 'undefined') {
-                options.ajax = {
-                    url: ajaxUrl
-                };
-            }
-            var dom = el.data('dom');
-            if (typeof dom !== 'undefined') {
-                options.dom = dom;
-            }
-            var searching = el.data('searching');
-            if (typeof searching !== 'undefined') {
-                options.searching = searching;
-            }
-            var responsive = el.data('responsive');
-            if (typeof responsive !== 'undefined') {
-                options.responsive = responsive;
-            }
-            var ordering = el.data('ordering');
-            if (typeof ordering !== 'undefined') {
-                options["ordering"] = ordering;
-            }
-            var order = el.data('order');
-            if (typeof order !== 'undefined' && order) {
-                options["order"] = order;
-            }
-            var colCss = el.data('columns');
-            if (typeof colCss !== 'undefined' && colCss) {
-                options["columns"] = colCss;
-            }
-            var autoWidth = el.data('auto-width');
-            if (typeof autoWidth !== 'undefined') {
-                options["autoWidth"] = autoWidth;
-            }
-            var paging = el.data('paging');
-            if (typeof paging !== 'undefined') {
-                options["paging"] = paging;
-            }
-            var lengthChange = el.data('length-change');
-            if (typeof lengthChange !== 'undefined') {
-                options["lengthChange"] = lengthChange;
-            }
-            var pageLength = el.data('page-length');
-            if (typeof pageLength !== 'undefined') {
-                options["pageLength"] = pageLength;
-            }
-
+            jQuery.each(el.data(), function (key, value) {
+                if (typeof value === 'undefined') {
+                    return;
+                }
+                if (key === 'ajaxUrl') {
+                    options.ajax = {
+                        url: value
+                    };
+                    return;
+                }
+                if (key === 'lengthChange') {
+                    options.lengthChange = value;
+                    return;
+                }
+                if (key === 'pageLength') {
+                    options.pageLength = value;
+                    return;
+                }
+                if (key === 'langEmptyTable') {
+                    if (typeof options.language === "undefined") {
+                        options.language = {};
+                    }
+                    options.language.emptyTable = value;
+                    return
+                }
+                if (key === 'langZeroRecords') {
+                    if (typeof options.language === "undefined") {
+                        options.language = {};
+                    }
+                    options.language.zeroRecords = value;
+                    return
+                }
+                options.key = value;
+            });
+            jQuery.each(el.find('th'), function() {
+                if (typeof options.columns === "undefined") {
+                    options.columns = [];
+                }
+                options.columns.push({data:jQuery(this).data('name')});
+            });
             self.tables[id] = self.initTable(el, options);
         } else if (typeof options !== 'undefined') {
             var oldTable = self.tables[id];
@@ -1322,10 +1508,13 @@ toolTip: function () {
         return tip;
     };
 
-    this.hideTip = function (btn) {
+    this.hideTip = function (btn, timeout) {
+        if (!timeout) {
+            timeout = 2000;
+        }
         return setTimeout(function() {
             btn.data('bs.tooltip').hide()
-        }, 2000);
+        }, timeout);
     }
 },
 
@@ -1428,7 +1617,15 @@ jsonForm: function() {
     };
 
     this.clearFieldError = function (field) {
-        $(field).tooltip('destroy');
+        /**
+         * Try dispose first for BS 4, which will raise error
+         * on BS 3 or older, then we use destroy instead
+         */
+        try {
+            $(field).tooltip('dispose');
+        } catch (err) {
+            $(field).tooltip('destroy');
+        }
         $(field).parents('.form-group').removeClass('has-error');
     };
 
@@ -1513,7 +1710,210 @@ effects: function () {
             });
         });
     };
+},
+/*
+<script>WHMCS.ui.markdownEditor.register()</script>
+<someTag id="someTag-node"
+    class="container-markdown-editor editor-tagging local-storage"
+    data-locale="de"
+    data-local-storage-id="someTag-node-session-1234"
+    data-fetch-preview-url="https://x.local/mde/preview"
+    data-fetch-help-url="https://x.local/mde/help"
+    data-tagging-url="url-to-handle-tagging"
+    />
+NOTE: elements without IDs will not be initialized via `register` or `getEditorById`
+to ensure no target node is reinitialized within a previously initialized node.
+ */
+markdownEditor: function () {
+    this.editors = {};
+    this.counters = {};
+    this.register = function () {
+        let self = this;
+        jQuery('.container-markdown-editor')
+            .each(function (i, el) {
+                el = jQuery(el);
+                if (typeof el.attr('id') === "undefined") {
+                    console.debug('Element has no id', el);
+                    return;
+                }
+                self.getEditorById(el.attr('id'));
+                self.withTagging(el);
+            });
+    };
+    this.withTagging = function(el) {
+        if (!el.is('.editor-tagging')) {
+            return;
+        }
+        el.atwho({
+            at: "@",
+            displayTpl: "<li class=\"mention-list\">${gravatar} ${username} - ${name} (${email})</li>",
+            insertTpl: mentionsFormat,
+            data: el.data('tagging-url'),
+            limit: 5
+        });
+    }
+    this.getEditorById = function(id) {
+        let self = this;
+        let el = jQuery('#' + id);
+        if (typeof self.editors[id] === 'undefined') {
+            self.editors[id] = self.init(el);
+        }
 
+        return self.editors[id];
+    };
+    this.init = function (element) {
+        let self = this;
+        let elementId = element.attr('id');
+        let footerId = elementId + '-footer';
+        let footerIdRef = '#' + footerId;
+        let footerNode ='<div id="'
+            + footerId
+            + '" class="markdown-editor-status"></div>';
+        let locale = (typeof element.data('locale') === 'undefined')
+            ? 'en'
+            : element.data('locale');
+        let localStorageId = element.data('localStorageId');
+        let csrf_token = csrfToken;
+        let fetchPreviewUrl = element.data('fetchPreviewUrl');
+        self.counters[elementId] = 0;
+
+        element.markdown(
+            {
+                footer: footerNode,
+                autofocus: false,
+                savable: false,
+                resize: 'vertical',
+                iconlibrary: 'glyph',
+                language: locale,
+                onShow: function(e){
+                    let content = '',
+                        save_enabled = false;
+                    if(typeof(Storage) !== "undefined") {
+                        // Code for localStorage/sessionStorage.
+                        content = localStorage.getItem(localStorageId);
+                        save_enabled = true;
+                        if (content && typeof(content) !== "undefined") {
+                            e.setContent(content);
+                        }
+                    }
+                    jQuery(footerIdRef).html(
+                        self.parseMdeFooter(content, save_enabled, 'saved')
+                    );
+                },
+                onChange: function(e){
+                    let content = e.getContent(),
+                        save_enabled = false;
+                        elementId = e.$element.attr('id');
+                    if(typeof(Storage) !== "undefined") {
+                        self.counters[elementId] = 3;
+                        save_enabled = true;
+                        localStorage.setItem(localStorageId, content);
+                        self.doCountdown(elementId);
+                    }
+                    jQuery(footerIdRef).html(
+                        self.parseMdeFooter(content, save_enabled)
+                    );
+                },
+                onPreview: function(e){
+                    let originalContent = e.getContent(),
+                        parsedContent;
+
+                    jQuery.ajax({
+                        url: fetchPreviewUrl,
+                        async: false,
+                        data: {
+                            token: csrf_token,
+                            action: 'parseMarkdown',
+                            content: originalContent
+                        },
+                        dataType: 'json',
+                        success: function (data) {
+                            parsedContent = data;
+                        },
+                        method: 'POST'
+                    });
+
+                    return parsedContent.body ? parsedContent.body : '';
+                },
+                additionalButtons: [
+                    [{
+                        name: "groupCustom",
+                        data: [{
+                            name: "cmdHelp",
+                            title: "Help",
+                            hotkey: "Ctrl+F1",
+                            btnClass: "btn open-modal",
+                            icon: {
+                                glyph: 'fas fa-question-circle',
+                                fa: 'fas fa-question-circle',
+                                'fa-3': 'icon-question-sign'
+                            },
+                            callback: function(e) {
+                                e.$editor.removeClass("md-fullscreen-mode");
+                            }
+                        }]
+                    }]
+                ],
+                hiddenButtons: [
+                    'cmdImage'
+                ],
+            }
+        );
+
+        self.addEventHelpModal(element);
+
+        return element;
+    };
+    this.parseMdeFooter = function(content, auto_save, saveText) {
+        if (typeof saveText == 'undefined') {
+            saveText = 'autosaving';
+        }
+        let pattern = /[^\s]+/g,
+            m = [],
+            word_count = 0,
+            line_count = 0;
+        if (content) {
+            m = content.match(pattern);
+            line_count = content.split(/\\r\\n|\\r|\\n/).length;
+        }
+        if (m) {
+            for(let i = 0; i < m.length; i++) {
+                if(m[i].charCodeAt(0) >= 0x4E00) {
+                    word_count += m[i].length;
+                } else {
+                    word_count += 1;
+                }
+            }
+        }
+        return '<div class="smallfont">lines: ' + line_count
+            + '&nbsp;&nbsp;&nbsp;words: ' + word_count + ''
+            + (auto_save
+                    ? '&nbsp;&nbsp;&nbsp;<span class="markdown-save">' + saveText + '</span>'
+                    : ''
+            )
+            + '</div>';
+    };
+    this.doCountdown = function(elementId) {
+        let self = this;
+        if (self.counters[elementId] >= 0) {
+            if (self.counters[elementId] === 0) {
+                jQuery("span.markdown-save").html('saved');
+            }
+            self.counters[elementId]--;
+            setTimeout(function (id) {
+                self.doCountdown(id)},
+                1000,
+                elementId
+            );
+        }
+    };
+    this.addEventHelpModal = function(element) {
+        element.parent().find('button[data-handler="bootstrap-markdown-cmdHelp"]')
+            .attr('data-modal-title', 'Markdown Guide')
+            .attr('data-modal-size', 'modal-lg')
+            .attr('href', element.data('fetchHelpUrl'));
+        return this;
+    };
 }
 });
 
@@ -1541,7 +1941,7 @@ function () {
     this.bindCheckAll = function ()
     {
         var huntSelector = '.btn-check-all';
-        jQuery(huntSelector).click(function (e) {
+        jQuery('body').on('click', huntSelector, function (e) {
             var btn = jQuery(e.target);
             var targetInputs = jQuery(
                 '#' + btn.data('checkbox-container') + ' input[type="checkbox"]'
@@ -1577,26 +1977,45 @@ function () {
         });
     };
 
-    this.reloadCaptcha = function (element)
-    {
-        if (!element) {
-            element = jQuery('#inputCaptchaImage');
+    this.reloadCaptcha = (captchaElement) => {
+        if (typeof grecaptcha !== 'undefined') {
+            recaptchaValidationComplete = false;
+            grecaptcha.reset();
+
+            WHMCS.recaptcha.restoreDefaultCallback();
+
+            return;
         }
 
-        var src = jQuery(element).data('src');
-        jQuery(element).attr('src', src + '?nocache=' + (new Date()).getTime());
+        if (!captchaElement) {
+            captchaElement = jQuery('#inputCaptchaImage');
+        }
+
+        const captchaInput = jQuery('#inputCaptcha');
+
+        if (captchaElement.length) {
+            captchaElement.attr(
+                'src',
+                whmcsBaseUrl + '/includes/verifyimage.php?nocache=' + new Date().getTime()
+            );
+
+            captchaInput.val('');
+        }
     };
 
     return this;
 });
 
 /**
- * reCaptcha module
+ * reCaptcha module - used for captcha apis compatible with the google recaptcha api
  *
- * @copyright Copyright (c) WHMCS Limited 2005-2018
+ * @copyright Copyright (c) WHMCS Limited 2005-2020
  * @license http://www.whmcs.com/license/ WHMCS Eula
  */
-var recaptchaLoadComplete = false;
+var recaptchaLoadComplete = false,
+    recaptchaCount = 0,
+    recaptchaType = 'recaptcha',
+    recaptchaValidationComplete = false;
 
 (function(module) {
     if (!WHMCS.hasModule('recaptcha')) {
@@ -1609,70 +2028,76 @@ var recaptchaLoadComplete = false;
             if (recaptchaLoadComplete) {
                 return;
             }
-            var postLoad = [];
-            var recaptchaForms = jQuery(".btn-recaptcha").parents('form');
+            var postLoad = [],
+                recaptchaForms = jQuery(".btn-recaptcha").parents('form'),
+                isInvisible = false;
             recaptchaForms.each(function (i, el){
-                if (typeof recaptchaSiteKey === 'undefined') {
-                    console.log('Recaptcha site key not defined');
+                if (typeof recaptcha.siteKey === 'undefined') {
+                    console.error('Recaptcha site key not defined');
                     return;
                 }
-                var frm = jQuery(el);
-                var btnRecaptcha = frm.find(".btn-recaptcha");
-                var isInvisible = btnRecaptcha.hasClass('btn-recaptcha-invisible'),
-                    required = (typeof requiredText !== 'undefined') ? requiredText : 'Required';
+                if (typeof recaptcha.libUrl === 'undefined') {
+                    console.error('Recaptcha client js url not defined');
+                    return;
+                }
+                if (typeof recaptcha.apiObject === 'undefined') {
+                    console.error('Recaptcha client js api object name not defined');
+                    return;
+                }
+                recaptchaCount += 1;
+                var frm = jQuery(el),
+                    btnRecaptcha = frm.find(".btn-recaptcha"),
+                    required = (typeof recaptcha.requiredText !== 'undefined')
+                        ? recaptcha.requiredText
+                        : 'Required',
+                    recaptchaId = 'divDynamicRecaptcha' + recaptchaCount;
+
+                isInvisible = btnRecaptcha.hasClass('btn-recaptcha-invisible')
 
                 // if no recaptcha element, make one
-                var recaptchaContent = frm.find("#divDynamicRecaptcha .g-recaptcha"),
+                var recaptchaContent = frm.find('#' + recaptchaId + ' .g-recaptcha'),
                     recaptchaElement = frm.find('.recaptcha-container'),
                     appendElement = frm;
 
                 if (recaptchaElement.length) {
+                    recaptchaElement.attr('id', recaptchaElement.attr('id') + recaptchaCount);
                     appendElement = recaptchaElement;
                 }
                 if (!recaptchaContent.length) {
-                    appendElement.append('<div id="divDynamicRecaptcha" class="g-recaptcha" data-toggle="tooltip" data-placement="bottom" data-trigger="manual" title="' + required + '"></div>');
-                    recaptchaContent = appendElement.find("#divDynamicRecaptcha");
+                    appendElement.append('<div id="#' + recaptchaId + '" class="g-recaptcha"></div>');
+                    recaptchaContent = appendElement.find('#' + recaptchaId);
                 }
                 // propagate invisible recaptcha if necessary
-                if (isInvisible) {
-                    if (recaptchaContent.data('size') !== 'invisible') {
-                        recaptchaContent.attr('data-size', 'invisible');
-                    }
-                } else {
-                    recaptchaContent.hide()
-                }
-
-                // ensure site key is available to grecaptcha
-                recaptchaContent.attr('data-sitekey', recaptchaSiteKey);
-
-
-                // alter form to work around JS behavior on .submit() when there
-                // there is an input with the name 'submit'
-                var btnSubmit = frm.find("input[name='submit']");
-                if (btnSubmit.length) {
-                    var action = frm.prop('action');
-                    frm.prop('action', action + '&submit=1');
-                    btnSubmit.remove();
+                if (!isInvisible) {
+                    recaptchaContent.data('toggle', 'tooltip')
+                        .data('placement', 'bottom')
+                        .data('trigger', 'manual')
+                        .attr('title', required)
+                        .hide();
                 }
 
                 // make callback for grecaptcha to invoke after
                 // injecting token & make it known via data-callback
-                var funcName = 'recaptchaCallback' + i;
+                var funcName = recaptchaId + 'Callback';
                 window[funcName] = function () {
                     if (isInvisible) {
                         frm.submit();
                     }
                 };
-                recaptchaContent.attr('data-callback', funcName);
 
                 // setup an on form submit event to ensure that we
                 // are allowing required field validation to occur before
                 // we do the invisible recaptcha checking
                 if (isInvisible) {
-                    frm.on('submit', function (event) {
-                        if (!grecaptcha.getResponse().trim()) {
+                    recaptchaType = 'invisible';
+                    frm.on('submit.recaptcha', function (event) {
+                        var recaptchaId = frm.find('.g-recaptcha').data('recaptcha-id');
+                        if (!window[recaptcha.apiObject].getResponse(recaptchaId).trim()) {
                             event.preventDefault();
-                            grecaptcha.execute();
+                            window[recaptcha.apiObject].execute(recaptchaId);
+                            recaptchaValidationComplete = false;
+                        } else {
+                            recaptchaValidationComplete = true;
                         }
                     });
                 } else {
@@ -1688,17 +2113,101 @@ var recaptchaLoadComplete = false;
                 }
             });
 
-            // fetch/invoke the grecaptcha lib
+            window.recaptchaLoadCallback = function() {
+                jQuery('.g-recaptcha').each(function(i, el) {
+                    var element = jQuery(el),
+                        frm = element.closest('form'),
+                        btn = frm.find('.btn-recaptcha'),
+                        idToUse = element.attr('id').substring(1);
+                    var recaptchaId = grecaptcha.render(
+                        el,
+                        {
+                            sitekey: recaptcha.siteKey,
+                            size: (btn.hasClass('btn-recaptcha-invisible')) ? 'invisible' : 'normal',
+                            callback: idToUse + 'Callback'
+                        }
+                    );
+                    element.data('recaptcha-id', recaptchaId);
+                });
+            }
+
+            // fetch/invoke the remote library
             if (recaptchaForms.length) {
-                var gUrl = "https://www.google.com/recaptcha/api.js";
-                jQuery.getScript(gUrl, function () {
-                    for(var i = postLoad.length -1; i >= 0 ; i--){
+                jQuery.getScript(recaptcha.libUrl, function () {
+                    for(var i = postLoad.length - 1; i >= 0 ; i--){
                         postLoad[i]();
                     }
                 });
             }
+
+            // captcha overlay badge
+            let captchaOverlayBadge = jQuery('.captcha-overlay-badge'),
+                captchaOverlayPopup = jQuery('.captcha-overlay-popup');
+            if (recaptchaForms.length && captchaOverlayBadge.length) {
+                captchaOverlayBadge.show();
+                if (captchaOverlayPopup.length) {
+                    let captchaOverlayTimer;
+                    function captchaPopupHide() {
+                        captchaOverlayPopup.hide();
+                    }
+                    function debounce(func, delay) {
+                        return function() {
+                            const context = this;
+                            const args = arguments;
+                            clearTimeout(captchaOverlayTimer);
+                            captchaOverlayTimer = setTimeout(function() {
+                                func.apply(context, args);
+                            }, delay);
+                        };
+                    }
+                    const debouncedCaptchaPopupHide = debounce(captchaPopupHide, 3000);
+                    captchaOverlayBadge.bind('mouseenter', function() {
+                        captchaOverlayPopup.show();
+                        clearTimeout(captchaOverlayTimer);
+                    });
+                    captchaOverlayBadge.bind('mouseleave', debouncedCaptchaPopupHide);
+                    captchaOverlayBadge.bind('touchstart', function() {
+                        captchaOverlayPopup.show();
+                        clearTimeout(captchaOverlayTimer);
+                        captchaOverlayTimer = setTimeout(captchaPopupHide, 3000);
+                    });
+
+                }
+            }
             recaptchaLoadComplete = true;
         };
+
+        this.setupCallback = (callback) => {
+            if (typeof callback !== 'function') {
+                return;
+            }
+
+            jQuery('.g-recaptcha').each(function(i, el) {
+                const idToUse = jQuery(el).attr('id').substring(1);
+                const originalCallbackName = idToUse + 'Callback';
+                const backupCallbackName = originalCallbackName + 'Original';
+
+
+                if (typeof window[backupCallbackName] === 'undefined') {
+                    window[backupCallbackName] = window[originalCallbackName];
+                }
+
+                window[originalCallbackName] = callback;
+            });
+        }
+
+        this.restoreDefaultCallback = () => {
+            jQuery('.g-recaptcha').each(function(i, el) {
+                const idToUse = jQuery(el).attr('id').substring(1);
+                const originalCallbackName = idToUse + 'Callback';
+                const backupCallbackName = originalCallbackName + 'Original';
+
+                if (typeof window[backupCallbackName] !== 'undefined') {
+                    window[originalCallbackName] = window[backupCallbackName];
+                    delete window[backupCallbackName];
+                }
+            });
+        }
 
         return this;
     });
@@ -1755,7 +2264,7 @@ function () {
         if (typeof window.whmcsBaseUrl === 'undefined') {
             console.log('Warning: The WHMCS Base URL definition is missing '
                 + 'from your active template. Please refer to '
-                + 'https://docs.whmcs.com/WHMCS_Base_URL_Template_Variable '
+                + 'https://go.whmcs.com/1961/base-url '
                 + 'for more information and details of how to resolve this '
                 + 'warning.');
             window.whmcsBaseUrl = this.autoDetermineBaseUrl();
@@ -1874,6 +2383,125 @@ function () {
 
 WHMCS.utils.validateBaseUrl();
 
+jQuery(document).ready(function() {
+    jQuery('#main-body').on('click', '.product-recommendations .product-recommendation .header', function(e) {
+        if (jQuery(e.target).is('.btn, .btn span, .btn .fa')) {
+            return;
+        }
+        e.preventDefault();
+        if (jQuery('.fa-square', this).length > 0) {
+            return;
+        }
+        jQuery(this).parent().find('.rotate').toggleClass('down');
+        jQuery(this).parent().find('.body').slideToggle('fast');
+    }).on('click', '.product-recommendations .product-recommendation .btn-add', function() {
+        jQuery(this).attr('disabled', 'disabled')
+            .find('span.arrow i')
+            .removeClass('fa-chevron-right')
+            .addClass('fa-spinner fa-spin');
+    }).on('click', '.order-button, .order-btn, .btn-order-now', function(e) {
+        if (jQuery(this).data('hasRecommendations') == 1) {
+            e.preventDefault();
+            var href = jQuery(this).attr('href');
+            jQuery('i', this).removeClass().addClass('fas fa-spinner fa-spin');
+            displayRecommendations(
+                href,
+                'addproductajax=1',
+                true
+            ).done(function() {
+                window.location = href;
+            });
+        }
+    });
+    setRecommendationColors();
+    if (document.URL.includes('cart.php?a=checkout') || document.URL.includes('cart.php?a=view')) {
+        if (jQuery('#recommendationsModal .product-recommendation:not(.clonable)').length > 0) {
+            jQuery('#recommendationsModal').modal('toggle');
+        }
+    }
+});
+
+function getRecommendationColors(hex, percentage) {
+    var primary = tinycolor(hex),
+        secondary,
+        text = tinycolor('fff'),
+        brightness = Math.round(Math.min(primary.getBrightness()/255) * 100),
+        baseBrightnessPercent = 25;
+    if (brightness < baseBrightnessPercent) {
+        primary.lighten(baseBrightnessPercent - brightness);
+    } else if (brightness > (100 - baseBrightnessPercent)) {
+        primary.darken(brightness - (100 - baseBrightnessPercent));
+    }
+    secondary = primary.clone().darken(percentage);
+    if (secondary.isLight()) {
+        text = tinycolor('000');
+    }
+    return [primary.toHexString(), secondary.toHexString(), text.toHexString()];
+};
+
+function setRecommendationColors() {
+    var colors,
+        defaultColor = '#9abb3a';
+    jQuery('.product-recommendations .product-recommendation').each(function() {
+        var element = jQuery(this),
+            primaryColor = element.data('color');
+        if (!(primaryColor.length > 0) || (primaryColor.match(/^#[0-9A-Fa-f]{3,6}$/gi) == undefined)) {
+            primaryColor = defaultColor;
+        }
+        colors = getRecommendationColors(primaryColor, 15);
+        element.css('border-color', colors[0]);
+        jQuery('.btn-add', element).css('background-color', colors[0]);
+        jQuery('.expander', element).css('color', colors[0]);
+        jQuery('.price', element).css('color', colors[1]);
+        jQuery('.text', element).css({'color': colors[2]});
+        jQuery('.arrow', element).css({'background-color': colors[1], 'color': colors[2]});
+    });
+}
+
+function displayRecommendations(postUrl, postData, postForce) {
+    var deferredObject = jQuery.Deferred(),
+        hasRecommendations = jQuery('#divProductHasRecommendations').data('value'),
+        modal = jQuery('#recommendationsModal'),
+        shoppingCartBtn = jQuery('.cart-btn .badge');
+    if (postForce || hasRecommendations) {
+        jQuery('.cart-body button[type="submit"] i')
+            .removeClass('fa-arrow-circle-right')
+            .addClass('fa-spinner fa-spin');
+        WHMCS.http.jqClient.jsonPost({
+            url: postUrl,
+            data: postData,
+            success: function(data) {
+                if (data.success && data.href) {
+                    modal.on('hide.bs.modal', function() {
+                        window.location = data.href;
+                        return false;
+                    });
+                    jQuery('#btnContinueRecommendationsModal', modal)
+                        .attr('href', data.href)
+                        .click(function () {
+                            jQuery('span', this).removeClass('w-hidden hidden');
+                        });
+                    jQuery('.modal-body', modal).html('').html(data.html);
+                    setRecommendationColors();
+                    modal.modal('show');
+                    jQuery('i.fa-spinner.fa-spin:visible').removeClass('fa-spinner fa-spin').addClass('fa-check-circle');
+                    shoppingCartBtn.text(data.count);
+                } else if (!data.success && data.href) {
+                    window.location = data.href;
+                } else {
+                    deferredObject.resolve(false);
+                }
+            },
+            error: function() {
+                deferredObject.resolve(false);
+            }
+        });
+    } else {
+        deferredObject.resolve(false);
+    }
+    return deferredObject.promise();
+}
+
 if (typeof localTrans === 'undefined') {
     localTrans = function (phraseId, fallback)
     {
@@ -1891,7 +2519,8 @@ if (typeof localTrans === 'undefined') {
 
 var domainLookupCallCount,
     checkoutForm,
-    furtherSuggestions;
+    furtherSuggestions,
+    hideCvcOnCheckoutForExistingCard = 0;
 
 jQuery(document).ready(function(){
 
@@ -1941,52 +2570,84 @@ jQuery(document).ready(function(){
     }
 
     function repositionScrollingSidebar() {
-        if (jQuery("#scrollingPanelContainer").css('float') != 'left') {
+        if (jQuery('#scrollingPanelContainer').css('float') === 'none') {
             $orderSummaryEl.stop().css('margin-top', '0');
             return false;
         }
         var heightOfOrderSummary =  $orderSummaryEl.outerHeight();
         var offsetTop = 0;
+        var productListing = jQuery("#scrollingPanelContainer").prev('div.secondary-cart-body');
         if (typeof offset !== "undefined") {
             offsetTop = offset.top;
         }
         var newTopOffset = jQuery(window).scrollTop() - offsetTop + topPadding;
-        if (newTopOffset > maxTopOffset - heightOfOrderSummary) {
-            newTopOffset = maxTopOffset - heightOfOrderSummary;
-        }
-        if (jQuery(window).scrollTop() > offsetTop) {
-            $orderSummaryEl.stop().animate({
-                marginTop: newTopOffset
+        if (heightOfOrderSummary < jQuery(window).height()) {
+            productListing.stop().animate({
+                marginTop: 0
             });
+            if (newTopOffset > maxTopOffset - heightOfOrderSummary) {
+                newTopOffset = maxTopOffset - heightOfOrderSummary;
+            }
+            if (jQuery(window).scrollTop() > offsetTop) {
+                $orderSummaryEl.stop().animate({
+                    marginTop: newTopOffset
+                });
+            } else {
+                $orderSummaryEl.stop().animate({
+                    marginTop: 0
+                });
+            }
         } else {
             $orderSummaryEl.stop().animate({
                 marginTop: 0
             });
+            if (newTopOffset + productListing.height() > $orderSummaryEl.height()) {
+                return false;
+            }
+            if (jQuery(window).scrollTop() > offsetTop) {
+                productListing.stop().animate({
+                    marginTop: newTopOffset
+                });
+            } else {
+                productListing.stop().animate({
+                    marginTop: 0
+                });
+            }
         }
     }
 
     jQuery("#frmConfigureProduct").submit(function(e) {
         e.preventDefault();
 
-        var button = jQuery('#btnCompleteProductConfig');
+        var button = jQuery('#btnCompleteProductConfig'),
+            btnOriginalText = jQuery(button).html(),
+            postUrl = whmcsBaseUrl + '/cart.php',
+            postData = 'a=confproduct&' + jQuery("#frmConfigureProduct").serialize();
 
-        var btnOriginalText = jQuery(button).html();
         jQuery(button).find('i').removeClass('fa-arrow-circle-right').addClass('fa-spinner fa-spin');
-        WHMCS.http.jqClient.post("cart.php", 'ajax=1&a=confproduct&' + jQuery("#frmConfigureProduct").serialize(),
-            function(data) {
-                if (data) {
-                    jQuery("#btnCompleteProductConfig").html(btnOriginalText);
-                    jQuery("#containerProductValidationErrorsList").html(data);
-                    jQuery("#containerProductValidationErrors").removeClass('hidden').show();
-                    // scroll to error container if below it
-                    if (jQuery(window).scrollTop() > jQuery("#containerProductValidationErrors").offset().top) {
-                        jQuery('html, body').scrollTop(jQuery("#containerProductValidationErrors").offset().top - 15);
+        displayRecommendations(
+            postUrl,
+            'addproductajax=1&' + postData,
+            false
+        ).done(function() {
+            WHMCS.http.jqClient.post(
+                postUrl,
+                'ajax=1&' + postData,
+                function(data) {
+                    if (data) {
+                        jQuery("#btnCompleteProductConfig").html(btnOriginalText);
+                        jQuery("#containerProductValidationErrorsList").html(data);
+                        jQuery("#containerProductValidationErrors").show();
+                        // scroll to error container if below it
+                        if (jQuery(window).scrollTop() > jQuery("#containerProductValidationErrors").offset().top) {
+                            jQuery('html, body').scrollTop(jQuery("#containerProductValidationErrors").offset().top - 15);
+                        }
+                    } else {
+                        window.location = whmcsBaseUrl + '/cart.php?a=confdomains';
                     }
-                } else {
-                    window.location = 'cart.php?a=confdomains';
                 }
-            }
-        );
+            );
+        });
     });
 
     jQuery("#productConfigurableOptions").on('ifChecked', 'input', function() {
@@ -2054,7 +2715,15 @@ jQuery(document).ready(function(){
             sld = sldInput.val(),
             tld = '',
             pid = jQuery('#frmProductDomainPid').val(),
-            tldInput = '';
+            tldInput = '',
+            idnLanguage = jQuery('#idnLanguageSelector');
+
+        jQuery('.field-error-msg').hide();
+
+        if (idnLanguage.is(':visible')) {
+            idnLanguage.slideUp();
+            idnLanguage.find('select').val('');
+        }
 
         if (domainoption == 'incart') {
             sldInput = jQuery("#" + domainoption + "sld option:selected");
@@ -2089,10 +2758,12 @@ jQuery(document).ready(function(){
         domainLookupCallCount = 0;
         btnSearchObj.attr('disabled', 'disabled').addClass('disabled');
 
-        jQuery('.domain-lookup-result').addClass('hidden');
-        jQuery('#primaryLookupResult div').hide();
+        jQuery('.domain-lookup-result').hide();
+        jQuery('#primaryLookupResult div').filter(function() {
+            return $(this).closest('#idnLanguageSelector').length === 0;
+        }).hide();
         jQuery('#primaryLookupResult').find('.register-price-label').show().end()
-            .find('.transfer-price-label').addClass('hidden');
+            .find('.transfer-price-label').hide();
 
         jQuery('.domain-lookup-register-loader').hide();
         jQuery('.domain-lookup-transfer-loader').hide();
@@ -2106,15 +2777,15 @@ jQuery(document).ready(function(){
         }
 
         jQuery('.domain-lookup-loader').show();
-        suggestions.find('li').addClass('hidden').end()
-            .find('.clone').remove().end();
-        jQuery('div.panel-footer.more-suggestions').addClass('hidden')
-            .find('a').removeClass('hidden').end()
-            .find('span.no-more').addClass('hidden');
+        suggestions.find('div:not(.actions)').hide().end()
+            .find('.clone').remove();
+        jQuery('div.panel-footer.more-suggestions').hide()
+            .find('a').show().end()
+            .find('span.no-more').hide();
         jQuery('.btn-add-to-cart').removeAttr('disabled')
             .find('span').hide().end()
             .find('span.to-add').show();
-        btnDomainContinue.addClass('hidden').attr('disabled', 'disabled');
+        btnDomainContinue.hide().attr('disabled', 'disabled');
 
         if (domainoption != 'register') {
             spotlightTlds.hide();
@@ -2122,12 +2793,11 @@ jQuery(document).ready(function(){
         }
 
         if (!domainSearchResults.is(":visible")) {
-            domainSearchResults.hide().removeClass('hidden').fadeIn();
+            domainSearchResults.fadeIn();
         }
 
         if (domainoption == 'register') {
-            jQuery('.suggested-domains').hide().removeClass('hidden').fadeIn('fast');
-            spotlightTlds.hide().removeClass('hidden').fadeIn('fast');
+            spotlightTlds.fadeIn('fast');
             jQuery('#resultDomainOption').val(domainoption);
             var lookup = WHMCS.http.jqClient.post(
                     WHMCS.utils.getRouteUrl('/domain/check'),
@@ -2179,47 +2849,50 @@ jQuery(document).ready(function(){
                         resultDomain = jQuery('#resultDomain'),
                         resultDomainPricing = jQuery('#resultDomainPricingTerm'),
                         error = result.find('.domain-error');
-                    result.removeClass('hidden').show();
+                    result.show();
                     jQuery('.domain-lookup-primary-loader').hide();
-                    if (!data.result.error && domain.isValidDomain) {
+                    if (typeof domain !== 'string' && !domain.error && domain.isValidDomain) {
                         error.hide();
                         pricing = domain.pricing;
                         if (domain.isAvailable && typeof pricing !== 'string') {
+                            if (domain.domainName !== domain.idnDomainName && idnLanguage.not(':visible')) {
+                                idnLanguage.slideDown();
+                            }
                             if (domain.preferredTLDNotAvailable) {
-                                unavailable.show().find('strong').html(domain.originalUnavailableDomain);
+                                unavailableTld.show().find('strong').html(domain.originalUnavailableTld);
                             }
                             contactSupport.hide();
                             available.show().find('strong').html(domain.domainName);
                             availablePrice.show().find('span.price').html(pricing[Object.keys(pricing)[0]].register).end()
-                                .find('button').attr('data-domain', domain.idnDomainName);
+                                .find('button').attr('data-domain', domain.domainName);
                             resultDomain.val(domain.domainName);
                             resultDomainPricing.val(Object.keys(pricing)[0]).attr('name', 'domainsregperiod[' + domain.domainName +']');
 
                             btnDomainContinue.removeAttr('disabled');
                         } else {
-                            unavailable.show().find('strong').html(domain.domainName);
+                            var displayDomain = domain.originalUnavailableDomain
+                                ? domain.originalUnavailableDomain
+                                : domain.domainName;
+                            unavailable.show().find('strong').html(displayDomain);
                             contactSupport.hide();
                             if (typeof pricing === 'string' && pricing == 'ContactUs') {
                                 contactSupport.show();
                             }
                         }
                     } else {
-                        var invalidLength = invalid.find('span.domain-length-restrictions'),
-                            done = false,
+                        var done = false,
                             reg = /<br\s*\/>/,
                             errors = [];
-                        invalidLength.hide();
-                        error.hide();
-                        if (domain.minLength > 0 && domain.maxLength > 0) {
-                            invalidLength.find('.min-length').html(domain.minLength).end()
-                                .find('.max-length').html(domain.maxLength).end();
-                            invalidLength.show();
-                        } else if (data.result.error) {
-                            if (!data.result.error.match(reg)) {
-                                error.text(data.result.error);
+                        if (!domain.isValidDomain && domain.domainErrorMessage) {
+                            invalid.text(domain.domainErrorMessage);
+                        } else if (domain.error || index === 'error') {
+                            if (typeof domain === 'string') {
+                                error.text(domain);
+                            } else if (!domain.error.match(reg)) {
+                                error.text(domain.error);
                             } else {
                                 error.text('');
-                                errors = data.result.error.split(reg);
+                                errors = domain.error.split(reg);
                                 for(var i=0; i < errors.length; i++) {
                                     var errorMsg = errors[i];
                                     if (errorMsg.length) {
@@ -2239,8 +2912,6 @@ jQuery(document).ready(function(){
                             invalid.show();
                         }
                     }
-
-
                 });
             }).always(function() {
                 hasProductDomainLookupEnded(3, btnSearchObj);
@@ -2257,35 +2928,38 @@ jQuery(document).ready(function(){
                         pricing = domain.pricing,
                         result = jQuery('#spotlight' + tld + ' .domain-lookup-result');
                     jQuery('.domain-lookup-spotlight-loader').hide();
-                    result.find('button').addClass('hidden').end();
+                    result.find('button').hide();
                     if (domain.isValidDomain) {
                         if (domain.isAvailable && typeof pricing !== 'string') {
+                            if (domain.domainName !== domain.idnDomainName && idnLanguage.not(':visible')) {
+                                idnLanguage.slideDown();
+                            }
                             result
-                                .find('span.available').html(pricing[Object.keys(pricing)[0]].register).removeClass('hidden').end()
+                                .find('span.available').html(pricing[Object.keys(pricing)[0]].register).show().end()
                                 .find('button.btn-add-to-cart')
-                                .attr('data-domain', domain.idnDomainName)
-                                .removeClass('hidden');
+                                .attr('data-domain', domain.domainName)
+                                .show();
 
-                            result.find('button.domain-contact-support').addClass('hidden').end();
+                            result.find('button.domain-contact-support').hide();
                         } else {
                             if (typeof pricing === 'string') {
                                 if (pricing == '') {
-                                    result.find('button.unavailable').removeClass('hidden').end();
+                                    result.find('button.unavailable').show();
                                 } else {
-                                    result.find('button.domain-contact-support').removeClass('hidden').end();
+                                    result.find('button.domain-contact-support').show();
                                 }
-                                result.find('span.available').addClass('hidden').end();
+                                result.find('span.available').hide();
                             } else {
-                                result.find('button.unavailable').removeClass('hidden').end();
-                                result.find('span.available').addClass('hidden').end();
+                                result.find('button.unavailable').show();
+                                result.find('span.available').hide();
                             }
                         }
                     } else {
-                        result.find('button.invalid.hidden').removeClass('hidden').end()
-                            .find('span.available').addClass('hidden').end()
-                            .find('button').not('button.invalid').addClass('hidden');
+                        result.find('button.invalid:hidden').show().end()
+                            .find('span.available').hide().end()
+                            .find('button').not('button.invalid').hide();
                     }
-                    result.removeClass('hidden');
+                    result.show();
                 });
             }).always(function() {
                 hasProductDomainLookupEnded(3, btnSearchObj);
@@ -2295,53 +2969,54 @@ jQuery(document).ready(function(){
             suggestion.done(function (data) {
                 if (typeof data != 'object' || data.result.length == 0 || data.result.error) {
                     jQuery('.suggested-domains').fadeOut('fast', function() {
-                        jQuery(this).addClass('hidden');
+                        jQuery(this).hide();
                     });
                     return;
                 } else {
-                    jQuery('.suggested-domains').removeClass('hidden');
+                    jQuery('.suggested-domains').show();
                 }
                 var suggestionCount = 1;
                 jQuery.each(data.result, function(index, domain) {
                     var tld = domain.tld,
                         pricing = domain.pricing;
-                    suggestions.find('li:first').clone(true, true).appendTo(suggestions);
-                    var newSuggestion = suggestions.find('li.domain-suggestion').last();
+                    suggestions.find('div:first').clone(true, true).appendTo(suggestions);
+                    var newSuggestion = suggestions.find('div.domain-suggestion').last();
                     newSuggestion.addClass('clone')
                         .find('span.domain').html(domain.sld).end()
-                        .find('span.extension').html('.' + tld).end();
-
+                        .find('span.extension').html('.' + tld);
+                    if (domain.domainName !== domain.idnDomainName && idnLanguage.not(':visible')) {
+                        idnLanguage.slideDown();
+                    }
                     if (typeof pricing === 'string') {
                         newSuggestion.find('button.btn-add-to-cart').remove();
                         if (pricing != '') {
-                            newSuggestion.find('button.domain-contact-support').removeClass('hidden').end()
+                            newSuggestion.find('button.domain-contact-support').show().end()
                                 .find('span.price').hide();
                         } else {
                             newSuggestion.remove();
                         }
                     } else {
-                        newSuggestion.find('button.btn-add-to-cart').attr('data-domain', domain.idnDomainName).end()
-                            .find('span.price').html(pricing[Object.keys(pricing)[0]].register).end();
+                        newSuggestion.find('button.btn-add-to-cart').attr('data-domain', domain.domainName).end()
+                            .find('span.price').html(pricing[Object.keys(pricing)[0]].register);
                     }
 
                     if (suggestionCount <= 10) {
-                        newSuggestion.removeClass('hidden');
+                        newSuggestion.show();
                     }
                     suggestionCount++;
                     if (domain.group) {
                         newSuggestion.find('span.promo')
                             .addClass(domain.group)
                             .html(domain.group.toUpperCase())
-                            .removeClass('hidden')
-                            .end();
+                            .show();
                     }
-                    furtherSuggestions = suggestions.find('li.domain-suggestion.clone.hidden').length;
+                    furtherSuggestions = suggestions.find('div.domain-suggestion.clone').not(':visible').length;
                     if (furtherSuggestions > 0) {
-                        jQuery('div.more-suggestions').removeClass('hidden');
+                        jQuery('div.more-suggestions').show();
                     }
                 });
                 jQuery('.domain-lookup-suggestions-loader').hide();
-                jQuery('#domainSuggestions').removeClass('hidden');
+                jQuery('#domainSuggestions').show();
             }).always(function() {
                 hasProductDomainLookupEnded(3, btnSearchObj);
             });
@@ -2373,19 +3048,19 @@ jQuery(document).ready(function(){
                     resultDomainPricing = jQuery('#resultDomainPricingTerm');
                 if (Object.keys(data.result).length === 0) {
                     jQuery('.domain-lookup-primary-loader').hide();
-                    result.removeClass('hidden').show();
+                    result.show();
                     transfernoteligible.show();
                 }
                 jQuery.each(data.result, function(index, domain) {
                     var pricing = domain.pricing;
                     jQuery('.domain-lookup-primary-loader').hide();
-                    result.removeClass('hidden').show();
+                    result.show();
                     if (domain.isRegistered) {
                         transfereligible.show();
                         transferPrice.show().find('.register-price-label').hide().end()
-                            .find('.transfer-price-label').removeClass('hidden').show().end()
+                            .find('.transfer-price-label').show().end()
                             .find('span.price').html(pricing[Object.keys(pricing)[0]].transfer).end()
-                            .find('button').attr('data-domain', domain.idnDomainName);
+                            .find('button').attr('data-domain', domain.domainName);
                         resultDomain.val(domain.domainName);
                         resultDomainPricing.val(Object.keys(pricing)[0]).attr('name', 'domainsregperiod[' + domain.domainName +']');
                         btnDomainContinue.removeAttr('disabled');
@@ -2419,15 +3094,21 @@ jQuery(document).ready(function(){
                 }
                 jQuery.each(data.result, function(index, result) {
                     if (result.status === true) {
-                        window.location = 'cart.php?a=confproduct&i=' + result.num;
+                        displayRecommendations(
+                            whmcsBaseUrl + '/cart.php',
+                            'addproductajax=1&a=confproduct&i=' + result.num,
+                            false
+                        ).done(function() {
+                            window.location = whmcsBaseUrl + '/cart.php?a=confproduct&i=' + result.num;
+                        });
                     } else {
                         jQuery('.domain-lookup-primary-loader').hide();
                         if (typeof result === 'string') {
-                            jQuery('#primaryLookupResult').removeClass('hidden').show().find('.domain-error')
+                            jQuery('#primaryLookupResult').show().find('.domain-error')
                                 .text(result)
                                 .show();
                         } else {
-                            jQuery('#primaryLookupResult').removeClass('hidden').show().find('.domain-invalid').show();
+                            jQuery('#primaryLookupResult').show().find('.domain-invalid').show();
                         }
                     }
                 });
@@ -2437,15 +3118,37 @@ jQuery(document).ready(function(){
             });
         }
 
-        btnDomainContinue.removeClass('hidden');
+        btnDomainContinue.show();
+    });
+
+    jQuery('#frmProductDomainSelections').on('submit', function(e) {
+        var idnLanguage = jQuery('#idnLanguageSelector'),
+            idnLanguageInput = idnLanguage.find('select'),
+            form = jQuery(this);
+
+        if (idnLanguage.is(':visible') && !idnLanguageInput.val()) {
+            e.preventDefault();
+            idnLanguageInput.showInputError();
+            return false;
+        }
+
+        e.preventDefault();
+        displayRecommendations(
+            form.attr('action'),
+            'addproductajax=1&' + form.serialize(),
+            false
+        ).done(function() {
+            form.unbind().submit();
+            form.submit();
+        });
     });
 
     jQuery("#btnAlreadyRegistered").click(function() {
         jQuery("#containerNewUserSignup").slideUp('', function() {
-            jQuery("#containerExistingUserSignin").hide().removeClass('hidden').slideDown('', function() {
+            jQuery("#containerExistingUserSignin").slideDown('', function() {
                 jQuery("#inputCustType").val('existing');
                 jQuery("#btnAlreadyRegistered").fadeOut('', function() {
-                    jQuery("#btnNewUserSignup").removeClass('hidden').fadeIn();
+                    jQuery("#btnNewUserSignup").fadeIn();
                 });
             });
         });
@@ -2458,13 +3161,13 @@ jQuery(document).ready(function(){
 
     jQuery("#btnNewUserSignup").click(function() {
         jQuery("#containerExistingUserSignin").slideUp('', function() {
-            jQuery("#containerNewUserSignup").hide().removeClass('hidden').slideDown('', function() {
+            jQuery("#containerNewUserSignup").slideDown('', function() {
                 jQuery("#inputCustType").val('new');
                 if (jQuery("#passwdFeedback").html().length == 0) {
                     jQuery("#containerNewUserSecurity").show();
                 }
                 jQuery("#btnNewUserSignup").fadeOut('', function() {
-                    jQuery("#btnAlreadyRegistered").removeClass('hidden').fadeIn();
+                    jQuery("#btnAlreadyRegistered").fadeIn();
                 });
             });
             jQuery('.marketing-email-optin').slideDown();
@@ -2474,8 +3177,179 @@ jQuery(document).ready(function(){
         }
     });
 
-    var existingCards = jQuery('.existing-card'),
-        cvvFieldContainer = jQuery('#cvv-field-container'),
+    jQuery("#btnExistingLogin").click(() => {
+        const inputLoginEmail = jQuery('#inputLoginEmail').val().trim();
+        const inputLoginPassword = jQuery('#inputLoginPassword').val().trim();
+        const btnExistingLogin = jQuery('#btnExistingLogin');
+
+        jQuery('.checkout-error-feedback').hide();
+
+        const loginPayload = {
+            username: inputLoginEmail,
+            password: inputLoginPassword,
+            token: csrfToken
+        };
+
+        btnExistingLogin.prop('disabled', true)
+            .addClass('disabled')
+            .find('span').toggle();
+
+        retrieveCaptchaInput()
+            .then(captchaData => {
+                if (!captchaData) {
+                    return Promise.reject();
+                }
+
+                Object.assign(loginPayload, captchaData);
+
+                return new Promise((resolve, reject) => {
+                    WHMCS.http.jqClient.jsonPost({
+                        url: WHMCS.utils.getRouteUrl('/login/cart'),
+                        data: loginPayload,
+                        success: (data) => {
+                            if (data.redirectUrl) {
+                                window.location.href = data.redirectUrl;
+                            } else {
+                                location.reload(true);
+                            }
+                            resolve();
+                        },
+                        error: (error) => {
+                            reject(error);
+                        }
+                    });
+                });
+            })
+            .catch((error) => {
+                if (error) {
+                    showCheckoutError(error, jQuery('#existingLoginMessage'));
+                }
+            })
+            .finally(() => {
+                btnExistingLogin.prop('disabled', false)
+                    .removeClass('disabled')
+                    .find('span').toggle();
+
+                WHMCS.form.reloadCaptcha();
+            });
+    });
+
+    jQuery('.account-select').on('ifChecked', function(event) {
+        var userSignupContainer = jQuery('#containerNewUserSignup'),
+            stateSelect = jQuery("#stateselect"),
+            thisValue = jQuery(this).val(),
+            btnCompleteOrder = jQuery('#btnCompleteOrder'),
+            existingPayMethods = jQuery('#existingCardsContainer'),
+            existingUserEmail = jQuery('#inputEmail');
+
+        if (existingPayMethods.length) {
+            existingPayMethods.html('');
+        }
+
+        if (existingUserEmail.length) {
+            existingUserEmail.attr('value', '');
+        }
+        jQuery('#containerExistingAccountSelect')
+            .find('div.account.active')
+            .removeClass('active');
+        jQuery(this).closest('div.account').addClass('active');
+        if (thisValue === 'new') {
+            if (userSignupContainer.not(':visible')) {
+                userSignupContainer.slideDown('', function () {
+                    jQuery("#inputCustType").val('add');
+                    jQuery('.marketing-email-optin').slideDown();
+                });
+                if (stateSelect.hasClass('requiredAttributeRemoved')) {
+                    stateSelect.attr('required', 'required')
+                        .removeClass('requiredAttributeRemoved');
+                }
+            }
+        } else {
+            btnCompleteOrder.addClass('disabled');
+
+            if (btnCompleteOrder.hasClass('spinner-on-click')) {
+                var icon = btnCompleteOrder.find('i.fas,i.far,i.fal,i.fab');
+
+                jQuery(icon)
+                    .data('original-class', icon.attr('class'))
+                    .removeAttr('class')
+                    .addClass('fas fa-spinner fa-spin');
+            }
+
+            jQuery("#inputCustType").val('account');
+            if (userSignupContainer.is(':visible')) {
+                userSignupContainer.slideUp();
+                if (stateSelect.attr('required')) {
+                    stateSelect.removeAttr('required')
+                        .addClass('requiredAttributeRemoved');
+                }
+                jQuery('.marketing-email-optin').slideUp();
+            }
+        }
+        WHMCS.http.jqClient.jsonPost({
+            url: WHMCS.utils.getRouteUrl('/cart/account/select'),
+            data: {
+                account_id: thisValue,
+                token: csrfToken
+            },
+            success: function(data) {
+                var creditDiv = jQuery('#applyCreditContainer');
+                jQuery('#totalCartPrice').text(data.total);
+                creditDiv.find('p').first().text(data.availableCreditBalance);
+                if (!data.canUseCreditOnCheckout && creditDiv.is(':visible')) {
+                    var skipCreditOnCheckout = jQuery('#skipCreditOnCheckout');
+                    creditDiv.hide();
+                    skipCreditOnCheckout.prop('checked', true);
+                } else if (data.canUseCreditOnCheckout) {
+                    var useCreditOnCheckout = jQuery('#useCreditOnCheckout'),
+                        spanFullCredit = jQuery('#spanFullCredit'),
+                        spanUseCredit = jQuery('#spanUseCredit');
+                    if (data.full) {
+                        hideCvcOnCheckoutForExistingCard = '1';
+                        spanFullCredit.show().find('span').text(data.total);
+                        if (spanUseCredit.is(':visible')) {
+                            spanUseCredit.slideUp();
+                        }
+                    } else {
+                        hideCvcOnCheckoutForExistingCard = '0';
+                        spanUseCredit.show().find('span').text(data.creditBalance);
+                        if (spanFullCredit.is(':visible')) {
+                            spanFullCredit.slideUp();
+                        }
+                    }
+                    useCreditOnCheckout.iCheck('check');
+                    if (creditDiv.not(':visible')) {
+                        creditDiv.slideDown();
+                    }
+                }
+                if (existingPayMethods.length) {
+                    existingPayMethods.html(data.existingCards);
+                    existingPayMethods.find('input[type="radio"]').iCheck({
+                        inheritID: true,
+                        checkboxClass: 'icheckbox_square-blue',
+                        radioClass: 'iradio_square-blue',
+                        increaseArea: '20%'
+                    });
+                    jQuery(".payment-methods:checked").trigger('ifChecked');
+                    selectPreferredCard();
+                }
+            },
+            always: function() {
+                btnCompleteOrder.removeClass('disabled');
+                if (btnCompleteOrder.hasClass('spinner-on-click')) {
+                    var icon = btnCompleteOrder.find('i.fas,i.far,i.fal,i.fab');
+
+                    if (jQuery(icon).hasClass('fa-spinner')) {
+                        jQuery(icon)
+                            .removeAttr('class')
+                            .addClass(icon.data('original-class'));
+                    }
+                }
+            }
+        });
+    });
+
+    var cvvFieldContainer = jQuery('#cvv-field-container'),
         existingCardContainer = jQuery('#existingCardsContainer'),
         newCardInfo = jQuery('#newCardInfo'),
         newCardSaveSettings = jQuery('#newCardSaveSettings'),
@@ -2484,14 +3358,18 @@ jQuery(document).ready(function(){
         newCardOption = jQuery('#new'),
         creditCardInputFields = jQuery('#creditCardInputFields');
 
-    existingCards.on('ifChecked', function(event) {
+    jQuery(document).on('ifChecked', '.existing-card', function(event) {
         newCardSaveSettings.slideUp().find('input').attr('disabled', 'disabled');
         if (jQuery('.payment-methods:checked').data('remote-inputs') === 1) {
             return;
         }
 
         newCardInfo.slideUp().find('input').attr('disabled', 'disabled');
-        existingCardInfo.slideDown().find('input').removeAttr('disabled');
+        if (hideCvcOnCheckoutForExistingCard !== '1') {
+            existingCardInfo.slideDown().find('input').removeAttr('disabled');
+        } else {
+            existingCardInfo.slideUp().find('input').attr('disabled', 'disabled');
+        }
     });
     newCardOption.on('ifChecked', function(event) {
         newCardSaveSettings.slideDown().find('input').removeAttr('disabled');
@@ -2503,11 +3381,31 @@ jQuery(document).ready(function(){
         existingCardInfo.slideUp().find('input').attr('disabled', 'disabled');
     });
 
-    if (!existingCards.length) {
-        existingCardInfo.slideUp().find('input').attr('disabled', 'disabled');
-    }
+    var whmcsPaymentModuleMetadata = {
+        _source: 'checkout',
+    };
+    jQuery(".payment-methods").each(function () {
+        var element = jQuery(this);
+        WHMCS.payment.event.gatewayInit(whmcsPaymentModuleMetadata, element.val());
+        WHMCS.payment.event.gatewayOptionInit(whmcsPaymentModuleMetadata, element.val(), element);
+    })
+    .on('ifChecked', function(event) {
+        WHMCS.payment.event.gatewayUnselected(whmcsPaymentModuleMetadata);
+        WHMCS.payment.display.errorClear();
+        var element = jQuery(this);
+        var afterDefaultOnSelectOptions = {
+            complete: function () {
+                WHMCS.payment.event.gatewaySelected(whmcsPaymentModuleMetadata, element.val(), element);
+            }
+        };
 
-    jQuery(".payment-methods").on('ifChecked', function(event) {
+        var existingCards = jQuery(document).find('.existing-card');
+        if (!existingCards.length) {
+            existingCardInfo.slideUp()
+                .find('input')
+                .attr('disabled', 'disabled');
+        }
+
         if (jQuery(this).hasClass('is-credit-card')) {
             var gatewayPaymentType = jQuery(this).data('payment-type'),
                 gatewayModule = jQuery(this).val(),
@@ -2516,8 +3414,8 @@ jQuery(document).ready(function(){
             if (gatewayPaymentType === 'RemoteCreditCard') {
                 inputNoStoreContainer.hide().find('input').prop('disabled', 'disabled');
             } else {
-                if (!(inputNoStoreContainer.is(':visible'))) {
-                    inputNoStoreContainer.show().find('input').removeProp('disabled');
+                if (inputNoStoreContainer.not(':visible')) {
+                    inputNoStoreContainer.slideDown().find('input').removeProp('disabled');
                 }
             }
 
@@ -2581,7 +3479,11 @@ jQuery(document).ready(function(){
                 });
 
                 existingCardContainer.show();
-                existingCardInfo.removeClass('hidden').show().find('input').removeAttr('disabled');
+                if (hideCvcOnCheckoutForExistingCard !== '1') {
+                    existingCardInfo.show().find('input').removeAttr('disabled');
+                } else {
+                    existingCardInfo.hide().find('input').attr('disabled', 'disabled');
+                }
             } else {
                 jQuery(newCardOption).iCheck('check');
                 existingCardContainer.hide();
@@ -2589,15 +3491,14 @@ jQuery(document).ready(function(){
             }
 
             if (!creditCardInputFields.is(":visible")) {
-                creditCardInputFields.hide().removeClass('hidden').slideDown();
+                creditCardInputFields.slideDown(afterDefaultOnSelectOptions);
+            } else {
+                afterDefaultOnSelectOptions.complete();
             }
         } else {
-            creditCardInputFields.slideUp();
+            creditCardInputFields.slideUp(afterDefaultOnSelectOptions);
         }
     });
-
-    // make sure relevant payment methods are displayed for the pre-selected gateway
-    jQuery(".payment-methods:checked").trigger('ifChecked');
 
     jQuery('.cc-input-container .paymethod-info').click(function() {
         var payMethodId = $(this).data('paymethod-id');
@@ -2609,10 +3510,14 @@ jQuery(document).ready(function(){
     });
 
     jQuery("#inputDomainContact").on('change', function() {
-        if (this.value == "addingnew") {
-            jQuery("#domainRegistrantInputFields").hide().removeClass('hidden').slideDown();
+        var thisInput = jQuery(this);
+        if (this.value === "addingnew") {
+            thisInput.closest('div').addClass('pb-2');
+            jQuery("#domainRegistrantInputFields").parent('div').slideDown();
         } else {
-            jQuery("#domainRegistrantInputFields").slideUp();
+            jQuery("#domainRegistrantInputFields").parent('div').slideUp(function () {
+                thisInput.closest('div').removeClass('pb-2');
+            });
         }
     });
 
@@ -2656,11 +3561,28 @@ jQuery(document).ready(function(){
     jQuery('#frmDomainChecker').submit(function (e) {
         e.preventDefault();
 
+        if (
+            typeof recaptchaValidationComplete !== 'undefined'
+            && typeof recaptchaType !== 'undefined'
+            && recaptchaType === 'invisible'
+            && recaptchaValidationComplete === false
+        ) {
+            return;
+        }
+
         var frmDomain = jQuery('#frmDomainChecker'),
             inputDomain = jQuery('#inputDomain'),
             suggestions = jQuery('#domainSuggestions'),
             reCaptchaContainer = jQuery('#divDynamicRecaptcha'),
-            captcha = jQuery('#inputCaptcha');
+            captcha = jQuery('#inputCaptcha'),
+            idnLanguage = jQuery('#idnLanguageSelector');
+
+        jQuery('.field-error-msg').hide();
+
+        if (idnLanguage.is(':visible')) {
+            idnLanguage.slideUp();
+            idnLanguage.find('select').val('');
+        }
 
         domainLookupCallCount = 0;
 
@@ -2683,24 +3605,25 @@ jQuery(document).ready(function(){
 
         // disable repeat submit and show loader
         jQuery('#btnCheckAvailability').attr('disabled', 'disabled').addClass('disabled');
-        jQuery('.domain-lookup-result').addClass('hidden');
+        jQuery('.domain-lookup-result').hide();
         jQuery('.domain-lookup-loader').show();
 
         // reset elements
-        suggestions.find('li').addClass('hidden').end();
-        suggestions.find('.clone').remove().end();
-        jQuery('div.panel-footer.more-suggestions').addClass('hidden')
-            .find('a').removeClass('hidden').end()
-            .find('span.no-more').addClass('hidden');
+        suggestions.find('div:not(.actions)').hide();
+        suggestions.find('.clone').remove();
+        jQuery('div.panel-footer.more-suggestions').hide()
+            .find('a').show().end()
+            .find('span.no-more').hide();
         jQuery('.btn-add-to-cart').removeAttr('disabled')
             .find('span').hide().end()
             .find('span.to-add').show();
-        jQuery('.suggested-domains').hide().removeClass('hidden').fadeIn('fast');
 
         // fade in results
-        if (!jQuery('#DomainSearchResults').is(":visible")) {
-            jQuery('.domain-pricing').hide();
-            jQuery('#DomainSearchResults').hide().removeClass('hidden').fadeIn();
+        if (jQuery('#DomainSearchResults').not(":visible")) {
+            jQuery('.domain-pricing').fadeOut('fast', function() {
+                jQuery('#DomainSearchResults').fadeIn();
+            });
+
         }
 
         var lookup = WHMCS.http.jqClient.post(
@@ -2732,29 +3655,38 @@ jQuery(document).ready(function(){
                     availablePrice = result.find('.domain-price'),
                     contactSupport = result.find('.domain-contact-support'),
                     unavailable = result.find('.domain-unavailable'),
+                    unavailableTld = result.find('.domain-tld-unavailable'),
                     invalid = result.find('.domain-invalid'),
                     error = result.find('.domain-error');
                 jQuery('.domain-lookup-primary-loader').hide();
                 result.find('.btn-add-to-cart').removeClass('checkout');
-                result.removeClass('hidden').show();
-                if (!data.result.error && domain.isValidDomain) {
+                result.show();
+                if (typeof domain !== 'string' && !domain.error && domain.isValidDomain) {
                     pricing = domain.pricing;
                     unavailable.hide();
                     contactSupport.hide();
+                    unavailableTld.hide();
                     invalid.hide();
                     error.hide();
                     if (domain.isAvailable && typeof pricing !== 'string') {
+                        if (domain.domainName !== domain.idnDomainName && idnLanguage.not(':visible')) {
+                            idnLanguage.slideDown();
+                        }
                         if (domain.preferredTLDNotAvailable) {
-                            unavailable.show().find('strong').html(domain.originalUnavailableDomain);
+                            unavailableTld.show().find('strong').html(domain.originalUnavailableTld);
                         }
                         available.show().find('strong').html(domain.domainName);
                         availablePrice.show().find('span.price').html(pricing[Object.keys(pricing)[0]].register).end()
-                            .find('button').attr('data-domain', domain.idnDomainName);
+                            .find('button').attr('data-domain', domain.domainName);
                     } else {
                         available.hide();
                         availablePrice.hide();
                         contactSupport.hide();
-                        unavailable.show().find('strong').html(domain.domainName);
+                        if (domain.preferredTLDNotAvailable) {
+                            unavailableTld.show().find('strong').html(domain.originalUnavailableTld);
+                        } else {
+                            unavailable.show().find('strong').html(domain.domainName);
+                        }
                         if (typeof pricing === 'string' && pricing == 'ContactUs') {
                             contactSupport.show();
                         }
@@ -2763,24 +3695,23 @@ jQuery(document).ready(function(){
                     available.hide();
                     availablePrice.hide();
                     unavailable.hide();
+                    unavailableTld.hide();
                     contactSupport.hide();
                     invalid.hide();
                     error.hide();
-                    var invalidLength = invalid.find('span.domain-length-restrictions'),
-                        done = false,
+                    var done = false,
                         reg = /<br\s*\/>/,
                         errors = [];
-                    invalidLength.hide();
-                    if (domain.minLength > 0 && domain.maxLength > 0) {
-                        invalidLength.find('.min-length').html(domain.minLength).end()
-                            .find('.max-length').html(domain.maxLength).end();
-                        invalidLength.show();
-                    } else if (data.result.error) {
-                        if (!data.result.error.match(reg)) {
-                            error.text(data.result.error);
+                    if (!domain.isValidDomain && domain.domainErrorMessage) {
+                        invalid.text(domain.domainErrorMessage);
+                    } else if (domain.error || index === 'error') {
+                        if (typeof domain === 'string') {
+                            error.text(domain);
+                        } else if (!domain.error.match(reg)) {
+                            error.text(domain.error);
                         } else {
                             error.text('');
-                            errors = data.result.error.split(reg);
+                            errors = domain.error.split(reg);
                             for(var i=0; i < errors.length; i++) {
                                 var errorMsg = errors[i];
                                 if (errorMsg.length) {
@@ -2817,38 +3748,41 @@ jQuery(document).ready(function(){
                     pricing = domain.pricing,
                     result = jQuery('#spotlight' + tld + ' .domain-lookup-result');
                 jQuery('.domain-lookup-spotlight-loader').hide();
-                result.find('button').addClass('hidden').end();
+                result.find('button').removeClass('checkout').hide();
                 if (domain.isValidDomain) {
                     if (domain.isAvailable && typeof pricing !== 'string') {
-                        result.find('button.unavailable').addClass('hidden').end()
-                            .find('button.invalid').addClass('hidden').end()
-                            .find('span.available').html(pricing[Object.keys(pricing)[0]].register).removeClass('hidden').end()
+                        if (domain.domainName !== domain.idnDomainName && idnLanguage.not(':visible')) {
+                            idnLanguage.slideDown();
+                        }
+                        result.find('button.unavailable').hide().end()
+                            .find('button.invalid').hide().end()
+                            .find('span.available').html(pricing[Object.keys(pricing)[0]].register).show().end()
                             .find('button').not('button.unavailable').not('button.invalid')
-                            .attr('data-domain', domain.idnDomainName)
-                            .removeClass('hidden');
+                            .attr('data-domain', domain.domainName)
+                            .show();
 
-                        result.find('button.domain-contact-support').addClass('hidden').end();
+                        result.find('button.domain-contact-support').hide();
                     } else {
                         if (typeof pricing === 'string') {
                             if (pricing == '') {
-                                result.find('button.unavailable').removeClass('hidden').end();
+                                result.find('button.unavailable').show();
                             } else {
-                                result.find('button.domain-contact-support').removeClass('hidden').end();
+                                result.find('button.domain-contact-support').show();
                             }
-                            result.find('button.invalid').addClass('hidden').end();
-                            result.find('span.available').addClass('hidden').end();
+                            result.find('button.invalid').hide();
+                            result.find('span.available').hide();
                         } else {
-                            result.find('button.invalid').addClass('hidden').end()
-                                .find('button.unavailable').removeClass('hidden').end()
-                                .find('span.available').addClass('hidden').end();
+                            result.find('button.invalid').hide().end()
+                                .find('button.unavailable').show().end()
+                                .find('span.available').hide();
                         }
                     }
                 } else {
-                    result.find('button.invalid.hidden').removeClass('hidden').end()
-                        .find('span.available').addClass('hidden').end()
-                        .find('button').not('button.invalid').addClass('hidden');
+                    result.find('button.invalid:hidden').show().end()
+                        .find('span.available').hide().end()
+                        .find('button').not('button.invalid').hide();
                 }
-                result.removeClass('hidden');
+                result.show();
             });
         }).always(function() {
             hasDomainLookupEnded();
@@ -2858,54 +3792,55 @@ jQuery(document).ready(function(){
         suggestion.done(function (data) {
             if (typeof data != 'object' || data.result.length == 0 || data.result.error) {
                 jQuery('.suggested-domains').fadeOut('fast', function() {
-                    jQuery(this).addClass('hidden');
+                    jQuery(this).hide();
                 });
                 return;
             } else {
-                jQuery('.suggested-domains').removeClass('hidden');
+                jQuery('.suggested-domains').show();
             }
             var suggestionCount = 1;
             jQuery.each(data.result, function(index, domain) {
                 var tld = domain.tld,
                     pricing = domain.pricing;
-                suggestions.find('li:first').clone(true, true).appendTo(suggestions);
-                var newSuggestion = suggestions.find('li.domain-suggestion').last();
+                suggestions.find('div:first').clone(true, true).appendTo(suggestions);
+                var newSuggestion = suggestions.find('div.domain-suggestion').last();
                 newSuggestion.addClass('clone')
                     .find('span.domain').html(domain.sld).end()
-                    .find('span.extension').html('.' + tld).end();
+                    .find('span.extension').html('.' + tld);
 
                 if (typeof pricing === 'string') {
                     newSuggestion.find('button.btn-add-to-cart').remove();
                     if (pricing != '') {
-                        newSuggestion.find('button.domain-contact-support').removeClass('hidden').end()
+                        newSuggestion.find('button.domain-contact-support').show().end()
                             .find('span.price').hide();
                     } else {
                         newSuggestion.remove();
                     }
                 } else {
-                    newSuggestion.find('button.btn-add-to-cart').attr('data-domain', domain.idnDomainName).end()
-                        .find('span.price').html(pricing[Object.keys(pricing)[0]].register).end();
+                    if (domain.domainName !== domain.idnDomainName && idnLanguage.not(':visible')) {
+                        idnLanguage.slideDown();
+                    }
+                    newSuggestion.find('button.btn-add-to-cart').attr('data-domain', domain.domainName).end()
+                        .find('span.price').html(pricing[Object.keys(pricing)[0]].register);
                 }
                 if (suggestionCount <= 10) {
-                    newSuggestion.removeClass('hidden');
+                    newSuggestion.show();
                 }
                 suggestionCount++;
                 if (domain.group) {
                     newSuggestion.find('span.promo')
                         .addClass(domain.group)
-                        .removeClass('hidden')
-                        .end();
+                        .show();
                     newSuggestion.find('span.sales-group-' + domain.group)
-                        .removeClass('hidden')
-                        .end();
+                        .show();
                 }
-                furtherSuggestions = suggestions.find('li.domain-suggestion.clone.hidden').length;
+                furtherSuggestions = suggestions.find('div.domain-suggestion.clone:hidden').length;
                 if (furtherSuggestions > 0) {
-                    jQuery('div.more-suggestions').removeClass('hidden');
+                    jQuery('div.more-suggestions').show();
                 }
             });
             jQuery('.domain-lookup-suggestions-loader').hide();
-            jQuery('#domainSuggestions').removeClass('hidden');
+            jQuery('#domainSuggestions').show();
         }).always(function() {
             hasDomainLookupEnded();
         });
@@ -2913,7 +3848,7 @@ jQuery(document).ready(function(){
 
     jQuery('.btn-add-to-cart').on('click', function() {
         if (jQuery(this).hasClass('checkout')) {
-            window.location = 'cart.php?a=confdomains';
+            window.location = whmcsBaseUrl + '/cart.php?a=confdomains';
             return;
         }
         var domain = jQuery(this).attr('data-domain'),
@@ -2922,11 +3857,16 @@ jQuery(document).ready(function(){
             isProductDomain = jQuery(this).hasClass('product-domain'),
             btnDomainContinue = jQuery('#btnDomainContinue'),
             resultDomain = jQuery('#resultDomain'),
-            resultDomainPricing = jQuery('#resultDomainPricingTerm');
+            resultDomainPricing = jQuery('#resultDomainPricingTerm'),
+            idnLanguage = jQuery('#idnLanguageSelector'),
+            idnLanguageInput = idnLanguage.find('select');
 
-        buttons.attr('disabled', 'disabled').each(function() {
-            jQuery(this).css('width', jQuery(this).outerWidth());
-        });
+        if (idnLanguage.is(':visible') && !idnLanguageInput.val()) {
+            idnLanguageInput.showInputError();
+            return;
+        }
+        buttons.find('span.to-add').hide();
+        buttons.find('span.loading').show();
 
         var sideOrder =
             ((jQuery(this).parents('.spotlight-tlds').length > 0)
@@ -2934,19 +3874,20 @@ jQuery(document).ready(function(){
             (jQuery(this).parents('.suggested-domains').length > 0)) ? 1 : 0;
 
         var addToCart = WHMCS.http.jqClient.post(
-            window.location.pathname,
+            whmcsBaseUrl + '/cart.php',
             {
                 a: 'addToCart',
                 domain: domain,
                 token: csrfToken,
                 whois: whois,
-                sideorder: sideOrder
+                sideorder: sideOrder,
+                idnlanguage: idnLanguageInput.val()
             },
             'json'
         ).done(function (data) {
-            buttons.find('span.to-add').hide();
-            if (data.result == 'added') {
-                buttons.find('span.added').show().end();
+            buttons.find('span.loading').hide();
+            if (data.result === 'added') {
+                buttons.find('span.added').show();
                 if (!isProductDomain) {
                     buttons.removeAttr('disabled').addClass('checkout');
                 }
@@ -2959,13 +3900,24 @@ jQuery(document).ready(function(){
                 }
                 jQuery('#cartItemCount').html(data.cartCount);
             } else {
+                buttons.find('span.available.price').hide();
                 buttons.find('span.unavailable').show();
+                buttons.attr('disabled', 'disabled');
             }
         });
     });
 
     jQuery('#frmDomainTransfer').submit(function (e) {
         e.preventDefault();
+
+        if (
+            typeof recaptchaValidationComplete !== 'undefined'
+            && typeof recaptchaType !== 'undefined'
+            && recaptchaType === 'invisible'
+            && recaptchaValidationComplete === false
+        ) {
+            return;
+        }
 
         var frmDomain = jQuery('#frmDomainTransfer'),
         transferButton = jQuery('#btnTransferDomain'),
@@ -2994,7 +3946,7 @@ jQuery(document).ready(function(){
         captcha.tooltip('hide');
 
         transferButton.attr('disabled', 'disabled').addClass('disabled')
-            .find('span').hide().removeClass('hidden').end()
+            .find('span').show().end()
             .find('.loader').show();
 
         WHMCS.http.jqClient.post(
@@ -3012,7 +3964,7 @@ jQuery(document).ready(function(){
             var result = data.result;
 
             if (result == 'added') {
-                window.location = 'cart.php?a=confdomains';
+                window.location = whmcsBaseUrl + '/cart.php?a=confdomains';
                 redirect = true;
             } else {
                 if (result.isRegistered == true) {
@@ -3022,7 +3974,7 @@ jQuery(document).ready(function(){
                     }
                 } else {
                     jQuery('#transferUnavailable').html(result.unavailable)
-                        .hide().removeClass('hidden').fadeIn('fast', function() {
+                        .fadeIn('fast', function() {
                             setTimeout(function(input) {
                                     input.fadeOut('fast');
                                 },
@@ -3066,7 +4018,47 @@ jQuery(document).ready(function(){
     jQuery('#frmDomainChecker input[type=text]:visible').first().focus();
     jQuery('#frmDomainTransfer input[type=text]:visible').first().focus();
 
-    jQuery('.mc-promo .btn-add').click(function(e) {
+    jQuery('.checkout .mc-promo .btn-add').click(function(e) {
+        var self = jQuery(this),
+            productKey = self.data('product-key'),
+            upsellFrom = self.data('upsell-from'),
+            upSellBox = jQuery('#promo_' + productKey);
+
+        self.attr('disabled', 'disabled')
+            .find('span.arrow i').removeClass('fa-chevron-right').addClass('fa-spinner fa-spin');
+        WHMCS.http.jqClient.post(
+            window.location.pathname,
+            {
+                'a': 'addUpSell',
+                'product_key': productKey,
+                'upsell_from': upsellFrom,
+                'checkoutModal': true,
+                'token': csrfToken
+            },
+            function (data) {
+                if (typeof data.modal !== 'undefined') {
+                    openModal(
+                        data.modal,
+                        '',
+                        data.modalTitle,
+                        '',
+                        '',
+                        data.modalSubmit,
+                        data.modelSubmitId
+                    );
+                    return;
+                }
+                if (data.done) {
+                    jQuery('#totalCartPrice').text(data.newTotal);
+                    upSellBox.fadeOut();
+                    updateAjaxModal(data)
+                }
+            },
+            'json'
+        );
+    });
+
+    jQuery('.viewcart .mc-promo .btn-add').click(function(e) {
         var self = jQuery(this);
         self.attr('disabled', 'disabled')
             .find('span.arrow i').removeClass('fa-chevron-right').addClass('fa-spinner fa-spin');
@@ -3075,6 +4067,7 @@ jQuery(document).ready(function(){
             {
                 'a': 'addUpSell',
                 'product_key': self.data('product-key'),
+                'upsell_from': self.data('upsell-from'),
                 'token': csrfToken
             },
             function (data) {
@@ -3096,79 +4089,141 @@ jQuery(document).ready(function(){
         );
     });
 
-    jQuery(document).on('click', '#btnAddUpSell', function(e) {
-        needRefresh = true;
+    jQuery(document).on('click', '#btnAddUpSellCheckout', function(e) {
+        var upsellModalForm = jQuery('#upsellModalForm');
+        WHMCS.http.jqClient.post(
+            whmcsBaseUrl + '/cart.php',
+            upsellModalForm.serialize(),
+            function (data) {
+                if (data.done){
+                    jQuery('#totalCartPrice').text(data.newTotal);
+                }
+            },
+            'json'
+        );
+        return false;
     });
 
-    var useFullCreditOnCheckout = jQuery('#iCheck-useFullCreditOnCheckout'),
+    var useCreditOnCheckout = jQuery('#iCheck-useCreditOnCheckout'),
         skipCreditOnCheckout = jQuery('#iCheck-skipCreditOnCheckout');
 
-    useFullCreditOnCheckout.on('ifChecked', function() {
-        var radio = jQuery('#useFullCreditOnCheckout'),
+    useCreditOnCheckout.on('ifChecked', function() {
+        var radio = jQuery('#useCreditOnCheckout'),
             selectedPaymentMethod = jQuery('input[name="paymentmethod"]:checked'),
+            selectedCC = jQuery('input[name="ccinfo"]:checked'),
             isCcSelected = selectedPaymentMethod.hasClass('is-credit-card'),
             firstNonCcGateway = jQuery('input[name="paymentmethod"]')
             .not(jQuery('input.is-credit-card[name="paymentmethod"]'))
             .first(),
             container = jQuery('#paymentGatewaysContainer'),
-            ccInputFields = jQuery('#creditCardInputFields');
+            existingCardInfo = jQuery('#existingCardInfo'),
+            ccInputFields = jQuery('#creditCardInputFields'),
+            spanFullCredit = jQuery('#spanFullCredit'),
+            shouldHideContainer = true;
         if (radio.prop('checked')) {
+            if (spanFullCredit.is(':hidden')) {
+                shouldHideContainer = false;
+            }
             if (isCcSelected && firstNonCcGateway.length !== 0) {
                 firstNonCcGateway.iCheck('check');
                 ccInputFields.slideUp();
-                container.slideUp();
-            } else if (isCcSelected && !container.is(":visible")) {
+                if (shouldHideContainer) {
+                    container.slideUp();
+                }
+            } else if (!isCcSelected && container.is(':visible')) {
+                if (shouldHideContainer) {
+                    container.slideUp();
+                }
+            } else if ((!shouldHideContainer || isCcSelected) && !container.is(":visible")) {
                 ccInputFields.slideDown();
                 container.slideDown();
+            }
+            if (isCcSelected && selectedCC.val() !== 'new') {
+                if (spanFullCredit.is(':visible')) {
+                    hideCvcOnCheckoutForExistingCard = '1';
+                    existingCardInfo.hide().find('input').attr('disabled', 'disabled');
+                } else {
+                    existingCardInfo.show().find('input').removeAttr('disabled');
+                }
             }
         }
     });
 
     skipCreditOnCheckout.on('ifChecked', function() {
         var selectedPaymentMethod = jQuery('input[name="paymentmethod"]:checked'),
+            selectedCC = jQuery('input[name="ccinfo"]:checked'),
             isCcSelected = selectedPaymentMethod.hasClass('is-credit-card'),
+            existingCardInfo = jQuery('#existingCardInfo'),
             container = jQuery('#paymentGatewaysContainer');
         if (!container.is(":visible")) {
             container.slideDown();
-            if (isCcSelected) {
-                jQuery('#creditCardInputFields').slideDown();
+        }
+        if (isCcSelected) {
+            hideCvcOnCheckoutForExistingCard = '0';
+            if (selectedCC.val() !== 'new') {
+                existingCardInfo.show().find('input').removeAttr('disabled');
             }
+            jQuery('#creditCardInputFields').slideDown();
         }
     });
 
-    if (jQuery('#applyCreditContainer').data('apply-credit') === 1 && useFullCreditOnCheckout.length) {
+    var applyCreditContainer = jQuery('#applyCreditContainer');
+
+    if (
+        applyCreditContainer.is(':visible')
+        && applyCreditContainer.data('apply-credit') === 1
+        && useCreditOnCheckout.length
+    ) {
         skipCreditOnCheckout.iCheck('check');
-        useFullCreditOnCheckout.iCheck('check');
+        useCreditOnCheckout.iCheck('check');
     }
 
-    jQuery('#domainRenewals').find('span.added').hide().end().find('span.to-add').find('i').hide();
+    jQuery('#domainRenewals, #serviceRenewals').find('span.added').hide().end().find('span.to-add').find('i').hide();
     jQuery('.btn-add-renewal-to-cart').on('click', function() {
-        var self = jQuery(this),
-            domainId = self.data('domain-id'),
-            period = jQuery('#renewalPricing' + domainId).val();
+        var self = jQuery(this);
+        var selfOuterWidth = self.outerWidth();
+        var postUrl;
+        var postData;
+
+        if (jQuery('#serviceRenewals').length >= 1) {
+            var serviceId = self.data('service-id');
+            if (serviceId.toString().startsWith('a-')) {
+                postUrl = WHMCS.utils.getRouteUrl('/cart/service/' + serviceId.substr(2) + '/addon/renew');
+            } else {
+                postUrl = WHMCS.utils.getRouteUrl('/cart/service/' + serviceId + '/product/renew');
+            }
+            postData = {
+                token: csrfToken
+            };
+        } else {
+            var domainId = self.data('domain-id');
+            postUrl = WHMCS.utils.getRouteUrl('/cart/domain/renew/add');
+            postData = {
+                domainId: domainId,
+                period: jQuery('#renewalPricing' + domainId).val(),
+                token: csrfToken
+            };
+        }
 
         if (self.hasClass('checkout')) {
-            window.location = 'cart.php?a=view';
+            window.location = whmcsBaseUrl + '/cart.php?a=view';
             return;
         }
 
         self.attr('disabled', 'disabled').each(function() {
-            jQuery(this).find('i').fadeIn('fast').end().css('width', jQuery(this).outerWidth());
+            self.find('i').fadeIn('fast').end();
         });
 
         WHMCS.http.jqClient.post(
-            WHMCS.utils.getRouteUrl('/cart/domain/renew/add'),
-            {
-                domainId: domainId,
-                period: period,
-                token: csrfToken
-            },
+            postUrl,
+            postData,
             null,
             'json'
         ).done(function (data) {
             self.find('span.to-add').hide();
             if (data.result === 'added') {
-                self.find('span.added').show().end().find('i').fadeOut('fast').css('width', self.outerWidth());
+                self.find('span.added').show().end().find('i').fadeOut('fast')
+                self.css('width', selfOuterWidth);
             }
             recalculateRenewalTotals();
         });
@@ -3176,19 +4231,23 @@ jQuery(document).ready(function(){
     jQuery(document).on('submit', '#removeRenewalForm', function(e) {
         e.preventDefault();
 
+        var buttonId = '#renewDomain';
+        if (jQuery('#serviceRenewals').length >= 1) {
+            buttonId = '#renewService';
+        }
+
         WHMCS.http.jqClient.post(
             whmcsBaseUrl + '/cart.php',
             jQuery(this).serialize() + '&ajax=1'
         ).done(function(data) {
-            var domainId = data.i,
-                button = jQuery('#renewDomain' + domainId);
+            var domainId = data.i;
+            var button = jQuery(buttonId + domainId);
 
             button.attr('disabled', 'disabled').each(function() {
                 jQuery(this).find('span.added').hide().end()
                     .removeClass('checkout').find('span.to-add').show().end().removeAttr('disabled');
-                jQuery(this).css('width', jQuery(this).outerWidth());
+                jQuery(this).css('width', '');
             });
-
         }).always(function () {
             jQuery('#modalRemoveItem').modal('hide');
             recalculateRenewalTotals();
@@ -3207,20 +4266,81 @@ jQuery(document).ready(function(){
         });
     });
 
-    jQuery('#domainRenewalFilter').on('keyup', function() {
+    jQuery('#domainRenewalFilter').on('input', function() {
         var inputText = jQuery(this).val().toLowerCase();
         jQuery('#domainRenewals').find('div.domain-renewal').filter(function() {
             jQuery(this).toggle(jQuery(this).data('domain').toLowerCase().indexOf(inputText) > -1);
         });
     });
 
+    jQuery('#serviceRenewalFilter').on('input', function() {
+        var inputText = jQuery(this).val().toLowerCase();
+        var hasMatchingInputs = function matchInputs(element, input) {
+            var isInputMatched = false;
+            if (inputText.length > 0) {
+                jQuery('#hideShowServiceRenewalButton').find('span.to-show').hide().end()
+                    .find('span.to-hide').show().end().removeAttr('disabled');
+            }
+            jQuery.each(element.data(), function(key, value) {
+                if (String(value).toLowerCase().indexOf(input) > -1) {
+                    isInputMatched = true;
+                    return false;
+                }
+            });
+            element.toggle(isInputMatched);
+            return isInputMatched;
+        }
+
+        jQuery('#serviceRenewals').find('.service-renewal').filter(function() {
+            var serviceRenewals = jQuery(this);
+            var addonRenewals = serviceRenewals.find('.addon-renewals');
+            var hasMatchingAddonItem = false;
+
+            if (addonRenewals.length > 0) {
+                addonRenewals.find('.service-renewal').filter(function() {
+                    hasMatchingAddonItem = hasMatchingInputs(jQuery(this), inputText);
+                });
+            }
+            if (hasMatchingAddonItem) {
+                serviceRenewals.toggle(true);
+            } else {
+                hasMatchingInputs(serviceRenewals, inputText);
+            }
+            addonRenewals.toggle(hasMatchingAddonItem);
+        });
+    });
+
+    // Hide/show Non-Renewable Services and Service Addons
+    jQuery(this).find('span.to-hide').hide().end()
+        .find('span.to-show').show().end().removeAttr('disabled');
+    hideNoneRenewableServices();
+    jQuery('#hideShowServiceRenewalButton').on('click', function() {
+        if (jQuery(this).find('span.to-show').is(":hidden")) {
+            jQuery(this).find('span.to-hide').hide().end()
+                .find('span.to-show').show().end().removeAttr('disabled');
+            hideNoneRenewableServices();
+        } else {
+            jQuery(this).find('span.to-show').hide().end()
+                .find('span.to-hide').show().end().removeAttr('disabled');
+            showNoneRenewableServices();
+        }
+    });
+
     checkoutForm = jQuery('#frmCheckout');
     if (checkoutForm.length) {
         checkoutForm.on('submit', validateCheckoutCreditCardInput);
+        checkoutForm.on('submit.paymentjs', function (event) {
+            WHMCS.payment.event.checkoutFormSubmit(
+                {...whmcsPaymentModuleMetadata, ...{event: event}},
+                WHMCS.payment.event.previouslySelected.module,
+                jQuery(this)
+            );
+        });
     }
 
-    if (existingCardContainer.is(':visible')) {
-        newCardInfo.hide();
+    jQuery(".payment-methods:checked").trigger('ifChecked');
+    if (existingCardContainer.is(':visible') && existingCardContainer.find('input.existing-card').length > 0) {
+        newCardInfo.slideUp();
     }
 });
 //checkoutForm
@@ -3262,7 +4382,7 @@ function validateCheckoutCreditCardInput(e)
                 submit = false;
             }
         }
-        if (!jQuery.payment.validateCardCVC(cvvField.val(), cardType)) {
+        if (cvvField.is(':visible') && !jQuery.payment.validateCardCVC(cvvField.val(), cardType)) {
             cvvField.showInputError();
             submit = false;
         }
@@ -3297,17 +4417,26 @@ function domainGotoNextStep() {
     jQuery("#frmProductDomainSelections").submit();
 }
 
-function removeItem(type, num) {
+function removeItem(type, num, renewalType = null) {
+    if (renewalType !== null) {
+        jQuery('#inputRemoveItemRenewalType').val(renewalType);
+    }
     jQuery('#inputRemoveItemType').val(type);
     jQuery('#inputRemoveItemRef').val(num);
     jQuery('#modalRemoveItem').modal('show');
 }
 
 function updateConfigurableOptions(i, billingCycle) {
-
-    WHMCS.http.jqClient.post("cart.php", 'a=cyclechange&ajax=1&i='+i+'&billingcycle='+billingCycle,
+    WHMCS.http.jqClient.post(whmcsBaseUrl + '/cart.php', 'a=cyclechange&ajax=1&i='+i+'&billingcycle='+billingCycle,
         function(data) {
-            jQuery("#productConfigurableOptions").html(jQuery(data).find('#productConfigurableOptions').html());
+            var co = jQuery('#productConfigurableOptions'),
+                add = jQuery('#productAddonsContainer');
+            if (co.length) {
+                co.html(jQuery(data).find('#productConfigurableOptions').html());
+            }
+            if (add.length) {
+                add.html(jQuery(data).find('#productAddonsContainer').html());
+            }
             jQuery('input').iCheck({
                 inheritID: true,
                 checkboxClass: 'icheckbox_square-blue',
@@ -3317,7 +4446,6 @@ function updateConfigurableOptions(i, billingCycle) {
         }
     );
     recalctotals();
-
 }
 
 function recalctotals() {
@@ -3328,7 +4456,7 @@ function recalctotals() {
     var thisRequestId = Math.floor((Math.random() * 1000000) + 1);
     window.lastSliderUpdateRequestId = thisRequestId;
 
-    var post = WHMCS.http.jqClient.post("cart.php", 'ajax=1&a=confproduct&calctotal=true&'+jQuery("#frmConfigureProduct").serialize());
+    var post = WHMCS.http.jqClient.post(whmcsBaseUrl + '/cart.php', 'ajax=1&a=confproduct&calctotal=true&'+jQuery("#frmConfigureProduct").serialize());
     post.done(
         function(data) {
             if (thisRequestId == window.lastSliderUpdateRequestId) {
@@ -3344,15 +4472,19 @@ function recalctotals() {
 }
 
 function recalculateRenewalTotals() {
+    var routePath = '/cart/domain/renew/calculate';
+    if (jQuery('#serviceRenewals').length >= 1) {
+        routePath = '/cart/service/renew/calculate';
+    }
+
     if (!jQuery("#orderSummaryLoader").is(":visible")) {
         jQuery("#orderSummaryLoader").fadeIn('fast');
     }
 
     var thisRequestId = Math.floor((Math.random() * 1000000) + 1);
     window.lastSliderUpdateRequestId = thisRequestId;
-
     WHMCS.http.jqClient.get(
-        WHMCS.utils.getRouteUrl('/cart/domain/renew/calculate')
+        WHMCS.utils.getRouteUrl(routePath)
     ).done(function(data) {
         if (thisRequestId === window.lastSliderUpdateRequestId) {
             jQuery("#producttotal").html(data.body);
@@ -3373,8 +4505,8 @@ function selectDomainPricing(domainName, price, period, yearsString, suggestionN
 
 function selectDomainPeriodInCart(domainName, price, period, yearsString) {
     var loader = jQuery("#orderSummaryLoader");
-    if (loader.hasClass('hidden')) {
-        loader.hide().removeClass('hidden').fadeIn('fast');
+    if (loader.not(':visible')) {
+        loader.fadeIn('fast');
     }
     jQuery("[name='" + domainName + "Pricing']").html(period + ' ' + yearsString + ' <span class="caret"></span>');
     jQuery("[name='" + domainName + "Price']").html(price);
@@ -3389,10 +4521,14 @@ function selectDomainPeriodInCart(domainName, price, period, yearsString) {
     );
     update.done(
         function(data) {
+            if (data.forceReload) {
+                window.location.reload();
+                return;
+            }
             data.domains.forEach(function(domain) {
                 jQuery("[name='" + domain.domain + "Price']").parent('div').find('.renewal-price').html(
                     domain.prefixedRenewPrice + domain.shortRenewalYearsLanguage
-                ).end();
+                );
             });
             jQuery('#subtotal').html(data.subtotal);
             if (data.promotype) {
@@ -3407,7 +4543,7 @@ function selectDomainPeriodInCart(domainName, price, period, yearsString) {
 
             var recurringSpan = jQuery('#recurring');
 
-            recurringSpan.find('span:visible').not('span.cost').fadeOut('fast').end();
+            recurringSpan.find('span:visible').not('span.cost').fadeOut('fast');
 
             if (data.totalrecurringannually) {
                 jQuery('#recurringAnnually').fadeIn('fast').find('.cost').html(data.totalrecurringannually);
@@ -3438,7 +4574,7 @@ function selectDomainPeriodInCart(domainName, price, period, yearsString) {
     );
     update.always(
         function() {
-            loader.delay(500).fadeOut('slow').addClass('hidden').show();
+            loader.delay(500).fadeOut('slow');
         }
     );
 }
@@ -3450,8 +4586,8 @@ function loadMoreSuggestions()
 
     for (suggestionCount = 1; suggestionCount <= 10; suggestionCount++) {
         if (furtherSuggestions > 0) {
-            suggestions.find('li.domain-suggestion.hidden.clone:first').not().hide().removeClass('hidden').slideDown();
-            furtherSuggestions = suggestions.find('li.domain-suggestion.clone.hidden').length;
+            suggestions.find('div.domain-suggestion.clone:hidden:first').slideDown();
+            furtherSuggestions = suggestions.find('div.domain-suggestion.clone:hidden').length;
         } else {
             jQuery('div.more-suggestions').find('a').addClass('hidden').end().find('span.no-more').removeClass('hidden');
             return;
@@ -3459,9 +4595,74 @@ function loadMoreSuggestions()
     }
 }
 
+function retrieveCaptchaInput() {
+    return new Promise((resolve, reject) => {
+        const captcha = jQuery('#inputCaptcha');
+        const reCaptchaContainer = jQuery('.g-recaptcha');
+
+        if (captcha.length) {
+            const captchaValue = captcha.val().trim();
+            if (!captchaValue) {
+                captcha.tooltip('show').focus();
+                reject('');
+                return;
+            }
+
+            captcha.tooltip('hide');
+            resolve({code: captchaValue});
+            return;
+        }
+
+        if (
+            (recaptchaType === 'invisible' || recaptchaType === 'v3')
+            && typeof recaptchaValidationComplete !== 'undefined'
+            && !recaptchaValidationComplete
+        ) {
+            if (typeof grecaptcha !== 'undefined' && grecaptcha.execute) {
+                WHMCS.recaptcha.setupCallback((token) => {
+                    if (!token) {
+                        reject('');
+                        return;
+                    }
+
+                    recaptchaValidationComplete = true;
+                    resolve({'g-recaptcha-response': token});
+                });
+
+                grecaptcha.execute()?.catch((error) => {
+                    reject(error);
+                });
+
+                if (grecaptcha.getResponse()) {
+                    resolve({'g-recaptcha-response': grecaptcha.getResponse()});
+                }
+            } else {
+                reject('');
+            }
+
+            return;
+        }
+
+        if (typeof grecaptcha !== 'undefined') {
+            const reCaptchaValue = grecaptcha.getResponse();
+
+            if (!reCaptchaValue) {
+                reCaptchaContainer[0]?.scrollIntoView({block: 'center'});
+                reject('');
+                return;
+            }
+
+            resolve({'g-recaptcha-response': reCaptchaValue});
+            return;
+        }
+
+        resolve({});
+    });
+}
+
 function validate_captcha(form)
 {
-    var reCaptcha = jQuery('#g-recaptcha-response'),
+    let reCaptcha = jQuery('#g-recaptcha-response'),
         reCaptchaContainer = jQuery('#divDynamicRecaptcha'),
         captcha = jQuery('#inputCaptcha');
 
@@ -3484,10 +4685,10 @@ function validate_captcha(form)
 
     validate.done(function(data) {
         if (data.error) {
-            jQuery('#inputCaptcha').attr('data-original-title', data.error).tooltip('show');
+            jQuery('#inputCaptcha, .recaptcha-container').attr('data-original-title', data.error).tooltip('show');
             if (captcha.length) {
                 jQuery('#inputCaptchaImage').replaceWith(
-                    '<img id="inputCaptchaImage" src="' + whmcsBaseUrl + 'includes/verifyimage.php" align="middle" />'
+                    '<img id="inputCaptchaImage" src="' + whmcsBaseUrl + '/includes/verifyimage.php?nocache=' + new Date().getTime() + '" align="middle" />'
                 );
             }
         } else {
@@ -3495,4 +4696,51 @@ function validate_captcha(form)
             form.trigger('submit');
         }
     });
+}
+
+function selectPreferredCard()
+{
+    var methods = jQuery('input[name="ccinfo"]:visible'),
+        select = methods.first(),
+        preferred = methods.filter('[data-order-preference=0]');
+    if (preferred.length) {
+        select = preferred;
+    }
+    select.iCheck('check');
+}
+
+function showNoneRenewableServices()
+{
+    jQuery('.service-renewal, .addon-renewals').each(function () {
+        if (jQuery(this).attr('data-is-renewable') === 'false') {
+            jQuery(this).show();
+        }
+    });
+}
+
+function hideNoneRenewableServices()
+{
+    jQuery('.service-renewal, .addon-renewals').each(function (i, element) {
+        var isRenewable = jQuery(this).attr('data-is-renewable');
+        if (isRenewable === 'false') {
+            if (hasRenewableServiceAddon(element)) {
+                jQuery(this).show();
+            } else {
+                jQuery(this).hide();
+            }
+        } else if (isRenewable === 'true' ) {
+            jQuery(this).show();
+        }
+    });
+}
+
+function hasRenewableServiceAddon(data)
+{
+    var hasService = false;
+    jQuery(data).find('div.service-renewal').each(function (i, element) {
+        if (jQuery(element).attr('data-is-renewable') === 'true') {
+            return hasService = true;
+        }
+    });
+    return hasService;
 }

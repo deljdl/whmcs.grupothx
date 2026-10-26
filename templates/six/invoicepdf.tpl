@@ -6,6 +6,8 @@ if (file_exists(ROOTDIR . '/assets/img/logo.png')) {
     $logoFilename = 'logo.png';
 } elseif (file_exists(ROOTDIR . '/assets/img/logo.jpg')) {
     $logoFilename = 'logo.jpg';
+} elseif (file_exists(ROOTDIR . '/assets/img/logo.jpeg')) {
+    $logoFilename = 'logo.jpeg';
 }
 $pdf->Image(ROOTDIR . '/assets/img/' . $logoFilename, 15, 25, 75);
 
@@ -61,7 +63,7 @@ $pdf->Ln(5);
  * Invoice header
  *
  * You can optionally define a header/footer in a way that is repeated across page breaks.
- * For more information, see http://docs.whmcs.com/PDF_Invoice#Header.2FFooter
+ * For more information, see https://go.whmcs.com/2361/pdf-invoices#header-and-footer
  */
 
 $pdf->SetFont($pdfFont, 'B', 15);

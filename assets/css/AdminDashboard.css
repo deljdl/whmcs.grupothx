@@ -249,6 +249,12 @@
     color: #fff;
     text-decoration: none;
 }
+.badge-shadow {
+    -webkit-text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
+    -moz-text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
+    -ms-text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
+    text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
+}
 .status-badge-green {
     background-color: #5dc560;
 }
@@ -276,27 +282,58 @@
 
 /* --- Billing Widget --- */
 
-.widget-billing .row {
+.widget-billing .row,
+.widget-stripe .row {
     margin: 0;
 }
-.widget-billing .bordered-right {
+.widget-billing .bordered-right,
+.widget-stripe .bordered-right {
     border-right: 1px solid #eee;
 }
-.widget-billing .bordered-top {
+.widget-billing .bordered-top,
+.widget-stripe .bordered-top {
     border-top: 1px solid #eee;
 }
-.widget-billing .item {
+.widget-billing .item,
+.widget-stripe .item {
     padding: 13px 0;
     white-space: nowrap;
     overflow: hidden;
 }
-.widget-billing .item .data {
+.widget-billing .item .data,
+.widget-stripe .item .data {
     display: block;
     font-size: 1.8em;
 }
-.widget-billing .item .note {
+.widget-billing .item .note,
+.widget-stripe .item .note {
     font-size: 0.9em;
     color: #a2a6af;
+}
+
+.widget-billing .error,
+.widget-stripe .error {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #a2a6af;
+}
+
+@media only screen and (max-width: 767px) {
+    .widget-billing .bordered-right,
+    .widget-billing .bordered-top,
+    .widget-stripe .bordered-right,
+    .widget-stripe .bordered-top {
+        border-right: 0;
+        border-top: 0;
+    }
+    .widget-billing .col-sm-6,
+    .widget-stripe .col-sm-6 {
+        border-bottom: 1px solid #eee;
+    }
+    .widget-billing .col-sm-6:last-child,
+    .widget-stripe .col-sm-6:last-child {
+        border: 0;
+    }
 }
 
 /* --- Health Widget --- */
@@ -573,4 +610,27 @@
     .dashboard-panel-item-columns-3 {
         width: 100%;
     }
+}
+
+/* --- Invoices --- */
+
+.invoice-alert-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    width: 100%;
+    border: 1px solid #faebcc;
+    border-radius: 4px;
+    z-index: 10000;
+}
+
+.btn-link-default {
+    background: none;
+    border: none;
+    color: #202F60;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
 }

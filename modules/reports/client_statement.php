@@ -73,7 +73,8 @@ if ($userid) {
             ]
         )
         ->orderBy('date', 'asc')
-        ->get();
+        ->get()
+        ->all();
     foreach ($results as $result) {
         $invoiceid = $result->id;
         $date = $result->date;
@@ -91,11 +92,11 @@ if ($userid) {
             ->value('id');
         if (!$addfunds) {
             $statement[str_replace('-', '', $date) . "_" . $count] = [
-                "Invoice",
-                $date,
-                "<a href=\"invoices.php?action=edit&id=$invoiceid\" target=\"_blank\">#$invoiceid</a>",
-                0,
-                $total,
+                'type' => 'Invoice',
+                'date' => Carbon::safeCreateFromMySqlDate($date),
+                'description' => "<a href=\"invoices.php?action=edit&id={$invoiceid}\" target=\"_blank\">#{$invoiceid}</a>",
+                'credits' => 0,
+                'debits' => $total,
             ];
         }
 
@@ -105,7 +106,8 @@ if ($userid) {
     $results = Capsule::table('tblaccounts')
         ->where('userid', '=', $userid)
         ->orderBy('date', 'asc')
-        ->get();
+        ->get()
+        ->all();
     foreach ($results as $result) {
         $transid = $result->id;
         $date = $result->date;
@@ -126,14 +128,13 @@ if ($userid) {
             $relids = Capsule::table('tblinvoiceitems')
                 ->where('invoiceid', '=', $invoiceid)
                 ->orderBy('relid', 'asc')
-                ->pluck('relid');
+                ->pluck('relid')
+                ->all();
             foreach ($relids as $relid) {
-                $description .= "<a href=\"invoices.php?action=edit&id=$relid\" target=\"_blank\">"
-                    . "#$relid</a>, ";
+                $description .= "<a href=\"invoices.php?action=edit&id={$relid}\" target=\"_blank\">#{$relid}</a>, ";
             }
             $description = substr($description, 0, -2);
         } else {
-            $description = $description;
             if ($invoiceid) {
                 $description .= " - <a href=\"invoices.php?action=edit&id=$invoiceid\" target=\"_blank\">"
                     . "#$invoiceid</a>";
@@ -141,11 +142,11 @@ if ($userid) {
         }
 
         $statement[str_replace('-', '', $date) . "_" . $count] = [
-            "Transaction",
-            $date,
-            $description,
-            $amountin,
-            $amountout,
+            'type' => 'Transaction',
+            'date' => Carbon::safeCreateFromMySqlDate($date),
+            'description' => $description,
+            'credits' => $amountin,
+            'debits' => $amountout,
         ];
         $count++;
     }
@@ -158,26 +159,50 @@ if ($range) {
     $dateto = $dateRange['to'];
 }
 
-$reportdata["tableheadings"] = array("Type","Date","Description","Credits","Debits","Balance");
+$reportdata['tableheadings'] = ['Type', 'Date', 'Description', 'Credits', 'Debits', 'Balance'];
 ksort($statement);
-foreach ($statement as $date => $entry) {
-    $date = Carbon::createFromFormat('Ymd', substr($date, 0, 8));
-    if ((!$dateto) || ($date->lt($dateto))) {
-        $totalcredits += $entry[3];
-        $totaldebits -= $entry[4];
-        $balance += ($entry[3] - $entry[4]);
+$previousBalance = null;
+foreach ($statement as $entry) {
+    /** @var Carbon $carbonDate */
+    $carbonDate = $entry['date'];
+    // only update the total balance to include previous balance through to ending date of report
+    if ($carbonDate->lte($dateto)) {
+        $balance += ($entry['credits'] - $entry['debits']);
     }
-    if ((!$dateto) || ($date->gt($datefrom)) && ($date->lt($dateto))) {
-        $reportdata["tablevalues"][] = array(
-            $entry[0],
-            fromMySQLDate($entry[1]),
-            $entry[2],
-            formatCurrency($entry[3]),
-            formatCurrency($entry[4]),
-            formatCurrency($balance)
-        );
+
+    if (!empty($range) && $carbonDate->lt($datefrom)) {
+        $previousBalance = $balance;
+    }
+
+    if (empty($range) || $carbonDate->betweenIncluded($datefrom, $dateto)) {
+        $reportdata['tablevalues'][] = [
+            $entry['type'],
+            $carbonDate->toClientDateFormat(),
+            $entry['description'],
+            formatCurrency($entry['credits']),
+            formatCurrency($entry['debits']),
+            formatCurrency($balance),
+        ];
+
+        $totalcredits += $entry['credits'];
+        $totaldebits -= $entry['debits'];
     }
 }
+
+if (!empty($previousBalance)) {
+    $previousBalance = formatCurrency($previousBalance);
+} else {
+    $previousBalance = AdminLang::trans('global.na');
+}
+
+$previousBalanceLabel = AdminLang::trans('reports.clientStatement.previousBalance');
+$reportdata['tablePreface'] = <<<PREFACE
+    <p id="clientSummaryPreviousBalance" style="float:right">
+        <strong>{$previousBalanceLabel}:</strong> {$previousBalance}
+    </p>
+PREFACE;
+
+
 $reportdata["tablevalues"][] = array(
     '#efefef',
     '',

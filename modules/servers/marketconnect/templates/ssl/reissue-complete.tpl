@@ -1,12 +1,16 @@
 <div class="alert alert-success">
     <i class="fas fa-check fa-fw"></i>
-    Reissue request submitted successfully!
+    {lang key='ssl.reissueSuccess'}
 </div>
 
-<p>Your request to reissue your certificate has been submitted to the certificate authority.</p>
+{if $approverEmail}
+{lang key="ssl.reissueSuccessInfo" approverEmail=$approverEmail}
+{else}
+{lang key="ssl.reissueSuccessInfo" approverEmail={lang key='ssl.defaultcontacts'}}
+{/if}
 
-<p>You will receive an email shortly to <em>{$approverEmail}</em> to approve the certificate.</p>
+<br>
 
-<p>If you do not receive the email, please check any spam filters and virus protection folders in case the email has been quarantined. If you are still unable to find it, please <a href="submitticket.php">contact support</a>.</p>
-
-<br><br>
+<div class="well">
+    {lang key='ssl.approverEmailProcess'}
+</div>

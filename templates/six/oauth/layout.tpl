@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{$requestedAction} - {$companyname}</title>
 
-    <link href="{$WEB_ROOT}/templates/{$template}/css/all.min.css" rel="stylesheet">
-    <link href="{$WEB_ROOT}/templates/{$template}/css/custom.css" rel="stylesheet" >
-    <link href="{$WEB_ROOT}/templates/{$template}/oauth/css/style.css" rel="stylesheet">
+    <link href="{assetPath file='all.min.css'}" rel="stylesheet">
+    {assetExists file="custom.css"}
+    <link href="{$__assetPath__}" rel="stylesheet">
+    {/assetExists}
+    <link href="{assetPath file='oauth.css'}" rel="stylesheet">
 
+    <script>
+        var whmcsBaseUrl = "{\WHMCS\Utility\Environment\WebHelper::getBaseUrl()}";
+    </script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -26,16 +31,16 @@
                 {if $loggedin}
                     <form method="post" action="{$issuerurl}oauth/authorize.php" id="frmLogout">
                         <input type="hidden" name="logout" value="1"/>
-                        <input type="hidden" name="request_hash" value="{$request_hash}"/>
+                        <input type="hidden" name="request_hash" value="{$request_hash|escape:'html'}"/>
                         <p>
-                            {lang key='oauth.currentlyLoggedInAs' firstName=$loggedinuser.firstname lastName=$loggedinuser.lastname}.
+                            {lang key='oauth.currentlyLoggedInAs' firstName=$userInfo.firstName lastName=$userInfo.lastName}{if $userInfo.clientName} ({$userInfo.clientName}){/if}.
                             <a href="#" onclick="jQuery('#frmLogout').submit()">{lang key='oauth.notYou'}</a>
                         </p>
                     </form>
                 {/if}
                 <form method="post" action="{$issuerurl}oauth/authorize.php" id="frmCancelLogin">
                     <input type="hidden" name="return_to_app" value="1"/>
-                    <input type="hidden" name="request_hash" value="{$request_hash}"/>
+                    <input type="hidden" name="request_hash" value="{$request_hash|escape:'html'}"/>
                     <button type="submit" class="btn btn-default">
                         {lang key='oauth.returnToApp' appName=$appName}
                     </button>
@@ -52,6 +57,6 @@
         {lang key='oauth.copyrightFooter' dateYear=$date_year companyName=$companyname}
     </section>
 
-    <script src="{$WEB_ROOT}/templates/{$template}/js/scripts.min.js"></script>
+    <script src="{assetPath file='scripts.min.js'}"></script>
   </body>
 </html>

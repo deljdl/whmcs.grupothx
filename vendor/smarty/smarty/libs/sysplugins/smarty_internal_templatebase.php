@@ -246,7 +246,15 @@ abstract class Smarty_Internal_TemplateBase extends Smarty_Internal_Data
                 error_reporting($_smarty_old_error_level);
             }
             return $result;
-        } catch (Exception $e) {
+        } catch (Exception $e) { // PHP 5.x specific
+            while (ob_get_level() > $level) {
+                ob_end_clean();
+            }
+            if (isset($_smarty_old_error_level)) {
+                error_reporting($_smarty_old_error_level);
+            }
+            throw $e;
+        } catch (Throwable $e) { // For PHP ^7.0 this can also catch Errors
             while (ob_get_level() > $level) {
                 ob_end_clean();
             }
@@ -265,7 +273,7 @@ abstract class Smarty_Internal_TemplateBase extends Smarty_Internal_Data
      *
      * @param string   $type       plugin type
      * @param string   $name       name of template tag
-     * @param callback $callback   PHP callback to register
+     * @param callable $callback   PHP callback to register
      * @param bool     $cacheable  if true (default) this function is cache able
      * @param mixed    $cache_attr caching attributes if any
      *
@@ -301,7 +309,7 @@ abstract class Smarty_Internal_TemplateBase extends Smarty_Internal_Data
      * @link http://www.smarty.net/docs/en/api.register.filter.tpl
      *
      * @param string      $type filter type
-     * @param callback    $callback
+     * @param callable    $callback
      * @param string|null $name optional filter name
      *
      * @return \Smarty|\Smarty_Internal_Template

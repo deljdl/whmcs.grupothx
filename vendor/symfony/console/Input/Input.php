@@ -25,21 +25,14 @@ use Symfony\Component\Console\Exception\RuntimeException;
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */
-abstract class Input implements InputInterface
+abstract class Input implements InputInterface, StreamableInputInterface
 {
-    /**
-     * @var InputDefinition
-     */
     protected $definition;
-    protected $options = array();
-    protected $arguments = array();
+    protected $stream;
+    protected $options = [];
+    protected $arguments = [];
     protected $interactive = true;
 
-    /**
-     * Constructor.
-     *
-     * @param InputDefinition $definition A InputDefinition instance
-     */
     public function __construct(InputDefinition $definition = null)
     {
         if (null === $definition) {
@@ -51,14 +44,12 @@ abstract class Input implements InputInterface
     }
 
     /**
-     * Binds the current Input instance with the given arguments and options.
-     *
-     * @param InputDefinition $definition A InputDefinition instance
+     * {@inheritdoc}
      */
     public function bind(InputDefinition $definition)
     {
-        $this->arguments = array();
-        $this->options = array();
+        $this->arguments = [];
+        $this->options = [];
         $this->definition = $definition;
 
         $this->parse();
@@ -70,9 +61,7 @@ abstract class Input implements InputInterface
     abstract protected function parse();
 
     /**
-     * Validates the input.
-     *
-     * @throws RuntimeException When not enough arguments are given
+     * {@inheritdoc}
      */
     public function validate()
     {
@@ -80,18 +69,16 @@ abstract class Input implements InputInterface
         $givenArguments = $this->arguments;
 
         $missingArguments = array_filter(array_keys($definition->getArguments()), function ($argument) use ($definition, $givenArguments) {
-            return !array_key_exists($argument, $givenArguments) && $definition->getArgument($argument)->isRequired();
+            return !\array_key_exists($argument, $givenArguments) && $definition->getArgument($argument)->isRequired();
         });
 
-        if (count($missingArguments) > 0) {
+        if (\count($missingArguments) > 0) {
             throw new RuntimeException(sprintf('Not enough arguments (missing: "%s").', implode(', ', $missingArguments)));
         }
     }
 
     /**
-     * Checks if the input is interactive.
-     *
-     * @return bool Returns true if the input is interactive
+     * {@inheritdoc}
      */
     public function isInteractive()
     {
@@ -99,19 +86,15 @@ abstract class Input implements InputInterface
     }
 
     /**
-     * Sets the input interactivity.
-     *
-     * @param bool $interactive If the input should be interactive
+     * {@inheritdoc}
      */
-    public function setInteractive($interactive)
+    public function setInteractive(bool $interactive)
     {
-        $this->interactive = (bool) $interactive;
+        $this->interactive = $interactive;
     }
 
     /**
-     * Returns the argument values.
-     *
-     * @return array An array of argument values
+     * {@inheritdoc}
      */
     public function getArguments()
     {
@@ -119,32 +102,21 @@ abstract class Input implements InputInterface
     }
 
     /**
-     * Returns the argument value for a given argument name.
-     *
-     * @param string $name The argument name
-     *
-     * @return mixed The argument value
-     *
-     * @throws InvalidArgumentException When argument given doesn't exist
+     * {@inheritdoc}
      */
-    public function getArgument($name)
+    public function getArgument(string $name)
     {
         if (!$this->definition->hasArgument($name)) {
             throw new InvalidArgumentException(sprintf('The "%s" argument does not exist.', $name));
         }
 
-        return isset($this->arguments[$name]) ? $this->arguments[$name] : $this->definition->getArgument($name)->getDefault();
+        return $this->arguments[$name] ?? $this->definition->getArgument($name)->getDefault();
     }
 
     /**
-     * Sets an argument value by name.
-     *
-     * @param string $name  The argument name
-     * @param string $value The argument value
-     *
-     * @throws InvalidArgumentException When argument given doesn't exist
+     * {@inheritdoc}
      */
-    public function setArgument($name, $value)
+    public function setArgument(string $name, $value)
     {
         if (!$this->definition->hasArgument($name)) {
             throw new InvalidArgumentException(sprintf('The "%s" argument does not exist.', $name));
@@ -154,21 +126,15 @@ abstract class Input implements InputInterface
     }
 
     /**
-     * Returns true if an InputArgument object exists by name or position.
-     *
-     * @param string|int $name The InputArgument name or position
-     *
-     * @return bool true if the InputArgument object exists, false otherwise
+     * {@inheritdoc}
      */
-    public function hasArgument($name)
+    public function hasArgument(string $name)
     {
         return $this->definition->hasArgument($name);
     }
 
     /**
-     * Returns the options values.
-     *
-     * @return array An array of option values
+     * {@inheritdoc}
      */
     public function getOptions()
     {
@@ -176,34 +142,35 @@ abstract class Input implements InputInterface
     }
 
     /**
-     * Returns the option value for a given option name.
-     *
-     * @param string $name The option name
-     *
-     * @return mixed The option value
-     *
-     * @throws InvalidArgumentException When option given doesn't exist
+     * {@inheritdoc}
      */
-    public function getOption($name)
+    public function getOption(string $name)
     {
+        if ($this->definition->hasNegation($name)) {
+            if (null === $value = $this->getOption($this->definition->negationToName($name))) {
+                return $value;
+            }
+
+            return !$value;
+        }
+
         if (!$this->definition->hasOption($name)) {
             throw new InvalidArgumentException(sprintf('The "%s" option does not exist.', $name));
         }
 
-        return isset($this->options[$name]) ? $this->options[$name] : $this->definition->getOption($name)->getDefault();
+        return \array_key_exists($name, $this->options) ? $this->options[$name] : $this->definition->getOption($name)->getDefault();
     }
 
     /**
-     * Sets an option value by name.
-     *
-     * @param string      $name  The option name
-     * @param string|bool $value The option value
-     *
-     * @throws InvalidArgumentException When option given doesn't exist
+     * {@inheritdoc}
      */
-    public function setOption($name, $value)
+    public function setOption(string $name, $value)
     {
-        if (!$this->definition->hasOption($name)) {
+        if ($this->definition->hasNegation($name)) {
+            $this->options[$this->definition->negationToName($name)] = !$value;
+
+            return;
+        } elseif (!$this->definition->hasOption($name)) {
             throw new InvalidArgumentException(sprintf('The "%s" option does not exist.', $name));
         }
 
@@ -211,26 +178,36 @@ abstract class Input implements InputInterface
     }
 
     /**
-     * Returns true if an InputOption object exists by name.
-     *
-     * @param string $name The InputOption name
-     *
-     * @return bool true if the InputOption object exists, false otherwise
+     * {@inheritdoc}
      */
-    public function hasOption($name)
+    public function hasOption(string $name)
     {
-        return $this->definition->hasOption($name);
+        return $this->definition->hasOption($name) || $this->definition->hasNegation($name);
     }
 
     /**
      * Escapes a token through escapeshellarg if it contains unsafe chars.
      *
-     * @param string $token
-     *
      * @return string
      */
-    public function escapeToken($token)
+    public function escapeToken(string $token)
     {
         return preg_match('{^[\w-]+$}', $token) ? $token : escapeshellarg($token);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setStream($stream)
+    {
+        $this->stream = $stream;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getStream()
+    {
+        return $this->stream;
     }
 }

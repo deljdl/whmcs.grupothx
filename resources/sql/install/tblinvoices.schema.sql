@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS `tblinvoices`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tblinvoices` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `userid` int(10) NOT NULL,
   `invoicenum` text COLLATE utf8_unicode_ci NOT NULL,
   `date` date DEFAULT NULL,
@@ -17,13 +17,13 @@ CREATE TABLE `tblinvoices` (
   `last_capture_attempt` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `date_refunded` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `date_cancelled` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `subtotal` decimal(10,2) NOT NULL,
-  `credit` decimal(10,2) NOT NULL,
-  `tax` decimal(10,2) NOT NULL,
-  `tax2` decimal(10,2) NOT NULL,
-  `total` decimal(10,2) NOT NULL DEFAULT '0.00',
-  `taxrate` decimal(10,2) NOT NULL,
-  `taxrate2` decimal(10,2) NOT NULL,
+  `subtotal` decimal(16,2) NOT NULL,
+  `credit` decimal(16,2) NOT NULL,
+  `tax` decimal(16,2) NOT NULL,
+  `tax2` decimal(16,2) NOT NULL,
+  `total` decimal(16,2) NOT NULL DEFAULT '0.00',
+  `taxrate` decimal(10,3) NOT NULL DEFAULT '0.000',
+  `taxrate2` decimal(10,3) NOT NULL DEFAULT '0.000',
   `status` text COLLATE utf8_unicode_ci NOT NULL,
   `paymentmethod` text COLLATE utf8_unicode_ci NOT NULL,
   `paymethodid` int(10) unsigned DEFAULT NULL,
@@ -32,7 +32,8 @@ CREATE TABLE `tblinvoices` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   KEY `userid` (`userid`),
-  KEY `status` (`status`(3))
+  KEY `status` (`status`(3)),
+  KEY `duedate` (`duedate`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

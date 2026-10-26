@@ -2,24 +2,22 @@
 
     <div class="alert alert-success">
         <i class="fas fa-check"></i>
-        Approver email updated successfully!
+        {lang key='ssl.approverEmailUpdateSuccess'}
     </div>
-    <p>You will receive an email shortly to <em>{$newApproverEmail}</em> to approve the certificate.</p>
-    <p>If you do not receive the email, please check any spam filters and virus protection folders in case the email has been quarantined. If you are still unable to find it, please <a href="submitticket.php">contact support</a>.</p>
-
+    {lang key='ssl.approverEmailUpdateInfo' newApproverEmail=$newApproverEmail}
 {else}
 
     <div class="alert alert-info">
         <i class="fas fa-exclamation-triangle"></i>
-        Please disable any WHOIS privacy services before proceeding.
+        {lang key='ssl.disableWhoisPrivacy'}
     </div>
 
-    <p>Select an active email address from the list below. You will receive an email to approve the SSL certificate.</p>
+    <p>{lang key='ssl.selectDcvEmail'}</p>
 
     {if $errorMessage}
         <div class="alert alert-danger">
             <i class="fas fa-times"></i>
-            {$errorMessage} Please try again later or <a href="submitticket.php">contact support</a>.
+            {$errorMessage} {lang key='errors.tryAgainOrSupport'}
         </div>
     {/if}
 
@@ -27,6 +25,7 @@
 
         <form method="post" action="clientarea.php?action=productdetails">
             <input type="hidden" name="id" value="{$serviceid}">
+            <input type="hidden" name="addonId" value="{$addonId}">
             <input type="hidden" name="modop" value="custom">
             <input type="hidden" name="a" value="{$actionName}">
 
@@ -58,7 +57,5 @@
 <br>
 
 <div class="well">
-    <h4>About the Approver Email Process</h4>
-    <p>In order to issue an SSL certificate, the Certificate Authority has to validate the authenticity of the certificate order to ensure the request is legitimate and comes from an authorized owner of the domain.</p>
-    <p>Email-based domain validation is the most common certificate validation mechanism for certificate orders. The certificate authority compiles a list of approved email addresses using common administrative emails (e.g. admin or webmaster) in combination with the public whois data for the domain. Only one of these emails can be used to confirm ownership.</p>
+    {lang key='ssl.approverEmailProcess'}
 </div>

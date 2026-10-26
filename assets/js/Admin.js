@@ -9,7 +9,9 @@ jQuery(document).ready(function() {
             return params;
         }
     });
-    jQuery('.slide-toggle').bootstrapSwitch();
+
+    generateBootstrapSwitches();
+
     jQuery('select.form-control.enhanced').select2({
         theme: 'bootstrap'
     });
@@ -22,7 +24,7 @@ jQuery(document).ready(function() {
     });
 
     jQuery('.paging-dropdown li a,.page-selector').click(function() {
-        if (jQuery(this).hasClass('disabled')) {
+        if (jQuery(this).parent().hasClass('disabled')) {
             return false;
         }
         var form = jQuery('#frmRecordsFound');
@@ -49,8 +51,9 @@ jQuery(document).ready(function() {
         child.location = $(this).attr('href');
     });
 
-    jQuery('#tblModuleSettings').on('click', '.icon-refresh', function() {
+    jQuery('#divModuleSettings').on('click', '.icon-refresh', function() {
         fetchModuleSettings(jQuery(this).data('product-id'), 'simple');
+        processAddonDisplay();
     });
 
     jQuery('#mode-switch').click(function() {
@@ -91,20 +94,42 @@ jQuery(document).ready(function() {
                         }
 
                         if (data.success) {
-                            if (data.approveremails) {
-                                for (i = 0; i < data.approveremails.length; i++) {
-                                    var email = data.approveremails[i];
-                                    $('.modal-wizard .cert-approver-emails').append('<label class="radio-inline"><input type="radio" name="approver_email" value="' + email + '"> ' + email + '</label><br>');
+                            if (data.sslData) {
+                                var sslData = data.sslData;
+                                if (sslData.approverEmails) {
+                                    for (i = 0; i < sslData.approverEmails.length; i++) {
+                                        var email = sslData.approverEmails[i];
+                                        $('.modal-wizard .cert-approver-emails')
+                                            .append('<label class="radio-inline">' +
+                                                '<input type="radio" name="approver_email" value="' + email + '"> '
+                                                + email + '</label><br>');
+                                    }
                                 }
-                            } else if (data.fileAuth) {
-                                $('.modal-wizard .cert-further-instructions').hide();
-                                $('.modal-wizard .cert-file-auth').removeClass('hidden');
-                                $('.modal-wizard .wizard-transition-step .icon').hide();
-                                $('.modal-wizard .wizard-transition-step .title').addClass('file-auth');
-                                $('.modal-wizard .wizard-transition-step .icon.file-auth').removeClass('hidden').show();
-                                $('.modal-wizard .cert-file-auth-filename').val(data.fileAuthFilename);
-                                $('.modal-wizard .cert-file-auth-contents').val(data.fileAuthContents);
-                            } else if (data.refreshMc) {
+                                if (sslData.approvalMethods) {
+                                    for (i = 0; i < sslData.approvalMethods.length; i++) {
+                                        $("label[for='" + sslData.approvalMethods[i] + "Method']")
+                                            .removeClass('hidden').show();
+                                    }
+                                }
+                            } else if (data.authData) {
+                                var authData = data.authData;
+                                if (authData.method == 'emailauth') {
+                                    $('.modal-wizard .cert-email-auth').removeClass('hidden');
+                                    $('.modal-wizard .cert-email-auth-emailapprover').val(authData.email);
+                                } else if (authData.method == 'fileauth') {
+                                    $('.modal-wizard .cert-file-auth').removeClass('hidden');
+                                    $('.modal-wizard .cert-file-auth-filename')
+                                        .val('http://<domain>/' + authData.path + '/' + authData.name);
+                                    $('.modal-wizard .cert-file-auth-contents').val(authData.contents);
+                                } else if (authData.method == 'dnsauth') {
+                                    $('.modal-wizard .cert-dns-auth').removeClass('hidden');
+                                    $('.modal-wizard .cert-dns-auth-contents').val(authData.value);
+                                    $('.modal-wizard .cert-dns-auth-host').val(authData.host);
+                                    $('.modal-wizard .cert-dns-auth-type').val(authData.type);
+                                }
+                            }
+
+                            if (data.refreshMc) {
                                 $('#btnMcServiceRefresh').click();
                             }
                             wizardStepTransition(data.skipNextStep, false);
@@ -130,6 +155,9 @@ jQuery(document).ready(function() {
         if (currentStep === '2' || currentStep === '4') {
             skipTwo = true;
         }
+
+        trackWizardAction(currentStep, 'skipped')
+
         wizardStepTransition(skipTwo, true);
     }).on('click', '#btnWizardBack', function(e) {
         e.preventDefault();
@@ -174,25 +202,42 @@ jQuery(document).ready(function() {
 
     jQuery('#addPayment').submit(function (e) {
         e.preventDefault();
+
+        const action = getQueryParam('action');
+        if (action === 'edit') {
+            handleUnsavedChanges(e, function() {
+                handleAddPaymentSubmit();
+            });
+        } else {
+            handleAddPaymentSubmit();
+        }
+    });
+
+    function handleAddPaymentSubmit() {
         addingPayment = false;
         jQuery('#btnAddPayment').attr('disabled', 'disabled');
         jQuery('#paymentText').hide();
         jQuery('#paymentLoading').removeClass('hidden').show();
 
-        var postData = jQuery(this).serialize().replace('action=edit', 'action=checkTransactionId'),
+
+        var postData = Object.fromEntries(new FormData(document.forms.namedItem('addPayment'))),
             post = WHMCS.http.jqClient.post(
-            'invoices.php',
-            postData + '&ajax=1'
-        );
+                WHMCS.adminUtils.getAdminRouteUrl('/billing/check-transaction'),
+                {
+                    token: postData.token,
+                    transaction_id: postData.transid,
+                    payment_method: postData.paymentmethod
+                }
+            );
 
         post.done(function (data) {
-            if (data.unique == false) {
+            if (data.unique === false) {
                 jQuery('#modalDuplicateTransaction').modal('show');
             } else {
                 addInvoicePayment();
             }
         });
-    });
+    }
 
     $('#modalDuplicateTransaction').on('hidden.bs.modal', function () {
         if (addingPayment === false) {
@@ -243,6 +288,9 @@ jQuery(document).ready(function() {
 
     // Bootstrap Confirmation popup auto object registration
     WHMCS.ui.confirmation.register();
+
+    // Markdown editor data-driven object registration
+    WHMCS.ui.markdownEditor.register();
 
     var mcProductPromos = jQuery("#mcConfigureProductPromos");
 
@@ -312,11 +360,31 @@ jQuery(document).ready(function() {
 
     if (jQuery('.captcha-type').length) {
         jQuery(document).on('change', '.captcha-type', function() {
-            var settings = jQuery('.recaptchasetts');
-            if (jQuery(this).val() === '') {
-                settings.hide();
+            jQuery('#captcha-preview').attr(
+                'src',
+                jQuery(this).find(':selected').data('image')
+            );
+            let recaptchaSettings = jQuery('.recaptchasetts'),
+                recaptchaV3Settings = jQuery('.recaptchav3setts'),
+                hCaptchaSettings = jQuery('.hcaptchasetts'),
+                captchaType = jQuery(this).val();
+
+            if (['recaptcha', 'invisible'].includes(captchaType)) {
+                recaptchaSettings.show();
+                recaptchaV3Settings.hide();
+                hCaptchaSettings.hide();
+            } else if (['hcaptcha', 'hcaptcha-invisible'].includes(captchaType)) {
+                recaptchaSettings.hide();
+                recaptchaV3Settings.hide();
+                hCaptchaSettings.show();
+            } else if ('recaptchav3' === captchaType) {
+                hCaptchaSettings.hide();
+                recaptchaSettings.show();
+                recaptchaV3Settings.show();
             } else {
-                settings.show();
+                recaptchaSettings.hide();
+                hCaptchaSettings.hide();
+                recaptchaV3Settings.hide();
             }
         });
     }
@@ -392,8 +460,170 @@ jQuery(document).ready(function() {
         }
         element.show();
     });
+
+    jQuery(document).on('click', 'button.disable-submit', function(e) {
+        var button = jQuery(this),
+            form = button.closest('form');
+
+        button.prepend('<i class="fas fa-spinner fa-spin"></i> ')
+            .addClass('disabled')
+            .prop('disabled', true);
+
+        form.submit();
+    });
+
+    /**
+     * Resend verification email button handler.
+     */
+    jQuery('#btnResendVerificationEmail').click(function() {
+        var button = $(this);
+        button.prop('disabled', true).html('<i class="fa fa-spinner fa-spin fa-fw"></i> ' + button.html());
+        WHMCS.http.jqClient.jsonPost(
+                {
+                    url: window.location.href,
+                    data: {
+                        token: csrfToken,
+                        action: 'resendVerificationEmail',
+                        userid: button.data('clientid')
+                    },
+                    success: function(data) {
+                        if (data.success) {
+                            button.html(button.data('successmsg'));
+                        } else {
+                            button.html(button.data('errormsg'));
+                        }
+                    }
+                }
+            );
+    });
+
+    if (typeof Selectize !== 'undefined') {
+        Selectize.define('whmcs_no_results', function (options) {
+            var self = this;
+            this.search = (function () {
+                var original = self.search;
+
+                return function () {
+                    var results = original.apply(this, arguments);
+
+                    var isActualItem = function (item) {
+                        // item.id may be 'client' - this is an actual item
+                        return isNaN(item.id) || item.id > 0;
+                    };
+
+                    var actualItems = results.items.filter(function (item) {
+                        return isActualItem(item);
+                    });
+
+                    var noResultsItems = results.items.filter(function (item) {
+                        return !isActualItem(item);
+                    });
+
+                    if (actualItems.length > 0) {
+                        results.items = actualItems;
+                    } else if (noResultsItems.length > 0) {
+                        results.items = [noResultsItems[0]];
+                    }
+
+                    return results;
+                };
+            })();
+        });
+    }
+
+    jQuery('.addon-type[name="atype"]').on('change', function() {
+        fetchModuleSettings(jQuery(this).closest('td').data('addon-id'));
+        processAddonDisplay();
+    });
+
+    jQuery(document).on('change', '.module-action-control', function() {
+        var actionActor = $(this).data('actor');
+        var params = jQuery('.module-action-param-row[data-action-type="' + actionActor + '"]');
+
+        if (parseInt($(this).val())) {
+            params.show();
+        } else {
+            params.hide();
+        }
+    });
+
+    jQuery(document).on('click', '.btn-create-module-action-custom-field', function() {
+        var self = this;
+        var productId = jQuery(self).data('product-id');
+
+        jQuery(self).attr('disabled', 'disabled');
+
+        WHMCS.http.jqClient.jsonPost({
+            url: 'configproducts.php',
+            data: {
+                action: 'create-module-action-custom-field',
+                id: productId,
+                token: csrfToken,
+                field_name: jQuery(self).data('field-name'),
+                field_type: jQuery(self).data('field-type')
+            },
+            success: function (data) {
+                var btnSave = jQuery('#btnSaveProduct');
+
+                if (jQuery(btnSave).attr('disabled')) {
+                    jQuery.growl.notice(
+                        {
+                            title: '',
+                            message: data.successMsg
+                        }
+                    );
+                } else {
+                    jQuery(btnSave).trigger('click');
+                }
+            },
+            error: function (data) {
+                jQuery(self).removeAttr('disabled');
+
+                jQuery.growl.warning(
+                    {
+                        title: '',
+                        message: data
+                    }
+                );
+            }
+        });
+    });
+
+    jQuery.each(jQuery('table.table-themed.data-driven'), function () {
+        var self = $(this),
+            table = self.DataTable();
+        table.on('preXhr.dt', function (e, settings, data) {
+            var d = document.createElement('div');
+            jQuery(d).css({
+                'background-color': '#fff',
+                'opacity': '0.5',
+                'position': 'absolute',
+                'top': self.offset().top,
+                'left': self.offset().left,
+                'width': self.width() + 2,
+                'height': self.height() + 2,
+                'line-height': self.height() + 'px',
+                'font-size': 40 + 'px',
+                'text-align': 'center',
+                'color': '#000',
+                'border-radius': self.css('border-radius'),
+                'zIndex': 100
+            })
+                .attr('id', self.attr('id') + 'overlay')
+                .html('<strong><i class="fas fa-spinner fa-pulse"></i></strong>');
+            self.before(d);
+            data.token = csrfToken;
+        });
+        table.on('xhr.dt', function ( e, settings, info, xhr ) {
+            jQuery('#' + self.attr('id') + 'overlay').remove();
+            self.removeClass('text-muted');
+        });
+    });
 });
-var addingPayment = false;
+
+var addingPayment = false,
+    loadedModuleConfiguration = false,
+    addonSupportsFeatures = false;
 
 function updateServerGroups(requiredModule) {
     var optionServerTypes = '';
@@ -402,7 +632,7 @@ function updateServerGroups(requiredModule) {
     $('#inputServerGroup').find('option:not([value=0])').each(function() {
         optionServerTypes = $(this).attr('data-server-types');
 
-        if (requiredModule) {
+        if (requiredModule && optionServerTypes) {
             doShowOption = (optionServerTypes.indexOf(',' + requiredModule + ',') > -1);
         } else {
             doShowOption = true;
@@ -420,25 +650,61 @@ function updateServerGroups(requiredModule) {
     });
 }
 
+function processAddonDisplay()
+{
+    var element = jQuery('input[name="atype"]:checked');
+    if (!loadedModuleConfiguration) {
+        setTimeout(processAddonDisplay, 100);
+        return;
+    }
+    var packageList = jQuery('#associatedPackages'),
+        typeAndGroupRows = jQuery('#rowProductType,#rowServerGroup');
+    packageList.find('option').prop('disabled', false);
+    if (addonSupportsFeatures) {
+        jQuery('#addonProvisioningType').find('div.radio').each(function() {
+            $(this).removeClass('radio-disabled').find('input').prop('disabled', false);
+        });
+    }
+    if (element.val() === 'feature') {
+        packageList.find('option[data-server-module!="' + $('#inputModule').val() + '"]')
+            .prop('checked', false)
+            .prop('disabled', true);
+        typeAndGroupRows.find('select').addClass('disabled').prop('disabled', true);
+    } else {
+        packageList.find('option').prop('disabled', false);
+        typeAndGroupRows.find('select').removeClass('disabled').prop('disabled', false)
+            .find('option[value="notAvailable"]').remove();
+    }
+    packageList.bootstrapDualListbox('refresh', true);
+}
+
 function fetchModuleSettings(productId, mode) {
     var gotValidResponse = false;
     var dataResponse = '';
     var switchLink = $('#mode-switch');
     var module = $('#inputModule').val();
+    var addonProvisioningType = jQuery('#addonProvisioningType');
 
     if (module === "") {
-        $('#tblModuleSettings').find('tr').not(':first').remove();
+        $('#divModuleSettings').html('');
         $('#noModuleSelectedRow').removeClass('hidden');
         $('#tblModuleAutomationSettings').find('input[type=radio]').attr('disabled', true);
+        if (addonProvisioningType.length) {
+            jQuery('input[name="atype"]').first().prop('checked', true);
+            addonProvisioningType.find('div.radio').each(function(index) {
+                $(this).addClass('radio-disabled').find('input').prop('disabled', true);
+            });
+        }
         return;
     }
 
+    loadedModuleConfiguration = false;
     mode = mode || 'simple';
     if (mode !== 'simple' && mode !== 'advanced') {
         mode = 'simple';
     }
     requestedMode = mode;
-    $('#tblModuleSettings').addClass('module-settings-loading');
+    $('#divModuleSettings').addClass('module-settings-loading');
     $('#tblModuleAutomationSettings').addClass('module-settings-loading');
     $('#tblMetricSettings').addClass('module-settings-loading');
     $('#serverReturnedError').addClass('hidden');
@@ -449,14 +715,16 @@ function fetchModuleSettings(productId, mode) {
         'module': module,
         'servergroup': $('#inputServerGroup').val(),
         'id': productId,
+        'type': $('#selectType').val(),
+        'atype': $('input[name="atype"]:checked').val(),
         'mode': mode
     },
     function(data) {
         gotValidResponse = true;
-        $('#tblModuleSettings').removeClass('module-settings-loading');
+        $('#divModuleSettings').removeClass('module-settings-loading');
         $('#tblModuleAutomationSettings').removeClass('module-settings-loading');
         $('#tblMetricSettings').removeClass('module-settings-loading');
-        $('#tblModuleSettings tr').not(':first').remove();
+        $('#divModuleSettings').html('');
         switchLink.parent('div .module-settings-mode').addClass('hidden');
         if (module && data.error) {
             $('#serverReturnedErrorText').html(data.error);
@@ -464,7 +732,7 @@ function fetchModuleSettings(productId, mode) {
         }
         if (module && data.content) {
             $('#noModuleSelectedRow').addClass('hidden');
-            $('#tblModuleSettings').append(data.content);
+            $('#divModuleSettings').html(data.content);
             $('#tblModuleAutomationSettings').find('input[type=radio]').removeAttr('disabled');
             if (data.mode === 'simple') {
                 switchLink.attr('data-mode', 'advanced').find('span').addClass('hidden').parent().find('.text-advanced').removeClass('hidden');
@@ -489,19 +757,53 @@ function fetchModuleSettings(productId, mode) {
             } else {
                 $('#tblMetricSettings').hide();
             }
+            if (addonProvisioningType.length) {
+                var packageList = jQuery('#associatedPackages'),
+                    selectElements = jQuery('#selectType,#inputServerGroup'),
+                    notAvailableOptions = selectElements.find('option[value="notAvailable"]');
+                if (typeof data.supportsFeatures !== 'undefined') {
+                    addonSupportsFeatures = data.supportsFeatures;
+                    addonProvisioningType.find('div.radio').each(function() {
+                        $(this).removeClass('radio-disabled').find('input').prop('disabled', false);
+                    });
+                }
+                if (!addonSupportsFeatures) {
+                    jQuery('input[name="atype"]').first().prop('checked', true);
+                    addonProvisioningType.find('div.radio').each(function() {
+                        $(this).addClass('radio-disabled').find('input').prop('disabled', true);
+                    });
+                    packageList.find('option').prop('disabled', false);
+                    selectElements.removeClass('disabled').prop('disabled', false);
+                    notAvailableOptions.remove();
+                } else {
+                    packageList.find('option').prop('disabled', true);
+                    if (jQuery('input[name="atype"]:checked').val() === 'feature') {
+                        selectElements.addClass('disabled').prop('disabled', true);
+                        if (!notAvailableOptions.length) {
+                            selectElements.prepend(
+                                $('<option>').val('notAvailable')
+                                    .text(data.languageStrings['notAvailableForStyle'])
+                                    .attr('selected', 'selected')
+                            );
+                        }
+                    }
+                }
+                packageList.bootstrapDualListbox('refresh', true);
+            }
         } else {
             $('#noModuleSelectedRow').removeClass('hidden');
             $('#tblModuleAutomationSettings').find('input[type=radio]').attr('disabled', true);
         }
-        $('#moduleSettingsLoader').fadeOut();
-        jQuery('[data-toggle="tooltip"]').tooltip();
     }, "json")
     .always(function() {
+        $('#moduleSettingsLoader').fadeOut();
+        jQuery('[data-toggle="tooltip"]').tooltip();
         updateServerGroups(gotValidResponse ? module : '');
 
         if (!gotValidResponse) {
             // non json response, likely session expired
         }
+        loadedModuleConfiguration = true;
     });
     return dataResponse;
 }
@@ -517,10 +819,8 @@ function wizardCall(action, request, handler) {
 }
 
 function wizardError(errorMsg) {
-    $('.modal-wizard .wizard-content').css('overflow', 'hidden');
-
-    WHMCS.ui.effects.errorShake($('.info-alert:visible:first').html(errorMsg).addClass('alert-danger'));
-
+    WHMCS.ui.effects.errorShake($('.modal-wizard .wizard-step:visible .info-alert:first')
+        .html(errorMsg).removeClass('hidden').addClass('alert-danger'));
 }
 
 function wizardStepTransition(skipNextStep, skip) {
@@ -533,6 +833,8 @@ function wizardStepTransition(skipNextStep, skip) {
     var lastStep = $('.modal-wizard .wizard-step:visible');
     var nextStepNumber = currentStepNumber + increment;
     if ($('#wizardStep' + nextStepNumber).length) {
+        trackWizardPageView(nextStepNumber)
+
         $('#wizardStep' + currentStepNumber).fadeOut('', function() {
             var newClass = 'completed';
             if (skip) {
@@ -585,6 +887,8 @@ function wizardStepBackTransition() {
     var previousStepNumber = parseInt(currentStepNumber) - 1;
 
     $('#wizardStep' + currentStepNumber).fadeOut('', function() {
+        trackWizardPageView(previousStepNumber)
+
         if (previousStepNumber < 1) {
             $('#btnWizardBack').fadeOut('slow');
             $('#btnWizardDoNotShow').fadeIn('slow');
@@ -605,26 +909,20 @@ function fadeoutLoaderAndAllowSubmission(modal) {
     modal.find('.modal-submit').removeProp('disabled');
 }
 
-function openSetupWizard() {
-    $('#modalFooterLeft').html('<a href="#" id="btnWizardSkip" class="btn btn-link pull-left hidden">Skip Step</a>' +
-        '<a href="#" id="btnWizardDoNotShow" class="btn btn-link pull-left">Do not show this again</a>' +
-        '</div>');
-    $('#modalAjaxSubmit').before('<a href="#" id="btnWizardBack" class="btn btn-default hidden">Back</a>');
-    openModal('wizard.php?wizard=GettingStarted', '', 'Getting Started Wizard', 'modal-lg', 'modal-wizard modal-setup-wizard', 'Next', '', true);
-}
-
 function addInvoicePayment() {
     addingPayment = true;
     jQuery('#modalDuplicateTransaction').modal('hide');
-    WHMCS.http.jqClient.post(
-        'invoices.php',
-        jQuery('#addPayment').serialize() + '&ajax=1',
-        function (data) {
-            if (data.redirectUri) {
-                window.location = data.redirectUri;
-            }
+
+    var post = WHMCS.http.jqClient.post(
+            WHMCS.adminUtils.getAdminRouteUrl('/billing/invoice/' + thisInvoiceId + '/add-payment'),
+            jQuery('#addPayment').serialize()
+        );
+
+    post.done(function (data) {
+        if (data.redirectUri) {
+            window.location = data.redirectUri;
         }
-    );
+    });
 }
 
 function cancelAddPayment() {
@@ -636,7 +934,7 @@ function cancelAddPayment() {
 }
 
 function openFeatureHighlights() {
-    openModal('whatsnew.php?modal=1', '', 'What\'s new in Version ...', '', 'modal-feature-highlights', '', '', true);
+    openModal('whatsnew.php?modal=1', '', 'What\'s new in Version ...', '', 'modal-feature-highlights', '', '', '', true);
 }
 
 /**
@@ -648,4 +946,207 @@ function autoSubmitFormByContainer(containerId) {
     if (typeof noAutoSubmit === "undefined" || noAutoSubmit === false) {
         jQuery("#" + containerId).find("form:first").submit();
     }
+}
+
+/**
+ * Sluggify a text string.
+ */
+function slugify(text) {
+    var search =  "āæåãàáäâảẩấćčçđẽèéëêếēėęīįìíïîłńñœøōõòóöôốớơśšūùúüûưÿžźż·/_,:;–"; // contains Unicode dash
+    var replace = "aaaaaaaaaaacccdeeeeeeeeeiiiiiilnnooooooooooossuuuuuuyzzz-------";
+
+    for (var i = 0, l = search.length; i < l; i++) {
+        text = text.replace(new RegExp(search.charAt(i), 'g'), replace.charAt(i));
+    }
+
+    return text
+        .toString()
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, '-')
+        .replace(/&/g, '-and-')
+        .replace(/[^\w\-]+/g, '')
+        .replace(/\-\-+/g, '-');
+}
+
+function generateBootstrapSwitches()
+{
+    jQuery('.slide-toggle').bootstrapSwitch();
+    jQuery('.slide-toggle-mini').bootstrapSwitch({
+        size: 'mini'
+    });
+}
+
+function submitForm(frmId, addTarget) {
+    var formTarget = jQuery('#' + frmId);
+    if (addTarget) {
+        formTarget.attr('target', '_blank');
+    } else {
+        formTarget.removeAttr('target');
+    }
+    formTarget.submit();
+}
+
+function reverseCommissionConfirm(totalDue, remainingBalance) {
+    var amountValue,
+        form = jQuery('form#transactions'),
+        formData = form.serializeArray();
+
+    amountValue = formData.find(function (object) {
+        return object['name'] === 'amount';
+    }).value;
+    if (!amountValue) {
+        var transidValue = formData.find(function (object) {
+            return object['name'] === 'transid';
+        }).value;
+        amountValue = jQuery('form#transactions select#transid option[value="' + transidValue + '"]').data('amount');
+    }
+    if ((remainingBalance + amountValue) < totalDue) {
+        jQuery('#modalReverseAffiliateCommission').modal().show();
+        return false;
+    }
+    jQuery(
+        '<input>',
+        {
+            type: 'hidden',
+            name: 'reverseCommission',
+            value: 'true'
+        }
+    ).appendTo(form);
+    form.removeAttr('onsubmit').submit();
+}
+
+function reverseCommissionSubmit(reverseCommission = false) {
+    var form = jQuery('form#transactions');
+
+    if (reverseCommission) {
+        jQuery(
+            '<input>',
+            {
+                type: 'hidden',
+                name: 'reverseCommission',
+                value: 'true'
+            }
+        ).appendTo(form);
+    }
+    form.removeAttr('onsubmit').submit();
+}
+
+function autosizeTextarea(el) {
+    var init = function(el) {
+        var elements = document.querySelectorAll(el)
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.overflowX = "hidden"
+            elements[i].style.height = calcHeight(elements[i])
+            elements[i].addEventListener("input", onInput)
+        }
+    };
+
+    var onInput = function() {
+        this.style.height = "auto"
+        this.style.height = calcHeight(this)
+    };
+
+    var calcHeight = function(el) {
+        return (el.scrollHeight + parseFloat(jQuery(el).css("borderTopWidth")) + parseFloat(jQuery(el).css("borderBottomWidth"))) + "px"
+    };
+
+    init(el)
+}
+
+function calculateInvoiceTotal(invoiceId, invoiceItems) {
+    return WHMCS.http.jqClient.post(
+        WHMCS.adminUtils.getAdminRouteUrl('/invoice-total/calculate'),
+        {
+            invoiceId: invoiceId,
+            items: invoiceItems,
+            token: csrfToken
+        }
+    );
+}
+
+function destroyInvoiceItem(id) {
+    return WHMCS.http.jqClient.post(
+        WHMCS.adminUtils.getAdminRouteUrl('/invoice-item/destroy'),
+        {
+            invoiceItemId: id,
+            token: csrfToken
+        }
+    );
+}
+
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+function getWizardStepPageData(stepNumber) {
+    const stepPageMap = {
+        1: {
+            title: 'General',
+            path: '/getting-started',
+        },
+        2: {
+            title: 'Payments',
+            path: '/getting-started/payments/step1',
+        },
+        3: {
+            title: 'Domain',
+            path: '/getting-started/domains/step1',
+        },
+        4: {
+            title: 'eNom',
+            path: '/getting-started/enom',
+        },
+        5: {
+            title: 'Web Hosting',
+            path: '/getting-started/hosting',
+        },
+        6: {
+            title: 'Add-ons & Extras',
+            path: '/getting-started/marketConnect/step1',
+        },
+        7: {
+            title: 'Complete',
+            path: '/getting-started/complete',
+        }
+    };
+
+    return stepPageMap[stepNumber] || { title: 'Unknown step', path: '/getting-started/unknown' };
+}
+
+function isMixpanelEnabled() {
+    return (typeof mixpanel_enabled !== 'undefined') && (mixpanel_enabled === true);
+}
+
+function trackWizardPageView(stepNumber, action = 'view') {
+    if (!isMixpanelEnabled()) {
+        return;
+    }
+
+    const stepPageData = getWizardStepPageData(stepNumber);
+    const fullUrl = this.getFullUrl(stepPageData.path);
+
+    mixpanel.track_pageview({
+        "page": `${stepPageData.title} (${action})`,
+        "\$current_url": fullUrl,
+        "\$referrer": fullUrl,
+    });
+}
+
+function trackWizardAction(stepNumber, action) {
+    if (!isMixpanelEnabled()) {
+        return;
+    }
+
+    const stepPageData = getWizardStepPageData(stepNumber);
+    const fullUrl = this.getFullUrl(stepPageData.path);
+
+    mixpanel.track(`${stepPageData.title} (${action})`, {
+        "\$current_url": fullUrl,
+    });
+}
+
+function getFullUrl(path) {
+    return new URL(path, window.location.origin).toString();
 }

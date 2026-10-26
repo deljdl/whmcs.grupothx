@@ -1,6 +1,7 @@
 <?php
 
 use WHMCS\Application;
+use WHMCS\Billing\Currency;
 use WHMCS\Config\Setting;
 use WHMCS\Exception\ProgramExit;
 use WHMCS\Product\Product;
@@ -35,17 +36,21 @@ if ($pid > 0) {
     $data = Capsule::table('tblproducts')
         ->where('id', '=', $pid)
         ->first();
-    $pid = (int) $data->id;
-    // If there is a user logged in, we will use the client language
-    if (((int) $userId = Session::get('userid'))) {
-        $language = Client::find($userId, array('language'))->language ?: null;
+    $pid = null;
+    if (is_object($data)) {
+        $pid = (int) $data->id;
+        // If there is a user logged in, we will use the client language
+        $userId = (int) Session::get('userid');
+        if (!empty($userId)) {
+            $language = Client::find($userId, array('language'))->language ?: null;
+        }
+        unset($userId);
+        $name = Product::getProductName($pid, $data->name, $language);
+        $description = Product::getProductDescription($pid, $data->description, $language);
     }
-    $name = Product::getProductName($pid, $data->name, $language);
-    $description = Product::getProductDescription($pid, $data->description, $language);
 }
 
-// Verify that the pid is not less than 1 to in order to continue.
-if ($pid < 1) {
+if (empty($pid)) {
     widgetOutput('Product ID Not Found');
 }
 
@@ -77,11 +82,11 @@ if ($get=="name") {
     if (!is_numeric($currencyID)) {
         $currency = array();
     } else {
-        $currency = getCurrency('', $currencyID);
+        $currency = getCurrency(null, $currencyID);
     }
 
     if (!$currency || !is_array($currency) || !isset($currency['id'])) {
-        $currency = getCurrency();
+        $currency = Currency::factoryForClientArea();
     }
     $currencyID = $currency['id'];
 

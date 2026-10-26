@@ -1,4 +1,4 @@
-<link href="{$WEB_ROOT}/templates/{$template}/store/css/style.css" rel="stylesheet">
+<link href="{assetPath file='store.css'}" rel="stylesheet">
 
 <div class="landing-page ssl">
 
@@ -10,43 +10,53 @@
         </div>
     </div>
 
-    <div class="validation-levels">
-        <div class="container">
-            <h3>{lang key="store.ssl.landingPage.chooseLevel"}</h3>
-            <div class="row">
-                <div class="col-sm-6 col-md-4">
-                    <div class="item">
-                        <h4>{lang key="store.ssl.landingPage.dv"}</h4>
-                        <img src="{$WEB_ROOT}/assets/img/marketconnect/symantec/ssl-dv-icon.png">
-                        <span>{lang key="store.ssl.landingPage.dvSubtitle"}</span>
-                        <p>{lang key="store.ssl.landingPage.dvInformation"}</p>
-                        <a href="{routePath('store-ssl-certificates-dv')}" class="btn">{lang key="store.ssl.landingPage.buy"}</a>
-                    </div>
+    {if !empty($certificatesToDisplay['dv']) || !empty($certificatesToDisplay['ov']) || !empty($certificatesToDisplay['ev']) }
+        <div class="validation-levels">
+            <div class="container">
+                <h3>{lang key="store.ssl.landingPage.chooseLevel"}</h3>
+                <div class="row">
+                    {if !empty($certificatesToDisplay['dv']) }
+                        {include
+                            file="$template/store/ssl/shared/certificate-item.tpl"
+                            blockTitle="store.ssl.landingPage.rapidSSL.title"
+                            recommendedFor="store.ssl.landingPage.rapidSSL.recommended"
+                            certificate=$certificatesToDisplay['dv']['certificate']
+                            features=$certificatesToDisplay['dv']['features']
+                            description=$certificatesToDisplay['dv']['description']
+                            logo=$certificateFeatures[$certificatesToDisplay['dv']['certificate']->configoption1]["logo"]
+                        }
+                    {/if}
+                    {if !empty($certificatesToDisplay['ov']) }
+                        {include
+                            file="$template/store/ssl/shared/certificate-item.tpl"
+                            blockTitle="store.ssl.landingPage.geoTrust.title"
+                            recommendedFor="store.ssl.landingPage.geoTrust.recommended"
+                            certificate=$certificatesToDisplay['ov']['certificate']
+                            features=$certificatesToDisplay['ov']['features']
+                            description=$certificatesToDisplay['ov']['description']
+                            logo=$certificateFeatures[$certificatesToDisplay['ov']['certificate']->configoption1]["logo"]
+                        }
+                    {/if}
+                    {if !empty($certificatesToDisplay['ev']) }
+                        {include
+                            file="$template/store/ssl/shared/certificate-item.tpl"
+                            blockTitle="store.ssl.landingPage.digicert.title"
+                            recommendedFor="store.ssl.landingPage.digicert.recommended"
+                            certificate=$certificatesToDisplay['ev']['certificate']
+                            features=$certificatesToDisplay['ev']['features']
+                            description=$certificatesToDisplay['ev']['description']
+                            logo=$certificateFeatures[$certificatesToDisplay['ev']['certificate']->configoption1]["logo"]
+                        }
+                    {/if}
                 </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="item">
-                        <h4>{lang key="store.ssl.landingPage.ov"}</h4>
-                        <img src="{$WEB_ROOT}/assets/img/marketconnect/symantec/ssl-ov-icon.png">
-                        <span>{lang key="store.ssl.landingPage.ovSubtitle"}</span>
-                        <p>{lang key="store.ssl.landingPage.ovInformation"}</p>
-                        <a href="{routePath('store-ssl-certificates-ov')}" class="btn">{lang key="store.ssl.landingPage.buy"}</a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0">
-                    <div class="item">
-                        <h4>{lang key="store.ssl.landingPage.ev"}</h4>
-                        <img src="{$WEB_ROOT}/assets/img/marketconnect/symantec/ssl-ev-icon.png">
-                        <span>{lang key="store.ssl.landingPage.evSubtitle"}</span>
-                        <p>{lang key="store.ssl.landingPage.evInformation"}</p>
-                        <a href="{routePath('store-ssl-certificates-ev')}" class="btn">{lang key="store.ssl.landingPage.buy"}</a>
-                    </div>
-                </div>
+                <p class="help-me-choose">
+                    <a href="#viewall" id="btnViewAllCerts">{lang key="store.ssl.landingPage.viewAll"}</a>
+                    |
+                    <a href="#helpmechoose" id="btnHelpMeChoose">{lang key="store.ssl.landingPage.choose"}</a>
+                </p>
             </div>
-            <p class="help-me-choose">
-                <a href="#"><i class="fas fa-arrow-down"></i> {lang key="store.ssl.shared.helpMeChoose"}</a>
-            </p>
         </div>
-    </div>
+    {/if}
 
     {include file="$template/store/ssl/shared/nav.tpl" current=""}
 
@@ -88,7 +98,7 @@
                         </li>
                     </ul>
 
-                    <p>{lang key="store.ssl.landingPage.certTypeInfo" dvLink=routePath('store-ssl-certificates-dv') ovLink=routePath('store-ssl-certificates-ov') evLink=routePath('store-ssl-certificates-ev')}</p>
+                    <p>{lang key="store.ssl.landingPage.certTypeInfo" dvLink=routePath('store-product-group', $routePathSlug, 'dv') ovLink=routePath('store-product-group', $routePathSlug, 'ov') evLink=routePath('store-product-group', $routePathSlug, 'ev')}</p>
 
                 </div>
             </div>
@@ -157,39 +167,34 @@
 
     <div class="content-block competitive-upgrade-promo">
         <div class="container">
-            {lang key="store.ssl.landingPage.browser.competitiveUpgrade"}
-            <a href="{routePath('store-ssl-certificates-competitiveupgrade')}">{lang key="learnmore"} &raquo;</a>
+            {lang key="store.ssl.landingPage.secureInMinutes"}
         </div>
     </div>
 
     <div class="content-block standout">
-        <div class="container">
-            <h2>{lang key="store.ssl.landingPage.evs.upgradeTitle"}</h2>
-            <p>{lang key="store.ssl.landingPage.evs.description"}</p>
-            <p>{lang key="store.ssl.landingPage.evs.whatIs"}</p>
-            <br>
-            <div class="row text-center">
-                <div class="col-sm-6 col-md-4">
-                    <div class="item">
-                        <img src="{$WEB_ROOT}/assets/img/marketconnect/symantec/shopfront-dv.png">
-                        <h4>{lang key="store.ssl.landingPage.dv"}</h4>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="item">
-                        <img src="{$WEB_ROOT}/assets/img/marketconnect/symantec/shopfront-ov.png">
-                        <h4>{lang key="store.ssl.landingPage.ov"}</h4>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0">
-                    <div class="item">
-                        <img src="{$WEB_ROOT}/assets/img/marketconnect/symantec/shopfront-ev.png">
-                        <h4>{lang key="store.ssl.landingPage.ev"}</h4>
-                    </div>
-                </div>
+        <div class="container secure-wildcard">
+            <div class="col-md-8">
+            <h2>{lang key="store.ssl.landingPage.evs.secureTitle"}</h2>
+                <br>
+            <h4>{lang key="store.ssl.landingPage.evs.wildcardSubtitle"}</h4>
+            <p>{lang key="store.ssl.landingPage.evs.wildcardDescription"}</p>
+
+            <p>{lang key="store.ssl.landingPage.evs.protectSubdomain"}</p>
+                <ul>
+                    <li>{lang key="store.ssl.landingPage.evs.emailServer"}</li>
+                    <li>{lang key="store.ssl.landingPage.evs.webmailAccess"}</li>
+                    <li>{lang key="store.ssl.landingPage.evs.ftpAccess"}</li>
+                    <li>{lang key="store.ssl.landingPage.evs.websiteControl"}</li>
+                </ul>
+            <p>{lang key="store.ssl.landingPage.evs.dontLeave"}</p>
+            <p class="text-left"><a href="{routePath('store-product-group', $routePathSlug, 'wildcard')}" class="btn btn-default">{lang key="store.ssl.landingPage.evs.compare"}</a></p>
             </div>
-            <br>
-            <p class="text-center"><a href="{routePath('store-ssl-certificates-ev')}" class="btn btn-default">{lang key="store.ssl.landingPage.evs.learn"}</a></p>
+            <div class="col-md-push-1 col-md-3 quote-section">
+                <q class="google-quote">{lang key="store.ssl.landingPage.evs.googleQuote"}</q>
+                <p>~Pierre Far, Product Manager,<br>
+                    Google</p>
+                <img src="{$WEB_ROOT}/assets/img/auth/google_signin.png" alt="Google">
+            </div>
         </div>
     </div>
 
@@ -198,12 +203,12 @@
 
             <div class="panel">
                 <div class="panel-heading">
-                <h4 data-toggle="collapse" data-parent="#accordion" href="#collapseHelpMeChoose" class="panel-title expand">
-                   <span class="arrow"><i class="fas fa-chevron-down"></i></span>
-                  <a href="#">{lang key="store.ssl.landingPage.help.title"}</a>
-                </h4>
-              </div>
-              <div id="collapseHelpMeChoose" class="panel-collapse collapse in">
+                    <h4 data-toggle="collapse" data-parent="#accordion" href="#collapseHelpMeChoose" class="panel-title expand">
+                       <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                      <a href="#">{lang key="store.ssl.landingPage.help.title"}</a>
+                    </h4>
+                </div>
+                <div id="collapseHelpMeChoose" class="panel-collapse collapse in">
                 <div class="panel-body">
 
                     <p>{lang key="store.ssl.landingPage.help.guide"}</p>
@@ -224,7 +229,7 @@
 
                             <p class="ssl-types-expl">{lang key="store.ssl.landingPage.help.dv.type"}</p>
 
-                            <a href="{routePath('store-ssl-certificates-dv')}" class="btn btn-primary btn-block">{lang key="store.ssl.landingPage.help.dv.browse"}</a>
+                            <a href="{routePath('store-product-group', $routePathSlug, 'dv')}" class="btn btn-primary btn-block">{lang key="store.ssl.landingPage.help.dv.browse"}</a>
                         </div>
                         <div class="col-sm-4">
                             <h4>{lang key="store.ssl.landingPage.help.ov.title"}</h4>
@@ -241,7 +246,7 @@
 
                             <p class="ssl-types-expl">{lang key="store.ssl.landingPage.help.ov.type"}</p>
 
-                            <a href="{routePath('store-ssl-certificates-ov')}" class="btn btn-primary btn-block">{lang key="store.ssl.landingPage.help.ov.browse"}</a>
+                            <a href="{routePath('store-product-group', $routePathSlug, 'ov')}" class="btn btn-primary btn-block">{lang key="store.ssl.landingPage.help.ov.browse"}</a>
                         </div>
                         <div class="col-sm-4">
                             <h4>{lang key="store.ssl.landingPage.help.ev.title"}</h4>
@@ -258,7 +263,7 @@
 
                             <p class="ssl-types-expl">{lang key="store.ssl.landingPage.help.ev.type"}</p>
 
-                            <a href="{routePath('store-ssl-certificates-ev')}" class="btn btn-primary btn-block">{lang key="store.ssl.landingPage.help.ev.browse"}</a>
+                            <a href="{routePath('store-product-group', $routePathSlug, 'ev')}" class="btn btn-primary btn-block">{lang key="store.ssl.landingPage.help.ev.browse"}</a>
                         </div>
                     </div>
 
@@ -266,13 +271,13 @@
               </div>
             </div>
             <div class="panel">
-              <div class="panel-heading">
+                <div class="panel-heading">
                 <h4 data-toggle="collapse" data-parent="#accordion" href="#collapseAllCerts" class="panel-title expand">
                    <span class="arrow"><i class="fas fa-chevron-right"></i></span>
                   <a href="#">{lang key="store.ssl.landingPage.viewAll"}</a>
                 </h4>
               </div>
-              <div id="collapseAllCerts" class="panel-collapse collapse">
+                <div id="collapseAllCerts" class="panel-collapse collapse">
                 <div class="panel-body">
 
                     {include file="$template/store/ssl/shared/currency-chooser.tpl"}
@@ -289,17 +294,17 @@
                                             </div>
                                             <div class="col-sm-3 col-sm-offset-1">
                                                 <div class="padded-cell price">
-                                                    from<br>
+                                                    {lang key='from'}<br>
                                                     <strong>{$product->pricing()->best()->yearlyPrice()}</strong>
                                                 </div>
                                             </div>
                                             <div class="col-sm-2">
                                                 <div class="padded-cell">
-                                                    <form method="post" action="{routePath('store-order')}">
+                                                    <form method="post" action="{routePath('cart-order')}">
                                                         <input type="hidden" name="pid" value="{$product->id}">
                                                         <button type="submit" class="btn btn-success btn-block">{lang key="store.ssl.landingPage.buyNow"}</button>
                                                     </form>
-                                                    <a href="{routePath("store-ssl-certificates-$type")}">{lang key="learnmore"}</a>
+                                                    <a href="{routePath("store-product-group", $routePathSlug, $type)}">{lang key="learnmore"}</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -316,14 +321,44 @@
                 </div>
               </div>
             </div>
+
             <div class="panel">
-              <div class="panel-heading">
+                <div class="panel-heading">
+                    <h4 class="panel-title expand" data-toggle="collapse" data-parent="#accordion" data-target="#collapseMultiYear">
+                        <span class="arrow"><i class="fas fa-chevron-right"></i></span>
+                        {lang key='store.ssl.landingPage.multiYear.title'}
+                    </h4>
+                </div>
+                <div id="collapseMultiYear" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>{lang key='store.ssl.landingPage.multiYear.p1'}</p>
+                        <p>{lang key='store.ssl.landingPage.multiYear.p2'}</p>
+                        <p>{lang key='store.ssl.landingPage.multiYear.p3'}</p>
+                        <p>
+                            {lang key='store.ssl.landingPage.multiYear.p4'}
+                            <div class="text-center margin-10">
+                                <img alt="SSL certificate lifecycle" src="{$WEB_ROOT}/assets/img/marketconnect/symantec/multi-year-flow.png">
+                            </div>
+                        </p>
+                        <p>{lang key='store.ssl.landingPage.multiYear.p5'}</p>
+                        <h3>{lang key='store.ssl.landingPage.multiYear.benefits.title'}</h3>
+                        <ul>
+                            <li>{lang key='store.ssl.landingPage.multiYear.benefits.b1'}</li>
+                            <li>{lang key='store.ssl.landingPage.multiYear.benefits.b2'}</li>
+                            <li>{lang key='store.ssl.landingPage.multiYear.benefits.b3'}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-heading">
                 <h4 data-toggle="collapse" data-parent="#accordion" href="#collapseFaq" class="panel-title expand">
                     <span class="arrow"><i class="fas fa-chevron-right"></i></span>
                   <a href="#">{lang key="store.ssl.landingPage.faq.title"}</a>
                 </h4>
               </div>
-              <div id="collapseFaq" class="panel-collapse collapse">
+                <div id="collapseFaq" class="panel-collapse collapse">
                 <div class="panel-body">
 
                     <h4>{lang key="store.ssl.landingPage.faq.q1"}</h4>
@@ -338,26 +373,21 @@
 
                     <p>{lang key="store.ssl.landingPage.faq.a3"}</p>
 
-                    {if count($certificates.wildcard) > 0 || $inPreview}
+                    {if $inPreview || $certTypes.wildcard > 0}
 
                         <h4>{lang key="store.ssl.landingPage.faq.q4"}</h4>
 
-                        <p>{lang key="store.ssl.landingPage.faq.a4"} <a href="{routePath('store-ssl-certificates-wildcard')}">{lang key="learnmore"}</a></p>
+                        <p>{lang key="store.ssl.landingPage.faq.a4"} <a href="{routePath('store-product-group', $routePathSlug, 'wildcard')}">{lang key="learnmore"}</a></p>
 
                     {/if}
 
-                    {if count($certificates.ev) > 0 || $inPreview}
+                    {if $inPreview || $certTypes.ev > 0}
 
                         <h4>{lang key="store.ssl.landingPage.faq.q5"}</h4>
 
                         <p>{lang key="store.ssl.landingPage.faq.a5"}</p>
 
                     {/if}
-
-                    <h4>{lang key="store.ssl.landingPage.faq.q6"}</h4>
-
-                    <p>{lang key="store.ssl.landingPage.faq.a6"} <a href="{routePath('store-ssl-certificates-competitiveupgrade')}">{lang key="learnmore"}</a></p>
-
                 </div>
               </div>
             </div>
@@ -371,28 +401,51 @@
 
 <script>
 jQuery(document).ready(function() {
-  jQuery(".expand").on( "click", function() {
-    $expand = jQuery(this).find(">:first-child");
-    if($expand.html() == '<i class="fas fa-chevron-right"></i>') {
-      $expand.html('<i class="fas fa-chevron-down"></i>');
-    } else {
-      $expand.html('<i class="fas fa-chevron-right"></i>');
+    jQuery(".panel-heading .panel-title[data-toggle='collapse']").on("click", function() {
+        const expand = jQuery(this).find('span.arrow:first-child i');
+        if (expand.hasClass('fa-chevron-right')) {
+            expand.removeClass('fa-chevron-right').addClass('fa-chevron-down');
+        } else {
+            expand.removeClass('fa-chevron-down').addClass('fa-chevron-right');
+        }
+    });
+
+    function handleAccordionNavigation(targetId, offset = 75) {
+        const targetSection = jQuery('#' + targetId);
+
+        if (targetSection.length) {
+            jQuery('.collapse.show').collapse('hide');
+
+            targetSection.collapse('show');
+
+            targetSection.prev('.panel-heading')
+                .find('span.arrow i')
+                .removeClass('fa-chevron-right')
+                .addClass('fa-chevron-down');
+
+            setTimeout(() => {
+                jQuery('html, body').animate({
+                    scrollTop: targetSection.offset().top - offset
+                }, 500);
+            }, 300)
+        }
     }
-  });
-  jQuery('p.help-me-choose').click(function(e) {
-    e.preventDefault();
-    if (!jQuery('#collapseHelpMeChoose').hasClass('in')) {
-      jQuery('#collapseHelpMeChoose').collapse('show');
+    
+    jQuery('#btnViewAllCerts').click(function(e) {
+        e.preventDefault();
+        handleAccordionNavigation('collapseAllCerts');
+    });
+    
+    jQuery('#btnHelpMeChoose').click(function(e) {
+        e.preventDefault();
+        handleAccordionNavigation('collapseHelpMeChoose');
+    });
+    
+    const hash = location.hash.replace('#', '');
+    if (hash === 'viewall') {
+        handleAccordionNavigation('collapseAllCerts');
+    } else if (hash === 'helpmechoose') {
+        handleAccordionNavigation('collapseHelpMeChoose');
     }
-    jQuery('html, body').animate({
-      scrollTop: jQuery('#collapseHelpMeChoose').offset().top - 75
-    }, 500);
-  });
-  var hash = location.hash.replace('#', '');
-  if (hash == 'helpmechoose') {
-    jQuery('html, body').animate({
-      scrollTop: jQuery('#collapseHelpMeChoose').offset().top - 75
-    }, 500);
-  }
 });
 </script>

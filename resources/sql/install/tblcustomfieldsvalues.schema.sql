@@ -15,7 +15,8 @@ CREATE TABLE `tblcustomfieldsvalues` (
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
-  KEY `fieldid_relid` (`fieldid`,`relid`)
+  KEY `fieldid_relid` (`fieldid`,`relid`),
+  KEY `relid` (`relid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

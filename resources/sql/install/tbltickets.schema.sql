@@ -13,10 +13,13 @@ CREATE TABLE `tbltickets` (
   `did` int(10) NOT NULL,
   `userid` int(10) NOT NULL,
   `contactid` int(10) NOT NULL,
+  `requestor_id` INT(10) UNSIGNED NOT NULL DEFAULT '0',
+  `prevent_client_closure` tinyint(1) NOT NULL DEFAULT '0',
   `name` text COLLATE utf8_unicode_ci NOT NULL,
   `email` text COLLATE utf8_unicode_ci NOT NULL,
   `cc` text COLLATE utf8_unicode_ci NOT NULL,
   `c` text COLLATE utf8_unicode_ci NOT NULL,
+  `ipaddress` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
   `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `title` text COLLATE utf8_unicode_ci NOT NULL,
   `message` text COLLATE utf8_unicode_ci NOT NULL,
@@ -34,6 +37,7 @@ CREATE TABLE `tbltickets` (
   `service` text COLLATE utf8_unicode_ci NOT NULL,
   `merged_ticket_id` int(11) NOT NULL DEFAULT '0',
   `editor` enum('plain','markdown','bbcode') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'plain',
+  `pinned_at` datetime DEFAULT NULL,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   KEY `tid_c` (`tid`,`c`(64)),
@@ -41,7 +45,8 @@ CREATE TABLE `tbltickets` (
   KEY `date` (`date`),
   KEY `did` (`did`),
   KEY `merged_ticket_id` (`merged_ticket_id`,`id`),
-  KEY `status` (`status`)
+  KEY `status` (`status`),
+  KEY `merged_status_userid` (`merged_ticket_id`,`status`,`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -124,6 +124,11 @@ if (count($incfields)) {
     $filters = [];
     foreach ($filterfield as $i => $val) {
         if ($val && array_key_exists($val, $filterfields)) {
+            $filtertype[$i] = $filtertype[$i] ?? '=';
+            $filterq[$i] = $filterq[$i] ?? '';
+            if (!in_array($filtertype[$i], ['=', 'like'], true)) {
+                $filtertype[$i] = '=';
+            }
             if ($filtertype[$i] === 'like') {
                 $filterq[$i] = '%' . $filterq[$i] . '%';
             }
@@ -154,7 +159,7 @@ if (count($incfields)) {
         $query->whereBetween('datecreated', [$fromdate, $todate]);
     }
 
-    $results = $query->get();
+    $results = $query->get()->all();
 
     foreach ($results as $result) {
         $result = (array) $result;

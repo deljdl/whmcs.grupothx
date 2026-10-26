@@ -4,7 +4,7 @@ WHMCS - The Complete Client Management, Billing & Support Solution
 
             Managing Language Files with Overrides
 
-      Documentation: http://docs.whmcs.com/Language_Files
+      Documentation: https://go.whmcs.com/1969/localization
 
 ===============================================================================
 [ CONTENTS ]
@@ -65,7 +65,7 @@ Steps for customising language strings via overrides are as follows:
 
 7. Save, and you're done!
 
-For further help, please visit http://docs.whmcs.com/Language_Overrides
+For further help, please visit https://go.whmcs.com/1973/language-overrides
 
 ===============================================================================
 

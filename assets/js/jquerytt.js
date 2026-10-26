@@ -11,7 +11,7 @@
  *  Version: 1.0
  */
  
-(function($){ $.fn.tooltip = function(options){
+(function($){ $.fn.invoiceTooltip = function(options){
 
     var defaults = {
         cssClass: "",     //CSS class or classes to style the tooltip
@@ -66,8 +66,16 @@
             // [toxi20090112] only use ajax if there actually is an href attrib present
             var href=$this.attr("href");
             // [Peter] href!="" added
-            if(href!=undefined && href!="" && href != "#")
-                $tooltip.html($.ajax({url:$this.attr("href"),async:false}).responseText);
+            if(href !== undefined && href !== '' && href !== '#') {
+                $.ajax(
+                    {
+                        url: $this.attr('href'),
+                        async: false
+                    }
+                ).done(function (response) {
+                    $tooltip.html(response.body ?? response);
+                });
+            }
             
             //set the tooltip position
             winw = $(window).width();

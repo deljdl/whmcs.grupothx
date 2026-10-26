@@ -75,7 +75,8 @@ $r = 0;
 
 $results = Capsule::table('tbladmins')
     ->orderBy('firstname', 'asc')
-    ->get(['id', 'firstname', 'lastname']);
+    ->get(['id', 'firstname', 'lastname'])
+    ->all();
 foreach ($results as $data) {
     $adminid = $data->id;
     $firstname = $data->firstname;
@@ -96,15 +97,19 @@ foreach ($results as $data) {
             ->where('start', '>=', $datestart)
             ->where('start', '<', $dateend)
             ->where('adminid', $adminid)
-            ->get(['start', 'end']);
+            ->get(['start', 'end'])
+            ->all();
         foreach ($results2 as $data) {
-            $starttime = $data->start;
-            $endtime = $data->end;
+            $time = 0;
+            if ($data->end !== '') {
+                $starttime = $data->start;
+                $endtime = $data->end;
+                $time = ($endtime - $starttime);
+            }
 
-            $time = ($endtime - $starttime);
             $duration += $time;
             $totalduration += $time;
-            $daytotals[$date] += $time;
+            $daytotals[$date] = ($daytotals[$date] ?? 0) + $time;
         }
         $reportdata["tablevalues"][$r][] = project_staff_logs_time($duration);
 
@@ -122,7 +127,7 @@ $reportdata["tablevalues"][$r][] = '<strong>Totals</strong>';
 
 for ($i = 0; $i <= $diffInDays; $i++) {
     $date = date("Y-m-d",mktime(0,0,0,$startmonth,$startday+$i,$startyear));
-    $reportdata["tablevalues"][$r][] = '<strong>'.project_staff_logs_time($daytotals[$date]).'</strong>';
+    $reportdata["tablevalues"][$r][] = '<strong>'.project_staff_logs_time($daytotals[$date] ?? 0).'</strong>';
     if (str_replace('-','',$date)==str_replace('-','',$datetosql)) break;
 }
 

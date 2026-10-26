@@ -22,7 +22,7 @@ function () {
     this.bindCheckAll = function ()
     {
         var huntSelector = '.btn-check-all';
-        jQuery(huntSelector).click(function (e) {
+        jQuery('body').on('click', huntSelector, function (e) {
             var btn = jQuery(e.target);
             var targetInputs = jQuery(
                 '#' + btn.data('checkbox-container') + ' input[type="checkbox"]'
@@ -58,14 +58,30 @@ function () {
         });
     };
 
-    this.reloadCaptcha = function (element)
-    {
-        if (!element) {
-            element = jQuery('#inputCaptchaImage');
+    this.reloadCaptcha = (captchaElement) => {
+        if (typeof grecaptcha !== 'undefined') {
+            recaptchaValidationComplete = false;
+            grecaptcha.reset();
+
+            WHMCS.recaptcha.restoreDefaultCallback();
+
+            return;
         }
 
-        var src = jQuery(element).data('src');
-        jQuery(element).attr('src', src + '?nocache=' + (new Date()).getTime());
+        if (!captchaElement) {
+            captchaElement = jQuery('#inputCaptchaImage');
+        }
+
+        const captchaInput = jQuery('#inputCaptcha');
+
+        if (captchaElement.length) {
+            captchaElement.attr(
+                'src',
+                whmcsBaseUrl + '/includes/verifyimage.php?nocache=' + new Date().getTime()
+            );
+
+            captchaInput.val('');
+        }
     };
 
     return this;

@@ -2,6 +2,7 @@
 
 use WHMCS\Carbon;
 use WHMCS\Database\Capsule;
+use WHMCS\Module\Addon\Setting;
 
 if (!defined("WHMCS")) {
     die("This file cannot be accessed directly");
@@ -10,7 +11,8 @@ if (!defined("WHMCS")) {
 require(ROOTDIR."/includes/clientfunctions.php");
 
 $reportdata["title"] = "Project Management Summary";
-$reportdata["description"] = "This report shows a summary of all projects with times logged betwen";
+$reportdata["description"] = 'This report shows a summary of all log entries '
+    . 'related to projects that have a due date within the given date range.';
 
 $range = App::getFromRequest('range');
 if (!$range) {
@@ -20,10 +22,7 @@ if (!$range) {
 }
 
 $statusdropdown = '<select name="status" class="form-control"><option value="">- Any -</option>';
-$statuses = Capsule::table('tbladdonmodules')
-    ->where('module', 'project_management')
-    ->where('setting', 'statusvalues')
-    ->value('value');
+$statuses = Setting::getSettingValueForModule('project_management', 'statusvalues');
 $statuses = explode(",", $statuses);
 foreach ($statuses as $statusx) {
     $statusx = explode("|", $statusx, 2);
@@ -42,7 +41,8 @@ $admins = Capsule::table('tbladmins')
             'CONCAT_WS(\' \', tbladmins.firstname, tbladmins.lastname) as name'
         ),
         'id'
-    );
+    )
+    ->all();
 
 $adminDropdown = '';
 foreach ($admins as $adminId => $adminName) {
@@ -110,7 +110,7 @@ $dateRange = Carbon::parseDateRangeValue($range);
 $fromdate = $dateRange['from']->toDateTimeString();
 $todate = $dateRange['to']->toDateTimeString();
 
-$results = Capsule::table(mod_project)
+$results = Capsule::table('mod_project')
     ->whereBetween('duedate', [$fromdate, $todate]);
 if ($adminid) {
     $results->where('adminid', (int) $adminid);
@@ -118,7 +118,7 @@ if ($adminid) {
 if ($status) {
     $results->where('status', db_escape_string($status));
 }
-$results = $results->get();
+$results = $results->get()->all();
 foreach ($results as $data) {
     $totaltaskstime = 0;
     $projectid = $data->id;
@@ -147,7 +147,8 @@ foreach ($results as $data) {
 
     $ticketinvoicelinks = Capsule::table('tbltickets')
         ->whereIn('tid', $ticketids)
-        ->pluck('tid');
+        ->pluck('tid')
+        ->all();
     $baseQuery = Capsule::table('tblinvoices')
         ->join('tblinvoiceitems', 'tblinvoices.id', '=', 'tblinvoiceitems.invoiceid')
         ->where('tblinvoiceitems.description', 'like', "%Project #{$projectid}%")
@@ -183,7 +184,8 @@ foreach ($results as $data) {
             'mod_projecttimes.end',
             'mod_projecttasks.task',
             'mod_projecttasks.completed',
-        ]);
+        ])
+        ->all();
     foreach ($timerresults as $data2) {
         $rowcount = $rowtotal = 0;
 

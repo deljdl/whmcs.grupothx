@@ -4,23 +4,21 @@ namespace WHMCS\Module\Widget;
 
 use AdminLang;
 use App;
-use Carbon\Carbon;
 use WHMCS\MarketConnect\Balance;
 use WHMCS\MarketConnect\MarketConnect as MarketConnectConnector;
-use WHMCS\MarketConnect\Promotion;
 use WHMCS\Module\AbstractWidget;
 
 /**
  * MarketConnect Widget.
  *
- * @copyright Copyright (c) WHMCS Limited 2005-2018
- * @license https://www.whmcs.com/license/ WHMCS Eula
+ * @copyright Copyright (c) WHMCS Limited 2005-2021
+ * @license https://www.whmcs.com/eula/ WHMCS Eula
  */
 class MarketConnect extends AbstractWidget
 {
     protected $title = 'MarketConnect';
     protected $description = 'An overview of MarketConnect.';
-    protected $weight = 45;
+    protected $weight = 200;
     protected $cache = true;
     protected $cacheExpiry = 6 * 60;
     protected $requiredPermission = 'View MarketConnect Balance';
@@ -70,7 +68,7 @@ class MarketConnect extends AbstractWidget
         $langPromotions = AdminLang::trans('global.promotions');
 
         $services = [];
-        foreach (Promotion::SERVICES as $service) {
+        foreach (MarketConnectConnector::SERVICES as $service) {
             $isActive = in_array($service['vendorSystemName'], $activeServices);
             $logoFilename = 'logo-sml.png';
             if (file_exists(

@@ -159,13 +159,19 @@ if (count($incfields)) {
 
     foreach ($filterfield as $i => $val) {
         if ($val && array_key_exists($val, $filterfields)) {
+            $filtertype[$i] = $filtertype[$i] ?? '=';
+            $filterq[$i] = $filterq[$i] ?? '';
+            if (!in_array($filtertype[$i], ['=', 'like'], true)) {
+                $filtertype[$i] = '=';
+            }
             if ($filtertype[$i] == 'like') {
                 $filterq[$i] = "%{$filterq[$i]}%";
             }
             if ($val == 'clientname') {
-                $query->whereRaw(
-                    "concat(tblclients.firstname, ' ', tblclients.lastname) "
-                    . "{$filtertype[$i]} '{$filterq[$i]}'"
+                $query->where(
+                    Capsule::raw("concat(tblclients.firstname, ' ', tblclients.lastname)"),
+                    $filtertype[$i],
+                    $filterq[$i]
                 );
             } else {
                 $query->where(
@@ -209,7 +215,10 @@ if (count($incfields)) {
         $query->whereBetween('nextduedate', [$fromdate, $todate]);
     }
 
-    $results = $query->join('tblclients', 'tblclients.id', '=', 'tbldomains.userid')->get();
+    $results = $query
+        ->join('tblclients', 'tblclients.id', '=', 'tbldomains.userid')
+        ->get()
+        ->all();
 
     foreach ($results as $result) {
         $result = (array) $result;

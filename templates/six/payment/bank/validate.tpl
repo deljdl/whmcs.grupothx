@@ -10,6 +10,8 @@
                 submit = true,
                 accountNumber = jQuery('#inputBankAcctNum');
 
+            submitButton.prop('disabled', true).addClass('disabled').find('span').toggle();
+
             paymentForm.find('.form-group').removeClass('has-error');
             paymentForm.find('.field-error-msg').hide();
 
@@ -36,7 +38,7 @@
             }
             if (!submit) {
                 submitButton.prop('disabled', false).removeClass('disabled')
-                    .find('span').toggleClass('hidden');
+                    .find('span').toggle();
                 e.preventDefault();
             }
         }

@@ -1,21 +1,5 @@
 <?php
 
-/*
- * Copyright 2016 Johannes M. Schmitt <schmittjoh@gmail.com>
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 namespace JMS\Serializer\Metadata\Driver;
 
 use Doctrine\Common\Annotations\Reader;
@@ -34,7 +18,7 @@ use JMS\Serializer\Annotation\MaxDepth;
 use JMS\Serializer\Annotation\PostDeserialize;
 use JMS\Serializer\Annotation\PostSerialize;
 use JMS\Serializer\Annotation\PreSerialize;
-use JMS\Serializer\Annotation\ReadOnly;
+use JMS\Serializer\Annotation\ReadOnlyProperty;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Since;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
@@ -93,7 +77,7 @@ class AnnotationDriver implements DriverInterface
                 $excludeAll = true;
             } elseif ($annot instanceof AccessType) {
                 $classAccessType = $annot->type;
-            } elseif ($annot instanceof ReadOnly) {
+            } elseif ($annot instanceof ReadOnlyProperty) {
                 $readOnlyClass = true;
             } elseif ($annot instanceof AccessorOrder) {
                 $classMetadata->setAccessorOrder($annot->order, $annot->custom);
@@ -212,7 +196,7 @@ class AnnotationDriver implements DriverInterface
                         $propertyMetadata->xmlElementCData = $annot->cdata;
                     } elseif ($annot instanceof AccessType) {
                         $accessType = $annot->type;
-                    } elseif ($annot instanceof ReadOnly) {
+                    } elseif ($annot instanceof ReadOnlyProperty) {
                         $propertyMetadata->readOnly = $annot->readOnly;
                     } elseif ($annot instanceof Accessor) {
                         $accessor = array($annot->getter, $annot->setter);

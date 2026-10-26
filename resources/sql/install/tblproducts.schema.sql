@@ -12,6 +12,7 @@ CREATE TABLE `tblproducts` (
   `type` text COLLATE utf8_unicode_ci NOT NULL,
   `gid` int(10) NOT NULL,
   `name` text COLLATE utf8_unicode_ci NOT NULL,
+  `slug` varchar(128) NOT NULL DEFAULT '',
   `description` text COLLATE utf8_unicode_ci NOT NULL,
   `hidden` tinyint(1) NOT NULL,
   `showdomainoptions` tinyint(1) NOT NULL,
@@ -68,15 +69,19 @@ CREATE TABLE `tblproducts` (
   `tax` tinyint(1) NOT NULL,
   `affiliateonetime` tinyint(1) NOT NULL,
   `affiliatepaytype` text COLLATE utf8_unicode_ci NOT NULL,
-  `affiliatepayamount` decimal(10,2) NOT NULL,
+  `affiliatepayamount` decimal(16,2) NOT NULL,
   `order` int(10) NOT NULL DEFAULT '0',
   `retired` tinyint(1) NOT NULL,
   `is_featured` tinyint(1) NOT NULL,
+  `color` text COLLATE utf8_unicode_ci NOT NULL,
+  `tagline` text COLLATE utf8_unicode_ci NOT NULL,
+  `short_description` text COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   KEY `gid` (`gid`),
-  KEY `name` (`name`(64))
+  KEY `name` (`name`(64)),
+  KEY `type` (`type`(4))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -11,7 +11,7 @@
  * fields, you should create an overrides file.                       *
  *                                                                    *
  * For more information please refer to the online documentation at   *
- *   https://docs.whmcs.com/Additional_Domain_Fields                   *
+ *   https://go.whmcs.com/2349/custom-domain-fields                   *
  *                                                                    *
  **********************************************************************
  */
@@ -92,11 +92,80 @@ $additionaldomainfields[".co.uk"][] = array("Name" => "WHOIS Opt-out", "LangVar"
 $additionaldomainfields[".me.uk"] = $additionaldomainfields[".co.uk"];
 $additionaldomainfields[".uk"] = $additionaldomainfields[".co.uk"];
 
+// .DK
+
+$additionaldomainfields['.dk'][] = [
+    'Name' => 'Organization Type',
+    'LangVar' => 'dktldorgtype',
+    'Type' => 'dropdown',
+    'Options' => implode(
+        ',',
+        [
+            'Company',
+            'Person',
+            'Public Organization',
+            'Association',
+        ]
+    ),
+    'Default' => 'Company',
+];
+
+$additionaldomainfields['.dk'][] = [
+    'Name' => 'Organization ID Number',
+    'LangVar' => 'dktldorgid',
+    'Type' => 'text',
+    'Size' => '30',
+    'Default' => '',
+    'Description' => '',
+    'Required' => [
+        'Organization Type' => [
+            'Company',
+            'Public Organization',
+            'Association',
+        ],
+    ],
+];
+
+$additionaldomainfields['.dk'][] = [
+    'Name' => 'Punktum dk User Agreement',
+    'Description' => <<<DK_TERM
+<div class="tld-additional-fields-dk-terms mb-4">
+    Punktum dk A/S<br />
+    Ørestads Boulevard 108, 11th floor<br />
+    DK-2300 Copenhagen S<br />
+    <br />
+    To register a .dk domain name, you have to enter into an agreement with Punktum dk A/S. Punktum dk is the administrator for all .dk domain names.<br />
+    <br />
+    I hereby agree to enter into an agreement on the right to use the specified .dk domain name according to the terms applicable hereto. Among other things, this means that I will ensure that my contact details as a registrant are accurate at all times. I will perform Punktum dk A/S' identity check when requested to do so.<br />
+    <br />
+    My right to use the specified .dk domain name may be transferred, suspended, deleted, or blocked according to the conditions set out in Punktum dk A/S' terms of use.<br />
+    <br />
+    Pursuant to Section 18 (2) (13) of the Danish Consumer Contract Act, I agree to renounce the right to withdraw from the agreement on the right to use the specified .dk domain name.<br />
+    <br />
+    I give my consent for Punktum dk A/S, as domain administrator, to use my personal data in accordance with its personal data policy.<br />
+    <br />
+    I agree that I will pay to {CompanyName} the fee for the first registration period for the specified .dk domain name, and that payment for subsequent registration periods depends on my choice of management arrangement, cf. section 2.1 of Punktum dk A/S' terms and conditions.<br />
+    <br />
+    <a href="https://www.punktum.dk/en/articles/terms-and-conditions-for-the-right-of-use-to-a-dk-domain-name" target="_blank">Terms and Conditions for .dk Domain Names</a><br />
+    <a href="https://www.punktum.dk/en/articles/privacy-policy" target="_blank">Punktum dk Privacy Policy</a><br />
+    <a href="https://punktum.dk/en" target="_blank">About Punktum dk</a><br />
+</div>
+DK_TERM
+];
+
+$additionaldomainfields['.dk'][] = [
+    'Name' => '.DK Domain Agreement',
+    'LangVar' => 'dktldacceptterms',
+    'Type' => 'tickbox',
+    'Required' => true,
+    'Description' => 'I accept the Punktum dk A/S User Agreement.',
+];
+
 // .CA
 
 $additionaldomainfields[".ca"][] = array("Name" => "Legal Type", "Required" => true, "LangVar" => "catldlegaltype", "Type" => "dropdown", "Options" => "Corporation,Canadian Citizen,Permanent Resident of Canada,Government,Canadian Educational Institution,Canadian Unincorporated Association,Canadian Hospital,Partnership Registered in Canada,Trade-mark registered in Canada,Canadian Trade Union,Canadian Political Party,Canadian Library Archive or Museum,Trust established in Canada,Aboriginal Peoples,Legal Representative of a Canadian Citizen,Official mark registered in Canada", "Default" => "Corporation", "Description" => "Legal type of registrant contact",);
-$additionaldomainfields[".ca"][] = array("Name" => "CIRA Agreement", "Required" => true, "LangVar" => "catldciraagreement", "Type" => "tickbox", "Description" => "Tick to confirm you agree to the CIRA Registration Agreement shown below<br /><blockquote>You have read, understood and agree to the terms and conditions of the Registrant Agreement, and that CIRA may, from time to time and at its discretion, amend any or all of the terms and conditions of the Registrant Agreement, as CIRA deems appropriate, by posting a notice of the changes on the CIRA website and by sending a notice of any material changes to Registrant. You meet all the requirements of the Registrant Agreement to be a Registrant, to apply for the registration of a Domain Name Registration, and to hold and maintain a Domain Name Registration, including without limitation CIRA's Canadian Presence Requirements for Registrants, at: www.cira.ca/assets/Documents/Legal/Registrants/CPR.pdf. CIRA will collect, use and disclose your personal information, as set out in CIRA's Privacy Policy, at: www.cira.ca/assets/Documents/Legal/Registrants/privacy.pdf</blockquote>",);
-$additionaldomainfields[".ca"][] = array("Name" => "WHOIS Opt-out", "LangVar" => "catldwhoisoptout", "Type" => "tickbox", "Description" => "Tick to hide your contact information in CIRA WHOIS (only available to individuals)",);
+$additionaldomainfields[".ca"][] = array("Name" => "CIRA Agreement", "Required" => true, "LangVar" => "catldciraagreement", "Type" => "tickbox", "Description" => "Check to confirm you agree to the CIRA Registration Agreement shown below<br /><blockquote>You have read, understood and agree to the terms and conditions of the Registrant Agreement, and that CIRA may, from time to time and at its discretion, amend any or all of the terms and conditions of the Registrant Agreement, as CIRA deems appropriate, by posting a notice of the changes on the CIRA website and by sending a notice of any material changes to Registrant. You meet all the requirements of the Registrant Agreement to be a Registrant, to apply for the registration of a Domain Name Registration, and to hold and maintain a Domain Name Registration, including without limitation CIRA's Canadian Presence Requirements for Registrants, at: https://www.cira.ca/policy/legal-agreement/registrant-agreement. CIRA will collect, use and disclose your personal information, as set out in CIRA's Privacy Policy, at: https://www.cira.ca/policy/corporate/cira-privacy-policy</blockquote>",);
+$additionaldomainfields[".ca"][] = array("Name" => "WHOIS Opt-out", "LangVar" => "catldwhoisoptout", "Type" => "tickbox", "Description" => "Check to hide your contact information in CIRA WHOIS (only available to individuals)",);
 
 // .ES
 
@@ -187,7 +256,7 @@ $additionaldomainfields[".it"][] = array("Name" => "Accept Section 7 of .IT regi
 // .DE
 
 $additionaldomainfields[".de"][] = array("Name" => "Tax ID", "LangVar" => "detldtaxid", "Type" => "text", "Size" => "20", "Default" => "", "Required" => true,);
-$additionaldomainfields[".de"][] = array("Name" => "Address Confirmation", "LangVar" => "detldaddressconfirm", "Type" => "tickbox", "Description" => "Please tick to confirm you have a valid German address",);
+$additionaldomainfields[".de"][] = array("Name" => "Address Confirmation", "LangVar" => "detldaddressconfirm", "Type" => "tickbox", "Description" => "Check to confirm you have a valid German address",);
 $additionaldomainfields[".de"][] = array(
     "Name" => "Agree to DE Terms",
     "LangVar" => "deTLDTermsAgree",
@@ -211,6 +280,7 @@ $additionaldomainfields[".net.au"] = $additionaldomainfields[".com.au"];
 $additionaldomainfields[".org.au"] = $additionaldomainfields[".com.au"];
 $additionaldomainfields[".asn.au"] = $additionaldomainfields[".com.au"];
 $additionaldomainfields[".id.au"] = $additionaldomainfields[".com.au"];
+$additionaldomainfields[".au"] = $additionaldomainfields[".com.au"];
 
 // .ASIA
 
@@ -240,8 +310,81 @@ $additionaldomainfields[".coop"][] = array("Name" => "Phone CC", "LangVar" => "c
 $additionaldomainfields[".coop"][] = array("Name" => "Phone", "LangVar" => "coopphone", "Type" => "text", "Size" => "20", "Default" => "", "Required" => true,"Description" => "",);
 
 // .CN
-$additionaldomainfields[".cn"][] = array("Name" => "cnhosting", "DisplayName" => "Hosted in China?", "LangVar" => "cnhosting", "Type" => "tickbox");
-$additionaldomainfields[".cn"][] = array("Name" => "cnhregisterclause", "DisplayName" => "Agree to the .CN <a href=\"http://www1.cnnic.cn/PublicS/fwzxxgzcfg/201208/t20120830_35735.htm\" target=\"_blank\">Register Agreement</a>", "LangVar" => "ittldsec3", "Type" => "tickbox", "Required" => true, );
+$additionaldomainfields['.cn'] = [
+    [
+        'Name' => 'cnhosting',
+        'DisplayName' =>'Hosted in China?',
+        'LangVar' => 'cnhosting',
+        'Type' => 'tickbox'
+    ],
+    [
+        'Name' => 'cnhregisterclause',
+        'DisplayName' => "Agree to the .CN <a href=\"http://www1.cnnic.cn/PublicS/fwzxxgzcfg/201208/t20120830_35735.htm\" target=\"_blank\">Register Agreement</a>",
+        'LangVar' => 'ittldsec3',
+        'Type' => 'tickbox',
+        'Required' => true,
+    ],
+    [
+        'Name' => 'Owner Type',
+        'LangVar' => 'cnOwnerType',
+        'Type' => 'dropdown',
+        'Options' => [
+            'Enterprise',
+            'Individual',
+        ],
+        'Default' => 'Individual',
+    ],
+    [
+        'Name' => 'ID Type',
+        'LangVar' => 'cnIDType',
+        'Type' => 'dropdown',
+        'Options' => [
+            'Beijing School for Children of Foreign Embassy Staff in China Permit',
+            'Business License',
+            'Certificate for Uniform Social Credit Code',
+            'Exit-Entry Permit for Traveling to and from Hong Kong and Macao',
+            'Foreign Permanent Resident ID Card',
+            'Fund Legal Person Registration Certificate',
+            'Judicial Expertise License',
+            'Medical Institution Practicing License',
+            'Military Code Designation',
+            'Military Paid External Service License',
+            'Notary Organization Practicing License',
+            'Officer’s identity card',
+            'Organization Code Certificate',
+            'Others',
+            'Others-Certificate for Uniform Social Credit Code',
+            'Overseas Organization Certificate',
+            'Practicing License of Law Firm',
+            'Private Non-Enterprise Entity Registration Certificate',
+            'Private School Permit',
+            'Public Institution Legal Person Certificate',
+            'Registration Certificate of Foreign Cultural Center in China',
+            'Religion Activity Site Registration Certificate',
+            'Residence permit for Hong Kong and Macao residents',
+            'Residence permit for Taiwan residents',
+            'Resident Representative Office of Tourism Departments of Foreign Government Approval Registration Certificate',
+            'Resident Representative Offices of Foreign Enterprises Registration Form',
+            'Social Organization Legal Person Registration Certificate',
+            'Social Service Agency Registration Certificate',
+            'Travel passes for Taiwan Residents to Enter or Leave the Mainland',
+            'Passport',
+        ],
+        'Default' => 'Passport',
+    ],
+    [
+        'Name' => 'ID Number',
+        'LangVar' => 'cnIDNumber',
+        'Type' => 'text',
+        'Size' => 20,
+        'Default' => '',
+        'Description' => '',
+        'Required' => true,
+    ],
+];
+$additionaldomainfields['.com.cn'] = $additionaldomainfields['.cn'];
+$additionaldomainfields['.net.cn'] = $additionaldomainfields['.cn'];
+$additionaldomainfields['.org.cn'] = $additionaldomainfields['.cn'];
 
 // .FR
 $additionaldomainfields[".fr"][] = array("Name" => "Legal Type", "LangVar" => "fr_legaltype", "Type" => "dropdown", "Options" => "Individual,Company", "Default" => "Individual",);
@@ -258,6 +401,14 @@ $additionaldomainfields[".fr"][] = array("Name" => "Birthdate", 'LangVar' => 'fr
 $additionaldomainfields[".fr"][] = array("Name" => "Birthplace City", 'LangVar' => 'fr_indbirthcity', "Type" => "text","Size" => "25","Default" => "","Required" => false);
 $additionaldomainfields[".fr"][] = array("Name" => "Birthplace Country", 'LangVar' => 'fr_indbirthcountry', "Type" => "text", "Size" => "2", "Default" => "", "Required" => false, "Description" => "Please enter your country code (eg. FR, IT, etc...)");
 $additionaldomainfields[".fr"][] = array("Name" => "Birthplace Postcode", 'LangVar' => 'fr_indbirthpostcode', "Type" => "text","Size" => "6","Default" => "","Required" => false);
+$additionaldomainfields[".fr"][] = [
+    'Name' => 'Legal ID',
+    'LangVar' => 'fr_legalid',
+    'Type' => 'text',
+    'Size' => '16',
+    'Default' => '',
+    'Required' => false
+];
 $additionaldomainfields[".fr"][] = array("Name" => "SIRET Number", 'LangVar' => 'fr_cosiret', "Type" => "text","Size" => "50","Default" => "","Required" => false);
 $additionaldomainfields[".fr"][] = array("Name" => "DUNS Number", 'LangVar' => 'fr_coduns', "Type" => "text","Size" => "50","Default" => "","Required" => false);
 $additionaldomainfields[".fr"][] = array("Name" => "VAT Number", 'LangVar' => 'fr_vat', "Type" => "text","Size" => "50","Default" => "","Required" => false);
@@ -294,19 +445,33 @@ $additionaldomainfields['.nu'][] = array(
 $additionaldomainfields[".quebec"][] = array("Name" => "Intended Use", 'LangVar' => 'quebec_intendeduse', "Type" => "text", "Size" => "50", "Default" => "", "Required" => true);
 $additionaldomainfields[".quebec"][] = array("Name" => "Info", "LangVar" => "quebec_info", "Type" => "display", "Default" =>"Intended Use field limited to 2048 characters by the API.  The contents of the field above will be truncated if longer than that when sent to the registrar.");
 
+// .SCOT
+$additionaldomainfields['.scot'] = $additionaldomainfields['.quebec'];
+$additionaldomainfields['.scot'][] = [
+    'Name' => 'Terms & Conditions',
+    'LangVar' => 'domainsTermsAndConditions',
+    'Type' => 'tickbox',
+    'Required' => true,
+    'Description' => '<sup style="cursor:help; text-align:justify;" title="'
+        . $_LANG['domains']['europeanDomainTerms'] . '">Learn More<sup>',
+];
+
 // .JOBS
 $additionaldomainfields['.jobs'][] = array('Name' => 'Website', 'Type' => 'text', 'Size' => '20', 'Required' => true);
 
 // .TRAVEL
-$travel_id = array (
-    'TRUST|Use Trustee',
-    'UIN|Use My Information (Requires UIN)'
-);
-
-$additionaldomainfields['.travel'][] = array('Name'	=> 'Trustee Service', 'DisplayName'	=> 'Trustee Service <sup style="cursor:help;" title="Trustee service allows you to register domains under the name of the trustee if you do not meet the requiremets.">what\'s this?</sup>', 'Options'	=> implode(',', $travel_id),  'Type'	=> 'dropdown', 'Required' => true);
-$additionaldomainfields['.travel'][] = array('Name'	=> '.TRAVEL UIN Code', 'DisplayName' => '.TRAVEL UIN Code <sup style="cursor:help;" title="Travel UIN Code obtained from http://www.authentication.travel/">what\'s this?</sup>', 'Type'	=> 'text', 'Size' => '30');
-$additionaldomainfields['.travel'][] = array('Name'	=> 'Trustee Service Agreement ', 'Description' => 'I agree to the <a href="http://www.101domain.com/trustee_agreement.htm" target="_BLANK">Trustee Service Agreement</a>', 'Type' => 'tickbox');
-$additionaldomainfields['.travel'][] = array('Name'	=> '.TRAVEL Usage Agreement', 'Description'	=> 'I agree that .travel domains are restricted to those who are primarily active in the travel industry.', 'Type'	=> 'tickbox');
+$additionaldomainfields['.travel'][] = [
+    'Name' => '.TRAVEL UIN Code',
+    'DisplayName' => '.TRAVEL UIN Code <sup style="cursor:help;"'
+        . ' title="Travel UIN Code obtained from https://www.authentication.travel/">what\'s this?</sup>',
+    'Type' => 'text',
+    'Size' => '30',
+];
+$additionaldomainfields['.travel'][] = [
+    'Name' => '.TRAVEL Usage Agreement',
+    'Description' => 'I agree that .travel domains are restricted to those who are primarily active in the travel industry.',
+    'Type' => 'tickbox',
+];
 
 // .RU
 
@@ -545,14 +710,16 @@ $additionaldomainfields['.parti.se'] = $additionaldomainfields['.se'];
 $additionaldomainfields['.presse.se'] = $additionaldomainfields['.se'];
 
 // .VOTE
-$additionaldomainfields['.vote'] = array(
-    'Name' => 'Agreement',
-    'Type' => 'tickbox',
-    'Description' => 'I confirm a bona fide intention to use the domain name, '
-        . 'during the current/relevant election cycle, in connection with '
-        . 'a clearly identified political/democratic process at the time of registration.',
-    'Required' => true
-);
+$additionaldomainfields['.vote'] = [
+    [
+        'Name' => 'Agreement',
+        'Type' => 'tickbox',
+        'Description' => 'I confirm a bona fide intention to use the domain name, '
+            . 'during the current/relevant election cycle, in connection with '
+            . 'a clearly identified political/democratic process at the time of registration.',
+        'Required' => true
+    ]
+];
 
 // .VOTO
 $additionaldomainfields['.voto'] = $additionaldomainfields['.vote'];
@@ -662,6 +829,18 @@ $additionaldomainfields['.eu'][] = [
     'Description' => 'EURid Geographical Restrictions. In order to register a .EU domain '
         . 'name, you must meet certain eligibility requirements.',
 ];
+$additionaldomainfields['.eu'][] = [
+    'Name' => 'EU Country of Citizenship',
+    'LangVar' => 'eu_country_of_citizenship',
+    'Type' => 'dropdown',
+    'Options' => [
+        '', 'AT', 'BE', 'BG', 'CY', 'CZ', 'DE', 'DK', 'EE', 'EL', 'ES', 'FI',
+        'FR', 'GR', 'HR', 'HU', 'IE', 'IT', 'LT', 'LU', 'LV', 'MT', 'NL', 'PL',
+        'PT', 'RO', 'SE', 'SI', 'SK', 'AX', 'GF', 'GP', 'MQ', 'RE',
+    ],
+    'Default' => '',
+    'Required' => true,
+];
 
 // .DEV
 $additionaldomainfields['.dev'][] = [
@@ -674,4 +853,156 @@ $additionaldomainfields['.dev'][] = [
         . ' the domain. I, the Registrant, understand and agree to the .dev Registration Policy."
         >Learn More</sup>',
     'Required' => true,
+];
+
+// .APP
+$additionaldomainfields['.app'][] = [
+    'Name' => '.APP SSL Agreement',
+    'LangVar' => 'app_agree',
+    'Type' => 'tickbox',
+    'Description' => '<sup style="cursor:help; text-align:justify;" title=".app is a more secure domain,'
+        . ' meaning that HTTPS is required for all .app websites. You can buy your .app domain name now,'
+        . ' but in order for it to work properly in browsers you must first configure HTTPS/SSL to serve'
+        . ' the domain. I, the Registrant, understand and agree to the .app Registration Policy."
+        >Learn More</sup>',
+    'Required' => true,
+];
+
+// .BIO
+$additionaldomainfields['.bio'][] = [
+    'Name' => '.BIO SSL Agreement',
+    'LangVar' => 'bio_agree',
+    'Type' => 'tickbox',
+    'Description' => '<sup style="cursor:help; text-align:justify;" title=".bio is a more secure domain,'
+        . ' meaning that HTTPS is required for all .bio websites. You can buy your .bio domain name now,'
+        . ' but in order for it to work properly in browsers you must first configure HTTPS/SSL to serve'
+        . ' the domain. I, the Registrant, understand and agree to the .bio Registration Policy."
+        >Learn More</sup>',
+    'Required' => true,
+];
+
+// .BR
+$additionaldomainfields['.br'][] = [
+    'Name' => 'Register Number',
+    'LangVar' => 'br_register_number',
+    'Type' => 'text',
+    'Size' => 20,
+    'Default' => '',
+    'Description' => '<sup style="cursor:help; text-align:justify;" title="The CPF is the financial identity'
+        . ' number provided by the Brazilian Government for every'
+        . ' Brazilian citizen in order to charge taxes and financial matters.'
+        . ' The CNPJ is the same as the CPF but it works for companies.'
+        . ' CPF must be given in the following format: NNN.NNN.NNN-NN.'
+        . ' CNPJ must be given in the following format: NN.NNN.NNN/NNNN-NN">Learn More</sup>',
+    'Required' => true,
+];
+$additionaldomainfields['.com.br'] = $additionaldomainfields['.br'];
+$additionaldomainfields['.abc.br'] = $additionaldomainfields['.br'];
+$additionaldomainfields['.belem.br'] = $additionaldomainfields['.br'];
+$additionaldomainfields['.blog.br'] = $additionaldomainfields['.br'];
+$additionaldomainfields['.emp.br'] = $additionaldomainfields['.br'];
+$additionaldomainfields['.esp.br'] = $additionaldomainfields['.br'];
+$additionaldomainfields['.far.br'] = $additionaldomainfields['.br'];
+$additionaldomainfields['.floripa.br'] = $additionaldomainfields['.br'];
+$additionaldomainfields['.ind.br'] = $additionaldomainfields['.br'];
+$additionaldomainfields['.jampa.br'] = $additionaldomainfields['.br'];
+$additionaldomainfields['.macapa.br'] = $additionaldomainfields['.br'];
+$additionaldomainfields['.net.br'] = $additionaldomainfields['.br'];
+$additionaldomainfields['.org.br'] = $additionaldomainfields['.br'];
+$additionaldomainfields['.poa.br'] = $additionaldomainfields['.br'];
+$additionaldomainfields['.recife.br'] = $additionaldomainfields['.br'];
+$additionaldomainfields['.rio.br'] = $additionaldomainfields['.br'];
+$additionaldomainfields['.sjc.br'] = $additionaldomainfields['.br'];
+$additionaldomainfields['.tur.br'] = $additionaldomainfields['.br'];
+$additionaldomainfields['.tv.br'] = $additionaldomainfields['.br'];
+$additionaldomainfields['.vix.br'] = $additionaldomainfields['.br'];
+
+// .DENTIST
+$additionaldomainfields['.dentist'] = [
+    [
+        'Name' => 'Regulatory Data',
+        'LangVar' => 'dentistRegulatoryData',
+        'Type' => 'text',
+        'Size' => 50,
+        'Default' => '',
+        'Description' => '',
+        'Required' => true,
+    ],
+];
+$additionaldomainfields['.attorney'] = $additionaldomainfields['.dentist'];
+$additionaldomainfields['.lawyer'] = $additionaldomainfields['.dentist'];
+
+// .HU
+$additionaldomainfields['.hu'] = [
+    [
+        'Name' => 'Accept Trustee Service',
+        'LangVar' => 'huTrusteeService',
+        'Type' => 'tickbox',
+        'Default' => '',
+        'Description' => '',
+    ],
+    [
+        'Name' => 'ID Card or Passport Number',
+        'LangVar' => 'huIDNumber',
+        'Type' => 'text',
+        'Size' => 50,
+        'Default' => '',
+        'Description' => '',
+        'Required' => true,
+    ],
+    [
+        'Name' => 'VAT Number',
+        'LangVar' => 'huVATNumber',
+        'Type' => 'text',
+        'Size' => 50,
+        'Default' => '',
+        'Description' => 'VAT is required for organisations',
+    ],
+];
+$additionaldomainfields['.co.hu'] = $additionaldomainfields['.hu'];
+
+// .PT
+$additionaldomainfields['.pt'] = [
+    [
+        'Name' => 'Owner Identification',
+        'LangVar' => 'ptOwnerId',
+        'Type' => 'text',
+        'Size' => 50,
+        'Default' => '',
+        'Description' => '',
+        'Required' => true,
+    ],
+    [
+        'Name' => 'Tech Identification',
+        'LangVar' => 'ptTechId',
+        'Type' => 'text',
+        'Size' => 50,
+        'Default' => '',
+        'Description' => '',
+        'Required' => true,
+    ],
+];
+$additionaldomainfields['.co.pt'] = $additionaldomainfields['.pt'];
+$additionaldomainfields['.com.pt'] = $additionaldomainfields['.pt'];
+$additionaldomainfields['.edu.pt'] = $additionaldomainfields['.pt'];
+$additionaldomainfields['.gov.pt'] = $additionaldomainfields['.pt'];
+$additionaldomainfields['.net.pt'] = $additionaldomainfields['.pt'];
+$additionaldomainfields['.org.pt'] = $additionaldomainfields['.pt'];
+
+// .NYC
+$additionaldomainfields['.nyc'] = [
+    [
+        'Name' => 'nexusCategory',
+        'DisplayName' => 'Nexus Category *',
+        'LangVar' => 'nycNexusCategory',
+        'Type' => 'dropdown',
+        'Options' => 'NEXUS_CATEGORY_2|Individual,NEXUS_CATEGORY_1|Organization',
+        'Description' => '<sup style="cursor:help; text-align:justify;" title="The .NYC top-level domain is available'
+            . ' only to New York City businesses and organizations with a NYC address or individuals with a primary'
+            . ' residence in NYC.  Registrants must be either individuals whose primary place of domicile is a valid'
+            . ' physical address in the City of New York (“Nexus Category 1 - Individual”) or entities,'
+            . ' organizations, or companies that have a physical street address in the City of New York (“Nexus'
+            . ' Category 2 - Organization”).">Learn More</sup>',
+        'Required' => true,
+    ],
 ];

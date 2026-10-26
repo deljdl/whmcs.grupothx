@@ -1,8 +1,10 @@
+<!-- Product Recommendations CSS -->
+<link type="text/css" rel="stylesheet" href="{$BASE_PATH_CSS}/recommendations.min.css" property="stylesheet" />
+<!-- Core CSS -->
 <link type="text/css" rel="stylesheet" href="{$BASE_PATH_CSS}/normalize.css" property="stylesheet">
-<link type="text/css" rel="stylesheet" href="{$WEB_ROOT}/templates/orderforms/{$carttpl}/css/ion.rangeSlider.css" property="stylesheet">
-<link type="text/css" rel="stylesheet" href="{$WEB_ROOT}/templates/orderforms/{$carttpl}/css/ion.rangeSlider.skinHTML5.css" property="stylesheet">
-<link type="text/css" rel="stylesheet" href="{$WEB_ROOT}/templates/orderforms/{$carttpl}/css/style.css" property="stylesheet">
-
+<link type="text/css" rel="stylesheet" href="{assetPath file="ion.rangeSlider.css"}" property="stylesheet">
+<link type="text/css" rel="stylesheet" href="{assetPath file="ion.rangeSlider.skinHTML5.css"}" property="stylesheet">
+<link type="text/css" rel="stylesheet" href="{assetPath file="style.css"}" property="stylesheet">
 {if $showSidebarToggle}
     <button type="button" class="btn btn-default btn-sm" id="btnShowSidebar">
         <i class="fas fa-arrow-circle-right"></i>
@@ -11,10 +13,10 @@
 {/if}
 
 <div class="row row-product-selection">
-    <div class="col-xs-3 product-selection-sidebar" id="universalSliderSidebar">
+    <div class="col-md-3 sidebar product-selection-sidebar" id="universalSliderSidebar">
         {include file="orderforms/standard_cart/sidebar-categories.tpl"}
     </div>
-    <div class="col-xs-12">
+    <div class="col-md-12">
 
         <div id="order-universal_slider">
             <div class="group-headlines">
@@ -41,7 +43,7 @@
                 {/if}
             </div>
 
-            <div class="striped-container clearfix">
+            <div class="striped-container clearfix py-1">
 
                 <div class="main-container">
 
@@ -52,15 +54,15 @@
                     {/if}
 
                     {foreach $products as $key => $product}
-                        {$productId = ($product.pid) ? $product.pid : 'b'|cat:$product.bid}
-                        <div id="product{$productId}-container" class="product-container">
-                            <div id="product{$productId}-feature-container" class="feature-container">
+                        {$idPrefix = ($product.bid) ? ("bundle"|cat:$product.bid) : ("product"|cat:$product.pid)}
+                        <div id="{$idPrefix}-container" class="product-container">
+                            <div id="{$idPrefix}-feature-container" class="feature-container">
                                 <div class="row">
                                     <div class="col-md-9">
                                         <div class="row">
                                             {foreach $product.features as $feature => $value}
                                                 {$currentPercentages = $featurePercentages.$feature}
-                                                <div id="product{$productId}-feature{$value@iteration}" class="col-sm-3 container-with-progress-bar text-center">
+                                                <div id="{$idPrefix}-feature{$value@iteration}" class="col-sm-3 container-with-progress-bar text-center">
                                                     {$feature}
                                                     <span>{$value}</span>
                                                     <div class="progress small-progress">
@@ -72,7 +74,7 @@
                                             {/foreach}
                                         </div>
                                     </div>
-                                    <div id="product{$productId}-price" class="col-md-3 hidden-sm">
+                                    <div id="{$idPrefix}-price" class="col-md-3 hidden-sm d-none d-md-block">
                                         <div class="price-container container-with-progress-bar text-center">
                                             {$product.name} {$LANG.orderprice}
                                             <span class="price-cont">
@@ -97,11 +99,11 @@
                                                 {/if}
                                             </span>
                                             {if $product.qty eq "0"}
-                                                <span id="product{$productId}-unavailable" class="order-button unavailable">
+                                                <span id="{$idPrefix}-unavailable" class="order-button unavailable">
                                                     {$LANG.outofstock}
                                                 </span>
                                             {else}
-                                                <a href="{$smarty.server.PHP_SELF}?a=add&amp;{if $product.bid}bid={$product.bid}{else}pid={$product.pid}{/if}" class="order-button" id="product{$productId}-order-button">
+                                                <a href="{$product.productUrl}" class="order-button" id="{$idPrefix}-order-button"{if $product.hasRecommendations} data-has-recommendations="1"{/if}>
                                                     {$LANG.ordernowbutton}
                                                 </a>
                                             {/if}
@@ -109,7 +111,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="product{$productId}-description" class="product-description">
+                            <div id="{$idPrefix}-description" class="product-description">
                                 <div class="row">
                                     <div class="col-sm-9 col-md-12">
                                         {if count($product.features) > 0}
@@ -120,8 +122,8 @@
                                             {$product.description}
                                         {/if}
                                     </div>
-                                    <div class="col-sm-3 visible-sm">
-                                        <div id="product{$productId}-price-small" class="price-container container-with-progress-bar text-center">
+                                    <div class="col-sm-3 visible-sm d-block d-md-none">
+                                        <div id="{$idPrefix}-price-small" class="price-container container-with-progress-bar text-center">
                                             {$product.name} {$LANG.orderprice}
                                             <span class="price-cont">
                                                 {if $product.bid}
@@ -145,11 +147,11 @@
                                                 {/if}
                                             </span>
                                             {if $product.qty eq "0"}
-                                                <span id="product{$productId}-unavailable" class="order-button unavailable">
+                                                <span id="{$idPrefix}-unavailable" class="order-button unavailable">
                                                 {$LANG.outofstock}
                                             </span>
                                             {else}
-                                                <a href="{$smarty.server.PHP_SELF}?a=add&amp;{if $product.bid}bid={$product.bid}{else}pid={$product.pid}{/if}" class="order-button" id="product{$productId}-order-button">
+                                                <a href="{$product.productUrl}" class="order-button" id="{$idPrefix}-order-button"{if $product.hasRecommendations} data-has-recommendations="1"{/if}>
                                                     {$LANG.ordernowbutton}
                                                 </a>
                                             {/if}
@@ -165,7 +167,7 @@
             {if count($productGroup.features) > 0}
                 <div class="group-features">
                     <div class="title">
-                        <span>
+                        <span class="primary-bg-color">
                             {$LANG.orderForm.includedWithPlans}
                         </span>
                     </div>
@@ -180,7 +182,9 @@
     </div>
 </div>
 
-<script type="text/javascript" src="{$WEB_ROOT}/templates/orderforms/{$carttpl}/js/ion.rangeSlider.js"></script>
+{include file="orderforms/universal_slider/recommendations-modal.tpl"}
+
+<script type="text/javascript" src="{assetPath file="ion.rangeSlider.js"}"></script>
 <script type="text/javascript">
     jQuery(document).ready(function(){
         var products = [],
@@ -188,7 +192,7 @@
             startFrom = 0,
             startValue = null;
         {foreach $products as $product}
-            products['{$product.name}'] = '{if $product.pid}{$product.pid}{else}b{$product.bid}{/if}';
+            products['{$product.name}'] = '{($product.bid) ? ("bundle"|cat:$product.bid) : ("product"|cat:$product.pid)}';
             productList.push('{$product.name}');
             {if $pid}
                 {if ($pid == $product.pid)}
@@ -233,9 +237,9 @@
         });
 
         function changeProduct(productName) {
-            var pid = products[productName];
+            var identifier = products[productName];
             jQuery(".product-container").hide();
-            jQuery("#product" + pid + "-container").show();
+            jQuery("#" + identifier + "-container").show();
         }
 
         {if count($products) eq 1}
@@ -257,3 +261,4 @@
         });
     });
 </script>
+<script src="{$BASE_PATH_JS}/whmcs/recommendations.min.js"></script>

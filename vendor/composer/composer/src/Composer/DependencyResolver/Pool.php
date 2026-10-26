@@ -163,6 +163,7 @@ class Pool implements \Countable
     /**
      * Returns how many packages have been loaded into the pool
      */
+    #[\ReturnTypeWillChange]
     public function count()
     {
         return count($this->packages);
@@ -317,12 +318,12 @@ class Pool implements \Countable
      * Checks if the package matches the given constraint directly or through
      * provided or replaced packages
      *
-     * @param  array|PackageInterface $candidate
+     * @param  PackageInterface       $candidate
      * @param  string                 $name       Name of the package to be matched
      * @param  ConstraintInterface    $constraint The constraint to verify
      * @return int                    One of the MATCH* constants of this class or 0 if there is no match
      */
-    private function match($candidate, $name, ConstraintInterface $constraint = null, $bypassFilters)
+    public function match($candidate, $name, ConstraintInterface $constraint = null, $bypassFilters)
     {
         $candidateName = $candidate->getName();
         $candidateVersion = $candidate->getVersion();

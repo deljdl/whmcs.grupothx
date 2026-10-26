@@ -123,13 +123,19 @@ if (count($incfields)) {
 
     foreach ($filterfield as $i => $val) {
         if ($val && array_key_exists($val, $filterfields)) {
+            $filtertype[$i] = $filtertype[$i] ?? '=';
+            $filterq[$i] = $filterq[$i] ?? '';
+            if (!in_array($filtertype[$i], ['=', 'like'], true)) {
+                $filtertype[$i] = '=';
+            }
             if ($filtertype[$i] == 'like') {
                 $filterq[$i] = "%{$filterq[$i]}%";
             }
             if ($val == 'clientname') {
-                $query->whereRaw(
-                    "concat(tblclients.firstname, ' ', tblclients.lastname) "
-                    . "{$filtertype[$i]} '{$filterq[$i]}'"
+                $query->where(
+                    Capsule::raw("concat(tblclients.firstname, ' ', tblclients.lastname)"),
+                    $filtertype[$i],
+                    $filterq[$i]
                 );
             } elseif ($val == 'currency') {
                 $currencyCode = strtoupper(trim($filterq[$i]));
@@ -176,7 +182,8 @@ if (count($incfields)) {
 
     $results = $query->leftJoin('tblclients', 'tblclients.id', '=', 'tblaccounts.userid')
         ->orderBy('date', 'asc')
-        ->get();
+        ->get()
+        ->all();
     foreach ($results as $result) {
         $result = (array) $result;
         if (isset($result['currency'])) {

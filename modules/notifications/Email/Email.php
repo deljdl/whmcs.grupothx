@@ -2,22 +2,23 @@
 
 namespace WHMCS\Module\Notification\Email;
 
+use AdminLang;
 use WHMCS\Config\Setting;
 use WHMCS\Exception;
 use WHMCS\Mail\Template;
 use WHMCS\Module\Notification\DescriptionTrait;
 use WHMCS\Module\Contracts\NotificationModuleInterface;
 use WHMCS\Notification\Contracts\NotificationInterface;
-use WHMCS\Notification\Rule;
 use WHMCS\Utility\Environment\WebHelper;
+use WHMCS\Validate;
 
 /**
  * Notification module for delivering notifications via email
  *
  * All notification modules must implement NotificationModuleInterface
  *
- * @copyright Copyright (c) WHMCS Limited 2005-2020
- * @license http://www.whmcs.com/license/ WHMCS Eula
+ * @copyright Copyright (c) WHMCS Limited 2005-2022
+ * @license https://www.whmcs.com/license/ WHMCS Eula
  */
 class Email implements NotificationModuleInterface
 {
@@ -107,16 +108,24 @@ class Email implements NotificationModuleInterface
      * Leverage this method to verify authentication and/or authorization when
      * the notification service requires a remote connection.
      *
-     * For the Email notification module, connectivity details are already
-     * defined by the WHMCS core system, and there are no settings which
-     * require further validation, so this method will always return TRUE.
-     *
-     * @param array $settings
+     * @param array $settings Settings present in configuration modal
      *
      * @return boolean
+     * @throws Exception senderEmail value is missing
+     * @throws Exception senderEmail value is invalid
      */
-    public function testConnection($settings)
+    public function testConnection($settings): bool
     {
+        $email = $settings['senderEmail'];
+
+        if (empty($email)) {
+            throw new Exception(AdminLang::trans('clients.erroremail'));
+        }
+
+        if (!(new Validate())->validate('email', 'settings[senderEmail]', ['clients.erroremailinvalid'])) {
+            throw new Exception(AdminLang::trans('clients.erroremailinvalid'));
+        }
+
         return true;
     }
 

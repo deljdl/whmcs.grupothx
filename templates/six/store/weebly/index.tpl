@@ -1,4 +1,4 @@
-<link href="{$WEB_ROOT}/templates/{$template}/store/css/style.css" rel="stylesheet">
+<link href="{assetPath file='store.css'}" rel="stylesheet">
 
 <div class="landing-page weebly">
 
@@ -16,7 +16,7 @@
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-landing-page" aria-expanded="false">
-            <span class="sr-only">{lang key="store.toggleNav"}</span>
+            <span class="sr-only">{lang key="toggleNav"}</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -158,7 +158,7 @@
                     <h4>{lang key="store.websiteBuilder.pricing.free.headline"}</h4>
                     <h5>{lang key="store.websiteBuilder.pricing.free.tagline"}</h5>
                     <p>{$litePlan->description}</p>
-                    <form method="post" action="{routePath('store-order')}">
+                    <form method="post" action="{routePath('cart-order')}">
                         <input type="hidden" name="pid" value="{$litePlan->id}">
                         <input type="hidden" name="billingcycle" value="">
                         <button type="submit" class="btn btn-default btn-signup">
@@ -208,7 +208,7 @@
                                     {/foreach}
                                 </ul>
                             </div>
-                            <form method="post" action="{routePath('store-order')}">
+                            <form method="post" action="{routePath('cart-order')}">
                                 <input type="hidden" name="pid" value="{$product->id}">
                                 <input type="hidden" name="billingcycle" value="">
                                 <button type="submit" class="btn btn-primary btn-block btn-signup">{lang key="signup"}</button>
@@ -261,4 +261,29 @@
 
 </div>
 
-<script src="{$WEB_ROOT}/templates/{$template}/store/weebly/master.js"></script>
+<script>
+    jQuery(document).ready(function(){
+        jQuery('.landing-page.weebly .cycle-change').on('click', function() {
+            var newCycle = jQuery(this).data('cycle');
+            jQuery('.row.weebly-plans .pricing-text').hide();
+            jQuery('.landing-page.weebly .' + newCycle).removeClass('hidden').show();
+            jQuery('.landing-page.weebly .cycle-change').removeClass('active');
+            jQuery(this).addClass('active');
+            jQuery('.landing-page.weebly .pricing input[name="billingcycle"]').val(newCycle);
+            jQuery('.weebly-plans div.pricing-item').each(function(index) {
+                if (jQuery(this).find('.' + newCycle).length <= 0) {
+                    jQuery(this).find('span.not-available').removeClass('hidden').show();
+                    jQuery(this).parent('div').find('.btn-signup').prop('disabled', true);
+                    jQuery(this).fadeTo('slow', 0.5);
+                } else {
+                    jQuery(this).find('span.not-available').hide();
+                    jQuery(this).parent('div').find('.btn-signup').prop('disabled', false);
+                    jQuery(this).fadeTo('slow', 1);
+                }
+            });
+        });
+
+        var startCycle = jQuery('.btn.cycle-change.active').data('cycle');
+        jQuery('.landing-page.weebly .pricing input[name="billingcycle"]').val(startCycle);
+    });
+</script>

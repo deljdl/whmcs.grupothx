@@ -97,12 +97,12 @@ class CompositeRepository extends BaseRepository
     /**
      * {@inheritdoc}
      */
-    public function search($query, $mode = 0)
+    public function search($query, $mode = 0, $type = null)
     {
         $matches = array();
         foreach ($this->repositories as $repository) {
             /* @var $repository RepositoryInterface */
-            $matches[] = $repository->search($query, $mode);
+            $matches[] = $repository->search($query, $mode, $type);
         }
 
         return $matches ? call_user_func_array('array_merge', $matches) : array();
@@ -136,6 +136,7 @@ class CompositeRepository extends BaseRepository
     /**
      * {@inheritdoc}
      */
+    #[\ReturnTypeWillChange]
     public function count()
     {
         $total = 0;

@@ -9,7 +9,7 @@
     "tagline": "Secure recurring payment processing using SagePay's repeat service."
   },
   "support": {
-    "docs_url": "https:\/\/docs.whmcs.com\/SagePay"
+    "docs_url": "https:\/\/go.whmcs.com\/2125\/sagepay-repeats"
   },
   "authors": [
     {

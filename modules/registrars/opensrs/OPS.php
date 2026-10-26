@@ -61,7 +61,7 @@ class OPS extends PEAR {
      *                  to use compression or not on the generated XML)
      */
 
-    function OPS($args=false)
+    function __construct($args=false)
     {
 
         $this->PEAR();
@@ -353,7 +353,7 @@ class OPS extends PEAR {
                 break;
 
               case 'item':
-                $key = $value['attributes']['key'];
+                $key = $value['attributes']['key'] ?? null;
 
                 switch ($value['type']) {
                   case 'open':
@@ -363,7 +363,7 @@ class OPS extends PEAR {
                   case 'complete':
                     array_push($depth, $key);
                     $p = join('::',$depth);
-                    $temp[$p] = $value['value'];
+                    $temp[$p] = $value['value'] ?? null;
                     array_pop($depth);
                     break;
 

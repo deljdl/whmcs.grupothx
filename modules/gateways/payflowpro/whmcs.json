@@ -10,7 +10,7 @@
     "long": "Payflow Gateway is PayPal's secure and open payment gateway. Using the Payflow Gateway APIs, merchants can process debit and credit card payments, PayPal, PayPal Credit®, authorizations, captures, and credit voids.\n\nPayflow Gateway merchants can choose to process their online store payments with any major payment processor, bank, or card association."
   },
   "support": {
-    "docs_url": "https:\/\/docs.whmcs.com\/Payflow_Pro"
+    "docs_url": "https:\/\/go.whmcs.com\/2093\/payflow-pro"
   },
   "authors": [
     {

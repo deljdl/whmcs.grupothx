@@ -84,58 +84,53 @@ dataTable: function () {
                     ordering: true,
                     info: false,
                     autoWidth: true,
+                    columns: [],
+                    lengthMenu: [10, 25, 50, 100, 500, 1000],
                     language: {
-                        emptyTable: (el.data('lang-empty-table')) ? el.data('lang-empty-table') : "No records found"
+                        emptyTable: (el.data('langEmptyTable')) ? el.data('langEmptyTable') : "No records found"
                     }
                 };
             }
-            var ajaxUrl = el.data('ajax-url');
-            if (typeof ajaxUrl !== 'undefined') {
-                options.ajax = {
-                    url: ajaxUrl
-                };
-            }
-            var dom = el.data('dom');
-            if (typeof dom !== 'undefined') {
-                options.dom = dom;
-            }
-            var searching = el.data('searching');
-            if (typeof searching !== 'undefined') {
-                options.searching = searching;
-            }
-            var responsive = el.data('responsive');
-            if (typeof responsive !== 'undefined') {
-                options.responsive = responsive;
-            }
-            var ordering = el.data('ordering');
-            if (typeof ordering !== 'undefined') {
-                options["ordering"] = ordering;
-            }
-            var order = el.data('order');
-            if (typeof order !== 'undefined' && order) {
-                options["order"] = order;
-            }
-            var colCss = el.data('columns');
-            if (typeof colCss !== 'undefined' && colCss) {
-                options["columns"] = colCss;
-            }
-            var autoWidth = el.data('auto-width');
-            if (typeof autoWidth !== 'undefined') {
-                options["autoWidth"] = autoWidth;
-            }
-            var paging = el.data('paging');
-            if (typeof paging !== 'undefined') {
-                options["paging"] = paging;
-            }
-            var lengthChange = el.data('length-change');
-            if (typeof lengthChange !== 'undefined') {
-                options["lengthChange"] = lengthChange;
-            }
-            var pageLength = el.data('page-length');
-            if (typeof pageLength !== 'undefined') {
-                options["pageLength"] = pageLength;
-            }
-
+            jQuery.each(el.data(), function (key, value) {
+                if (typeof value === 'undefined') {
+                    return;
+                }
+                if (key === 'ajaxUrl') {
+                    options.ajax = {
+                        url: value
+                    };
+                    return;
+                }
+                if (key === 'lengthChange') {
+                    options.lengthChange = value;
+                    return;
+                }
+                if (key === 'pageLength') {
+                    options.pageLength = value;
+                    return;
+                }
+                if (key === 'langEmptyTable') {
+                    if (typeof options.language === "undefined") {
+                        options.language = {};
+                    }
+                    options.language.emptyTable = value;
+                    return
+                }
+                if (key === 'langZeroRecords') {
+                    if (typeof options.language === "undefined") {
+                        options.language = {};
+                    }
+                    options.language.zeroRecords = value;
+                    return
+                }
+                options.key = value;
+            });
+            jQuery.each(el.find('th'), function() {
+                if (typeof options.columns === "undefined") {
+                    options.columns = [];
+                }
+                options.columns.push({data:jQuery(this).data('name')});
+            });
             self.tables[id] = self.initTable(el, options);
         } else if (typeof options !== 'undefined') {
             var oldTable = self.tables[id];
@@ -246,10 +241,13 @@ toolTip: function () {
         return tip;
     };
 
-    this.hideTip = function (btn) {
+    this.hideTip = function (btn, timeout) {
+        if (!timeout) {
+            timeout = 2000;
+        }
         return setTimeout(function() {
             btn.data('bs.tooltip').hide()
-        }, 2000);
+        }, timeout);
     }
 },
 
@@ -352,7 +350,15 @@ jsonForm: function() {
     };
 
     this.clearFieldError = function (field) {
-        $(field).tooltip('destroy');
+        /**
+         * Try dispose first for BS 4, which will raise error
+         * on BS 3 or older, then we use destroy instead
+         */
+        try {
+            $(field).tooltip('dispose');
+        } catch (err) {
+            $(field).tooltip('destroy');
+        }
         $(field).parents('.form-group').removeClass('has-error');
     };
 
@@ -437,6 +443,209 @@ effects: function () {
             });
         });
     };
+},
+/*
+<script>WHMCS.ui.markdownEditor.register()</script>
+<someTag id="someTag-node"
+    class="container-markdown-editor editor-tagging local-storage"
+    data-locale="de"
+    data-local-storage-id="someTag-node-session-1234"
+    data-fetch-preview-url="https://x.local/mde/preview"
+    data-fetch-help-url="https://x.local/mde/help"
+    data-tagging-url="url-to-handle-tagging"
+    />
+NOTE: elements without IDs will not be initialized via `register` or `getEditorById`
+to ensure no target node is reinitialized within a previously initialized node.
+ */
+markdownEditor: function () {
+    this.editors = {};
+    this.counters = {};
+    this.register = function () {
+        let self = this;
+        jQuery('.container-markdown-editor')
+            .each(function (i, el) {
+                el = jQuery(el);
+                if (typeof el.attr('id') === "undefined") {
+                    console.debug('Element has no id', el);
+                    return;
+                }
+                self.getEditorById(el.attr('id'));
+                self.withTagging(el);
+            });
+    };
+    this.withTagging = function(el) {
+        if (!el.is('.editor-tagging')) {
+            return;
+        }
+        el.atwho({
+            at: "@",
+            displayTpl: "<li class=\"mention-list\">${gravatar} ${username} - ${name} (${email})</li>",
+            insertTpl: mentionsFormat,
+            data: el.data('tagging-url'),
+            limit: 5
+        });
+    }
+    this.getEditorById = function(id) {
+        let self = this;
+        let el = jQuery('#' + id);
+        if (typeof self.editors[id] === 'undefined') {
+            self.editors[id] = self.init(el);
+        }
 
+        return self.editors[id];
+    };
+    this.init = function (element) {
+        let self = this;
+        let elementId = element.attr('id');
+        let footerId = elementId + '-footer';
+        let footerIdRef = '#' + footerId;
+        let footerNode ='<div id="'
+            + footerId
+            + '" class="markdown-editor-status"></div>';
+        let locale = (typeof element.data('locale') === 'undefined')
+            ? 'en'
+            : element.data('locale');
+        let localStorageId = element.data('localStorageId');
+        let csrf_token = csrfToken;
+        let fetchPreviewUrl = element.data('fetchPreviewUrl');
+        self.counters[elementId] = 0;
+
+        element.markdown(
+            {
+                footer: footerNode,
+                autofocus: false,
+                savable: false,
+                resize: 'vertical',
+                iconlibrary: 'glyph',
+                language: locale,
+                onShow: function(e){
+                    let content = '',
+                        save_enabled = false;
+                    if(typeof(Storage) !== "undefined") {
+                        // Code for localStorage/sessionStorage.
+                        content = localStorage.getItem(localStorageId);
+                        save_enabled = true;
+                        if (content && typeof(content) !== "undefined") {
+                            e.setContent(content);
+                        }
+                    }
+                    jQuery(footerIdRef).html(
+                        self.parseMdeFooter(content, save_enabled, 'saved')
+                    );
+                },
+                onChange: function(e){
+                    let content = e.getContent(),
+                        save_enabled = false;
+                        elementId = e.$element.attr('id');
+                    if(typeof(Storage) !== "undefined") {
+                        self.counters[elementId] = 3;
+                        save_enabled = true;
+                        localStorage.setItem(localStorageId, content);
+                        self.doCountdown(elementId);
+                    }
+                    jQuery(footerIdRef).html(
+                        self.parseMdeFooter(content, save_enabled)
+                    );
+                },
+                onPreview: function(e){
+                    let originalContent = e.getContent(),
+                        parsedContent;
+
+                    jQuery.ajax({
+                        url: fetchPreviewUrl,
+                        async: false,
+                        data: {
+                            token: csrf_token,
+                            action: 'parseMarkdown',
+                            content: originalContent
+                        },
+                        dataType: 'json',
+                        success: function (data) {
+                            parsedContent = data;
+                        },
+                        method: 'POST'
+                    });
+
+                    return parsedContent.body ? parsedContent.body : '';
+                },
+                additionalButtons: [
+                    [{
+                        name: "groupCustom",
+                        data: [{
+                            name: "cmdHelp",
+                            title: "Help",
+                            hotkey: "Ctrl+F1",
+                            btnClass: "btn open-modal",
+                            icon: {
+                                glyph: 'fas fa-question-circle',
+                                fa: 'fas fa-question-circle',
+                                'fa-3': 'icon-question-sign'
+                            },
+                            callback: function(e) {
+                                e.$editor.removeClass("md-fullscreen-mode");
+                            }
+                        }]
+                    }]
+                ],
+                hiddenButtons: [
+                    'cmdImage'
+                ],
+            }
+        );
+
+        self.addEventHelpModal(element);
+
+        return element;
+    };
+    this.parseMdeFooter = function(content, auto_save, saveText) {
+        if (typeof saveText == 'undefined') {
+            saveText = 'autosaving';
+        }
+        let pattern = /[^\s]+/g,
+            m = [],
+            word_count = 0,
+            line_count = 0;
+        if (content) {
+            m = content.match(pattern);
+            line_count = content.split(/\\r\\n|\\r|\\n/).length;
+        }
+        if (m) {
+            for(let i = 0; i < m.length; i++) {
+                if(m[i].charCodeAt(0) >= 0x4E00) {
+                    word_count += m[i].length;
+                } else {
+                    word_count += 1;
+                }
+            }
+        }
+        return '<div class="smallfont">lines: ' + line_count
+            + '&nbsp;&nbsp;&nbsp;words: ' + word_count + ''
+            + (auto_save
+                    ? '&nbsp;&nbsp;&nbsp;<span class="markdown-save">' + saveText + '</span>'
+                    : ''
+            )
+            + '</div>';
+    };
+    this.doCountdown = function(elementId) {
+        let self = this;
+        if (self.counters[elementId] >= 0) {
+            if (self.counters[elementId] === 0) {
+                jQuery("span.markdown-save").html('saved');
+            }
+            self.counters[elementId]--;
+            setTimeout(function (id) {
+                self.doCountdown(id)},
+                1000,
+                elementId
+            );
+        }
+    };
+    this.addEventHelpModal = function(element) {
+        element.parent().find('button[data-handler="bootstrap-markdown-cmdHelp"]')
+            .attr('data-modal-title', 'Markdown Guide')
+            .attr('data-modal-size', 'modal-lg')
+            .attr('href', element.data('fetchHelpUrl'));
+        return this;
+    };
 }
 });

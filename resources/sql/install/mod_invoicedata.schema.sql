@@ -9,9 +9,10 @@ DROP TABLE IF EXISTS `mod_invoicedata`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `mod_invoicedata` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `invoiceid` int(10) NOT NULL,
+  `invoiceid` int(10) UNSIGNED NOT NULL,
   `clientsdetails` text COLLATE utf8_unicode_ci NOT NULL,
   `customfields` text COLLATE utf8_unicode_ci NOT NULL,
+  `version` varchar(255) COLLATE utf8_unicode_ci NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

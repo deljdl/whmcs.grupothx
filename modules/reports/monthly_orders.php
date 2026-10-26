@@ -33,7 +33,8 @@ $results = Capsule::table('tblproducts')
     ->orderBy('tblproductgroups.order', 'asc')
     ->orderBy('tblproducts.order', 'asc')
     ->orderBy('tblproducts.name', 'asc')
-    ->get();
+    ->get()
+    ->all();
 
 foreach ($results as $result) {
     $pid = $result->id;
@@ -77,9 +78,10 @@ foreach ($results as $result) {
 
 $reportdata["tablevalues"][] = ["**<b>Addons</b>",];
 
-$results = Capsule::table(tbladdons)
+$results = Capsule::table('tbladdons')
     ->orderBy('name', 'asc')
-    ->get();
+    ->get()
+    ->all();
 
 foreach ($results as $result) {
     $pid = $result->id;

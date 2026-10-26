@@ -276,8 +276,12 @@ if(!class_exists('NamecheapRegistrarApi')){
          */
         private function _getClientIp()
         {
-            $clientip = $_SERVER['REMOTE_ADDR'];
-            return ($clientip && $clientip != '::1') ? $clientip : "10.11.12.13";
+            $ipAddress = App::getRemoteIp();
+            $clientIp = "10.11.12.13";
+            if (filter_var($ipAddress, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4) !== false) {
+                $clientIp = $ipAddress;
+            }
+            return $clientIp;
         }
 
         /**
@@ -3153,7 +3157,7 @@ if (!class_exists('Net_IDNA2')) {
 
             if ($delim_pos > self::_byteLength($this->_punycode_prefix)) {
                 for ($k = self::_byteLength($this->_punycode_prefix); $k < $delim_pos; ++$k) {
-                    $decoded[] = ord($encoded{$k});
+                    $decoded[] = ord($encoded[$k]);
                 }
             } else {
                 $decoded = array();
@@ -3170,7 +3174,7 @@ if (!class_exists('Net_IDNA2')) {
 
             for ($enco_idx = ($delim_pos) ? ($delim_pos + 1) : 0; $enco_idx < $enco_len; ++$deco_len) {
                 for ($old_idx = $idx, $w = 1, $k = $this->_base; 1; $k += $this->_base) {
-                    $digit = $this->_decodeDigit($encoded{$enco_idx++});
+                    $digit = $this->_decodeDigit($encoded[$enco_idx++]);
                     $idx += $digit * $w;
 
                     $t = ($k <= $bias) ?
@@ -3571,7 +3575,7 @@ if (!class_exists('Net_IDNA2')) {
             $mode = 'next';
             $test = 'none';
             for ($k = 0; $k < $inp_len; ++$k) {
-                $v = ord($input{$k}); // Extract byte from input string
+                $v = ord($input[$k]); // Extract byte from input string
 
                 if ($v < 128) { // We found an ASCII char - put into stirng as is
                     $output[$out_len] = $v;
@@ -3735,7 +3739,7 @@ if (!class_exists('Net_IDNA2')) {
                     $out_len++;
                     $output[$out_len] = 0;
                 }
-                $output[$out_len] += ord($input{$i}) << (8 * (3 - ($i % 4) ) );
+                $output[$out_len] += ord($input[$i]) << (8 * (3 - ($i % 4) ) );
             }
             return $output;
         }

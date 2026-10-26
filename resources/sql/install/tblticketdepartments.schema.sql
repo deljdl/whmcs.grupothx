@@ -21,7 +21,9 @@ CREATE TABLE `tblticketdepartments` (
   `port` text COLLATE utf8_unicode_ci NOT NULL,
   `login` text COLLATE utf8_unicode_ci NOT NULL,
   `password` text COLLATE utf8_unicode_ci NOT NULL,
+  `mail_auth_config` text,
   `feedback_request` tinyint(1) NOT NULL DEFAULT '0',
+  `prevent_client_closure` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `name` (`name`(64))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

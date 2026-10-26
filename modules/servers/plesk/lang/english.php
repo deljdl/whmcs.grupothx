@@ -8,8 +8,8 @@ $keys = array(
     "CONFIG_WHICH_IP_ADDRESSES" => "Which IP addresses to use?",
     "CONFIG_POWER_USER_MODE" => "Use Power User view",
     "CONFIG_POWER_USER_MODE_DESCRIPTION" => "(Parallels Plesk 12+ only)",
-    "FIELD_CHANGE_PASSWORD_MAIN_PACKAGE_DESCR" => "Please pay attention that username/password shown above are used for system/FTP user only and can be used to log in to the Panel.",
-    "FIELD_CHANGE_PASSWORD_ADDITIONAL_PACKAGE_DESCR" => "Please pay attention that username/password shown above are used for system/FTP user only and can't be used to log in to the Panel. You should use username/password pair from package '@PACKAGE@' instead of them.",
+    "FIELD_CHANGE_PASSWORD_MAIN_PACKAGE_DESCR" => "You can use the service username and password to log in to the control panel or FTP service.",
+    "FIELD_CHANGE_PASSWORD_ADDITIONAL_PACKAGE_DESCR" => "You can only use the service username and password to log in to FTP. To access the control panel, use the username and password for the '@PACKAGE@ - @DOMAIN@' service instead.",
     "ERROR_COMMON_MESSAGE" => "Error code: @CODE@. Error message: @MESSAGE@",
     "ERROR_ACCOUNT_VALIDATION_EMPTY_FIRST_OR_LASTNAME" => "Unable to create account in Panel. Please specify firstname or lastname or both.",
     "ERROR_ACCOUNT_VALIDATION_EMPTY_USERNAME" => "Unable to create account in Panel. The field 'username' is required.",
@@ -28,4 +28,5 @@ $keys = array(
     "ERROR_AGENT_INITIALIZATION_FAILED" => "Panel agent initialization failed. Please check your panel settings and try again. If this problem remains unresolved, contact your service provider.",
     "ERROR_ACCOUNT_CREATE_COMMON_MESSAGE" => "Unable to create account on Panel side. Please check your account settings and try again. If this problem remains unresolved, contact your Panel administrator.",
     "ERROR_RESTRICTIONS_ACCOUNT_COUNT" => "You have reached the limit of allowed subscriptions per one account (@ACCOUNT_LIMIT@ subscription(s) allowed). To order a new subscription you should use another account.",
+    "WARNING_DOMAIN_NOT_EXIST" => "The domain has not been created.",
 );

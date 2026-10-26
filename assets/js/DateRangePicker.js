@@ -41,6 +41,11 @@ function initDateRangePicker()
                     monthNames: adminJsVars.dateRangePicker.months,
                     daysOfWeek: adminJsVars.dateRangePicker.daysOfWeek
                 }
+            }).on('show.daterangepicker', function (ev, picker) {
+                // Identify the date picker modal using the input ID if available.
+                if (picker.element[0].id != '') {
+                    picker.container[0].id = 'dateRangePicker_' + picker.element[0].id;
+                }
             }).on('apply.daterangepicker', function (ev, picker) {
                 jQuery(this).val(picker.startDate.format(adminJsVars.dateRangeFormat)
                     + ' - ' + picker.endDate.format(adminJsVars.dateRangeFormat));
@@ -72,6 +77,7 @@ function initDateRangePicker()
                     range = adminJsVars.dateRangePicker.futureTimeSingleRanges;
                 }
             }
+
             self.daterangepicker({
                 singleDatePicker: true,
                 autoUpdateInput: false,
@@ -89,6 +95,11 @@ function initDateRangePicker()
                     customRangeLabel: adminJsVars.dateRangePicker.customRangeLabel,
                     monthNames: adminJsVars.dateRangePicker.months,
                     daysOfWeek: adminJsVars.dateRangePicker.daysOfWeek
+                }
+            }).on('show.daterangepicker', function (ev, picker) {
+                // Identify the date picker modal using the input ID if available.
+                if (picker.element[0].id != '') {
+                    picker.container[0].id = 'dateRangePicker_' + picker.element[0].id;
                 }
             }).on('apply.daterangepicker', function (ev, picker) {
                 jQuery(this).data(

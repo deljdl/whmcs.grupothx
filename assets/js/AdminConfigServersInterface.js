@@ -25,10 +25,11 @@ $(document).ready(function(){
         var copyValue = $(this).val();
         var targetField = $(this).data("related-id");
         if (targetField == "inputHostname") {
-            var cleanedvalue = copyValue.split(".").join("");
-            if ($.isNumeric(cleanedvalue)) {
-                targetField = "inputPrimaryIp";
-                $("#inputHostname").val("");
+            if (checkIfValidIP(copyValue)) {
+                targetField = 'inputPrimaryIp';
+                $('#inputHostname').val('');
+            } else {
+                $('#inputPrimaryIp').val('');
             }
         }
         $("#" + targetField).val(copyValue);
@@ -144,6 +145,7 @@ $(document).ready(function(){
                 } else {
                     $(".alert.connection-test-result").removeClass("alert-grey").addClass("alert-danger")
                         .html(data.errorMsg);
+                    $("#newServerWizardSuccess").addClass("hidden");
                 }
             },
             always: function() {
@@ -162,10 +164,9 @@ $(document).ready(function(){
                 .slideDown("fast");
         }
     });
-    $("#newServerWizardBanner a").click(function(e) {
+    $("#advServerAdd").click(function(e) {
         e.preventDefault();
         $("#preAddForm").hide();
-        $("#newServerWizardBanner").hide();
         $("#frmServerConfig").removeClass("hidden").show();
     });
 
@@ -260,4 +261,10 @@ function hideAccessControl() {
 }
 function showAccessControl() {
     $(".trAccessControl").fadeIn();
+}
+
+function checkIfValidIP(str) {
+    const regexExpIp4 = /^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$/;
+    const regexExpIp6 = /^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$/;
+    return (regexExpIp4.test(str) || regexExpIp6.test(str));
 }

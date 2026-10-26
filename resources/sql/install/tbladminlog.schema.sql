@@ -16,7 +16,8 @@ CREATE TABLE `tbladminlog` (
   `sessionid` text COLLATE utf8_unicode_ci NOT NULL,
   `lastvisit` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
-  KEY `logouttime` (`logouttime`)
+  KEY `logouttime` (`logouttime`),
+  KEY `lastvisit` (`lastvisit`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

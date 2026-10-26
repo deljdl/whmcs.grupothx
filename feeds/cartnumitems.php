@@ -1,5 +1,7 @@
 <?php
 
+use WHMCS\OrderForm;
+
 require("../init.php");
 
 /*
@@ -8,12 +10,7 @@ require("../init.php");
 <script language="javascript" src="feeds/cartnumitems.php"></script>
 
 */
-$products = (isset($_SESSION["cart"]["products"]) && is_array($_SESSION["cart"]["products"])) ? $_SESSION["cart"]["products"] : array();
-$addons = (isset($_SESSION["cart"]["addons"]) && is_array($_SESSION["cart"]["addons"])) ? $_SESSION["cart"]["addons"] : array();
-$domains = (isset($_SESSION["cart"]["domains"]) && is_array($_SESSION["cart"]["domains"])) ? $_SESSION["cart"]["domains"] : array();
-$renewals = (isset($_SESSION["cart"]["renewals"]) && is_array($_SESSION["cart"]["renewals"])) ? $_SESSION["cart"]["renewals"] : array();
-
-$cartitems = count($products) + count($addons) + count($domains) + count($renewals);
+$cartitems = (new OrderForm())->getNumItemsInCart();
 
 $items = ($cartitems == 1) ? 'item' : 'items';
 

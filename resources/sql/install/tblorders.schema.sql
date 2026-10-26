@@ -12,6 +12,8 @@ CREATE TABLE `tblorders` (
   `ordernum` bigint(10) NOT NULL,
   `userid` int(10) NOT NULL,
   `contactid` int(10) NOT NULL,
+  `requestor_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `admin_requestor_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `date` datetime NOT NULL,
   `nameservers` text COLLATE utf8_unicode_ci NOT NULL,
   `transfersecret` text COLLATE utf8_unicode_ci NOT NULL,
@@ -20,19 +22,22 @@ CREATE TABLE `tblorders` (
   `promotype` text COLLATE utf8_unicode_ci NOT NULL,
   `promovalue` text COLLATE utf8_unicode_ci NOT NULL,
   `orderdata` text COLLATE utf8_unicode_ci NOT NULL,
-  `amount` decimal(10,2) NOT NULL,
+  `amount` decimal(16,2) NOT NULL,
   `paymentmethod` text COLLATE utf8_unicode_ci NOT NULL,
-  `invoiceid` int(10) NOT NULL DEFAULT '0',
+  `invoiceid` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `status` text COLLATE utf8_unicode_ci NOT NULL,
   `ipaddress` text COLLATE utf8_unicode_ci NOT NULL,
   `fraudmodule` text COLLATE utf8_unicode_ci NOT NULL,
   `fraudoutput` text COLLATE utf8_unicode_ci NOT NULL,
   `notes` text COLLATE utf8_unicode_ci NOT NULL,
+  `purchase_source` int(10) UNSIGNED NOT NULL DEFAULT 4,
+  `has_referral_products` smallint(3) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `ordernum` (`ordernum`),
   KEY `userid` (`userid`),
   KEY `contactid` (`contactid`),
-  KEY `date` (`date`)
+  KEY `date` (`date`),
+  KEY `requestor_id` (`requestor_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

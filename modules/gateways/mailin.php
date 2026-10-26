@@ -26,7 +26,7 @@ function mailin_config() {
 
 function mailin_link($params) {
     $code = '<p>'
-        . nl2br($params['instructions'])
+        . nl2br($params['instructions'] ?? '')
         . '<br />'
         . Lang::trans('invoicerefnum')
         . ': '

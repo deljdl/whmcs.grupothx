@@ -1,5 +1,7 @@
 <?php
 
+use WHMCS\Billing\Currency;
+
 require("../init.php");
 require("../includes/domainfunctions.php");
 
@@ -28,14 +30,14 @@ table.domainpricing td {
 
 $code = '<table cellspacing="1" cellpadding="0" class="domainpricing"><tr><th>' . \Lang::trans('domaintld') . '</th><th>' . \Lang::trans('domainminyears') . '</th><th>' . \Lang::trans('domainsregister') . '</th><th>' . \Lang::trans('domainstransfer') . '</th><th>' . \Lang::trans('domainsrenew') . '</th></tr>';
 
-if (!is_numeric($currency)) {
+if (!isset($currency) || !is_numeric($currency)) {
     $currency = array();
 } else {
-    $currency = getCurrency('', $currency);
+    $currency = getCurrency(null, $currency);
 }
 
 if (!$currency || !is_array($currency) || !isset($currency['id'])) {
-    $currency = getCurrency();
+    $currency = Currency::factoryForClientArea();
 }
 
 $freeamt = formatCurrency(0);
