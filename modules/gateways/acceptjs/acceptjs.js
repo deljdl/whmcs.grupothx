@@ -4,6 +4,7 @@
  * @copyright Copyright (c) WHMCS Limited 2005-2019
  * @license http://www.whmcs.com/license/ WHMCS Eula
  */
+var acceptJsModalInput = false;
 jQuery(document).ready(function(){
     var paymentMethod = jQuery('input[name="paymentmethod"]'),
         frm = jQuery('#frmCheckout'),
@@ -13,11 +14,12 @@ jQuery(document).ready(function(){
 
     if (paymentMethod.length && !newCcForm.length) {
         var newOrExisting = jQuery('input[name="ccinfo"]'),
+            selectedCard = jQuery('input[name="ccinfo"]:checked'),
             selectedPaymentMethod = jQuery('input[name="paymentmethod"]:checked').val();
 
         if (selectedPaymentMethod === 'acceptjs') {
             enable_acceptjs();
-            if (newOrExisting.val() === 'useexisting') {
+            if (newOrExisting.val() !== 'new') {
                 frm.off('submit', validateAcceptJs);
             }
         }
@@ -26,7 +28,7 @@ jQuery(document).ready(function(){
             selectedPaymentMethod = jQuery(this).val();
             if (selectedPaymentMethod === 'acceptjs') {
                 enable_acceptjs();
-                if (newOrExisting.val() === 'useexisting') {
+                if (selectedCard.val() !== 'new') {
                     frm.off('submit', validateAcceptJs);
                 }
             } else {
@@ -37,7 +39,8 @@ jQuery(document).ready(function(){
         newOrExisting.on('ifChecked change', function() {
             frm.off('submit', validateAcceptJs);
             if (selectedPaymentMethod === 'acceptjs') {
-                if (jQuery(this).val() !== 'useexisting') {
+                var newOrExistingValue = jQuery('input[name="ccinfo"]:checked').val();
+                if (newOrExistingValue !== 'useexisting') {
                     frm.on('submit', validateAcceptJs);
                 }
             }
@@ -46,7 +49,7 @@ jQuery(document).ready(function(){
         if (jQuery('input[name="type"]:checked').data('gateway') === 'acceptjs') {
             enable_acceptjs_card_input();
         }
-        jQuery('input[name="type"]').on('change', function(){
+        jQuery('input[name="type"]').on('ifChecked change', function(){
             if (jQuery(this).data('gateway') === 'acceptjs') {
                 enable_acceptjs_card_input();
             } else {
@@ -60,7 +63,7 @@ jQuery(document).ready(function(){
         } else {
             paymentForm.find('#inputCardCvv').parents('div.form-group').hide('fast');
         }
-        jQuery('input[name="ccinfo"]').on('change', function(){
+        jQuery('input[name="ccinfo"]').on('ifChecked change', function(){
             if (jQuery(this).val() === 'new') {
                 enable_payment_acceptjs();
             } else {
@@ -74,10 +77,20 @@ jQuery(document).ready(function(){
         adminCreditCard.find('#inputCardExpiry').removeAttr('name');
         adminCreditCard.find('#cardcvv').removeAttr('name');
 
-        // same as above - Firefox issues
-        adminCreditCard.find('#btnSaveChanges').removeAttr('name');
 
-        adminCreditCard.on('submit', validateAdminAcceptJs);
+
+        if (jQuery('#containerStorageInputControl')) {
+            var modalFooter = jQuery('#modalAjaxFooter'),
+                btnSubmit = modalFooter.find('#btnSave');
+            btnSubmit.removeAttr('name');
+            btnSubmit.off();
+            btnSubmit.on('click', validateAdminAcceptJs);
+            acceptJsModalInput = true;
+        } else {
+            // same as above - Firefox issues
+            adminCreditCard.find('#btnSaveChanges').removeAttr('name');
+            adminCreditCard.on('submit', validateAdminAcceptJs);
+        }
     }
 });
 
@@ -102,7 +115,10 @@ function validateAcceptJs(event) {
     // Extract the card number, expiration date, and card code.
     cardData.cardNumber = jQuery("#inputCardNumber").val().replace(/\s/g, '');
     var cardExpiry = jQuery('#inputCardExpiry').payment('cardExpiryVal');
-    cardData.month = cardExpiry.month;
+    cardData.month = cardExpiry.month.toString();
+    if (cardData.month.length === 1) {
+        cardData.month = '0' + cardData.month;
+    }
     cardData.year = cardExpiry.year;
     cardExpiry = null;
     cardData.cardCode = jQuery("#inputCardCVV").val();
@@ -132,7 +148,7 @@ function acceptJsResponseHandler(response) {
             errors += response.messages.message[i].text + "\n";
         }
         frm.find('.gateway-errors').text(errors).removeClass('hidden');
-        scrollToError();
+        scrollToGatewayInputError();
         frm.find('#btnCompleteOrder').removeAttr('disabled').removeClass('disabled');
     } else {
         frm.find('.gateway-errors').text('').addClass('hidden');
@@ -201,7 +217,10 @@ function validateNewCcAcceptJs(event) {
     // Extract the card number, expiration date, and card code.
     cardData.cardNumber = jQuery("#inputCardNumber").val().replace(/\s/g, '');
     var cardExpiry = jQuery('#inputCardExpiry').payment('cardExpiryVal');
-    cardData.month = cardExpiry.month;
+    cardData.month = cardExpiry.month.toString();
+    if (cardData.month.length === 1) {
+        cardData.month = '0' + cardData.month;
+    }
     cardData.year = cardExpiry.year;
     cardExpiry = null;
     cardData.cardCode = jQuery("#inputCardCvc").val();
@@ -225,7 +244,7 @@ function acceptJsNewCcResponseHandler(response) {
         }
         // Show the errors on the form:
         ccForm.find('.gateway-errors,.assisted-cc-input-feedback').text(errors).removeClass('hidden');
-        scrollToError();
+        scrollToGatewayInputError();
         jQuery('#btnSubmitNewCard').removeAttr('disabled').removeClass('disabled'); // Re-enable submission
 
     } else { // Token was created!
@@ -264,8 +283,12 @@ function validatePaymentAcceptJs(event) {
 
     // Extract the card number, expiration date, and card code.
     cardData.cardNumber = jQuery("#inputCardNumber").val().replace(/\s/g, '');
-    cardData.month = jQuery('#inputCardExpiry').val();
-    cardData.year = jQuery('#inputCardExpiryYear').val();
+    var cardExpiry = jQuery('#inputCardExpiry').payment('cardExpiryVal');
+    cardData.month = cardExpiry.month.toString();
+    if (cardData.month.length === 1) {
+        cardData.month = '0' + cardData.month;
+    }
+    cardData.year = cardExpiry.year;
     cardData.cardCode = jQuery("#inputCardCvv").val();
     secureData.cardData = cardData;
 
@@ -286,7 +309,7 @@ function acceptJsPaymentResponseHandler(response) {
         }
         // Show the errors on the form:
         paymentForm.find('.gateway-errors').text(errors).removeClass('hidden');
-        scrollToError();
+        scrollToGatewayInputError();
         jQuery('#btnSubmit').removeAttr('disabled').removeClass('disabled')
             .find('span').toggleClass('hidden'); // Re-enable submission
 
@@ -306,7 +329,11 @@ function acceptJsPaymentResponseHandler(response) {
 function validateAdminAcceptJs(event) {
     var adminCreditCard = jQuery('#frmCreditCardDetails');
     event.preventDefault();
-    adminCreditCard.find('#btnSaveChanges').attr('disabled', 'disabled').addClass('disabled');
+
+    adminCreditCard.find('button[type="submit"],input[type="submit"]')
+        .prop('disabled', true)
+        .addClass('disabled')
+        .find('span').toggleClass('hidden');
 
     var secureData = {},
         authData = {},
@@ -314,8 +341,12 @@ function validateAdminAcceptJs(event) {
 
     // Extract the card number, expiration date, and card code.
     cardData.cardNumber = jQuery("#inputCardNumber").val().replace(/\s/g, '');
-    var cardExpiry = ccForm.find('#inputCardExpiry').payment('cardExpiryVal');
-    cardData.month = cardExpiry.month;
+    var cardExpiry = jQuery('#inputCardExpiry').payment('cardExpiryVal'),
+        cardMonth = cardExpiry.month.toString();
+    if (cardMonth.length === 1) {
+        cardMonth = '0' + cardMonth;
+    }
+    cardData.month = cardMonth;
     cardData.year = cardExpiry.year;
     cardExpiry = null;
     cardData.cardCode = jQuery("#cardcvv").val();
@@ -338,7 +369,7 @@ function acceptJsAdminResponseHandler(response) {
         }
         // Show the errors on the form:
         adminCreditCard.find('.gateway-errors').text(errors).removeClass('hidden');
-        scrollToError();
+        scrollToGatewayInputError();
         adminCreditCard.find('#btnSaveChanges').removeAttr('disabled').removeClass('disabled'); // Re-enable submission
     } else {
         adminCreditCard.find('.gateway-errors').text('').addClass('hidden');
@@ -346,23 +377,20 @@ function acceptJsAdminResponseHandler(response) {
         adminCreditCard.append(jQuery('<input type="hidden" name="dataDescriptor">').val(response.opaqueData.dataDescriptor));
         adminCreditCard.append(jQuery('<input type="hidden" name="dataValue">').val(response.opaqueData.dataValue));
 
-
-        adminCreditCard.off('submit', validateAdminAcceptJs);
-
         // Firefox will be unable to re-enable and click original submit button, so we will inject another one
         adminCreditCard.append('<input type="submit" id="hiddenSubmit" name="submit" value="Save Changes" style="display: none">');
-
-        jQuery('#hiddenSubmit').click();
+        adminCreditCard.off('submit', validateAdminAcceptJs);
+        var hiddenButton = jQuery('#hiddenSubmit');
+        if (acceptJsModalInput) {
+            var modalFooter = jQuery('#modalAjaxFooter'),
+                hiddenButton = modalFooter.find('#btnSave');
+            hiddenButton.removeClass('disabled');
+            jQuery('#modalAjax .loader').fadeOut();
+            hiddenButton.off('click', validateAdminAcceptJs);
+            hiddenButton.on('click', submitIdAjaxModalClickEvent);
+        }
+        hiddenButton.click();
     }
-}
-
-function scrollToError() {
-    jQuery('html, body').animate(
-        {
-            scrollTop: jQuery('.gateway-errors,.assisted-cc-input-feedback').offset().top - 50
-        },
-        500
-    );
 }
 
 function enable_acceptjs_card_input() {

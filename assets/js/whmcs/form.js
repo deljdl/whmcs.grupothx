@@ -58,5 +58,15 @@ function () {
         });
     };
 
+    this.reloadCaptcha = function (element)
+    {
+        if (!element) {
+            element = jQuery('#inputCaptchaImage');
+        }
+
+        var src = jQuery(element).data('src');
+        jQuery(element).attr('src', src + '?nocache=' + (new Date()).getTime());
+    };
+
     return this;
 });

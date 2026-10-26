@@ -1404,5 +1404,10 @@
         "extensions": ".com.ar,.org.ar,.gob.ar,.gov.ar,.tur.ar,.net.ar,mil.ar,musica.ar",
         "uri": "socket://whois.nic.ar",
         "available": "El dominio no se encuentra registrado en NIC Argentina"
+    },
+    {
+        "extensions": ".dev",
+        "uri": "socket://whois.nic.google",
+        "available": "Domain not found"
     }
 ]

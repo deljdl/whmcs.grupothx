@@ -1,6 +1,7 @@
 <?php
 
 use WHMCS\Application;
+use WHMCS\Database\Capsule;
 
 require("../init.php");
 
@@ -18,10 +19,11 @@ require("../init.php");
 
     // Verify user input for pid exists, is numeric, and as is a valid id
     if (is_numeric($pid)) {
-        $result = select_query("tblproducts", "", array("id" => $pid));
-        $data = mysql_fetch_array($result);
-        $pid = $data['id'];
-        $paytype = $data['paytype'];
+        $data = Capsule::table('tblproducts')
+            ->where('id', '=', $pid)
+            ->first();
+        $pid = $data->id;
+        $paytype = $data->paytype;
     } else {
         $pid = '';
     }
@@ -46,20 +48,24 @@ require("../init.php");
     }
     $currencyid = $currency['id'];
 
-    $result = select_query("tblpricing","",array("type"=>"product","currency"=>$currencyid,"relid"=>$pid));
-    $data = mysql_fetch_array($result);
-    $msetupfee = $data['msetupfee'];
-    $qsetupfee = $data['qsetupfee'];
-    $ssetupfee = $data['ssetupfee'];
-    $asetupfee = $data['asetupfee'];
-    $bsetupfee = $data['bsetupfee'];
-    $tsetupfee = $data['tsetupfee'];
-    $monthly = $data['monthly'];
-    $quarterly = $data['quarterly'];
-    $semiannually = $data['semiannually'];
-    $annually = $data['annually'];
-    $biennially = $data['biennially'];
-    $triennially = $data['triennially'];
+    $data = Capsule::table('tblpricing')
+        ->where('type', '=', 'product')
+        ->where('currency', '=', $currencyid)
+        ->where('relid', '=', $pid)
+        ->first();
+
+    $msetupfee = $data->msetupfee;
+    $qsetupfee = $data->qsetupfee;
+    $ssetupfee = $data->ssetupfee;
+    $asetupfee = $data->asetupfee;
+    $bsetupfee = $data->bsetupfee;
+    $tsetupfee = $data->tsetupfee;
+    $monthly = $data->monthly;
+    $quarterly = $data->quarterly;
+    $semiannually = $data->semiannually;
+    $annually = $data->annually;
+    $biennially = $data->biennially;
+    $triennially = $data->triennially;
 
     $systemurl = App::getSystemUrl();
 

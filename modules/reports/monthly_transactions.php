@@ -1,9 +1,22 @@
 <?php
 
-if (!defined("WHMCS"))
-    die("This file cannot be accessed directly");
+use WHMCS\Carbon;
+use WHMCS\Database\Capsule;
 
-$reportdata["title"] = "Monthly Transactions Report for ".$months[(int)$month]." ".$year;
+if (!defined("WHMCS")) {
+    die("This file cannot be accessed directly");
+}
+
+$dateFilter = Carbon::create(
+    $year,
+    $month,
+    1
+);
+
+$startOfMonth = $dateFilter->startOfMonth()->toDateTimeString();
+$endOfMonth = $dateFilter->endOfMonth()->toDateTimeString();
+
+$reportdata["title"] = "Monthly Transactions Report for " . $months[(int) $month] . " " . $year;
 $reportdata["description"] = "This report provides a summary of daily payments activity for a given month. The Amount Out figure includes both expenditure transactions and refunds.";
 
 $reportdata["currencyselections"] = true;
@@ -18,31 +31,67 @@ $reportdata["tableheadings"] = array(
 );
 
 $reportvalues = array();
-$query = "SELECT date_format(date, '%e'),SUM(amountin),SUM(fees),SUM(amountout) FROM tblaccounts INNER JOIN tblclients ON tblclients.id=tblaccounts.userid WHERE date LIKE '". $year . "-" . $month . "-%' AND tblclients.currency=" . (int)$currencyid . " GROUP BY date_format(date, '%e') ORDER BY date ASC";
-$result = full_query($query);
-while ($data = mysql_fetch_array($result)) {
-    $reportvalues[$data[0]] = array(
-        'amountin' => $data[1],
-        'fees' => $data[2],
-        'amountout' => $data[3],
+$dateFormat = Capsule::raw('date_format(date, "%e")');
+
+$result = Capsule::table('tblaccounts')
+    ->join('tblclients', 'tblclients.id', '=', 'tblaccounts.userid')
+    ->where('tblclients.currency', $currencyid)
+    ->whereBetween(
+        'date',
+        [
+            $startOfMonth,
+            $endOfMonth
+        ]
+    )
+    ->orderBy('date')
+    ->groupBy($dateFormat)
+    ->get(
+        [
+            Capsule::raw('date_format(date, "%e") as day_of_month'),
+            Capsule::raw('SUM(amountin) as in_amount'),
+            Capsule::raw('SUM(fees) as fee_amount'),
+            Capsule::raw('SUM(amountout) as out_amount'),
+        ]
+    );
+
+foreach ($result as $data) {
+    $reportvalues[$data->day_of_month] = array(
+        'amountin' => $data->in_amount,
+        'fees' => $data->fee_amount,
+        'amountout' => $data->out_amount,
     );
 }
-$query = "SELECT date_format(date, '%e'),SUM(amountin),SUM(fees),SUM(amountout) FROM tblaccounts WHERE date LIKE '" . $year . "-" . $month . "-%' AND userid='0' AND currency=" . (int)$currencyid . " GROUP BY date_format(date, '%e') ORDER BY date ASC";
-$result = full_query($query);
-while ($data = mysql_fetch_array($result)) {
-    if (!array_key_exists($data[0], $reportvalues)) {
-        $reportvalues[$data[0]] = array(
-            'amountin' => 0,
-            'fees' => 0,
-            'amountout' => 0,
-        );
-    }
-    $reportvalues[$data[0]]['amountin'] += $data[1];
-    $reportvalues[$data[0]]['fees'] += $data[2];
-    $reportvalues[$data[0]]['amountout'] += $data[3];
+
+$result = Capsule::table('tblaccounts')
+    ->where('userid', 0)
+    ->where('currency', $currencyid)
+    ->whereBetween(
+        'date',
+        [
+            $startOfMonth,
+            $endOfMonth
+        ]
+    )
+    ->orderBy('date')
+    ->groupBy($dateFormat)
+    ->get(
+        [
+            Capsule::raw('date_format(date, "%e") as day_of_month'),
+            Capsule::raw('SUM(amountin) as in_amount'),
+            Capsule::raw('SUM(fees) as fee_amount'),
+            Capsule::raw('SUM(amountout) as out_amount'),
+        ]
+    );
+
+foreach ($result as $data) {
+    $reportvalues[$data->day_of_month] = array(
+        'amountin' => $data->in_amount,
+        'fees' => $data->fee_amount,
+        'amountout' => $data->out_amount,
+    );
 }
 
-for ($dayOfTheMonth = 1; $dayOfTheMonth <= 31; $dayOfTheMonth++) {
+for ($dayOfTheMonth = 1; $dayOfTheMonth <= $dateFilter->lastOfMonth()->day; $dayOfTheMonth++) {
     $amountin = isset($reportvalues[$dayOfTheMonth]['amountin']) ? $reportvalues[$dayOfTheMonth]['amountin'] : '0';
     $fees = isset($reportvalues[$dayOfTheMonth]['fees']) ? $reportvalues[$dayOfTheMonth]['fees'] : '0';
     $amountout = isset($reportvalues[$dayOfTheMonth]['amountout']) ? $reportvalues[$dayOfTheMonth]['amountout'] : '0';

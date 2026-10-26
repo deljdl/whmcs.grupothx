@@ -1,6 +1,7 @@
 <?php
 
 use WHMCS\Carbon;
+use WHMCS\Database\Capsule;
 
 if (!defined("WHMCS")) {
     die("This file cannot be accessed directly");
@@ -16,8 +17,8 @@ if (!$range) {
     $range = $lastWeek->toAdminDateFormat() . ' - ' . $today->toAdminDateFormat();
 }
 $dateRange = Carbon::parseDateRangeValue($range);
-$startdate = $dateRange['from']->toAdminDateFormat();
-$enddate = $dateRange['to']->toAdminDateFormat();
+$startdate = $dateRange['from'];
+$enddate = $dateRange['to'];
 
 $reportdata['headertext'] = '';
 if (!$print) {
@@ -56,15 +57,31 @@ HTML;
 $reportdata["tableheadings"][] = "Tag";
 $reportdata["tableheadings"][] = "Count";
 
-$result = full_query("SELECT `tag`, COUNT(*) AS `count` FROM `tbltickettags` INNER JOIN tbltickets ON tbltickets.id=tbltickettags.ticketid WHERE tbltickets.date>='".db_make_safe_human_date($fromdate)." 00:00:00' AND tbltickets.date<='".db_make_safe_human_date($todate)." 23:59:59' GROUP BY tbltickettags.tag ORDER BY `count` DESC");
-while ($data = mysql_fetch_array($result)) {
-    $tag = $data[0];
-    $count = $data[1];
+$results = Capsule::table('tbltickettags')
+    ->select(Capsule::raw('tbltickettags.tag, count(*) as `count`'))
+    ->join('tbltickets', 'tbltickets.id', '=', 'tbltickettags.ticketid')
+    ->whereBetween(
+        'tbltickets.date',
+        [
+            $startdate->toDateTimeString(),
+            $enddate->toDateTimeString(),
+        ]
+    )
+    ->groupBy('tbltickettags.tag')
+    ->orderBy('count', 'desc')
+    ->get();
 
-    $reportdata["tablevalues"][] = array($tag,$count);
+foreach ($results as $result) {
+    $tag = $result->tag;
+    $count = $result->count;
 
-    $chartdata['rows'][] = array('c'=>array(array('v'=>$tag),array('v'=>(int)$count,'f'=>$count)));
-
+    $reportdata["tablevalues"][] = [$tag, $count];
+    $chartdata['rows'][] = [
+        'c' => [
+            ['v' => $tag],
+            ['v' => (int) $count, 'f' => $count],
+        ],
+    ];
 }
 
 $chartdata['cols'][] = array('label'=>'Tag','type'=>'string');

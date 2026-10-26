@@ -120,7 +120,7 @@
     </tr>
     <tr>
         <td class="fieldlabel">
-            {$_ADMINLANG.support.flag}
+            {$_ADMINLANG.support.assignedto}
         </td>
         <td class="fieldarea">
             <select name="flagto" class="form-control select-inline">
@@ -244,7 +244,7 @@
         </tr>
         <tr>
             <td class="fieldlabel">
-                {$_ADMINLANG.support.flag}
+                {$_ADMINLANG.support.assignedto}
             </td>
             <td class="fieldarea">
                 <select name="flagto" class="form-control select-inline">
@@ -332,7 +332,7 @@
                 <input type="text" name="subject" value="{$subject}" class="form-control input-300">
             </td>
             <td class="fieldlabel">
-                {$_ADMINLANG.support.flag}
+                {$_ADMINLANG.support.assignedto}
             </td>
             <td class="fieldarea">
                 <select name="flagto" class="form-control select-inline">
@@ -398,22 +398,58 @@
 </div>
 
 {if $relatedservices}
-<div class="tablebg">
-<table class="datatable" id="relatedservicestbl" width="100%" border="0" cellspacing="1" cellpadding="3">
-<tr><th>{$_ADMINLANG.fields.product}</th><th>{$_ADMINLANG.fields.amount}</th><th>{$_ADMINLANG.fields.billingcycle}</th><th>{$_ADMINLANG.fields.signupdate}</th><th>{$_ADMINLANG.fields.nextduedate}</th><th>{$_ADMINLANG.fields.status}</th></tr>
-{foreach from=$relatedservices item=relatedservice}
-<tr{if $relatedservice.selected} class="rowhighlight"{/if}><td>{$relatedservice.name}</td><td>{$relatedservice.amount}</td><td>{$relatedservice.billingcycle}</td><td>{$relatedservice.regdate}</td><td>{$relatedservice.nextduedate}</td><td>{$relatedservice.status}</td></tr>
-{/foreach}
-</table>
-</div>
-{if $relatedservicesexpand}
-    <div id="relatedservicesexpand">
-        <a href="#" onclick="expandRelServices();return false" class="btn btn-default btn-xs">
-            <i class="fas fa-plus"></i>
-            {$_ADMINLANG.support.expand}
-        </a>
+    <div class="tablebg">
+        <table class="datatable" id="relatedservicestbl" width="100%" border="0" cellspacing="1" cellpadding="3">
+            <tr data-original="true">
+                <th class="hidden related-service" width="20"></th>
+                <th>{$_ADMINLANG.fields.product}</th>
+                <th>{$_ADMINLANG.fields.amount}</th>
+                <th>{$_ADMINLANG.fields.billingcycle}</th>
+                <th>{$_ADMINLANG.fields.signupdate}</th>
+                <th>{$_ADMINLANG.fields.nextduedate}</th>
+                <th>{$_ADMINLANG.fields.status}</th>
+            </tr>
+            {foreach $relatedservices as $relatedservice}
+                <tr{if $relatedservice.selected} class="rowhighlight"{/if} data-original="true">
+                    <td class="hidden related-service">
+                        <label>
+                            <input type="radio" name="related_service[]" data-type="{$relatedservice.type}" value="{$relatedservice.id}"{if $relatedservice.selected} checked="checked"{/if}>
+                        </label>
+                    </td>
+                    <td>{$relatedservice.name}</td>
+                    <td>{$relatedservice.amount}</td>
+                    <td>{$relatedservice.billingcycle}</td>
+                    <td>{$relatedservice.regdate}</td>
+                    <td>{$relatedservice.nextduedate}</td>
+                    <td>{$relatedservice.status}</td>
+                </tr>
+            {/foreach}
+        </table>
     </div>
-{/if}
+    <div id="relatedservicesexpand" class="ticket-action-buttons pull-right">
+        <button id="btnRelatedServiceExpand" class="btn btn-default btn-xs{if !$relatedservicesexpand} disabled" disabled="disabled{/if}">
+            <span>
+                <i class="far fa-stream"></i>
+                {$_ADMINLANG.support.viewAllServices}
+            </span>
+            <span class="hidden">
+                <i class="far fa-spinner fa-spin"></i>
+                {$_ADMINLANG.global.loading}
+            </span>
+        </button>
+    </div>
+    <div id="selectRelatedService" class="ticket-action-buttons">
+        <button id="btnSelectRelatedService" type="button" class="btn btn-default btn-xs{if !count($relatedservice)} disabled" disabled="disabled{/if}" data-expandable="{$relatedservicesexpand}">
+            <i class="fas fa-tasks"></i>
+            {lang key='support.associateService'}
+        </button>
+        <button id="btnSelectRelatedServiceSave" type="button" class="btn btn-primary btn-xs hidden">
+            {lang key='global.save'}
+        </button>
+        <button id="btnSelectRelatedServiceCancel" type="button" class="btn btn-default btn-xs hidden">
+            {lang key='global.cancel'}
+        </button>
+    </div>
 {/if}
 
 {if !$relatedservices}<br />{/if}
@@ -550,7 +586,7 @@
 </a>
 {if $repliescount>1}
     <span style="float:right;">
-        <input type="button" value="{$_ADMINLANG.support.splitticketdialogbutton}" onclick="$('#modalsplitTicket').modal('show')" class="btn btn-xs" />
+        <input type="button" value="{$_ADMINLANG.support.splitticketdialogbutton}" onclick="$('#modalsplitTicket').modal('show')" class="btn btn-default btn-xs" />
     </span>
 {/if}
 

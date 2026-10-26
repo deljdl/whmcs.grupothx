@@ -579,6 +579,12 @@ table.datatable tr.grey-out td, table.datatable tr.grey-out td a {
     color: #999;
 }
 
+.datatable tr.detail-row td {
+    padding: 3px;
+    background-color: #f6f6f6;
+    font-size: 0.9em;
+}
+
 /* --------------------------------------------------------------
    LISTS
 -------------------------------------------------------------- */
@@ -702,6 +708,12 @@ table.datatable th.domain-pricing-head {
 }
 table.datatable tr.domain-pricing-row td {
     height: 43px;
+}
+table.datatable tr.domain-pricing-row-bottom td {
+    border-bottom: none;
+}
+table.datatable tr.domain-pricing-row-top td {
+    border-top: 1px solid #999;
 }
 table.datatable tr td.field-highlight {
     background-color: #EFEFEF;
@@ -987,6 +999,14 @@ table.clientssummarystats tr.altrow td {
 table.clientssummarystats td.client-paymethod.gateway-inactive .paymethod-description {
     text-decoration: line-through;
 }
+#modalAjax .modal-body .gateway-response {
+    text-align: left;
+    line-height: 0.8;
+    margin-top: 10px;
+    max-height: 100px;
+    overflow-x: auto;
+    overflow-y: scroll;
+}
 .clientsummaryactions {
     float:right;
     margin: -2px 0;
@@ -1221,9 +1241,8 @@ table.clientssummarystats td.client-paymethod.gateway-inactive .paymethod-descri
     text-decoration: underline;
 }
 
-#relatedservicesexpand {
+.ticket-action-buttons {
     margin: -5px 15px 15px 15px;
-    text-align: right;
 }
 
 #watch-ticket {
@@ -1636,6 +1655,11 @@ div.admin-tabs .context-btn-container {
     margin: 0 auto;
     max-width: 1200px;
 }
+ul.admin-tabs-v2 > li > a.dropdown-toggle {
+    height: unset;
+    line-height: unset;
+    text-decoration: none;
+}
 
 /* --------------------------------------------------------------
    TABLES
@@ -1875,6 +1899,10 @@ div.partner-modal div.loader-container {
     position: relative;
 }
 
+.iframe-input-container {
+    height: 34px;
+}
+
 /* --------------------------------------------------------------
    Error Page
 -------------------------------------------------------------- */
@@ -2077,7 +2105,7 @@ table.applink-links tr.tDnD_whileDrag td {
 -------------------------------------------------------------- */
 
 .selectize span.name,
-.selectize-dropdown-content span.name{
+.selectize-dropdown-content span.name {
     display: block;
     font-size: 0.9em;
     line-height: 1.4em;
@@ -2086,7 +2114,8 @@ table.applink-links tr.tDnD_whileDrag td {
     padding: 3px 12px;
     border: none;
 }
-.selectize span.email {
+.selectize span.email,
+.selectize-dropdown-content span.order-details {
     display: block;
     font-size: 0.75em;
     color: #888;
@@ -2979,6 +3008,18 @@ table.module-settings .icon-warning {
     font-size: 1.5em;
 }
 
+.modal-wizard .wizard-transition-step .file-auth {
+    color: #31708f;
+}
+
+.modal-wizard .wizard-transition-step .icon.file-auth {
+    font-size: 5em;
+}
+.modal-wizard .wizard-transition-step .cert-file-auth .save-reminder {
+    padding: 5px;
+    margin: 10px 0
+}
+
 /* --------------------------------------------------------------
    Automation Settings
 -------------------------------------------------------------- */
@@ -3259,7 +3300,7 @@ table.module-settings .icon-warning {
 
 .feature-highlights-content {
     margin: -15px;
-    background: url('../../../images/whatsnew/bg-78.gif');
+    background: url('../../../images/whatsnew/bg.png');
     background-repeat: repeat-x;
 }
 .feature-highlights-content img {
@@ -4072,4 +4113,158 @@ ul.dropdown-menu-page {
 .registrar-config-container .errorbox,
 .registrar-config-container .infobox {
     margin-top: 7px;
+}
+
+/* --------------------------------------------------------------
+   Support
+-------------------------------------------------------------- */
+
+.browse-section-title {
+    margin: 20px 0;
+    padding:10px 20px;
+    background-color:#efefef;
+    font-size:18px;
+    border-radius:5px;
+}
+
+span.grey-item {
+    color: #cccccc;
+}
+
+/* --------------------------------------------------------------
+    TLD Importing
+ --------------------------------------------------------------*/
+
+.module-selector {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    height: 100px;
+    line-height: 80px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+.module-selector img {
+    max-width: 80%;
+    max-height: 50px;
+}
+
+#loadingTlds {
+    font-size: 1.1em;
+    font-weight: normal;
+}
+#loadingTlds i {
+    margin-bottom: 10px;
+    font-size: 5em;
+    color: #969696;
+    --fa-secondary-color: #d6d6d6;
+}
+.tld-import-step th.tld-check-all-th {
+    width: 20px;
+}
+.tld-import-step th.tld-import-list {
+    width: 30px;
+}
+.tld-import-step .tld-pricing-td {
+    text-align: center;
+    border-top: 1px solid #cccdcd;
+    border-left: 1px solid #cccdcd;
+    color: #000;
+    border-right: 1px solid #d0d0d0;
+    border-bottom: 1px solid #d0d0d0;
+    background: 0;
+    min-width: 130px;
+    max-width: 200px;
+}
+.tld-import-step .tld-pricing {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+    zoom: 1;
+}
+.tld-import-step .tld-pricing > .local-pricing {
+    font-weight: bold;
+}
+.tld-import-step .tld-pricing > .remote-pricing {
+    font-size: 11px;
+    color: #939393;
+    margin-top: 5px;
+}
+.tld-import-step .tld-margin {
+    float: right;
+    padding: 0 0 0 8px;
+    width: 55px;
+    word-wrap: break-word;
+    color: #939393;
+    font-size: 11px;
+    line-height: 42px;
+    height: 42px;
+    border-left: 1px solid #ccc;
+}
+.tld-import-step .absolute-display {
+    display: none;
+}
+.tld-import-step .negative {
+    background: #ffe9e6;
+    border: 1px double #fe0000!important
+}
+.tld-import-step .negative > .margin {
+    color: #f00!important;
+}
+.tld-import-step div.tld-import-percentage-margin {
+    max-width: 110px;
+}
+.tld-import-step div.tld-import-fixed-margin {
+    max-width: 163px;
+}
+
+/* --------------------------------------------------------------
+    Automation Status Detail
+ --------------------------------------------------------------*/
+.automation-data-table {
+    font-size: 0.9em;
+}
+
+.automation-data-table thead tr > .id,
+.automation-data-table tbody tr > .id,
+.automation-data-table thead tr > .status,
+.automation-data-table tbody tr > .status {
+    width: 12%;
+    vertical-align: middle;
+}
+
+.automation-data-table thead tr > .name,
+.automation-data-table tbody tr > .name,
+.automation-data-table thead tr > .product,
+.automation-data-table tbody tr > .product,
+.automation-data-table thead tr > .due-date,
+.automation-data-table tbody tr > .due-date,
+.automation-data-table thead tr > .total,
+.automation-data-table tbody tr > .total,
+.automation-data-table thead tr > .expiry-date,
+.automation-data-table tbody tr > .expiry-date {
+    vertical-align: middle;
+}
+
+.automation-data-table thead tr > th.error,
+.automation-data-table tbody tr > td.error {
+    width: 30%;
+    vertical-align: middle;
+}
+
+.automation-data-table thead tr > .edit-link,
+.automation-data-table tbody tr > .edit-link,
+.automation-data-table thead tr > .queue-link,
+.automation-data-table tbody tr > .queue-link {
+    width: 3%;
+    vertical-align: middle;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.automation-status .automation-clickable-widget:hover {
+    cursor: pointer;
 }

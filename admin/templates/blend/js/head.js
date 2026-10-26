@@ -329,7 +329,7 @@ $(document).ready(function(){
                                 linkStart = '<a href="' + otherResult.href + '">';
                                 linkEnd = '</a>';
                             }
-                            if (otherResult.subTitle.length) {
+                            if (otherResult.subTitle && otherResult.subTitle.length) {
                                 subTitle = '<em>' + otherResult.subTitle + '</em>';
                             }
                             searchResult = linkStart;

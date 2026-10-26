@@ -22,52 +22,58 @@
 {/foreach}
 
 <div class="row">
+    {if $allowreissues || $packagesupgrade || $showCancellationButton}
+        <div class="col-md-4 pull-md-right">
 
-    <div class="col-md-4 pull-md-right">
+            <div class="row">
 
-        <div class="row">
+                {if $allowreissues}
+                    <div class="col-xs-4 col-md-12 margin-bottom-5">
+                        <form method="post" action="clientarea.php?action=productdetails">
+                            <input type="hidden" name="id" value="{$id}" />
+                            <input type="hidden" name="serveraction" value="custom" />
+                            <input type="hidden" name="a" value="reissue" />
+                            <button type="submit" class="btn btn-success btn-lg btn-block"{if $status != "Active"} disabled{/if}>
+                                <i class="fas fa-sync fa-2x"></i><br />
+                                {$LANG.licensingaddon.reissue}
+                            </button>
+                        </form>
+                    </div>
+                {/if}
 
-            {if $allowreissues}
-                <div class="col-xs-4 col-md-12 margin-bottom-5">
-                    <form method="post" action="clientarea.php?action=productdetails">
-                        <input type="hidden" name="id" value="{$id}" />
-                        <input type="hidden" name="serveraction" value="custom" />
-                        <input type="hidden" name="a" value="reissue" />
-                        <button type="submit" class="btn btn-success btn-lg btn-block"{if $status != "Active"} disabled{/if}>
-                            <i class="fas fa-sync fa-2x"></i><br />
-                            {$LANG.licensingaddon.reissue}
-                        </button>
-                    </form>
-                </div>
-            {/if}
+                {if $packagesupgrade}
+                    <div class="col-xs-4 col-md-12 margin-bottom-5">
+                        <a href="upgrade.php?type=package&id={$id}" role="button" class="btn btn-info btn-lg btn-block">
+                            <i class="fas fa-arrow-up fa-2x"></i><br />
+                            {$LANG.upgrade}
+                        </a>
+                    </div>
+                {/if}
 
-            {if $packagesupgrade}
-                <div class="col-xs-4 col-md-12 margin-bottom-5">
-                    <a href="upgrade.php?type=package&id={$id}" role="button" class="btn btn-info btn-lg btn-block">
-                        <i class="fas fa-arrow-up fa-2x"></i><br />
-                        {$LANG.upgrade}
-                    </a>
-                </div>
-            {/if}
-
-            <div class="col-xs-4 col-md-12 margin-bottom-5">
-                <form method="post" action="clientarea.php?action=cancel">
-                    <input type="hidden" name="id" value="{$id}" />
-                    <button type="submit" class="btn btn-danger btn-lg btn-block{if $pendingcancellation} disabled{/if}">
-                        <i class="fas fa-times fa-2x"></i><br />
-                        {if $pendingcancellation}
-                            {$LANG.cancellationrequested}
-                        {else}
-                            {$LANG.cancel}
-                        {/if}
-                    </button>
-                </form>
+                {if $showCancellationButton}
+                    <div class="col-xs-4 col-md-12 margin-bottom-5">
+                        <form method="post" action="clientarea.php?action=cancel">
+                            <input type="hidden" name="id" value="{$id}" />
+                            <button type="submit" class="btn btn-danger btn-lg btn-block{if $pendingcancellation} disabled{/if}">
+                                <i class="fas fa-times fa-2x"></i><br />
+                                {if $pendingcancellation}
+                                    {$LANG.cancellationrequested}
+                                {else}
+                                    {$LANG.cancel}
+                                {/if}
+                            </button>
+                        </form>
+                    </div>
+                {/if}
             </div>
-
         </div>
+    {/if}
 
-    </div>
-    <div class="col-md-8">
+    {if $allowreissues || $packagesupgrade || $showCancellationButton}
+        <div class="col-md-8">
+    {else}
+        <div class="col-md-12">
+    {/if}
 
         <h4>{$LANG.licensingaddon.licensekey}</h4>
         <input type="text" class="form-control" readonly="true" value="{$licensekey}" />

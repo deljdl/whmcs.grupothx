@@ -55,6 +55,30 @@
             </div>
         </div>
 
+        {if count($metrics) > 0}
+        <h3>{$LANG.metrics.title}</h3>
+        <div class="fields-container">
+            <p>{$LANG.metrics.explanation}</p>
+            <ul>
+                {foreach $metrics as $metric}
+                    <li>
+                        {$metric.displayName}
+                        -
+                        {if count($metric.pricing) > 1}
+                            {$LANG.metrics.startingFrom} {$metric.lowestPrice} / {if $metric.unitName}{$metric.unitName}{else}{$LANG.metrics.unit}{/if}
+                            <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#modalMetricPricing-{$metric.systemName}">
+                                {$LANG.metrics.viewPricing}
+                            </button>
+                        {elseif count($metric.pricing) == 1}
+                            {$metric.lowestPrice} / {if $metric.unitName}{$metric.unitName}{else}{$LANG.metrics.unit}{/if}
+                            {if $metric.includedQuantity > 0} ({$metric.includedQuantity} {$LANG.metrics.includedNotCounted}){/if}
+                        {/if}
+                        {include file="$template/usagebillingpricing.tpl"}
+                    </li>
+                {/foreach}
+            </ul>
+        </div>
+        {/if}
         {if $productinfo.type eq "server"}
         <h3>{$LANG.cartconfigserver}</h3>
         <div class="fields-container">

@@ -1,14 +1,10 @@
 /*!
  * Automation Status Javascript.
  *
- * @copyright Copyright (c) WHMCS Limited 2005-2016
+ * @copyright Copyright (c) WHMCS Limited 2005-2019
  * @license http://www.whmcs.com/license/ WHMCS Eula
  */
- $(document).ready(function(){
-    $('#statsContainer').on('click', '.btn-day-nav', function (e){
-        e.preventDefault();
-        loadAutomationStatsForDate($(this).data('date'));
-    });
+$(document).ready(function(){
     $('#statsContainer').on('click', '.btn-viewing', function (e){
         e.preventDefault();
     });
@@ -28,14 +24,18 @@
 
 function loadAutomationStatsForDate(date) {
     $('#statsContainer').css('opacity', '0.5');
-        var jqxhr = WHMCS.http.jqClient.post( "automationstatus.php", 'action=stats&date=' + date,
+        WHMCS.http.jqClient.post(
+            "automationstatus.php",
+            'action=stats&date=' + date,
             function(data) {
-                $('#statsContainer').html(data.body);
-            }).fail(function() {
-                jQuery.growl({ title: "", message: "Your session has expired. Please refresh to continue." });
-            }).always(function() {
-                $('#statsContainer').css('opacity', '1');
-            });
+                $('.widgets-container').html(data.body);
+                $('.day-selector').find('.btn-viewing').html(data.newDate);
+            }
+        ).fail(function() {
+            jQuery.growl({ title: "", message: "Your session has expired. Please refresh to continue." });
+        }).always(function() {
+            $('#statsContainer').css('opacity', '1');
+        });
 }
 
 function refreshGraph() {

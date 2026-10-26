@@ -34,6 +34,10 @@
                     <div class="alert alert-danger">
                         {$errormessage}
                     </div>
+                {elseif !$productGroup}
+                    <div class="alert alert-info">
+                        {lang key='orderForm.selectCategory'}
+                    </div>
                 {/if}
             </div>
 
@@ -41,9 +45,11 @@
 
                 <div class="main-container">
 
-                    <div class="product-selector">
-                        <input type="text" id="product-selector" name="product-selector" value=""  title="product-selector"/>
-                    </div>
+                    {if $products}
+                        <div class="product-selector">
+                            <input type="text" id="product-selector" name="product-selector" value=""  title="product-selector"/>
+                        </div>
+                    {/if}
 
                     {foreach $products as $key => $product}
                         {$productId = ($product.pid) ? $product.pid : 'b'|cat:$product.bid}

@@ -1,9 +1,11 @@
 <?php
 
+use WHMCS\Database\Capsule;
 use WHMCS\Utility\Country;
 
-if (!defined("WHMCS"))
+if (!defined("WHMCS")) {
     die("This file cannot be accessed directly");
+}
 
 $reportdata["title"] = "Clients by Country";
 $reportdata["description"] = "This report shows the total number of active services per country, as well as total active unique clients per country in the table below.";
@@ -14,27 +16,43 @@ $countries = new Country();
 $countries = $countries->getCountryNameArray();
 
 $clientstats = array();
-$query = "SELECT country, COUNT(*) FROM tblclients WHERE status='Active' GROUP BY country ORDER BY country";
-$result = full_query($query);
-while ($data = mysql_fetch_array($result)) {
-    $clientstats[$data[0]] = $data[1];
+
+$results = Capsule::table('tblclients')
+    ->select(Capsule::raw('country, count(*) as `count`'))
+    ->where('Status', '=', 'Active')
+    ->groupBy('country')
+    ->orderBy('country', 'asc')
+    ->get();
+foreach ($results as $result) {
+    $clientstats[$result->country] = $result->count;
 }
 
-$query = "SELECT country, COUNT(*) FROM  tblhosting INNER JOIN tblclients ON tblclients.id=tblhosting.userid WHERE domainstatus='Active' GROUP BY country ORDER BY country";
-$result = full_query($query);
-while ($data = mysql_fetch_array($result)) {
-
-    $countryname = $countries[$data[0]];
+$results = Capsule::table('tblhosting')
+    ->select(Capsule::raw('tblclients.country, count(*) as `count`'))
+    ->join('tblclients', 'tblclients.id', '=', 'tblhosting.userid')
+    ->where('domainstatus', '=', 'Active')
+    ->groupBy('country')
+    ->orderBy('country', 'asc')
+    ->get();
+foreach ($results as $result) {
+    $countryname = $countries[$result->country];
     if ($countryname) {
+        $reportdata["tablevalues"][] = [
+            $countryname,
+            $result->count,
+            $clientstats[$result->country],
+        ];
 
-    $reportdata["tablevalues"][] = array($countryname,$data[1],$clientstats[$data[0]]);
+        $chartdata['rows'][] = [
+            'c' => [
+                ['v' => $result->country],
+                ['v' => $result->count],
+                ['v' => $clientstats[$result->country]],
+            ]
+        ];
 
-    $chartdata['rows'][] = array('c'=>array(array('v'=>$data[0]),array('v'=>$data[1]),array('v'=>$clientstats[$data[0]])));
-
-    unset($clientstats[$data[0]]);
-
+        unset($clientstats[$result->country]);
     }
-
 }
 
 foreach ($clientstats AS $country=>$activeclient) {
@@ -57,5 +75,3 @@ $args = array();
 $args['legendpos'] = 'right';
 
 $reportdata["headertext"] = $chart->drawChart('Geo',$chartdata,$args,'600px');
-
-?>

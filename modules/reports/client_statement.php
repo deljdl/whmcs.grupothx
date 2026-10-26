@@ -1,6 +1,7 @@
 <?php
 
 use WHMCS\Carbon;
+use WHMCS\Database\Capsule;
 
 if (!defined("WHMCS")) {
     die("This file cannot be accessed directly");
@@ -61,49 +62,93 @@ $statement = array();
 $count = $balance = $totalcredits = $totaldebits = 0;
 
 if ($userid) {
+    $results = Capsule::table('tblinvoices')
+        ->where('userid', '=', $userid)
+        ->whereIn(
+            'status',
+            [
+                'Unpaid',
+                'Paid',
+                'Collections',
+            ]
+        )
+        ->orderBy('date', 'asc')
+        ->get();
+    foreach ($results as $result) {
+        $invoiceid = $result->id;
+        $date = $result->date;
+        $total = ($result->credit + $result->total);
 
-$result = select_query("tblinvoices","","userid='".db_escape_string($userid)."' AND status IN ('Unpaid','Paid','Collections')","date","ASC");
-while($data = mysql_fetch_array($result)) {
-    $invoiceid = $data["id"];
-    $date = $data["date"];
-    $total = $data["credit"]+$data["total"];
-    $result2 = select_query("tblinvoiceitems","id","invoiceid='$invoiceid' AND (type='AddFunds' OR type='Invoice')");
-    $data = mysql_fetch_array($result2);
-    $addfunds = $data[0];
-    if (!$addfunds) $statement[str_replace('-','',$date)."_".$count] = array("Invoice",$date,"<a href=\"invoices.php?action=edit&id=$invoiceid\" target=\"_blank\">#$invoiceid</a>",0,$total);
-    $count++;
-}
-
-$result = select_query("tblaccounts","","userid='$userid'","date","ASC");
-while($data = mysql_fetch_array($result)) {
-    $transid = $data["id"];
-    $date = $data["date"];
-    $description = $data["description"];
-    $amountin = $data["amountin"];
-    $amountout = $data["amountout"];
-    $invoiceid = $data["invoiceid"];
-    $date = substr($date,0,10);
-    $result2 = select_query("tblinvoiceitems","type",array("invoiceid"=>$invoiceid));
-    $data = mysql_fetch_array($result2);
-    $itemtype = $data[0];
-    if ($itemtype=="AddFunds") {
-        $description = "Credit Prefunding";
-    } elseif ($itemtype=="Invoice") {
-        $description = "Mass Invoice Payment - ";
-        $result2 = select_query("tblinvoiceitems","relid",array("invoiceid"=>$invoiceid),"relid","ASC");
-        while ($data = mysql_fetch_array($result2)) {
-            $invoiceid = $data[0];
-            $description .= "<a href=\"invoices.php?action=edit&id=$invoiceid\" target=\"_blank\">#$invoiceid</a>, ";
+        $addfunds = Capsule::table('tblinvoiceitems')
+            ->where('invoiceid', '=', $invoiceid)
+            ->whereIn(
+                'type',
+                [
+                    'AddFunds',
+                    'Invoice',
+                ]
+            )
+            ->value('id');
+        if (!$addfunds) {
+            $statement[str_replace('-', '', $date) . "_" . $count] = [
+                "Invoice",
+                $date,
+                "<a href=\"invoices.php?action=edit&id=$invoiceid\" target=\"_blank\">#$invoiceid</a>",
+                0,
+                $total,
+            ];
         }
-        $description = substr($description,0,-2);
-    } else {
-        $description = $description;
-        if ($invoiceid) $description .= " - <a href=\"invoices.php?action=edit&id=$invoiceid\" target=\"_blank\">#$invoiceid</a>";
-    }
-    $statement[str_replace('-','',$date)."_".$count] = array("Transaction",$date,$description,$amountin,$amountout);
-    $count++;
-}
 
+        $count++;
+    }
+
+    $results = Capsule::table('tblaccounts')
+        ->where('userid', '=', $userid)
+        ->orderBy('date', 'asc')
+        ->get();
+    foreach ($results as $result) {
+        $transid = $result->id;
+        $date = $result->date;
+        $description = $result->description;
+        $amountin = $result->amountin;
+        $amountout = $result->amountout;
+        $invoiceid = $result->invoiceid;
+        $date = substr($date, 0, 10);
+
+        $itemtype = Capsule::table('tblinvoiceitems')
+            ->where('invoiceid', '=', $invoiceid)
+            ->value('type');
+        if ($itemtype == "AddFunds") {
+            $description = "Credit Prefunding";
+        } elseif ($itemtype == "Invoice") {
+            $description = "Mass Invoice Payment - ";
+
+            $relids = Capsule::table('tblinvoiceitems')
+                ->where('invoiceid', '=', $invoiceid)
+                ->orderBy('relid', 'asc')
+                ->pluck('relid');
+            foreach ($relids as $relid) {
+                $description .= "<a href=\"invoices.php?action=edit&id=$relid\" target=\"_blank\">"
+                    . "#$relid</a>, ";
+            }
+            $description = substr($description, 0, -2);
+        } else {
+            $description = $description;
+            if ($invoiceid) {
+                $description .= " - <a href=\"invoices.php?action=edit&id=$invoiceid\" target=\"_blank\">"
+                    . "#$invoiceid</a>";
+            }
+        }
+
+        $statement[str_replace('-', '', $date) . "_" . $count] = [
+            "Transaction",
+            $date,
+            $description,
+            $amountin,
+            $amountout,
+        ];
+        $count++;
+    }
 }
 
 $datefrom = $dateto = '';

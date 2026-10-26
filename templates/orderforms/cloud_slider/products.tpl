@@ -48,81 +48,84 @@ jQuery(document).ready(function () {
                         </div>
                     {/if}
                     <div class="main-container">
-
                         <div class="pg-cont-container">
-
-                            <div class="heading-with-cloud">
-                                <div id="headline" class="texts-container">
-                                    {if $productGroup.headline}
-                                        {$productGroup.headline}
-                                    {else}
-                                        {$productGroup.name}
-                                    {/if}
+                            {if !$errormessage && !$productGroup}
+                                <div class="alert alert-info">
+                                    {lang key='orderForm.selectCategory'}
                                 </div>
-                                <div class="images-container">
-                                    <img src="{$WEB_ROOT}/templates/orderforms/{$carttpl}/img/sky-hr.png" alt="">
-                                </div>
-                            </div>
-
-                            {if $productGroup.tagline}
-                                <div id="tagline" class="tag-line-head">
-                                    <h5>{$productGroup.tagline}</h5>
-                                </div>
-                            {/if}
-
-                            <!-- Start: Price Calculation Box -->
-                            <div class="price-calc-container">
-                                <div class="price-calc-top">
-                                    <div class="row clearfix">
-                                        <div class="col-md-9" id="products-top">
-                                            <input type="hidden" id="scroll-top" name="scroll-top" value="" />
-                                        </div>
-                                        <div class="col-md-3 text-center">
-                                            <span id="priceTop" class="price-cont">--</span>
-                                            <a href="#" class="order-btn" id="product-order-button">
-                                                {$LANG.ordernowbutton}
-                                            </a>
-                                        </div>
+                            {else}
+                                <div class="heading-with-cloud">
+                                    <div id="headline" class="texts-container">
+                                        {if $productGroup.headline}
+                                            {$productGroup.headline}
+                                        {else}
+                                            {$productGroup.name}
+                                        {/if}
+                                    </div>
+                                    <div class="images-container">
+                                        <img src="{$WEB_ROOT}/templates/orderforms/{$carttpl}/img/sky-hr.png" alt="">
                                     </div>
                                 </div>
-                                <div class="price-calc-btm">
 
-                                    <!-- Start: Progress Area Container -->
-                                    <div id="productFeaturesTop" class="row clearfix">
-                                        <!-- Javascript will populate this area with product features. -->
+                                {if $productGroup.tagline}
+                                    <div id="tagline" class="tag-line-head">
+                                        <h5>{$productGroup.tagline}</h5>
                                     </div>
-                                    <!-- End: Progress Area Container -->
+                                {/if}
 
-                                    <div id="productDescription"></div>
+                                <!-- Start: Price Calculation Box -->
+                                <div class="price-calc-container">
+                                    <div class="price-calc-top">
+                                        <div class="row clearfix">
+                                            <div class="col-md-9" id="products-top">
+                                                <input type="hidden" id="scroll-top" name="scroll-top" value="" />
+                                            </div>
+                                            <div class="col-md-3 text-center">
+                                                <span id="priceTop" class="price-cont">--</span>
+                                                <a href="#" class="order-btn" id="product-order-button">
+                                                    {$LANG.ordernowbutton}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price-calc-btm">
 
-                                    {if count($productGroup.features) > 0}
-                                        <!-- Start: Includes Container -->
-                                        <div class="includes-container">
-                                            <div class="row clearfix">
+                                        <!-- Start: Progress Area Container -->
+                                        <div id="productFeaturesTop" class="row clearfix">
+                                            <!-- Javascript will populate this area with product features. -->
+                                        </div>
+                                        <!-- End: Progress Area Container -->
 
-                                                <div class="col-md-12">
-                                                    <div class="head-area">
+                                        <div id="productDescription"></div>
+
+                                        {if count($productGroup.features) > 0}
+                                            <!-- Start: Includes Container -->
+                                            <div class="includes-container">
+                                                <div class="row clearfix">
+
+                                                    <div class="col-md-12">
+                                                        <div class="head-area">
                                                         <span>
                                                             {$LANG.whatIsIncluded}
                                                         </span>
+                                                        </div>
+
+                                                        <ul id="list-contents" class="list-contents">
+                                                            {foreach $productGroup.features as $features}
+                                                                <li>{$features.feature}</li>
+                                                            {/foreach}
+                                                        </ul>
+
                                                     </div>
 
-                                                    <ul id="list-contents" class="list-contents">
-                                                        {foreach $productGroup.features as $features}
-                                                            <li>{$features.feature}</li>
-                                                        {/foreach}
-                                                    </ul>
-
                                                 </div>
-
                                             </div>
-                                        </div>
-                                        <!-- End: Includes Container -->
-                                    {/if}
+                                            <!-- End: Includes Container -->
+                                        {/if}
+                                    </div>
                                 </div>
-                            </div>
-                            <!-- End: Price Calculation Box -->
-
+                                <!-- End: Price Calculation Box -->
+                            {/if}
 
                             <!-- Start: Features Content -->
                             <div class="price-features-container">
@@ -183,34 +186,35 @@ jQuery(document).ready(function () {
                             </div>
                             <!-- End: Features Content -->
 
-                            <h3 class="text-center">{$LANG.cloudSlider.selectProductLevel}</h3>
+                            {if $productGroup}
+                                <h3 class="text-center">{$LANG.cloudSlider.selectProductLevel}</h3>
 
-                            <!-- Start: Price Calculation Box -->
-                            <div class="price-calc-container">
-                                <div class="price-calc-top">
-                                    <div class="row clearfix">
-                                        <div class="col-md-9" id="products-bottom">
-                                            <input type="hidden" id="scroll-bottom" name="scroll-bottom" value="" />
-                                        </div>
-                                        <div class="col-md-3 text-center">
-                                            <span id="priceBottom" class="price-cont">--</span>
-                                            <a href="#" class="order-btn" id="product-order-button-bottom">
-                                                {$LANG.ordernowbutton}
-                                            </a>
+                                <!-- Start: Price Calculation Box -->
+                                <div class="price-calc-container">
+                                    <div class="price-calc-top">
+                                        <div class="row clearfix">
+                                            <div class="col-md-9" id="products-bottom">
+                                                <input type="hidden" id="scroll-bottom" name="scroll-bottom" value="" />
+                                            </div>
+                                            <div class="col-md-3 text-center">
+                                                <span id="priceBottom" class="price-cont">--</span>
+                                                <a href="#" class="order-btn" id="product-order-button-bottom">
+                                                    {$LANG.ordernowbutton}
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="price-calc-btm">
+                                    <div class="price-calc-btm">
 
-                                    <!-- Start: Progress Area Container -->
-                                    <div id="productFeaturesBottom" class="row clearfix">
-                                        <!-- Javascript will populate this area with product features. -->
+                                        <!-- Start: Progress Area Container -->
+                                        <div id="productFeaturesBottom" class="row clearfix">
+                                            <!-- Javascript will populate this area with product features. -->
+                                        </div>
+                                        <!-- End: Progress Area Container -->
                                     </div>
-                                    <!-- End: Progress Area Container -->
                                 </div>
-                            </div>
-                            <!-- End: Price Calculation Box -->
-
+                                <!-- End: Price Calculation Box -->
+                            {/if}
                         </div>
 
                     </div>

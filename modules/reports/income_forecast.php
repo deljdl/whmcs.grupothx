@@ -1,7 +1,10 @@
 <?php
 
-if (!defined("WHMCS"))
+use WHMCS\Database\Capsule;
+
+if (!defined("WHMCS")) {
     die("This file cannot be accessed directly");
+}
 
 $months = array('January','February','March','April','May','June','July','August','September','October','November','December');
 
@@ -14,48 +17,58 @@ $reportdata["tableheadings"] = array("Month","Monthly","Quarterly","Semi-Annual"
 
 $totals = array();
 
-$result = select_query("tblhosting","",array("domainstatus"=>"Active","currency"=>(int)$currencyid),"","","","tblclients ON tblclients.id=tblhosting.userid");
-while ($data = mysql_fetch_array($result)) {
-    $recurringamount = $data["amount"];
-    $nextduedate = $data["nextduedate"];
-    $billingcycle = $data["billingcycle"];
-    $nextduedate = explode("-",$nextduedate);
+$results = Capsule::table('tblhosting')
+    ->where('tblhosting.domainstatus', '=', 'Active')
+    ->where('tblclients.currency', '=', (int) $currencyid)
+    ->join('tblclients', 'tblclients.id', '=', 'tblhosting.userid')
+    ->get();
+foreach ($results as $result) {
+    $recurringamount = $result->amount;
+    $nextduedate = $result->nextduedate;
+    $billingcycle = $result->billingcycle;
+    $nextduedate = explode("-", $nextduedate);
     $year = $nextduedate[0];
     $month = $nextduedate[1];
-    if ($billingcycle=="Monthly") {
+    if ($billingcycle == "Monthly") {
         $recurrence = 1;
-    } elseif ($billingcycle=="Quarterly") {
+    } elseif ($billingcycle == "Quarterly") {
         $recurrence = 3;
-    } elseif ($billingcycle=="Semi-Annually") {
+    } elseif ($billingcycle == "Semi-Annually") {
         $recurrence = 6;
-    } elseif ($billingcycle=="Annually") {
+    } elseif ($billingcycle == "Annually") {
         $recurrence = 12;
-    } elseif ($billingcycle=="Biennially") {
+    } elseif ($billingcycle == "Biennially") {
         $recurrence = 24;
     } else {
         $recurrence = 24;
     }
-    $recurrences = 24/$recurrence;
-    for ($i=0;$i<=24;$i+=$recurrence) {
-        $new_time = mktime(0,0,0,$month+$i,1,$year);
-        $totals[date("Y",$new_time)][date("m",$new_time)][$recurrence] += $recurringamount;
+    $recurrences = (24 / $recurrence);
+    for ($i = 0; $i <= 24; $i += $recurrence) {
+        $new_time = mktime(0, 0, 0, ($month + $i), 1, $year);
+        $totals[date("Y", $new_time)][date("m", $new_time)][$recurrence] += $recurringamount;
     }
 }
 
-$result = select_query("tbldomains","",array("tbldomains.status"=>"Active","currency"=>(int)$currencyid),"","","","tblclients ON tblclients.id=tbldomains.userid");
-while ($data = mysql_fetch_array($result)) {
-    $recurringamount = $data["recurringamount"];
-    $nextduedate = $data["nextduedate"];
-    $regperiod = $data["registrationperiod"];
-    $nextduedate = explode("-",$nextduedate);
+$results = Capsule::table('tbldomains')
+    ->where('tbldomains.status', '=', 'Active')
+    ->where('tblclients.currency', '=', (int) $currencyid)
+    ->join('tblclients', 'tblclients.id', '=', 'tbldomains.userid')
+    ->get();
+foreach ($results as $result) {
+    $recurringamount = $result->recurringamount;
+    $nextduedate = $result->nextduedate;
+    $regperiod = $result->registrationperiod;
+    $nextduedate = explode("-", $nextduedate);
     $year = $nextduedate[0];
     $month = $nextduedate[1];
-    if (!$regperiod) $regperiod = 1;
-    $recurrence = $regperiod*12;
-    $recurrences = 24/$recurrence;
-    for ($i=0;$i<=24;$i+=$recurrence) {
-        $new_time = mktime(0,0,0,$month+$i,1,$year);
-        $totals[date("Y",$new_time)][date("m",$new_time)][$recurrence] += $recurringamount;
+    if (!$regperiod) {
+        $regperiod = 1;
+    }
+    $recurrence = ($regperiod * 12);
+    $recurrences = (24 / $recurrence);
+    for ($i = 0; $i <= 24; $i += $recurrence) {
+        $new_time = mktime(0, 0, 0, ($month + $i), 1, $year);
+        $totals[date("Y", $new_time)][date("m", $new_time)][$recurrence] += $recurringamount;
     }
 }
 
@@ -84,5 +97,3 @@ $chartdata['cols'][] = array('label'=>'Cumulative Income Forecast Total','type'=
 #$args['colors'] = '#80D044,#F9D88C,#CC0000';
 
 $reportdata["headertext"] = $chart->drawChart('Area',$chartdata,$args,'450px');
-
-?>

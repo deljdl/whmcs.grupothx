@@ -1,24 +1,18 @@
 <?php
-/*
-*************************************************************************
-*                                                                       *
-* WHMCS - The Complete Client Management, Billing & Support Solution    *
-* Copyright (c) WHMCS Ltd. All Rights Reserved,                         *
-* Release Date: 24th November 2011                                      *
-* Version 5.0                                                           *
-*                                                                       *
-*************************************************************************
-*                                                                       *
-* Email: info@whmcs.com                                                 *
-* Website: htttp://www.whmcs.com                                        *
-*                                                                       *
-*************************************************************************
-
-This file can be uploaded to each of your linux web servers in order to
-display current load and uptime statistics for the server in the Server
-Status page of the WHMCS Client Area and Admin Area Homepage
-
-*/
+/**
+ * Server Status Monitoring Endpoint
+ *
+ * This file can be uploaded to each of your linux web servers in order to
+ * display current load and uptime statistics for the server in the Server
+ * Status page of the WHMCS Client Area and Admin Area Homepage.
+ *
+ * @package    WHMCS
+ * @author     WHMCS Limited <development@whmcs.com>
+ * @copyright  Copyright (c) WHMCS Limited 2005-2019
+ * @license    https://www.whmcs.com/license/ WHMCS Eula
+ * @version    $Id$
+ * @link       https://www.whmcs.com/
+ */
 
 error_reporting(0);
 
@@ -26,12 +20,13 @@ $action = (isset($_GET['action'])) ? $_GET['action'] : '';
 
 if ($action=="phpinfo") {
 
-    /*
-    Uncoment the line below to allow users to view PHP Info for your
-    server. This potentially allows access to information a malicious
-    user could use to find weaknesses in your server.
-    */
-    #phpinfo();
+    /**
+     * Uncomment the line below to allow users to view PHP Info for your
+     * server. This potentially allows access to information a malicious
+     * user could use to find weaknesses in your server.
+     */
+
+    //phpinfo();
 
 } else {
 
@@ -57,6 +52,7 @@ if ($action=="phpinfo") {
 
     echo "<load>$load</load>\n";
     echo "<uptime>$days Days $hours:$mins:$secs</uptime>\n";
+
     /**
      * WHMCS does not rely on the following version information for tracking
      * server status.
@@ -73,6 +69,7 @@ if ($action=="phpinfo") {
      * Anyone is free to contact WHMCS Support for further information or help
      * resolving integration issues.
      */
+
     //echo "<phpver>$phpver</phpver>\n";
     //echo "<mysqlver>$mysqlver</mysqlver>\n";
     //echo "<zendver>$zendver</zendver>\n";

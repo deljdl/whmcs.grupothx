@@ -77,6 +77,40 @@ jqClient: function () {
      * @param options
      * @returns {*}
      */
+    this.jsonGet = function (options) {
+        options = options || {};
+        this.get(options.url, options.data, function(response) {
+            if (response.warning) {
+                console.log('[WHMCS] Warning: ' + response.warning);
+                if (typeof options.warning === 'function') {
+                    options.warning(response.warning);
+                }
+            } else if (response.error) {
+                console.log('[WHMCS] Error: ' + response.error);
+                if (typeof options.error === 'function') {
+                    options.error(response.error);
+                }
+            } else {
+                if (typeof options.success === 'function') {
+                    options.success(response);
+                }
+            }
+        }, 'json').error(function(xhr, errorMsg){
+            console.log('[WHMCS] Error: ' + errorMsg);
+            if (typeof options.fail === 'function') {
+                options.fail(errorMsg);
+            }
+        }).always(function() {
+            if (typeof options.always === 'function') {
+                options.always();
+            }
+        });
+    };
+
+    /**
+     * @param options
+     * @returns {*}
+     */
     this.jsonPost = function (options) {
         options = options || {};
         this.post(options.url, options.data, function(response) {

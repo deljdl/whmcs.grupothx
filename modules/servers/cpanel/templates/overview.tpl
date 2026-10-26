@@ -354,6 +354,16 @@
         </div>
     </div>
 {/if}
+{if $metricStats}
+    <div class="panel panel-default" id="cPanelMetricStatsPanel">
+        <div class="panel-heading">
+            <h3 class="panel-title">{$LANG.metrics.title}</h3>
+        </div>
+        <div class="panel-body">
+            {include file="$template/clientareaproductusagebilling.tpl"}
+        </div>
+    </div>
+{/if}
 {if $customfields}
     <div class="panel panel-default" id="cPanelAdditionalInfoPanel">
         <div class="panel-heading">

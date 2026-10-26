@@ -70,7 +70,19 @@ $additionaldomainfields[".co.uk"][] = array(
     ),
     "Default" => "Individual",
 );
-$additionaldomainfields[".co.uk"][] = array("Name" => "Company ID Number", "LangVar" => "uktldcompanyid", "Type" => "text", "Size" => "30", "Default" => "", "Required" => false,);
+$additionaldomainfields['.co.uk'][] = [
+    'Name' => 'Company ID Number',
+    'LangVar' => 'uktldcompanyid',
+    'Type' => 'text',
+    'Size' => '30',
+    'Default' => '',
+    'Required' => [
+        'Legal Type' => [
+            'UK Limited Company',
+            'UK Public Limited Company',
+        ],
+    ],
+];
 $additionaldomainfields[".co.uk"][] = array("Name" => "Registrant Name", "LangVar" => "uktldregname", "Type" => "text", "Size" => "30", "Default" => "", "Required" => true,);
 $additionaldomainfields[".net.uk"] = $additionaldomainfields[".co.uk"];
 $additionaldomainfields[".org.uk"] = $additionaldomainfields[".co.uk"];
@@ -611,7 +623,7 @@ $additionaldomainfields['.com.es'][] = [
 ];
 $additionaldomainfields['.com.es'][] = [
     'Name' => 'ID Form Type',
-    'DisplayName' => 'Entity Type',
+    'DisplayName' => 'ID Form Type',
     'LangVar' => 'comEsTldIdFormType',
     'Type' => 'dropdown',
     'Options' => [
@@ -634,18 +646,32 @@ $additionaldomainfields['.nom.es'] = $additionaldomainfields['.com.es'];
 $additionaldomainfields['.org.es'] = $additionaldomainfields['.com.es'];
 
 //.EU
+$eu_types = [
+    'COMPANY|Company - Undertakings having their registered office or central '
+    . 'administration and/or principal place of business within the European Community',
+    'INDIVIDUAL|Individual - Natural persons resident within the European Community',
+    'ORGANIZATION|Organization - Organizations established within the European Community '
+    . 'without prejudice to the application of national law',
+];
 $additionaldomainfields['.eu'][] = [
     'Name' => 'Entity Type',
     'LangVar' => 'euTldEntityType',
     'Type' => 'dropdown',
+    'Options' => implode(',', $eu_types),
     'Default' => 'INDIVIDUAL|Individual - Natural persons resident within the European Community',
-    'Options' => [
-        'COMPANY|Company - Undertakings having their registered office, central '
-            . 'administration or principal place of business within the European Community',
-        'INDIVIDUAL|Individual - Natural persons resident within the European Community',
-        'ORGANIZATION|Organization - Organizations established within the European Community '
-            . 'without prejudice to the application of national law',
-    ],
     'Description' => 'EURid Geographical Restrictions. In order to register a .EU domain '
         . 'name, you must meet certain eligibility requirements.',
+];
+
+// .DEV
+$additionaldomainfields['.dev'][] = [
+    'Name' => '.DEV SSL Agreement',
+    'LangVar' => 'dev_agree',
+    'Type' => 'tickbox',
+    'Description' => '<sup style="cursor:help; text-align:justify;" title=".Dev is a more secure domain,'
+        . ' meaning that HTTPS is required for all .dev websites. You can buy your .Dev domain name now,'
+        . ' but in order for it to work properly in browsers you must first configure HTTPS/SSL to serve'
+        . ' the domain. I, the Registrant, understand and agree to the .dev Registration Policy."
+        >Learn More</sup>',
+    'Required' => true,
 ];

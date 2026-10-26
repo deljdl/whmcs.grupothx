@@ -464,7 +464,7 @@
 
 .modal-mc-service .weebly-features .feature {
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 28px;
 }
 .modal-mc-service .weebly-features .feature .icon {
     height: 60px;
@@ -475,6 +475,14 @@
 }
 .modal-mc-service .weebly-features .feature .icon img {
     max-height: 100%;
+}
+.modal-mc-service .weebly-free i {
+    padding-right: 3px;
+    font-size: 2em;
+    color: #888;
+}
+.modal-mc-service .weebly-free strong {
+    font-size: 1.15em;
 }
 .modal-mc-service .weebly.faq h4 {
     color: #666;
@@ -716,6 +724,15 @@
 .modal-mc-service .symantec.pricing {
     max-height: 400px;
     overflow: auto;
+}
+
+.modal-mc-service .sitelockvpn.features {
+    text-align: center;
+    font-size: 1.1em;
+}
+.modal-mc-service .sitelockvpn.features img {
+    display: block;
+    margin: 10px auto;
 }
 
 .marketconnect-product-redirect {

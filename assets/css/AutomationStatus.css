@@ -112,43 +112,81 @@
     background-color:#f8f8f8;
     border-radius: 4px;
 }
+#automation-status-calendar table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 0.4em;
+    font-family: Lucida Grande,Lucida Sans,Arial,sans-serif;
+    font-size: 1.1em;
+}
 
-#automation-status-calendar .ui-datepicker {
+#automation-status-calendar .datepicker.datepicker-inline {
     margin: 0 0 20px 0;
     background: none;
+    border-radius: 5px;
 }
-#automation-status-calendar .ui-datepicker-inline {
+#automation-status-calendar .datepicker-inline {
     width: 100%;
     border: 0;
     padding: 0;
 }
-#automation-status-calendar .ui-datepicker-header {
+#automation-status-calendar th {
+    padding: .7em .3em;
+    text-align: center;
+    font-weight: 700;
+    border: 0;
+}
+#automation-status-calendar th.prev,
+#automation-status-calendar th.datepicker-switch,
+#automation-status-calendar th.next {
     background: none;
     border-radius: 0;
     border: 0;
 }
-#automation-status-calendar .ui-datepicker-title {
+#automation-status-calendar th.datepicker-switch,
+#automation-status-calendar th.today {
     background-color: #eee;
     border-radius: 4px;
     color: #666;
     font-weight: 300;
 }
-#automation-status-calendar .ui-datepicker th {
+#automation-status-calendar th.dow {
     color: #888;
 }
-#automation-status-calendar .ui-state-default {
+#automation-status-calendar .day {
     text-align: center;
-    padding: 5px 0;
+    padding: 5px 1px;
     background: #fff;
     border-color: #eee;
     border: 0;
     color: #888;
     font-weight: 300;
+    font-size: 0.9em;
 }
-#automation-status-calendar .ui-state-active {
+#automation-status-calendar .day.today {
+    background-color: #fde19a;
+    background-image: -moz-linear-gradient(to bottom,#fdd49a,#fdf59a);
+    background-image: -ms-linear-gradient(to bottom,#fdd49a,#fdf59a);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#fdd49a),to(#fdf59a));
+    background-image: -webkit-linear-gradient(to bottom,#fdd49a,#fdf59a);
+    background-image: -o-linear-gradient(to bottom,#fdd49a,#fdf59a);
+    background-image: linear-gradient(to bottom,#fdd49a,#fdf59a);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdd49a', endColorstr='#fdf59a', GradientType=0);
+    border-color: #fdf59a #fdf59a #fbed50;
+    border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    color: #000;
+}
+#automation-status-calendar .day.active {
     background: #1a4d80;
     border-radius: 4px;
     color: #fff;
+}
+#automation-status-calendar .day.disabled {
+    opacity: .35;
+    filter: Alpha(Opacity=35);
+    background-image: none;
 }
 
 .automation-status .graph-container {

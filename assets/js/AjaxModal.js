@@ -140,6 +140,7 @@ function submitIdAjaxModalClickEvent ()
     }
     if (!canContinue) {
         btn.removeClass('disabled');
+        jQuery('#modalAjax .loader').hide();
         return;
     }
     var modalForm = jQuery('#modalAjax').find('form');
@@ -255,18 +256,7 @@ function updateAjaxModal(data) {
          */
         var submitButton = jQuery('#' + data.submitId);
         submitButton.off('click');
-        submitButton.on('click', function() {
-            var modalForm = jQuery('#modalAjax').find('form');
-            jQuery('#modalAjax .loader').show();
-            var modalPost = WHMCS.http.jqClient.post(modalForm.attr('action'), modalForm.serialize(),
-                function(data) {
-                    updateAjaxModal(data);
-                }, 'json').fail(function() {
-                    jQuery('#modalAjax .modal-body').html('An error occurred while communicating with the server. Please try again.');
-                    jQuery('#modalAjax .loader').fadeOut();
-                }
-            );
-        })
+        submitButton.on('click', submitIdAjaxModalClickEvent);
     }
 
     jQuery('#modalAjax .loader').fadeOut();

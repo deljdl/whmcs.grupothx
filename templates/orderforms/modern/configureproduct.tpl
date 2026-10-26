@@ -1,8 +1,6 @@
 <div id="prodconfigcontainer">
-<script type="text/javascript" src="{$BASE_PATH_JS}/jquery-ui.min.js"></script>
 <script type="text/javascript" src="templates/orderforms/{$carttpl}/js/main.js"></script>
 <link rel="stylesheet" type="text/css" href="templates/orderforms/{$carttpl}/style.css" />
-<link rel="stylesheet" type="text/css" href="{$BASE_PATH_CSS}/jquery-ui.min.css" />
 
 <div id="order-modern">
 
@@ -89,7 +87,30 @@
 </table>
 </div>
 {/if}
-
+{if count($metrics) > 0}
+<h3>{$LANG.metrics.title}</h3>
+<div class="metricpricing">
+<p>{$LANG.metrics.explanation}</p>
+<ul>
+{foreach $metrics as $metric}
+    <li>
+        {$metric.displayName}
+        -
+        {if count($metric.pricing) > 1}
+            {$LANG.metrics.startingFrom} {$metric.lowestPrice} / {if $metric.unitName}{$metric.unitName}{else}{$LANG.metrics.unit}{/if}
+            <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#modalMetricPricing-{$metric.systemName}">
+                {$LANG.metrics.viewPricing}
+            </button>
+        {elseif count($metric.pricing) == 1}
+            {$metric.lowestPrice} / {if $metric.unitName}{$metric.unitName}{else}{$LANG.metrics.unit}{/if}
+            {if $metric.includedQuantity > 0} ({$metric.includedQuantity} {$LANG.metrics.includedNotCounted}){/if}
+        {/if}
+        {include file="$template/usagebillingpricing.tpl"}
+    </li>
+{/foreach}
+</ul>
+</div>
+{/if}
 {if $productinfo.type eq "server"}
 <h3>{$LANG.cartconfigserver}</h3>
 <div class="serverconfig">
@@ -122,33 +143,40 @@
 <label class="checkbox-inline"><input type="checkbox" name="configoption[{$configoption.id}]" value="1"{if $configoption.selectedqty} checked{/if} onclick="recalctotals()" /> {$configoption.options.0.name}</label>
 {elseif $configoption.optiontype eq 4}
 {if $configoption.qtymaximum}
-{literal}
-    <script>
-    jQuery(function() {
-        {/literal}
-        var configid = '{$configoption.id}';
-        var configmin = {$configoption.qtyminimum};
-        var configmax = {$configoption.qtymaximum};
-        var configval = {if $configoption.selectedqty}{$configoption.selectedqty}{else}{$configoption.qtyminimum}{/if};
-        {literal}
-        jQuery("#slider"+configid).slider({
-            min: configmin,
-            max: configmax,
-            value: configval,
-            range: "min",
-            slide: function( event, ui ) {
-                jQuery("#confop"+configid).val( ui.value );
-                jQuery("#confoplabel"+configid).html( ui.value );
-            },
-            stop: function( event, ui ) {
-                recalctotals();
+{if !$rangesliderincluded}
+    <script type="text/javascript" src="{$BASE_PATH_JS}/ion.rangeSlider.min.js"></script>
+    <link href="{$BASE_PATH_CSS}/ion.rangeSlider.css" rel="stylesheet">
+    <link href="{$BASE_PATH_CSS}/ion.rangeSlider.skinModern.css" rel="stylesheet">
+    {assign var='rangesliderincluded' value=true}
+{/if}
+<input type="text" name="configoption[{$configoption.id}]" value="{if $configoption.selectedqty}{$configoption.selectedqty}{else}{$configoption.qtyminimum}{/if}" id="inputConfigOption{$configoption.id}" class="form-control" />
+<script>
+    var sliderTimeoutId = null;
+    var sliderRangeDifference = {$configoption.qtymaximum} - {$configoption.qtyminimum};
+    // The largest size that looks nice on most screens.
+    var sliderStepThreshold = 25;
+    // Check if there are too many to display individually.
+    var setLargerMarkers = sliderRangeDifference > sliderStepThreshold;
+
+    jQuery(document).ready(function() {
+        jQuery("#inputConfigOption{$configoption.id}").ionRangeSlider({
+            min: {$configoption.qtyminimum},
+            max: {$configoption.qtymaximum},
+            grid: true,
+            grid_snap: setLargerMarkers ? false : true,
+            onChange: function() {
+                if (sliderTimeoutId) {
+                    clearTimeout(sliderTimeoutId);
+                }
+
+                sliderTimeoutId = setTimeout(function() {
+                    sliderTimeoutId = null;
+                    recalctotals();
+                }, 250);
             }
         });
     });
-    </script>
-{/literal}
-<table width="90%"><tr><td width="30" id="confoplabel{$configoption.id}" class="configoplabel">{if $configoption.selectedqty}{$configoption.selectedqty}{else}{$configoption.qtyminimum}{/if}</td><td><div id="slider{$configoption.id}"></div></td></tr></table>
-<input type="hidden" name="configoption[{$configoption.id}]" id="confop{$configoption.id}" value="{if $configoption.selectedqty}{$configoption.selectedqty}{else}{$configoption.qtyminimum}{/if}" />
+</script>
 {else}
 <input type="text" name="configoption[{$configoption.id}]" value="{$configoption.selectedqty}" size="5" onkeyup="recalctotals()" class="form-control" /> x {$configoption.options.0.name}
 {/if}

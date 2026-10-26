@@ -1,6 +1,7 @@
 <?php
 
 use WHMCS\Carbon;
+use WHMCS\Database\Capsule;
 
 if (!defined("WHMCS")) {
     die("This file cannot be accessed directly");
@@ -54,31 +55,38 @@ HTML;
 }
 
 if ($calculate) {
-
     $dateRange = Carbon::parseDateRangeValue($range);
     $queryStartDate = $dateRange['from']->toDateTimeString();
-    $queryEndDate = $dateRange['to']->toDateString();
+    $queryEndDate = $dateRange['to']->toDateTimeString();
 
-    $query = <<<QUERY
-SELECT COUNT(*), SUM(total), SUM(tblinvoices.credit), SUM(tax), SUM(tax2)
-FROM tblinvoices
-INNER JOIN tblclients ON tblclients.id = tblinvoices.userid
-WHERE datepaid >= '{$queryStartDate}'
-    AND datepaid <= '{$queryEndDate} 23:59:59'
-    AND tblinvoices.status = 'Paid'
-    AND currency = {$currencyID}
-    AND (SELECT count(tblinvoiceitems.id)
-        FROM tblinvoiceitems
-        WHERE invoiceid = tblinvoices.id
-            AND (type = 'AddFunds' OR type = 'Invoice')
-        ) = 0;
-QUERY;
-    $result = full_query($query);
-    $data = mysql_fetch_array($result);
-    $numinvoices = $data[0];
-    $total = $data[1] + $data[2];
-    $tax = $data[3];
-    $tax2 = $data[4];
+    $result = Capsule::table('tblinvoices')
+        ->select(
+            Capsule::raw('count(*) as `count`'),
+            Capsule::raw('sum(total) as `total`'),
+            Capsule::raw('sum(tblinvoices.credit) as `credit`'),
+            Capsule::raw('sum(tax) as `tax`'),
+            Capsule::raw('sum(tax2) as `tax2`')
+        )
+        ->distinct()
+        ->join('tblclients', 'tblclients.id', '=', 'tblinvoices.userid')
+        ->leftJoin('tblinvoiceitems', function ($join) {
+            $join->on('tblinvoiceitems.invoiceid', '=', 'tblinvoices.id');
+            $join->on(function ($join) {
+                $join
+                    ->on('tblinvoiceitems.type', '=', Capsule::raw('"Add Funds"'))
+                    ->orOn('tblinvoiceitems.type', '=', Capsule::raw('"Invoice"'));
+            });
+        })
+        ->whereBetween('tblinvoices.datepaid', [$queryStartDate, $queryEndDate])
+        ->where('tblinvoices.status', '=', 'Paid')
+        ->where('tblclients.currency', '=', $currencyID)
+        ->whereNull('tblinvoiceitems.id')
+        ->first();
+
+    $numinvoices = $result->count;
+    $total = ($result->total + $result->credit);
+    $tax = $result->tax;
+    $tax2 = $result->tax2;
 
     if (!$total) $total="0.00";
     if (!$tax) $tax="0.00";
@@ -100,34 +108,46 @@ $reportdata["tableheadings"] = array(
     $aInt->lang('fields', 'total'),
 );
 
-$query = <<<QUERY
-SELECT tblinvoices.*, tblclients.firstname, tblclients.lastname
-FROM tblinvoices
-INNER JOIN tblclients ON tblclients.id = tblinvoices.userid
-WHERE datepaid >= '{$queryStartDate}'
-    AND datepaid <= '{$queryEndDate} 23:59:59'
-    AND tblinvoices.status = 'Paid'
-    AND currency = {$currencyID}
-    AND (SELECT count(tblinvoiceitems.id)
-        FROM tblinvoiceitems
-        WHERE invoiceid = tblinvoices.id
-            AND (type = 'AddFunds' OR type = 'Invoice')
-        ) = 0
-ORDER BY date ASC;
-QUERY;
-$result = full_query($query);
-while ($data = mysql_fetch_array($result)) {
-    $id = $data["id"];
-    $userid = $data["userid"];
-    $client = $data["firstname"]." ".$data["lastname"];
-    $date = fromMySQLDate($data["date"]);
-    $datepaid = fromMySQLDate($data["datepaid"]);
+$results = Capsule::table('tblinvoices')
+    ->select('tblinvoices.*', 'tblclients.firstname', 'tblclients.lastname')
+    ->distinct()
+    ->join('tblclients', 'tblclients.id', '=', 'tblinvoices.userid')
+    ->leftJoin('tblinvoiceitems', function ($join) {
+        $join->on('tblinvoiceitems.invoiceid', '=', 'tblinvoices.id');
+        $join->on(function ($join) {
+            $join
+                ->on('tblinvoiceitems.type', '=', Capsule::raw('"Add Funds"'))
+                ->orOn('tblinvoiceitems.type', '=', Capsule::raw('"Invoice"'));
+        });
+    })
+    ->whereBetween('tblinvoices.datepaid', [$queryStartDate, $queryEndDate])
+    ->where('tblinvoices.status', '=', 'Paid')
+    ->where('tblclients.currency', '=', $currencyID)
+    ->whereNull('tblinvoiceitems.id')
+    ->orderBy('date', 'asc')
+    ->get();
+
+foreach ($results as $result) {
+    $id = $result->id;
+    $userid = $result->userid;
+    $client = "{$result->firstname} {$result->lastname}";
+    $date = fromMySQLDate($result->date);
+    $datepaid = fromMySQLDate($result->datepaid);
     $currency = getCurrency($userid);
-    $subtotal = $data["subtotal"];
-    $credit = $data["credit"];
-    $tax = $data["tax"]+$data["tax2"];
-    $total = $data["total"] + $credit;
-    $reportdata["tablevalues"][] = array("$id","$client","$date","$datepaid","$subtotal","$tax","$credit","$total");
+    $subtotal = $result->subtotal;
+    $credit = $result->credit;
+    $tax = ($result->tax + $result->tax2);
+    $total = ($result->total + $credit);
+    $reportdata["tablevalues"][] = [
+        "{$id}",
+        "{$client}",
+        "{$date}",
+        "{$datepaid}",
+        "{$subtotal}",
+        "{$tax}",
+        "{$credit}",
+        "{$total}",
+    ];
 }
 
 $data["footertext"]="This report excludes invoices that affect a clients credit balance "

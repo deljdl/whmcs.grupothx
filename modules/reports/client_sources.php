@@ -1,6 +1,7 @@
 <?php
 
 use WHMCS\Carbon;
+use WHMCS\Database\Capsule;
 
 if (!defined("WHMCS")) {
     die("This file cannot be accessed directly");
@@ -68,22 +69,29 @@ $dateRange = Carbon::parseDateRangeValue($range);
 $fromdate = $dateRange['from']->toDateTimeString();
 $todate = $dateRange['to']->toDateTimeString();
 
-$result = select_query(
-    "tblcustomfieldsvalues",
-    "value,COUNT(*) AS `rows`",
-    "fieldid=" . (int) $customfieldid . " AND datecreated>='{$fromdate}'"
-        . " AND datecreated<='{$todate}' GROUP BY `value`",
-    "value",
-    "ASC",
-    "",
-    "tblclients ON tblclients.id=tblcustomfieldsvalues.relid"
-);
-while ($data = mysql_fetch_array($result)) {
+$results = Capsule::table('tblcustomfieldsvalues')
+    ->select(Capsule::raw('tblcustomfieldsvalues.value, count(*) as `rows`'))
+    ->join('tblclients', 'tblclients.id', '=', 'tblcustomfieldsvalues.relid')
+    ->where('fieldid', '=', (int) $customfieldid)
+    ->whereBetween(
+        'datecreated',
+        [
+            $fromdate,
+            $todate,
+        ]
+    )
+    ->orderBy('value', 'asc')
+    ->groupBy('value')
+    ->get();
 
-    $reportdata["tablevalues"][] = array($data[0],$data[1]);
-
-    $chartdata['rows'][] = array('c'=>array(array('v'=>$data[0]),array('v'=>$data[1],'f'=>$data[1])));
-
+foreach ($results as $result) {
+    $reportdata["tablevalues"][] = [$result->value, $result->rows];
+    $chartdata['rows'][] = [
+        'c' => [
+            ['v' => $result->value],
+            ['v' => $result->rows, 'f' => $result->rows],
+        ],
+    ];
 }
 
 $chartdata['cols'][] = array('label'=>'Referral Location','type'=>'string');

@@ -40,6 +40,9 @@ jQuery(document).ready(function() {
 
     jQuery('body').on('click', 'a.autoLinked', function (e) {
         e.preventDefault();
+        if (jQuery(this).hasClass('disabled')) {
+            return false;
+        }
 
         var child = window.open();
         child.opener = null;
@@ -96,6 +99,9 @@ jQuery(document).ready(function() {
                             } else if (data.fileAuth) {
                                 $('.modal-wizard .cert-further-instructions').hide();
                                 $('.modal-wizard .cert-file-auth').removeClass('hidden');
+                                $('.modal-wizard .wizard-transition-step .icon').hide();
+                                $('.modal-wizard .wizard-transition-step .title').addClass('file-auth');
+                                $('.modal-wizard .wizard-transition-step .icon.file-auth').removeClass('hidden').show();
                                 $('.modal-wizard .cert-file-auth-filename').val(data.fileAuthFilename);
                                 $('.modal-wizard .cert-file-auth-contents').val(data.fileAuthContents);
                             } else if (data.refreshMc) {
@@ -281,11 +287,21 @@ jQuery(document).ready(function() {
         e.preventDefault();
         jQuery('#modalAjax .modal-submit').prop("disabled", true);
         jQuery('#modalAjax .loader').show();
+        $('#remoteFailureDetails').slideUp();
         WHMCS.http.jqClient.post(
             jQuery(this).attr('action'),
             jQuery(this).serialize(),
             function(data) {
-                updateAjaxModal(data);
+                if (!data.error) {
+                    updateAjaxModal(data);
+                } else {
+                    $('#remoteFailureDetails')
+                        .find('.alert').html(data.errorMsg)
+                        .end()
+                        .slideDown();
+
+                    jQuery('#modalAjax .loader').fadeOut();
+                }
             },
             'json'
         ).fail(function() {
@@ -327,6 +343,55 @@ jQuery(document).ready(function() {
         );
     });
 
+    (function ($) {
+        $.fn.setInputError = function(error) {
+            this.parents('.form-group').addClass('has-error').find('.field-error-msg').text(error);
+            return this;
+        };
+    })(jQuery);
+
+    (function ($) {
+        $.fn.showInputError = function () {
+            this.parents(".form-group").addClass("has-error").find(".field-error-msg").show();
+            return this;
+        };
+    })(jQuery);
+
+    // Admin datatable row expand functionality
+    jQuery('.datatable .view-detail').click(function(e) {
+            e.preventDefault();
+            $currentRow = jQuery(this).closest('tr');
+            var loader = '<i class="fa fa-spinner fa-spin"></i> Loading...';
+            if (jQuery(this).hasClass('expanded')) {
+                $currentRow.next('tr.detail-row').hide();
+                jQuery(this).removeClass('expanded').find('i').removeClass('fa-minus').addClass('fa-plus');
+            } else {
+                var colCount = $currentRow.find('td').length;
+                if (jQuery(this).hasClass('data-loaded')) {
+                    $currentRow.next('tr.detail-row').show();
+                } else {
+                    var $newRow = $currentRow.after('<tr class="detail-row"><td colspan="' + colCount + '">' + loader + '</td></tr>');
+                    WHMCS.http.jqClient.jsonGet({
+                        url: jQuery(this).attr('href'),
+                        success: function(response) {
+                            $currentRow.next('tr.detail-row').remove();
+                            $currentRow.after('<tr class="detail-row"><td colspan="' + colCount + '">' + response.output + '</td></tr>');
+                        }
+                    });
+                }
+                jQuery(this).find('i').addClass('fa-minus').removeClass('fa-plus');
+                jQuery(this).addClass('expanded').addClass('data-loaded');
+            }
+        });
+    jQuery(document).on('change', '.toggle-display', function() {
+        var showElement = jQuery(this).data('show'),
+            element = jQuery('.' + showElement);
+        jQuery(document).find('div.toggleable').hide();
+        if (element.hasClass('hidden')) {
+            element.removeClass('hidden');
+        }
+        element.show();
+    });
 });
 var addingPayment = false;
 
@@ -369,14 +434,15 @@ function fetchModuleSettings(productId, mode) {
     }
 
     mode = mode || 'simple';
-    if (mode != 'simple' && mode != 'advanced') {
+    if (mode !== 'simple' && mode !== 'advanced') {
         mode = 'simple';
     }
     requestedMode = mode;
     $('#tblModuleSettings').addClass('module-settings-loading');
     $('#tblModuleAutomationSettings').addClass('module-settings-loading');
+    $('#tblMetricSettings').addClass('module-settings-loading');
     $('#serverReturnedError').addClass('hidden');
-    $('#moduleSettingsLoader').show();
+    $('#moduleSettingsLoader').removeClass('hidden').show();
     switchLink.attr('data-product-id', productId);
     WHMCS.http.jqClient.post(window.location.pathname, {
         'action': 'module-settings',
@@ -389,8 +455,9 @@ function fetchModuleSettings(productId, mode) {
         gotValidResponse = true;
         $('#tblModuleSettings').removeClass('module-settings-loading');
         $('#tblModuleAutomationSettings').removeClass('module-settings-loading');
+        $('#tblMetricSettings').removeClass('module-settings-loading');
         $('#tblModuleSettings tr').not(':first').remove();
-        switchLink.addClass('hidden');
+        switchLink.parent('div .module-settings-mode').addClass('hidden');
         if (module && data.error) {
             $('#serverReturnedErrorText').html(data.error);
             $('#serverReturnedError').removeClass('hidden');
@@ -399,16 +466,28 @@ function fetchModuleSettings(productId, mode) {
             $('#noModuleSelectedRow').addClass('hidden');
             $('#tblModuleSettings').append(data.content);
             $('#tblModuleAutomationSettings').find('input[type=radio]').removeAttr('disabled');
-            if (data.mode == 'simple') {
-                switchLink.attr('data-mode', 'advanced').find('a').find('span').addClass('hidden').parent().find('.text-advanced').removeClass('hidden');
-                switchLink.removeClass('hidden');
+            if (data.mode === 'simple') {
+                switchLink.attr('data-mode', 'advanced').find('span').addClass('hidden').parent().find('.text-advanced').removeClass('hidden');
+                switchLink.parent('div .module-settings-mode').removeClass('hidden');
             } else {
-                if (data.mode == 'advanced' && requestedMode == 'advanced') {
-                    switchLink.attr('data-mode', 'simple').find('a').find('span').addClass('hidden').parent().find('.text-simple').removeClass('hidden');
-                    switchLink.removeClass('hidden');
+                if (data.mode === 'advanced' && requestedMode === 'advanced') {
+                    switchLink.attr('data-mode', 'simple').find('span').addClass('hidden').parent().find('.text-simple').removeClass('hidden');
+                    switchLink.parent('div .module-settings-mode').removeClass('hidden');
                 } else {
-                    switchLink.addClass('hidden');
+                    switchLink.parent('div .module-settings-mode').addClass('hidden');
                 }
+            }
+            if (data.metrics) {
+                $('#metricsConfig').html(data.metrics).show();
+                $('#tblMetricSettings').removeClass('hidden').show();
+                $('.metric-toggle').bootstrapSwitch({
+                    size: 'mini',
+                    onColor: 'success'
+                }).on('switchChange.bootstrapSwitch', function(event, state) {
+                    WHMCS.http.jqClient.post($(this).data('url'), 'action=toggle-metric&id=' + $('#inputProductId').val() + '&module=' + module + '&metric=' + $(this).data('metric') + '&token=' + csrfToken + '&enable=' + state);
+                });
+            } else {
+                $('#tblMetricSettings').hide();
             }
         } else {
             $('#noModuleSelectedRow').removeClass('hidden');
@@ -558,4 +637,15 @@ function cancelAddPayment() {
 
 function openFeatureHighlights() {
     openModal('whatsnew.php?modal=1', '', 'What\'s new in Version ...', '', 'modal-feature-highlights', '', '', true);
+}
+
+/**
+ * Submit the first form that exists within a given container.
+ *
+ * @param {string} containerId The ID name of the container
+ */
+function autoSubmitFormByContainer(containerId) {
+    if (typeof noAutoSubmit === "undefined" || noAutoSubmit === false) {
+        jQuery("#" + containerId).find("form:first").submit();
+    }
 }

@@ -608,6 +608,7 @@ window.langPasswordStrong = "{$LANG.pwstrengthstrong}";
                                        value="{$gateway.sysname}"
                                        data-payment-type="{$gateway.payment_type}"
                                        data-show-local="{$gateway.show_local_cards}"
+                                       data-remote-inputs="{$gateway.uses_remote_inputs}"
                                        class="payment-methods{if $gateway.type eq "CC"} is-credit-card{/if}"
                                         {if $selectedgateway eq $gateway.sysname} checked{/if}
                                 />
@@ -695,17 +696,17 @@ window.langPasswordStrong = "{$LANG.pwstrengthstrong}";
                             </ul>
 
                             <div class="row" id="newCardInfo" {if $existingCards->count() > 0}style="display: none" {/if}>
-                                <div id="cardNumberContainer" class="col-sm-5 new-card-container">
+                                <div id="cardNumberContainer" class="col-sm-12 new-card-container">
                                     <div class="form-group prepend-icon">
                                         <input type="tel" name="ccnumber" id="inputCardNumber" class="form-control" placeholder="{$LANG.orderForm.cardNumber}" autocomplete="cc-number">
                                     </div>
                                 </div>
-                                <div class="col-sm-3 new-card-container">
+                                <div class="col-sm-6 new-card-container">
                                     <div class="form-group prepend-icon">
                                         <input type="tel" name="ccexpirydate" id="inputCardExpiry" class="form-control" placeholder="MM / YY{if $showccissuestart} ({$LANG.creditcardcardexpires}){/if}" autocomplete="cc-exp">
                                     </div>
                                 </div>
-                                <div class="col-sm-4" id="cvv-field-container">
+                                <div class="col-sm-6" id="cvv-field-container">
                                     <div class="form-group prepend-icon">
                                         <div class="input-group">
                                             <input type="tel" name="cccvv" id="inputCardCVV" class="form-control" placeholder="{$LANG.creditcardcvvnumbershort}" autocomplete="cc-cvc">
@@ -718,20 +719,14 @@ window.langPasswordStrong = "{$LANG.pwstrengthstrong}";
                                     </div>
                                 </div>
                                 {if $showccissuestart}
-                                    <div class="col-sm-3 col-sm-offset-6 new-card-container">
+                                    <div class="col-sm-6 new-card-container">
                                         <div class="form-group prepend-icon">
-                                            <label for="inputCardStart" class="field-icon">
-                                                <i class="far fa-calendar-check"></i>
-                                            </label>
-                                            <input type="tel" name="ccstartdate" id="inputCardStart" class="field" placeholder="MM / YY ({$LANG.creditcardcardstart})" autocomplete="cc-exp">
+                                            <input type="tel" name="ccstartdate" id="inputCardStart" class="form-control" placeholder="MM / YY ({$LANG.creditcardcardstart})" autocomplete="cc-exp">
                                         </div>
                                     </div>
-                                    <div class="col-sm-3 new-card-container">
+                                    <div class="col-sm-6 new-card-container">
                                         <div class="form-group prepend-icon">
-                                            <label for="inputCardIssue" class="field-icon">
-                                                <i class="fas fa-asterisk"></i>
-                                            </label>
-                                            <input type="tel" name="ccissuenum" id="inputCardIssue" class="field" placeholder="{$LANG.creditcardcardissuenum}">
+                                            <input type="tel" name="ccissuenum" id="inputCardIssue" class="form-control" placeholder="{$LANG.creditcardcardissuenum}">
                                         </div>
                                     </div>
                                 {/if}

@@ -15,6 +15,8 @@ CREATE TABLE `tblinvoices` (
   `duedate` date DEFAULT NULL,
   `datepaid` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `last_capture_attempt` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `date_refunded` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `date_cancelled` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `subtotal` decimal(10,2) NOT NULL,
   `credit` decimal(10,2) NOT NULL,
   `tax` decimal(10,2) NOT NULL,
@@ -26,6 +28,8 @@ CREATE TABLE `tblinvoices` (
   `paymentmethod` text COLLATE utf8_unicode_ci NOT NULL,
   `paymethodid` int(10) unsigned DEFAULT NULL,
   `notes` text COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   KEY `userid` (`userid`),
   KEY `status` (`status`(3))

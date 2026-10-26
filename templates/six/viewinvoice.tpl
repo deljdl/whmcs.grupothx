@@ -1,6 +1,4 @@
-<script>location = 'https://grupothx.com/thx/pagamento/?invoiceid={$invoiceid}'; </script>
-
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="{$charset}" />
@@ -11,6 +9,7 @@
     <link href="{$WEB_ROOT}/templates/{$template}/css/all.min.css" rel="stylesheet">
     <link href="{$WEB_ROOT}/assets/css/fontawesome-all.min.css" rel="stylesheet">
     <link href="{$WEB_ROOT}/templates/{$template}/css/invoice.css" rel="stylesheet">
+    <script src="{$WEB_ROOT}/templates/{$template}/js/scripts.min.js?v={$versionHash}"></script>
 
 </head>
 <body>
@@ -40,8 +39,7 @@
                         {if $status eq "Draft"}
                             <span class="draft">{$LANG.invoicesdraft}</span>
                         {elseif $status eq "Unpaid"}
-                            <script>location = 'https://grupothx.com/thx/pagamento/?invoiceid={$invoiceid}'; </script>
-                            <a href="https://grupothx.com/thx/pagamento/?invoiceid={$invoiceid}" class="btn btn-primary"  style="font-size: 40px;width: 100%;background-color: #BF0003;border-color: #BF0003;"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i> Clique para Pagar Agora</a>
+                            <span class="unpaid">{$LANG.invoicesunpaid}</span>
                         {elseif $status eq "Paid"}
                             <span class="paid">{$LANG.invoicespaid}</span>
                         {elseif $status eq "Refunded"}
@@ -73,6 +71,8 @@
                 {include file="$template/includes/panel.tpl" type="success" headerTitle=$LANG.success bodyContent=$LANG.invoicePaymentSuccessAwaitingNotify bodyTextCenter=true}
             {elseif $paymentSuccess}
                 {include file="$template/includes/panel.tpl" type="success" headerTitle=$LANG.success bodyContent=$LANG.invoicepaymentsuccessconfirmation bodyTextCenter=true}
+            {elseif $paymentInititated}
+                {include file="$template/includes/panel.tpl" type="info" headerTitle=$LANG.success bodyContent=$LANG.invoicePaymentInitiated bodyTextCenter=true}
             {elseif $pendingReview}
                 {include file="$template/includes/panel.tpl" type="info" headerTitle=$LANG.success bodyContent=$LANG.invoicepaymentpendingreview bodyTextCenter=true}
             {elseif $paymentFailed}
@@ -113,7 +113,7 @@
             <div class="row">
                 <div class="invoice-col right">
                     <strong>{$LANG.paymentmethod}</strong><br>
-                    <span class="small-text">
+                    <span class="small-text" data-role="paymethod-info">
                         {if $status eq "Unpaid" && $allowchangegateway}
                             <form method="post" action="{$smarty.server.PHP_SELF}?id={$invoiceid}" class="form-inline">
                                 {$gatewaydropdown}
@@ -260,7 +260,15 @@
 
     <p class="text-center hidden-print"><a href="clientarea.php">{$LANG.invoicesbacktoclientarea}</a></a></p>
 
+    <div id="fullpage-overlay" class="hidden">
+        <div class="outer-wrapper">
+            <div class="inner-wrapper">
+                <img src="{$WEB_ROOT}/assets/img/overlay-spinner.svg">
+                <br>
+                <span class="msg"></span>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
-
--->

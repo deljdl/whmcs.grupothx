@@ -37,7 +37,9 @@ function initStripe() {
                 elementsDiv.hide();
                 frm.off('submit.stripe');
                 existingCvv.hide();
-                frm.on('submit.stripe', processExisting);
+                if (amount !== '000') {
+                    frm.on('submit.stripe', processExisting);
+                }
             }
         }
 
@@ -51,14 +53,8 @@ function initStripe() {
                     get_existing_token(newOrExistingValue);
                     elementsDiv.hide();
                     frm.off('submit.stripe');
-                    frm.on('submit.stripe', processExisting);
-                } else {
-                    elementsDiv.show();
-                    frm.off('submit.stripe');
-                    if (amount === '000') {
-                        frm.on('submit.stripe', validateChangeCard);
-                    } else {
-                        frm.on('submit.stripe', validateStripe);
+                    if (amount !== '000') {
+                        frm.on('submit.stripe', processExisting);
                     }
                 }
             } else {
@@ -77,6 +73,10 @@ function initStripe() {
             } else {
                 get_existing_token(jQuery(this).val());
                 elementsDiv.hide();
+                frm.off('submit.stripe');
+                if (amount !== '000') {
+                    frm.on('submit.stripe', processExisting);
+                }
             }
         });
     } else if (newCcForm.length) {
@@ -196,7 +196,7 @@ function validateStripe(event) {
                 if (displayError.hasClass('hidden')) {
                     displayError.removeClass('hidden').show();
                 }
-                scrollToError();
+                scrollToGatewayInputError();
             }
         } else {
             WHMCS.http.jqClient.jsonPost({
@@ -220,7 +220,7 @@ function validateStripe(event) {
                                     if (displayError.hasClass('hidden')) {
                                         displayError.removeClass('hidden').show();
                                     }
-                                    scrollToError();
+                                    scrollToGatewayInputError();
                                 }
                             } else {
                                 stripeResponseHandler(result.paymentIntent.id);
@@ -230,18 +230,19 @@ function validateStripe(event) {
                     }
                 },
                 warning: function(error) {
+                    WHMCS.form.reloadCaptcha();
                     displayError.html(error);
                     if (displayError.hasClass('hidden')) {
                         displayError.removeClass('hidden').show();
                     }
-                    scrollToError();
+                    scrollToGatewayInputError();
                 },
                 fail: function(error) {
                     displayError.html(error);
                     if (displayError.hasClass('hidden')) {
                         displayError.removeClass('hidden').show();
                     }
-                    scrollToError();
+                    scrollToGatewayInputError();
                 }
             });
         }
@@ -282,7 +283,7 @@ function processExisting(event)
                             if (displayError.hasClass('hidden')) {
                                 displayError.removeClass('hidden').show();
                             }
-                            scrollToError();
+                            scrollToGatewayInputError();
                         }
                     } else {
                         stripeResponseHandler(result.paymentIntent.id);
@@ -292,18 +293,19 @@ function processExisting(event)
             }
         },
         warning: function(error) {
+            WHMCS.form.reloadCaptcha();
             displayError.html(error);
             if (displayError.hasClass('hidden')) {
                 displayError.removeClass('hidden').show();
             }
-            scrollToError();
+            scrollToGatewayInputError();
         },
         fail: function(error) {
             displayError.html(error);
             if (displayError.hasClass('hidden')) {
                 displayError.removeClass('hidden').show();
             }
-            scrollToError();
+            scrollToGatewayInputError();
         }
     });
 }
@@ -355,7 +357,8 @@ function hide_cc_fields() {
 }
 
 function enable_stripe() {
-    var frm = elementsDiv.closest('form');
+    var frm = elementsDiv.closest('form'),
+        inputDescriptionContainer = jQuery('#inputDescriptionContainer');
     hide_cc_fields();
 
     elementsDiv.hide().removeClass('hidden').show();
@@ -368,11 +371,14 @@ function enable_stripe() {
     } else {
         frm.on('submit.stripe', validateStripe);
     }
+    inputDescriptionContainer.addClass('col-md-offset-3');
 }
 
 function disable_stripe() {
     var frm = elementsDiv.closest('form'),
-        cardInputs = jQuery('#newCardInfo,.cc-details');
+        cardInputs = jQuery('#newCardInfo,.cc-details'),
+        showLocal = true,
+        inputDescriptionContainer = jQuery('#inputDescriptionContainer');
 
     frm.find('#inputCardCvvExisting').attr('name', 'cccvvexisting');
     frm.find('#inputCardNumber').attr('name', 'ccnumber');
@@ -381,10 +387,16 @@ function disable_stripe() {
     frm.find('#inputCardCvvExisting').attr('name', 'cccvvexisting');
     frm.find('#cctype').attr('name', 'cctype');
 
+    if (jQuery('input[name="paymentmethod"]:checked').data('remote-inputs') === 1) {
+        showLocal = false;
+    }
+
     elementsDiv.hide('fast', function() {
         var firstVisible = jQuery('input[name="ccinfo"]:visible').first();
         if (firstVisible.val() === 'new') {
-            cardInputs.show();
+            if (showLocal) {
+                cardInputs.show();
+            }
         } else {
             firstVisible.click();
         }
@@ -400,6 +412,7 @@ function disable_stripe() {
     if (cardCvcElements.hasRegisteredListener('change')) {
         cardCvcElements.removeEventListener('change', cardListener);
     }
+    inputDescriptionContainer.removeClass('col-md-offset-3');
 }
 
 function enable_payment_stripe() {
@@ -481,7 +494,7 @@ function enablePaymentRequestButton() {
                                     if (displayError.hasClass('hidden')) {
                                         displayError.removeClass('hidden').show();
                                     }
-                                    scrollToError();
+                                    scrollToGatewayInputError();
                                 }
                             } else {
                                 stripeResponseHandler(result.paymentIntent.id);
@@ -490,42 +503,22 @@ function enablePaymentRequestButton() {
                     }
                 },
                 warning: function(error) {
+                    WHMCS.form.reloadCaptcha();
                     displayError.html(error);
                     if (displayError.hasClass('hidden')) {
                         displayError.removeClass('hidden').show();
                     }
-                    scrollToError();
+                    scrollToGatewayInputError();
                 },
                 fail: function(error) {
                     displayError.html(error);
                     if (displayError.hasClass('hidden')) {
                         displayError.removeClass('hidden').show();
                     }
-                    scrollToError();
+                    scrollToGatewayInputError();
                 }
             });
         });
-    }
-}
-
-function scrollToError() {
-    var frm = elementsDiv.closest('form'),
-        displayError = jQuery('.gateway-errors,.assisted-cc-input-feedback').first();
-    frm.find('button[type="submit"],input[type="submit"]')
-        .prop('disabled', false)
-        .removeClass('disabled')
-        .find('i.fas,i.far,i.fal,i.fab')
-        .removeAttr('class')
-        .addClass('fas fa-arrow-circle-right')
-        .find('span').toggleClass('hidden');
-
-    if (displayError.length) {
-        jQuery('html, body').animate(
-            {
-                scrollTop: displayError.offset().top - 50
-            },
-            500
-        );
     }
 }
 
@@ -641,7 +634,7 @@ function cardListener(event) {
             if (displayError.hasClass('hidden')) {
                 displayError.removeClass('hidden').show();
             }
-            scrollToError();
+            scrollToGatewayInputError();
         }
     } else {
         displayError.hide().addClass('hidden').html('');
@@ -683,7 +676,7 @@ function addNewCardClientSide(event)
                         if (displayError.hasClass('hidden')) {
                             displayError.removeClass('hidden').show();
                         }
-                        scrollToError();
+                        scrollToGatewayInputError();
                     } else {
                         stripeResponseHandler(result.setupIntent.id);
                     }
@@ -695,14 +688,14 @@ function addNewCardClientSide(event)
             if (displayError.hasClass('hidden')) {
                 displayError.removeClass('hidden').show();
             }
-            scrollToError();
+            scrollToGatewayInputError();
         },
         fail: function(error) {
             displayError.html(error);
             if (displayError.hasClass('hidden')) {
                 displayError.removeClass('hidden').show();
             }
-            scrollToError();
+            scrollToGatewayInputError();
         }
     });
 }
@@ -729,7 +722,7 @@ function validateChangeCard(event)
                 if (displayError.hasClass('hidden')) {
                     displayError.removeClass('hidden').show();
                 }
-                scrollToError();
+                scrollToGatewayInputError();
             }
         } else {
             if (modalInput) {
@@ -757,14 +750,14 @@ function validateChangeCard(event)
                     if (displayError.hasClass('hidden')) {
                         displayError.removeClass('hidden').show();
                     }
-                    scrollToError();
+                    scrollToGatewayInputError();
                 },
                 fail: function(error) {
                     displayError.html(error);
                     if (displayError.hasClass('hidden')) {
                         displayError.removeClass('hidden').show();
                     }
-                    scrollToError();
+                    scrollToGatewayInputError();
                 },
                 always: function() {
                     if (modalInput) {
@@ -789,19 +782,29 @@ function get_existing_token(tokenId)
             return;
         }
     }
-    var displayError = jQuery('.gateway-errors,.assisted-cc-input-feedback').first();
+    var displayError = jQuery('.gateway-errors,.assisted-cc-input-feedback').first(),
+        frm = displayError.closest('form');
+
+    frm.find('button[type="submit"],input[type="submit"]')
+        .prop('disabled', true)
+        .addClass('disabled')
+        .find('span').toggleClass('hidden');
     WHMCS.http.jqClient.jsonPost({
-        url: WHMCS.utils.getRouteUrl('/stripe/payment/get'),
+        url: WHMCS.utils.getRouteUrl('/payment/stripe/token/get'),
         data: 'paymethod_id=' + tokenId + '&token=' + csrfToken,
         success: function(response) {
             existingToken = response.token;
+            frm.find('button[type="submit"],input[type="submit"]')
+                .prop('disabled', false)
+                .removeClass('disabled')
+                .find('span').toggleClass('hidden');
         },
         warning: function(error) {
             displayError.html(error);
             if (displayError.hasClass('hidden')) {
                 displayError.removeClass('hidden').show();
             }
-            scrollToError();
+            scrollToGatewayInputError();
             reset_input_to_new();
         },
         fail: function(error) {
@@ -809,7 +812,7 @@ function get_existing_token(tokenId)
             if (displayError.hasClass('hidden')) {
                 displayError.removeClass('hidden').show();
             }
-            scrollToError();
+            scrollToGatewayInputError();
             reset_input_to_new();
         }
     });

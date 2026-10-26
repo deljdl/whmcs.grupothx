@@ -46,7 +46,7 @@ class ClientActivity extends AbstractWidget
         <a href="clientssummary.php?userid=' . $client['id'] . '" class="link">'
             . $client['firstname'] . ' ' . $client['lastname'] . ($client['companyname'] ? ' ('
                 . $client['companyname'] . ')' : '') . '</a>'
-        . GeoIp::getLookupHtmlAnchor($ip, 'ip-address') .
+        . GeoIp::getLookupHtmlAnchor($client['ip'], 'ip-address') .
     '</div>';
         }
         $clientOutput = implode($clients);

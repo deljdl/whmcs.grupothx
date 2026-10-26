@@ -44,6 +44,10 @@
                     <div class="alert alert-danger">
                         {$errormessage}
                     </div>
+                {elseif !$productGroup}
+                    <div class="alert alert-info">
+                        {lang key='orderForm.selectCategory'}
+                    </div>
                 {/if}
             </div>
             <div id="products" class="price-table-container">

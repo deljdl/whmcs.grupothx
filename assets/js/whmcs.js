@@ -49,3 +49,27 @@ jQuery(document).ready(function() {
         }
     });
 });
+
+function scrollToGatewayInputError() {
+    var displayError = jQuery('.gateway-errors,.assisted-cc-input-feedback').first(),
+        frm = displayError.closest('form');
+    if (!frm) {
+        frm = jQuery('form').first();
+    }
+    frm.find('button[type="submit"],input[type="submit"]')
+        .prop('disabled', false)
+        .removeClass('disabled')
+        .find('i.fas,i.far,i.fal,i.fab')
+        .removeAttr('class')
+        .addClass('fas fa-arrow-circle-right')
+        .find('span').toggleClass('hidden');
+
+    if (displayError.length) {
+        jQuery('html, body').animate(
+            {
+                scrollTop: displayError.offset().top - 50
+            },
+            500
+        );
+    }
+}

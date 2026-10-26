@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS `tblpricing`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tblpricing` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `type` enum('product','addon','configoptions','domainregister','domaintransfer','domainrenew','domainaddons') COLLATE utf8_unicode_ci NOT NULL,
+  `type` enum('product','addon','configoptions','domainregister','domaintransfer','domainrenew','domainaddons', 'usage') COLLATE utf8_unicode_ci NOT NULL,
   `currency` int(10) NOT NULL,
   `relid` int(10) NOT NULL,
   `msetupfee` decimal(10,2) NOT NULL,

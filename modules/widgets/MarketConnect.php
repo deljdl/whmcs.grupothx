@@ -72,8 +72,19 @@ class MarketConnect extends AbstractWidget
         $services = [];
         foreach (Promotion::SERVICES as $service) {
             $isActive = in_array($service['vendorSystemName'], $activeServices);
+            $logoFilename = 'logo-sml.png';
+            if (file_exists(
+                ROOTDIR
+                . DIRECTORY_SEPARATOR . 'assets'
+                . DIRECTORY_SEPARATOR . 'img'
+                . DIRECTORY_SEPARATOR . 'marketconnect'
+                . DIRECTORY_SEPARATOR . $service['vendorSystemName']
+                . DIRECTORY_SEPARATOR . 'logo-sml.svg'
+            )) {
+                $logoFilename = 'logo-sml.svg';
+            }
             $services[] = '<div class="service ' . ($isActive ? 'selling' : 'not-selling') . '">
-                <img src="../assets/img/marketconnect/' . $service['vendorSystemName'] . '/logo-sml.png">
+                <img src="../assets/img/marketconnect/' . $service['vendorSystemName'] . '/' . $logoFilename . '">
                 <span class="title">' . $service['serviceTitle'] . '<br>by ' . $service['vendorName'] . '</span>
                 ' . ($isActive ? '<span class="label label-success">Selling</span>' : '<span class="label label-default">Not Selling</span>') . '
             </div>';

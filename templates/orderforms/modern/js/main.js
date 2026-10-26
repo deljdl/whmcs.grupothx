@@ -46,7 +46,7 @@ jQuery(document).ready(function(){
         creditCardInputFields = jQuery('#creditCardInputFields');
 
     existingCards.on('click', function(event) {
-        if (jQuery(this).val() === 'stripe') {
+        if (jQuery('.payment-methods:checked').data('remote-inputs') === 1) {
             return;
         }
 
@@ -54,7 +54,7 @@ jQuery(document).ready(function(){
         existingCardInfo.slideDown().find('input').removeAttr('disabled');
     });
     newCardOption.on('click', function(event) {
-        if (jQuery(this).val() === 'stripe') {
+        if (jQuery('.payment-methods:checked').data('remote-inputs') === 1) {
             return;
         }
 

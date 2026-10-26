@@ -560,6 +560,30 @@ jQuery(document).ready(function() {
     });
 });
 
+function scrollToGatewayInputError() {
+    var displayError = jQuery('.gateway-errors,.assisted-cc-input-feedback').first(),
+        frm = displayError.closest('form');
+    if (!frm) {
+        frm = jQuery('form').first();
+    }
+    frm.find('button[type="submit"],input[type="submit"]')
+        .prop('disabled', false)
+        .removeClass('disabled')
+        .find('i.fas,i.far,i.fal,i.fab')
+        .removeAttr('class')
+        .addClass('fas fa-arrow-circle-right')
+        .find('span').toggleClass('hidden');
+
+    if (displayError.length) {
+        jQuery('html, body').animate(
+            {
+                scrollTop: displayError.offset().top - 50
+            },
+            500
+        );
+    }
+}
+
 /**
  * WHMCS authentication module
  *
@@ -923,6 +947,40 @@ jqClient: function () {
                 }
             )
         );
+    };
+
+    /**
+     * @param options
+     * @returns {*}
+     */
+    this.jsonGet = function (options) {
+        options = options || {};
+        this.get(options.url, options.data, function(response) {
+            if (response.warning) {
+                console.log('[WHMCS] Warning: ' + response.warning);
+                if (typeof options.warning === 'function') {
+                    options.warning(response.warning);
+                }
+            } else if (response.error) {
+                console.log('[WHMCS] Error: ' + response.error);
+                if (typeof options.error === 'function') {
+                    options.error(response.error);
+                }
+            } else {
+                if (typeof options.success === 'function') {
+                    options.success(response);
+                }
+            }
+        }, 'json').error(function(xhr, errorMsg){
+            console.log('[WHMCS] Error: ' + errorMsg);
+            if (typeof options.fail === 'function') {
+                options.fail(errorMsg);
+            }
+        }).always(function() {
+            if (typeof options.always === 'function') {
+                options.always();
+            }
+        });
     };
 
     /**
@@ -1519,6 +1577,16 @@ function () {
         });
     };
 
+    this.reloadCaptcha = function (element)
+    {
+        if (!element) {
+            element = jQuery('#inputCaptchaImage');
+        }
+
+        var src = jQuery(element).data('src');
+        jQuery(element).attr('src', src + '?nocache=' + (new Date()).getTime());
+    };
+
     return this;
 });
 
@@ -1597,11 +1665,11 @@ var recaptchaLoadComplete = false;
                 };
                 recaptchaContent.attr('data-callback', funcName);
 
-                // alter submit button to integrate invisible recaptcha
-                // otherwise setup a callback to twiddle UI after grecaptcha
-                // has inject DOM
+                // setup an on form submit event to ensure that we
+                // are allowing required field validation to occur before
+                // we do the invisible recaptcha checking
                 if (isInvisible) {
-                    btnRecaptcha.on('click', function (event) {
+                    frm.on('submit', function (event) {
                         if (!grecaptcha.getResponse().trim()) {
                             event.preventDefault();
                             grecaptcha.execute();
@@ -2137,7 +2205,9 @@ jQuery(document).ready(function(){
                         }
                     } else {
                         var invalidLength = invalid.find('span.domain-length-restrictions'),
-                            done = false;
+                            done = false,
+                            reg = /<br\s*\/>/,
+                            errors = [];
                         invalidLength.hide();
                         error.hide();
                         if (domain.minLength > 0 && domain.maxLength > 0) {
@@ -2145,7 +2215,23 @@ jQuery(document).ready(function(){
                                 .find('.max-length').html(domain.maxLength).end();
                             invalidLength.show();
                         } else if (data.result.error) {
-                            error.html(data.result.error);
+                            if (!data.result.error.match(reg)) {
+                                error.text(data.result.error);
+                            } else {
+                                error.text('');
+                                errors = data.result.error.split(reg);
+                                for(var i=0; i < errors.length; i++) {
+                                    var errorMsg = errors[i];
+                                    if (errorMsg.length) {
+                                        if (error.text()) {
+                                            // only add line break if there is
+                                            // multiple lines of text
+                                            error.append('<br />');
+                                        }
+                                        error.append(jQuery('<span></span>').text(errorMsg));
+                                    }
+                                }
+                            }
                             error.show();
                             done = true;
                         }
@@ -2336,7 +2422,13 @@ jQuery(document).ready(function(){
                         window.location = 'cart.php?a=confproduct&i=' + result.num;
                     } else {
                         jQuery('.domain-lookup-primary-loader').hide();
-                        jQuery('#primaryLookupResult').removeClass('hidden').show().find('.domain-invalid').show();
+                        if (typeof result === 'string') {
+                            jQuery('#primaryLookupResult').removeClass('hidden').show().find('.domain-error')
+                                .text(result)
+                                .show();
+                        } else {
+                            jQuery('#primaryLookupResult').removeClass('hidden').show().find('.domain-invalid').show();
+                        }
                     }
                 });
 
@@ -2386,12 +2478,15 @@ jQuery(document).ready(function(){
         cvvFieldContainer = jQuery('#cvv-field-container'),
         existingCardContainer = jQuery('#existingCardsContainer'),
         newCardInfo = jQuery('#newCardInfo'),
+        newCardSaveSettings = jQuery('#newCardSaveSettings'),
+        inputNoStoreContainer = jQuery('#inputNoStoreContainer'),
         existingCardInfo = jQuery('#existingCardInfo'),
         newCardOption = jQuery('#new'),
         creditCardInputFields = jQuery('#creditCardInputFields');
 
     existingCards.on('ifChecked', function(event) {
-        if (jQuery('.payment-methods:checked').val() === 'stripe') {
+        newCardSaveSettings.slideUp().find('input').attr('disabled', 'disabled');
+        if (jQuery('.payment-methods:checked').data('remote-inputs') === 1) {
             return;
         }
 
@@ -2399,7 +2494,8 @@ jQuery(document).ready(function(){
         existingCardInfo.slideDown().find('input').removeAttr('disabled');
     });
     newCardOption.on('ifChecked', function(event) {
-        if (jQuery('.payment-methods:checked').val() === 'stripe') {
+        newCardSaveSettings.slideDown().find('input').removeAttr('disabled');
+        if (jQuery('.payment-methods:checked').data('remote-inputs') === 1) {
             return;
         }
 
@@ -2417,6 +2513,13 @@ jQuery(document).ready(function(){
                 gatewayModule = jQuery(this).val(),
                 showLocal = jQuery(this).data('show-local'),
                 relevantMethods = [];
+            if (gatewayPaymentType === 'RemoteCreditCard') {
+                inputNoStoreContainer.hide().find('input').prop('disabled', 'disabled');
+            } else {
+                if (!(inputNoStoreContainer.is(':visible'))) {
+                    inputNoStoreContainer.show().find('input').removeProp('disabled');
+                }
+            }
 
             existingCards.each(function(index) {
                 var paymentType = jQuery(this).data('payment-type'),
@@ -2460,6 +2563,9 @@ jQuery(document).ready(function(){
                         order = parseInt(jQueryElement.data('order-preference'), 10);
                     if ((defaultId === null) || (order < defaultId)) {
                         defaultId = jQueryElement.val();
+                        if (order === 0) {
+                            return false;
+                        }
                     }
                 });
                 if (defaultId === null) {
@@ -2661,14 +2767,32 @@ jQuery(document).ready(function(){
                     invalid.hide();
                     error.hide();
                     var invalidLength = invalid.find('span.domain-length-restrictions'),
-                        done = false;
+                        done = false,
+                        reg = /<br\s*\/>/,
+                        errors = [];
                     invalidLength.hide();
                     if (domain.minLength > 0 && domain.maxLength > 0) {
                         invalidLength.find('.min-length').html(domain.minLength).end()
                             .find('.max-length').html(domain.maxLength).end();
                         invalidLength.show();
                     } else if (data.result.error) {
-                        error.html(data.result.error);
+                        if (!data.result.error.match(reg)) {
+                            error.text(data.result.error);
+                        } else {
+                            error.text('');
+                            errors = data.result.error.split(reg);
+                            for(var i=0; i < errors.length; i++) {
+                                var errorMsg = errors[i];
+                                if (errorMsg.length) {
+                                    if (error.text()) {
+                                        // only add line break if there is
+                                        // multiple lines of text
+                                        error.append('<br />');
+                                    }
+                                    error.append(jQuery('<span></span>').text(errorMsg));
+                                }
+                            }
+                        }
                         error.show();
                         done = true;
                     }
@@ -2985,14 +3109,18 @@ jQuery(document).ready(function(){
             isCcSelected = selectedPaymentMethod.hasClass('is-credit-card'),
             firstNonCcGateway = jQuery('input[name="paymentmethod"]')
             .not(jQuery('input.is-credit-card[name="paymentmethod"]'))
-            .first();
+            .first(),
+            container = jQuery('#paymentGatewaysContainer'),
+            ccInputFields = jQuery('#creditCardInputFields');
         if (radio.prop('checked')) {
-            if (isCcSelected && firstNonCcGateway.length) {
+            if (isCcSelected && firstNonCcGateway.length !== 0) {
                 firstNonCcGateway.iCheck('check');
-            } else if (isCcSelected) {
-                jQuery('#creditCardInputFields').slideUp();
+                ccInputFields.slideUp();
+                container.slideUp();
+            } else if (isCcSelected && !container.is(":visible")) {
+                ccInputFields.slideDown();
+                container.slideDown();
             }
-            jQuery('#paymentGatewaysContainer').slideUp();
         }
     });
 
@@ -3089,6 +3217,10 @@ jQuery(document).ready(function(){
     checkoutForm = jQuery('#frmCheckout');
     if (checkoutForm.length) {
         checkoutForm.on('submit', validateCheckoutCreditCardInput);
+    }
+
+    if (existingCardContainer.is(':visible')) {
+        newCardInfo.hide();
     }
 });
 //checkoutForm
@@ -3259,7 +3391,7 @@ function selectDomainPeriodInCart(domainName, price, period, yearsString) {
         function(data) {
             data.domains.forEach(function(domain) {
                 jQuery("[name='" + domain.domain + "Price']").parent('div').find('.renewal-price').html(
-                    domain.renewprice + domain.shortYearsLanguage
+                    domain.prefixedRenewPrice + domain.shortRenewalYearsLanguage
                 ).end();
             });
             jQuery('#subtotal').html(data.subtotal);
@@ -3355,7 +3487,7 @@ function validate_captcha(form)
             jQuery('#inputCaptcha').attr('data-original-title', data.error).tooltip('show');
             if (captcha.length) {
                 jQuery('#inputCaptchaImage').replaceWith(
-                    '<img id="inputCaptchaImage" src="includes/verifyimage.php" align="middle" />'
+                    '<img id="inputCaptchaImage" src="' + whmcsBaseUrl + 'includes/verifyimage.php" align="middle" />'
                 );
             }
         } else {

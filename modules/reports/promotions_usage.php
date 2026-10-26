@@ -1,6 +1,7 @@
 <?php
 
 use WHMCS\Carbon;
+use WHMCS\Database\Capsule;
 
 if (!defined("WHMCS")) {
     die("This file cannot be accessed directly");
@@ -51,7 +52,15 @@ if (!$print) {
 EOF;
 }
 
-$reportdata["tableheadings"] = array("Coupon Code","Discount Type","Value","Recurring","Notes","Usage Count","Total Revenue");
+$reportdata["tableheadings"] = [
+    "Coupon Code",
+    "Discount Type",
+    "Value",
+    "Recurring",
+    "Notes",
+    "Usage Count",
+    "Total Revenue",
+];
 
 $i = 0;
 
@@ -59,37 +68,59 @@ $dateRange = Carbon::parseDateRangeValue($range);
 $datefrom = $dateRange['from']->toDateTimeString();
 $dateto = $dateRange['to']->toDateTimeString();
 
-$result = select_query("tblpromotions","","","code","ASC");
-while($data = mysql_fetch_array($result)) {
-
-    $code = $data["code"];
-    $type = $data["type"];
-    $value = $data["value"];
-    $recurring = $data["recurring"];
-    $notes = $data["notes"];
+$results = Capsule::table('tblpromotions')
+    ->orderBy('code', 'asc')
+    ->get();
+foreach ($results as $result) {
+    $code = $result->code;
+    $type = $result->type;
+    $value = $result->value;
+    $recurring = $result->recurring;
+    $notes = $result->notes;
 
     $rowcount = $rowtotal = 0;
 
-    $reportdata["drilldown"][$i]["tableheadings"] = array("Order ID","Order Date","Order Number","Order Total","Order Status");
+    $reportdata["drilldown"][$i]["tableheadings"] = [
+        "Order ID",
+        "Order Date",
+        "Order Number",
+        "Order Total",
+        "Order Status",
+    ];
 
-    $result2 = select_query("tblorders","","promocode='".db_escape_string($code)."' AND date>='".db_make_safe_human_date($datefrom)."' AND date<='".db_make_safe_human_date($dateto)."'","id","ASC");
-    while ($data = mysql_fetch_array($result2)) {
-
-        $orderid = $data['id'];
-        $ordernum = $data['ordernum'];
-        $orderdate = $data['date'];
-        $ordertotal = $data['amount'];
-        $orderstatus = $data['status'];
+    $orders = Capsule::table('tblorders')
+        ->where('promocode', '=', $code)
+        ->whereBetween('date', [$datefrom, $dateto])
+        ->orderBy('id', 'asc')
+        ->get();
+    foreach ($orders as $order) {
+        $orderid = $order->id;
+        $ordernum = $order->ordernum;
+        $orderdate = $order->date;
+        $ordertotal = $order->amount;
+        $orderstatus = $order->status;
 
         $rowcount++;
         $rowtotal += $ordertotal;
 
-        $reportdata["drilldown"][$i]["tablevalues"][] = array('<a href="orders.php?action=view&id='.$orderid.'">'.$orderid.'</a>',fromMySQLDate($orderdate),$ordernum,$ordertotal,$orderstatus);
-
+        $reportdata["drilldown"][$i]["tablevalues"][] = [
+            "<a href=\"orders.php?action=view&id={$orderid}\">{$orderid}</a>",
+            fromMySQLDate($orderdate),
+            $ordernum,
+            $ordertotal,
+            $orderstatus,
+        ];
     }
 
-    $reportdata["tablevalues"][$i] = array($code,$type,$value,$recurring,$notes,$rowcount,format_as_currency($rowtotal));
+    $reportdata["tablevalues"][$i] = [
+        $code,
+        $type,
+        $value,
+        $recurring,
+        $notes,
+        $rowcount,
+        format_as_currency($rowtotal),
+    ];
 
     $i++;
-
 }

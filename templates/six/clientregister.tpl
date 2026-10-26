@@ -258,7 +258,7 @@
         {if $showMarketingEmailOptIn}
             <div class="marketing-email-optin">
                 <h4>{lang key='emailMarketing.joinOurMailingList'}</h4>
-                <p>Gostaríamos de lhe enviar notícias ocasionais, informações e ofertas especiais por e-mail. Para se juntar à nossa newsletter, basta marcar a caixa abaixo. Você pode cancelar sua inscrição a qualquer momento.</p>
+                <p>{$marketingEmailOptInMessage}</p>
                 <input type="checkbox" name="marketingoptin" value="1"{if $marketingEmailOptIn} checked{/if} class="no-icheck toggle-switch-success" data-size="small" data-on-text="{lang key='yes'}" data-off-text="{lang key='no'}">
             </div>
         {/if}

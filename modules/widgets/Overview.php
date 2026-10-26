@@ -64,17 +64,43 @@ class Overview extends AbstractWidget
         }
 
         $incomeData = array();
-        $result = full_query("SELECT date_format(date, '%k'), SUM(amountin/rate), SUM(amountout/rate) FROM tblaccounts WHERE date>'$today' GROUP BY date_format(date, '%k')");
-        while ($data = mysql_fetch_array($result)) {
-            $incomeData['today'][$data[0]] = $data[1];
+
+        $results = Capsule::table('tblaccounts')
+            ->select(
+                Capsule::raw("DATE_FORMAT(date, '%k') AS dateTime"),
+                Capsule::raw('SUM(amountin/rate) AS amountIn')
+            )
+            ->where('date', '>', $today)
+            ->groupBy(Capsule::raw("DATE_FORMAT(date, '%k')"))
+            ->get();
+
+        foreach ($results as $result) {
+            $incomeData['today'][$result->dateTime] = $result->amountIn;
         }
-        $result = full_query("SELECT date_format(date, '%e %M'), SUM(amountin/rate), SUM(amountout/rate) FROM tblaccounts WHERE date>'$month' GROUP BY date_format(date, '%e %M')");
-        while ($data = mysql_fetch_array($result)) {
-            $incomeData['month'][$data[0]] = $data[1];
+
+        $results = Capsule::table('tblaccounts')
+            ->select(
+                Capsule::raw("DATE_FORMAT(date, '%e %M') AS dateTime"),
+                Capsule::raw('SUM(amountin/rate) AS amountIn')
+            )
+            ->where('date', '>', $month)
+            ->groupBy(Capsule::raw("DATE_FORMAT(date, '%e %M')"))
+            ->get();
+        foreach ($results as $result) {
+            $incomeData['month'][$result->dateTime] = $result->amountIn;
         }
-        $result = full_query("SELECT date_format(date, '%M %Y'), SUM(amountin/rate), SUM(amountout/rate) FROM tblaccounts WHERE date>'$year' GROUP BY date_format(date, '%M %Y')");
-        while ($data = mysql_fetch_array($result)) {
-            $incomeData['year'][$data[0]] = $data[1];
+
+        $results = Capsule::table('tblaccounts')
+            ->select(
+                Capsule::raw("DATE_FORMAT(date, '%M %Y') AS dateTime"),
+                Capsule::raw('SUM(amountin/rate) AS amountIn')
+            )
+            ->where('date', '>', $year)
+            ->groupBy(Capsule::raw("date_format(date, '%M %Y')"))
+            ->get();
+
+        foreach ($results as $result) {
+            $incomeData['year'][$result->dateTime] = $result->amountIn;
         }
 
         return array(

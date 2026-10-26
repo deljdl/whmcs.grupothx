@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#replymessage").focus(function () {
+    $("#replymessage,#replynote").focus(function () {
         var gotValidResponse = false;
         WHMCS.http.jqClient.post("supporttickets.php", { action: "makingreply", id: ticketid, token: csrfToken },
         function(data){
@@ -76,9 +76,27 @@ $(document).ready(function(){
 
     });
 
-    $("#frmAddTicketNote").submit(function () {
-        $("#btnAddNote").attr("disabled", "disabled");
-        $("#btnAddNote i").removeClass("fa-reply").addClass("fa-spinner fa-spin");
+    $("#frmAddTicketNote").submit(function (e, options) {
+        options = options || {};
+
+        var formSubmitButton = $('#btnAddNote'),
+            thisElement = $(this),
+            swapClass = 'fa-reply';
+
+        formSubmitButton.attr('disabled', 'disabled');
+        formSubmitButton.find('i').removeClass(swapClass).addClass('fa-spinner fa-spin').end();
+
+        if (options.skipValidation) {
+            return true;
+        }
+
+        e.preventDefault();
+
+        post_validate_changes_and_submit(
+            thisElement,
+            formSubmitButton,
+            swapClass
+        );
     });
 
     $(window).unload( function () {
@@ -171,7 +189,6 @@ $(document).ready(function(){
         WHMCS.http.jqClient.post(
             'supporttickets.php', {
                 action: 'watcher_update',
-                admin_id: adminId,
                 ticket_id: ticketId,
                 type: type,
                 token: csrfToken
@@ -251,6 +268,89 @@ $(document).ready(function(){
             self
         );
     });
+
+    jQuery('#btnSelectRelatedService').on('click', function() {
+        var expandable = jQuery(this).data('expandable');
+        jQuery(this).addClass('disabled').prop('disabled', true);
+        expandRelServices(function() {
+            jQuery('#relatedservicestbl').find('.related-service').removeClass('hidden');
+            jQuery('#btnSelectRelatedService').hide();
+            jQuery('#btnSelectRelatedServiceSave').removeClass('hidden').show().removeClass('disabled').prop('disabled', false);
+            jQuery('#btnSelectRelatedServiceCancel').removeClass('hidden').show().removeClass('disabled').prop('disabled', false);
+        });
+    });
+
+    jQuery('#btnRelatedServiceExpand').on('click', function() {
+        if (jQuery(this).prop('disabled')) {
+            return;
+        }
+        expandRelServices();
+    });
+
+    jQuery('#btnSelectRelatedServiceSave').on('click', function() {
+        var table = jQuery('#relatedservicestbl'),
+            selectedService = table.find('input[name="related_service[]"]:checked'),
+            type = null,
+            id = 0;
+
+        if (selectedService.length === 0) {
+            jQuery.growl.warning(
+                {
+                    title: '',
+                    message: 'You must select a service'
+                }
+            );
+            return false;
+        }
+
+        type = selectedService.data('type');
+        id = selectedService.val();
+
+        jQuery(this).prop('disabled', true).addClass('disabled');
+        jQuery('#btnSelectRelatedServiceCancel').prop('disabled', true).addClass('disabled');
+
+        WHMCS.http.jqClient.jsonPost(
+            {
+                url: WHMCS.adminUtils.getAdminRouteUrl(
+                    '/support/ticket/' + ticketid + '/client/' + userid + '/services/save'
+                ),
+                data: {
+                    token: csrfToken,
+                    type: type,
+                    id: id
+                },
+                success: function(data) {
+                    if (data.success) {
+                        var tableRow = selectedService.closest('tr');
+                        table.find('.rowhighlight').removeClass('rowhighlight');
+                        tableRow.attr('data-original', 'true').addClass('rowhighlight');
+                        jQuery('#btnSelectRelatedServiceSave').hide();
+                        jQuery('#btnSelectRelatedServiceCancel').hide();
+                        jQuery('#btnSelectRelatedService').prop('disabled', false).show()
+                            .removeClass('disabled hidden');
+                        jQuery.growl.notice({title: '', message: data.successMessage});
+                        table.find('.related-service').addClass('hidden');
+                        table.find('tr[data-original!="true"]').remove();
+                        jQuery('#btnRelatedServiceExpand').prop('disabled', false).removeClass('disabled');
+                    } else {
+                        jQuery.growl.warning({title: '', message: data.errorMessage});
+                    }
+                }
+            }
+        );
+    });
+
+    jQuery('#btnSelectRelatedServiceCancel').on('click', function() {
+        var table = jQuery('#relatedservicestbl');
+        table.find('.related-service').addClass('hidden');
+        jQuery(this).hide();
+        jQuery('#btnSelectRelatedServiceSave').hide().addClass('hidden');
+        jQuery('#btnSelectRelatedService').show().prop('disabled', false).removeClass('disabled');;
+        if (!jQuery('#btnRelatedServiceExpand').hasClass('disabled')) {
+            table.find('tr[data-original!="true"]').remove();
+            jQuery('#btnRelatedServiceExpand').prop('disabled', false).removeClass('disabled');
+        }
+    });
 });
 
 var replyingAdminMessage = $("#replyingAdminMsg");
@@ -280,14 +380,35 @@ function loadTab(target,type,offset) {
         }
     });
 }
-function expandRelServices() {
-    $("#relatedservicesexpand").html('<img src="images/loading.gif" align="top" /> '+langloading);
-    WHMCS.http.jqClient.post("supporttickets.php", { action: "getallservices", id: ticketid, userid: userid, token: csrfToken },
-    function(data){
-        $("#relatedservicestbl").append(data);
-        $("#relatedservicesexpand").fadeOut();
-    });
+function expandRelServices(completeFunction) {
+    var button = jQuery('#btnRelatedServiceExpand');
+    if (button.hasClass('disabled')) {
+        if (completeFunction instanceof Function) {
+            completeFunction();
+        }
+        return;
+    }
+
+    button.addClass('disabled').prop('disabled', true).find('span').toggleClass('hidden');
+    WHMCS.http.jqClient.jsonPost(
+        {
+            url: WHMCS.adminUtils.getAdminRouteUrl('/support/ticket/' + ticketid + '/client/' + userid + '/services'),
+            data: {
+                token: csrfToken
+            },
+            success: function(data) {
+                jQuery('#relatedservicestbl').find('tbody').append(data.body);
+            },
+            always: function() {
+                button.find('span').toggleClass('hidden');
+                if (completeFunction instanceof Function) {
+                    completeFunction();
+                }
+            }
+        }
+    );
 }
+
 function editTicket(id) {
     $(".editbtns"+id+" input[type=button]").prop('disabled', true);
     $(".editbtns"+id+" img.saveSpinner").show();
@@ -377,6 +498,7 @@ function post_validate_and_change(vars, updateElement, newValue, self)
                 } else {
                     done = true;
                     updateElement.val(newValue);
+                    jQuery('#frmTicketOptions').find('[name=' + self.data('update-type') + ']').val(newValue);
                 }
             } else {
                 // access denied
@@ -413,6 +535,8 @@ function post_validate_changes_and_submit(form, submitButton, swapClass)
     var gotValidResponse = false,
         allowPost = false,
         responseMsg = '';
+
+    replyingAdminMessage = $("#replyingAdminMsg");
 
     WHMCS.http.jqClient.post(
         'supporttickets.php',

@@ -7,7 +7,7 @@
  *
  * @package    WHMCS
  * @author     WHMCS Limited <development@whmcs.com>
- * @copyright  Copyright (c) WHMCS Limited 2005-2018
+ * @copyright  Copyright (c) WHMCS Limited 2005-2019
  * @license    https://www.whmcs.com/license/ WHMCS Eula
  * @version    $Id$
  * @link       https://www.whmcs.com/
@@ -17,8 +17,9 @@ use WHMCS\Billing\Tax\Vat;
 use WHMCS\Database\Capsule;
 use WHMCS\Utility\Country;
 
-if (!defined("WHMCS"))
+if (!defined("WHMCS")) {
     die("This file cannot be accessed directly");
+}
 
 // Define report parameters.
 $reportdata['title'] = "VAT MOSS Settlement Data";
@@ -111,44 +112,71 @@ if ($queryStartDate && $queryEndDate) {
         ->pluck('taxrate', 'country');
 
     // Build query to calculate data for report.
-    $query = "SELECT tblclients.country, COUNT(tblinvoices.id) as invoicecount, "
-        . "tblinvoicedata.country as invoice_country, "
-        . "SUM(tblinvoices.subtotal) as totalinvoiced, "
-        . "SUM(tblinvoices.tax + tblinvoices.tax2) as totalvat "
-        . "FROM tblinvoices "
-        . "INNER JOIN tblclients ON tblclients.id = tblinvoices.userid "
-        . "LEFT JOIN tblinvoicedata ON tblinvoices.id = tblinvoicedata.invoice_id "
-        . "WHERE (tblinvoices.tax > 0 OR tblinvoices.tax2 > 0) "
-        . "AND ((tblinvoicedata.country IS NOT NULL AND tblinvoicedata.country IN "
-        . "(" . db_build_in_array($euCountries) . "))"
-        . " OR (tblinvoicedata.country IS NULL AND tblclients.country IN"
-        . " (" . db_build_in_array($euCountries) . "))) "
-        . "AND datepaid >= '" . date("Y-m-d", $queryStartDate) . "' "
-        . "AND datepaid <= '" . date("Y-m-d", $queryEndDate) . " 23:59:59' "
-        . "AND tblinvoices.status = 'Paid' "
-        . "AND currency = " . (int) $currencyid . " "
-        . "AND (SELECT count(tblinvoiceitems.id) "
-            . "FROM tblinvoiceitems "
-            . "WHERE invoiceid = tblinvoices.id "
-                . "AND (type = 'AddFunds' OR type = 'Invoice') "
-            . ") = 0 "
-        . "GROUP BY tblclients.country "
-        . "ORDER BY tblclients.country ASC";
-    $result = full_query($query);
-    while ($data = mysql_fetch_array($result)) {
+    $results = Capsule::table('tblinvoices')
+        ->select(
+            'tblclients.country',
+            'tblinvoicedata.country as invoice_country',
+            Capsule::raw('count(tblinvoices.id) as `invoicecount`'),
+            Capsule::raw('sum(tblinvoices.subtotal) as `totalinvoiced`'),
+            Capsule::raw('sum(tblinvoices.tax + tblinvoices.tax2) as `totalvat`')
+        )
+        ->distinct()
+        ->join('tblclients', 'tblclients.id', '=', 'tblinvoices.userid')
+        ->leftJoin('tblinvoicedata', 'tblinvoices.id', '=', 'tblinvoicedata.invoice_id')
+        ->leftJoin('tblinvoiceitems', function ($join) {
+            $join->on('tblinvoiceitems.invoiceid', '=', 'tblinvoices.id');
+            $join->on(function ($join) {
+                $join
+                    ->on('tblinvoiceitems.type', '=', Capsule::raw('"Add Funds"'))
+                    ->orOn('tblinvoiceitems.type', '=', Capsule::raw('"Invoice"'));
+            });
+        })
+        ->where(function ($query) {
+            $query->where('tblinvoices.tax', '>', '0')
+                ->orWhere('tblinvoices.tax2', '>', '0');
+        })
+        ->where(function ($query) use ($euCountries) {
+            $query->where(function ($query) use ($euCountries) {
+                $query->whereNotNull('tblinvoicedata.country')
+                    ->whereIn('tblinvoicedata.country', $euCountries);
+            })
+                ->orWhere(function ($query) use ($euCountries) {
+                    $query->whereNull('tblinvoicedata.country')
+                        ->whereIn('tblclients.country', $euCountries);
+                });
+        })
+        ->whereBetween('datepaid', [
+            date("Y-m-d", $queryStartDate),
+            date("Y-m-d", $queryEndDate) . ' 23:59:59',
+        ])
+        ->where('tblinvoices.status', '=', 'Paid')
+        ->where('currency', '=', (int) $currencyid)
+        ->whereNull('tblinvoiceitems.id')
+        ->groupBy('tblclients.country')
+        ->orderBy('tblclients.country', 'asc')
+        ->get();
 
-        $countryCode = $data['country'];
-        if ($data['invoice_country']) {
-            $countryCode = $data['invoice_country'];
+    foreach ($results as $result) {
+        $countryCode = $result->country;
+        if ($result->invoice_country) {
+            $countryCode = $result->invoice_country;
         }
-        $invoiceCount = $data['invoicecount'];
-        $totalInvoiced = $data['totalinvoiced'];
-        $totalVat = $data['totalvat'];
+        $invoiceCount = $result->invoicecount;
+        $totalInvoiced = $result->totalinvoiced;
+        $totalVat = $result->totalvat;
 
-        $countryName = isset($countries[$countryCode]) ? $countries[$countryCode] : 'Unrecognised Country';
-        $taxRate = isset($taxRates[$countryCode]) ? $taxRates[$countryCode] . '%' : 'Tax Rate Not Found';
+        if (isset($countries[$countryCode])) {
+            $countryName = $countries[$countryCode];
+        } else {
+            $countryName = 'Unrecognised Country';
+        }
+        if (isset($taxRates[$countryCode])) {
+            $taxRate = $taxRates[$countryCode] . '%';
+        } else {
+            $taxRate = 'Tax Rate Not Found';
+        }
 
-        $reportdata['tablevalues'][] = array(
+        $reportdata['tablevalues'][] = [
             $countryName,
             $countryCode,
             $taxRate,
@@ -156,14 +184,15 @@ if ($queryStartDate && $queryEndDate) {
             $totalInvoiced,
             $totalVat,
             $currencyCode,
-        );
+        ];
     }
+
     $reportdata['footertext'] = "* If a country does not appear in the report, then no VAT was collected "
         . "from customers in that country during the period selected.";
     $reportdata['footertext'] .= "<br />Isle of Man (GB) and Monaco (FR) are listed in this report as "
         . "EU Overseas Territories of their respective countries and should be included in any figures "
         . "provided to tax authorities. "
-        . "<a href='http://europa.eu/youreurope/business/vat-customs/cross-border/index_en.htm' target='_blank'>"
-        . "More Information</a>";
+        . "<a href='http://europa.eu/youreurope/business/vat-customs/cross-border/index_en.htm' "
+        . "target='_blank'>More Information</a>";
 
 }

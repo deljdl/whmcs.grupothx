@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="{$charset}" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{$companyname} – {if $kbarticle.title}{$kbarticle.title} - {/if}{$pagetitle}</title>
+    <title>{if $kbarticle.title}{$kbarticle.title} - {/if}{$pagetitle} - {$companyname}</title>
 
     {include file="$template/includes/head.tpl"}
 
@@ -135,7 +135,7 @@
 </section>
 
 {if $templatefile == 'homepage'}
-    <!-- <section id="home-banner">
+    <section id="home-banner">
         <div class="container text-center">
             {if $registerdomainenabled || $transferdomainenabled}
                 <h2>{$LANG.homebegin}</h2>
@@ -163,8 +163,8 @@
                 <h2>{$LANG.doToday}</h2>
             {/if}
         </div>
-    </section> -->
-    <!-- <div class="home-shortcuts">
+    </section>
+    <div class="home-shortcuts">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 hidden-sm hidden-xs text-center">
@@ -176,7 +176,7 @@
                     <ul>
                         {if $registerdomainenabled || $transferdomainenabled}
                             <li>
-                                <a id="btnBuyADomain" href="comprar-site-php.php">
+                                <a id="btnBuyADomain" href="domainchecker.php">
                                     <i class="fas fa-globe"></i>
                                     <p>
                                         {$LANG.buyadomain} <span>&raquo;</span>
@@ -212,7 +212,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 {/if}
 
 {include file="$template/includes/verifyemail.tpl"}

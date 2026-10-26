@@ -1,6 +1,7 @@
 <?php
 
 use WHMCS\Application;
+use WHMCS\Database\Capsule;
 
 require("../init.php");
 
@@ -23,9 +24,9 @@ if (!is_numeric($regperiod) || $regperiod < 1) {
     $regperiod = 1;
 }
 
-$result = select_query("tbldomainpricing","id",array("extension"=>$tld));
-$data = mysql_fetch_array($result);
-$did = $data['id'];
+$did = Capsule::table('tbldomainpricing')
+    ->where('extension', '=', $tld)
+    ->value('id');
 
 $currency = ($currency) ? getCurrency('',$currency) : getCurrency();
 
@@ -35,14 +36,29 @@ if (!in_array($type, $validDomainActionRequests)) {
     $type = 'register';
 }
 
-$result = select_query("tblpricing","msetupfee,qsetupfee,ssetupfee,asetupfee,bsetupfee,tsetupfee,monthly,quarterly,semiannually,annually,biennially,triennially",array("type"=>"domain".$type,"currency"=>$currency['id'],"relid"=>$did));
-$data = mysql_fetch_array($result);
+$data = Capsule::table('tblpricing')
+    ->where('type', '=', 'domain' . $type)
+    ->where('currency', '=', $currency['id'])
+    ->where('relid', '=', $did)
+    ->where('tsetupfee', '=', '0.00')
+    ->first();
 
-if ($regperiod < 6) {
-    $regperiod = $regperiod - 1;
-}
+$pricingColumns = array(
+    'msetupfee',
+    'qsetupfee',
+    'ssetupfee',
+    'asetupfee',
+    'bsetupfee',
+    'monthly',
+    'quarterly',
+    'semiannually',
+    'annually',
+    'biennially',
+);
 
-$price = $data[$regperiod];
+$regperiod = $regperiod - 1;
+$targetProperty = $pricingColumns[$regperiod];
+$price = $data->$targetProperty;
 
 if ($format) {
     $price = formatCurrency($price);

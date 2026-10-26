@@ -174,6 +174,18 @@ $_ADMINLANG['global']['notAvailable'] = "Not Available";
 $_ADMINLANG['global']['clipboardCopy'] = "Copy to clipboard";
 $_ADMINLANG['global']['typeToSearchContacts'] = "Start Typing to Search Contacts";
 $_ADMINLANG['global']['gateway'] = "Gateway";
+$_ADMINLANG['global']['invalidTemplate'] = "The template set for your account \":template\", could not be found. As a result, your account has been updated to use the next available template.  You may modify this selection below.";
+$_ADMINLANG['global']['getSubscriptionInfo'] = "Get Subscription Info";
+$_ADMINLANG['global']['actionRequired'] = "Action Required";
+$_ADMINLANG['global']['noChanges'] = "No Changes Made";
+$_ADMINLANG['global']['register'] = "Register";
+$_ADMINLANG['global']['renew'] = "Renew";
+$_ADMINLANG['global']['grace'] = "Grace";
+$_ADMINLANG['global']['redemption'] = "Redemption";
+$_ADMINLANG['global']['transfer'] = "Transfer";
+$_ADMINLANG['global']['percentage'] = "Percentage";
+$_ADMINLANG['global']['fixedAmount'] = "Fixed Amount";
+$_ADMINLANG['global']['deprecated'] = "Deprecated";
 
 # Home
 $_ADMINLANG['home']['title'] = "Accueil";
@@ -478,6 +490,8 @@ $_ADMINLANG['services']['cancelSubscriptionSuccess'] = "The Subscription has bee
 $_ADMINLANG['services']['cancelSubscriptionFailed'] = "The Subscription cancellation has failed, please check the Gateway Log.";
 $_ADMINLANG['services']['renewSure'] = "The remote service provider may charge for renewal of this product.<br><br>Are you sure you wish to execute a renewal action for this product?";
 $_ADMINLANG['services']['keepDnsZone'] = "Keep DNS Zone on Termination";
+$_ADMINLANG['services']['invoiceUsage'] = "Generate Metric Usage Invoice";
+$_ADMINLANG['services']['recurCount'] = "Recurred Count";
 
 $_ADMINLANG['sso']['fatalerror'] = "A fatal error occurred. Please see activity log for more details.";
 $_ADMINLANG['sso']['servicelogin'] = "Login to Control Panel";
@@ -732,6 +746,44 @@ $_ADMINLANG['domains']['releasedAndDeleted'] = "The domain ':domain' has been su
 $_ADMINLANG['domains']['noNameservers'] = "No nameservers have been submitted. Please add nameservers and try again.";
 $_ADMINLANG['domains']['noNameserversWithServer'] = "No nameservers are defined for the server this domain is assigned to. Please correct and try again.";
 $_ADMINLANG['domains']['noNameserversWithoutServer'] = "No default nameservers are defined in Setup > General Settings > Domains. Please correct and try again.";
+$_ADMINLANG['domains']['tldImport']['description'] = "To begin, please choose a domain registrar to fetch TLDs and Pricing Information from.";
+$_ADMINLANG['domains']['tldImport']['importCountTlds'] = "Import :count TLDs";
+$_ADMINLANG['domains']['tldImport']['marginType'] = "Margin Type";
+$_ADMINLANG['domains']['tldImport']['fixedOrPercentage'] = "Choose the type of markup to apply to cost prices";
+$_ADMINLANG['domains']['tldImport']['importComplete'] = "Import Complete";
+$_ADMINLANG['domains']['tldImport']['noRegistrars'] = "There are no active domain registrar modules that support TLD Import & Pricing Sync";
+$_ADMINLANG['domains']['tldImport']['profitMargin'] = "Profit Margin";
+$_ADMINLANG['domains']['tldImport']['profitMarginDescription'] = "The markup amount to apply to cost prices";
+$_ADMINLANG['domains']['tldImport']['rounding'] = "Round to Next";
+$_ADMINLANG['domains']['tldImport']['roundingDescription'] = "Use to round prices to a common human friendly number";
+$_ADMINLANG['domains']['tldImport']['syncRedemption'] = "Sync Redemption Fee";
+$_ADMINLANG['domains']['tldImport']['syncRedemptionDescription'] = "Enable to sync redemption fees using same markup";
+$_ADMINLANG['domains']['tldImport']['setAutoRegistrar'] = "Automatic Registration";
+$_ADMINLANG['domains']['tldImport']['setAutoRegistrarDescription'] = "Enable auto-register upon payment for synced TLDs";
+$_ADMINLANG['domains']['tldImport']['existingTld'] = "Existing TLD";
+$_ADMINLANG['domains']['tldImport']['autoRegisterWithRegistrar'] = "Auto-registration enabled with this registrar (:registrar)";
+$_ADMINLANG['domains']['tldImport']['autoRegisterOtherRegistrar'] = "Auto-registration enabled with other registrar (:registrar)";
+$_ADMINLANG['domains']['tldImport']['autoRegisterNotEnabled'] = "Auto-registration disabled";
+$_ADMINLANG['domains']['tldImport']['cost'] = "Cost";
+$_ADMINLANG['domains']['tldImport']['local'] = "Current";
+$_ADMINLANG['domains']['tldImport']['margin'] = "Margin";
+$_ADMINLANG['domains']['tldImport']['noRounding'] = "No Rounding";
+$_ADMINLANG['domains']['tldImport']['noTldsSelected'] = "You must select at least 1 TLD before continuing";
+$_ADMINLANG['domains']['tldImport']['errorOnImport'] = "There was an error importing the following TLDs";
+$_ADMINLANG['domains']['tldImport']['selectRegistrar'] = "Auto-select TLDs associated with Registrar";
+$_ADMINLANG['domains']['tldImport']['deselectRegistrar'] = "De-select TLDs associated with Registrar";
+$_ADMINLANG['domains']['tldImport']['loading'] = "Fetching TLDs and pricing information. This may take up to a minute. Please wait...";
+$_ADMINLANG['domains']['tldImport']['successes'] = "The following TLDs synced successfully";
+$_ADMINLANG['domains']['tldImport']['failures'] = "The following TLDs failed to sync";
+$_ADMINLANG['domains']['tldImport']['supported'] = "You have registrars enabled that support automatic TLD and Pricing synchronisation";
+$_ADMINLANG['domains']['tldImport']['lastSync'] = "The last sync was performed on :dateTime";
+$_ADMINLANG['domains']['tldImport']['noSync'] = "No sync has been performed yet";
+$_ADMINLANG['domains']['tldImport']['syncNow'] = "Click here to sync now";
+$_ADMINLANG['domains']['tldImport']['noCurrency'] = "Unable to display TLD cost pricing as currency ':currencyCode' is not defined with an exchange rate.";
+$_ADMINLANG['domains']['tldImport']['noCurrencyDefined'] = "Unable to display TLD cost pricing because no currency was defined.";
+$_ADMINLANG['domains']['tldImport']['autoRegisterOtherRegistrarWarning'] = "The following selected TLDs are set to automatically register with another registrar. Are you sure you wish to update these TLDs to automatically register with :registrar?";
+$_ADMINLANG['domains']['tldImport']['defaultCurrency'] = "All prices below are shown converted to your system default currency :currency.";
+$_ADMINLANG['domains']['tldImport']['additionalCurrencies'] = "The selected registrar returned pricing in the following currencies: :currencies.";
 
 # Orders
 $_ADMINLANG['orders']['title'] = "Commandes";
@@ -838,6 +890,10 @@ $_ADMINLANG['orders']['availableCreditBalance'] = "Clients available credit bala
 $_ADMINLANG['orders']['fraudCheckSkippedTitle'] = "Fraud Check Skipped";
 $_ADMINLANG['orders']['fraudCheckSkippedDescription'] = "A fraud check was not performed for this order because the customer has previous orders that had already been activated.";
 $_ADMINLANG['orders']['noFraudCheckAsCredit'] = "A fraud check was not performed for this order because the order was paid using credit and no payment was due.";
+$_ADMINLANG['orders']['requiredFieldIndication'] = "* Indicates a required field";
+$_ADMINLANG['orders']['errors']['requiredDomainFieldsTitle'] = "Required Domain Fields Missing";
+$_ADMINLANG['orders']['errors']['requiredDomainFieldsMsg'] = "One or more required domain fields have been left empty. This missing information may cause domain registration to fail.";
+$_ADMINLANG['orders']['errors']['requiredDomainFieldsAction'] = "Click on the 'Submit Order' button if you would like to proceed with the order regardless of this warning.";
 
 
 # Billing Cycles
@@ -1105,7 +1161,7 @@ $_ADMINLANG['support']['publishedann'] = "Annonces publiées";
 $_ADMINLANG['support']['unpublishedann'] = "Annonces non publiées";
 $_ADMINLANG['support']['totaldlfiles'] = "Total des fichiers téléchargeables";
 $_ADMINLANG['support']['totaldls'] = "Nombre de téléchargements";
-$_ADMINLANG['support']['expand'] = "Expand";
+$_ADMINLANG['support']['viewAllServices'] = "View All Services";
 $_ADMINLANG['support']['mostdlfiles'] = "Fichiers les plus téléchargés";
 $_ADMINLANG['support']['nodlfiles'] = "Aucun téléchargement trouvé";
 $_ADMINLANG['support']['ticketstats'] = "Statistiques de billets";
@@ -1244,7 +1300,6 @@ $_ADMINLANG['support']['addbilling'] = "Ajouter une entrée de facturation";
 $_ADMINLANG['support']['toinvoicedes'] = "Pour facturer, entrez une description";
 $_ADMINLANG['support']['addresponse'] = "Ajouter une réponse";
 $_ADMINLANG['support']['nocustomfields'] = "Pas de champs personnalisés configurés pour ce département";
-$_ADMINLANG['support']['flag'] = "Attribuer à";
 $_ADMINLANG['support']['ccrecipients'] = "CC Recipients";
 $_ADMINLANG['support']['mergeticket'] = "Fusionner les billets";
 $_ADMINLANG['support']['notocombine'] = "# à combiner";
@@ -1327,6 +1382,8 @@ $_ADMINLANG['support']['numberOfTickets'] = "Number of Tickets";
 $_ADMINLANG['support']['timeframe'] = "Timeframe";
 $_ADMINLANG['support']['averageFirstReplyTime'] = "Average First Reply Time";
 $_ADMINLANG['support']['attachmentsRemoved'] = "Removed due to ticket inactivity";
+$_ADMINLANG['support']['associateService'] = "Associate Service";
+$_ADMINLANG['support']['selectClientServices'] = "Please select a client to view the related services";
 
 # Network Issues
 $_ADMINLANG['networkissues']['title'] = "Problèmes de réseau";
@@ -1393,8 +1450,10 @@ $_ADMINLANG['currencies']['codeinfo'] = "ex. USD, GBP, EUR, etc.";
 $_ADMINLANG['currencies']['updatepricing'] = "Mettre à jour les prix";
 $_ADMINLANG['currencies']['recalcpricing'] = "Cocher pour recalculer les prix pour cette monnaie en utilisant le taux de conversion";
 $_ADMINLANG['currencies']['addCurrencyFailed'] = "Adding Currency Failed";
-$_ADMINLANG['currencies']['currencyConversionNotNumeric'] = "You must have a numeric conversation rate";
-$_ADMINLANG['currencies']['currencyConversionZero'] = "You must have a non-zero conversation rate";
+$_ADMINLANG['currencies']['currencyConversionNotNumeric'] = "You must have a numeric conversion rate";
+$_ADMINLANG['currencies']['currencyConversionZero'] = "The conversion rate must be greater than zero";
+$_ADMINLANG['currencies']['currencyCodeInvalid'] = "Please provide a valid currency code";
+$_ADMINLANG['currencies']['editCurrencyFailed'] = "Editing Currency Failed";
 
 # Affiliates
 $_ADMINLANG['affiliates']['title'] = "Affiliatés";
@@ -1470,6 +1529,7 @@ $_ADMINLANG['utilities']['logs'] = "Journaux";
 $_ADMINLANG['utilities']['activitylog'] = "Journal des activités";
 $_ADMINLANG['utilities']['modulelog'] = "Module Log";
 $_ADMINLANG['utilities']['moduleQueue'] = "Module Queue";
+$_ADMINLANG['utilities']['tldImport'] = "Registrar TLD Sync";
 $_ADMINLANG['utilities']['adminlog'] = "Journal de l'administration";
 $_ADMINLANG['utilities']['emaillog'] = "Journal des emails";
 $_ADMINLANG['utilities']['ticketmaillog'] = "Journal d'importation des emails";
@@ -1493,6 +1553,93 @@ $_ADMINLANG['utilities']['linkTracking']['clicksDescription'] = "Number of link 
 $_ADMINLANG['utilities']['linkTracking']['conversionDescription'] = "Number of orders placed by link visitors";
 $_ADMINLANG['utilities']['linkTracking']['linkUrl'] = "Link/URL";
 $_ADMINLANG['utilities']['linkTracking']['linkUrlDescription'] = "The URL to share for tracking";
+$_ADMINLANG['utilities']['emailMarketer']['description'] = "The email marketer tool allows you to schedule automated emails to be sent out to your clients when certain events and/or criteria are met.";
+$_ADMINLANG['utilities']['emailMarketer']['createNew'] = "Create New Rule";
+$_ADMINLANG['utilities']['emailMarketer']['manageRule'] = "Manage Rule";
+$_ADMINLANG['utilities']['emailMarketer']['ruleName'] = "Name";
+$_ADMINLANG['utilities']['emailMarketer']['internalUseOnly'] = "(Private Admin Use Only)";
+$_ADMINLANG['utilities']['emailMarketer']['ruleType'] = "Type";
+$_ADMINLANG['utilities']['emailMarketer']['ruleTypeClient'] = "Client Related";
+$_ADMINLANG['utilities']['emailMarketer']['ruleTypeService'] = "Product/Service Related";
+$_ADMINLANG['utilities']['emailMarketer']['marketing'] = "Marketing Email";
+$_ADMINLANG['utilities']['emailMarketer']['marketingDescription'] = "Don't send this email to clients opted out of marketing emails";
+$_ADMINLANG['utilities']['emailMarketer']['disabled'] = "Disabled";
+$_ADMINLANG['utilities']['emailMarketer']['disabledDescription'] = "Tick this box to temporarily disable this marketing rule";
+$_ADMINLANG['utilities']['emailMarketer']['criteria'] = "Criteria Options";
+$_ADMINLANG['utilities']['emailMarketer']['criteriaDescription1'] = "Criteria can be defined below for when the email should be sent.";
+$_ADMINLANG['utilities']['emailMarketer']['criteriaDescription2'] = "The criteria available depends on the type of email selected above.";
+$_ADMINLANG['utilities']['emailMarketer']['emailTemplates'] = "Email Templates";
+$_ADMINLANG['utilities']['emailMarketer']['updated'] = "Email Marketing Rule Updated";
+$_ADMINLANG['utilities']['emailMarketer']['client']['daysSinceRegistration'] = "Days Since Registration";
+$_ADMINLANG['utilities']['emailMarketer']['client']['minimumServices'] = "Minimum Number of Active Products/Services";
+$_ADMINLANG['utilities']['emailMarketer']['client']['maximumServices'] = "Maximum Number of Active Products/Services";
+$_ADMINLANG['utilities']['emailMarketer']['service']['productService'] = "Product/Service";
+$_ADMINLANG['utilities']['emailMarketer']['service']['productAddon'] = "Addon";
+$_ADMINLANG['utilities']['emailMarketer']['service']['status'] = "Product/Service Status";
+$_ADMINLANG['utilities']['emailMarketer']['service']['cycle'] = "Product/Service Billing Cycle";
+$_ADMINLANG['utilities']['emailMarketer']['service']['numberOfDays'] = "Number of Days";
+$_ADMINLANG['utilities']['emailMarketer']['service']['afterOrder'] = "After Order Date";
+$_ADMINLANG['utilities']['emailMarketer']['service']['beforeDue'] = "Before Next Due Date";
+$_ADMINLANG['utilities']['emailMarketer']['service']['afterDue'] = "After Next Due Date";
+$_ADMINLANG['utilities']['emailMarketer']['service']['withoutProduct'] = "Does Not Have Product/Service";
+$_ADMINLANG['utilities']['emailMarketer']['service']['withoutAddon'] = "Does Not Have Addon";
+$_ADMINLANG['utilities']['emailMarketer']['notFound'] = "Email Marketing Rule Not Found";
+$_ADMINLANG['utilities']['automationStatusDetail']['info'] = "Click on a block to view detailed information about the actions for that task";
+$_ADMINLANG['utilities']['automationStatusDetail']['createInvoices']['success']['detail'] = "Generated Invoices";
+$_ADMINLANG['utilities']['automationStatusDetail']['createInvoices']['noSuccess'] = "There were no invoices generated";
+$_ADMINLANG['utilities']['automationStatusDetail']['autoSuspensions']['success']['detail'] = "Successful Suspensions";
+$_ADMINLANG['utilities']['automationStatusDetail']['autoSuspensions']['noSuccess'] = "There were no successful suspensions";
+$_ADMINLANG['utilities']['automationStatusDetail']['autoSuspensions']['failure']['detail'] = "Failed Suspensions";
+$_ADMINLANG['utilities']['automationStatusDetail']['autoSuspensions']['noFailure'] = "There were no unsuccessful suspensions";
+$_ADMINLANG['utilities']['automationStatusDetail']['processCreditCardPayments']['success']['detail'] = "Successful Payments";
+$_ADMINLANG['utilities']['automationStatusDetail']['processCreditCardPayments']['noSuccess'] = "There were no successful payments";
+$_ADMINLANG['utilities']['automationStatusDetail']['processCreditCardPayments']['failure']['detail'] = "Failed Payments";
+$_ADMINLANG['utilities']['automationStatusDetail']['processCreditCardPayments']['noFailure'] = "There were no unsuccessful payments";
+$_ADMINLANG['utilities']['automationStatusDetail']['autoTerminations']['success']['detail'] = "Successful Terminations";
+$_ADMINLANG['utilities']['automationStatusDetail']['autoTerminations']['noSuccess'] = "There were no successful terminations";
+$_ADMINLANG['utilities']['automationStatusDetail']['autoTerminations']['failure']['detail'] = "Failed Terminations";
+$_ADMINLANG['utilities']['automationStatusDetail']['autoTerminations']['noFailure'] = "There were no unsuccessful terminations";
+$_ADMINLANG['utilities']['automationStatusDetail']['cancellationRequests']['success']['detail'] = "Successful Cancellations";
+$_ADMINLANG['utilities']['automationStatusDetail']['cancellationRequests']['noSuccess'] = "There were no successful cancellations";
+$_ADMINLANG['utilities']['automationStatusDetail']['cancellationRequests']['failure']['detail'] = "Failed Cancellations";
+$_ADMINLANG['utilities']['automationStatusDetail']['cancellationRequests']['noFailure'] = "There were no unsuccessful cancellations";
+$_ADMINLANG['utilities']['automationStatusDetail']['fixedTermTerminations']['success']['detail'] = "Successful Fixed Terminations";
+$_ADMINLANG['utilities']['automationStatusDetail']['fixedTermTerminations']['noSuccess'] = "There were no successful fixed term terminations";
+$_ADMINLANG['utilities']['automationStatusDetail']['fixedTermTerminations']['failure']['detail'] = "Failed Fixed Terminations";
+$_ADMINLANG['utilities']['automationStatusDetail']['fixedTermTerminations']['noFailure'] = "There were no unsuccessful fixed term terminations";
+$_ADMINLANG['utilities']['automationStatusDetail']['autoClientStatusSync']['success']['detail'] = "Reactivated Clients";
+$_ADMINLANG['utilities']['automationStatusDetail']['autoClientStatusSync']['noSuccess'] = "There were no clients reactivated";
+$_ADMINLANG['utilities']['automationStatusDetail']['autoClientStatusSync']['failure']['detail'] = "Deactivated Clients";
+$_ADMINLANG['utilities']['automationStatusDetail']['autoClientStatusSync']['noFailure'] = "There were no clients deactivated";
+$_ADMINLANG['utilities']['automationStatusDetail']['invoiceReminders']['unpaid']['detail'] = "Unpaid";
+$_ADMINLANG['utilities']['automationStatusDetail']['invoiceReminders']['noUnpaid'] = "There were no unpaid invoice reminders sent";
+$_ADMINLANG['utilities']['automationStatusDetail']['invoiceReminders']['first']['detail'] = "First";
+$_ADMINLANG['utilities']['automationStatusDetail']['invoiceReminders']['noFirst'] = "There were no first overdue invoice reminders sent";
+$_ADMINLANG['utilities']['automationStatusDetail']['invoiceReminders']['second']['detail'] = "Second";
+$_ADMINLANG['utilities']['automationStatusDetail']['invoiceReminders']['noSecond'] = "There were no second overdue invoice reminders sent";
+$_ADMINLANG['utilities']['automationStatusDetail']['invoiceReminders']['third']['detail'] = "Third";
+$_ADMINLANG['utilities']['automationStatusDetail']['invoiceReminders']['noThird'] = "There were no third overdue invoice reminders sent";
+$_ADMINLANG['utilities']['automationStatusDetail']['invoiceReminders']['fourth']['detail'] = "Fourth";
+$_ADMINLANG['utilities']['automationStatusDetail']['invoiceReminders']['noFourth'] = "There were no fourth overdue invoice reminders sent";
+$_ADMINLANG['utilities']['automationStatusDetail']['addLateFees']['success']['detail'] = "Late Fees Added";
+$_ADMINLANG['utilities']['automationStatusDetail']['addLateFees']['noSuccess'] = "There were no late fees added";
+$_ADMINLANG['utilities']['automationStatusDetail']['domainRenewalNotices']['first']['detail'] = "First";
+$_ADMINLANG['utilities']['automationStatusDetail']['domainRenewalNotices']['noFirst'] = "There were no first domain renewal reminders sent";
+$_ADMINLANG['utilities']['automationStatusDetail']['domainRenewalNotices']['second']['detail'] = "Second";
+$_ADMINLANG['utilities']['automationStatusDetail']['domainRenewalNotices']['noSecond'] = "There were no second domain renewal reminders sent";
+$_ADMINLANG['utilities']['automationStatusDetail']['domainRenewalNotices']['third']['detail'] = "Third";
+$_ADMINLANG['utilities']['automationStatusDetail']['domainRenewalNotices']['noThird'] = "There were no third domain renewal reminders sent";
+$_ADMINLANG['utilities']['automationStatusDetail']['domainRenewalNotices']['fourth']['detail'] = "Fourth";
+$_ADMINLANG['utilities']['automationStatusDetail']['domainRenewalNotices']['noFourth'] = "There were no fourth domain renewal reminders sent";
+$_ADMINLANG['utilities']['automationStatusDetail']['domainRenewalNotices']['fifth']['detail'] = "Fifth";
+$_ADMINLANG['utilities']['automationStatusDetail']['domainRenewalNotices']['noFifth'] = "There were no fifth domain renewal reminders sent";
+$_ADMINLANG['utilities']['automationStatusDetail']['domainRenewalNotices']['failed']['detail'] = "Failed";
+$_ADMINLANG['utilities']['automationStatusDetail']['domainRenewalNotices']['noFailed'] = "There were no failed domain renewal reminders";
+$_ADMINLANG['utilities']['automationStatusDetail']['closeInactiveTickets']['success']['detail'] = "Tickets Closed";
+$_ADMINLANG['utilities']['automationStatusDetail']['closeInactiveTickets']['noSuccess'] = "There were no tickets closed for inactivity";
+$_ADMINLANG['utilities']['automationStatusDetail']['viewModuleQueue'] = "View Module Queue";
+$_ADMINLANG['utilities']['automationStatusDetail']['noModuleQueue'] = "No Module Queue";
+
 
 # Setup
 $_ADMINLANG['setup']['title'] = "Configurer";
@@ -1543,6 +1690,7 @@ $_ADMINLANG['setup']['notifications'] = "Notifications";
 $_ADMINLANG['setup']['roles'] = "Administrator Roles & Permissions";
 $_ADMINLANG['setup']['promotions'] = "Promotions and Coupons";
 $_ADMINLANG['setup']['storage'] = "Storage Settings";
+$_ADMINLANG['setup']['tldImport'] = "TLD Import & Pricing Sync";
 
 $_ADMINLANG['setupDescription']['general'] = "General settings and configuration";
 $_ADMINLANG['setupDescription']['automation'] = "Timing and automation setup";
@@ -1592,6 +1740,7 @@ $_ADMINLANG['setupTask']['notifications'] = "Setup Notifications in HipChat and 
 $_ADMINLANG['setupTask']['marketconnectSSL'] = "Activate selling of SSL Certificates";
 $_ADMINLANG['setupTask']['marketconnectWeebly'] = "Activate selling of Weebly Site Builder";
 $_ADMINLANG['setupTask']['marketconnectSitelock'] = "Activate selling of SiteLock Website Security";
+$_ADMINLANG['setupTask']['marketconnectSitelockVPN'] = "Activate selling of SiteLock VPN";
 $_ADMINLANG['setupTask']['marketconnectSpam'] = "Activate selling of SpamExperts Email Security";
 $_ADMINLANG['setupTask']['signInIntegrations'] = "Enable Sign-In with Google, Facebook and Twitter";
 $_ADMINLANG['setupTask']['applicationLinks'] = "Enable cPanel Application Linking";
@@ -1770,6 +1919,19 @@ $_ADMINLANG['fields']['payMethodType'] = "Type of Pay Method. One of 'bankaccoun
 $_ADMINLANG['fields']['payMethodDisplayName'] = "The display name of the Pay Method";
 $_ADMINLANG['fields']['payMethod'] = "True if the invoice uses a payment method that supports auto-capture and the customer has a valid pay method on file.";
 $_ADMINLANG['fields']['contacts'] = "Contacts";
+$_ADMINLANG['fields']['parentdomain'] = "Parent Domain";
+$_ADMINLANG['fields']['cardName'] = "Card Holder Name";
+$_ADMINLANG['fields']['dateRefunded'] = "Date Refunded";
+$_ADMINLANG['fields']['dateCancelled'] = "Date Cancelled";
+$_ADMINLANG['fields']['updated'] = "Updated";
+$_ADMINLANG['fields']['enabled'] = "Enabled";
+$_ADMINLANG['fields']['errorMessage'] = "Error Message";
+$_ADMINLANG['fields']['serviceAddonId'] = "Service/Addon ID";
+$_ADMINLANG['fields']['clientStatus'] = "Client Status";
+$_ADMINLANG['fields']['invoiceStatus'] = "Invoice Status";
+$_ADMINLANG['fields']['serviceAddonStatus'] = "Service/Addon Status";
+$_ADMINLANG['fields']['domainId'] = "Domain ID";
+$_ADMINLANG['fields']['domainStatus'] = "Domain Status";
 
 # Contact Permissions
 $_ADMINLANG['contactpermissions']['permprofile'] = "Modifier le profil du compte principal";
@@ -2072,11 +2234,13 @@ $_ADMINLANG['calendar']['daysAgo'] = ":days Days Ago";
 $_ADMINLANG['calendar']['inDays'] = "In :days Days";
 $_ADMINLANG['calendar']['thisYear'] = "This Year";
 $_ADMINLANG['calendar']['lastYear'] = "Last Year";
-$_ADMINLANG['calendar']['oneYearAgo'] = "One Year Ago";
+$_ADMINLANG['calendar']['oneYearAgo'] = "1 Year Ago";
 $_ADMINLANG['calendar']['nextYear'] = "Next Year";
 $_ADMINLANG['calendar']['tomorrow'] = "Tomorrow";
 $_ADMINLANG['calendar']['nextMonth'] = "Next Month";
-$_ADMINLANG['calendar']['oneMonthAgo'] = "One Month Ago";
+$_ADMINLANG['calendar']['oneMonthAgo'] = "1 Month Ago";
+$_ADMINLANG['calendar']['oneMonthFromNow'] = "1 Month From Now";
+$_ADMINLANG['calendar']['oneYearFromNow'] = "1 Year From Now";
 
 # Promotions
 $_ADMINLANG['promotions']['noaffect'] = "Le changement n'affecteras pas les prix";
@@ -2217,6 +2381,7 @@ $_ADMINLANG['products']['productname'] = "Nom du produit";
 $_ADMINLANG['products']['productnameDescription'] = "The default display name for your new product";
 $_ADMINLANG['products']['productgroup'] = "Groupe du produit";
 $_ADMINLANG['products']['productgroupname'] = "Nom du groupe de produit";
+$_ADMINLANG['products']['productgroupnamePlaceHolder'] = "eg. Shared Hosting";
 $_ADMINLANG['products']['paytype'] = "Type de paiement";
 $_ADMINLANG['products']['stock'] = "Stock";
 $_ADMINLANG['products']['autosetup'] = "Mise en place automatique";
@@ -2474,7 +2639,7 @@ $_ADMINLANG['automation']['cconlyonceinfo'] = "Cochez cette case pour que la ten
 $_ADMINLANG['automation']['cceveryweek'] = "Essayer chaque semaine durant";
 $_ADMINLANG['automation']['cceveryweekinfo'] = "Entrez le nombre de semaines pour renouveler les tentatives infructueuses de traitement pour les CC hebdomadaires";
 $_ADMINLANG['automation']['ccexpirynotices'] = "CC Avis date d'expiration";
-$_ADMINLANG['automation']['ccexpirynoticesinfo'] = "Entrez le jour du mois si vous voulez envoyer des avis d'expiration de carte de crédit pour le mois à venir";
+$_ADMINLANG['automation']['ccexpirynoticesinfo'] = "Enter the day of the month that you want to send card expiry notices for credit cards expiring at the end of the month";
 $_ADMINLANG['automation']['ccnoremove'] = "Ne pas retirer les CC à l'expiration";
 $_ADMINLANG['automation']['ccnoremoveinfo'] = "Ne retirez pas la carte de crédit des clients à l'expiration";
 $_ADMINLANG['automation']['currencysettings'] = "Les préférences de mise à jour automatique des devises";
@@ -2524,6 +2689,8 @@ $_ADMINLANG['automation']['domainTransferSyncFrequency'] = "Pending Transfer Syn
 $_ADMINLANG['automation']['domainTransferSyncFrequencyInfo'] = "(hours) How often the pending transfer sync will run as part of the cron. 0 will use default value of 4 Hours";
 $_ADMINLANG['automation']['pruneTicketAttachments'] = "Prune Ticket Attachments";
 $_ADMINLANG['automation']['pruneTicketAttachmentsInfo'] = "The length of time ticket attachments should be retained after the last activity within a closed ticket.";
+$_ADMINLANG['automation']['cronLabel'] = "The System Cron is responsible for automating tasks within WHMCS and must be configured to run periodically by the server environment that hosts the WHMCS installation.";
+$_ADMINLANG['automation']['cronSample'] = "The cron command below is provided for convenience. You should configure a cron task to run every 5 minutes using the command provided below within your server cron utility or web hosting control panel.";
 
 # Payment Gateways
 $_ADMINLANG['gateways']['intro'] = "C'est ici que vous configurez les moyens de paiement (passerelles) que vous souhaitez offrir à vos clients. Si la passerelle que vous souhaitez utiliser n'est pas répertoriée ici, alors vous pouvez construire vos propres modules pour WHMCS - la documentation se trouve ici : @";
@@ -2604,6 +2771,7 @@ $_ADMINLANG['backups']['emailBackupEmailInfo'] = "Enter the email address where 
 $_ADMINLANG['backups']['testingConnection'] = "Testing Connection...";
 $_ADMINLANG['backups']['confirmDeactivate'] = "Confirm Deactivate";
 $_ADMINLANG['backups']['deactivateAreYouSure'] = "Are you sure you wish to deactivate this backup type?";
+$_ADMINLANG['backups']['largeBackups'] = "This backup option may fail to complete successfully with large databases due to system memory or time execution limits. For larger installations, we recommend using cPanel Backup or an alternative backup solution.";
 
 # System
 $_ADMINLANG['system']['activitylog'] = "Journal d'activité du système";
@@ -2942,6 +3110,9 @@ $_ADMINLANG['mergefields']['notificationAttributesUrl'] = "The url of the attrib
 $_ADMINLANG['mergefields']['notificationAttributesStyle'] = "The class of the attribute (if applicable)";
 $_ADMINLANG['mergefields']['notificationAttributesIcon'] = "The icon of the attribute (if applicable)";
 $_ADMINLANG['mergefields']['nextPaymentAttempt'] = "The Next Automatic Payment Attempt Date";
+$_ADMINLANG['mergefields']['serviceSubscriptionId'] = "Service Subscription ID";
+$_ADMINLANG['mergefields']['domainSubscriptionId'] = "Domain Subscription ID";
+$_ADMINLANG['mergefields']['addonSubscriptionId'] = "Addon Subscription ID";
 
 # Config Fraud
 $_ADMINLANG['fraud']['title'] = "Protection contre la fraude";
@@ -3138,6 +3309,8 @@ $_ADMINLANG['general']['incproductdls'] = "Inclure des téléchargements de prod
 $_ADMINLANG['general']['incproductdlsinfo'] = "Cocher pour inclure des téléchargements associés aux produits dans le dossier des téléchargements";
 $_ADMINLANG['general']['continvgeneration'] = "Génération de facture continue";
 $_ADMINLANG['general']['continvgenerationinfo'] = "S'il est activé, les factures seront générées pour chaque cycle, même si la facture précédente reste impayée";
+$_ADMINLANG['general']['metricinvoicing'] = "Enable Metric Usage Invoicing";
+$_ADMINLANG['general']['metricinvoicinginfo'] = "Tick to enable invoicing of metric usage for all priced product metrics";
 $_ADMINLANG['general']['enablepdf'] = "Activer les factures PDF";
 $_ADMINLANG['general']['enablepdfinfo'] = "Cocher cette case pour envoyer une version PDF de la facture avec les emails de facture";
 $_ADMINLANG['general']['pdfpapersize'] = "PDF Paper Size";
@@ -3225,8 +3398,8 @@ $_ADMINLANG['general']['disableadminpwreset'] = "Désactiver la demande de mot d
 $_ADMINLANG['general']['disableadminpwresetinfo'] = "Cocher cette case pour désactiver la demande de mot de passe oublié sur la page de connexion des administrateurs";
 $_ADMINLANG['general']['disableccstore'] = "Désactiver le stockage de carte de crédit";
 $_ADMINLANG['general']['disableccstoreinfo'] = "Cochez cette case pour ne pas stocker les cartes de crédit des clients dans la base de donnée pour les commandes récurrentes";
-$_ADMINLANG['general']['allowccdelete'] = "Autoriser les clients à supprimer leur carte de crédit";
-$_ADMINLANG['general']['allowccdeleteinfo'] = "Cochez cette case pour autoriser les clients à supprimer les détails de la carte de crédit stockés dans leur compte";
+$_ADMINLANG['general']['allowccdelete'] = "Allow Client Pay Method Removal";
+$_ADMINLANG['general']['allowccdeleteinfo'] = "Tick this box to allow customers to delete the payment methods associated with their account";
 $_ADMINLANG['general']['disablesessionip'] = "Désactiver la vérification d'IP lors d'une session";
 $_ADMINLANG['general']['disablesessionipinfo'] = "C'est utilisé pour protéger contre les cookies / détournement de session, mais peut causer des problèmes pour les utilisateurs avec une adresse IP dynamique";
 $_ADMINLANG['general']['bannedsubdomainprefixes'] = "Banned Subdomain Prefixes";
@@ -3339,6 +3512,11 @@ $_ADMINLANG['general']['forbrugsforeningen'] = "Forbrugsforeningen";
 $_ADMINLANG['general']['unionpay'] = "UnionPay";
 $_ADMINLANG['general']['acceptedCardTypes'] = "Accepted Credit Card Types";
 $_ADMINLANG['general']['acceptedCardTypesInfo'] = "Use Ctrl+Click to select Multiple Card Types";
+$_ADMINLANG['general']['allowautoauth'] = "Allow AutoAuth";
+$_ADMINLANG['general']['allowautoauthinfo'] = "AutoAuth allows automatic client login from your own trusted third party code";
+
+$_ADMINLANG['general']['clientEmailPreferences'] = "Client Email Preferences";
+$_ADMINLANG['general']['clientEmailPreferencesDescription'] = "Tick this box to allow clients to customise the email notification types they receive";
 
 # Config Tax
 $_ADMINLANG['taxconfig']['taxrulestitle'] = "Règles fiscales";
@@ -3374,6 +3552,8 @@ $_ADMINLANG['taxconfig']['taxappliesspecificstate'] = "Appliquer à des états s
 $_ADMINLANG['taxconfig']['taxappliesspecificcountry'] = "Appliquer à des pays spécifiques:";
 $_ADMINLANG['taxconfig']['taxappliesanycountry'] = "Appliquer à tous les pays";
 $_ADMINLANG['taxconfig']['taxappliesallcountry'] = "Appliquer les règles à tous les pays";
+$_ADMINLANG['taxconfig']['countryFieldDescription'] = "The country which the tax rule will be applied";
+$_ADMINLANG['taxconfig']['stateFieldDescription'] = "The state which the tax rule will be applied";
 $_ADMINLANG['taxconfig']['taxvalidationerrorcountry'] = "Un pays doit aussi être sélectionné pour une règle de taxe spécifique à un pays";
 $_ADMINLANG['taxconfig']['level'] = "Niveau";
 $_ADMINLANG['taxconfig']['addrule'] = "Ajouter une règle";
@@ -3709,6 +3889,7 @@ $_ADMINLANG['domainregistrars']['moduledeactivatedinfo'] = "Le registraire sél�
 $_ADMINLANG['domainregistrars']['deactivatesure'] = "Etes vous sur de vouloir  désactiver le module du registraire séléctionné?";
 $_ADMINLANG['domainregistrars']['changesuccess'] = "Changements effectués avec succès";
 $_ADMINLANG['domainregistrars']['changesuccessinfo'] = "Les changements que vous avez fait ont été enregistrés avec succès";
+$_ADMINLANG['domainregistrars']['changesUnsaved'] = "Your changes have not been saved.";
 
 # Product Bundles
 $_ADMINLANG['bundles']['createnewbundle'] = "Créer un nouveau pack";
@@ -3895,6 +4076,16 @@ $_ADMINLANG['twofa']['backupcodeis'] = "Votre code de sauvegarde est";
 $_ADMINLANG['twofa']['backupcodeexpl'] = "Ecrire ce code sur un papier et gardez le en sécurité.<br />Il sera utile si vous perdez votre seconde authentification où si vous n'y avez plus accès.";
 $_ADMINLANG['twofa']['disableclickhere'] = "Cliquer ici pour désactiver";
 $_ADMINLANG['twofa']['enableclickhere'] = "Cliquer ici pour activer";
+$_ADMINLANG['twofa']['loginbutton'] = "Login";
+
+$_ADMINLANG['twofa']['twoipconnect'] = "Connect your app";
+$_ADMINLANG['twofa']['twoipinstruct'] = "Using an authenticator app like %s or %s, scan the QR code below. Having trouble scanning the code? Enter the code manually:";
+$_ADMINLANG['twofa']['twoipverificationstepmsg'] = "Enter the 6-digit code that the application generates to verify and complete setup.";
+$_ADMINLANG['twofa']['twoipenterauth'] = "Enter authentication code";
+$_ADMINLANG['twofa']['twoipgoogleauth'] = "Google Authenticator";
+$_ADMINLANG['twofa']['twoipduo'] = "Duo";
+$_ADMINLANG['twofa']['twoipcodemissmatch'] = "The code you entered did not match what was expected. Please re-scan or enter the code and try again.";
+$_ADMINLANG['twofa']['twoipgdmissing'] = "GD is missing from the PHP build on your server so unable to generate image";
 
 # Email Marketer
 $_ADMINLANG['emailmarketer']['delete'] = "Êtes-vous sûr de vouloir supprimer cette entrée de mailing ?";
@@ -4069,6 +4260,10 @@ $_ADMINLANG['healthCheck']['updaterIoncubeLoaderMismatch'] = "Votre système est
 $_ADMINLANG['healthCheck']['phpCronMismatch'] = "Cron PHP Version Mismatch";
 $_ADMINLANG['healthCheck']['phpCronMismatchDescription'] = "Your environment appears to be running a different PHP version (<strong>:cronPhp</strong>) for the System Cron than the currently loaded PHP version (<strong>:currentPhp</strong>). This may cause issues running your System Cron.";
 
+$_ADMINLANG['healthCheck']['webserverSupportCheck'] = "Web Server Support Check";
+$_ADMINLANG['healthCheck']['supportedWebserver'] = "Your system is running \":server\" web server.";
+$_ADMINLANG['healthCheck']['unsupportedWebserver'] = "Your web server was detected as \":server\". WHMCS <a href=\":envGuideline\">System Environment Guidelines</a> recommends using a webserver that by default honors .htaccess files, such as Apache. When using an alternative web server, additional security hardening steps may be required. <a href=\":learnMore\">Learn More</a>";
+
 $_ADMINLANG['appLinks']['description'] = "Les liens d'application vous permettent d'accorder l'accès aux comptes d'utilisateurs dans WHMCS à partir d'applications tierces.";
 $_ADMINLANG['appLinks']['description2'] = "Toutes les applications qui prennent en charge la liaison d'application sont répertoriées ci-dessous et peuvent être activées / désactivées simplement en basculant les options ci-dessous. L'activation de la liaison d'application pour une application met en file d'attente un processus en arrière-plan pour créer les liens d'application initiaux. Veuillez prévoir jusqu'à 30 minutes pour que cela prenne effet pour tous les produits / services.";
 $_ADMINLANG['appLinks']['initPleaseWait'] = "Initialisation des liens d'application ... Veuillez patienter ...";
@@ -4119,9 +4314,13 @@ $_ADMINLANG['healthCheck']['purchaseSsl'] = "Purchase an SSL Certificate here.";
 $_ADMINLANG['healthCheck']['caSslNotDetected'] = "Un certificat SSL vérifié par l'autorité de certification n'a pas été détecté :site.";
 $_ADMINLANG['healthCheck']['caSslDetectedOk'] = "Un certificat SSL vérifié a été détecté pour votre site.";
 
+$_ADMINLANG['healthCheck']['sensitiveDirsCheck'] = "Sensitive Directory Check";
+$_ADMINLANG['healthCheck']['sensitiveDirsNotAccessible'] = "Sensitive directories cannot be accessed from the web.";
+$_ADMINLANG['healthCheck']['sensitiveDirsAccessible'] = "<p>One or more sensitive directories are accessible from the web:</p><ul>:accessiblePaths</ul><p>Please refer to our <a href=\":href\">Further Security Steps</a> for information.</p>";
+
 $_ADMINLANG['healthCheck']['phpTimezone'] = "Fuseau horaire PHP";
 $_ADMINLANG['healthCheck']['phpTimezoneOk'] = "Votre environnement PHP utilise un fuseau horaire valide.";
-$_ADMINLANG['healthCheck']['phpTimezoneNotSet'] = "Votre environnement PHP n'a pas de paramètre de fuseau horaire valide. Veuillez définir date.timezone dans php.ini pour assurer le traitement correct de la date et de l'heure. Si date.timezone est défini dans php.ini et que cet avertissement est toujours affiché, vérifiez l'orthographe de l'identifiant de fuseau horaire.";
+$_ADMINLANG['healthCheck']['phpTimezoneNotSet'] = "Votre environnement PHP n'a pas de paramètre de fuseau horaire valide. Veuillez définir date.timezone dans php.ini pour assurer le traitement correct de la date et de l'heure. Si date.timezone est défini dans php.ini et que cet avertissement est toujours affiché, vérifiez l'orthographe de l'identifiant de fuseau horaire. Please refer to our <a href=\":href\" class=\"autoLinked\">documentation</a> for more information.";
 
 $_ADMINLANG['system']['errorSendingEmail'] = "Une erreur s'est produite lors de la livraison de votre e-mail:";
 
@@ -4179,6 +4378,8 @@ $_ADMINLANG['wizard']['stepEnom'] = "Inscription Enom";
 $_ADMINLANG['wizard']['stepEnomDesc'] = "Créer un compte Enom";
 $_ADMINLANG['wizard']['stepWebHosting'] = "Hébergement Web";
 $_ADMINLANG['wizard']['stepWebHostingDesc'] = "Connectez-vous à votre premier serveur";
+$_ADMINLANG['wizard']['stepAddonsExtras'] = "Add-ons & Extras";
+$_ADMINLANG['wizard']['stepAddonsExtrasDescription'] = "Value added services";
 
 $_ADMINLANG['wizard']['welcome'] = "Bienvenue à WHMCS!";
 $_ADMINLANG['wizard']['intro'] = "Dans quelques minutes, nous vous aurons configuré et vous serez prêt à vendre.";
@@ -4255,6 +4456,9 @@ $_ADMINLANG['wizard']['setupComplete'] = "Installation terminée!";
 $_ADMINLANG['wizard']['readyToBeginUsing'] = "Vous êtes maintenant prêt à commencer à utiliser WHMCS.";
 $_ADMINLANG['wizard']['runAgainMsg'] = "Si vous le souhaitez, vous pouvez réexécuter cet assistant à tout moment depuis le menu Aide.";
 $_ADMINLANG['wizard']['invalidLogoImage'] = "Veuillez fournir un format de fichier JPEG ou PNG pour le téléchargement de l'image du logo.";
+
+$_ADMINLANG['wizard']['marketConnect'] = "MarketConnect";
+$_ADMINLANG['wizard']['marketConnectDescription'] = "You can instantly begin reselling all of these services alongside your hosting products and services in just a couple of clicks.";
 
 $_ADMINLANG['queue']['title'] = "Module de file d'attente";
 $_ADMINLANG['queue']['clientService'] = "Client/Service";
@@ -4349,6 +4553,7 @@ $_ADMINLANG['notifications']['validationEventRequired'] = "Veuillez choisir un �
 $_ADMINLANG['notifications']['validationProviderRequired'] = "Veuillez choisir un fournisseur de notification.";
 $_ADMINLANG['notifications']['validationProviderFieldRequired'] = "Le champ de configuration de notification suivant est requis:";
 $_ADMINLANG['notifications']['providerDisabledConfirmation'] = "Fournisseur de notifications désactivé";
+$_ADMINLANG['notifications']['needActiveProvider'] = "You must first activate at least one notification provider.";
 
 $_ADMINLANG['notifications']['ticket']['opened'] = "Un nouveau ticket de support a été ouvert.";
 $_ADMINLANG['notifications']['ticket']['reply_cust'] = "Une nouvelle réponse a été postée par un client.";
@@ -4445,6 +4650,8 @@ $_ADMINLANG['storage']['migration']['switchOk'] = "This asset type has been succ
 $_ADMINLANG['storage']['migration']['cancelConfirm'] = "Do you want to cancel this migration? Previously selected configuration will be used.";
 $_ADMINLANG['storage']['migration']['cancelOk'] = "This migration has been canceled. Previously selected configuration will now be used.";
 $_ADMINLANG['storage']['migration']['willContinueOnceFixed'] = "Once the issue is resolved, migration will continue automatically.";
+$_ADMINLANG['storage']['assetTypes']['kb_images'] = "Knowledgebase Images";
+$_ADMINLANG['storage']['assetTypes']['email_images'] = "Email Images";
 
 $_ADMINLANG['moduleQueue']['unknownError'] = "Une erreur inconnue est survenue. Pour diagnostiquer davantage, activez la journalisation du débogage du module et réessayez.";
 
@@ -4504,12 +4711,18 @@ $_ADMINLANG['dateTime']['may'] = "mai";
 $_ADMINLANG['dateTime']['jun'] = "juin";
 $_ADMINLANG['dateTime']['jul'] = "juil";
 $_ADMINLANG['dateTime']['aug'] = "août";
-$_ADMINLANG['dateTime']['sept'] = "sept";
+$_ADMINLANG['dateTime']['sep'] = "sept";
 $_ADMINLANG['dateTime']['oct'] = "oct";
 $_ADMINLANG['dateTime']['nov'] = "nov";
 $_ADMINLANG['dateTime']['dec'] = "déc";
 $_ADMINLANG['dateTime']['am'] = "";
 $_ADMINLANG['dateTime']['pm'] = "";
+$_ADMINLANG['dateTime']['day'] = "Day";
+$_ADMINLANG['dateTime']['days'] = "Days";
+$_ADMINLANG['dateTime']['hour'] = "Hour";
+$_ADMINLANG['dateTime']['hours'] = "Hours";
+$_ADMINLANG['dateTime']['minute'] = "Minute";
+$_ADMINLANG['dateTime']['minutes'] = "Minutes";
 
 $_ADMINLANG['marketConnect']['yourAccount'] = "Your Account";
 $_ADMINLANG['marketConnect']['sellingStatus'] = "Selling Status";
@@ -4724,6 +4937,7 @@ $_ADMINLANG['marketConnect']['perMonth'] = ":num/month";
 $_ADMINLANG['marketConnect']['perMo'] = ":num/mo";
 $_ADMINLANG['marketConnect']['weebly']['learn']['tab']['about'] = "About";
 $_ADMINLANG['marketConnect']['weebly']['learn']['tab']['features'] = "Features";
+$_ADMINLANG['marketConnect']['weebly']['learn']['tab']['freeplan'] = "Free Plan";
 $_ADMINLANG['marketConnect']['weebly']['learn']['tab']['pricing'] = "Pricing";
 $_ADMINLANG['marketConnect']['weebly']['learn']['tab']['faq'] = "FAQ";
 $_ADMINLANG['marketConnect']['weebly']['learn']['headline'] = "Powerful Intuitive Site Builder";
@@ -4750,7 +4964,22 @@ $_ADMINLANG['marketConnect']['weebly']['learn']['features']['videoDescription'] 
 $_ADMINLANG['marketConnect']['weebly']['learn']['features']['seo'] = "SEO";
 $_ADMINLANG['marketConnect']['weebly']['learn']['features']['seoDescription'] = "Powerful SEO tools to help search engines find you";
 $_ADMINLANG['marketConnect']['weebly']['learn']['weeblyCom'] = "Learn more at weebly.com";
+$_ADMINLANG['marketConnect']['weebly']['learn']['free']['headline'] = "The Weebly Free Plan";
+$_ADMINLANG['marketConnect']['weebly']['learn']['free']['subheadline'] = "Help your customers get online by offering a Powerful Website Builder for free";
+$_ADMINLANG['marketConnect']['weebly']['learn']['free']['intro'] = "The Weebly Free Plan gives everyone access to create a website using Weebly's Powerful Drag & Drop Website Builder, enabling customers to get online quicker and easier than ever before.";
+$_ADMINLANG['marketConnect']['weebly']['learn']['free']['unlimitedPages'] = "Unlimited Pages";
+$_ADMINLANG['marketConnect']['weebly']['learn']['free']['unlimitedPagesInfo'] = "No limits on the number of pages users can create";
+$_ADMINLANG['marketConnect']['weebly']['learn']['free']['themes'] = "Pre-made Themes";
+$_ADMINLANG['marketConnect']['weebly']['learn']['free']['themesInfo'] = "Access to a wide range of pre-made themes to choose from";
+$_ADMINLANG['marketConnect']['weebly']['learn']['free']['storage'] = "500MB Storage";
+$_ADMINLANG['marketConnect']['weebly']['learn']['free']['storageInfo'] = "Storage for images, video and other content";
+$_ADMINLANG['marketConnect']['weebly']['learn']['free']['tools'] = "Essentials Tools";
+$_ADMINLANG['marketConnect']['weebly']['learn']['free']['toolsInfo'] = "SEO Tools and Lead Capture Forms built-in";
+$_ADMINLANG['marketConnect']['weebly']['learn']['free']['outro1'] = "The Free Plan is ad supported with a Powered by Weebly notice displayed in the footer of websites. Users can upgrade to the Starter plan* or higher at any time to remove the branding.";
+$_ADMINLANG['marketConnect']['weebly']['learn']['free']['outro2'] = "To qualify for the Weebly Free Plan, you must also offer at least one paid Weebly plan to your customers.";
+$_ADMINLANG['marketConnect']['weebly']['learn']['free']['availableIn'] = "The Weebly Free Plan is available in WHMCS 7.10 and later.";
 $_ADMINLANG['marketConnect']['weebly']['pricing']['feature'] = "Feature";
+$_ADMINLANG['marketConnect']['weebly']['pricing']['free'] = "Free";
 $_ADMINLANG['marketConnect']['weebly']['pricing']['lite'] = "Lite";
 $_ADMINLANG['marketConnect']['weebly']['pricing']['starter'] = "Starter";
 $_ADMINLANG['marketConnect']['weebly']['pricing']['pro'] = "Pro";
@@ -4781,7 +5010,7 @@ $_ADMINLANG['marketConnect']['weebly']['faq']['q3'] = "How does site publishing 
 $_ADMINLANG['marketConnect']['weebly']['faq']['a3'] = "When a Weebly site is created, WHMCS provisions a dedicated FTP account* and submits those details to Weebly. When the user publishes their site, Weebly will publish the site via FTP to your hosting.";
 $_ADMINLANG['marketConnect']['weebly']['faq']['q4'] = "How can I promote Weebly?";
 $_ADMINLANG['marketConnect']['weebly']['faq']['a4'] = "We provide you with a pre-made landing page (<a href=\":href\" target=\"_blank\">preview</a>) and the ability to display promotions within the client area and shopping cart.";
-$_ADMINLANG['marketConnect']['weebly']['faq']['ftp'] = "FTP account creation is supported for cPanel only at this time.";
+$_ADMINLANG['marketConnect']['weebly']['faq']['ftp'] = "FTP account creation is supported for cPanel, Plesk & DirectAdmin.";
 
 $_ADMINLANG['maxmind']['missingUser'] = "You must set your user ID to use the latest MaxMind API. <a href=\"configfraud.php\" class=\"autoLinked\">Click here</a> to do it now.";
 
@@ -4920,6 +5149,8 @@ $_ADMINLANG['payments']['billingAddress'] = "Billing Address";
 $_ADMINLANG['payments']['gatewayToken'] = "Gateway Token";
 $_ADMINLANG['payments']['useDefault'] = "Use by Default";
 $_ADMINLANG['payments']['localEncryption'] = "Local Encryption";
+$_ADMINLANG['payments']['ignoreErrorAndDelete'] = "Ignore Error & Delete";
+$_ADMINLANG['payments']['creditCardChangesWontBeReflected'] = "Changes you make here will be saved but not all changes will be reflected when viewing the payment method.";
 
 # Advanced Search Options
 $_ADMINLANG['searchOptions']['clientCompanyName'] = "Client/Company Name";
@@ -4939,3 +5170,68 @@ $_ADMINLANG['searchOptions']['verified'] = "Verified";
 $_ADMINLANG['searchOptions']['unverified'] = "Unverified";
 $_ADMINLANG['searchOptions']['exempt'] = "Exempt";
 $_ADMINLANG['searchOptions']['nonExempt'] = "Non-exempt";
+$_ADMINLANG['searchOptions']['reset'] = "Reset";
+
+$_ADMINLANG['subscription']['info'] = "Subscription Info";
+$_ADMINLANG['subscription']['active'] = "This is an active subscription";
+$_ADMINLANG['subscription']['paypalDetails'] = "PayPal Subscription Details";
+$_ADMINLANG['subscription']['subscriptionid'] = "Subscription ID";
+$_ADMINLANG['subscription']['subscriptionstatus'] = "Subscription Status";
+$_ADMINLANG['subscription']['lastpayment'] = "Last Payment";
+$_ADMINLANG['subscription']['nextpaymentdate'] = "Next Payment Date";
+$_ADMINLANG['subscription']['subscriptionstartdate'] = "Subscription Start Date";
+$_ADMINLANG['subscription']['failedpaymentscount'] = "Failed Payments Count";
+$_ADMINLANG['subscription']['unableToRetrieve'] = "Unable to retrieve subscription details";
+
+# Usage Billing
+$_ADMINLANG['usagebilling']['metricbilling'] = "Metric Billing";
+$_ADMINLANG['usagebilling']['configurepricing'] = "Configure Pricing";
+$_ADMINLANG['usagebilling']['quantityIncluded'] = "Quantity Included";
+$_ADMINLANG['usagebilling']['pricePerUnit'] = "Price Per :unit";
+$_ADMINLANG['usagebilling']['perUnit'] = "Per :unit";
+$_ADMINLANG['usagebilling']['units'] = "Units";
+$_ADMINLANG['usagebilling']['unit']['title'] = "Metric Unit";
+$_ADMINLANG['usagebilling']['unit']['wholeNumber'] = "Numeric Unit Count";
+$_ADMINLANG['usagebilling']['pricingtitle'] = "Pricing";
+$_ADMINLANG['usagebilling']['starting'] = "Starting";
+$_ADMINLANG['usagebilling']['quantity'] = "Quantity";
+$_ADMINLANG['usagebilling']['addrow'] = "Add Range";
+$_ADMINLANG['usagebilling']['startnumberinfo'] = "Ranges begin at the start number (inclusive) except when the schema is Graduated and precision is measured to the fraction of a unit.";
+$_ADMINLANG['usagebilling']['precisionerror']['price'] = "Price format must be only 2 decimals";
+$_ADMINLANG['usagebilling']['precisionerror']['rangewholenumber'] = "'Range values for this metric must be whole numbers'";
+$_ADMINLANG['usagebilling']['precisionerror']['rangeprecision'] = "Range values for this metric can only be as precise as :precision";
+$_ADMINLANG['usagebilling']['duplicateerror'] = "Each Starting Quantity must have a unique value";
+$_ADMINLANG['usagebilling']['pricingsaved'] = "Metric Pricing Saved";
+$_ADMINLANG['usagebilling']['schematypetitle'] = "Scheme";
+$_ADMINLANG['usagebilling']['schematype']['simple'] = "Per Unit";
+$_ADMINLANG['usagebilling']['schematype']['flat'] = "Total Volume";
+$_ADMINLANG['usagebilling']['schematype']['grad'] = "Graduated";
+$_ADMINLANG['usagebilling']['unbilledUsage'] = "Unbilled Usage";
+$_ADMINLANG['usagebilling']['metricType']['title'] = "Metric Type";
+$_ADMINLANG['usagebilling']['metricType']['day'] = "Daily";
+$_ADMINLANG['usagebilling']['metricType']['month'] = "Monthly";
+$_ADMINLANG['usagebilling']['metricType']['snapshot'] = "Snapshot";
+
+$_ADMINLANG['paypalCheckout']['linkAccount'] = "Link PayPal Account";
+$_ADMINLANG['paypalCheckout']['unlinkAccount'] = "Unlink PayPal Account";
+
+$_ADMINLANG['emailPreferences']['affiliate'] = "Affiliate Emails - Receive Affiliate Notifications";
+$_ADMINLANG['emailPreferences']['domain'] = "Domain Emails - Registration/Transfer Confirmation &amp; Renewal Notices";
+$_ADMINLANG['emailPreferences']['general'] = "General Emails - All account related emails";
+$_ADMINLANG['emailPreferences']['invoice'] = "Invoice Emails - New Invoices, Reminders, &amp; Overdue Notices";
+$_ADMINLANG['emailPreferences']['product'] = "Product Emails - Welcome Emails, Suspensions & Other Lifecycle Notifications";
+$_ADMINLANG['emailPreferences']['support'] = "Support Emails - Receive a copy of all Support Ticket Communications";
+$_ADMINLANG['emailPreferences']['supportContact'] = "Support Emails - Receive a copy of all support ticket communications created by the parent account holder";
+$_ADMINLANG['emailPreferences']['oneRequired'] = "You must have at least one email address enabled to receive domain related notifications as required by ICANN.";
+$_ADMINLANG['emailPreferences']['domainContactRequired'] = "To disable domain notifications, please enable domain notifications for the primary account holder or another contact.";
+$_ADMINLANG['emailPreferences']['domainClientRequired'] = "To disable domain notifications, please create an alternative contact that is set to receive them.";
+
+$_ADMINLANG['hooksDebugModeWarning']['title'] = "Hooks Debug Mode Enabled";
+$_ADMINLANG['hooksDebugModeWarning']['description'] = "Hooks Debug Mode will result in a large number of activity log entries and should be used sparingly. It should switched off when no longer required.";
+
+$_ADMINLANG['twoFactor']['duosecurity']['friendlyName'] = "Duo Security";
+$_ADMINLANG['twoFactor']['duosecurity']['description'] = "Get codes via Duo Push, SMS or Phone Callback.";
+$_ADMINLANG['twoFactor']['totp']['friendlyName'] = "Time Based Tokens";
+$_ADMINLANG['twoFactor']['totp']['description'] = "Get codes from an app like Google Authenticator or Duo.";
+$_ADMINLANG['twoFactor']['yubico']['friendlyName'] = "Yubico";
+$_ADMINLANG['twoFactor']['yubico']['description'] = "Generate codes using a YubiKey hardware device.";

@@ -25,9 +25,13 @@ function mailin_config() {
 }
 
 function mailin_link($params) {
-    global $_LANG;
-
-    $code = '<p>'.nl2br($params['instructions']).'<br />'.$_LANG['invoicerefnum'].': '.$params['invoiceid'].'</p>';
+    $code = '<p>'
+        . nl2br($params['instructions'])
+        . '<br />'
+        . Lang::trans('invoicerefnum')
+        . ': '
+        . $params['invoicenum']
+        . '</p>';
 
     return $code;
 

@@ -6,6 +6,7 @@ use WHMCS\Exception\ProgramExit;
 use WHMCS\Product\Product;
 use WHMCS\Session;
 use WHMCS\User\Client;
+use WHMCS\Database\Capsule;
 
 require("../init.php");
 
@@ -31,15 +32,16 @@ $name = $description = '';
 
 // Verify user input for pid exists, is greater than 0, and as is a valid id
 if ($pid > 0) {
-    $result = select_query("tblproducts", "", array("id" => $pid));
-    $data = mysql_fetch_array($result);
-    $pid = (int) $data['id'];
+    $data = Capsule::table('tblproducts')
+        ->where('id', '=', $pid)
+        ->first();
+    $pid = (int) $data->id;
     // If there is a user logged in, we will use the client language
     if (((int) $userId = Session::get('userid'))) {
         $language = Client::find($userId, array('language'))->language ?: null;
     }
-    $name = Product::getProductName($pid, $data['name'], $language);
-    $description = Product::getProductDescription($pid, $data['description'], $language);
+    $name = Product::getProductName($pid, $data->name, $language);
+    $description = Product::getProductDescription($pid, $data->description, $language);
 }
 
 // Verify that the pid is not less than 1 to in order to continue.
@@ -83,9 +85,12 @@ if ($get=="name") {
     }
     $currencyID = $currency['id'];
 
-    $result = select_query("tblpricing", "", array("type" => "product", "currency" => $currencyID, "relid" => $pid));
-    $data = mysql_fetch_array($result);
-    $price = $data[$billingCycle];
+    $data = Capsule::table('tblpricing')
+        ->where('type', '=', 'product')
+        ->where('currency', '=', $currencyID)
+        ->where('relid', '=', $pid)
+        ->first();
+    $price = $data->$billingCycle;
     $price = formatCurrency($price);
     widgetOutput($price);
 } else {

@@ -112,6 +112,7 @@
     {if in_array("Update WHMCS",$admin_perms)}<li><a id="Menu-Utilities-Update" href="update.php">{$_ADMINLANG.update.title}</a></li>{/if}
     {if in_array("WHMCSConnect",$admin_perms)}<li><a id="Menu-Utilities-WHMCS_Connect" href="whmcsconnect.php">{$_ADMINLANG.whmcsConnect.whmcsConnectName}</a></li>{/if}
     {if in_array("View Module Queue", $admin_perms)}<li><a id="Menu-Utilities-Module_Queue" href="modulequeue.php">{$_ADMINLANG.utilities.moduleQueue}</a></li>{/if}
+    {if in_array("Configure Domain Pricing",$admin_perms)}<li><a id="Menu-Utilities-Tld_Sync" href="{routePath('admin-utilities-tools-tld-import-step-one')}">{$_ADMINLANG.utilities.tldImport}</a></li>{/if}
     {if in_array("Email Marketer",$admin_perms)}<li><a id="Menu-Utilities-Email_Marketer" href="utilitiesemailmarketer.php">{$_ADMINLANG.utilities.emailmarketer}</a></li>{/if}
     {if in_array("Link Tracking",$admin_perms)}<li><a id="Menu-Utilities-Link_Tracking" href="utilitieslinktracking.php">{$_ADMINLANG.utilities.linktracking}</a></li>{/if}
     {if in_array("Calendar",$admin_perms)}<li><a id="Menu-Utilities-Calendar" href="calendar.php">{$_ADMINLANG.utilities.calendar}</a></li>{/if}

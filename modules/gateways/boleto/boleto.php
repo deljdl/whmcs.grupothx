@@ -1,5 +1,7 @@
 <?php
 
+use WHMCS\Database\Capsule;
+
 require("../../../init.php");
 $whmcs->load_function('gateway');
 $whmcs->load_function('client');
@@ -12,25 +14,28 @@ if ( !isset($_SESSION["uid"]) && !isset($_SESSION['adminid']) ) {
 }
 
 $GATEWAY = array();
-$gwresult = select_query("tblpaymentgateways","",array("gateway"=>"boleto"));
-while ($data = mysql_fetch_array($gwresult)) {
-    $gVgwsetting = $data["setting"];
-    $gVgwvalue = $data["value"];
+$gwresult = Capsule::table('tblpaymentgateways')
+    ->where('gateway', 'boleto')
+    ->get();
+foreach ($gwresult as $data) {
+    $gVgwsetting = $data->setting;
+    $gVgwvalue = $data->value;
     $GATEWAY[$gVgwsetting] = $gVgwvalue;
 }
 if (!in_array($GATEWAY['banco'],array('banestes','bb','bradesco','cef','hsbc','itau','nossacaixa','real','unibanco'))) exit;
 
-$result = select_query("tblinvoices","",array("id"=>(int)$invoiceid));
-$data = mysql_fetch_array($result);
-$id = $data["id"];
-$userid = $data["userid"];
-$date = $data["date"];
-$duedate = $data["duedate"];
-$subtotal = $data["subtotal"];
-$credit = $data["credit"];
-$tax = $data["tax"];
-$taxrate = $data["taxrate"];
-$total = $data["total"];
+$data = Capsule::table('tblinvoices')
+    ->where('id', (int) $invoiceid)
+    ->first();
+$id = $data->id;
+$userid = $data->userid;
+$date = $data->date;
+$duedate = $data->duedate;
+$subtotal = $data->subtotal;
+$credit = $data->credit;
+$tax = $data->tax;
+$taxrate = $data->taxrate;
+$total = $data->total;
 
 if ( $id && $userid && ( isset($_SESSION['adminid']) || $_SESSION["uid"]==$userid ) ) {} else {
     die("Invalid Access Attempt");

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>WHMCS [Grupo THX] - {$pagetitle}</title>
+    <title>WHMCS - {$pagetitle}</title>
 
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
     <link href="templates/{$template}/css/all.min.css?v={$versionHash}" rel="stylesheet" />

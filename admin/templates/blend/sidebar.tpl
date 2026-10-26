@@ -202,6 +202,7 @@ No Replies Yet
     <li><a href="supportannouncements.php">{$_ADMINLANG.support.announcements}</a></li>
     <li><a href="supportdownloads.php">{$_ADMINLANG.support.downloads}</a></li>
     <li><a href="supportkb.php">{$_ADMINLANG.support.knowledgebase}</a></li>
+    <li><a href="supporttickets.php">{$_ADMINLANG.support.supporttickets}</a></li>
     <li><a href="supporttickets.php?action=open">{$_ADMINLANG.support.opennewticket}</a></li>
     <li><a href="supportticketpredefinedreplies.php">{$_ADMINLANG.support.predefreplies}</a></li>
 </ul>

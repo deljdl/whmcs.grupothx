@@ -1056,11 +1056,11 @@ $_LANG['invoicesubscriptionpayment'] = "Előfizetés";
 
 $_LANG['invoicepaymentpendingreview'] = "Köszönjük! A fizetés sikeres volt, és alkalmazni kell a számlát, amint 2checkout a felülvizsgálati folyamat befejeződött.<br /><br />Ez eltarthat akár néhány órát, így a türelem értékelik.";
 
-$_LANG['step'] = "Lépés %k";
+$_LANG['step'] = "Lépés %s";
 $_LANG['cartdomainexists'] = "Ez a domain már létezik az adatbázisban, így nem rendelhető újra";
-$_LANG['cartcongratsdomainavailable'] = "Gratulálok, %k elérhető!";
+$_LANG['cartcongratsdomainavailable'] = "Gratulálok, %s elérhető!";
 $_LANG['cartregisterhowlong'] = "Meddig szeretné regisztrálni ezt?";
-$_LANG['cartdomaintaken'] = "Bocsánat, %k már foglalt";
+$_LANG['cartdomaintaken'] = "Bocsánat, %s már foglalt";
 $_LANG['carttransfernotregistered'] = "%k úgy tűnik, hogy nem regisztrálható még";
 $_LANG['carttransferpossible'] = "Gratulálok, akkor transzfer %s nekünk csak %s";
 $_LANG['cartotherdomainsuggestions'] = "Más domain lehet, hogy érdekel...";
@@ -1481,11 +1481,13 @@ $_LANG['quoteacceptancewarning'] = "Felhívjuk figyelmét, hogy elfogadja az aj�
 
 $_LANG['contactform'] = "Kapcsolat űrlap";
 
-$_LANG['twoipverificationstep'] = "Ellenőrzési lépés";
-$_LANG['twoipverificationstepmsg'] = "Írja be a biztonsági kódot által generált mobil hitelesítő app, és gondoskodunk róla, hogy ez rendesen beállítva engedélyezése előtt is.";
-$_LANG['twoipverificationerror'] = "Úgy tűnik, ott van egy probléma...";
+$_LANG['twoipconnect'] = "Csatlakoztassa alkalmazását";
+$_LANG['twoipinstruct'] = "Használjon hitelesítő alkalmazást, például %s vagy %s, és olvassa be az alábbi QR-kódot. Problémája van a kód beolvasásával? Írja be a kódot kézzel:";
+$_LANG['twoipverificationstepmsg'] = "Írja be azt a 6 jegyű kódot, amelyet az alkalmazás generál a telepítés ellenőrzéséhez és befejezéséhez.";
+$_LANG['twoipenterauth'] = "Adja meg a hitelesítési kódot";
+$_LANG['twoipgoogleauth'] = "Google Hitelesítő";
+$_LANG['twoipduo'] = "Duó";
 $_LANG['twoipcodemissmatch'] = "A megadott kód nem egyezik, amit vártak. Kérjük, próbálja újra.";
-
 $_LANG['twoipgdmissing'] = "GD hiányzik a PHP építeni a szerver, így nem tud generálni képet";
 
 $_LANG['domaincontactdetails']['First Name'] = "Keresztnév";
@@ -1992,7 +1994,7 @@ $_LANG['cloudSlider']['feature01Title'] = "Maximális szerver rendelkezésre ál
 $_LANG['cloudSlider']['feature01Description'] = "Szerver rendelkezésre állás kritikus valamennyi vállalkozás számára - úgy vélik, hogy a szívverést hosting te dolgod. Fájl és adatbázisok szerverek, e-mail és web szerverek nélkülözhetetlen része a legtöbb üzleti folyamatok, és a leállások közvetlen negatív hatással van a termelékenységre, az értékesítés, az alkalmazottak és az ügyfelek elégedettségét. Ezért biztosítva a maximális szerver uptime annyira fontos számunkra - azt akarjuk, hogy győződjön meg arról, az üzleti folyamatok futnak egészséges, így a vásárlók szívesen.";
 $_LANG['cloudSlider']['feature01DescriptionTwo'] = "Azzal bíztak bennünk az Ön üzleti igényeinek, ígérjük, hogy egy 99,9% -os bármilyen szolgáltatást nyújtunk, kívül bármilyen szabványos karbantartási mi eljuttatunk.";
 $_LANG['cloudSlider']['feature02Title'] = "Világ széles adatszolgáltatás";
-$_LANG['cloudSlider']['feature02Description'] = "Szolgáltatásainkat powered by száz szerverek és adatközpontok található a világ minden tájáról, így nyugodt lehet abban, hogy az ügyfelek hozzáférhetnek a honlapon bárhonnan. Ezen kívül biztosítunk ellenőrző eszközöket, hogy az Ön szakértő elemző - honlapon a forgalom fontos lépés javítása webhelye hatékonyságát és népszerűsége, valamint a nyomon követése, ahol a látogatók jönnek, milyen napszakban ők látogat Önnek , és mennyi ideig maradunk. Cégünk elkötelezettségét a globális piacon kiterjed domain regisztráció, mint kínálunk a legnépszerűbb TLD a bejegyzési.";
+$_LANG['cloudSlider']['feature02Description'] = "Szolgáltatásainkat a világ több száz szervere és adatközpontja működteti, így nyugodtan pihenhet, tudva, hogy az ügyfelek bárhonnan hozzáférhetnek a webhelyéhez. Ezen kívül biztosítunk ellenőrző eszközöket, hogy az Ön szakértő elemző - honlapon a forgalom fontos lépés javítása webhelye hatékonyságát és népszerűsége, valamint a nyomon követése, ahol a látogatók jönnek, milyen napszakban ők látogat Önnek , és mennyi ideig maradunk. Cégünk elkötelezettségét a globális piacon kiterjed domain regisztráció, mint kínálunk a legnépszerűbb TLD a bejegyzési.";
 $_LANG['cloudSlider']['feature02DescriptionTwo'] = "Cégünk elkötelezettségét ügyfélszolgálati eléri az egész világon is. Azért vagyunk itt, hogy segítsen a tárhelyszolgáltató minden lehetséges módon, és akkor ér el minket telefonon, e-mailben, vagy élő chat.";
 $_LANG['cloudSlider']['feature03Title'] = "Felső szint biztonság";
 $_LANG['cloudSlider']['feature03Description'] = "Nyugalmát tudva azt, hogy a 24/7 biztonsági felügyeleti és DDoS védelem. Veszel védi az ügyfél adatait komolyan, és mi is. A biztonsági csapat és biztosítékok a munka minden nap, minden nap, hogy a szükséges védelmi szint a mai digitális korban.";
@@ -2181,7 +2183,7 @@ $_LANG['store']['ssl']['ov']['descriptionContent'] = "<p>Az OV SSL nem csak a we
 
 $_LANG['store']['ssl']['ev']['tagline'] = "Aktiválja a zöld címsort és a legnagyobb biztonságot nyújtja.";
 $_LANG['store']['ssl']['ev']['descriptionTitle'] = "Kiterjesztett ellenőrzésű (EV) SSL";
-$_LANG['store']['ssl']['ev']['descriptionContent'] = "<p>Az EV SSL esetén a cég teljes identitása vizsgálat alá kerül, cserébe a címsorban megjelenik az Ön cégének a neve és a legnagyobb biztonságú tanúsítványt kapja. A felhasználók egyből láthatják, hogy milyen cég áll a honlap mögött. A nagy cégek, bankok mind ezt a tanúsítványt választják.</p>";
+$_LANG['store']['ssl']['ev']['descriptionContent'] = "<p>Az EV SSL egy kiterjesztett érvényesítési tanúsítvány, amely a ma elérhető legmagasabb SSL-osztály, és nagyobb hitelességet és bizalmat ad a webhelyének, mint egy szervezet vagy tartomány által ellenőrzött SSL certificate.</p><p>Extended Validation SSL a legtöbb esetben zöld színnel jeleníti meg a vállalat vagy a webhely nevét. Ez a kiemelkedő vizuális ellenőrzés a látogatók további bizalmat, hogy lépéseket tettek, hogy erősítse meg a személyazonosságát a honlap és az üzleti ők látogatják, növelve a felhasználói bizalom a honlapon, és annak hitelességét - ez az, amiért a legtöbb nagy vállalatok és szervezetek választhatnak EV tanúsítványokat.</p>";
 
 $_LANG['store']['ssl']['wildcard']['tagline'] = "Egy tanúsítvány az összes aldomainre.";
 $_LANG['store']['ssl']['wildcard']['descriptionTitle'] = "Mi az a Wildcard SSL?";
@@ -2195,12 +2197,12 @@ $_LANG['store']['emailServices']['headline'] = "E-mail biztonság, épített az 
 $_LANG['store']['emailServices']['tagline'] = "Vegye vissza a beérkező levelek vezérlését";
 $_LANG['store']['emailServices']['blockSpamHeadline'] = "Blokkolja a vírusokat, rosszindulatú programokat és spam-ok szinte 100% -át, mielőtt elérné a beérkező leveleket";
 
-$_LANG['pricingCycleShort']['monthly'] = "mo";
-$_LANG['pricingCycleShort']['quarterly'] = "3mo";
-$_LANG['pricingCycleShort']['semiannually'] = "6mo";
-$_LANG['pricingCycleShort']['annually'] = "yr";
-$_LANG['pricingCycleShort']['biennially'] = "2yrs";
-$_LANG['pricingCycleShort']['triennially'] = "3yrs";
+$_LANG['pricingCycleShort']['monthly'] = "hó";
+$_LANG['pricingCycleShort']['quarterly'] = "3hó";
+$_LANG['pricingCycleShort']['semiannually'] = "6hó";
+$_LANG['pricingCycleShort']['annually'] = "év";
+$_LANG['pricingCycleShort']['biennially'] = "2éves";
+$_LANG['pricingCycleShort']['triennially'] = "3éves";
 $_LANG['pricingCycleLong']['monthly'] = "1 Hónap";
 $_LANG['pricingCycleLong']['quarterly'] = "3 Hónap";
 $_LANG['pricingCycleLong']['semiannually'] = "6 Hónap";
@@ -2318,14 +2320,20 @@ $_LANG['dateTime']['may'] = "Máj";
 $_LANG['dateTime']['jun'] = "Jún";
 $_LANG['dateTime']['jul'] = "Júl";
 $_LANG['dateTime']['aug'] = "Aug";
-$_LANG['dateTime']['sept'] = "Szept";
+$_LANG['dateTime']['sep'] = "Szept";
 $_LANG['dateTime']['oct'] = "Okt";
 $_LANG['dateTime']['nov'] = "Nov";
 $_LANG['dateTime']['dec'] = "Dec";
-$_LANG['dateTime']['AM'] = "AM";
-$_LANG['dateTime']['PM'] = "PM";
-$_LANG['dateTime']['am'] = "am";
-$_LANG['dateTime']['pm'] = "pm";
+$_LANG['dateTime']['AM'] = "DE";
+$_LANG['dateTime']['PM'] = "DU";
+$_LANG['dateTime']['am'] = "de";
+$_LANG['dateTime']['pm'] = "du";
+$_LANG['dateTime']['day'] = "Nap";
+$_LANG['dateTime']['days'] = "Napok";
+$_LANG['dateTime']['hour'] = "Óra";
+$_LANG['dateTime']['hours'] = "Órák";
+$_LANG['dateTime']['minute'] = "Perc";
+$_LANG['dateTime']['minutes'] = "Percek";
 
 $_LANG['emailMarketing']['joinOurMailingList'] = "Csatlakozz a levelező listánkhoz";
 
@@ -2522,8 +2530,8 @@ $_LANG['store']['websiteBuilder']['features']['video'] = "Videó";
 $_LANG['store']['websiteBuilder']['features']['videoDescription'] = "Helyezzen be egy videót a legnépszerűbb szolgáltatásokból vagy a saját befogadódhoz";
 $_LANG['store']['websiteBuilder']['features']['seo'] = "SEO";
 $_LANG['store']['websiteBuilder']['features']['seoDescription'] = "Hatékony SEO eszközök, amelyek segítenek a keresőmotorok megtalálásában";
-$_LANG['store']['websiteBuilder']['pricing']['lite']['headline'] = "Próbáld ki Weebly-t";
-$_LANG['store']['websiteBuilder']['pricing']['lite']['tagline'] = "Minden, amire szükséged van egy 1 oldalas webhely létrehozásához";
+$_LANG['store']['websiteBuilder']['pricing']['free']['headline'] = "Próbáld ki Weebly-t";
+$_LANG['store']['websiteBuilder']['pricing']['free']['tagline'] = "Everything you need to create a website";
 $_LANG['store']['websiteBuilder']['pricing']['idealFor'] = "Ideális a :for";
 $_LANG['store']['websiteBuilder']['pricing']['siteFeatures'] = "A webhely jellemzői";
 $_LANG['store']['websiteBuilder']['pricing']['eCommerceFeatures'] = "eCommerce jellemzők";
@@ -2652,6 +2660,7 @@ $_LANG['store']['codeGuard']['faq']['q8'] = "Mi az a Fájlváltási riasztás fe
 $_LANG['store']['codeGuard']['faq']['a8'] = "A CodeGuard felügyelheti és értesítheti Önt e-mailben, amikor a webhelye megváltozik, hogy figyelmeztesse Önt az új fenyegetésekkel és rosszindulatú programokkal.";
 $_LANG['store']['codeGuard']['faq']['q9'] = "Mi történik, ha a webhelyem megfertőződik?";
 $_LANG['store']['codeGuard']['faq']['a9'] = "A CodeGuard napi pillanatképeivel, ha webhelyét támadják, bármikor visszaállíthat egy korábbi, nem fertőzött verzióra.";
+$_LANG['store']['codeGuard']['adminPreview'] = "Az általad aktivált CodeGuard tervek itt jelennek meg";
 
 $_LANG['store']['codeguard']['promo']['sidebar']['title'] = "Webhely biztonsági mentés hozzáadása";
 $_LANG['store']['codeguard']['promo']['sidebar']['body'] = "Védje webhelyét naponta automatizált biztonsági mentésekkel";
@@ -2733,6 +2742,7 @@ $_LANG['paymentMethods']['deletePaymentMethodConfirm'] = "Biztosan törölni sze
 $_LANG['paymentMethods']['type'] = "Típus";
 $_LANG['paymentMethods']['requestCancelled'] = "A fizetési mód kérése törölve";
 $_LANG['paymentMethods']['retry'] = "Próbálja újra";
+$_LANG['paymentMethods']['creditCardChangesWontBeReflected'] = "Az itt végrehajtott változtatások mentésre kerülnek, de a program nem minden módosítást fog tükröződni az ügyfélterületen belüli fizetési mód megtekintésekor.";
 
 $_LANG['paymentMethodsManage']['editPaymentMethod'] = "Fizetési mód szerkesztése";
 $_LANG['paymentMethodsManage']['addPaymentMethod'] = "Új fizetési mód hozzáadása";
@@ -2754,7 +2764,7 @@ $_LANG['paymentMethodsManage']['accountNumber'] = "Számlaszám";
 $_LANG['paymentMethodsManage']['accountNumberNotValid'] = "A megadott bankszámlaszám nem tűnik érvényesnek.";
 $_LANG['paymentMethodsManage']['addNewAddress'] = "Új cím hozzáadása";
 $_LANG['paymentMethodsManage']['addNewBillingAddress'] = "Új számlázási cím hozzáadása";
-$_LANG['paymentMethodsManage']['unsupportedCardType'] = "We are unable to accept the card type you entered. Please use a different card.";
+$_LANG['paymentMethodsManage']['unsupportedCardType'] = "Nem tudjuk elfogadni az Ön által megadott kártyatípust. Kérjük, használjon másik kártyát.";
 
 $_LANG['store']['ssl']['shared']['pricing'] = "Tanúsítvány árképzése";
 $_LANG['store']['ssl']['shared']['encryption256'] = "256-Bit Titkosítás";
@@ -2768,8 +2778,8 @@ $_LANG['store']['ssl']['shared']['oneYear'] = "1 év";
 $_LANG['store']['ssl']['shared']['twoYears'] = "2 év";
 $_LANG['store']['ssl']['shared']['noProducts'] = "Itt jelenik meg az aktivált SSL tanúsítvány termékek";
 $_LANG['store']['ssl']['shared']['helpMeChoose'] = "Nem biztos benne, hogy mit válasszon? Segítünk eldönteni";
-$_LANG['store']['ssl']['shared']['ev']['greenBar'] = "Zöld címsáv";
-$_LANG['store']['ssl']['shared']['ev']['greenBarDescription'] = "Aktiválja a zöld címsávot, és megjeleníti a cég vagy szervezet nevét egy kiemelkedő vizuális biztonsági mutató számára.";
+$_LANG['store']['ssl']['shared']['ev']['visualVerification'] = "Kiemelkedő vizuális identitás";
+$_LANG['store']['ssl']['shared']['ev']['visualVerificationDescription'] = "Növelje a webhelyébe vetett bizalmat a teljes személyazonosság-ellenőrzéssel és a kiemelkedő vizuális funkciókkal.";
 $_LANG['store']['ssl']['shared']['ev']['warranty'] = "$1.5m Garancia";
 $_LANG['store']['ssl']['shared']['ev']['warrantyDescription'] = "Az EV tanúsítványok egy $1.5m-os garanciával rendelkeznek, amely kiterjed a tanúsítványhiba miatt okozott adatszegésekre.";
 $_LANG['store']['ssl']['shared']['ev']['issuance'] = "2-3 napon belül kiadva";
@@ -2841,13 +2851,13 @@ $_LANG['store']['ssl']['landingPage']['tagline2'] = "A márkák széles választ
 $_LANG['store']['ssl']['landingPage']['chooseLevel'] = "Válassza ki az érvényesítés szintjét";
 $_LANG['store']['ssl']['landingPage']['dv'] = "Domain érvényesítés (DV)";
 $_LANG['store']['ssl']['landingPage']['dvSubtitle'] = "Alapvető biztonság";
-$_LANG['store']['ssl']['landingPage']['dvInformation'] = "Kibocsátva percekben, ideális blogok, szociális média és személyes weboldalak számára";
+$_LANG['store']['ssl']['landingPage']['dvInformation'] = "Csak domain érvényesítés. Kiadva percek alatt. Ideális blogokhoz, közösségi médiához és személyes weboldalakhoz.";
 $_LANG['store']['ssl']['landingPage']['ov'] = "Szervezet érvényesítés (OV)";
-$_LANG['store']['ssl']['landingPage']['ovSecurity'] = "Erős üzleti szintű SSL";
-$_LANG['store']['ssl']['landingPage']['ovInformation'] = "A vállalati identitás a tanúsítványban szerepel, ideális üzleti honlapok számára";
+$_LANG['store']['ssl']['landingPage']['ovSubtitle'] = "Erős üzleti szintű SSL";
+$_LANG['store']['ssl']['landingPage']['ovInformation'] = "Alapvető személyazonosság-ellenőrzés. Ideális kisvállalkozási webhelyekhez és érzékeny információkat fogadó oldalakhoz.";
 $_LANG['store']['ssl']['landingPage']['ev'] = "Bővített érvényesítés (EV)";
 $_LANG['store']['ssl']['landingPage']['evSubtitle'] = "Maximális védelem & Bizalom";
-$_LANG['store']['ssl']['landingPage']['evInformation'] = "Megjelenik a zöld címsor & a cég neve, ideális az e-kereskedelem számára";
+$_LANG['store']['ssl']['landingPage']['evInformation'] = "Teljes személyazonosság-ellenőrzés. Ideális üzleti és e-kereskedelmi webhelyekhez, amelyek maximális bizalmat biztosítanak a látogatók számára.";
 $_LANG['store']['ssl']['landingPage']['buy'] = "Vásárol";
 $_LANG['store']['ssl']['landingPage']['what'] = "Mi az SSL?";
 $_LANG['store']['ssl']['landingPage']['whatInfo'] = "Az SSL tanúsítványok alapvető fontosságúak az internet biztonsága szempontjából. Ezeket egy titkosított kapcsolat létrehozására használják, és lehetővé teszik az adatok biztonságos továbbítását a böngésző vagy a felhasználó számítógépe és egy szerver vagy webhely között.";
@@ -2869,12 +2879,10 @@ $_LANG['store']['ssl']['landingPage']['benefits']['seo'] = "Növelje a SEO rango
 $_LANG['store']['ssl']['landingPage']['browser']['title'] = "A böngészők megváltoztak, nem maradnak le";
 $_LANG['store']['ssl']['landingPage']['browser']['insecureNotice'] = "A HTTPS-en keresztül nem szolgáltatott weblapok jelenleg nem biztonságosak <strong>Google Chrome</strong> és <strong>Mozilla Firefox</strong>. Ne hagyja, hogy a webhely legyen az egyikük. SSL hozzáadása ma.";
 $_LANG['store']['ssl']['landingPage']['competitiveUpgrade'] = "Frissítse velünk, és további 12 hónapig ingyenes.";
-$_LANG['store']['ssl']['landingPage']['browser']['competitiveUpgrade'] = "Upgrade with us and get up to an additional 12 months free.";
+$_LANG['store']['ssl']['landingPage']['browser']['competitiveUpgrade'] = "Frissítsen velünk, és további 12 hónapig ingyenes.";
 $_LANG['store']['ssl']['landingPage']['evs']['upgradeTitle'] = "Frissítés Kiterjesztett érvényesítés SSL-hez";
 $_LANG['store']['ssl']['landingPage']['evs']['description'] = "Bár az összes SSL-tanúsítvány hasonló módszereket használ az adatok védelméhez és érvényesítéséhez, az általuk nyújtott bizalom és állítások szintje változik.";
-$_LANG['store']['ssl']['landingPage']['evs']['whatIs'] = "<strong>Kiterjesztett érvényesítés tanúsítványok</strong> a legmagasabb szintű érvényesítés és bizalom. Ellenőrzik és megjelenítik a vállalat vagy szervezet nevét a zöld címsorral együtt, amely az egyik legismertebb bizalmi indikátor az interneten.";
-$_LANG['store']['ssl']['landingPage']['evs']['standard'] = "Standard SSL";
-$_LANG['store']['ssl']['landingPage']['evs']['ev'] = "Kiterjesztett érvényesítés SSL";
+$_LANG['store']['ssl']['landingPage']['evs']['whatIs'] = "<strong>Kiterjesztett érvényesítési tanúsítványok</strong> legmagasabb szintű érvényesítést és bizalmat biztosítanak. Ellenőrzik és megjelenítik a vállalatok és szervezetek nevét és helyét, hogy az ügyfelek önbizalmat adjanak az online vállalkozásokkal való kereskedésben.";
 $_LANG['store']['ssl']['landingPage']['evs']['learn'] = "További információ az SSL tanúsítványokról";
 $_LANG['store']['ssl']['landingPage']['help']['title'] = "Segíts nekem a megfelelő tanúsítványtípus kiválasztásában";
 $_LANG['store']['ssl']['landingPage']['help']['guide'] = "Bár az online biztonság szükségessége univerzális, nem minden SSL-tanúsítvány egyenlő. Az alábbi útmutató célja, hogy segítsen eldönteni, hogy melyik tanúsítványtípus van az Ön számára.";
@@ -2927,4 +2935,223 @@ $_LANG['support']['successAdd'] = "A cc címzettje :email lett hozzáadva";
 $_LANG['support']['clientEmail'] = "Az ügyfél e-mail címe nem adható hozzá cc címzettként.";
 $_LANG['support']['emailNotPossible'] = "Nem lehet hozzáadni :email, mint a cc címzett";
 $_LANG['support']['invalidEmail'] = "Érvénytelen e-mail címet adott meg.";
+
+$_LANG['confirmAndPay'] = "Megerősítés & Fizetés";
+$_LANG['paymentPreApproved'] = "Előre jóváhagyott fizetés :gateway";
+$_LANG['expressCheckoutInfo'] = "Fizetése megerősítésre vár. A befizetések teljesítése általában csak néhány percet vesz igénybe. Ha néhány percen belül nem kap e-mailt, kérjük, forduljon az ügyfélszolgálathoz.";
+$_LANG['expressCheckoutError'] = "Hiba történt a fizetés feldolgozásakor. Kérjük, vegye fel a kapcsolatot az ügyfélszolgálattal.";
+
+$_LANG['subscription']['active'] = "Van egy aktív előfizetése";
+$_LANG['subscription']['manual'] = "A manuális fizetést továbbra is igénybe lehet tenni, de ez túlfizetést eredményezhet.";
+$_LANG['subscription']['moreDetails'] = "További részletek";
+$_LANG['subscription']['makePayment'] = "Készíts egy fizetést";
+$_LANG['subscription']['paypalDetails'] = "PayPal előfizetés részletei";
+$_LANG['subscription']['subscriptionWarning'] = "Az alábbiakban szereplő összes aktív előfizetés automatikusan érvényes lesz erre a számlára. Ha az előfizetési fizetés túlfizetést eredményez, akkor jóváírást kap, amelyet automatikusan alkalmaz a következő számlájára.";
+$_LANG['subscription']['subscriptionid'] = "Előfizetés ID";
+$_LANG['subscription']['status'] = "Előfizetés állapota";
+$_LANG['subscription']['lastpayment'] = "Utolsó fizetés";
+$_LANG['subscription']['nextpaymentdate'] = "Következő fizetési dátum";
+$_LANG['subscription']['subscriptionstartdate'] = "Az előfizetés kezdő dátuma";
+$_LANG['subscription']['failedpaymentscount'] = "Sikertelen fizetések száma";
+$_LANG['subscription']['errorFetchingDetails'] = "Hiba történt az előfizetési információk beszerzésekor. Kérjük, vegye fel a kapcsolatot az ügyfélszolgálattal.";
+
+$_LANG['navMarketConnectService']['sitelockvpn'] = "VPN";
+$_LANG['store']['sitelockvpn']['title'] = "SiteLock VPN";
+$_LANG['store']['sitelockvpn']['tagline'] = "Korlátlan hozzáférés az internethez, adatvédelmi aggályoktól, tartalmi korlátozásoktól vagy adatkorlátoktól mentesen.";
+$_LANG['store']['sitelockvpn']['manageService'] = "Kezelje a SiteLock VPN szolgáltatást";
+$_LANG['store']['sitelockvpn']['cartShortDescription'] = "A SiteLock VPN anonim, titkosított böngészési munkamenetet tesz lehetővé bármilyen hálózati kapcsolaton keresztül.";
+$_LANG['store']['sitelockvpn']['cartTitle'] = "SiteLock VPN";
+$_LANG['store']['sitelockvpn']['promo']['sidebar']['title'] = "Virtuális Magán Hálózat";
+$_LANG['store']['sitelockvpn']['promo']['sidebar']['body'] = "Névtelenítse a böngészést";
+$_LANG['store']['sitelockvpn']['adminPreview'] = "Az aktivált SiteLock VPN-csomagok itt jelennek meg";
+
+$_LANG['store']['sitelockvpn']['title'] = "SiteLock VPN";
+$_LANG['store']['sitelockvpn']['getStarted'] = "Induláshoz";
+$_LANG['store']['sitelockvpn']['subtitle1'] = "Biztonságos & Védett";
+$_LANG['store']['sitelockvpn']['subtitle2'] = "Az Ön web böngészése";
+$_LANG['store']['sitelockvpn']['tagline1'] = "Nagy sebességű, biztonságos és egyszerű";
+$_LANG['store']['sitelockvpn']['tagline2'] = "használata az azonnali telepítéssel.";
+$_LANG['store']['sitelockvpn']['feature1']['title'] = "Biztonságos és személyes internet-hozzáférés.";
+$_LANG['store']['sitelockvpn']['feature1']['subtitle'] = "<strong>Megvédje személyes adatait</strong> és kap a nyugalmat minden alkalommal, amikor használja nyilvános Wi-Fi hozzáférési magán és munkahelyi fiókokat az úton, vagy csak szeretné tartani a böngészési előzmények, hogy magát.";
+$_LANG['store']['sitelockvpn']['feature1']['highlights']['one'] = "Az IP-cím elrejtése";
+$_LANG['store']['sitelockvpn']['feature1']['highlights']['two'] = "Védje online identitását";
+$_LANG['store']['sitelockvpn']['feature1']['highlights']['three'] = "Nincsenek tevékenységi naplók a böngészés nyomon követéséhez";
+$_LANG['store']['sitelockvpn']['feature1']['highlights']['four'] = "Biztosítsa a banki tranzakciókat";
+$_LANG['store']['sitelockvpn']['feature1']['highlights']['five'] = "Használjon katonai titkosítást";
+$_LANG['store']['sitelockvpn']['feature1']['highlights']['six'] = "Legyen biztonságos a nyilvános Wi-Fi hálózatokon";
+$_LANG['store']['sitelockvpn']['feature2']['title'] = "Áramlat és böngészési korlátozás nélkül.";
+$_LANG['store']['sitelockvpn']['feature2']['subtitle'] = "A video streamingtől a közösségi hálózatokig a <strong>VPN bárhol működik</strong>, és hozzáférést biztosít a kedves webhelyekhez és alkalmazásokhoz. Plusz gyors sebesség az egyszerű böngészéshez, és nincs több puffer vagy hosszú várakozás.";
+$_LANG['store']['sitelockvpn']['feature2']['highlights']['one'] = "Hozzáférés a blokkolt webhelyekhez";
+$_LANG['store']['sitelockvpn']['feature2']['highlights']['two'] = "Nézze meg a streaming szolgáltatásokat bárhol";
+$_LANG['store']['sitelockvpn']['feature2']['highlights']['three'] = "A helyi Internet-cenzúra mellőzése";
+$_LANG['store']['sitelockvpn']['feature2']['highlights']['four'] = "A régió zárt játékokra való lejátszása";
+$_LANG['store']['sitelockvpn']['feature2']['highlights']['five'] = "Szerezzen jobb ajánlatokat online";
+$_LANG['store']['sitelockvpn']['feature2']['highlights']['six'] = "Legyen magán és névtelen";
+$_LANG['store']['sitelockvpn']['feature3']['title'] = "Védje az összes eszközt.";
+$_LANG['store']['sitelockvpn']['feature3']['subtitle'] = "<strong>1-kattintás-beállít VPN</strong> a Mac, Windows, iOS, Android, és Linux.";
+$_LANG['store']['sitelockvpn']['feature3']['subtitle2'] = "Bárhonnan elérheti az internetet, akár számítógépen, okostelefonon vagy táblagépen van. Alkalmazásaink korlátlanul szörfözhetnek, nincs szükség kódolásra vagy összetett beállításra. <strong>Egyszerűen töltse le és csatlakoztassa.</strong>";
+$_LANG['store']['sitelockvpn']['feature3']['subtitle3'] = "* Más platformok manuálisan is konfigurálhatók.";
+$_LANG['store']['sitelockvpn']['pricing']['oneSubscription'] = "Csak egy előfizetés fedi le és védi";
+$_LANG['store']['sitelockvpn']['pricing']['fiveDevices'] = "legfeljebb 5 eszköz egyszerre.";
+$_LANG['store']['sitelockvpn']['pricing']['features']['noRestrictions'] = "Korlátozások nélkül";
+$_LANG['store']['sitelockvpn']['pricing']['features']['highSpeed'] = "Nagy sebességű hálózat";
+$_LANG['store']['sitelockvpn']['pricing']['features']['unlimited'] = "Korlátlan sávszélesség";
+$_LANG['store']['sitelockvpn']['pricing']['features']['encryption'] = "256-bit AES Titkosítás";
+$_LANG['store']['sitelockvpn']['plans']['features']['allInclude'] = "Minden előfizetési terv tartalmazza";
+$_LANG['store']['sitelockvpn']['plans']['features']['noRestrictions'] = "Korlátozások nélkül";
+$_LANG['store']['sitelockvpn']['plans']['features']['highSpeed'] = "Nagy sebességű hálózat";
+$_LANG['store']['sitelockvpn']['plans']['features']['unlimited'] = "Korlátlan sávszélesség";
+$_LANG['store']['sitelockvpn']['plans']['features']['encryption'] = "256-bit AES Titkosítás";
+$_LANG['store']['sitelockvpn']['plans']['features']['protocol'] = "OpenVPN, L2TP-IPsec<br>és PPTP protokollok";
+$_LANG['store']['sitelockvpn']['plans']['features']['simultaneous'] = "Egyidejű kapcsolatok be vannak kapcsolva<br>legfeljebb 5 eszköz";
+$_LANG['store']['sitelockvpn']['plans']['features']['apps'] = "Alkalmazásokat a Windows, Mac, iOS,<br>Android, és Linux";
+$_LANG['store']['sitelockvpn']['plans']['features']['switching'] = "Korlátlan Szerverváltás";
+$_LANG['store']['sitelockvpn']['plans']['features']['countries'] = "40+ Országok";
+$_LANG['store']['sitelockvpn']['plans']['features']['servers'] = "1000+ Szerverek";
+$_LANG['store']['sitelockvpn']['plans']['features']['support'] = "24/7 US alapú támogatás";
+$_LANG['store']['sitelockvpn']['world']['features']['title'] = "Lángoló gyors sebesség, korlátlan sávszélesség";
+$_LANG['store']['sitelockvpn']['world']['features']['servers'] = "szerverek";
+$_LANG['store']['sitelockvpn']['world']['features']['countries'] = "országok";
+$_LANG['store']['sitelockvpn']['world']['features']['unlimited'] = "Korlátlan";
+$_LANG['store']['sitelockvpn']['world']['features']['bandwidth'] = "sávszélesség";
+
+$_LANG['store']['noDomain'] = "Nem szükséges domain";
+$_LANG['store']['noDomainRequired'] = "Ehhez a termékhez nem szükséges domain";
+$_LANG['back'] = "Vissza";
+
+$_LANG['errors']['badRequest'] = "Rossz kérés";
+$_LANG['errors']['badRequestTryAgain'] = "Hiba történt. Kérem próbálkozzon újra.";
+
+$_LANG['paymentMethods']['iban'] = "IBAN";
+$_LANG['paymentMethods']['mandateAcceptance'] = "Az IBAN megadásával és a fizetés visszaigazolásával felhatalmazza a :companyName -t és a Stripe-t, a pénzforgalmi szolgáltatókat, hogy utasításokat küldjön a bankjának a számlájának beszedésére, a bank pedig a számlájának beszedésére ezen utasítások szerint. A bankjával kötött megállapodás feltételei szerint jogosult a bank visszatérítésére. A visszatérítést 8 héten belül kell igényelni attól a naptól számítva, amikor a számláját megterhelték.";
+
+$_LANG['metrics']['title'] = "Mérőszámok";
+$_LANG['metrics']['explanation'] = "Ez a termék az alapár mellett használati alapú számlázási díjakat is tartalmaz. A használati mutatók és árazási információk az alábbiakban jelennek meg.";
+$_LANG['metrics']['from'] = "Tól";
+$_LANG['metrics']['to'] = "Nak";
+$_LANG['metrics']['startingQuantity'] = "Kezdő mennyiség";
+$_LANG['metrics']['unit'] = "Egység";
+$_LANG['metrics']['pricePerUnit'] = "Egységár";
+$_LANG['metrics']['pricePer'] = "Ár per";
+$_LANG['metrics']['viewPricing'] = "Árazás megtekintése";
+$_LANG['metrics']['pricing'] = "Árazás";
+$_LANG['metrics']['startingFrom'] = "-Tól kezdve";
+$_LANG['metrics']['pricingschema']['simple']['info'] = "Ennek a tételnek egyedi árképzési struktúrája van";
+$_LANG['metrics']['pricingschema']['simple']['detail'] = "Az egységenkénti egységár a mennyiségtől függetlenül konzisztens.";
+$_LANG['metrics']['pricingschema']['grad']['info'] = "Ez a tétel fokozatos árképzési szerkezettel rendelkezik.";
+$_LANG['metrics']['pricingschema']['grad']['detail'] = "Az egységár egy fogyasztási tartományonként van megadva. A teljes díj a tartományszámítás összegét jelenti.";
+$_LANG['metrics']['pricingschema']['flat']['info'] = "Ennek az elemnek egy lapos volumenű árképzési szerkezete van.";
+$_LANG['metrics']['pricingschema']['flat']['detail'] = "Az egységenkénti árat a felhasznált teljes mennyiség határozza meg.";
+$_LANG['metrics']['previousUsage'] = "Előző használat";
+$_LANG['metrics']['currentUsage'] = "Jelenlegi használat";
+$_LANG['metrics']['lastUpdated'] = "Utolsó frissítés";
+$_LANG['metrics']['metric'] = "Metrikus";
+$_LANG['metrics']['billing'] = "Számlázás";
+$_LANG['metrics']['includedNotCounted'] = "Tartalmazza";
+$_LANG['metrics']['includedInBase'] = "az alapárban benne foglalt";
+
+$_LANG['metrics']['invoiceitem']['perunit'] = ":consumed :metricname @ :price Per :perUnitName";
+$_LANG['metrics']['invoiceitem']['included'] = ":included :metricname Tartalmazza";
+
+$_LANG['bankPaymentDeclined'] = "A megadott bankszámlaadatokat elutasították. Kérjük, próbáljon ki egy másik fiókot, vagy lépjen kapcsolatba az ügyfélszolgálattal.";
+$_LANG['invoicePaymentInitiated'] = "Köszönöm! A fizetés sikeresen megtörtént. Amint a fizetés befejeződött, megerősítő e-mailt fog kapni.";
+
+$_LANG['sitelockvpn']['loginPanelText'] = "Jelentkezzen be a VPN felhasználói hitelesítő adatainak beállításához és kezeléséhez, valamint a VPN-ügyfelek letöltéséhez.";
+$_LANG['store']['save'] = "Mentés :saving%";
+$_LANG['marketConnect']['codeguard']['manageBackup'] = "Biztonsági mentések kezelése";
+$_LANG['store']['chooseExistingDomain'] = "Létező Domain választása";
+$_LANG['store']['choosePaymentTerm'] = "Válasszon Fizetési feltétel";
+$_LANG['store']['chooseDomain'] = "Válasszon Domain-t";
+$_LANG['store']['subOfExisting'] = "Aldomainhez Meglévő domain";
+$_LANG['store']['domainAlreadyOwned'] = "A domain már saját";
+$_LANG['store']['eligible'] = "Választható";
+$_LANG['store']['login'] = "Bejelentkezés";
+$_LANG['store']['addToExistingPackage'] = "hogy hozzáadjuk ezt egy meglévő tárhely csomaghoz.";
+
+$_LANG['marketConnect']['sitelock']['manageSecurity'] = "Kezelje biztonságát";
+$_LANG['marketConnect']['sitelockvpn']['manageVPN'] = "Kezelje VPN-jét";
+$_LANG['marketConnect']['spamexperts']['manageEmail'] = "Kezelje e-mailjét";
+$_LANG['marketConnect']['weebly']['buildWebsite'] = "Készítse el webhelyét";
+
+$_LANG['creditCardHolderName'] = "Kártyatulajdonos neve";
+
+$_LANG['redirectingToCompleteCheckout'] = "Átirányítás a pénztár befejezéséhez. Kérjük, várjon...";
+$_LANG['paypalEmailAddress'] = "PayPal Email Cím";
+
+$_LANG['fromJust'] = "-tól csak";
+$_LANG['remoteTransError'] = "Távoli Tranzakciós Hiba. Lépjen kapcsolatba az ügyfélszolgálattal.";
+
+$_LANG['imageUnavailable'] = "A kép nem érhető el";
+
+$_LANG['emailPreferences']['affiliate'] = "Partner E-mailek - Partner értesítések fogadása";
+$_LANG['emailPreferences']['domain'] = "Domain E-mailek - Regisztráció/Átadás megerősítése &amp; Megújítási értesítések";
+$_LANG['emailPreferences']['general'] = "Általános E-mailek - Minden fiókkal kapcsolatos e-mail";
+$_LANG['emailPreferences']['invoice'] = "Számla E-mailek - Új számlák, Emlékeztetők, &amp; Lejárt értesítések";
+$_LANG['emailPreferences']['product'] = "Termék E-mailek - Üdvözlő e-mailek, felfüggesztések & Egyéb életciklus-értesítések";
+$_LANG['emailPreferences']['support'] = "Támogatás E-mailek - CC fogadása az összes támogatási jegykommunikációról";
+
+$_LANG['navMarketConnectService']['marketgoo'] = "SEO Eszközök";
+$_LANG['store']['marketgoo']['title'] = "Marketgoo SEO Eszközök";
+$_LANG['store']['marketgoo']['headline'] = "A webhely forgalmának javítása";
+$_LANG['store']['marketgoo']['tagline'] = "és <em>Növelje vállalkozását</em> marketgoo-val";
+$_LANG['store']['marketgoo']['tab']['how'] = "Hogyan működik?";
+$_LANG['store']['marketgoo']['tab']['features'] = "Jellemzők & Árképzés";
+$_LANG['store']['marketgoo']['tab']['testimonials'] = "Amit más felhasználók mondanak";
+$_LANG['store']['marketgoo']['tab']['faqs'] = "GYIK és támogatás";
+$_LANG['store']['marketgoo']['features']['1'] = "Regisztráljon, és azonnali SEO jelentést kapjon";
+$_LANG['store']['marketgoo']['features']['2'] = "Szerezze be könnyű SEO tervét";
+$_LANG['store']['marketgoo']['features']['3'] = "Kövesse az egyszerű, lépésről lépésre leírt utasításokat";
+$_LANG['store']['marketgoo']['features']['4'] = "Kezdje meg a fejlesztést";
+$_LANG['store']['marketgoo']['featuresdetail']['4'] = "Tedd a SEO terv akcióba (nem szakértőkre van szükség), és kap egy havi előrehaladási jelentést";
+$_LANG['store']['marketgoo']['features']['5'] = "Nyomon követése & Monitor";
+$_LANG['store']['marketgoo']['featuresdetail']['5'] = "Nézze meg, hogy a versenytársak rangsorolják azokat a kulcsszavakat, amelyekre összpontosít, és kövesse nyomon webhelye népszerűségét";
+$_LANG['store']['marketgoo']['featurematrix']['1'] = "Keresőmotor benyújtása";
+$_LANG['store']['marketgoo']['featurematrix']['2'] = "Csatlakoztassa a Google Analytics szolgáltatást";
+$_LANG['store']['marketgoo']['featurematrix']['3'] = "Töltse le a SEO jelentést PDF formátumban";
+$_LANG['store']['marketgoo']['featurematrix']['4'] = "Beolvasott oldalak";
+$_LANG['store']['marketgoo']['featurematrix']['5'] = "Versenytársak nyomon követése";
+$_LANG['store']['marketgoo']['featurematrix']['6'] = "Kulcsszókövetés & optimalizálás";
+$_LANG['store']['marketgoo']['featurematrix']['7'] = "Frissített jelentés & terv";
+$_LANG['store']['marketgoo']['featurematrix']['8'] = "Egyéni SEO terv";
+$_LANG['store']['marketgoo']['featurematrix']['9'] = "Havi állapotjelentés";
+$_LANG['store']['marketgoo']['completeStepByStep'] = "<span>Teljes</span> részletes útmutatóval";
+$_LANG['store']['marketgoo']['signup'] = "Regisztráció most";
+$_LANG['store']['marketgoo']['testimonials']['casestudy'] = "Olvassa el az esettanulmányt";
+$_LANG['store']['marketgoo']['faqs']['title'] = "GYIK és támogatás";
+$_LANG['store']['marketgoo']['faqs']['q1'] = "Lite-t vagy Pro-t kell választanom?";
+$_LANG['store']['marketgoo']['faqs']['a1'] = "Tekintse meg a tervek videóösszehasonlítását";
+$_LANG['store']['marketgoo']['faqs']['q2'] = "A marketgoo végzi az ajánlott változtatásokat, vagy én?";
+$_LANG['store']['marketgoo']['faqs']['a2'] = "A marketgoo egy Csináld magad eszköz, így miközben segítünk webhelyének elemzésében, valamint ajánlásaink megadásában, valamint az Ön webhelyének optimalizálására vonatkozó feladatokban és utasításokban, nem végezzük el ezeket a változtatásokat az Ön számára.";
+$_LANG['store']['marketgoo']['faqs']['q3'] = "Miért van szükségem SEO?";
+$_LANG['store']['marketgoo']['faqs']['a3'] = "Dolgozik a SEO annak érdekében, hogy javítsa a webhely rangsorolását a keresési eredmények között. Ez vezet, hogy minél több forgalmat - és ideális esetben, átalakítani, hogy a forgalom az ügyfelek és vezet.";
+$_LANG['store']['marketgoo']['adminPreview'] = "Marketgoo tervek aktiválása jelenik meg itt";
+
+$_LANG['upTo'] = "Akár :num";
+$_LANG['weekly'] = "Heti";
+$_LANG['daily'] = "Napi";
+$_LANG['limited'] = "Korlátozott";
+
+$_LANG['marketConnect']['marketgoo']['manageSEO'] = "Marketgoo SEO";
+$_LANG['marketConnect']['marketgoo']['manage'] = "Bejelentkezés az irányítópultra";
+
+$_LANG['store']['marketgoo']['cartTitle'] = "Marketgoo SEO Eszközök";
+$_LANG['store']['marketgoo']['cartShortDescription'] = "Növelje webhelye forgalmát, és bővítse vállalkozását a marketgoo csináld magad SEO eszközökökkel.";
+
+$_LANG['store']['marketgoo']['promo']['sidebar']['title'] = "Marketgoo SEO Eszközök";
+$_LANG['store']['marketgoo']['promo']['sidebar']['body'] = "Javítsa webhelye forgalmát és növelje vállalkozását";
+
+$_LANG['emailPreferences']['oneRequired'] = "Legalább egy e-mail címet engedélyeznie kell a domainhez kapcsolódó értesítések fogadásához, az ICANN előírásainak megfelelően.";
+$_LANG['emailPreferences']['domainContactRequired'] = "A domain értesítések letiltásához engedélyezze a domain értesítéseket az elsődleges fióktulajdonos vagy más kapcsolattartó számára.";
+$_LANG['emailPreferences']['domainClientRequired'] = "A domain értesítések letiltásához kérjük, hozzon létre egy alternatív kapcsolatot, amely beállítva lesz a fogadásra.";
+
+$_LANG['twoFactor']['duosecurity']['friendlyName'] = "Duo Biztonság";
+$_LANG['twoFactor']['duosecurity']['description'] = "Kódokat kaphat a Duo Push, SMS vagy Telefon Visszahívás segítségével.";
+$_LANG['twoFactor']['totp']['friendlyName'] = "Időalapú tokenek";
+$_LANG['twoFactor']['totp']['description'] = "Kódokat kaphat egy olyan alkalmazásból, mint a Google Hitelesítő vagy a Duo.";
+$_LANG['twoFactor']['yubico']['friendlyName'] = "Yubico";
+$_LANG['twoFactor']['yubico']['description'] = "Kódok generálása YubiKey hardver eszköz segítségével.";
+
+$_LANG['orderForm']['selectCategory'] = "Válasszon kategóriát az oldalsáv menüből";
+
+$_LANG['store']['sampleProduct'] = "Ez egy minta termék";
 ////////// End of hungarian language file.  Do not place any translation strings below this line!

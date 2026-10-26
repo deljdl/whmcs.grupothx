@@ -69,13 +69,13 @@ if (!$print) {
                 <div class="col-md-2 col-sm-3">
                     <div class="form-group">
                         <label for="inputFilterMin">Min. Amount</label>
-                        <input type="number" name="min" value="{$min}" class="form-control" id="inputFilterMin" step="any" min="0" placeholder="0">
+                        <input type="number" name="min" value="{$min}" class="form-control" id="inputFilterMin" step="any" placeholder="Any">
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-3">
                     <div class="form-group">
                         <label for="inputFilterMax">Max. Amount</label>
-                        <input type="number" name="max" value="{$max}" class="form-control" id="inputFilterMax" step="any" min="0" placeholder="Unlimited">
+                        <input type="number" name="max" value="{$max}" class="form-control" id="inputFilterMax" step="any" placeholder="Any">
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-6">
@@ -123,10 +123,10 @@ if ($range) {
     if ($userId) {
         $query->where('clientid', $userId);
     }
-    if (App::isInRequest('min') && ($min >= 0)) {
+    if ($min != '') {
         $query->where('amount', '>=', $min);
     }
-    if ($max && (!$min || ($max > $min))) {
+    if ($max != '' && ($min == '' || ($max > $min))) {
         $query->where('amount', '<=', $max);
     }
     if ($adminId) {

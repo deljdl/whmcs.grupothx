@@ -424,7 +424,7 @@
                         </tr>
                         {foreach key=num from=$quotes item=quote}
                             <tr>
-                                <td>{$quote.id}</td>
+                                <td><a href="quotes.php?action=manage&id={$quote.id}">{$quote.id}</a></td>
                                 <td style="padding-left:5px;padding-right:5px">{$quote.subject}</td>
                                 <td>{$quote.datecreated}</td>
                                 <td>{$quote.total}</td>
@@ -475,6 +475,7 @@
                         <option value="">- {$_ADMINLANG.support.setStatus} -</option>
                         <option value="Pending">{$_ADMINLANG.status.pending}</option>
                         <option value="Active">{$_ADMINLANG.status.active}</option>
+                        <option value="Completed">{$_ADMINLANG.status.completed}</option>
                         <option value="Suspended">{$_ADMINLANG.status.suspended}</option>
                         <option value="Terminated">{$_ADMINLANG.status.terminated}</option>
                         <option value="Cancelled">{$_ADMINLANG.status.cancelled}</option>

@@ -343,7 +343,7 @@
 <table class="datatable" width="100%" border="0" cellspacing="1" cellpadding="3">
 <tr><th>{$_ADMINLANG.fields.id}</th><th>{$_ADMINLANG.fields.subject}</th><th>{$_ADMINLANG.fields.date}</th><th>{$_ADMINLANG.fields.total}</th><th>{$_ADMINLANG.fields.validuntil}</th><th>{$_ADMINLANG.fields.status}</th><th width="20"></th></tr>
 {foreach key=num from=$quotes item=quote}
-<tr><td>{$quote.id}</td><td style="padding-left:5px;padding-right:5px">{$quote.subject}</td><td>{$quote.datecreated}</td><td>{$quote.total}</td><td>{$quote.validuntil}</td><td>{$quote.stage}</td><td><a href="quotes.php?action=manage&id={$quote.id}"><img src="images/edit.gif" width="16" height="16" border="0" alt="Edit"></a></td></tr>
+<tr><td><a href="quotes.php?action=manage&id={$quote.id}">{$quote.id}</a></td><td style="padding-left:5px;padding-right:5px">{$quote.subject}</td><td>{$quote.datecreated}</td><td>{$quote.total}</td><td>{$quote.validuntil}</td><td>{$quote.stage}</td><td><a href="quotes.php?action=manage&id={$quote.id}"><img src="images/edit.gif" width="16" height="16" border="0" alt="Edit"></a></td></tr>
 {foreachelse}
 <tr><td colspan="7">{$_ADMINLANG.global.norecordsfound}</td></tr>
 {/foreach}
@@ -410,6 +410,7 @@
                 <option value="">- {$_ADMINLANG.global.nochange} -</option>
                 <option value="Pending">{$_ADMINLANG.status.pending}</option>
                 <option value="Active">{$_ADMINLANG.status.active}</option>
+                <option value="Completed">{$_ADMINLANG.status.completed}</option>
                 <option value="Suspended">{$_ADMINLANG.status.suspended}</option>
                 <option value="Terminated">{$_ADMINLANG.status.terminated}</option>
                 <option value="Cancelled">{$_ADMINLANG.status.cancelled}</option>

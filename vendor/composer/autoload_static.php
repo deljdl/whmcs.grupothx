@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit3907bd318ad33664e7975571e885055f
+class ComposerStaticInit0b9be29f50ba47713fbb94e8a7aa8f9a
 {
     public static $files = array (
         'ad155f8f1cf0d418fe49e248db8c661b' => __DIR__ . '/..' . '/react/promise/src/functions_include.php',
@@ -656,6 +656,7 @@ class ComposerStaticInit3907bd318ad33664e7975571e885055f
         'net\\authorize\\api\\contract\\v1\\CustomerProfileBaseType' => __DIR__ . '/..' . '/authorizenet/authorizenet/lib/net/authorize/api/contract/v1/CustomerProfileBaseType.php',
         'net\\authorize\\api\\contract\\v1\\CustomerProfileExType' => __DIR__ . '/..' . '/authorizenet/authorizenet/lib/net/authorize/api/contract/v1/CustomerProfileExType.php',
         'net\\authorize\\api\\contract\\v1\\CustomerProfileIdType' => __DIR__ . '/..' . '/authorizenet/authorizenet/lib/net/authorize/api/contract/v1/CustomerProfileIdType.php',
+        'net\\authorize\\api\\contract\\v1\\CustomerProfileInfoExType' => __DIR__ . '/..' . '/authorizenet/authorizenet/lib/net/authorize/api/contract/v1/CustomerProfileInfoExType.php',
         'net\\authorize\\api\\contract\\v1\\CustomerProfileMaskedType' => __DIR__ . '/..' . '/authorizenet/authorizenet/lib/net/authorize/api/contract/v1/CustomerProfileMaskedType.php',
         'net\\authorize\\api\\contract\\v1\\CustomerProfilePaymentType' => __DIR__ . '/..' . '/authorizenet/authorizenet/lib/net/authorize/api/contract/v1/CustomerProfilePaymentType.php',
         'net\\authorize\\api\\contract\\v1\\CustomerProfileSummaryType' => __DIR__ . '/..' . '/authorizenet/authorizenet/lib/net/authorize/api/contract/v1/CustomerProfileSummaryType.php',
@@ -807,7 +808,6 @@ class ComposerStaticInit3907bd318ad33664e7975571e885055f
         'net\\authorize\\api\\contract\\v1\\ValidateCustomerPaymentProfileRequest' => __DIR__ . '/..' . '/authorizenet/authorizenet/lib/net/authorize/api/contract/v1/ValidateCustomerPaymentProfileRequest.php',
         'net\\authorize\\api\\contract\\v1\\ValidateCustomerPaymentProfileResponse' => __DIR__ . '/..' . '/authorizenet/authorizenet/lib/net/authorize/api/contract/v1/ValidateCustomerPaymentProfileResponse.php',
         'net\\authorize\\api\\contract\\v1\\WebCheckOutDataType' => __DIR__ . '/..' . '/authorizenet/authorizenet/lib/net/authorize/api/contract/v1/WebCheckOutDataType.php',
-        'net\\authorize\\api\\contract\\v1\\WebCheckOutDataType\\TokenAType' => __DIR__ . '/..' . '/authorizenet/authorizenet/lib/net/authorize/api/contract/v1/WebCheckOutDataType/TokenAType.php',
         'net\\authorize\\api\\controller\\ARBCancelSubscriptionController' => __DIR__ . '/..' . '/authorizenet/authorizenet/lib/net/authorize/api/controller/ARBCancelSubscriptionController.php',
         'net\\authorize\\api\\controller\\ARBCreateSubscriptionController' => __DIR__ . '/..' . '/authorizenet/authorizenet/lib/net/authorize/api/controller/ARBCreateSubscriptionController.php',
         'net\\authorize\\api\\controller\\ARBGetSubscriptionController' => __DIR__ . '/..' . '/authorizenet/authorizenet/lib/net/authorize/api/controller/ARBGetSubscriptionController.php',
@@ -868,11 +868,11 @@ class ComposerStaticInit3907bd318ad33664e7975571e885055f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit3907bd318ad33664e7975571e885055f::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit3907bd318ad33664e7975571e885055f::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit3907bd318ad33664e7975571e885055f::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit3907bd318ad33664e7975571e885055f::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit3907bd318ad33664e7975571e885055f::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit0b9be29f50ba47713fbb94e8a7aa8f9a::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit0b9be29f50ba47713fbb94e8a7aa8f9a::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit0b9be29f50ba47713fbb94e8a7aa8f9a::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit0b9be29f50ba47713fbb94e8a7aa8f9a::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit0b9be29f50ba47713fbb94e8a7aa8f9a::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -1,9 +1,23 @@
 <?php
 
-if (!defined("WHMCS"))
-    die("This file cannot be accessed directly");
+use WHMCS\Carbon;
+use WHMCS\Database\Capsule;
 
-$reportdata["title"] = "Daily Performance for ".$months[(int)$month]." ".$year;
+if (!defined("WHMCS")) {
+    die("This file cannot be accessed directly");
+}
+
+$dateFilter = Carbon::create(
+    $year,
+    $month,
+    1
+);
+
+/** @var Carbon $today */
+$startOfMonth = $dateFilter->startOfMonth()->toDateTimeString();
+$endOfMonth = $dateFilter->endOfMonth()->toDateTimeString();
+
+$reportdata["title"] = "Daily Performance for " . $months[(int) $month] . " " . $year;
 $reportdata["description"] = "This report shows a daily activity summary for a given month.";
 
 $reportdata["monthspagination"] = true;
@@ -19,41 +33,86 @@ $reportdata["tableheadings"] = array(
 );
 
 $reportvalues = array();
-$query = "SELECT date_format(date, '%e'),COUNT(id) FROM tblorders WHERE date LIKE '" . $year . "-" . $month . "-%' AND status='Active' GROUP BY date_format(date, '%e') ORDER BY date ASC";
-$result = full_query($query);
-while ($data = mysql_fetch_array($result)) {
-    $reportvalues['orders_active'][$data[0]] = $data[1];
-}
-$query = "SELECT date_format(date, '%e'),COUNT(id) FROM tblinvoices WHERE date LIKE '" . $year . "-" . $month . "-%' GROUP BY date_format(date, '%e') ORDER BY date ASC";
-$result = full_query($query);
-while ($data = mysql_fetch_array($result)) {
-    $reportvalues['invoices_new'][$data[0]] = $data[1];
-}
-$query = "SELECT date_format(datepaid, '%e'),COUNT(id) FROM tblinvoices WHERE datepaid LIKE '" . $year . "-" . $month . "-%' GROUP BY date_format(datepaid, '%e') ORDER BY datepaid ASC";
-$result = full_query($query);
-while ($data = mysql_fetch_array($result)) {
-    $reportvalues['invoices_paid'][$data[0]] = $data[1];
-}
-$query = "SELECT date_format(date, '%e'),COUNT(id) FROM tbltickets WHERE date LIKE '" . $year . "-" . $month . "-%' GROUP BY date_format(date, '%e') ORDER BY date ASC";
-$result = full_query($query);
-while ($data = mysql_fetch_array($result)) {
-    $reportvalues['tickets_new'][$data[0]] = $data[1];
-}
-$query = "SELECT date_format(date, '%e'),COUNT(id) FROM tblticketreplies WHERE date LIKE '" . $year . "-" . $month . "-%' AND admin!='' GROUP BY date_format(date, '%e') ORDER BY date ASC";
-$result = full_query($query);
-while ($data = mysql_fetch_array($result)) {
-    $reportvalues['tickets_staff_replies'][$data[0]] = $data[1];
-}
-$query = "SELECT date_format(date, '%e'),COUNT(id) FROM tblcancelrequests WHERE date LIKE '" . $year . "-" . $month . "-%' GROUP BY date_format(date, '%e') ORDER BY date ASC";
-$result = full_query($query);
-while ($data = mysql_fetch_array($result)) {
-    $reportvalues['cancellations_new'][$data[0]] = $data[1];
-}
 
-for ($day = 1; $day <= 31; $day++) {
+$dateFormat = Capsule::raw('date_format(`date`, "%e")');
+$reportvalues['orders_active'] = Capsule::table('tblorders')
+    ->where('status', 'Active')
+    ->whereBetween(
+        'date',
+        [
+            $startOfMonth,
+            $endOfMonth
+        ]
+    )
+    ->groupBy($dateFormat)
+    ->orderBy('date')
+    ->pluck(Capsule::raw('count(id) as total'), Capsule::raw('date_format(`date`, "%e") as day'));
 
-    $date = date("Y-m-d", mktime(0, 0, 0, $month, $day, $year));
-    $daytext = date("l", mktime(0, 0, 0, $month, $day, $year));
+$reportvalues['invoices_new'] = Capsule::table('tblinvoices')
+    ->whereBetween(
+        'date',
+        [
+            $startOfMonth,
+            $endOfMonth
+        ]
+    )
+    ->groupBy($dateFormat)
+    ->orderBy('date')
+    ->pluck(Capsule::raw('count(id) as total'), Capsule::raw('date_format(`date`, "%e") as day'));
+
+$reportvalues['invoices_paid'] = Capsule::table('tblinvoices')
+    ->whereBetween(
+        'date',
+        [
+            $startOfMonth,
+            $endOfMonth
+        ]
+    )
+    ->groupBy(Capsule::raw('date_format(`datepaid`, "%e")'))
+    ->orderBy('date')
+    ->pluck(Capsule::raw('count(id) as total'), Capsule::raw('date_format(`datepaid`, "%e") as day'));
+
+$reportvalues['tickets_new'] = Capsule::table('tbltickets')
+    ->whereBetween(
+        'date',
+        [
+            $startOfMonth,
+            $endOfMonth
+        ]
+    )
+    ->groupBy($dateFormat)
+    ->orderBy('date')
+    ->pluck(Capsule::raw('count(id) as total'), Capsule::raw('date_format(`date`, "%e") as day'));
+
+$reportvalues['tickets_staff_replies'] = Capsule::table('tblticketreplies')
+    ->whereBetween(
+        'date',
+        [
+            $startOfMonth,
+            $endOfMonth
+        ]
+    )
+    ->where('admin', '!=', '')
+    ->groupBy($dateFormat)
+    ->orderBy('date')
+    ->pluck(Capsule::raw('count(id) as total'), Capsule::raw('date_format(`date`, "%e") as day'));
+
+$reportvalues['cancellations_new'] = Capsule::table('tblcancelrequests')
+    ->whereBetween(
+        'date',
+        [
+            $startOfMonth,
+            $endOfMonth
+        ]
+    )
+    ->groupBy($dateFormat)
+    ->orderBy('date')
+    ->pluck(Capsule::raw('count(id) as total'), Capsule::raw('date_format(`date`, "%e") as day'));
+
+for ($day = 1; $day <= $dateFilter->endOfMonth()->day; $day++) {
+    $date = Carbon::create($year, $month, $day);
+    $daytext = $date->format('l');
+    $date = $date->toDateString();
 
     $neworders = isset($reportvalues['orders_active'][$day]) ? $reportvalues['orders_active'][$day] : '0';
     $newinvoices = isset($reportvalues['invoices_new'][$day]) ? $reportvalues['invoices_new'][$day] : '0';

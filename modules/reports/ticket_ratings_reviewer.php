@@ -1,13 +1,14 @@
 <?php
 
 use WHMCS\Carbon;
+use WHMCS\Database\Capsule;
 use WHMCS\View\Markup\Markup;
 
 if (!defined("WHMCS")) {
     die("This file cannot be accessed directly");
 }
 
-$rating = App::getFromRequest('range');
+$rating = App::getFromRequest('rating');
 
 if (!$rating) {
     $rating = '1';
@@ -20,19 +21,32 @@ if (!$range) {
     $range = $lastWeek->toAdminDateFormat() . ' - ' . $today->toAdminDateFormat();
 }
 $dateRange = Carbon::parseDateRangeValue($range);
-$startdate = $dateRange['from']->toAdminDateFormat();
-$enddate = $dateRange['to']->toAdminDateFormat();
+$startdate = $dateRange['from'];
+$enddate = $dateRange['to'];
 
 $rsel[$rating] = ' selected="selected"';
 
 $markup = new Markup;
 
-$query = "SELECT tblticketreplies.*,tbltickets.tid AS ticketid FROM tblticketreplies INNER JOIN tbltickets ON tbltickets.id=tblticketreplies.tid WHERE tblticketreplies.admin!='' AND tblticketreplies.rating='".(int)$rating."' AND tblticketreplies.date BETWEEN '".db_make_safe_human_date($startdate)."' AND '".db_make_safe_human_date($enddate)."' ORDER BY date DESC";
-$result = full_query($query);
-$num_rows = mysql_num_rows($result);
+$results = Capsule::table('tblticketreplies')
+    ->select(Capsule::raw('tblticketreplies.*, tbltickets.tid AS ticketid'))
+    ->join('tbltickets', 'tbltickets.id', '=', 'tblticketreplies.tid')
+    ->where('tblticketreplies.admin', '!=', '')
+    ->where('tblticketreplies.rating', '=', (int) $rating)
+    ->whereBetween(
+        'tblticketreplies.date',
+        [
+            $startdate->toDateString(),
+            $enddate->toDateString(),
+        ]
+    )
+    ->orderBy('date', 'desc')
+    ->get();
+$num_rows = count($results);
 
 $reportdata["title"] = "Support Ticket Ratings Reviewer";
-$reportdata["description"] = "This report is showing all $num_rows ticket replies rated $rating between $startdate & $enddate for review";
+$reportdata["description"] = "This report is showing all $num_rows ticket replies rated $rating between"
+    . " {$startdate->toAdminDateFormat()} & {$enddate->toAdminDateFormat()} for review";
 
 $reportdata['headertext'] = '';
 if (!$print) {
@@ -88,14 +102,14 @@ $reportdata["tableheadings"] = array(
     "Rating",
 );
 
-while ($data = mysql_fetch_array($result)) {
-    $tid = $data["tid"];
-    $ticketid = $data["ticketid"];
-    $date = $data["date"];
-    $message = $data["message"];
-    $admin = $data["admin"];
-    $rating = $data["rating"];
-    $editor = $data["editor"];
+foreach ($results as $result) {
+    $tid = $result->tid;
+    $ticketid = $result->ticketid;
+    $date = $result->date;
+    $message = $result->message;
+    $admin = $result->admin;
+    $rating = $result->rating;
+    $editor = $result->editor;
 
     $date = fromMySQLDate($date, true);
 
@@ -103,7 +117,7 @@ while ($data = mysql_fetch_array($result)) {
     $message = $markup->transform($message, $markupFormat);
 
     $reportdata["tablevalues"][] = array(
-        '<a href="supporttickets.php?action=viewticket&id='.$tid.'">' . $ticketid . '</a>',
+        '<a href="supporttickets.php?action=viewticket&id=' . $tid . '">' . $ticketid . '</a>',
         $date,
         '<div align="left">' . $message . '</div>',
         $admin,

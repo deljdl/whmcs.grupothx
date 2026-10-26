@@ -26,6 +26,7 @@ CREATE TABLE `tblhostingaddons` (
   `termination_date` date NOT NULL DEFAULT '0000-00-00',
   `paymentmethod` text COLLATE utf8_unicode_ci NOT NULL,
   `notes` text COLLATE utf8_unicode_ci NOT NULL,
+  `subscriptionid` varchar(128) COLLATE utf8_unicode_ci NOT NULL default '',
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),

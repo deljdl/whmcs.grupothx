@@ -47,296 +47,77 @@ jQuery(document).ready(function () {
                         <div class="alert alert-danger">
                             {$errormessage}
                         </div>
+                    {elseif !$productGroup}
+                        <div class="alert alert-info">
+                            {lang key='orderForm.selectCategory'}
+                        </div>
                     {/if}
                 </div>
                 <div id="products" class="price-table-container">
                     <ul>
-                                                    <li id="product1">
+                        {foreach $products as $product}
+                            <li id="product{$product@iteration}">
                                 <div class="price-table">
                                     <div class="top-head">
                                         <div class="top-area">
-                                            <h4 id="product1-name">Hospedagem de Sites</h4>
+                                            <h4 id="product{$product@iteration}-name">{$product.name}</h4>
                                         </div>
-                                                                                
+                                        {if $product.tagLine}
+                                            <p id="product{$product@iteration}-tag-line">{$product.tagLine}</p>
+                                        {/if}
+                                        {if $product.isFeatured}
+                                            <div class="popular-plan">
+                                                {$LANG.featuredProduct|upper}
+                                            </div>
+                                        {/if}
+
                                         <div class="price-area">
-                                            <div class="price" id="product1-price">
-                                                                                                                                                        <span>R$ 47.75</span>/Trimestrais
+                                            <div class="price" id="product{$product@iteration}-price">
+                                                {if $product.bid}
+                                                    {$LANG.bundledeal}
+                                                    {if $product.displayprice}
+                                                        <br /><br /><span>{$product.displayPriceSimple}</span>
+                                                    {/if}
+                                                {elseif $product.paytype eq "free"}
+                                                    {$LANG.orderfree}
+                                                {elseif $product.paytype eq "onetime"}
+                                                    {$product.pricing.onetime} {$LANG.orderpaymenttermonetime}
+                                                {else}
+                                                    {if $product.pricing.hasconfigoptions}
+                                                        {$LANG.from}
+                                                    {/if}
+                                                    {$product.pricing.minprice.cycleText}
                                                     <br>
-                                                                                                                                                </div>
-                                                                                            <a href="/thx/cart.php?a=add&amp;pid=125" class="order-button" id="product1-order-button">
-                                                    Assinar agora
+                                                    {if $product.pricing.minprice.setupFee}
+                                                        <small>{$product.pricing.minprice.setupFee->toPrefixed()} {$LANG.ordersetupfee}</small>
+                                                    {/if}
+                                                {/if}
+                                            </div>
+                                            {if $product.qty eq "0"}
+                                                <span id="product{$product@iteration}-unavailable" class="order-button unavailable">{$LANG.outofstock}</span>
+                                            {else}
+                                                <a href="{$smarty.server.PHP_SELF}?a=add&amp;{if $product.bid}bid={$product.bid}{else}pid={$product.pid}{/if}" class="order-button" id="product{$product@iteration}-order-button">
+                                                    {$LANG.ordernowbutton}
                                                 </a>
-                                            
+                                            {/if}
+
                                         </div>
                                     </div>
                                     <ul>
-                                                                                    <li id="product1-feature1">
-                                                1GB <br>Espaço em Disco
+                                        {foreach $product.features as $feature => $value}
+                                            <li id="product{$product@iteration}-feature{$value@iteration}">
+                                                {$value} {$feature}
                                             </li>
-                                                                                    <li id="product1-feature2">
-                                                ILIMITADO <br>Tráfego
+                                        {foreachelse}
+                                            <li id="product{$product@iteration}-description">
+                                                {$product.description}
                                             </li>
-                                                                                    <li id="product1-feature3">
-                                                3 <br>Contas de E-mail
-                                            </li>
-                                                                                    <li id="product1-feature4">
-                                                1 <br>Bases de Dados
-                                            </li>
-                                                                                    <li id="product1-feature5">
-                                                50 <br>Máximo de E-mails Enviados/Hora
-                                            </li>
-                                                                                    <li id="product1-feature6">
-                                                WhatsApp <br> Suporte Nível 1
-                                            </li>
-                                                                                    <li id="product1-feature7">
-                                                Tickets <br> Suporte Nível 2
-                                            </li>
-                                                                                    <li id="product1-feature8">
-                                                E-mail <br> Suporte Nível 3
-                                            </li>
-                                                                            </ul>
+                                        {/foreach}
+                                    </ul>
                                 </div>
                             </li>
-                                                    <li id="product2">
-                                <div class="price-table">
-                                    <div class="top-head">
-                                        <div class="top-area">
-                                            <h4 id="product2-name">TIH - Master </h4>
-                                        </div>
-                                                                                
-                                        <div class="price-area">
-                                            <div class="price" id="product2-price">
-                                                                                                                                                        <span>R$ 32.95</span>/Mensais
-                                                    <br>
-                                                                                                                                                </div>
-                                                                                            <a href="/thx/cart.php?a=add&amp;pid=3" class="order-button" id="product2-order-button">
-                                                    Assinar agora
-                                                </a>
-                                            
-                                        </div>
-                                    </div>
-                                    <ul>
-                                                                                    <li id="product2-feature1">
-                                                10GB <br>Espaço em Disco
-                                            </li>
-                                                                                    <li id="product2-feature2">
-                                                ILIMITADO <br>Tráfego
-                                            </li>
-                                                                                    <li id="product2-feature3">
-                                                3 <br>Usuários FTP
-                                            </li>
-                                                                                    <li id="product2-feature4">
-                                                30 <br>Contas de E-mail
-                                            </li>
-                                                                                    <li id="product2-feature5">
-                                                3 <br>Bases de Dados
-                                            </li>
-                                                                                    <li id="product2-feature6">
-                                                3 <br>Subdomínios
-                                            </li>
-                                                                                    <li id="product2-feature7">
-                                                3 <br>Dominios Estacionados
-                                            </li>
-                                                                                    <li id="product2-feature8">
-                                                1500 <br>Máximo de E-mails Enviados/Hora
-                                            </li>
-                                                                            </ul>
-                                </div>
-                            </li>
-                                                    <li id="product3">
-                                <div class="price-table">
-                                    <div class="top-head">
-                                        <div class="top-area">
-                                            <h4 id="product3-name">TIH - Premium</h4>
-                                        </div>
-                                                                                
-                                        <div class="price-area">
-                                            <div class="price" id="product3-price">
-                                                                                                                                                        <span>R$ 43.95</span>/Mensais
-                                                    <br>
-                                                                                                                                                </div>
-                                                                                            <a href="/thx/cart.php?a=add&amp;pid=11" class="order-button" id="product3-order-button">
-                                                    Assinar agora
-                                                </a>
-                                            
-                                        </div>
-                                    </div>
-                                    <ul>
-                                                                                    <li id="product3-feature1">
-                                                15GB <br>Espaço em Disco
-                                            </li>
-                                                                                    <li id="product3-feature2">
-                                                ILIMITADO <br>Tráfego
-                                            </li>
-                                                                                    <li id="product3-feature3">
-                                                5 <br>Usuários FTP
-                                            </li>
-                                                                                    <li id="product3-feature4">
-                                                45 <br>Contas de E-mail
-                                            </li>
-                                                                                    <li id="product3-feature5">
-                                                15 <br>Bases de Dados
-                                            </li>
-                                                                                    <li id="product3-feature6">
-                                                5 <br>Subdomínios
-                                            </li>
-                                                                                    <li id="product3-feature7">
-                                                5 <br>Dominios Estacionados
-                                            </li>
-                                                                                    <li id="product3-feature8">
-                                                200 <br>Máximo de E-mails Enviados/Hora
-                                            </li>
-                                                                            </ul>
-                                </div>
-                            </li>
-                                                    <li id="product4">
-                                <div class="price-table">
-                                    <div class="top-head">
-                                        <div class="top-area">
-                                            <h4 id="product4-name">TIH - Especial</h4>
-                                        </div>
-                                                                                
-                                        <div class="price-area">
-                                            <div class="price" id="product4-price">
-                                                                                                                                                        <span>R$ 65.95</span>/Mensais
-                                                    <br>
-                                                                                                                                                </div>
-                                                                                            <a href="/thx/cart.php?a=add&amp;pid=32" class="order-button" id="product4-order-button">
-                                                    Assinar agora
-                                                </a>
-                                            
-                                        </div>
-                                    </div>
-                                    <ul>
-                                                                                    <li id="product4-feature1">
-                                                20GB <br>Espaço em Disco
-                                            </li>
-                                                                                    <li id="product4-feature2">
-                                                ILIMITADO <br>Tráfego
-                                            </li>
-                                                                                    <li id="product4-feature3">
-                                                7 <br>Usuários FTP
-                                            </li>
-                                                                                    <li id="product4-feature4">
-                                                75 <br>Contas de E-mail
-                                            </li>
-                                                                                    <li id="product4-feature5">
-                                                18 <br>Bases de Dados
-                                            </li>
-                                                                                    <li id="product4-feature6">
-                                                7 <br>Subdomínios
-                                            </li>
-                                                                                    <li id="product4-feature7">
-                                                7 <br>Dominios Estacionados
-                                            </li>
-                                                                                    <li id="product4-feature8">
-                                                2 <br>Domínios adicionais
-                                            </li>
-                                                                                    <li id="product4-feature9">
-                                                250 <br>Máximo de E-mails Enviados/Hora
-                                            </li>
-                                                                            </ul>
-                                </div>
-                            </li>
-                                                    <li id="product5">
-                                <div class="price-table">
-                                    <div class="top-head">
-                                        <div class="top-area">
-                                            <h4 id="product5-name">TIH Professional</h4>
-                                        </div>
-                                                                                
-                                        <div class="price-area">
-                                            <div class="price" id="product5-price">
-                                                                                                                                                        <span>R$ 108.90</span>/Mensais
-                                                    <br>
-                                                                                                                                                </div>
-                                                                                            <a href="/thx/cart.php?a=add&amp;pid=4" class="order-button" id="product5-order-button">
-                                                    Assinar agora
-                                                </a>
-                                            
-                                        </div>
-                                    </div>
-                                    <ul>
-                                                                                    <li id="product5-feature1">
-                                                25GB <br>Espaço em Disco
-                                            </li>
-                                                                                    <li id="product5-feature2">
-                                                ILIMITADO <br>Tráfego
-                                            </li>
-                                                                                    <li id="product5-feature3">
-                                                10 <br>Usuários FTP
-                                            </li>
-                                                                                    <li id="product5-feature4">
-                                                150 <br>Contas de E-mail
-                                            </li>
-                                                                                    <li id="product5-feature5">
-                                                20 <br>Bases de Dados
-                                            </li>
-                                                                                    <li id="product5-feature6">
-                                                10 <br>Subdomínios
-                                            </li>
-                                                                                    <li id="product5-feature7">
-                                                10 <br>Dominios Estacionados
-                                            </li>
-                                                                                    <li id="product5-feature8">
-                                                4 <br>Domínios adicionais
-                                            </li>
-                                                                                    <li id="product5-feature9">
-                                                300 <br>Máximo de E-mails Enviados/Hora
-                                            </li>
-                                                                            </ul>
-                                </div>
-                            </li>
-                                                    <li id="product6">
-                                <div class="price-table">
-                                    <div class="top-head">
-                                        <div class="top-area">
-                                            <h4 id="product6-name">TIH - Sem Limite</h4>
-                                        </div>
-                                                                                
-                                        <div class="price-area">
-                                            <div class="price" id="product6-price">
-                                                                                                                                                        <span>R$ 163.60</span>/Mensais
-                                                    <br>
-                                                                                                                                                </div>
-                                                                                            <a href="/thx/cart.php?a=add&amp;pid=10" class="order-button" id="product6-order-button">
-                                                    Assinar agora
-                                                </a>
-                                            
-                                        </div>
-                                    </div>
-                                    <ul>
-                                                                                    <li id="product6-feature1">
-                                                50GB <br>Espaço em Disco
-                                            </li>
-                                                                                    <li id="product6-feature2">
-                                                ILIMITADO <br>Tráfego
-                                            </li>
-                                                                                    <li id="product6-feature3">
-                                                15 <br>Usuários FTP
-                                            </li>
-                                                                                    <li id="product6-feature4">
-                                                ILIMITADO <br>Contas de E-mail
-                                            </li>
-                                                                                    <li id="product6-feature5">
-                                                ILIMITADO <br>Bases de Dados
-                                            </li>
-                                                                                    <li id="product6-feature6">
-                                                10 <br>Subdomínios
-                                            </li>
-                                                                                    <li id="product6-feature7">
-                                                10 <br>Dominios Estacionados
-                                            </li>
-                                                                                    <li id="product6-feature8">
-                                                10 <br>Domínios adicionais
-                                            </li>
-                                                                                    <li id="product6-feature9">
-                                                500 <br>Máximo de E-mails Enviados/Hora
-                                            </li>
-                                                                            </ul>
-                                </div>
-                            </li>
-                                            </ul>
+                        {/foreach}
+                    </ul>
                 </div>
             </div>
             {if count($productGroup.features) > 0}

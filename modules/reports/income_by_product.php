@@ -1,7 +1,12 @@
 <?php
 
-if (!defined("WHMCS"))
+use Illuminate\Database\Query\Builder;
+use WHMCS\Carbon;
+use WHMCS\Database\Capsule;
+
+if (!defined("WHMCS")) {
     die("This file cannot be accessed directly");
+}
 
 $pmonth = str_pad((int)$month, 2, "0", STR_PAD_LEFT);
 
@@ -12,33 +17,127 @@ $reportdata["currencyselections"] = true;
 $reportdata["tableheadings"] = array("Product Name","Units Sold","Value");
 
 $products = $addons = array();
+$dateRange = Carbon::create(
+    $year,
+    $month,
+    1
+);
 
 # Loop Through Products
-$result = full_query("SELECT tblhosting.packageid,COUNT(*),SUM(tblinvoiceitems.amount) FROM tblinvoiceitems INNER JOIN tblinvoices ON tblinvoices.id=tblinvoiceitems.invoiceid INNER JOIN tblhosting ON tblhosting.id=tblinvoiceitems.relid INNER JOIN tblclients ON tblclients.id=tblinvoices.userid WHERE tblinvoices.datepaid LIKE '".(int)$year."-".$pmonth."-%' AND (tblinvoiceitems.type='Hosting' OR tblinvoiceitems.type='Setup' OR tblinvoiceitems.type LIKE 'ProrataProduct%') AND currency=".(int)$currencyid." GROUP BY tblhosting.packageid");
-while ($data = mysql_fetch_array($result)) {
-    $products[$data[0]] = array("amount" => $data[2],"unitssold" => $data[1]);
+$result = Capsule::table('tblinvoiceitems')
+    ->join('tblinvoices', 'tblinvoices.id', '=', 'tblinvoiceitems.invoiceid')
+    ->join('tblhosting', 'tblhosting.id', '=', 'tblinvoiceitems.relid')
+    ->join('tblclients', 'tblclients.id', '=', 'tblinvoices.userid')
+    ->whereBetween(
+        'tblinvoices.datepaid',
+        [
+            $dateRange->startOfMonth()->toDateTimeString(),
+            $dateRange->endOfMonth()->toDateTimeString(),
+        ]
+    )
+    ->where(function (Builder $query) {
+        $query->where('tblinvoiceitems.type', 'Hosting')
+            ->orWhere('tblinvoiceitems.type', 'Setup')
+            ->orWhere('tblinvoiceitems.type', 'like', 'ProrataProduct%');
+    })
+    ->where('currency', $currencyid)
+    ->groupBy('tblhosting.packageid')
+    ->select(
+        [
+            Capsule::raw('tblhosting.packageid as packageId'),
+            Capsule::raw('COUNT(*) as unitsSold'),
+            Capsule::raw('SUM(tblinvoiceitems.amount) as amount')
+        ]
+    )->get();
+
+foreach ($result as $data) {
+    $products[$data->packageId] = [
+        'amount' => $data->amount,
+        'unitssold' => $data->unitsSold,
+    ];
 }
 
-# Loop Through Product Discounts
-$result = full_query("SELECT tblhosting.packageid,COUNT(*),SUM(tblinvoiceitems.amount) FROM tblinvoiceitems INNER JOIN tblinvoices ON tblinvoices.id=tblinvoiceitems.invoiceid INNER JOIN tblhosting ON tblhosting.id=tblinvoiceitems.relid INNER JOIN tblclients ON tblclients.id=tblinvoices.userid WHERE tblinvoices.datepaid LIKE '".(int)$year."-".$pmonth."-%' AND tblinvoiceitems.type='PromoHosting' AND currency=".(int)$currencyid." GROUP BY tblhosting.packageid");
-while ($data = mysql_fetch_array($result)) {
-    $products[$data[0]]["amount"] += $data[2];
+$result = Capsule::table('tblinvoiceitems')
+    ->join('tblinvoices', 'tblinvoices.id', '=', 'tblinvoiceitems.invoiceid')
+    ->join('tblhosting', 'tblhosting.id', '=', 'tblinvoiceitems.relid')
+    ->join('tblclients', 'tblclients.id', '=', 'tblinvoices.userid')
+    ->whereBetween(
+        'tblinvoices.datepaid',
+        [
+            $dateRange->startOfMonth()->toDateTimeString(),
+            $dateRange->endOfMonth()->toDateTimeString(),
+        ]
+    )
+    ->where('tblinvoiceitems.type', 'PromoHosting')
+    ->where('currency', $currencyid)
+    ->groupBy('tblhosting.packageid')
+    ->select(
+        [
+            Capsule::raw('tblhosting.packageid as packageId'),
+            Capsule::raw('COUNT(*) as unitsSold'),
+            Capsule::raw('SUM(tblinvoiceitems.amount) as amount')
+        ]
+    )
+    ->get();
+
+foreach ($result as $data) {
+    $products[$data->packageId]["amount"] += $data->amount;
 }
 
 # Loop Through Addons
-$result = full_query("SELECT tblhostingaddons.addonid,COUNT(*),SUM(tblinvoiceitems.amount) FROM tblinvoiceitems INNER JOIN tblinvoices ON tblinvoices.id=tblinvoiceitems.invoiceid INNER JOIN tblhostingaddons ON tblhostingaddons.id=tblinvoiceitems.relid INNER JOIN tblclients ON tblclients.id=tblinvoices.userid WHERE tblinvoices.datepaid LIKE '".(int)$year."-".$pmonth."-%' AND tblinvoiceitems.type='Addon' AND currency=".(int)$currencyid." GROUP BY tblhostingaddons.addonid");
-while ($data = mysql_fetch_array($result)) {
-    $addons[$data[0]] = array("amount" => $data[2],"unitssold" => $data[1]);
+$result = Capsule::table('tblinvoiceitems')
+    ->join('tblinvoices', 'tblinvoices.id', '=', 'tblinvoiceitems.invoiceid')
+    ->join('tblhostingaddons', 'tblhostingaddons.id', '=', 'tblinvoiceitems.relid')
+    ->join('tblclients', 'tblclients.id', '=', 'tblinvoices.userid')
+    ->whereBetween(
+        'tblinvoices.datepaid',
+        [
+            $dateRange->startOfMonth()->toDateTimeString(),
+            $dateRange->endOfMonth()->toDateTimeString(),
+        ]
+    )
+    ->where('tblinvoiceitems.type', 'Addon')
+    ->where('currency', $currencyid)
+    ->groupBy('tblhostingaddons.addonid')
+    ->select(
+        [
+            Capsule::raw('tblhostingaddons.addonid as addonId'),
+            Capsule::raw('COUNT(*) as unitsSold'),
+            Capsule::raw('SUM(tblinvoiceitems.amount) as amount')
+        ]
+    )->get();
+
+foreach ($result as $data) {
+    $addons[$data->addonId] = [
+        'amount' => $data->amount,
+        'unitssold' => $data->unitsSold,
+    ];
 }
 
 $total = 0;
 $itemtotal = 0;
 $firstdone = false;
-$result = select_query("tblproducts","tblproducts.id,tblproducts.name,tblproductgroups.name AS groupname","","tblproductgroups`.`order` ASC,`tblproducts`.`order` ASC,`name","ASC","","tblproductgroups ON tblproducts.gid=tblproductgroups.id");
-while($data = mysql_fetch_array($result)) {
-    $pid = $data["id"];
-    $group = $data["groupname"];
-    $prodname = $data["name"];
+$result = Capsule::table('tblproducts')
+    ->join(
+        'tblproductgroups',
+        'tblproductgroups.id',
+        '=',
+        'tblproducts.gid'
+    )
+    ->orderBy('tblproductgroups.order')
+    ->orderBy('tblproducts.order')
+    ->orderBy('tblproducts.name')
+    ->get(
+        [
+            'tblproducts.id',
+            'tblproducts.name',
+            Capsule::raw('`tblproductgroups`.`name` as groupname')
+        ]
+    );
+foreach ($result as $data) {
+    $pid = $data->id;
+    $group = $data->groupname;
+    $prodname = $data->name;
 
     if ($group!=$prevgroup) {
         $total += $itemtotal;
@@ -73,11 +172,17 @@ $chartdata['rows'][] = array('c'=>array(array('v'=>$group),array('v'=>$itemtotal
 $reportdata["tablevalues"][] = array("**<strong>Addons</strong>");
 
 $itemtotal = 0;
-$result = select_query("tbladdons","id,name","","name","ASC");
-while($data = mysql_fetch_array($result)) {
-
-    $addonid = $data["id"];
-    $prodname = $data["name"];
+$result = Capsule::table('tbladdons')
+    ->orderBy('name')
+    ->get(
+        [
+            'id',
+            'name',
+        ]
+    );
+foreach ($result as $data) {
+    $addonid = $data->id;
+    $prodname = $data->name;
 
     $amount = $addons[$addonid]["amount"];
     $number = $addons[$addonid]["unitssold"];
@@ -108,24 +213,55 @@ $chartdata['rows'][] = array('c'=>array(array('v'=>"Addons"),array('v'=>$itemtot
 $itemtotal = 0;
 $reportdata["tablevalues"][] = array("**<strong>Miscellaneous</strong>");
 
-$sql = "SELECT COUNT(*), SUM(tblinvoiceitems.amount)
-        FROM tblinvoiceitems
-        INNER JOIN tblinvoices ON tblinvoices.id=tblinvoiceitems.invoiceid 
-        INNER JOIN tblclients ON tblclients.id=tblinvoices.userid
-        WHERE tblinvoices.datepaid LIKE '" . (int)$year . "-" . $pmonth . "-%' AND tblinvoiceitems.type='Item' AND currency=" . (int)$currencyid;
-$result = full_query($sql);
-$data = mysql_fetch_array($result);
-$itemtotal += $data[1];
-$number = $data[0];
-$amount = $data[1];
+$data = Capsule::table('tblinvoiceitems')
+    ->join('tblinvoices', 'tblinvoices.id', '=', 'tblinvoiceitems.invoiceid')
+    ->join('tblclients', 'tblclients.id', '=', 'tblinvoices.userid')
+    ->whereBetween(
+        'tblinvoices.datepaid',
+        [
+            $dateRange->startOfMonth()->toDateTimeString(),
+            $dateRange->endOfMonth()->toDateTimeString(),
+        ]
+    )
+    ->where('tblinvoiceitems.type', 'Item')
+    ->where('tblclients.currency', $currencyid)
+    ->first(
+        [
+            Capsule::raw('COUNT(*) as number'),
+            Capsule::raw('SUM(tblinvoiceitems.amount) as amount')
+        ]
+    );
+
+$itemtotal += $data->amount;
+$number = $data->number;
+$amount = $data->amount;
 if (!$amount) $amount="0.00";
 if (!$number) $number="0";
 $reportdata["tablevalues"][] = array('Billable Items',$number,formatCurrency($amount));
 
-$result = full_query("SELECT COUNT(*),SUM(tblinvoiceitems.amount) FROM tblinvoiceitems INNER JOIN tblinvoices ON tblinvoices.id=tblinvoiceitems.invoiceid INNER JOIN tblclients ON tblclients.id=tblinvoices.userid WHERE tblinvoices.datepaid LIKE '".(int)$year."-".$pmonth."-%' AND tblinvoiceitems.type='' AND currency='$currencyid'");
-$data = mysql_fetch_array($result);
-$itemtotal += $data[1];
-$reportdata["tablevalues"][] = array('Custom Invoice Line Items',$data[0],formatCurrency($data[1]));
+$data = Capsule::table('tblinvoiceitems')
+    ->join('tblinvoices', 'tblinvoices.id', '=', 'tblinvoiceitems.invoiceid')
+    ->join('tblclients', 'tblclients.id', '=', 'tblinvoices.userid')
+    ->whereBetween(
+        'tblinvoices.datepaid',
+        [
+            $dateRange->startOfMonth()->toDateTimeString(),
+            $dateRange->endOfMonth()->toDateTimeString(),
+        ]
+    )
+    ->where('tblinvoiceitems.type', '')
+    ->where('tblclients.currency', $currencyid)
+    ->first(
+        [
+            Capsule::raw('COUNT(*) as number'),
+            Capsule::raw('SUM(tblinvoiceitems.amount) as amount')
+        ]
+    );
+
+$itemtotal += $data->amount;
+$number = $data->number;
+$amount = $data->amount;
+$reportdata["tablevalues"][] = array('Custom Invoice Line Items',$number,formatCurrency($amount));
 
 $total += $itemtotal;
 $reportdata["tablevalues"][] = array('','<strong>Sub-Total</strong>','<strong>'.formatCurrency($itemtotal).'</strong>');

@@ -1,7 +1,10 @@
 <?php
 
-if (!defined("WHMCS"))
+use WHMCS\Database\Capsule;
+
+if (!defined("WHMCS")) {
     die("This file cannot be accessed directly");
+}
 
 $reportdata['title'] = "Annual Income Report for " . $currentyear;
 $reportdata['description'] = "This report shows the income received broken down by month converted to the base currency using rates at the time of the transaction";
@@ -18,19 +21,32 @@ $reportdata['tableheadings'] = array(
 );
 
 $reportvalues = array();
-$query = "SELECT date_format(date,'%m'), date_format(date,'%Y'), SUM(amountin/rate), SUM(fees/rate), SUM(amountout/rate) FROM tblaccounts WHERE date>='" . ($currentyear-2) . "-01-01' GROUP BY date_format(date,'%M %Y') ORDER BY date ASC";
-$result = full_query($query);
-while ($data = mysql_fetch_array($result)) {
-
-    $month = (int)$data[0];
-    $year = (int)$data[1];
-    $amountin = $data[2];
-    $fees = $data[3];
-    $amountout = $data[4];
+$results = Capsule::table('tblaccounts')
+    ->select(
+        Capsule::raw("date_format(date,'%m') as month"),
+        Capsule::raw("date_format(date,'%Y') as year"),
+        Capsule::raw("SUM(amountin/rate) as amountin"),
+        Capsule::raw("SUM(fees/rate) fees"),
+        Capsule::raw("SUM(amountout/rate) as amountout")
+    )
+    ->where('date', '>=', ($currentyear - 2) . '-01-01')
+    ->groupBy(Capsule::raw("date_format(date,'%M %Y')"))
+    ->orderBy('date', 'asc')
+    ->get();
+foreach ($results as $result) {
+    $month = (int) $result->month;
+    $year = (int) $result->year;
+    $amountin = $result->amountin;
+    $fees = $result->fees;
+    $amountout = $result->amountout;
     $monthlybalance = $amountin - $fees - $amountout;
 
-    $reportvalues[$year][$month] = array($amountin, $fees, $amountout, $monthlybalance);
-
+    $reportvalues[$year][$month] = [
+        $amountin,
+        $fees,
+        $amountout,
+        $monthlybalance,
+    ];
 }
 
 foreach ($months as $k => $monthName) {

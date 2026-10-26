@@ -29,6 +29,7 @@ CREATE TABLE `tblhosting` (
   `notes` text COLLATE utf8_unicode_ci NOT NULL,
   `subscriptionid` text COLLATE utf8_unicode_ci NOT NULL,
   `promoid` int(10) NOT NULL,
+  `promocount` int(10) NULL DEFAULT '0',
   `suspendreason` text COLLATE utf8_unicode_ci NOT NULL,
   `overideautosuspend` tinyint(1) NOT NULL,
   `overidesuspenduntil` date NOT NULL,

@@ -17486,7 +17486,7 @@ return Packery;
 
 
 /*!
- * Draggabilly PACKAGED v2.2.0
+ * Draggabilly PACKAGED v2.3.0
  * Make that shiz draggable
  * https://draggabilly.desandro.com
  * MIT license
@@ -18542,45 +18542,43 @@ return Unidragger;
 }));
 
 /*!
- * Draggabilly v2.2.0
+ * Draggabilly v2.3.0
  * Make that shiz draggable
  * https://draggabilly.desandro.com
  * MIT license
  */
 
-/*jshint browser: true, strict: true, undef: true, unused: true */
+/* jshint browser: true, strict: true, undef: true, unused: true */
 
 ( function( window, factory ) {
   // universal module definition
-  /* jshint strict: false */ /*globals define, module, require */
+  /* jshint strict: false */ /* globals define */
   if ( typeof define == 'function' && define.amd ) {
     // AMD
     define( [
-        'get-size/get-size',
-        'unidragger/unidragger'
-      ],
-      function( getSize, Unidragger ) {
+      'get-size/get-size',
+      'unidragger/unidragger',
+    ],
+    function( getSize, Unidragger ) {
         return factory( window, getSize, Unidragger );
-      });
+      } );
   } else if ( typeof module == 'object' && module.exports ) {
     // CommonJS
     module.exports = factory(
-      window,
-      require('get-size'),
-      require('unidragger')
+        window,
+        require('get-size'),
+        require('unidragger')
     );
   } else {
     // browser global
     window.Draggabilly = factory(
-      window,
-      window.getSize,
-      window.Unidragger
+        window,
+        window.getSize,
+        window.Unidragger
     );
   }
 
 }( window, function factory( window, getSize, Unidragger ) {
-
-
 
 // -------------------------- helpers & variables -------------------------- //
 
@@ -18632,7 +18630,7 @@ proto.option = function( opts ) {
 var positionValues = {
   relative: true,
   absolute: true,
-  fixed: true
+  fixed: true,
 };
 
 proto._create = function() {
@@ -18652,7 +18650,6 @@ proto._create = function() {
   }
 
   // events, bridge jQuery events from vanilla
-  this.on( 'pointerDown', this.onPointerDown );
   this.on( 'pointerMove', this.onPointerMove );
   this.on( 'pointerUp', this.onPointerUp );
 
@@ -18683,13 +18680,14 @@ proto.dispatchEvent = function( type, event, args ) {
 };
 
 proto.dispatchJQueryEvent = function( type, event, args ) {
-  var jQuery = window.jQuery;
+  var jquery = window.jQuery;
   // trigger jQuery event
-  if ( !jQuery || !this.$element ) {
+  if ( !jquery || !this.$element ) {
     return;
   }
   // create jQuery event
-  var $event = jQuery.Event( event );
+  /* eslint-disable-next-line new-cap */
+  var $event = jquery.Event( event );
   $event.type = type;
   this.$element.trigger( $event, args );
 };
@@ -18744,10 +18742,31 @@ proto.onPointerDown = function( event, pointer ) {
   this.dispatchJQueryEvent( 'pointerDown', event, [ pointer ] );
 };
 
+proto.pointerDown = function( event, pointer ) {
+  var isOkay = this.okayPointerDown( event );
+  if ( !isOkay || !this.isEnabled ) {
+    this._pointerReset();
+    return;
+  }
+  // track start event position
+  // Safari 9 overrides pageX and pageY. These values needs to be copied. flickity#842
+  this.pointerDownPointer = {
+    pageX: pointer.pageX,
+    pageY: pointer.pageY,
+  };
+
+  event.preventDefault();
+  this.pointerDownBlur();
+  // bind move and end events
+  this._bindPostStartEvents( event );
+  this.element.classList.add('is-pointer-down');
+  this.dispatchEvent( 'pointerDown', event, [ pointer ] );
+};
+
 /**
  * drag start
  * @param {Event} event
- * @param {Event or Touch} pointer
+ * @param {[Event, Touch]} pointer
  */
 proto.dragStart = function( event, pointer ) {
   if ( !this.isEnabled ) {
@@ -18786,12 +18805,12 @@ proto.measureContainment = function() {
 
   var position = this.relativeStartPosition = {
     x: elemRect.left - ( containerRect.left + containerSize.borderLeftWidth ),
-    y: elemRect.top - ( containerRect.top + containerSize.borderTopWidth )
+    y: elemRect.top - ( containerRect.top + containerSize.borderTopWidth ),
   };
 
   this.containSize = {
     width: ( containerSize.width - borderSizeX ) - position.x - elemSize.width,
-    height: ( containerSize.height - borderSizeY ) - position.y - elemSize.height
+    height: ( containerSize.height - borderSizeY ) - position.y - elemSize.height,
   };
 };
 
@@ -18822,7 +18841,8 @@ proto.onPointerMove = function( event, pointer, moveVector ) {
 /**
  * drag move
  * @param {Event} event
- * @param {Event or Touch} pointer
+ * @param {[Event, Touch]} pointer
+ * @param {Object} moveVector - x and y coordinates
  */
 proto.dragMove = function( event, pointer, moveVector ) {
   if ( !this.isEnabled ) {
@@ -18856,7 +18876,7 @@ proto.dragMove = function( event, pointer, moveVector ) {
 
 function applyGrid( value, grid, method ) {
   method = method || 'round';
-  return grid ? Math[ method ]( value / grid ) * grid : value;
+  return grid ? Math[ method ]( value/grid ) * grid : value;
 }
 
 proto.containDrag = function( axis, drag, grid ) {
@@ -18869,7 +18889,7 @@ proto.containDrag = function( axis, drag, grid ) {
   var min = applyGrid( -rel, grid, 'ceil' );
   var max = this.containSize[ measure ];
   max = applyGrid( max, grid, 'floor' );
-  return  Math.max( min, Math.min( max, drag ) );
+  return Math.max( min, Math.min( max, drag ) );
 };
 
 // ----- end event ----- //
@@ -18877,7 +18897,7 @@ proto.containDrag = function( axis, drag, grid ) {
 /**
  * pointer up
  * @param {Event} event
- * @param {Event or Touch} pointer
+ * @param {[Event, Touch]} pointer
  */
 proto.onPointerUp = function( event, pointer ) {
   this.element.classList.remove('is-pointer-down');
@@ -18887,7 +18907,7 @@ proto.onPointerUp = function( event, pointer ) {
 /**
  * drag end
  * @param {Event} event
- * @param {Event or Touch} pointer
+ * @param {[Event, Touch]} pointer
  */
 proto.dragEnd = function( event, pointer ) {
   if ( !this.isEnabled ) {
@@ -18913,14 +18933,14 @@ proto.animate = function() {
   var _this = this;
   requestAnimationFrame( function animateFrame() {
     _this.animate();
-  });
+  } );
 
 };
 
 // left/top positioning
 proto.setLeftTop = function() {
   this.element.style.left = this.position.x + 'px';
-  this.element.style.top  = this.position.y + 'px';
+  this.element.style.top = this.position.y + 'px';
 };
 
 proto.positionDrag = function() {
@@ -18985,7 +19005,7 @@ if ( jQuery && jQuery.bridget ) {
 
 return Draggabilly;
 
-}));
+} ) );
 
 
 /**
@@ -34933,7 +34953,7 @@ Automatically shown in inline mode.
 
 }(window.jQuery));
 /*!
- * Select2 4.0.10
+ * Select2 4.0.13
  * https://select2.github.io
  *
  * Released under the MIT license
@@ -36490,6 +36510,27 @@ S2.define('select2/selection/base',[
     throw new Error('The `update` method must be defined in child classes.');
   };
 
+  /**
+   * Helper method to abstract the "enabled" (not "disabled") state of this
+   * object.
+   *
+   * @return {true} if the instance is not disabled.
+   * @return {false} if the instance is disabled.
+   */
+  BaseSelection.prototype.isEnabled = function () {
+    return !this.isDisabled();
+  };
+
+  /**
+   * Helper method to abstract the "disabled" state of this object.
+   *
+   * @return {true} if the disabled option is true.
+   * @return {false} if the disabled option is false.
+   */
+  BaseSelection.prototype.isDisabled = function () {
+    return this.options.get('disabled');
+  };
+
   return BaseSelection;
 });
 
@@ -36640,7 +36681,7 @@ S2.define('select2/selection/multiple',[
       '.select2-selection__choice__remove',
       function (evt) {
         // Ignore the event if it is disabled
-        if (self.options.get('disabled')) {
+        if (self.isDisabled()) {
           return;
         }
 
@@ -36801,7 +36842,7 @@ S2.define('select2/selection/allowClear',[
 
   AllowClear.prototype._handleClear = function (_, evt) {
     // Ignore the event if it is disabled
-    if (this.options.get('disabled')) {
+    if (this.isDisabled()) {
       return;
     }
 
@@ -36844,7 +36885,7 @@ S2.define('select2/selection/allowClear',[
       }
     }
 
-    this.$element.trigger('change');
+    this.$element.trigger('input').trigger('change');
 
     this.trigger('toggle', {});
   };
@@ -36867,7 +36908,7 @@ S2.define('select2/selection/allowClear',[
       return;
     }
 
-    var removeAll = this.options.get('translations').get('removeAllItems');   
+    var removeAll = this.options.get('translations').get('removeAllItems');
 
     var $remove = $(
       '<span class="select2-selection__clear" title="' + removeAll() +'">' +
@@ -38135,7 +38176,7 @@ S2.define('select2/data/select',[
     if ($(data.element).is('option')) {
       data.element.selected = true;
 
-      this.$element.trigger('change');
+      this.$element.trigger('input').trigger('change');
 
       return;
     }
@@ -38156,13 +38197,13 @@ S2.define('select2/data/select',[
         }
 
         self.$element.val(val);
-        self.$element.trigger('change');
+        self.$element.trigger('input').trigger('change');
       });
     } else {
       var val = data.id;
 
       this.$element.val(val);
-      this.$element.trigger('change');
+      this.$element.trigger('input').trigger('change');
     }
   };
 
@@ -38178,7 +38219,7 @@ S2.define('select2/data/select',[
     if ($(data.element).is('option')) {
       data.element.selected = false;
 
-      this.$element.trigger('change');
+      this.$element.trigger('input').trigger('change');
 
       return;
     }
@@ -38196,7 +38237,7 @@ S2.define('select2/data/select',[
 
       self.$element.val(val);
 
-      self.$element.trigger('change');
+      self.$element.trigger('input').trigger('change');
     });
   };
 
@@ -39427,7 +39468,17 @@ S2.define('select2/dropdown/attachBody',[
       $offsetParent = $offsetParent.offsetParent();
     }
 
-    var parentOffset = $offsetParent.offset();
+    var parentOffset = {
+      top: 0,
+      left: 0
+    };
+
+    if (
+      $.contains(document.body, $offsetParent[0]) ||
+      $offsetParent[0].isConnected
+      ) {
+      parentOffset = $offsetParent.offset();
+    }
 
     css.top -= parentOffset.top;
     css.left -= parentOffset.left;
@@ -40469,8 +40520,8 @@ S2.define('select2/core',[
 
     if (observer != null) {
       this._observer = new observer(function (mutations) {
-        $.each(mutations, self._syncA);
-        $.each(mutations, self._syncS);
+        self._syncA();
+        self._syncS(null, mutations);
       });
       this._observer.observe(this.$element[0], {
         attributes: true,
@@ -40592,7 +40643,7 @@ S2.define('select2/core',[
       if (self.isOpen()) {
         if (key === KEYS.ESC || key === KEYS.TAB ||
             (key === KEYS.UP && evt.altKey)) {
-          self.close();
+          self.close(evt);
 
           evt.preventDefault();
         } else if (key === KEYS.ENTER) {
@@ -40626,7 +40677,7 @@ S2.define('select2/core',[
   Select2.prototype._syncAttributes = function () {
     this.options.set('disabled', this.$element.prop('disabled'));
 
-    if (this.options.get('disabled')) {
+    if (this.isDisabled()) {
       if (this.isOpen()) {
         this.close();
       }
@@ -40637,7 +40688,7 @@ S2.define('select2/core',[
     }
   };
 
-  Select2.prototype._syncSubtree = function (evt, mutations) {
+  Select2.prototype._isChangeMutation = function (evt, mutations) {
     var changed = false;
     var self = this;
 
@@ -40665,7 +40716,22 @@ S2.define('select2/core',[
       }
     } else if (mutations.removedNodes && mutations.removedNodes.length > 0) {
       changed = true;
+    } else if ($.isArray(mutations)) {
+      $.each(mutations, function(evt, mutation) {
+        if (self._isChangeMutation(evt, mutation)) {
+          // We've found a change mutation.
+          // Let's escape from the loop and continue
+          changed = true;
+          return false;
+        }
+      });
     }
+    return changed;
+  };
+
+  Select2.prototype._syncSubtree = function (evt, mutations) {
+    var changed = this._isChangeMutation(evt, mutations);
+    var self = this;
 
     // Only re-pull the data if we think there is a change
     if (changed) {
@@ -40716,7 +40782,7 @@ S2.define('select2/core',[
   };
 
   Select2.prototype.toggleDropdown = function () {
-    if (this.options.get('disabled')) {
+    if (this.isDisabled()) {
       return;
     }
 
@@ -40732,15 +40798,40 @@ S2.define('select2/core',[
       return;
     }
 
+    if (this.isDisabled()) {
+      return;
+    }
+
     this.trigger('query', {});
   };
 
-  Select2.prototype.close = function () {
+  Select2.prototype.close = function (evt) {
     if (!this.isOpen()) {
       return;
     }
 
-    this.trigger('close', {});
+    this.trigger('close', { originalEvent : evt });
+  };
+
+  /**
+   * Helper method to abstract the "enabled" (not "disabled") state of this
+   * object.
+   *
+   * @return {true} if the instance is not disabled.
+   * @return {false} if the instance is disabled.
+   */
+  Select2.prototype.isEnabled = function () {
+    return !this.isDisabled();
+  };
+
+  /**
+   * Helper method to abstract the "disabled" state of this object.
+   *
+   * @return {true} if the disabled option is true.
+   * @return {false} if the disabled option is false.
+   */
+  Select2.prototype.isDisabled = function () {
+    return this.options.get('disabled');
   };
 
   Select2.prototype.isOpen = function () {
@@ -40817,7 +40908,7 @@ S2.define('select2/core',[
       });
     }
 
-    this.$element.val(newVal).trigger('change');
+    this.$element.val(newVal).trigger('input').trigger('change');
   };
 
   Select2.prototype.destroy = function () {
@@ -49337,6 +49428,30 @@ jQuery(document).ready(function() {
     });
 });
 
+function scrollToGatewayInputError() {
+    var displayError = jQuery('.gateway-errors,.assisted-cc-input-feedback').first(),
+        frm = displayError.closest('form');
+    if (!frm) {
+        frm = jQuery('form').first();
+    }
+    frm.find('button[type="submit"],input[type="submit"]')
+        .prop('disabled', false)
+        .removeClass('disabled')
+        .find('i.fas,i.far,i.fal,i.fab')
+        .removeAttr('class')
+        .addClass('fas fa-arrow-circle-right')
+        .find('span').toggleClass('hidden');
+
+    if (displayError.length) {
+        jQuery('html, body').animate(
+            {
+                scrollTop: displayError.offset().top - 50
+            },
+            500
+        );
+    }
+}
+
 /**
  * General utilities module
  *
@@ -49433,6 +49548,40 @@ jqClient: function () {
                 }
             )
         );
+    };
+
+    /**
+     * @param options
+     * @returns {*}
+     */
+    this.jsonGet = function (options) {
+        options = options || {};
+        this.get(options.url, options.data, function(response) {
+            if (response.warning) {
+                console.log('[WHMCS] Warning: ' + response.warning);
+                if (typeof options.warning === 'function') {
+                    options.warning(response.warning);
+                }
+            } else if (response.error) {
+                console.log('[WHMCS] Error: ' + response.error);
+                if (typeof options.error === 'function') {
+                    options.error(response.error);
+                }
+            } else {
+                if (typeof options.success === 'function') {
+                    options.success(response);
+                }
+            }
+        }, 'json').error(function(xhr, errorMsg){
+            console.log('[WHMCS] Error: ' + errorMsg);
+            if (typeof options.fail === 'function') {
+                options.fail(errorMsg);
+            }
+        }).always(function() {
+            if (typeof options.always === 'function') {
+                options.always();
+            }
+        });
     };
 
     /**
@@ -50029,6 +50178,16 @@ function () {
         });
     };
 
+    this.reloadCaptcha = function (element)
+    {
+        if (!element) {
+            element = jQuery('#inputCaptchaImage');
+        }
+
+        var src = jQuery(element).data('src');
+        jQuery(element).attr('src', src + '?nocache=' + (new Date()).getTime());
+    };
+
     return this;
 });
 
@@ -50482,6 +50641,9 @@ jQuery(document).ready(function() {
 
     jQuery('body').on('click', 'a.autoLinked', function (e) {
         e.preventDefault();
+        if (jQuery(this).hasClass('disabled')) {
+            return false;
+        }
 
         var child = window.open();
         child.opener = null;
@@ -50538,6 +50700,9 @@ jQuery(document).ready(function() {
                             } else if (data.fileAuth) {
                                 $('.modal-wizard .cert-further-instructions').hide();
                                 $('.modal-wizard .cert-file-auth').removeClass('hidden');
+                                $('.modal-wizard .wizard-transition-step .icon').hide();
+                                $('.modal-wizard .wizard-transition-step .title').addClass('file-auth');
+                                $('.modal-wizard .wizard-transition-step .icon.file-auth').removeClass('hidden').show();
                                 $('.modal-wizard .cert-file-auth-filename').val(data.fileAuthFilename);
                                 $('.modal-wizard .cert-file-auth-contents').val(data.fileAuthContents);
                             } else if (data.refreshMc) {
@@ -50723,11 +50888,21 @@ jQuery(document).ready(function() {
         e.preventDefault();
         jQuery('#modalAjax .modal-submit').prop("disabled", true);
         jQuery('#modalAjax .loader').show();
+        $('#remoteFailureDetails').slideUp();
         WHMCS.http.jqClient.post(
             jQuery(this).attr('action'),
             jQuery(this).serialize(),
             function(data) {
-                updateAjaxModal(data);
+                if (!data.error) {
+                    updateAjaxModal(data);
+                } else {
+                    $('#remoteFailureDetails')
+                        .find('.alert').html(data.errorMsg)
+                        .end()
+                        .slideDown();
+
+                    jQuery('#modalAjax .loader').fadeOut();
+                }
             },
             'json'
         ).fail(function() {
@@ -50769,6 +50944,55 @@ jQuery(document).ready(function() {
         );
     });
 
+    (function ($) {
+        $.fn.setInputError = function(error) {
+            this.parents('.form-group').addClass('has-error').find('.field-error-msg').text(error);
+            return this;
+        };
+    })(jQuery);
+
+    (function ($) {
+        $.fn.showInputError = function () {
+            this.parents(".form-group").addClass("has-error").find(".field-error-msg").show();
+            return this;
+        };
+    })(jQuery);
+
+    // Admin datatable row expand functionality
+    jQuery('.datatable .view-detail').click(function(e) {
+            e.preventDefault();
+            $currentRow = jQuery(this).closest('tr');
+            var loader = '<i class="fa fa-spinner fa-spin"></i> Loading...';
+            if (jQuery(this).hasClass('expanded')) {
+                $currentRow.next('tr.detail-row').hide();
+                jQuery(this).removeClass('expanded').find('i').removeClass('fa-minus').addClass('fa-plus');
+            } else {
+                var colCount = $currentRow.find('td').length;
+                if (jQuery(this).hasClass('data-loaded')) {
+                    $currentRow.next('tr.detail-row').show();
+                } else {
+                    var $newRow = $currentRow.after('<tr class="detail-row"><td colspan="' + colCount + '">' + loader + '</td></tr>');
+                    WHMCS.http.jqClient.jsonGet({
+                        url: jQuery(this).attr('href'),
+                        success: function(response) {
+                            $currentRow.next('tr.detail-row').remove();
+                            $currentRow.after('<tr class="detail-row"><td colspan="' + colCount + '">' + response.output + '</td></tr>');
+                        }
+                    });
+                }
+                jQuery(this).find('i').addClass('fa-minus').removeClass('fa-plus');
+                jQuery(this).addClass('expanded').addClass('data-loaded');
+            }
+        });
+    jQuery(document).on('change', '.toggle-display', function() {
+        var showElement = jQuery(this).data('show'),
+            element = jQuery('.' + showElement);
+        jQuery(document).find('div.toggleable').hide();
+        if (element.hasClass('hidden')) {
+            element.removeClass('hidden');
+        }
+        element.show();
+    });
 });
 var addingPayment = false;
 
@@ -50811,14 +51035,15 @@ function fetchModuleSettings(productId, mode) {
     }
 
     mode = mode || 'simple';
-    if (mode != 'simple' && mode != 'advanced') {
+    if (mode !== 'simple' && mode !== 'advanced') {
         mode = 'simple';
     }
     requestedMode = mode;
     $('#tblModuleSettings').addClass('module-settings-loading');
     $('#tblModuleAutomationSettings').addClass('module-settings-loading');
+    $('#tblMetricSettings').addClass('module-settings-loading');
     $('#serverReturnedError').addClass('hidden');
-    $('#moduleSettingsLoader').show();
+    $('#moduleSettingsLoader').removeClass('hidden').show();
     switchLink.attr('data-product-id', productId);
     WHMCS.http.jqClient.post(window.location.pathname, {
         'action': 'module-settings',
@@ -50831,8 +51056,9 @@ function fetchModuleSettings(productId, mode) {
         gotValidResponse = true;
         $('#tblModuleSettings').removeClass('module-settings-loading');
         $('#tblModuleAutomationSettings').removeClass('module-settings-loading');
+        $('#tblMetricSettings').removeClass('module-settings-loading');
         $('#tblModuleSettings tr').not(':first').remove();
-        switchLink.addClass('hidden');
+        switchLink.parent('div .module-settings-mode').addClass('hidden');
         if (module && data.error) {
             $('#serverReturnedErrorText').html(data.error);
             $('#serverReturnedError').removeClass('hidden');
@@ -50841,16 +51067,28 @@ function fetchModuleSettings(productId, mode) {
             $('#noModuleSelectedRow').addClass('hidden');
             $('#tblModuleSettings').append(data.content);
             $('#tblModuleAutomationSettings').find('input[type=radio]').removeAttr('disabled');
-            if (data.mode == 'simple') {
-                switchLink.attr('data-mode', 'advanced').find('a').find('span').addClass('hidden').parent().find('.text-advanced').removeClass('hidden');
-                switchLink.removeClass('hidden');
+            if (data.mode === 'simple') {
+                switchLink.attr('data-mode', 'advanced').find('span').addClass('hidden').parent().find('.text-advanced').removeClass('hidden');
+                switchLink.parent('div .module-settings-mode').removeClass('hidden');
             } else {
-                if (data.mode == 'advanced' && requestedMode == 'advanced') {
-                    switchLink.attr('data-mode', 'simple').find('a').find('span').addClass('hidden').parent().find('.text-simple').removeClass('hidden');
-                    switchLink.removeClass('hidden');
+                if (data.mode === 'advanced' && requestedMode === 'advanced') {
+                    switchLink.attr('data-mode', 'simple').find('span').addClass('hidden').parent().find('.text-simple').removeClass('hidden');
+                    switchLink.parent('div .module-settings-mode').removeClass('hidden');
                 } else {
-                    switchLink.addClass('hidden');
+                    switchLink.parent('div .module-settings-mode').addClass('hidden');
                 }
+            }
+            if (data.metrics) {
+                $('#metricsConfig').html(data.metrics).show();
+                $('#tblMetricSettings').removeClass('hidden').show();
+                $('.metric-toggle').bootstrapSwitch({
+                    size: 'mini',
+                    onColor: 'success'
+                }).on('switchChange.bootstrapSwitch', function(event, state) {
+                    WHMCS.http.jqClient.post($(this).data('url'), 'action=toggle-metric&id=' + $('#inputProductId').val() + '&module=' + module + '&metric=' + $(this).data('metric') + '&token=' + csrfToken + '&enable=' + state);
+                });
+            } else {
+                $('#tblMetricSettings').hide();
             }
         } else {
             $('#noModuleSelectedRow').removeClass('hidden');
@@ -51002,6 +51240,17 @@ function openFeatureHighlights() {
     openModal('whatsnew.php?modal=1', '', 'What\'s new in Version ...', '', 'modal-feature-highlights', '', '', true);
 }
 
+/**
+ * Submit the first form that exists within a given container.
+ *
+ * @param {string} containerId The ID name of the container
+ */
+function autoSubmitFormByContainer(containerId) {
+    if (typeof noAutoSubmit === "undefined" || noAutoSubmit === false) {
+        jQuery("#" + containerId).find("form:first").submit();
+    }
+}
+
 /*!
  * WHMCS Ajax Driven Modal Framework
  *
@@ -51144,6 +51393,7 @@ function submitIdAjaxModalClickEvent ()
     }
     if (!canContinue) {
         btn.removeClass('disabled');
+        jQuery('#modalAjax .loader').hide();
         return;
     }
     var modalForm = jQuery('#modalAjax').find('form');
@@ -51259,18 +51509,7 @@ function updateAjaxModal(data) {
          */
         var submitButton = jQuery('#' + data.submitId);
         submitButton.off('click');
-        submitButton.on('click', function() {
-            var modalForm = jQuery('#modalAjax').find('form');
-            jQuery('#modalAjax .loader').show();
-            var modalPost = WHMCS.http.jqClient.post(modalForm.attr('action'), modalForm.serialize(),
-                function(data) {
-                    updateAjaxModal(data);
-                }, 'json').fail(function() {
-                    jQuery('#modalAjax .modal-body').html('An error occurred while communicating with the server. Please try again.');
-                    jQuery('#modalAjax .loader').fadeOut();
-                }
-            );
-        })
+        submitButton.on('click', submitIdAjaxModalClickEvent);
     }
 
     jQuery('#modalAjax .loader').fadeOut();
@@ -51697,14 +51936,10 @@ function refreshWidget(widgetName, requestString) {
 /*!
  * Automation Status Javascript.
  *
- * @copyright Copyright (c) WHMCS Limited 2005-2016
+ * @copyright Copyright (c) WHMCS Limited 2005-2019
  * @license http://www.whmcs.com/license/ WHMCS Eula
  */
- $(document).ready(function(){
-    $('#statsContainer').on('click', '.btn-day-nav', function (e){
-        e.preventDefault();
-        loadAutomationStatsForDate($(this).data('date'));
-    });
+$(document).ready(function(){
     $('#statsContainer').on('click', '.btn-viewing', function (e){
         e.preventDefault();
     });
@@ -51724,14 +51959,18 @@ function refreshWidget(widgetName, requestString) {
 
 function loadAutomationStatsForDate(date) {
     $('#statsContainer').css('opacity', '0.5');
-        var jqxhr = WHMCS.http.jqClient.post( "automationstatus.php", 'action=stats&date=' + date,
+        WHMCS.http.jqClient.post(
+            "automationstatus.php",
+            'action=stats&date=' + date,
             function(data) {
-                $('#statsContainer').html(data.body);
-            }).fail(function() {
-                jQuery.growl({ title: "", message: "Your session has expired. Please refresh to continue." });
-            }).always(function() {
-                $('#statsContainer').css('opacity', '1');
-            });
+                $('.widgets-container').html(data.body);
+                $('.day-selector').find('.btn-viewing').html(data.newDate);
+            }
+        ).fail(function() {
+            jQuery.growl({ title: "", message: "Your session has expired. Please refresh to continue." });
+        }).always(function() {
+            $('#statsContainer').css('opacity', '1');
+        });
 }
 
 function refreshGraph() {
@@ -51939,97 +52178,105 @@ jQuery(document).ready(function() {
  * @copyright Copyright (c) WHMCS Limited 2005-2019
  * @license http://www.whmcs.com/license/ WHMCS Eula
  */
-jQuery(document).ready(function(){
-    // Date range picker.
-    jQuery('.date-picker-search').each(function (index) {
-        var self = jQuery(this),
-            opens = self.data('opens'),
-            drops = self.data('drops'),
-            range = adminJsVars.dateRangePicker.defaultRanges,
-            format = adminJsVars.dateRangeFormat;
-        if (!opens || typeof opens === "undefined") {
-            opens = 'center';
-        }
-        if (!drops || typeof drops === "undefined") {
-            drops = 'down';
-        }
-        if (self.hasClass('future')) {
-            range = adminJsVars.dateRangePicker.futureRanges;
-        }
-        self.daterangepicker({
-            autoUpdateInput: false,
-            ranges: range,
-            alwaysShowCalendars: true,
-            opens: opens,
-            drops: drops,
-            showDropdowns: true,
-            minYear: adminJsVars.minYear,
-            maxYear: adminJsVars.maxYear,
-            locale: {
-                format: format,
-                applyLabel: adminJsVars.dateRangePicker.applyLabel,
-                cancelLabel: adminJsVars.dateRangePicker.cancelLabel,
-                customRangeLabel: adminJsVars.dateRangePicker.customRangeLabel,
-                monthNames: adminJsVars.dateRangePicker.months,
-                daysOfWeek: adminJsVars.dateRangePicker.daysOfWeek
-            }
-        }).on('apply.daterangepicker', function(ev, picker) {
-            jQuery(this).val(picker.startDate.format(adminJsVars.dateRangeFormat)
-                + ' - ' + picker.endDate.format(adminJsVars.dateRangeFormat));
-        }).on('cancel.daterangepicker', function(ev, picker) {
-            jQuery(this).val('');
-        });
-    });
+function initDateRangePicker()
+{
+    jQuery(document).ready(function () {
+        // Date range picker.
 
-    jQuery('.datepick,.date-picker,.date-picker-single').each(function (index) {
-        var self = jQuery(this),
-            opens = self.data('opens'),
-            drops = self.data('drops'),
-            range = adminJsVars.dateRangePicker.defaultSingleRanges,
-            format = adminJsVars.dateRangeFormat,
-            time = false;
-        if (!opens || typeof opens === "undefined") {
-            opens = 'center';
-        }
-        if (!drops || typeof drops === "undefined") {
-            drops = 'down';
-        }
-        if (self.hasClass('future')) {
-            range = adminJsVars.dateRangePicker.futureSingleRanges;
-        }
-        if (self.hasClass('time')) {
-            time = true;
-            format = adminJsVars.dateTimeRangeFormat;
+        jQuery('.date-picker-search').each(function (index) {
+            var self = jQuery(this),
+                opens = self.data('opens'),
+                drops = self.data('drops'),
+                range = adminJsVars.dateRangePicker.defaultRanges,
+                format = adminJsVars.dateRangeFormat;
+            if (!opens || typeof opens === "undefined") {
+                opens = 'center';
+            }
+            if (!drops || typeof drops === "undefined") {
+                drops = 'down';
+            }
             if (self.hasClass('future')) {
-                range = adminJsVars.dateRangePicker.futureTimeSingleRanges;
+                range = adminJsVars.dateRangePicker.futureRanges;
             }
-        }
-        self.daterangepicker({
-            singleDatePicker: true,
-            autoUpdateInput: false,
-            ranges: range,
-            alwaysShowCalendars: true,
-            opens: opens,
-            drops: drops,
-            showDropdowns: true,
-            minYear: adminJsVars.minYear,
-            maxYear: adminJsVars.maxYear,
-            timePicker: time,
-            timePickerSeconds: false,
-            locale: {
-                format: format,
-                customRangeLabel: adminJsVars.dateRangePicker.customRangeLabel,
-                monthNames: adminJsVars.dateRangePicker.months,
-                daysOfWeek: adminJsVars.dateRangePicker.daysOfWeek
+            self.daterangepicker({
+                autoUpdateInput: false,
+                ranges: range,
+                alwaysShowCalendars: true,
+                opens: opens,
+                drops: drops,
+                showDropdowns: true,
+                minYear: adminJsVars.minYear,
+                maxYear: adminJsVars.maxYear,
+                locale: {
+                    format: format,
+                    applyLabel: adminJsVars.dateRangePicker.applyLabel,
+                    cancelLabel: adminJsVars.dateRangePicker.cancelLabel,
+                    customRangeLabel: adminJsVars.dateRangePicker.customRangeLabel,
+                    monthNames: adminJsVars.dateRangePicker.months,
+                    daysOfWeek: adminJsVars.dateRangePicker.daysOfWeek
+                }
+            }).on('apply.daterangepicker', function (ev, picker) {
+                jQuery(this).val(picker.startDate.format(adminJsVars.dateRangeFormat)
+                    + ' - ' + picker.endDate.format(adminJsVars.dateRangeFormat));
+            }).on('cancel.daterangepicker', function (ev, picker) {
+                jQuery(this).val('');
+            });
+        });
+
+        jQuery('.datepick,.date-picker,.date-picker-single').each(function (index) {
+            var self = jQuery(this),
+                opens = self.data('opens'),
+                drops = self.data('drops'),
+                range = adminJsVars.dateRangePicker.defaultSingleRanges,
+                format = adminJsVars.dateRangeFormat,
+                time = false;
+            if (!opens || typeof opens === "undefined") {
+                opens = 'center';
             }
-        }).on('apply.daterangepicker', function(ev, picker) {
-            jQuery(this).data('original-value', picker.startDate.format(format))
-                .val(picker.startDate.format(format));
-        }).on('cancel.daterangepicker', function(ev, picker) {
-            jQuery(this).val(jQuery(this).data('original-value'));
+            if (!drops || typeof drops === "undefined") {
+                drops = 'down';
+            }
+            if (self.hasClass('future')) {
+                range = adminJsVars.dateRangePicker.futureSingleRanges;
+            }
+            if (self.hasClass('time')) {
+                time = true;
+                format = adminJsVars.dateTimeRangeFormat;
+                if (self.hasClass('future')) {
+                    range = adminJsVars.dateRangePicker.futureTimeSingleRanges;
+                }
+            }
+            self.daterangepicker({
+                singleDatePicker: true,
+                autoUpdateInput: false,
+                ranges: range,
+                alwaysShowCalendars: true,
+                opens: opens,
+                drops: drops,
+                showDropdowns: true,
+                minYear: adminJsVars.minYear,
+                maxYear: adminJsVars.maxYear,
+                timePicker: time,
+                timePickerSeconds: false,
+                locale: {
+                    format: format,
+                    customRangeLabel: adminJsVars.dateRangePicker.customRangeLabel,
+                    monthNames: adminJsVars.dateRangePicker.months,
+                    daysOfWeek: adminJsVars.dateRangePicker.daysOfWeek
+                }
+            }).on('apply.daterangepicker', function (ev, picker) {
+                jQuery(this).data(
+                    'original-value',
+                    picker.startDate.format(format)
+                )
+                    .val(picker.startDate.format(format));
+            }).on('cancel.daterangepicker', function (ev, picker) {
+                jQuery(this).val(jQuery(this).data('original-value'));
+            });
         });
     });
-});
+}
+initDateRangePicker();
 
 /*!
  * WHMCS Module Queue Javascript Functions

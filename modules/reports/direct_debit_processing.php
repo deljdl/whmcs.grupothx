@@ -1,6 +1,7 @@
 <?php
 
 use WHMCS\Billing\Invoice;
+use WHMCS\Database\Capsule;
 use WHMCS\Payment\PayMethod\Adapter\BankAccount;
 
 if (!defined("WHMCS")) {
@@ -18,19 +19,23 @@ $reportdata["tableheadings"] = array("Invoice ID","Client Name","Invoice Date","
 
 $defaultBankDetailsPerUser = [];
 
-$query = "SELECT tblinvoices.*,tblclients.firstname,tblclients.lastname FROM tblinvoices INNER JOIN tblclients ON tblclients.id=tblinvoices.userid WHERE tblinvoices.paymentmethod='directdebit' AND tblinvoices.status='Unpaid' ORDER BY duedate ASC";
-$result = full_query($query);
-while ($data = mysql_fetch_array($result)) {
-
-    $id = $data["id"];
-    $userid = $data["userid"];
-    $client = $data["firstname"]." ".$data["lastname"];
-    $date = $data["date"];
-    $duedate = $data["duedate"];
-    $subtotal = $data["subtotal"];
-    $credit = $data["credit"];
-    $tax = $data["tax"]+$data["tax2"];
-    $total = $data["total"];
+$results = Capsule::table('tblinvoices')
+    ->select('tblinvoices.*', 'tblclients.firstname', 'tblclients.lastname')
+    ->join('tblclients', 'tblclients.id', '=', 'tblinvoices.userid')
+    ->where('tblinvoices.paymentmethod', '=', 'directdebit')
+    ->where('tblinvoices.status', '=', 'Unpaid')
+    ->orderBy('duedate', 'asc')
+    ->get();
+foreach ($results as $result) {
+    $id = $result->id;
+    $userid = $result->userid;
+    $client = $result->firstname . " " . $result->lastname;
+    $date = $result->date;
+    $duedate = $result->duedate;
+    $subtotal = $result->subtotal;
+    $credit = $result->credit;
+    $tax = ($result->tax + $result->tax2);
+    $total = $result->total;
 
     $invoice = Invoice::find($id);
 
@@ -63,8 +68,20 @@ while ($data = mysql_fetch_array($result)) {
     $tax = formatCurrency($tax);
     $total = formatCurrency($total);
 
-    $reportdata["tablevalues"][] = array('<a href="invoices.php?action=edit&id='.$id.'">'.$id.'</a>',$client,$date,$duedate,$subtotal,$tax,$credit,$total,$bankname,$banktype,$bankcode,$bankacct);
-
+    $reportdata["tablevalues"][] = [
+        '<a href="invoices.php?action=edit&id=' . $id . '">' . $id . '</a>',
+        $client,
+        $date,
+        $duedate,
+        $subtotal,
+        $tax,
+        $credit,
+        $total,
+        $bankname,
+        $banktype,
+        $bankcode,
+        $bankacct,
+    ];
 }
 
 $reportdata["footertext"] = "";

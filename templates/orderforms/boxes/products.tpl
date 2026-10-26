@@ -24,23 +24,29 @@
 
         </div>
 
-        <form method="post" action="{$smarty.server.PHP_SELF}?a=add">
+        {if !$products && !$errormessage}
+            <div class="alert alert-info">
+                {lang key='orderForm.selectCategory'}
+            </div>
+        {else}
+            <form method="post" action="{$smarty.server.PHP_SELF}?a=add">
 
-            <div class="fields-container">
-                {foreach from=$products item=product}
-                    <div class="field-row clearfix">
-                        <div class="col-xs-12">
-                            <label class="radio-inline product-radio"><input type="radio" name="pid" id="pid{$product.pid}" value="{if $product.bid}b{$product.bid}{else}{$product.pid}{/if}"{if $product.qty eq "0"} disabled{/if} /> <strong>{$product.name}</strong> {if $product.qty!=""}<em>({$product.qty} {$LANG.orderavailable})</em>{/if}{if $product.description} - {$product.description}{/if}</label>
+                <div class="fields-container">
+                    {foreach from=$products item=product}
+                        <div class="field-row clearfix">
+                            <div class="col-xs-12">
+                                <label class="radio-inline product-radio"><input type="radio" name="pid" id="pid{$product.pid}" value="{if $product.bid}b{$product.bid}{else}{$product.pid}{/if}"{if $product.qty eq "0"} disabled{/if} /> <strong>{$product.name}</strong> {if $product.qty!=""}<em>({$product.qty} {$LANG.orderavailable})</em>{/if}{if $product.description} - {$product.description}{/if}</label>
+                            </div>
                         </div>
-                    </div>
-            {/foreach}
-            </div>
+                    {/foreach}
+                </div>
 
-            <div class="line-padded text-center">
-                <button type="submit" class="btn btn-primary btn-lg">{$LANG.continue} &nbsp;<i class="fas fa-arrow-circle-right"></i></button>
-            </div>
+                <div class="line-padded text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">{$LANG.continue} &nbsp;<i class="fas fa-arrow-circle-right"></i></button>
+                </div>
 
-        </form>
+            </form>
+        {/if}
 
     </div>
 
