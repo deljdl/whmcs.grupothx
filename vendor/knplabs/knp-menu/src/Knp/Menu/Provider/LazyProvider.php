@@ -8,16 +8,18 @@ use Knp\Menu\ItemInterface;
  * A menu provider building menus lazily thanks to builder callables.
  *
  * Builders can either be callables or a factory for an object callable
- * represented as array(Closure, method), where the Closure gets called
+ * represented as [Closure, method], where the Closure gets called
  * to instantiate the object.
+ *
+ * @final since 3.8.0
  */
 class LazyProvider implements MenuProviderInterface
 {
-    private $builders;
-
-    public function __construct(array $builders)
+    /**
+     * @phpstan-param array<string, (callable(): ItemInterface)|array{\Closure(): object, string}> $builders
+     */
+    public function __construct(private array $builders)
     {
-        $this->builders = $builders;
     }
 
     public function get(string $name, array $options = []): ItemInterface

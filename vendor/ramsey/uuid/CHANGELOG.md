@@ -6,22 +6,338 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [Unreleased]
-
-### Added
-
-### Changed
-
-### Deprecated
-
-### Removed
+## 4.9.1 - 2025-09-04
 
 ### Fixed
 
-### Security
+* Allow brick/math version `^0.14`; fixed in [#617](https://github.com/ramsey/uuid/pull/617).
+* Default to `microtime()` instead of `DateTimeImmutable` in `Ramsey\Uuid\Generator\UnixTimeGenerator`.
 
 
-## [4.0.1] - 2020-03-29
+## 4.9.0 - 2025-06-25
+
+### Added
+
+* Add new `@pure` annotations to the following ([#605](https://github.com/ramsey/uuid/pull/605)):
+  * `Ramsey\Uuid\Codec\CodecInterface::encode()`
+  * `Ramsey\Uuid\Codec\CodecInterface::encodeBinary()`
+  * `Ramsey\Uuid\Codec\CodecInterface::decode()`
+  * `Ramsey\Uuid\Codec\CodecInterface::decodeBytes()`
+  * `Ramsey\Uuid\Fields\FieldsInterface::getBytes()`
+  * `Ramsey\Uuid\Math\CalculatorInterface::add()`
+  * `Ramsey\Uuid\Math\CalculatorInterface::subtract()`
+  * `Ramsey\Uuid\Math\CalculatorInterface::multiply()`
+  * `Ramsey\Uuid\Math\CalculatorInterface::divide()`
+  * `Ramsey\Uuid\Math\CalculatorInterface::fromBase()`
+  * `Ramsey\Uuid\Math\CalculatorInterface::toBase()`
+  * `Ramsey\Uuid\Math\CalculatorInterface::toHexadecimal()`
+  * `Ramsey\Uuid\Math\CalculatorInterface::toInteger()`
+  * `Ramsey\Uuid\Nonstandard\Uuid`
+  * `Ramsey\Uuid\Rfc4122\Fields::isMax()`
+  * `Ramsey\Uuid\Rfc4122\FieldsInterface::getVersion()`
+  * `Ramsey\Uuid\Rfc4122\FieldsInterface::isNil()`
+  * `Ramsey\Uuid\Type\Time::getSeconds()`
+  * `Ramsey\Uuid\Type\Time::getMicroseconds()`
+  * `Ramsey\Uuid\Type\TypeInterface::toString()`
+  * `Ramsey\Uuid\UuidInterface::getBytes()`
+  * `Ramsey\Uuid\UuidInterface::toString()`
+  * `Ramsey\Uuid\Validator\ValidatorInterface::validate()`
+
+### Fixed
+
+* Restore the `@pure` annotations that were removed in 4.8.0 ([#603](https://github.com/ramsey/uuid/pull/603)).
+
+
+## 4.8.1 - 2025-06-01
+
+### Fixed
+
+* This tagged release ensures the stable documentation build matches the current stable release.
+
+
+## 4.8.0 - 2025-06-01
+
+### Deprecated
+
+The following will be removed in ramsey/uuid 5.0.0:
+
+* `Ramsey\Uuid\Codec\OrderedTimeCodec` is deprecated; please migrate to [version 6 UUIDs](https://uuid.ramsey.dev/en/stable/rfc4122/version6.html).
+* `Ramsey\Uuid\Codec\TimestampFirstCombCodec` is deprecated; please migrate to [version 7 UUIDs](https://uuid.ramsey.dev/en/stable/rfc4122/version7.html).
+* `Ramsey\Uuid\Codec\TimestampLastCombCodec` is deprecated; please use `Ramsey\Uuid\Codec\StringCodec` instead.
+* `Ramsey\Uuid\Generator\CombGenerator` is deprecated; please migrate to [version 7 UUIDs](https://uuid.ramsey.dev/en/stable/rfc4122/version7.html).
+
+### Fixed
+
+* Allow brick/math version `^0.13`; fixed in [#589](https://github.com/ramsey/uuid/pull/589).
+* Update call to `str_getcsv()` to avoid deprecation notice in PHP 8.4; fixed in [#590](https://github.com/ramsey/uuid/pull/590).
+* Hexadecimal is never an empty string; fixed in [#593](https://github.com/ramsey/uuid/pull/593).
+* Update docblocks for `Uuid::fromBytes()`, `Uuid::fromString()`, `Uuid::fromDateTime()`, `Uuid::fromHexadecimal()`, and `Uuid::fromInteger()` to note that each can throw `InvalidArgumentException`, addressing PHPStan errors occurring at call sites; fixed in [#552](https://github.com/ramsey/uuid/pull/552).
+* `getVariant()` for `MaxUuid` now correctly returns `Uuid::RESERVED_FUTURE`, as specified in [RFC 9562, section 5.10](https://www.rfc-editor.org/rfc/rfc9562#section-5.10).
+* `getVariant()` for `NilUuid` now correctly returns `Uuid::RESERVED_NCS`, as specified in [RFC 9562, section 5.9](https://www.rfc-editor.org/rfc/rfc9562#section-5.9).
+
+
+## 4.7.6 - 2024-04-27
+
+### Fixed
+
+* Allow brick/math version `^0.12`.
+
+
+## 4.7.5 - 2023-11-08
+
+### Fixed
+
+* Protect against UUIDv7 collisions within the same millisecond, as reported
+  in [#518](https://github.com/ramsey/uuid/issues/518) and fixed in
+  [#522](https://github.com/ramsey/uuid/pull/522).
+* Improve the return type hint for `UuidInterface::compareTo()`.
+
+
+## 4.7.4 - 2023-04-15
+
+### Fixed
+
+* Allow brick/math version `^0.11`.
+* Add explicit `Stringable` interface to `UuidInterface`.
+* Fix namespace conflict reported in [#490](https://github.com/ramsey/uuid/issues/490).
+* Fix unserialize error with `OrderedTimeCodec` reported in
+  [#494](https://github.com/ramsey/uuid/issues/494).
+
+
+## 4.7.3 - 2023-01-12
+
+### Fixed
+
+* The original 4.7.2 tag accidentally pointed to a commit in the 5.x branch. I
+  have replaced the 4.7.2 tag with a new tag that points to the correct commit,
+  but I am creating this tag to help notify users and automated processes who
+  might have already updated to the bad 4.7.2 tag.
+
+
+## 4.7.2 - 2023-01-12
+
+### Fixed
+
+* Amend Psalm assertion syntax on `Uuid::isValid()` to prevent incorrect type
+  inference ([#486](https://github.com/ramsey/uuid/pull/486)).
+* Re-tagged with the correct commit hash, since the first tag was pointing to
+  a commit in the 5.x branch.
+
+
+## 4.7.1 - 2022-12-31
+
+### Fixed
+
+* Allow the use of ramsey/collection ^2.0 with ramsey/uuid.
+
+
+## 4.7.0 - 2022-12-19
+
+### Added
+
+* Add `Uuid::fromHexadecimal()` and `UuidFactory::fromHexadecimal()`. These
+  methods are not required by the interfaces.
+
+### Fixed
+
+* Ignore MAC addresses consisting of all zeroes (i.e., `00:00:00:00:00:00`).
+
+
+## 4.6.0 - 2022-11-05
+
+### Added
+
+* Add support for version 8, Unix Epoch time UUIDs, as defined in
+  [draft-ietf-uuidrev-rfc4122bis-00, section 5.8][version8]. While still an
+  Internet-Draft, version 8 is stable and unlikely to change in any way that
+  breaks compatibility.
+  * Use `Ramsey\Uuid\Uuid::uuid8()` to generate version 8 UUIDs.
+  * Version 8 UUIDs are of type `Ramsey\Uuid\Rfc4122\UuidV8`.
+  * The constant `Ramsey\Uuid\Uuid::UUID_TYPE_CUSTOM` exists for version 8 UUIDs.
+
+### Fixed
+
+* Ensure monotonicity of version 7 UUIDs.
+
+
+## 4.5.1 - 2022-09-16
+
+### Fixed
+
+* Update RFC 4122 validator to recognize version 6 and 7 UUIDs.
+
+
+## 4.5.0 - 2022-09-15
+
+### Added
+
+* Promote version 6, reordered time UUIDs from the `Nonstandard` namespace to
+  the `Rfc4122` namespace. Version 6 UUIDs are defined in
+  [draft-ietf-uuidrev-rfc4122bis-00, section 5.6][version6]. While still an
+  Internet-Draft version 6 is stable and unlikely to change in any way that
+  breaks compatibility.
+* Add support for version 7, Unix Epoch time UUIDs, as defined in
+  [draft-ietf-uuidrev-rfc4122bis-00, section 5.7][version7]. While still an
+  Internet-Draft, version 7 is stable and unlikely to change in any way that
+  breaks compatibility.
+  * Use `Ramsey\Uuid\Uuid::uuid7()` to generate version 7 UUIDs.
+  * Version 7 UUIDs are of type `Ramsey\Uuid\Rfc4122\UuidV7`.
+  * The constant `Ramsey\Uuid\Uuid::UUID_TYPE_UNIX_TIME` exists for version
+    7 UUIDs.
+* Add `Ramsey\Uuid\Converter\Time\UnixTimeConverter` and
+  `Ramsey\Uuid\Generator\UnixTimeGenerator` to support version 7 UUID generation.
+* Add support for [max UUIDs][] through `Ramsey\Uuid\Uuid::MAX` and
+  `Ramsey\Uuid\Rfc4122\MaxUuid`.
+
+### Changed
+
+* The lowest version of brick/math allowed is now `^0.8.8`.
+
+### Deprecated
+
+The following will be removed in ramsey/uuid 5.0.0:
+
+* `Ramsey\Uuid\Nonstandard\UuidV6` is deprecated in favor of
+  `Ramsey\Uuid\Rfc4122\UuidV6`.
+* `Ramsey\Uuid\Uuid::UUID_TYPE_PEABODY`; use
+  `Ramsey\Uuid\Uuid::UUID_TYPE_REORDERED_TIME` instead.
+
+### Fixed
+
+* For `Ramsey\Uuid\Uuid::isValid()`, Psalm now asserts the UUID is a
+  non-empty-string when it is valid.
+* Nil UUIDs are properly treated as RFC 4122 variants, and `getVariant()` now
+  returns a `2` when called on a nil UUID.
+
+
+## 4.4.0 - 2022-08-05
+
+### Changed
+
+* Allow brick/math 0.10.
+* Remove dev dependency to moontoast/math.
+* Un-deprecate `UuidInterface::getUrn()`.
+
+
+## 4.3.1 - 2022-03-27
+
+### Deprecated
+
+The following will be removed in ramsey/uuid 5.0.0:
+
+* `Ramsey\Uuid\Generator\RandomLibAdapter`
+
+
+## 4.3.0 - 2022-03-26
+
+### Changed
+
+* Remove support for PHP 7.2, 7.3, and 7.4. This is not a BC break, since
+  Composer will do the right thing for your environment and select a compatible
+  version of this library.
+* Require `ext-ctype` extension. For applications that run in environments where
+  the `ext-ctype` is not present, please require a polyfill, such as
+  [symfony/polyfill-ctype](https://packagist.org/packages/symfony/polyfill-ctype).
+* Use `iterable<UuidBuilderInterface>` instead of `BuilderCollection` types.
+* Use `iterable<NodeProviderInterface>` instead of `NodeProviderCollection` types.
+
+### Deprecated
+
+The following will be removed in ramsey/uuid 5.0.0:
+
+* `Ramsey\Uuid\Builder\BuilderCollection`
+* `Ramsey\Uuid\Provider\Node\NodeProviderCollection`
+* Dependency on ramsey/collection
+
+### Fixed
+
+* Support valid UUIDs in uppercase in `LazyUuidFromString`.
+
+
+## 4.2.3 - 2021-09-25
+
+### Fixed
+
+* Switch back to `^8.0` in the PHP version requirement.
+
+
+## 4.2.2 - 2021-09-24
+
+### Fixed
+
+* Indicate support for PHP 8.1, using `~8.1.0` to prevent installations on 8.2
+  until the library is ready.
+
+
+## 4.2.1 - 2021-08-10
+
+### Fixed
+
+* Fix *soft* BC break with `Uuid::fromString()` signature. The change from
+  `string` to `non-empty-string` on the parameter annotation introduced a
+  BC break for those using static analysis tools. This release reverts this
+  change and provides an assertion to guard against empty strings.
+  See [ramsey/uuid#383](https://github.com/ramsey/uuid/pull/383).
+
+
+## 4.2.0 - 2021-08-06
+
+### Added
+
+* Add `Ramsey\Uuid\Exception\UuidExceptionInterface` for all ramsey/uuid
+  exceptions to implement. See [ramsey/uuid#340](https://github.com/ramsey/uuid/pull/340).
+
+### Fixed
+
+* Fix serialization of UUIDs.
+  See [ramsey/uuid#361](https://github.com/ramsey/uuid/pull/361).
+
+
+## 4.1.3 - 2021-09-25
+
+### Fixed
+
+* Switch back to `^8.0` in the PHP version requirement.
+
+
+## 4.1.2 - 2021-09-24
+
+### Fixed
+
+* Lock 4.1.x to `~8.0.0` to indicate it does not support PHP 8.1.
+
+
+## 4.1.1 - 2020-08-18
+
+### Fixed
+
+* Allow use of brick/math version 0.9
+
+
+## 4.1.0 - 2020-07-28
+
+### Changed
+
+* Improve performance of `Uuid::fromString()`, `Uuid::fromBytes()`,
+  `UuidInterface#toString()`, and `UuidInterface#getBytes()`. See PR
+  [#324](https://github.com/ramsey/uuid/pull/324) for more information.
+
+
+## 4.0.3 - 2021-09-25
+
+### Fixed
+
+* Switch back to `^8.0` in the PHP version requirement.
+
+
+## 4.0.2 - 2021-09-24
+
+### Fixed
+
+* Lock 4.0.x to `~8.0.0` to indicate it does not support PHP 8.1.
+
+
+## 4.0.1 - 2020-03-29
 
 ### Fixed
 
@@ -30,7 +346,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   and [ramsey/collection#47](https://github.com/ramsey/collection/issues/47).
 
 
-## [4.0.0] - 2020-03-22
+## 4.0.0 - 2020-03-22
 
 ### Added
 
@@ -235,7 +551,7 @@ The following functionality is deprecated and will be removed in ramsey/uuid
   for these fields. You may use the new `Math\CalculatorInterface::toIntegerValue()`
   method to convert the `Type\Hexadecimal` instances to instances of
   `Type\Integer`. This library provides `Math\BrickMathCalculator`, which may be
-  used for this purpose, or you may use the arbitrary-precision arithemetic
+  used for this purpose, or you may use the arbitrary-precision arithmetic
   library of your choice.
   * `getClockSeqHiAndReserved()`
   * `getClockSeqLow()`
@@ -291,7 +607,7 @@ The following functionality is deprecated and will be removed in ramsey/uuid
   `Provider\TimeProviderInterface::getTime()` instead.
 
 
-## [4.0.0-beta2] - 2020-03-01
+## 4.0.0-beta2 - 2020-03-01
 
 ## Added
 
@@ -305,7 +621,7 @@ The following functionality is deprecated and will be removed in ramsey/uuid
   instead of `string|false|null`.
 
 
-## [4.0.0-beta1] - 2020-02-27
+## 4.0.0-beta1 - 2020-02-27
 
 ### Added
 
@@ -331,7 +647,7 @@ The following functionality is deprecated and will be removed in ramsey/uuid
   `Provider\TimeProviderInterface`.
 
 
-## [4.0.0-alpha5] - 2020-02-23
+## 4.0.0-alpha5 - 2020-02-23
 
 ### Added
 
@@ -347,7 +663,7 @@ The following functionality is deprecated and will be removed in ramsey/uuid
   `Type\Time` instances.
 
 
-## [4.0.0-alpha4] - 2020-02-23
+## 4.0.0-alpha4 - 2020-02-23
 
 ### Added
 
@@ -373,14 +689,14 @@ The following functionality is deprecated and will be removed in ramsey/uuid
   instead.
 
 
-## [4.0.0-alpha3] - 2020-02-21
+## 4.0.0-alpha3 - 2020-02-21
 
 ### Fixed
 
 * Fix microsecond rounding error on 32-bit systems.
 
 
-## [4.0.0-alpha2] - 2020-02-21
+## 4.0.0-alpha2 - 2020-02-21
 
 ### Added
 
@@ -406,7 +722,7 @@ The following functionality is deprecated and will be removed in ramsey/uuid
   circumvents a needless exception for an otherwise valid time-based UUID.
 
 
-## [4.0.0-alpha1] - 2020-01-22
+## 4.0.0-alpha1 - 2020-01-22
 
 ### Added
 
@@ -596,7 +912,36 @@ The following functionality is deprecated and will be removed in ramsey/uuid
   throws this exception.
 
 
-## [3.9.3] - 2020-02-20
+## 3.9.7 - 2022-12-19
+
+### Fixed
+
+* Add `#[ReturnTypeWillChange]` to `Uuid::jsonSerialize()` method.
+
+
+## 3.9.6 - 2021-09-25
+
+### Fixed
+
+* Switch back to `^8.0` in the PHP version requirement.
+
+
+## 3.9.5 - 2021-09-24
+
+### Fixed
+
+* Indicate support for PHP 8.1, using `~8.1.0` to prevent installations on 8.2
+  until the library is ready.
+
+
+## 3.9.4 - 2021-08-06
+
+### Fixed
+
+* Allow installation of paragonie/random_compat v9.99.100 (for PHP 8 compatibility).
+
+
+## 3.9.3 - 2020-02-20
 
 ### Fixed
 
@@ -613,7 +958,7 @@ The following functionality is deprecated and will be removed in ramsey/uuid
   the time is `1970-01-01 00:00:01`. No rounding should occur.
 
 
-## [3.9.2] - 2019-12-17
+## 3.9.2 - 2019-12-17
 
 ### Fixed
 
@@ -622,7 +967,7 @@ The following functionality is deprecated and will be removed in ramsey/uuid
   emitted on hosts that do not grant permission to read these files.
 
 
-## [3.9.1] - 2019-12-01
+## 3.9.1 - 2019-12-01
 
 ### Fixed
 
@@ -632,7 +977,7 @@ The following functionality is deprecated and will be removed in ramsey/uuid
   resolved.
 
 
-## [3.9.0] - 2019-11-30
+## 3.9.0 - 2019-11-30
 
 ### Added
 
@@ -664,7 +1009,7 @@ These will be removed in ramsey/uuid version 4.0.0:
   cases when `php_uname()` is disabled for security reasons.
 
 
-## [3.8.0] - 2018-07-19
+## 3.8.0 - 2018-07-19
 
 ### Added
 
@@ -675,7 +1020,7 @@ These will be removed in ramsey/uuid version 4.0.0:
 * Annotate thrown exceptions for improved IDE hinting
 
 
-## [3.7.3] - 2018-01-19
+## 3.7.3 - 2018-01-19
 
 ### Fixed
 
@@ -688,7 +1033,7 @@ These will be removed in ramsey/uuid version 4.0.0:
 * Switch to `random_int()` from `mt_rand()` for better random numbers
 
 
-## [3.7.2] - 2018-01-13
+## 3.7.2 - 2018-01-13
 
 ### Fixed
 
@@ -696,7 +1041,7 @@ These will be removed in ramsey/uuid version 4.0.0:
   reliable way to identify the node on Docker images, etc.
 
 
-## [3.7.1] - 2017-09-22
+## 3.7.1 - 2017-09-22
 
 ### Fixed
 
@@ -707,7 +1052,7 @@ These will be removed in ramsey/uuid version 4.0.0:
 * Use `random_bytes()` when generating random nodes
 
 
-## [3.7.0] - 2017-08-04
+## 3.7.0 - 2017-08-04
 
 ### Added
 
@@ -719,14 +1064,14 @@ These will be removed in ramsey/uuid version 4.0.0:
     * `Uuid::UUID_TYPE_HASH_SHA1`
 
 
-## [3.6.1] - 2017-03-26
+## 3.6.1 - 2017-03-26
 
 ### Fixed
 
 * Optimize UUID string decoding by using `str_pad()` instead of `sprintf()`
 
 
-## [3.6.0] - 2017-03-18
+## 3.6.0 - 2017-03-18
 
 ### Added
 
@@ -740,14 +1085,14 @@ These will be removed in ramsey/uuid version 4.0.0:
   and `dechex()` instead of `sprintf()`)
 
 
-## [3.5.2] - 2016-11-22
+## 3.5.2 - 2016-11-22
 
 ### Fixed
 
 * Improve test coverage
 
 
-## [3.5.1] - 2016-10-02
+## 3.5.1 - 2016-10-02
 
 ### Fixed
 
@@ -755,7 +1100,7 @@ These will be removed in ramsey/uuid version 4.0.0:
   mixed cases
 
 
-## [3.5.0] - 2016-08-02
+## 3.5.0 - 2016-08-02
 
 ### Added
 
@@ -768,14 +1113,14 @@ These will be removed in ramsey/uuid version 4.0.0:
   system node
 
 
-## [3.4.1] - 2016-04-23
+## 3.4.1 - 2016-04-23
 
 ### Fixed
 
 * Fix test that violated a PHP CodeSniffer rule, breaking the build
 
 
-## [3.4.0] - 2016-04-23
+## 3.4.0 - 2016-04-23
 
 ### Added
 
@@ -785,7 +1130,7 @@ These will be removed in ramsey/uuid version 4.0.0:
 * Improve logic of `CombGenerator` for COMB sequential UUIDs
 
 
-## [3.3.0] - 2016-03-22
+## 3.3.0 - 2016-03-22
 
 ### Security
 
@@ -794,7 +1139,7 @@ These will be removed in ramsey/uuid version 4.0.0:
   this addresses and fixes the [collision issue]
 
 
-## [3.2.0] - 2016-02-17
+## 3.2.0 - 2016-02-17
 
 ### Added
 
@@ -802,7 +1147,7 @@ These will be removed in ramsey/uuid version 4.0.0:
   a random bytes generator when creating UUIDs
 
 
-## [3.1.0] - 2015-12-17
+## 3.1.0 - 2015-12-17
 
 ### Added
 
@@ -810,14 +1155,14 @@ These will be removed in ramsey/uuid version 4.0.0:
   serialize/unserialize UUID objects
 
 
-## [3.0.1] - 2015-10-21
+## 3.0.1 - 2015-10-21
 
 ### Added
 
 * Adopt the [Contributor Code of Conduct] for this project
 
 
-## [3.0.0] - 2015-09-28
+## 3.0.0 - 2015-09-28
 
 The 3.0.0 release represents a significant step for the ramsey/uuid library.
 While the simple and familiar API used in previous versions remains intact, this
@@ -884,7 +1229,7 @@ versions leading up to this release.*
 * Fix exception message for `DegradedNumberConverter::fromHex()`
 
 
-## [3.0.0-beta1] - 2015-08-31
+## 3.0.0-beta1 - 2015-08-31
 
 ### Fixed
 
@@ -896,7 +1241,7 @@ versions leading up to this release.*
 * Fix exception message for `DegradedNumberConverter::fromHex()`
 
 
-## [3.0.0-alpha3] - 2015-07-28
+## 3.0.0-alpha3 - 2015-07-28
 
 ### Added
 
@@ -912,7 +1257,7 @@ versions leading up to this release.*
   default `TimeGenerator`
 
 
-## [3.0.0-alpha2] - 2015-07-28
+## 3.0.0-alpha2 - 2015-07-28
 
 ### Added
 
@@ -934,7 +1279,7 @@ versions leading up to this release.*
 * Remove `PeclUuidFactory` in favor of using pecl-uuid with generators
 
 
-## [3.0.0-alpha1] - 2015-07-16
+## 3.0.0-alpha1 - 2015-07-16
 
 ### Added
 
@@ -968,7 +1313,7 @@ versions leading up to this release.*
 * Remove `Uuid::VERSION` package version constant
 
 
-## [2.9.0] - 2016-03-22
+## 2.9.0 - 2016-03-22
 
 ### Security
 
@@ -977,28 +1322,28 @@ versions leading up to this release.*
   this addresses and fixes the [collision issue]
 
 
-## [2.8.4] - 2015-12-17
+## 2.8.4 - 2015-12-17
 
 ### Added
 
 * Add support for symfony/console v3 in the `uuid` CLI application
 
 
-## [2.8.3] - 2015-08-31
+## 2.8.3 - 2015-08-31
 
 ### Fixed
 
 * Fix exception message in `Uuid::calculateUuidTime()`
 
 
-## [2.8.2] - 2015-07-23
+## 2.8.2 - 2015-07-23
 
 ### Fixed
 
 * Ensure the release tag makes it into the rhumsaa/uuid package
 
 
-## [2.8.1] - 2015-06-16
+## 2.8.1 - 2015-06-16
 
 ### Fixed
 
@@ -1007,7 +1352,7 @@ versions leading up to this release.*
   runtime
 
 
-## [2.8.0] - 2014-11-09
+## 2.8.0 - 2014-11-09
 
 ### Added
 
@@ -1019,28 +1364,28 @@ versions leading up to this release.*
 * Improve Doctrine conversion to Uuid or string for the ramsey/uuid [Doctrine field type]
 
 
-## [2.7.4] - 2014-10-29
+## 2.7.4 - 2014-10-29
 
 ### Fixed
 
 * Change loop in `generateBytes()` from `foreach` to `for`
 
 
-## [2.7.3] - 2014-08-27
+## 2.7.3 - 2014-08-27
 
 ### Fixed
 
 * Fix upper range for `mt_rand` used in version 4 UUIDs
 
 
-## [2.7.2] - 2014-07-28
+## 2.7.2 - 2014-07-28
 
 ### Changed
 
 * Upgrade to PSR-4 autoloading
 
 
-## [2.7.1] - 2014-02-19
+## 2.7.1 - 2014-02-19
 
 ### Fixed
 
@@ -1048,14 +1393,14 @@ versions leading up to this release.*
 * Support symfony/console 2.3 (LTS version)
 
 
-## [2.7.0] - 2014-01-31
+## 2.7.0 - 2014-01-31
 
 ### Added
 
 * Add `Uuid::VALID_PATTERN` constant containing a UUID validation regex pattern
 
 
-## [2.6.1] - 2014-01-27
+## 2.6.1 - 2014-01-27
 
 ### Fixed
 
@@ -1063,7 +1408,7 @@ versions leading up to this release.*
   autoloader when installed in another project
 
 
-## [2.6.0] - 2014-01-17
+## 2.6.0 - 2014-01-17
 
 ### Added
 
@@ -1076,14 +1421,14 @@ versions leading up to this release.*
 * Require moontoast/math as part of the regular package requirements
 
 
-## [2.5.0] - 2013-10-30
+## 2.5.0 - 2013-10-30
 
 ### Added
 
 * Use `openssl_random_pseudo_bytes()`, if available, to generate random bytes
 
 
-## [2.4.0] - 2013-07-29
+## 2.4.0 - 2013-07-29
 
 ### Added
 
@@ -1091,21 +1436,21 @@ versions leading up to this release.*
 * Support string UUIDs without dashes passed to `Uuid::fromString()`
 
 
-## [2.3.0] - 2013-07-16
+## 2.3.0 - 2013-07-16
 
 ### Added
 
 * Support creation of UUIDs from bytes with `Uuid::fromBytes()`
 
 
-## [2.2.0] - 2013-07-04
+## 2.2.0 - 2013-07-04
 
 ### Added
 
 * Add `Doctrine\UuidType::requiresSQLCommentHint()` method
 
 
-## [2.1.2] - 2013-07-03
+## 2.1.2 - 2013-07-03
 
 ### Fixed
 
@@ -1113,21 +1458,21 @@ versions leading up to this release.*
   digits; this ensures that case in the node is converted to lowercase
 
 
-## [2.1.1] - 2013-04-29
+## 2.1.1 - 2013-04-29
 
 ### Fixed
 
 * Fix bug in `Uuid::isValid()` where the NIL UUID was not reported as valid
 
 
-## [2.1.0] - 2013-04-15
+## 2.1.0 - 2013-04-15
 
 ### Added
 
 * Allow checking the validity of a UUID through the `Uuid::isValid()` method
 
 
-## [2.0.0] - 2013-02-11
+## 2.0.0 - 2013-02-11
 
 ### Added
 
@@ -1143,21 +1488,21 @@ versions leading up to this release.*
 * Move `UnsupportedOperationException` to the `Exception` subnamespace
 
 
-## [1.1.2] - 2012-11-29
+## 1.1.2 - 2012-11-29
 
 ### Fixed
 
 * Relax [Doctrine field type] conversion rules for UUIDs
 
 
-## [1.1.1] - 2012-08-27
+## 1.1.1 - 2012-08-27
 
 ### Fixed
 
 * Remove `final` keyword from `Uuid` class
 
 
-## [1.1.0] - 2012-08-06
+## 1.1.0 - 2012-08-06
 
 ### Added
 
@@ -1165,7 +1510,7 @@ versions leading up to this release.*
   field mapping type
 
 
-## [1.0.0] - 2012-07-19
+## 1.0.0 - 2012-07-19
 
 ### Added
 
@@ -1175,70 +1520,13 @@ versions leading up to this release.*
 [comb sequential uuids]: http://www.informit.com/articles/article.aspx?p=25862&seqNum=7
 [paragonie/random_compat]: https://github.com/paragonie/random_compat
 [collision issue]: https://github.com/ramsey/uuid/issues/80
-[contributor code of conduct]: https://github.com/ramsey/uuid/blob/master/.github/CODE_OF_CONDUCT.md
+[contributor code of conduct]: https://github.com/ramsey/uuid/blob/main/CODE_OF_CONDUCT.md
 [pecl libsodium extension]: http://pecl.php.net/package/libsodium
 [ircmaxell/random-lib]: https://github.com/ircmaxell/RandomLib
 [doctrine field type]: http://doctrine-dbal.readthedocs.org/en/latest/reference/types.html
 [ramsey/uuid-doctrine]: https://github.com/ramsey/uuid-doctrine
 [ramsey/uuid-console]: https://github.com/ramsey/uuid-console
-
-[unreleased]: https://github.com/ramsey/uuid/compare/4.0.1...HEAD
-[4.0.1]: https://github.com/ramsey/uuid/compare/4.0.0...4.0.1
-[4.0.0]: https://github.com/ramsey/uuid/compare/4.0.0-beta2...4.0.0
-[4.0.0-beta2]: https://github.com/ramsey/uuid/compare/4.0.0-beta1...4.0.0-beta2
-[4.0.0-beta1]: https://github.com/ramsey/uuid/compare/4.0.0-alpha5...4.0.0-beta1
-[4.0.0-alpha5]: https://github.com/ramsey/uuid/compare/4.0.0-alpha4...4.0.0-alpha5
-[4.0.0-alpha4]: https://github.com/ramsey/uuid/compare/4.0.0-alpha3...4.0.0-alpha4
-[4.0.0-alpha3]: https://github.com/ramsey/uuid/compare/4.0.0-alpha2...4.0.0-alpha3
-[4.0.0-alpha2]: https://github.com/ramsey/uuid/compare/4.0.0-alpha1...4.0.0-alpha2
-[4.0.0-alpha1]: https://github.com/ramsey/uuid/compare/3.9.3...4.0.0-alpha1
-[3.9.3]: https://github.com/ramsey/uuid/compare/3.9.2...3.9.3
-[3.9.2]: https://github.com/ramsey/uuid/compare/3.9.1...3.9.2
-[3.9.1]: https://github.com/ramsey/uuid/compare/3.9.0...3.9.1
-[3.9.0]: https://github.com/ramsey/uuid/compare/3.8.0...3.9.0
-[3.8.0]: https://github.com/ramsey/uuid/compare/3.7.3...3.8.0
-[3.7.3]: https://github.com/ramsey/uuid/compare/3.7.2...3.7.3
-[3.7.2]: https://github.com/ramsey/uuid/compare/3.7.1...3.7.2
-[3.7.1]: https://github.com/ramsey/uuid/compare/3.7.0...3.7.1
-[3.7.0]: https://github.com/ramsey/uuid/compare/3.6.1...3.7.0
-[3.6.1]: https://github.com/ramsey/uuid/compare/3.6.0...3.6.1
-[3.6.0]: https://github.com/ramsey/uuid/compare/3.5.2...3.6.0
-[3.5.2]: https://github.com/ramsey/uuid/compare/3.5.1...3.5.2
-[3.5.1]: https://github.com/ramsey/uuid/compare/3.5.0...3.5.1
-[3.5.0]: https://github.com/ramsey/uuid/compare/3.4.1...3.5.0
-[3.4.1]: https://github.com/ramsey/uuid/compare/3.4.0...3.4.1
-[3.4.0]: https://github.com/ramsey/uuid/compare/3.3.0...3.4.0
-[3.3.0]: https://github.com/ramsey/uuid/compare/3.2.0...3.3.0
-[3.2.0]: https://github.com/ramsey/uuid/compare/3.1.0...3.2.0
-[3.1.0]: https://github.com/ramsey/uuid/compare/3.0.1...3.1.0
-[3.0.1]: https://github.com/ramsey/uuid/compare/3.0.0...3.0.1
-[3.0.0]: https://github.com/ramsey/uuid/compare/3.0.0-beta1...3.0.0
-[3.0.0-beta1]: https://github.com/ramsey/uuid/compare/3.0.0-alpha3...3.0.0-beta1
-[3.0.0-alpha3]: https://github.com/ramsey/uuid/compare/3.0.0-alpha2...3.0.0-alpha3
-[3.0.0-alpha2]: https://github.com/ramsey/uuid/compare/3.0.0-alpha1...3.0.0-alpha2
-[3.0.0-alpha1]: https://github.com/ramsey/uuid/compare/2.9.0...3.0.0-alpha1
-[2.9.0]: https://github.com/ramsey/uuid/compare/2.8.4...2.9.0
-[2.8.4]: https://github.com/ramsey/uuid/compare/2.8.3...2.8.4
-[2.8.3]: https://github.com/ramsey/uuid/compare/2.8.2...2.8.3
-[2.8.2]: https://github.com/ramsey/uuid/compare/2.8.1...2.8.2
-[2.8.1]: https://github.com/ramsey/uuid/compare/2.8.0...2.8.1
-[2.8.0]: https://github.com/ramsey/uuid/compare/2.7.4...2.8.0
-[2.7.4]: https://github.com/ramsey/uuid/compare/2.7.3...2.7.4
-[2.7.3]: https://github.com/ramsey/uuid/compare/2.7.2...2.7.3
-[2.7.2]: https://github.com/ramsey/uuid/compare/2.7.1...2.7.2
-[2.7.1]: https://github.com/ramsey/uuid/compare/2.7.0...2.7.1
-[2.7.0]: https://github.com/ramsey/uuid/compare/2.6.1...2.7.0
-[2.6.1]: https://github.com/ramsey/uuid/compare/2.6.0...2.6.1
-[2.6.0]: https://github.com/ramsey/uuid/compare/2.5.0...2.6.0
-[2.5.0]: https://github.com/ramsey/uuid/compare/2.4.0...2.5.0
-[2.4.0]: https://github.com/ramsey/uuid/compare/2.3.0...2.4.0
-[2.3.0]: https://github.com/ramsey/uuid/compare/2.2.0...2.3.0
-[2.2.0]: https://github.com/ramsey/uuid/compare/2.1.2...2.2.0
-[2.1.2]: https://github.com/ramsey/uuid/compare/2.1.1...2.1.2
-[2.1.1]: https://github.com/ramsey/uuid/compare/2.1.0...2.1.1
-[2.1.0]: https://github.com/ramsey/uuid/compare/2.0.0...2.1.0
-[2.0.0]: https://github.com/ramsey/uuid/compare/1.1.2...2.0.0
-[1.1.2]: https://github.com/ramsey/uuid/compare/1.1.1...1.1.2
-[1.1.1]: https://github.com/ramsey/uuid/compare/1.1.0...1.1.1
-[1.1.0]: https://github.com/ramsey/uuid/compare/1.0.0...1.1.0
-[1.0.0]: https://github.com/ramsey/uuid/commits/1.0.0
+[version6]: https://datatracker.ietf.org/doc/html/draft-ietf-uuidrev-rfc4122bis-00#section-5.6
+[version7]: https://datatracker.ietf.org/doc/html/draft-ietf-uuidrev-rfc4122bis-00#section-5.7
+[version8]: https://datatracker.ietf.org/doc/html/draft-ietf-uuidrev-rfc4122bis-00#section-5.8
+[max uuids]: https://datatracker.ietf.org/doc/html/draft-peabody-dispatch-new-uuid-format-04#section-5.4

@@ -1,6 +1,93 @@
 Changelog
 =========
 
+Adds methods in Progress to return the current value and total value of the progress bar. (#206)
+--------
+
+## 3.10.0 - 2024-11-18
+
+### Added
+
+* [Progress] Added methods to get the current and total values. [#206](https://github.com/thephpleague/climate/pull/206)
+
+### Changed
+
+* [Support] Added support for PHP 8.4.
+
+--------
+
+## 3.9.0 - 2024-10-30
+
+### Added
+
+* [Arguments] Adds argument suggestion support for unknown arguments. [#204](https://github.com/thephpleague/climate/pull/204)
+* [Progress] Allow the precision to be specified. [#198](https://github.com/thephpleague/climate/pull/198)
+* [Password] Allow accept() and other additional features. [#171](https://github.com/thephpleague/climate/pull/171)
+
+### Fixed
+
+* Ensure usleep() always received an integer. [#197](https://github.com/thephpleague/climate/pull/197)
+* Prevent deprecation errors from type juggling. [#190](https://github.com/thephpleague/climate/pull/190)
+
+### Changed
+
+* [Support] Added support for PHP 8.2 & 8.3.
+
+--------
+
+## 3.8.2 - 2022-01-23
+
+### Fixed
+
+* Avoid passing null to strlen(). [#186](https://github.com/thephpleague/climate/issues/186)
+* [Support] Added compatibility for psr/log 2 & 3. [#191](https://github.com/thephpleague/climate/issues/191)
+
+--------
+
+## 3.8.1 - 2022-01-23
+
+### Fixed
+
+* [Linux] Avoid type issue when checking if \STDOUT is defined. [#185](https://github.com/thephpleague/climate/issues/185)
+
+--------
+
+## 3.8.0 - 2022-01-22
+
+### Changed
+
+* [Support] Added support for PHP 8.1.
+
+### Fixed
+
+* [Linux] Added a workaround for executed some parts of the code in a non-cli context. [#175](https://github.com/thephpleague/climate/pull/175)
+
+--------
+
+## 3.7.0 - 2021-01-10
+
+### Changed
+
+* [Support] Added support for PHP 8.0.
+* [Support] Dropped support for PHP 7.2.
+
+--------
+
+## 3.6.0 - 2020-10-04
+
+### Added
+
+* [Arguments] Add a method to access trailing args as array. [#158](https://github.com/thephpleague/climate/pull/158)
+
+### Fixed
+
+* [Table] Add support for newlines in table data. [#160](https://github.com/thephpleague/climate/pull/160)
+* [Checkbox] Don't try to add padding if the there's no spare space. [#161](https://github.com/thephpleague/climate/issues/161)
+
+### Changed
+
+* [Support] Dropped support for PHP 7.1.
+
 --------
 
 ## 3.5.2 - 2019-12-01

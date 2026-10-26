@@ -13,39 +13,26 @@ use Knp\Menu\Util\MenuManipulator;
  */
 class Helper
 {
-    private $rendererProvider;
-    private $menuProvider;
-    private $menuManipulator;
-    private $matcher;
-
-    /**
-     * @param RendererProviderInterface  $rendererProvider
-     * @param MenuProviderInterface|null $menuProvider
-     * @param MenuManipulator|null       $menuManipulator
-     * @param MatcherInterface|null      $matcher
-     */
-    public function __construct(RendererProviderInterface $rendererProvider, MenuProviderInterface $menuProvider = null, MenuManipulator $menuManipulator = null, MatcherInterface $matcher = null)
-    {
-        $this->rendererProvider = $rendererProvider;
-        $this->menuProvider = $menuProvider;
-        $this->menuManipulator = $menuManipulator;
-        $this->matcher = $matcher;
+    public function __construct(
+        private RendererProviderInterface $rendererProvider,
+        private ?MenuProviderInterface $menuProvider = null,
+        private ?MenuManipulator $menuManipulator = null,
+        private ?MatcherInterface $matcher = null
+    ) {
     }
 
     /**
      * Retrieves item in the menu, eventually using the menu provider.
      *
      * @param ItemInterface|string $menu
-     * @param array                $path
-     * @param array                $options
-     *
-     * @return ItemInterface
+     * @param array<int, string>   $path
+     * @param array<string, mixed> $options
      *
      * @throws \BadMethodCallException   when there is no menu provider and the menu is given by name
      * @throws \LogicException
      * @throws \InvalidArgumentException when the path is invalid
      */
-    public function get($menu, array $path = [], array $options = [])
+    public function get($menu, array $path = [], array $options = []): ItemInterface
     {
         if (!$menu instanceof ItemInterface) {
             if (null === $this->menuProvider) {
@@ -54,10 +41,6 @@ class Helper
 
             $menuName = $menu;
             $menu = $this->menuProvider->get($menuName, $options);
-
-            if (!$menu instanceof ItemInterface) {
-                throw new \LogicException(\sprintf('The menu "%s" exists, but is not a valid menu item object. Check where you created the menu to be sure it returns an ItemInterface object.', $menuName));
-            }
         }
 
         foreach ($path as $child) {
@@ -78,15 +61,12 @@ class Helper
      * If the menu is a string instead of an ItemInterface, the provider
      * will be used.
      *
-     * @param ItemInterface|string|array $menu
-     * @param array                      $options
-     * @param string                     $renderer
-     *
-     * @return string
+     * @param ItemInterface|string|array<ItemInterface|string> $menu
+     * @param array<string, mixed>                             $options
      *
      * @throws \InvalidArgumentException
      */
-    public function render($menu, array $options = [], $renderer = null)
+    public function render($menu, array $options = [], ?string $renderer = null): string
     {
         $menu = $this->castMenu($menu);
 
@@ -98,7 +78,7 @@ class Helper
      *
      * Each element in the array will be an array with 3 keys:
      * - `label` containing the label of the item
-     * - `url` containing the url of the item (may be `null`)
+     * - `uri` containing the url of the item (may be `null`)
      * - `item` containing the original item (may be `null` for the extra items)
      *
      * The subItem can be one of the following forms
@@ -106,14 +86,18 @@ class Helper
      *   * ItemInterface object
      *   * ['subItem' => '@homepage']
      *   * ['subItem1', 'subItem2']
-     *   * [['label' => 'subItem1', 'url' => '@homepage'], ['label' => 'subItem2']]
+     *   * [['label' => 'subItem1', 'uri' => '@homepage'], ['label' => 'subItem2']]
      *
      * @param mixed $menu
      * @param mixed $subItem A string or array to append onto the end of the array
      *
-     * @return array
+     * @phpstan-param string|ItemInterface|array<int|string, string|int|float|null|array{label: string, uri: string|null, item: ItemInterface|null}|ItemInterface>|\Traversable<string|int|float|null|array{label: string, uri: string|null, item: ItemInterface|null}|ItemInterface> $subItem
+     *
+     * @return array<int, array<string, mixed>>
+     *
+     * @phpstan-return list<array{label: string, uri: string|null, item: ItemInterface|null}>
      */
-    public function getBreadcrumbsArray($menu, $subItem = null)
+    public function getBreadcrumbsArray($menu, $subItem = null): array
     {
         if (null === $this->menuManipulator) {
             throw new \BadMethodCallException('The menu manipulator must be set to get the breadcrumbs array');
@@ -127,27 +111,19 @@ class Helper
     /**
      * Returns the current item of a menu.
      *
-     * @param ItemInterface|array|string $menu
-     *
-     * @return ItemInterface|null
+     * @param ItemInterface|string|array<ItemInterface|string> $menu
      */
-    public function getCurrentItem($menu)
+    public function getCurrentItem($menu): ?ItemInterface
     {
-        if (null === $this->matcher) {
-            throw new \BadMethodCallException('The matcher must be set to get the current item of a menu');
-        }
-
         $menu = $this->castMenu($menu);
 
         return $this->retrieveCurrentItem($menu);
     }
 
     /**
-     * @param ItemInterface|array|string $menu
-     *
-     * @return ItemInterface
+     * @param ItemInterface|string|array<ItemInterface|string> $menu
      */
-    private function castMenu($menu)
+    private function castMenu($menu): ItemInterface
     {
         if (!$menu instanceof ItemInterface) {
             $path = [];
@@ -165,13 +141,12 @@ class Helper
         return $menu;
     }
 
-    /**
-     * @param ItemInterface $item
-     *
-     * @return ItemInterface|null
-     */
-    private function retrieveCurrentItem(ItemInterface $item)
+    private function retrieveCurrentItem(ItemInterface $item): ?ItemInterface
     {
+        if (null === $this->matcher) {
+            throw new \BadMethodCallException('The matcher must be set to get the current item of a menu');
+        }
+
         if ($this->matcher->isCurrent($item)) {
             return $item;
         }

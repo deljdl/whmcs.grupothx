@@ -21,11 +21,16 @@ CREATE TABLE `tblaccounts` (
   `transid` text COLLATE utf8_unicode_ci NOT NULL,
   `invoiceid` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `refundid` int(10) NOT NULL DEFAULT '0',
+  `billingnoteid` int unsigned NOT NULL DEFAULT '0',
+  `type` varchar(64) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `relid` int unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `invoiceid` (`invoiceid`),
+  KEY `billingnoteid` (`billingnoteid`),
   KEY `userid` (`userid`),
   KEY `date` (`date`),
-  KEY `transid` (`transid`(32))
+  KEY `transid` (`transid`(32)),
+  KEY `type_billingnoteid_relid` (`type`, `billingnoteid`, `relid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

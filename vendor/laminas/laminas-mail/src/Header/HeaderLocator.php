@@ -1,24 +1,18 @@
 <?php
 
-/**
- * @see       https://github.com/laminas/laminas-mail for the canonical source repository
- * @copyright https://github.com/laminas/laminas-mail/blob/master/COPYRIGHT.md
- * @license   https://github.com/laminas/laminas-mail/blob/master/LICENSE.md New BSD License
- */
-
 declare(strict_types=1);
 
 namespace Laminas\Mail\Header;
+
+use function strtolower;
 
 /**
  * Plugin Class Loader implementation for HTTP headers
  */
 final class HeaderLocator implements HeaderLocatorInterface
 {
-    /**
-     * @var array Pre-aliased Header plugins
-     */
-    private $plugins = [
+    /** @var array Pre-aliased Header plugins */
+    private array $plugins = [
         'bcc'                       => Bcc::class,
         'cc'                        => Cc::class,
         'contentdisposition'        => ContentDisposition::class,

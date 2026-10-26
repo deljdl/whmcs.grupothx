@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of Composer.
@@ -16,7 +16,8 @@ use Composer\IO\IOInterface;
 use Composer\Config;
 use Composer\EventDispatcher\EventDispatcher;
 use Composer\Package\PackageInterface;
-use Composer\Util\RemoteFilesystem;
+use Composer\Util\HttpDownloader;
+use Composer\Util\ProcessExecutor;
 
 /**
  * Repositories manager.
@@ -27,31 +28,39 @@ use Composer\Util\RemoteFilesystem;
  */
 class RepositoryManager
 {
+    /** @var InstalledRepositoryInterface */
     private $localRepository;
-    private $repositories = array();
-    private $repositoryClasses = array();
+    /** @var list<RepositoryInterface> */
+    private $repositories = [];
+    /** @var array<string, class-string<RepositoryInterface>> */
+    private $repositoryClasses = [];
+    /** @var IOInterface */
     private $io;
+    /** @var Config */
     private $config;
+    /** @var HttpDownloader */
+    private $httpDownloader;
+    /** @var ?EventDispatcher */
     private $eventDispatcher;
-    private $rfs;
+    /** @var ProcessExecutor */
+    private $process;
 
-    public function __construct(IOInterface $io, Config $config, EventDispatcher $eventDispatcher = null, RemoteFilesystem $rfs = null)
+    public function __construct(IOInterface $io, Config $config, HttpDownloader $httpDownloader, ?EventDispatcher $eventDispatcher = null, ?ProcessExecutor $process = null)
     {
         $this->io = $io;
         $this->config = $config;
+        $this->httpDownloader = $httpDownloader;
         $this->eventDispatcher = $eventDispatcher;
-        $this->rfs = $rfs;
+        $this->process = $process ?? new ProcessExecutor($io);
     }
 
     /**
-     * Searches for a package by it's name and version in managed repositories.
+     * Searches for a package by its name and version in managed repositories.
      *
      * @param string                                                 $name       package name
      * @param string|\Composer\Semver\Constraint\ConstraintInterface $constraint package version or version constraint to match against
-     *
-     * @return PackageInterface|null
      */
-    public function findPackage($name, $constraint)
+    public function findPackage(string $name, $constraint): ?PackageInterface
     {
         foreach ($this->repositories as $repository) {
             /** @var RepositoryInterface $repository */
@@ -71,9 +80,9 @@ class RepositoryManager
      *
      * @return PackageInterface[]
      */
-    public function findPackages($name, $constraint)
+    public function findPackages(string $name, $constraint): array
     {
-        $packages = array();
+        $packages = [];
 
         foreach ($this->getRepositories() as $repository) {
             $packages = array_merge($packages, $repository->findPackages($name, $constraint));
@@ -87,7 +96,7 @@ class RepositoryManager
      *
      * @param RepositoryInterface $repository repository instance
      */
-    public function addRepository(RepositoryInterface $repository)
+    public function addRepository(RepositoryInterface $repository): void
     {
         $this->repositories[] = $repository;
     }
@@ -99,7 +108,7 @@ class RepositoryManager
      *
      * @param RepositoryInterface $repository repository instance
      */
-    public function prependRepository(RepositoryInterface $repository)
+    public function prependRepository(RepositoryInterface $repository): void
     {
         array_unshift($this->repositories, $repository);
     }
@@ -108,12 +117,11 @@ class RepositoryManager
      * Returns a new repository for a specific installation type.
      *
      * @param  string                    $type   repository type
-     * @param  array                     $config repository configuration
+     * @param  array<string, mixed>      $config repository configuration
      * @param  string                    $name   repository name
      * @throws \InvalidArgumentException if repository for provided type is not registered
-     * @return RepositoryInterface
      */
-    public function createRepository($type, $config, $name = null)
+    public function createRepository(string $type, array $config, ?string $name = null): RepositoryInterface
     {
         if (!isset($this->repositoryClasses[$type])) {
             throw new \InvalidArgumentException('Repository type is not registered: '.$type);
@@ -125,34 +133,27 @@ class RepositoryManager
 
         $class = $this->repositoryClasses[$type];
 
-        $reflMethod = new \ReflectionMethod($class, '__construct');
-        $params = $reflMethod->getParameters();
-        if (isset($params[4])) {
-            $paramType = null;
-            if (\PHP_VERSION_ID >= 70000) {
-                $reflectionType = $params[4]->getType();
-                if ($reflectionType) {
-                    $paramType = $reflectionType instanceof \ReflectionNamedType ? $reflectionType->getName() : (string)$reflectionType;
-                }
-            } else {
-                $paramType = $params[4]->getClass() ? $params[4]->getClass()->getName() : null;
-            }
-
-            if ($paramType  === 'Composer\Util\RemoteFilesystem') {
-                return new $class($config, $this->io, $this->config, $this->eventDispatcher, $this->rfs);
-            }
+        if (isset($config['only']) || isset($config['exclude']) || isset($config['canonical'])) {
+            $filterConfig = $config;
+            unset($config['only'], $config['exclude'], $config['canonical']);
         }
 
-        return new $class($config, $this->io, $this->config, $this->eventDispatcher);
+        $repository = new $class($config, $this->io, $this->config, $this->httpDownloader, $this->eventDispatcher, $this->process);
+
+        if (isset($filterConfig)) {
+            $repository = new FilterRepository($repository, $filterConfig);
+        }
+
+        return $repository;
     }
 
     /**
      * Stores repository class for a specific installation type.
      *
      * @param string $type  installation type
-     * @param string $class class name of the repo implementation
+     * @param class-string<RepositoryInterface> $class class name of the repo implementation
      */
-    public function setRepositoryClass($type, $class)
+    public function setRepositoryClass(string $type, $class): void
     {
         $this->repositoryClasses[$type] = $class;
     }
@@ -162,7 +163,7 @@ class RepositoryManager
      *
      * @return RepositoryInterface[]
      */
-    public function getRepositories()
+    public function getRepositories(): array
     {
         return $this->repositories;
     }
@@ -170,19 +171,17 @@ class RepositoryManager
     /**
      * Sets local repository for the project.
      *
-     * @param WritableRepositoryInterface $repository repository instance
+     * @param InstalledRepositoryInterface $repository repository instance
      */
-    public function setLocalRepository(WritableRepositoryInterface $repository)
+    public function setLocalRepository(InstalledRepositoryInterface $repository): void
     {
         $this->localRepository = $repository;
     }
 
     /**
      * Returns local repository for the project.
-     *
-     * @return WritableRepositoryInterface
      */
-    public function getLocalRepository()
+    public function getLocalRepository(): InstalledRepositoryInterface
     {
         return $this->localRepository;
     }

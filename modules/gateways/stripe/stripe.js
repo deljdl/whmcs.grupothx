@@ -5,7 +5,18 @@
  * @license http://www.whmcs.com/license/ WHMCS Eula
  */
 var elementsDiv = null,
-    modalInput = false;
+    modalInput = false,
+    stripeFormLocked = false;
+
+function resetStripeFormState(frm) {
+    scrollToGatewayInputError();
+    stripeFormLocked = false;
+    frm.find('button[type="submit"],input[type="submit"]')
+        .prop('disabled', false)
+        .removeClass('disabled')
+        .find('span').toggle();
+}
+
 function initStripe() {
     var paymentMethod = jQuery('input[name="paymentmethod"]'),
         frm = jQuery('#frmCheckout'),
@@ -109,7 +120,6 @@ function initStripe() {
                 cardCvcElements.addEventListener('change', cardListener);
             } else {
                 disable_stripe();
-                newCcForm.find('.cc-details').slideDown();
             }
         });
     } else if (paymentForm.length) {
@@ -747,6 +757,16 @@ function cardListener(event) {
 
 function addNewCardClientSide(event)
 {
+    if (recaptchaType === 'invisible' && !recaptchaValidationComplete) {
+        event.preventDefault();
+        return;
+    }
+    event.preventDefault();
+    if (stripeFormLocked) {
+        return;
+    }
+    stripeFormLocked = true;
+
     var frm = elementsDiv.closest('form'),
         displayError = jQuery('.gateway-errors,.assisted-cc-input-feedback').first();
     event.preventDefault();
@@ -772,8 +792,8 @@ function addNewCardClientSide(event)
                         if (displayError.not(':visible')) {
                             displayError.slideDown();
                         }
-                        scrollToGatewayInputError();
                         WHMCS.form.reloadCaptcha();
+                        resetStripeFormState(frm);
                     } else {
                         stripeResponseHandler(null);
                     }
@@ -785,14 +805,14 @@ function addNewCardClientSide(event)
             if (displayError.not(':visible')) {
                 displayError.slideDown();
             }
-            scrollToGatewayInputError();
+            resetStripeFormState(frm);
         },
         fail: function(error) {
             displayError.html(error);
             if (displayError.not(':visible')) {
                 displayError.slideDown();
             }
-            scrollToGatewayInputError();
+            resetStripeFormState(frm);
         }
     });
 }

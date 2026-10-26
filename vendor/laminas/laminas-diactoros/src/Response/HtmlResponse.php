@@ -1,11 +1,5 @@
 <?php
 
-/**
- * @see       https://github.com/laminas/laminas-diactoros for the canonical source repository
- * @copyright https://github.com/laminas/laminas-diactoros/blob/master/COPYRIGHT.md
- * @license   https://github.com/laminas/laminas-diactoros/blob/master/LICENSE.md New BSD License
- */
-
 declare(strict_types=1);
 
 namespace Laminas\Diactoros\Response;
@@ -15,9 +9,7 @@ use Laminas\Diactoros\Response;
 use Laminas\Diactoros\Stream;
 use Psr\Http\Message\StreamInterface;
 
-use function get_class;
-use function gettype;
-use function is_object;
+use function get_debug_type;
 use function is_string;
 use function sprintf;
 
@@ -40,8 +32,8 @@ class HtmlResponse extends Response
      *
      * @param string|StreamInterface $html HTML or stream for the message body.
      * @param int $status Integer status code for the response; 200 by default.
-     * @param array $headers Array of headers to use at initialization.
-     * @throws Exception\InvalidArgumentException if $html is neither a string or stream.
+     * @param array<non-empty-string, string|string[]> $headers Array of headers to use at initialization.
+     * @throws Exception\InvalidArgumentException If $html is neither a string or stream.
      */
     public function __construct($html, int $status = 200, array $headers = [])
     {
@@ -56,19 +48,20 @@ class HtmlResponse extends Response
      * Create the message body.
      *
      * @param string|StreamInterface $html
-     * @throws Exception\InvalidArgumentException if $html is neither a string or stream.
+     * @throws Exception\InvalidArgumentException If $html is neither a string or stream.
      */
-    private function createBody($html) : StreamInterface
+    private function createBody($html): StreamInterface
     {
         if ($html instanceof StreamInterface) {
             return $html;
         }
 
+        /** @psalm-suppress DocblockTypeContradiction */
         if (! is_string($html)) {
             throw new Exception\InvalidArgumentException(sprintf(
                 'Invalid content (%s) provided to %s',
-                (is_object($html) ? get_class($html) : gettype($html)),
-                __CLASS__
+                get_debug_type($html),
+                self::class
             ));
         }
 

@@ -2,43 +2,63 @@
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE)
-[![Build Status][ico-travis]][link-travis]
-[![Quality Score][ico-scrutinizer]][link-scrutinizer]
+![Testing][ico-ga]
 [![Total Downloads][ico-downloads]][link-downloads]
-[![SensioLabs Insight][ico-sensiolabs]][link-sensiolabs]
 
 Common utilities used by the middlewares' packages:
 
+* [Factory](#factory)
+* [Dispatcher](#dispatcher)
+* [CallableHandler](#callablehandler)
+* [HttpErrorException](#httperrorexception)
+
+## Installation
+
+This package is installable and autoloadable via Composer as [middlewares/utils](https://packagist.org/packages/middlewares/utils).
+
+```sh
+composer require middlewares/utils
+```
+
 ## Factory
 
-Used to create psr-7 instances of `ServerRequestInterface`, `ResponseInterface`, `StreamInterface` and `UriInterface`. Detects automatically [Diactoros](https://github.com/zendframework/zend-diactoros), [Guzzle](https://github.com/guzzle/psr7) and [Slim](https://github.com/slimphp/Slim) but you can register a different factory using the [http-interop/http-factory](https://github.com/http-interop/http-factory) interface.
+Used to create PSR-7 and PSR-17 instances.
+Detects automatically [Diactoros](https://github.com/laminas/laminas-diactoros), [Guzzle](https://github.com/guzzle/psr7), [Slim](https://github.com/slimphp/Slim), [Nyholm/psr7](https://github.com/Nyholm/psr7) and [Sunrise](https://github.com/sunrise-php) but you can register a different factory using the [psr/http-factory](https://github.com/php-fig/http-factory) interface.
 
 ```php
 use Middlewares\Utils\Factory;
+use Middlewares\Utils\FactoryDiscovery;
 
-$request = Factory::createServerRequest();
-$response = Factory::createResponse();
-$stream = Factory::createStream();
+// Create PSR-7 instances
+$request = Factory::createRequest('GET', '/');
+$serverRequest = Factory::createServerRequest('GET', '/');
+$response = Factory::createResponse(200);
+$stream = Factory::createStream('Hello world');
 $uri = Factory::createUri('http://example.com');
+$uploadedFile = Factory::createUploadedFile($stream);
 
-//Register other factory
-Factory::setResponseFactory(new FooResponseFactory());
+// Get PSR-17 instances (factories)
+$requestFactory = Factory::getRequestFactory();
+$serverRequestFactory = Factory::getServerRequestFactory();
+$responseFactory = Factory::getResponseFactory();
+$streamFactory = Factory::getStreamFactory();
+$uriFactory = Factory::getUriFactory();
+$uploadedFileFactory = Factory::getUploadedFileFactory();
+
+// By default, use the FactoryDiscovery class that detects diactoros, guzzle, slim, nyholm and sunrise (in this order of priority),
+// but you can change it and add other libraries
+
+Factory::setFactory(new FactoryDiscovery(
+    'MyApp\Psr17Factory',
+    FactoryDiscovery::SLIM,
+    FactoryDiscovery::GUZZLE,
+    FactoryDiscovery::DIACTOROS
+));
+
+//And also register directly an initialized factory
+Factory::getFactory()->setResponseFactory(new FooResponseFactory());
 
 $fooResponse = Factory::createResponse();
-```
-
-## CallableHandler
-
-To execute a callable and return a response with the output. Useful to handle routes, etc:
-
-```php
-use Middlewares\Utils\CallableHandler;
-
-$response = CallableHandler::execute(function () {
-    echo 'Hello world';
-});
-
-echo $response->getBody(); //Hello world
 ```
 
 ## Dispatcher
@@ -46,45 +66,50 @@ echo $response->getBody(); //Hello world
 Minimalist PSR-15 compatible dispatcher. Used for testing purposes.
 
 ```php
-use Middlewares\Utils\Factory;
 use Middlewares\Utils\Dispatcher;
 
-$dispatcher = new Dispatcher([
+$response = Dispatcher::run([
     new Middleware1(),
     new Middleware2(),
     new Middleware3(),
     function ($request, $next) {
-        $response = $next->process($request);
+        $response = $next->handle($request);
         return $response->withHeader('X-Foo', 'Bar');
     }
 ]);
-
-$response = $dispatcher->dispatch(Factory::createServerRequest());
 ```
 
-## CallableMiddleware
+## CallableHandler
 
-A simple way to create middlewares using callables. Internally uses [CallableHandler](#callablehandler) so you can use `echo` or return `string` in the callables (the response is created automatically if it's not returned).
-**Note:** You may not need use this directly in the `Dispatcher`, because is used automatically with instances of `Closure`.
+To resolve and execute a callable. It can be used as a middleware, server request handler or a callable:
 
 ```php
-use Middlewares\Utils\Dispatcher;
-use Middlewares\Utils\CallableMiddleware;
+use Middlewares\Utils\CallableHandler;
 
-$dispatcher = new Dispatcher([
-    new CallableMiddleware(function ($request, $delegate) {
-        $response = $delegate->process($request);
+$callable = new CallableHandler(function () {
+    return 'Hello world';
+});
 
-        return $response->withHeader('Content-Type', 'text/html');
-    }),
-    //Providing a Closure directly, the dispatcher will convert to a CallableMiddleware automatically
-    function ($request, $delegate) {
-        echo '<h1>Hello world</h1>';
-    }
-]);
+$response = $callable();
 
-$response = $dispatcher->dispatch(new Request());
+echo $response->getBody(); //Hello world
 ```
+
+## HttpErrorException
+
+General purpose exception used to represent HTTP errors.
+
+```php
+use Middlewares\Utils\HttpErrorException;
+
+try {
+    $context = ['problem' => 'Something bad happened'];
+    throw HttpErrorException::create(500, $context);
+} catch (HttpErrorException $exception) {
+    $context = $exception->getContext();
+}
+```
+
 ---
 
 Please see [CHANGELOG](CHANGELOG.md) for more information about recent changes and [CONTRIBUTING](CONTRIBUTING.md) for contributing details.
@@ -93,13 +118,8 @@ The MIT License (MIT). Please see [LICENSE](LICENSE) for more information.
 
 [ico-version]: https://img.shields.io/packagist/v/middlewares/utils.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/middlewares/utils/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/g/middlewares/utils.svg?style=flat-square
+[ico-ga]: https://github.com/middlewares/utils/workflows/testing/badge.svg
 [ico-downloads]: https://img.shields.io/packagist/dt/middlewares/utils.svg?style=flat-square
-[ico-sensiolabs]: https://img.shields.io/sensiolabs/i/3dcb2b7c-8564-48ef-9af4-d1e974762c3a.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/middlewares/utils
-[link-travis]: https://travis-ci.org/middlewares/utils
-[link-scrutinizer]: https://scrutinizer-ci.com/g/middlewares/utils
 [link-downloads]: https://packagist.org/packages/middlewares/utils
-[link-sensiolabs]: https://insight.sensiolabs.com/projects/3dcb2b7c-8564-48ef-9af4-d1e974762c3a

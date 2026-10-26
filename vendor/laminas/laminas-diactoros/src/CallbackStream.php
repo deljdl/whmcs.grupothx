@@ -1,16 +1,12 @@
 <?php
 
-/**
- * @see       https://github.com/laminas/laminas-diactoros for the canonical source repository
- * @copyright https://github.com/laminas/laminas-diactoros/blob/master/COPYRIGHT.md
- * @license   https://github.com/laminas/laminas-diactoros/blob/master/LICENSE.md New BSD License
- */
-
 declare(strict_types=1);
 
 namespace Laminas\Diactoros;
 
+use Override;
 use Psr\Http\Message\StreamInterface;
+use Stringable;
 
 use function array_key_exists;
 
@@ -19,15 +15,12 @@ use const SEEK_SET;
 /**
  * Implementation of PSR HTTP streams
  */
-class CallbackStream implements StreamInterface
+class CallbackStream implements StreamInterface, Stringable
 {
-    /**
-     * @var callable|null
-     */
+    /** @var callable|null */
     protected $callback;
 
     /**
-     * @param callable $callback
      * @throws Exception\InvalidArgumentException
      */
     public function __construct(callable $callback)
@@ -38,7 +31,8 @@ class CallbackStream implements StreamInterface
     /**
      * {@inheritdoc}
      */
-    public function __toString() : string
+    #[Override]
+    public function __toString(): string
     {
         return $this->getContents();
     }
@@ -46,17 +40,21 @@ class CallbackStream implements StreamInterface
     /**
      * {@inheritdoc}
      */
-    public function close() : void
+    #[Override]
+    public function close(): void
     {
         $this->callback = null;
     }
 
     /**
      * {@inheritdoc}
+     *
+     * @return null|callable
      */
-    public function detach() : ?callable
+    #[Override]
+    public function detach(): ?callable
     {
-        $callback = $this->callback;
+        $callback       = $this->callback;
         $this->callback = null;
         return $callback;
     }
@@ -64,7 +62,7 @@ class CallbackStream implements StreamInterface
     /**
      * Attach a new callback to the instance.
      */
-    public function attach(callable $callback) : void
+    public function attach(callable $callback): void
     {
         $this->callback = $callback;
     }
@@ -72,7 +70,8 @@ class CallbackStream implements StreamInterface
     /**
      * {@inheritdoc}
      */
-    public function getSize() : ?int
+    #[Override]
+    public function getSize(): ?int
     {
         return null;
     }
@@ -80,7 +79,8 @@ class CallbackStream implements StreamInterface
     /**
      * {@inheritdoc}
      */
-    public function tell() : int
+    #[Override]
+    public function tell(): int
     {
         throw Exception\UntellableStreamException::forCallbackStream();
     }
@@ -88,15 +88,17 @@ class CallbackStream implements StreamInterface
     /**
      * {@inheritdoc}
      */
-    public function eof() : bool
+    #[Override]
+    public function eof(): bool
     {
-        return empty($this->callback);
+        return $this->callback === null;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function isSeekable() : bool
+    #[Override]
+    public function isSeekable(): bool
     {
         return false;
     }
@@ -104,7 +106,8 @@ class CallbackStream implements StreamInterface
     /**
      * {@inheritdoc}
      */
-    public function seek($offset, $whence = SEEK_SET)
+    #[Override]
+    public function seek(int $offset, int $whence = SEEK_SET): void
     {
         throw Exception\UnseekableStreamException::forCallbackStream();
     }
@@ -112,7 +115,8 @@ class CallbackStream implements StreamInterface
     /**
      * {@inheritdoc}
      */
-    public function rewind() : void
+    #[Override]
+    public function rewind(): void
     {
         throw Exception\UnrewindableStreamException::forCallbackStream();
     }
@@ -120,7 +124,8 @@ class CallbackStream implements StreamInterface
     /**
      * {@inheritdoc}
      */
-    public function isWritable() : bool
+    #[Override]
+    public function isWritable(): bool
     {
         return false;
     }
@@ -128,7 +133,8 @@ class CallbackStream implements StreamInterface
     /**
      * {@inheritdoc}
      */
-    public function write($string) : void
+    #[Override]
+    public function write(string $string): int
     {
         throw Exception\UnwritableStreamException::forCallbackStream();
     }
@@ -136,7 +142,8 @@ class CallbackStream implements StreamInterface
     /**
      * {@inheritdoc}
      */
-    public function isReadable() : bool
+    #[Override]
+    public function isReadable(): bool
     {
         return false;
     }
@@ -144,7 +151,8 @@ class CallbackStream implements StreamInterface
     /**
      * {@inheritdoc}
      */
-    public function read($length) : string
+    #[Override]
+    public function read(int $length): string
     {
         throw Exception\UnreadableStreamException::forCallbackStream();
     }
@@ -152,22 +160,23 @@ class CallbackStream implements StreamInterface
     /**
      * {@inheritdoc}
      */
-    public function getContents() : string
+    #[Override]
+    public function getContents(): string
     {
         $callback = $this->detach();
-        $contents = $callback ? $callback() : '';
-        return (string) $contents;
+        return $callback !== null ? (string) $callback() : '';
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getMetadata($key = null)
+    #[Override]
+    public function getMetadata(?string $key = null)
     {
         $metadata = [
-            'eof' => $this->eof(),
+            'eof'         => $this->eof(),
             'stream_type' => 'callback',
-            'seekable' => false
+            'seekable'    => false,
         ];
 
         if (null === $key) {

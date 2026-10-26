@@ -158,7 +158,18 @@
                     <tr class="altrow"><td>{$_ADMINLANG.fields.clientgroup}</td><td>{$clientgroup.name}</td></tr>
                     <tr><td>{$_ADMINLANG.fields.signupdate}</td><td>{$signupdate}</td></tr>
                     <tr class="altrow"><td>{$_ADMINLANG.clientsummary.clientfor}</td><td>{$clientfor}</td></tr>
-                    <tr><td width="110">{$_ADMINLANG.clientsummary.lastlogin}</td><td>{$lastlogin}</td></tr>
+                    <tr>
+                        <td width="110">{$_ADMINLANG.clientsummary.lastlogin.datetime}</td>
+                        <td>{$lastlogin_datetime|escape}</td>
+                    </tr>
+                    <tr>
+                        <td width="110">{$_ADMINLANG.clientsummary.lastlogin.host}</td>
+                        <td>{$lastlogin_hostname|escape}</td>
+                    </tr>
+                    <tr>
+                        <td width="110">{$_ADMINLANG.fields.ipaddress}</td>
+                        <td>{$lastlogin_ipaddress|escape}</td>
+                    </tr>
                     {if $emailVerificationEnabled}
                     <tr class="altrow"><td>{$_ADMINLANG.fields.owner} {$_ADMINLANG.fields.emailverified}</td><td>{if $emailVerified}{$_ADMINLANG.global.yes}{else}{$_ADMINLANG.global.no}{/if}</td></tr>
                     {/if}

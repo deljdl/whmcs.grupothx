@@ -16,28 +16,27 @@ namespace Ramsey\Uuid\Generator;
 
 use Ramsey\Uuid\Exception\NameException;
 use Ramsey\Uuid\UuidInterface;
+use ValueError;
 
 use function hash;
 
 /**
- * DefaultNameGenerator generates strings of binary data based on a namespace,
- * name, and hashing algorithm
+ * DefaultNameGenerator generates strings of binary data based on a namespace, name, and hashing algorithm
  */
 class DefaultNameGenerator implements NameGeneratorInterface
 {
-    /** @psalm-pure */
+    /**
+     * @pure
+     */
     public function generate(UuidInterface $ns, string $name, string $hashAlgorithm): string
     {
-        /** @var string|bool $bytes */
-        $bytes = @hash($hashAlgorithm, $ns->getBytes() . $name, true);
-
-        if ($bytes === false) {
-            throw new NameException(sprintf(
-                'Unable to hash namespace and name with algorithm \'%s\'',
-                $hashAlgorithm
-            ));
+        try {
+            return hash($hashAlgorithm, $ns->getBytes() . $name, true);
+        } catch (ValueError $e) {
+            throw new NameException(
+                message: sprintf('Unable to hash namespace and name with algorithm \'%s\'', $hashAlgorithm),
+                previous: $e,
+            );
         }
-
-        return (string) $bytes;
     }
 }

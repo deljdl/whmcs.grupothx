@@ -283,35 +283,42 @@
 /* --- Billing Widget --- */
 
 .widget-billing .row,
+.widget-stripedynamic .row,
 .widget-stripe .row {
     margin: 0;
 }
 .widget-billing .bordered-right,
+.widget-stripedynamic .bordered-right,
 .widget-stripe .bordered-right {
     border-right: 1px solid #eee;
 }
 .widget-billing .bordered-top,
+.widget-stripedynamic .bordered-top,
 .widget-stripe .bordered-top {
     border-top: 1px solid #eee;
 }
 .widget-billing .item,
+.widget-stripedynamic .item,
 .widget-stripe .item {
     padding: 13px 0;
     white-space: nowrap;
     overflow: hidden;
 }
 .widget-billing .item .data,
+.widget-stripedynamic .item .data,
 .widget-stripe .item .data {
     display: block;
     font-size: 1.8em;
 }
 .widget-billing .item .note,
+.widget-stripedynamic .item .note,
 .widget-stripe .item .note {
     font-size: 0.9em;
     color: #a2a6af;
 }
 
 .widget-billing .error,
+.widget-stripedynamic .error,
 .widget-stripe .error {
     margin: 5px 0;
     font-size: 0.9em;
@@ -321,16 +328,20 @@
 @media only screen and (max-width: 767px) {
     .widget-billing .bordered-right,
     .widget-billing .bordered-top,
+    .widget-stripedynamic .bordered-right,
+    .widget-stripedynamic .bordered-top,
     .widget-stripe .bordered-right,
     .widget-stripe .bordered-top {
         border-right: 0;
         border-top: 0;
     }
     .widget-billing .col-sm-6,
+    .widget-stripedynamic .col-sm-6,
     .widget-stripe .col-sm-6 {
         border-bottom: 1px solid #eee;
     }
     .widget-billing .col-sm-6:last-child,
+    .widget-stripedynamic .col-sm-6:last-child,
     .widget-stripe .col-sm-6:last-child {
         border: 0;
     }

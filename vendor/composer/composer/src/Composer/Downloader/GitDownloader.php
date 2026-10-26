@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of Composer.
@@ -15,194 +15,261 @@ namespace Composer\Downloader;
 use Composer\Config;
 use Composer\IO\IOInterface;
 use Composer\Package\PackageInterface;
+use Composer\Pcre\Preg;
 use Composer\Util\Filesystem;
 use Composer\Util\Git as GitUtil;
+use Composer\Util\Url;
 use Composer\Util\Platform;
 use Composer\Util\ProcessExecutor;
 use Composer\Cache;
+use React\Promise\PromiseInterface;
 
 /**
  * @author Jordi Boggiano <j.boggiano@seld.be>
  */
 class GitDownloader extends VcsDownloader implements DvcsDownloaderInterface
 {
-    private $hasStashedChanges = false;
-    private $hasDiscardedChanges = false;
+    /**
+     * @var bool[]
+     * @phpstan-var array<string, bool>
+     */
+    private $hasStashedChanges = [];
+    /**
+     * @var bool[]
+     * @phpstan-var array<string, bool>
+     */
+    private $hasDiscardedChanges = [];
+    /**
+     * @var GitUtil
+     */
     private $gitUtil;
+    /**
+     * @var array
+     * @phpstan-var array<int, array<string, bool>>
+     */
+    private $cachedPackages = [];
 
-    public function __construct(IOInterface $io, Config $config, ProcessExecutor $process = null, Filesystem $fs = null)
+    public function __construct(IOInterface $io, Config $config, ?ProcessExecutor $process = null, ?Filesystem $fs = null)
     {
         parent::__construct($io, $config, $process, $fs);
         $this->gitUtil = new GitUtil($this->io, $this->config, $this->process, $this->filesystem);
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
-    public function doDownload(PackageInterface $package, $path, $url)
+    protected function doDownload(PackageInterface $package, string $path, string $url, ?PackageInterface $prevPackage = null): PromiseInterface
     {
-        GitUtil::cleanEnv();
-        $path = $this->normalizePath($path);
-        $cachePath = $this->config->get('cache-vcs-dir').'/'.preg_replace('{[^a-z0-9.]}i', '-', $url).'/';
-        $ref = $package->getSourceReference();
-        $flag = Platform::isWindows() ? '/D ' : '';
+        // Do not create an extra local cache when repository is already local
+        if (Filesystem::isLocalPath($url)) {
+            return \React\Promise\resolve(null);
+        }
+
+        GitUtil::cleanEnv($this->process);
+
+        $cachePath = $this->config->get('cache-vcs-dir').'/'.Preg::replace('{[^a-z0-9.]}i', '-', Url::sanitize($url)).'/';
+        $gitVersion = GitUtil::getVersion($this->process);
 
         // --dissociate option is only available since git 2.3.0-rc0
-        $gitVersion = $this->gitUtil->getVersion();
-        $msg = "Cloning ".$this->getShortHash($ref);
-
-        $command = 'git clone --no-checkout %url% %path% && cd '.$flag.'%path% && git remote add composer %url% && git fetch composer && git remote set-url origin %sanitizedUrl% && git remote set-url composer %sanitizedUrl%';
         if ($gitVersion && version_compare($gitVersion, '2.3.0-rc0', '>=') && Cache::isUsable($cachePath)) {
-            $this->io->writeError('', true, IOInterface::DEBUG);
-            $this->io->writeError(sprintf('    Cloning to cache at %s', ProcessExecutor::escape($cachePath)), true, IOInterface::DEBUG);
-            try {
-                if (!$this->gitUtil->fetchRefOrSyncMirror($url, $cachePath, $ref)) {
-                    $this->io->writeError('<error>Failed to update '.$url.' in cache, package installation for '.$package->getPrettyName().' might fail.</error>');
-                }
-                if (is_dir($cachePath)) {
-                    $command =
-                        'git clone --no-checkout %cachePath% %path% --dissociate --reference %cachePath% '
-                        . '&& cd '.$flag.'%path% '
-                        . '&& git remote set-url origin %sanitizedUrl% && git remote add composer %sanitizedUrl%';
-                    $msg = "Cloning ".$this->getShortHash($ref).' from cache';
-                }
-            } catch (\RuntimeException $e) {
-                if (0 === strpos(get_class($e), 'PHPUnit')) {
-                    throw $e;
-                }
+            $this->io->writeError("  - Syncing <info>" . $package->getName() . "</info> (<comment>" . $package->getFullPrettyVersion() . "</comment>) into cache");
+            $this->io->writeError(sprintf('    Cloning to cache at %s', $cachePath), true, IOInterface::DEBUG);
+            $ref = $package->getSourceReference();
+            if ($this->gitUtil->fetchRefOrSyncMirror($url, $cachePath, $ref, $package->getPrettyVersion()) && is_dir($cachePath)) {
+                $this->cachedPackages[$package->getId()][$ref] = true;
+            }
+        } elseif (null === $gitVersion) {
+            throw new \RuntimeException('git was not found in your PATH, skipping source download');
+        }
+
+        return \React\Promise\resolve(null);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    protected function doInstall(PackageInterface $package, string $path, string $url): PromiseInterface
+    {
+        GitUtil::cleanEnv($this->process);
+        $path = $this->normalizePath($path);
+        $cachePath = $this->config->get('cache-vcs-dir').'/'.Preg::replace('{[^a-z0-9.]}i', '-', Url::sanitize($url)).'/';
+        $ref = $package->getSourceReference();
+
+        if (!empty($this->cachedPackages[$package->getId()][$ref])) {
+            $msg = "Cloning ".$this->getShortHash($ref).' from cache';
+
+            $cloneFlags = ['--dissociate', '--reference', $cachePath];
+            $transportOptions = $package->getTransportOptions();
+            if (isset($transportOptions['git']['single_use_clone']) && $transportOptions['git']['single_use_clone']) {
+                $cloneFlags = [];
+            }
+
+            $commands = [
+                array_merge(['git', 'clone', '--no-checkout', $cachePath, $path], $cloneFlags),
+                ['git', 'remote', 'set-url', 'origin', '--', '%sanitizedUrl%'],
+                ['git', 'remote', 'add', 'composer', '--', '%sanitizedUrl%'],
+            ];
+        } else {
+            $msg = "Cloning ".$this->getShortHash($ref);
+            $commands = [
+                array_merge(['git', 'clone', '--no-checkout', '--', '%url%', $path]),
+                ['git', 'remote', 'add', 'composer', '--', '%url%'],
+                ['git', 'fetch', 'composer'],
+                ['git', 'remote', 'set-url', 'origin', '--', '%sanitizedUrl%'],
+                ['git', 'remote', 'set-url', 'composer', '--', '%sanitizedUrl%'],
+            ];
+            if (Platform::getEnv('COMPOSER_DISABLE_NETWORK')) {
+                throw new \RuntimeException('The required git reference for '.$package->getName().' is not in cache and network is disabled, aborting');
             }
         }
+
         $this->io->writeError($msg);
 
-        $commandCallable = function ($url) use ($path, $command, $cachePath) {
-            return str_replace(
-                array('%url%', '%path%', '%cachePath%', '%sanitizedUrl%'),
-                array(
-                    ProcessExecutor::escape($url),
-                    ProcessExecutor::escape($path),
-                    ProcessExecutor::escape($cachePath),
-                    ProcessExecutor::escape(preg_replace('{://([^@]+?):(.+?)@}', '://', $url)),
-                ),
-                $command
-            );
-        };
+        $this->gitUtil->runCommands($commands, $url, $path, true);
 
-        $this->gitUtil->runCommand($commandCallable, $url, $path, true);
-        if ($url !== $package->getSourceUrl()) {
-            $this->updateOriginUrl($path, $package->getSourceUrl());
+        $sourceUrl = $package->getSourceUrl();
+        if ($url !== $sourceUrl && $sourceUrl !== null) {
+            $this->updateOriginUrl($path, $sourceUrl);
         } else {
             $this->setPushUrl($path, $url);
         }
 
-        if ($newRef = $this->updateToCommit($path, $ref, $package->getPrettyVersion(), $package->getReleaseDate())) {
+        if ($newRef = $this->updateToCommit($package, $path, (string) $ref, $package->getPrettyVersion())) {
             if ($package->getDistReference() === $package->getSourceReference()) {
                 $package->setDistReference($newRef);
             }
             $package->setSourceReference($newRef);
         }
+
+        return \React\Promise\resolve(null);
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
-    public function doUpdate(PackageInterface $initial, PackageInterface $target, $path, $url)
+    protected function doUpdate(PackageInterface $initial, PackageInterface $target, string $path, string $url): PromiseInterface
     {
-        GitUtil::cleanEnv();
+        GitUtil::cleanEnv($this->process);
+        $path = $this->normalizePath($path);
         if (!$this->hasMetadataRepository($path)) {
             throw new \RuntimeException('The .git directory is missing from '.$path.', see https://getcomposer.org/commit-deps for more information');
         }
 
-        $updateOriginUrl = false;
-        if (
-            0 === $this->process->execute('git remote -v', $output, $path)
-            && preg_match('{^origin\s+(?P<url>\S+)}m', $output, $originMatch)
-            && preg_match('{^composer\s+(?P<url>\S+)}m', $output, $composerMatch)
-        ) {
-            if ($originMatch['url'] === $composerMatch['url'] && $composerMatch['url'] !== $target->getSourceUrl()) {
-                $updateOriginUrl = true;
+        $cachePath = $this->config->get('cache-vcs-dir').'/'.Preg::replace('{[^a-z0-9.]}i', '-', Url::sanitize($url)).'/';
+        $ref = $target->getSourceReference();
+
+        if (!empty($this->cachedPackages[$target->getId()][$ref])) {
+            $msg = "Checking out ".$this->getShortHash($ref).' from cache';
+            $remoteUrl = $cachePath;
+        } else {
+            $msg = "Checking out ".$this->getShortHash($ref);
+            $remoteUrl = '%url%';
+            if (Platform::getEnv('COMPOSER_DISABLE_NETWORK')) {
+                throw new \RuntimeException('The required git reference for '.$target->getName().' is not in cache and network is disabled, aborting');
             }
         }
 
-        $ref = $target->getSourceReference();
-        $this->io->writeError(" Checking out ".$this->getShortHash($ref));
-        $command = '(git remote set-url composer %s && git rev-parse --quiet --verify %s || (git fetch composer && git fetch --tags composer)) && git remote set-url composer %s';
+        $this->io->writeError($msg);
 
-        $commandCallable = function ($url) use ($command, $ref) {
-            return sprintf(
-                $command,
-                ProcessExecutor::escape($url),
-                ProcessExecutor::escape($ref.'^{commit}'),
-                ProcessExecutor::escape(preg_replace('{://([^@]+?):(.+?)@}', '://', $url))
-            );
-        };
+        if (0 !== $this->process->execute(['git', 'rev-parse', '--quiet', '--verify', $ref.'^{commit}'], $output, $path)) {
+            $commands = [
+                ['git', 'remote', 'set-url', 'composer', '--', $remoteUrl],
+                ['git', 'fetch', 'composer'],
+                ['git', 'fetch', '--tags', 'composer'],
+            ];
 
-        $this->gitUtil->runCommand($commandCallable, $url, $path);
-        if ($newRef = $this->updateToCommit($path, $ref, $target->getPrettyVersion(), $target->getReleaseDate())) {
+            $this->gitUtil->runCommands($commands, $url, $path);
+        }
+
+        $command = ['git', 'remote', 'set-url', 'composer', '--', '%sanitizedUrl%'];
+        $this->gitUtil->runCommands([$command], $url, $path);
+
+        if ($newRef = $this->updateToCommit($target, $path, (string) $ref, $target->getPrettyVersion())) {
             if ($target->getDistReference() === $target->getSourceReference()) {
                 $target->setDistReference($newRef);
             }
             $target->setSourceReference($newRef);
         }
 
-        if ($updateOriginUrl) {
+        $updateOriginUrl = false;
+        if (
+            0 === $this->process->execute(['git', 'remote', '-v'], $output, $path)
+            && Preg::isMatch('{^origin\s+(?P<url>\S+)}m', $output, $originMatch)
+            && Preg::isMatch('{^composer\s+(?P<url>\S+)}m', $output, $composerMatch)
+        ) {
+            if ($originMatch['url'] === $composerMatch['url'] && $composerMatch['url'] !== $target->getSourceUrl()) {
+                $updateOriginUrl = true;
+            }
+        }
+        if ($updateOriginUrl && $target->getSourceUrl() !== null) {
             $this->updateOriginUrl($path, $target->getSourceUrl());
         }
+
+        return \React\Promise\resolve(null);
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
-    public function getLocalChanges(PackageInterface $package, $path)
+    public function getLocalChanges(PackageInterface $package, string $path): ?string
     {
-        GitUtil::cleanEnv();
+        GitUtil::cleanEnv($this->process);
         if (!$this->hasMetadataRepository($path)) {
-            return;
+            return null;
         }
 
-        $command = 'git status --porcelain --untracked-files=no';
+        $command = ['git', 'status', '--porcelain', '--untracked-files=no'];
         if (0 !== $this->process->execute($command, $output, $path)) {
-            throw new \RuntimeException('Failed to execute ' . $command . "\n\n" . $this->process->getErrorOutput());
+            throw new \RuntimeException('Failed to execute ' . implode(' ', $command) . "\n\n" . $this->process->getErrorOutput());
         }
 
-        return trim($output) ?: null;
+        $output = trim($output);
+
+        return strlen($output) > 0 ? $output : null;
     }
 
-    public function getUnpushedChanges(PackageInterface $package, $path)
+    public function getUnpushedChanges(PackageInterface $package, string $path): ?string
     {
-        GitUtil::cleanEnv();
+        GitUtil::cleanEnv($this->process);
         $path = $this->normalizePath($path);
         if (!$this->hasMetadataRepository($path)) {
-            return;
+            return null;
         }
 
-        $command = 'git show-ref --head -d';
+        $command = ['git', 'show-ref', '--head', '-d'];
         if (0 !== $this->process->execute($command, $output, $path)) {
-            throw new \RuntimeException('Failed to execute ' . $command . "\n\n" . $this->process->getErrorOutput());
+            throw new \RuntimeException('Failed to execute ' . implode(' ', $command) . "\n\n" . $this->process->getErrorOutput());
         }
 
         $refs = trim($output);
-        if (!preg_match('{^([a-f0-9]+) HEAD$}mi', $refs, $match)) {
+        if (!Preg::isMatchStrictGroups('{^([a-f0-9]+) HEAD$}mi', $refs, $match)) {
             // could not match the HEAD for some reason
-            return;
+            return null;
         }
 
         $headRef = $match[1];
-        if (!preg_match_all('{^'.$headRef.' refs/heads/(.+)$}mi', $refs, $matches)) {
+        if (!Preg::isMatchAllStrictGroups('{^'.preg_quote($headRef).' refs/heads/(.+)$}mi', $refs, $matches)) {
             // not on a branch, we are either on a not-modified tag or some sort of detached head, so skip this
-            return;
+            return null;
         }
 
+        $candidateBranches = $matches[1];
         // use the first match as branch name for now
-        $branch = $matches[1][0];
+        $branch = $candidateBranches[0];
         $unpushedChanges = null;
+        $branchNotFoundError = false;
 
         // do two passes, as if we find anything we want to fetch and then re-try
         for ($i = 0; $i <= 1; $i++) {
-            // try to find the a matching branch name in the composer remote
-            foreach ($matches[1] as $candidate) {
-                if (preg_match('{^[a-f0-9]+ refs/remotes/((?:composer|origin)/'.preg_quote($candidate).')$}mi', $refs, $match)) {
-                    $branch = $candidate;
-                    $remoteBranch = $match[1];
+            $remoteBranches = [];
+
+            // try to find matching branch names in remote repos
+            foreach ($candidateBranches as $candidate) {
+                if (Preg::isMatchAllStrictGroups('{^[a-f0-9]+ refs/remotes/((?:[^/]+)/'.preg_quote($candidate).')$}mi', $refs, $matches)) {
+                    foreach ($matches[1] as $match) {
+                        $branch = $candidate;
+                        $remoteBranches[] = $match;
+                    }
                     break;
                 }
             }
@@ -210,21 +277,40 @@ class GitDownloader extends VcsDownloader implements DvcsDownloaderInterface
             // if it doesn't exist, then we assume it is an unpushed branch
             // this is bad as we have no reference point to do a diff so we just bail listing
             // the branch as being unpushed
-            if (!isset($remoteBranch)) {
-                $unpushedChanges = 'Branch ' . $branch . ' could not be found on the origin remote and appears to be unpushed';
+            if (count($remoteBranches) === 0) {
+                $unpushedChanges = 'Branch ' . $branch . ' could not be found on any remote and appears to be unpushed';
+                $branchNotFoundError = true;
             } else {
-                $command = sprintf('git diff --name-status %s...%s --', $remoteBranch, $branch);
-                if (0 !== $this->process->execute($command, $output, $path)) {
-                    throw new \RuntimeException('Failed to execute ' . $command . "\n\n" . $this->process->getErrorOutput());
+                // if first iteration found no remote branch but it has now found some, reset $unpushedChanges
+                // so we get the real diff output no matter its length
+                if ($branchNotFoundError) {
+                    $unpushedChanges = null;
                 }
+                foreach ($remoteBranches as $remoteBranch) {
+                    $command = ['git', 'diff', '--name-status', $remoteBranch.'...'.$branch, '--'];
+                    if (0 !== $this->process->execute($command, $output, $path)) {
+                        throw new \RuntimeException('Failed to execute ' . implode(' ', $command) . "\n\n" . $this->process->getErrorOutput());
+                    }
 
-                $unpushedChanges = trim($output) ?: null;
+                    $output = trim($output);
+                    // keep the shortest diff from all remote branches we compare against
+                    if ($unpushedChanges === null || strlen($output) < strlen($unpushedChanges)) {
+                        $unpushedChanges = $output;
+                    }
+                }
             }
 
-            // first pass and we found unpushed changes, fetch from both remotes to make sure we have up to date
+            // first pass and we found unpushed changes, fetch from all remotes to make sure we have up to date
             // remotes and then try again as outdated remotes can sometimes cause false-positives
             if ($unpushedChanges && $i === 0) {
-                $this->process->execute('git fetch composer && git fetch origin', $output, $path);
+                $this->process->execute(['git', 'fetch', '--all'], $output, $path);
+
+                // update list of refs after fetching
+                $command = ['git', 'show-ref', '--head', '-d'];
+                if (0 !== $this->process->execute($command, $output, $path)) {
+                    throw new \RuntimeException('Failed to execute ' . implode(' ', $command) . "\n\n" . $this->process->getErrorOutput());
+                }
+                $refs = trim($output);
             }
 
             // abort after first pass if we didn't find anything
@@ -237,11 +323,11 @@ class GitDownloader extends VcsDownloader implements DvcsDownloaderInterface
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
-    protected function cleanChanges(PackageInterface $package, $path, $update)
+    protected function cleanChanges(PackageInterface $package, string $path, bool $update): PromiseInterface
     {
-        GitUtil::cleanEnv();
+        GitUtil::cleanEnv($this->process);
         $path = $this->normalizePath($path);
 
         $unpushed = $this->getUnpushedChanges($package, $path);
@@ -249,8 +335,8 @@ class GitDownloader extends VcsDownloader implements DvcsDownloaderInterface
             throw new \RuntimeException('Source directory ' . $path . ' has unpushed changes on the current branch: '."\n".$unpushed);
         }
 
-        if (!$changes = $this->getLocalChanges($package, $path)) {
-            return;
+        if (null === ($changes = $this->getLocalChanges($package, $path))) {
+            return \React\Promise\resolve(null);
         }
 
         if (!$this->io->isInteractive()) {
@@ -269,10 +355,10 @@ class GitDownloader extends VcsDownloader implements DvcsDownloaderInterface
             return parent::cleanChanges($package, $path, $update);
         }
 
-        $changes = array_map(function ($elem) {
+        $changes = array_map(static function ($elem): string {
             return '    '.$elem;
-        }, preg_split('{\s*\r?\n\s*}', $changes));
-        $this->io->writeError('    <error>The package has modified files:</error>');
+        }, Preg::split('{\s*\r?\n\s*}', $changes));
+        $this->io->writeError('    <error>'.$package->getPrettyName().' has modified files:</error>');
         $this->io->writeError(array_slice($changes, 0, 10));
         if (count($changes) > 10) {
             $this->io->writeError('    <info>' . (count($changes) - 10) . ' more files modified, choose "v" to view the full list</info>');
@@ -305,13 +391,13 @@ class GitDownloader extends VcsDownloader implements DvcsDownloaderInterface
 
                 case '?':
                 default:
-                    help:
-                    $this->io->writeError(array(
+                    help :
+                    $this->io->writeError([
                         '    y - discard changes and apply the '.($update ? 'update' : 'uninstall'),
                         '    n - abort the '.($update ? 'update' : 'uninstall').' and let you manually clean things up',
                         '    v - view modified files',
                         '    d - view local modifications (diff)',
-                    ));
+                    ]);
                     if ($update) {
                         $this->io->writeError('    s - stash changes and try to reapply them after the update');
                     }
@@ -319,178 +405,198 @@ class GitDownloader extends VcsDownloader implements DvcsDownloaderInterface
                     break;
             }
         }
+
+        return \React\Promise\resolve(null);
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
-    protected function reapplyChanges($path)
+    protected function reapplyChanges(string $path): void
     {
         $path = $this->normalizePath($path);
-        if ($this->hasStashedChanges) {
-            $this->hasStashedChanges = false;
+        if (!empty($this->hasStashedChanges[$path])) {
+            unset($this->hasStashedChanges[$path]);
             $this->io->writeError('    <info>Re-applying stashed changes</info>');
-            if (0 !== $this->process->execute('git stash pop', $output, $path)) {
+            if (0 !== $this->process->execute(['git', 'stash', 'pop'], $output, $path)) {
                 throw new \RuntimeException("Failed to apply stashed changes:\n\n".$this->process->getErrorOutput());
             }
         }
 
-        $this->hasDiscardedChanges = false;
+        unset($this->hasDiscardedChanges[$path]);
     }
 
     /**
      * Updates the given path to the given commit ref
      *
-     * @param  string            $path
-     * @param  string            $reference
-     * @param  string            $branch
-     * @param  \DateTime         $date
      * @throws \RuntimeException
      * @return null|string       if a string is returned, it is the commit reference that was checked out if the original could not be found
      */
-    protected function updateToCommit($path, $reference, $branch, $date)
+    protected function updateToCommit(PackageInterface $package, string $path, string $reference, string $prettyVersion): ?string
     {
-        $force = $this->hasDiscardedChanges || $this->hasStashedChanges ? '-f ' : '';
+        $force = !empty($this->hasDiscardedChanges[$path]) || !empty($this->hasStashedChanges[$path]) ? ['-f'] : [];
 
         // This uses the "--" sequence to separate branch from file parameters.
         //
         // Otherwise git tries the branch name as well as file name.
         // If the non-existent branch is actually the name of a file, the file
         // is checked out.
-        $template = 'git checkout '.$force.'%s -- && git reset --hard %1$s --';
-        $branch = preg_replace('{(?:^dev-|(?:\.x)?-dev$)}i', '', $branch);
+
+        $branch = Preg::replace('{(?:^dev-|(?:\.x)?-dev$)}i', '', $prettyVersion);
+
+        /**
+         * @var \Closure(non-empty-list<string>): bool $execute
+         * @phpstan-ignore varTag.nativeType
+         */
+        $execute = function (array $command) use (&$output, $path) {
+            /** @var non-empty-list<string> $command */
+            $output = '';
+
+            return 0 === $this->process->execute($command, $output, $path);
+        };
 
         $branches = null;
-        if (0 === $this->process->execute('git branch -r', $output, $path)) {
+        if ($execute(['git', 'branch', '-r'])) {
             $branches = $output;
         }
 
         // check whether non-commitish are branches or tags, and fetch branches with the remote name
         $gitRef = $reference;
-        if (!preg_match('{^[a-f0-9]{40}$}', $reference)
-            && $branches
-            && preg_match('{^\s+composer/'.preg_quote($reference).'$}m', $branches)
+        if (!Preg::isMatch('{^[a-f0-9]{40}$}', $reference)
+            && null !== $branches
+            && Preg::isMatch('{^\s+composer/'.preg_quote($reference).'$}m', $branches)
         ) {
-            $command = sprintf('git checkout '.$force.'-B %s %s -- && git reset --hard %2$s --', ProcessExecutor::escape($branch), ProcessExecutor::escape('composer/'.$reference));
-            if (0 === $this->process->execute($command, $output, $path)) {
-                return;
+            $command1 = array_merge(['git', 'checkout'], $force, ['-B', $branch, 'composer/'.$reference, '--']);
+            $command2 = ['git', 'reset', '--hard', 'composer/'.$reference, '--'];
+
+            if ($execute($command1) && $execute($command2)) {
+                return null;
             }
         }
 
         // try to checkout branch by name and then reset it so it's on the proper branch name
-        if (preg_match('{^[a-f0-9]{40}$}', $reference)) {
+        if (Preg::isMatch('{^[a-f0-9]{40}$}', $reference)) {
             // add 'v' in front of the branch if it was stripped when generating the pretty name
-            if (!preg_match('{^\s+composer/'.preg_quote($branch).'$}m', $branches) && preg_match('{^\s+composer/v'.preg_quote($branch).'$}m', $branches)) {
+            if (null !== $branches && !Preg::isMatch('{^\s+composer/'.preg_quote($branch).'$}m', $branches) && Preg::isMatch('{^\s+composer/v'.preg_quote($branch).'$}m', $branches)) {
                 $branch = 'v' . $branch;
             }
 
-            $command = sprintf('git checkout %s --', ProcessExecutor::escape($branch));
-            $fallbackCommand = sprintf('git checkout '.$force.'-B %s %s --', ProcessExecutor::escape($branch), ProcessExecutor::escape('composer/'.$branch));
-            if (0 === $this->process->execute($command, $output, $path)
-                || 0 === $this->process->execute($fallbackCommand, $output, $path)
-            ) {
-                $command = sprintf('git reset --hard %s --', ProcessExecutor::escape($reference));
-                if (0 === $this->process->execute($command, $output, $path)) {
-                    return;
-                }
+            $command = ['git', 'checkout', $branch, '--'];
+            $fallbackCommand = array_merge(['git', 'checkout'], $force, ['-B', $branch, 'composer/'.$branch, '--']);
+            $resetCommand = ['git', 'reset', '--hard', $reference, '--'];
+
+            if (($execute($command) || $execute($fallbackCommand)) && $execute($resetCommand)) {
+                return null;
             }
         }
 
-        $command = sprintf($template, ProcessExecutor::escape($gitRef));
-        if (0 === $this->process->execute($command, $output, $path)) {
-            return;
+        $command1 = array_merge(['git', 'checkout'], $force, [$gitRef, '--']);
+        $command2 = ['git', 'reset', '--hard', $gitRef, '--'];
+        if ($execute($command1) && $execute($command2)) {
+            return null;
         }
+
+        $exceptionExtra = '';
 
         // reference was not found (prints "fatal: reference is not a tree: $ref")
         if (false !== strpos($this->process->getErrorOutput(), $reference)) {
             $this->io->writeError('    <warning>'.$reference.' is gone (history was rewritten?)</warning>');
+            $exceptionExtra = "\nIt looks like the commit hash is not available in the repository, maybe ".($package->isDev() ? 'the commit was removed from the branch' : 'the tag was recreated').'? Run "composer update '.$package->getPrettyName().'" to resolve this.';
         }
 
-        throw new \RuntimeException(GitUtil::sanitizeUrl('Failed to execute ' . $command . "\n\n" . $this->process->getErrorOutput()));
+        $command = implode(' ', $command1). ' && '.implode(' ', $command2);
+
+        throw new \RuntimeException(Url::sanitize('Failed to execute ' . $command . "\n\n" . $this->process->getErrorOutput() . $exceptionExtra));
     }
 
-    protected function updateOriginUrl($path, $url)
+    protected function updateOriginUrl(string $path, string $url): void
     {
-        $this->process->execute(sprintf('git remote set-url origin %s', ProcessExecutor::escape($url)), $output, $path);
+        $this->process->execute(['git', 'remote', 'set-url', 'origin', '--', $url], $output, $path);
         $this->setPushUrl($path, $url);
     }
 
-    protected function setPushUrl($path, $url)
+    protected function setPushUrl(string $path, string $url): void
     {
         // set push url for github projects
-        if (preg_match('{^(?:https?|git)://'.GitUtil::getGitHubDomainsRegex($this->config).'/([^/]+)/([^/]+?)(?:\.git)?$}', $url, $match)) {
+        if (Preg::isMatch('{^(?:https?|git)://'.GitUtil::getGitHubDomainsRegex($this->config).'/([^/]+)/([^/]+?)(?:\.git)?$}', $url, $match)) {
             $protocols = $this->config->get('github-protocols');
             $pushUrl = 'git@'.$match[1].':'.$match[2].'/'.$match[3].'.git';
             if (!in_array('ssh', $protocols, true)) {
                 $pushUrl = 'https://' . $match[1] . '/'.$match[2].'/'.$match[3].'.git';
             }
-            $cmd = sprintf('git remote set-url --push origin %s', ProcessExecutor::escape($pushUrl));
+            $cmd = ['git', 'remote', 'set-url', '--push', 'origin', '--', $pushUrl];
             $this->process->execute($cmd, $ignoredOutput, $path);
         }
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
-    protected function getCommitLogs($fromReference, $toReference, $path)
+    protected function getCommitLogs(string $fromReference, string $toReference, string $path): string
     {
         $path = $this->normalizePath($path);
-        $command = sprintf('git log %s..%s --pretty=format:"%%h - %%an: %%s"', ProcessExecutor::escape($fromReference), ProcessExecutor::escape($toReference));
+        $command = GitUtil::buildRevListCommand($this->process, array_merge(['--format=%h - %an: %s', $fromReference.'..'.$toReference], GitUtil::getNoShowSignatureFlags($this->process)));
 
         if (0 !== $this->process->execute($command, $output, $path)) {
-            throw new \RuntimeException('Failed to execute ' . $command . "\n\n" . $this->process->getErrorOutput());
+            throw new \RuntimeException('Failed to execute ' . implode(' ', $command) . "\n\n" . $this->process->getErrorOutput());
         }
 
-        return $output;
+        return GitUtil::parseRevListOutput($output, $this->process);
     }
 
     /**
-     * @param string $path
+     * @phpstan-return PromiseInterface<void|null>
      * @throws \RuntimeException
      */
-    protected function discardChanges($path)
+    protected function discardChanges(string $path): PromiseInterface
     {
         $path = $this->normalizePath($path);
-        if (0 !== $this->process->execute('git reset --hard', $output, $path)) {
-            throw new \RuntimeException("Could not reset changes\n\n:".$this->process->getErrorOutput());
+        if (0 !== $this->process->execute(['git', 'clean', '-df'], $output, $path)) {
+            throw new \RuntimeException("Could not reset changes\n\n:".$output);
+        }
+        if (0 !== $this->process->execute(['git', 'reset', '--hard'], $output, $path)) {
+            throw new \RuntimeException("Could not reset changes\n\n:".$output);
         }
 
-        $this->hasDiscardedChanges = true;
+        $this->hasDiscardedChanges[$path] = true;
+
+        return \React\Promise\resolve(null);
     }
 
     /**
-     * @param string $path
+     * @phpstan-return PromiseInterface<void|null>
      * @throws \RuntimeException
      */
-    protected function stashChanges($path)
+    protected function stashChanges(string $path): PromiseInterface
     {
         $path = $this->normalizePath($path);
-        if (0 !== $this->process->execute('git stash --include-untracked', $output, $path)) {
-            throw new \RuntimeException("Could not stash changes\n\n:".$this->process->getErrorOutput());
+        if (0 !== $this->process->execute(['git', 'stash', '--include-untracked'], $output, $path)) {
+            throw new \RuntimeException("Could not stash changes\n\n:".$output);
         }
 
-        $this->hasStashedChanges = true;
+        $this->hasStashedChanges[$path] = true;
+
+        return \React\Promise\resolve(null);
     }
 
     /**
-     * @param string $path
      * @throws \RuntimeException
      */
-    protected function viewDiff($path)
+    protected function viewDiff(string $path): void
     {
         $path = $this->normalizePath($path);
-        if (0 !== $this->process->execute('git diff HEAD', $output, $path)) {
-            throw new \RuntimeException("Could not view diff\n\n:".$this->process->getErrorOutput());
+        if (0 !== $this->process->execute(['git', 'diff', 'HEAD'], $output, $path)) {
+            throw new \RuntimeException("Could not view diff\n\n:".$output);
         }
 
         $this->io->writeError($output);
     }
 
-    protected function normalizePath($path)
+    protected function normalizePath(string $path): string
     {
         if (Platform::isWindows() && strlen($path) > 0) {
             $basePath = $path;
-            $removed = array();
+            $removed = [];
 
             while (!is_dir($basePath) && $basePath !== '\\') {
                 array_unshift($removed, basename($basePath));
@@ -508,18 +614,18 @@ class GitDownloader extends VcsDownloader implements DvcsDownloaderInterface
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
-    protected function hasMetadataRepository($path)
+    protected function hasMetadataRepository(string $path): bool
     {
         $path = $this->normalizePath($path);
 
         return is_dir($path.'/.git');
     }
 
-    protected function getShortHash($reference)
+    protected function getShortHash(string $reference): string
     {
-        if (!$this->io->isVerbose() && preg_match('{^[0-9a-f]{40}$}', $reference)) {
+        if (!$this->io->isVerbose() && Preg::isMatch('{^[0-9a-f]{40}$}', $reference)) {
             return substr($reference, 0, 10);
         }
 

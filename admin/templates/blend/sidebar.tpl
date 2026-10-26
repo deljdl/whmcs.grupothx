@@ -80,6 +80,9 @@
 </div>
 <ul class="menu">
     <li><a href="transactions.php">{$_ADMINLANG.billing.transactionslist}</a></li>
+    {if in_array('List Credit and Debit Notes', $admin_perms)}
+        <li><a href="{routePath('admin-billing-billingnotes-index')}">{$_ADMINLANG.billingnotes.title}</a></li>
+    {/if}
     <li><a href="gatewaylog.php">{$_ADMINLANG.billing.gatewaylog}</a></li>
     <li><a href="offlineccprocessing.php">{$_ADMINLANG.billing.offlinecc}</a></li>
     <li><a href="{routePath('admin-billing-disputes-index')}">{$_ADMINLANG.disputes.title}</a></li>
@@ -212,6 +215,18 @@
     </div>
     <span class="sub-header">{$_ADMINLANG.support.tags}</span>
     <input id="ticketTags" value="{$tags|implode:','}" class="selectize-tags" placeholder="{lang key='support.addTag'}" />
+
+    <div class="pin-ticket">
+        {if $pinnedTicket}
+            <button class="btn btn-danger btn-block btn-xs" id="pin-ticket" type="button" data-admin-full-name="{$adminFullName}" data-admin-id="{$adminid}" data-ticket-id="{$ticketid}" data-type="unpin">
+                {lang key="support.unpinTicket"}
+            </button>
+        {else}
+            <button class="btn btn-info btn-block btn-xs" id="pin-ticket" type="button" data-admin-full-name="{$adminFullName}" data-admin-id="{$adminid}" data-ticket-id="{$ticketid}" data-type="pin">
+                {lang key="support.pinTicket"}
+            </button>
+        {/if}
+    </div>
 
     <div class="watch-ticket">
         {if $watchingTicket}
@@ -458,7 +473,9 @@
     <li><a href="configauto.php">{$_ADMINLANG.setup.automation}</a></li>
     <li><a href="marketconnect.php">{$_ADMINLANG.setup.marketconnect}</a></li>
     <li><a href="{routePath('admin-setup-notifications-overview')}">{$_ADMINLANG.setup.notifications}</a></li>
-    <li><a href="{routePath('admin-setup-storage-index')}">{$_ADMINLANG.setup.storage}</a></li>
+    {if !isset($cloudMode) || !$cloudMode}
+        <li><a href="{routePath('admin-setup-storage-index')}">{$_ADMINLANG.setup.storage}</a></li>
+    {/if}
     <li><a href="configapplinks.php">{$_ADMINLANG.setup.applicationLinks}</a></li>
     <li><a href="configopenid.php">{$_ADMINLANG.setup.openIdConnect}</a></li>
     <li><a href="configemailtemplates.php">{$_ADMINLANG.setup.emailtpls}</a></li>
@@ -524,7 +541,9 @@
     <li><a href="configsecurityqs.php">{$_ADMINLANG.setup.securityqs}</a></li>
     <li><a href="configbannedips.php">{$_ADMINLANG.setup.bannedips}</a></li>
     <li><a href="configbannedemails.php">{$_ADMINLANG.setup.bannedemails}</a></li>
-    <li><a href="configbackups.php">{$_ADMINLANG.setup.backups}</a></li>
+    {if !isset($cloudMode) || !$cloudMode}
+        <li><a href="configbackups.php">{$_ADMINLANG.setup.backups}</a></li>
+    {/if}
 </ul>
 
 {/if}

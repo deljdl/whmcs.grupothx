@@ -1,6 +1,53 @@
 Google API Client Upgrade Guide
 ===============================
 
+2.x to 2.10.0
+-------------
+
+### Namespaces
+
+The Google API Client for PHP now uses namespaces for all classes. Code using
+the legacy classnames will continue to work, but it is advised to upgrade to the
+underspaced names, as the legacy classnames will be deprecated some time in the
+future.
+
+**Before**
+
+```php
+$client = new Google_Client();
+$service = new Google_Service_Books($client);
+```
+
+**After**
+```php
+$client = new Google\Client();
+$service = new Google\Service\Books($client);
+```
+
+### Service class constructors
+
+Service class constructors now accept an optional `Google\Client|array` parameter
+as their first argument, rather than requiring an instance of `Google\Client`.
+
+**Before**
+
+```php
+$client = new Google_Client();
+$client->setApplicationName("Client_Library_Examples");
+$client->setDeveloperKey("YOUR_APP_KEY");
+
+$service = new Google_Service_Books($client);
+```
+
+**After**
+
+```php
+$service = new Google\Service\Books([
+    'application_name' => "Client_Library_Examples",
+    'developer_key'    => "YOUR_APP_KEY",
+]);
+```
+
 1.0 to 2.0
 ----------
 
@@ -244,7 +291,7 @@ $client->revokeToken($token);
 $client->isAccessTokenExpired();
 ```
 
-## PHP 5.4 is now the minimum supported PHP version
+## PHP 5.6 is now the minimum supported PHP version
 
 This was previously `PHP 5.2`. If you still need to use PHP 5.2, please continue to use
 the [v1-master](https://github.com/google/google-api-php-client/tree/v1-master) branch.

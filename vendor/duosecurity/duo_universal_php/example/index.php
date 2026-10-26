@@ -19,7 +19,9 @@ try {
         $config['client_id'],
         $config['client_secret'],
         $config['api_hostname'],
-        $config['redirect_uri']
+        $config['redirect_uri'],
+        true,
+        $config['http_proxy'] ?? null,
     );
 } catch (DuoException $e) {
     throw new ErrorException("*** Duo config error. Verify the values in duo.conf are correct ***\n" . $e->getMessage());
@@ -68,6 +70,10 @@ $app->post('/', function (Request $request, Response $response, $args) use ($app
 
     # Generate random string to act as a state for the exchange.
     # Store it in the session to be later used by the callback.
+    # This example demonstrates use of the http session (cookie-based) 
+    # for storing the state. In some applications, strict cookie 
+    # controls or other session security measures will mean a different
+    # mechanism to persist the state and username will be necessary.
     $state = $duo_client->generateState();
     $session = new \SlimSession\Helper();
     $session->set("state", $state);

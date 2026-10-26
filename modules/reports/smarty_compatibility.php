@@ -15,7 +15,6 @@ $tagUsageOutput = (new TagScanner())->findTagUsageAndRequeue(
     TagScanner::DEPRECATED_SMARTY_BC_TAGS_CACHE_KEY,
     $rescanRequested
 );
-$isAllowSmartyPhpTagsEnabled = (bool) Setting::getValue('AllowSmartyPhpTags');
 
 $lastScanned = (new Carbon($tagUsageOutput['timestamp']))->toAdminDateTimeFormat();
 
@@ -32,23 +31,9 @@ $tagList = implode(', ', $tagList);
 $tagList = "{$tagList} and $lastTag";
 
 $reportdata['title'] = 'Smarty Compatibility';
-$reportdata['description'] = '';
-if ($isAllowSmartyPhpTagsEnabled) {
-    $settingsUrl = WebHelper::getAdminBaseUrl(). '/configgeneral.php?tab=10';
-    $transParams= [
-        ':anchorSettings' => "<a href=\"{$settingsUrl}\">",
-        ':anchorDocs' => '<a href="https://go.whmcs.com/1733/legacy-smarty-tags">',
-        ':anchorClose' => '</a>',
-    ];
-    $settingsString = AdminLang::trans('healthCheck.legacySmartyTags.body.settingOnly', $transParams);
-    $reportdata['description'] .= <<<HTML
-<h3>Smarty PHP Tags Setting</h3>
-<p>{$settingsString}</p>
-HTML;
-}
-$reportdata['description'] .= <<<HTML
+$reportdata['description'] = <<<HTML
 <h3>Smarty Template Compatibility</h3>
-<p>This report lists the Smarty {$tagList} tags that the system detected within your templates and provides an indication of whether the Allow Smarty PHP Tags setting is enabled on the installation.<br>
+<p>This report lists the Smarty {$tagList} tags that the system detected within your templates.<br>
 <small>Last Scanned: {$lastScanned}</small></p>
 HTML;
 if (!$print) {

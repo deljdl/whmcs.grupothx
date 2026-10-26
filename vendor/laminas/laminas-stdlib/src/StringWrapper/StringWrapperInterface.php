@@ -1,10 +1,6 @@
 <?php
 
-/**
- * @see       https://github.com/laminas/laminas-stdlib for the canonical source repository
- * @copyright https://github.com/laminas/laminas-stdlib/blob/master/COPYRIGHT.md
- * @license   https://github.com/laminas/laminas-stdlib/blob/master/LICENSE.md New BSD License
- */
+declare(strict_types=1);
 
 namespace Laminas\Stdlib\StringWrapper;
 
@@ -18,6 +14,7 @@ interface StringWrapperInterface
      *
      * @param string      $encoding
      * @param string|null $convertEncoding
+     * @return bool
      */
     public static function isSupported($encoding, $convertEncoding = null);
 
@@ -40,7 +37,7 @@ interface StringWrapperInterface
     /**
      * Get the defined character encoding to work with (upper case)
      *
-     * @return string
+     * @return string|null
      */
     public function getEncoding();
 

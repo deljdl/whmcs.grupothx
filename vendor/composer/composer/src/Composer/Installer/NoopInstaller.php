@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of Composer.
@@ -25,15 +25,15 @@ use Composer\Package\PackageInterface;
 class NoopInstaller implements InstallerInterface
 {
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
-    public function supports($packageType)
+    public function supports(string $packageType)
     {
         return true;
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
     public function isInstalled(InstalledRepositoryInterface $repo, PackageInterface $package)
     {
@@ -41,17 +41,43 @@ class NoopInstaller implements InstallerInterface
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
+     */
+    public function download(PackageInterface $package, ?PackageInterface $prevPackage = null)
+    {
+        return \React\Promise\resolve(null);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function prepare($type, PackageInterface $package, ?PackageInterface $prevPackage = null)
+    {
+        return \React\Promise\resolve(null);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function cleanup($type, PackageInterface $package, ?PackageInterface $prevPackage = null)
+    {
+        return \React\Promise\resolve(null);
+    }
+
+    /**
+     * @inheritDoc
      */
     public function install(InstalledRepositoryInterface $repo, PackageInterface $package)
     {
         if (!$repo->hasPackage($package)) {
             $repo->addPackage(clone $package);
         }
+
+        return \React\Promise\resolve(null);
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
     public function update(InstalledRepositoryInterface $repo, PackageInterface $initial, PackageInterface $target)
     {
@@ -63,10 +89,12 @@ class NoopInstaller implements InstallerInterface
         if (!$repo->hasPackage($target)) {
             $repo->addPackage(clone $target);
         }
+
+        return \React\Promise\resolve(null);
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
     public function uninstall(InstalledRepositoryInterface $repo, PackageInterface $package)
     {
@@ -74,10 +102,12 @@ class NoopInstaller implements InstallerInterface
             throw new \InvalidArgumentException('Package is not installed: '.$package);
         }
         $repo->removePackage($package);
+
+        return \React\Promise\resolve(null);
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
     public function getInstallPath(PackageInterface $package)
     {

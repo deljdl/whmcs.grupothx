@@ -1,147 +1,111 @@
 <?php
+declare(strict_types = 1);
 
 namespace Middlewares\Utils;
 
+use Psr\Http\Message\RequestFactoryInterface;
+use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestFactoryInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\StreamInterface;
+use Psr\Http\Message\UploadedFileFactoryInterface;
+use Psr\Http\Message\UploadedFileInterface;
+use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use Interop\Http\Factory\ResponseFactoryInterface;
-use Interop\Http\Factory\StreamFactoryInterface;
-use Interop\Http\Factory\UriFactoryInterface;
-use Interop\Http\Factory\ServerRequestFactoryInterface;
 
 /**
- * Simple class to create instances of PSR-7 classes.
+ * Class to create instances of PSR-7 classes.
  */
 abstract class Factory
 {
-    /**
-     * @var ResponseFactoryInterface
-     */
-    private static $responseFactory;
+    /** @var FactoryInterface */
+    private static $factory;
 
-    /**
-     * @var StreamFactoryInterface
-     */
-    private static $streamFactory;
-
-    /**
-     * @var UriFactoryInterface
-     */
-    private static $uriFactory;
-
-    /**
-     * @var ServerRequestFactoryInterface
-     */
-    private static $serverRequestFactory;
-
-    /**
-     * Set a custom ResponseFactory.
-     *
-     * @param ResponseFactoryInterface $responseFactory
-     */
-    public static function setResponseFactory(ResponseFactoryInterface $responseFactory)
+    public static function getFactory(): FactoryInterface
     {
-        self::$responseFactory = $responseFactory;
-    }
-
-    /**
-     * Set a custom StreamFactory.
-     *
-     * @param StreamFactoryInterface $streamFactory
-     */
-    public static function setStreamFactory(StreamFactoryInterface $streamFactory)
-    {
-        self::$streamFactory = $streamFactory;
-    }
-
-    /**
-     * Set a custom UriFactory.
-     *
-     * @param UriFactoryInterface $uriFactory
-     */
-    public static function setUriFactory(UriFactoryInterface $uriFactory)
-    {
-        self::$uriFactory = $uriFactory;
-    }
-
-    /**
-     * Set a custom ServerRequestFactory.
-     *
-     * @param ServerRequestFactoryInterface $serverRequestFactory
-     */
-    public static function setServerRequestFactory(ServerRequestFactoryInterface $serverRequestFactory)
-    {
-        self::$serverRequestFactory = $serverRequestFactory;
-    }
-
-    /**
-     * Creates a Response instance.
-     *
-     * @param int $code The status code
-     *
-     * @return ResponseInterface
-     */
-    public static function createResponse($code = 200)
-    {
-        if (self::$responseFactory === null) {
-            self::$responseFactory = new ResponseFactory();
+        if (!self::$factory) {
+            static::setFactory(new FactoryDiscovery());
         }
 
-        return self::$responseFactory->createResponse($code);
+        return self::$factory;
+    }
+
+    public static function setFactory(FactoryInterface $factory): void
+    {
+        self::$factory = $factory;
+    }
+
+    public static function getRequestFactory(): RequestFactoryInterface
+    {
+        return self::getFactory()->getRequestFactory();
     }
 
     /**
-     * Creates a Stream instance.
-     *
-     * @param resource $resource A resource returned by fopen
-     *
-     * @return StreamInterface
+     * @param UriInterface|string $uri
      */
-    public static function createStream($resource = null)
+    public static function createRequest(string $method, $uri): RequestInterface
     {
-        if (self::$streamFactory === null) {
-            self::$streamFactory = new StreamFactory();
-        }
+        return self::getRequestFactory()->createRequest($method, $uri);
+    }
 
-        if ($resource === null) {
-            return self::$streamFactory->createStream();
-        }
+    public static function getResponseFactory(): ResponseFactoryInterface
+    {
+        return self::getFactory()->getResponseFactory();
+    }
 
-        return self::$streamFactory->createStreamFromResource($resource);
+    public static function createResponse(int $code = 200, string $reasonPhrase = ''): ResponseInterface
+    {
+        return self::getResponseFactory()->createResponse($code, $reasonPhrase);
+    }
+
+    public static function getServerRequestFactory(): ServerRequestFactoryInterface
+    {
+        return self::getFactory()->getServerRequestFactory();
     }
 
     /**
-     * Creates an Uri instance.
-     *
-     * @param string $uri
-     *
-     * @return UriInterface
+     * @param UriInterface|string $uri
      */
-    public static function createUri($uri = '')
+    public static function createServerRequest(string $method, $uri, array $serverParams = []): ServerRequestInterface
     {
-        if (self::$uriFactory === null) {
-            self::$uriFactory = new UriFactory();
-        }
-
-        return self::$uriFactory->createUri($uri);
+        return self::getServerRequestFactory()->createServerRequest($method, $uri, $serverParams);
     }
 
-    /**
-     * Creates a ServerRequest instance.
-     *
-     * @param array  $server
-     * @param string $method
-     * @param string $uri
-     *
-     * @return ServerRequest
-     */
-    public static function createServerRequest(array $server = [], $method = 'GET', $uri = '/')
+    public static function getStreamFactory(): StreamFactoryInterface
     {
-        if (self::$serverRequestFactory === null) {
-            self::$serverRequestFactory = new ServerRequestFactory();
-        }
+        return self::getFactory()->getStreamFactory();
+    }
 
-        return self::$serverRequestFactory->createServerRequest($server, $method, $uri);
+    public static function createStream(string $content = ''): StreamInterface
+    {
+        return self::getStreamFactory()->createStream($content);
+    }
+
+    public static function getUploadedFileFactory(): UploadedFileFactoryInterface
+    {
+        return self::getFactory()->getUploadedFileFactory();
+    }
+
+    public static function createUploadedFile(
+        StreamInterface $stream,
+        ?int $size = null,
+        int $error = \UPLOAD_ERR_OK,
+        ?string $filename = null,
+        ?string $mediaType = null
+    ): UploadedFileInterface {
+        return self::getUploadedFileFactory()->createUploadedFile($stream, $size, $error, $filename, $mediaType);
+    }
+
+    public static function getUriFactory(): UriFactoryInterface
+    {
+        return self::getFactory()->getUriFactory();
+    }
+
+    public static function createUri(string $uri = ''): UriInterface
+    {
+        return self::getUriFactory()->createUri($uri);
     }
 }

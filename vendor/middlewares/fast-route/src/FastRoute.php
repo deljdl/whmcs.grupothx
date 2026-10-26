@@ -1,16 +1,15 @@
 <?php
+declare(strict_types = 1);
 
 namespace Middlewares;
 
-use Middlewares\Utils\CallableResolver\CallableResolverInterface;
-use Middlewares\Utils\CallableResolver\ContainerResolver;
-use Middlewares\Utils\CallableResolver\ReflectionResolver;
-use Psr\Http\Message\ServerRequestInterface;
-use Psr\Http\Message\ResponseInterface;
-use Interop\Container\ContainerInterface;
-use Interop\Http\ServerMiddleware\MiddlewareInterface;
-use Interop\Http\ServerMiddleware\DelegateInterface;
 use FastRoute\Dispatcher;
+use Middlewares\Utils\Factory;
+use Psr\Http\Message\ResponseFactoryInterface;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\MiddlewareInterface;
+use Psr\Http\Server\RequestHandlerInterface;
 
 class FastRoute implements MiddlewareInterface
 {
@@ -20,93 +19,65 @@ class FastRoute implements MiddlewareInterface
     private $router;
 
     /**
-     * @var array Extra arguments passed to the controller
+     * @var string Attribute name for handler reference
      */
-    private $arguments = [];
+    private $attribute = 'request-handler';
 
     /**
-     * @var CallableResolverInterface Used to resolve the controllers
+     * @var ResponseFactoryInterface
      */
-    private $resolver;
+    private $responseFactory;
 
     /**
-     * Set the Dispatcher instance.
-     *
-     * @param Dispatcher $router
+     * Set the Dispatcher instance and optionally the response factory to return the error responses.
      */
-    public function __construct(Dispatcher $router)
+    public function __construct(Dispatcher $router, ?ResponseFactoryInterface $responseFactory = null)
     {
         $this->router = $router;
+        $this->responseFactory = $responseFactory ?: Factory::getResponseFactory();
     }
 
     /**
-     * Set the resolver used to create the controllers.
-     *
-     * @param ContainerInterface $container
-     *
-     * @return self
+     * Set the attribute name to store handler reference.
      */
-    public function resolver(ContainerInterface $container)
+    public function attribute(string $attribute): self
     {
-        $this->resolver = new ContainerResolver($container);
-
-        return $this;
-    }
-
-    /**
-     * Extra arguments passed to the callable.
-     *
-     * @return self
-     */
-    public function arguments()
-    {
-        $this->arguments = func_get_args();
+        $this->attribute = $attribute;
 
         return $this;
     }
 
     /**
      * Process a server request and return a response.
-     *
-     * @param ServerRequestInterface $request
-     * @param DelegateInterface      $delegate
-     *
-     * @return ResponseInterface
      */
-    public function process(ServerRequestInterface $request, DelegateInterface $delegate)
+    public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
-        $route = $this->router->dispatch($request->getMethod(), $request->getUri()->getPath());
+        $route = $this->router->dispatch($request->getMethod(), rawurldecode($request->getUri()->getPath()));
 
         if ($route[0] === Dispatcher::NOT_FOUND) {
-            return Utils\Factory::createResponse(404);
+            return $this->responseFactory->createResponse(404);
         }
 
         if ($route[0] === Dispatcher::METHOD_NOT_ALLOWED) {
-            return Utils\Factory::createResponse(405);
+            return $this->responseFactory->createResponse(405)->withHeader('Allow', implode(', ', $route[1]));
         }
 
         foreach ($route[2] as $name => $value) {
             $request = $request->withAttribute($name, $value);
         }
 
-        $arguments = array_merge([$request], $this->arguments);
+        $request = $this->setHandler($request, $route[1]);
 
-        $callable = $this->getResolver()->resolve($route[1], $arguments);
-
-        return Utils\CallableHandler::execute($callable, $arguments);
+        return $handler->handle($request);
     }
 
     /**
-     * Return the resolver used for the controllers
+     * Set the handler reference on the request.
      *
-     * @return CallableResolverInterface
+     * @param mixed $handler
      */
-    private function getResolver()
+    protected function setHandler(ServerRequestInterface $request, $handler): ServerRequestInterface
     {
-        if (!isset($this->resolver)) {
-            $this->resolver = new ReflectionResolver();
-        }
-
-        return $this->resolver;
+        return $request->withAttribute($this->attribute, $handler);
     }
 }

@@ -104,7 +104,15 @@ function openModal(url, postData, modalTitle, modalSize, modalClass, submitLabel
     // fetch modal content
     WHMCS.http.jqClient.post(url, postData, function(data) {
         updateAjaxModal(data);
-    }, 'json').fail(function() {
+    }, 'json').fail(function(xhr) {
+        var contentType = xhr.getResponseHeader('content-type') || '';
+        if (contentType.includes('text/html')) {
+            document.open();
+            document.write(xhr.responseText);
+            document.close();
+            return;
+        }
+
         jQuery('#modalAjax .modal-body').html('An error occurred while communicating with the server. Please try again.');
         jQuery('#modalAjax .loader').fadeOut();
     }).always(function () {

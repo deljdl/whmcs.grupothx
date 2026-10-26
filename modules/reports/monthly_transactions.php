@@ -36,6 +36,7 @@ $dateFormat = Capsule::raw('date_format(date, "%e")');
 $result = Capsule::table('tblaccounts')
     ->join('tblclients', 'tblclients.id', '=', 'tblaccounts.userid')
     ->where('tblclients.currency', $currencyid)
+    ->where('tblaccounts.billingnoteid', '=', 0)
     ->whereBetween(
         'date',
         [
@@ -66,6 +67,7 @@ foreach ($result as $data) {
 $result = Capsule::table('tblaccounts')
     ->where('userid', 0)
     ->where('currency', $currencyid)
+    ->where('billingnoteid', '=', 0)
     ->whereBetween(
         'date',
         [
@@ -93,10 +95,12 @@ foreach ($result as $data) {
     );
 }
 
+$overallbalance = 0;
+
 for ($dayOfTheMonth = 1; $dayOfTheMonth <= $dateFilter->lastOfMonth()->day; $dayOfTheMonth++) {
-    $amountin = isset($reportvalues[$dayOfTheMonth]['amountin']) ? $reportvalues[$dayOfTheMonth]['amountin'] : '0';
-    $fees = isset($reportvalues[$dayOfTheMonth]['fees']) ? $reportvalues[$dayOfTheMonth]['fees'] : '0';
-    $amountout = isset($reportvalues[$dayOfTheMonth]['amountout']) ? $reportvalues[$dayOfTheMonth]['amountout'] : '0';
+    $amountin = $reportvalues[$dayOfTheMonth]['amountin'] ?? '0';
+    $fees = $reportvalues[$dayOfTheMonth]['fees'] ?? '0';
+    $amountout = $reportvalues[$dayOfTheMonth]['amountout'] ?? '0';
     $dailybalance = $amountin-$fees-$amountout;
     $overallbalance += $dailybalance;
     $chartdata['rows'][] = array('c'=>array(array('v'=>$dayOfTheMonth),array('v'=>$amountin,'f'=>formatCurrency($amountin)),array('v'=>$fees,'f'=>formatCurrency($fees)),array('v'=>$amountout,'f'=>formatCurrency($amountout))));

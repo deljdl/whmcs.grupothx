@@ -69,7 +69,7 @@ abstract class AbstractRecursivePass implements CompilerPassInterface
      *
      * @param mixed $value
      *
-     * @return mixed The processed value
+     * @return mixed
      */
     protected function processValue($value, bool $isRoot = false)
     {
@@ -127,7 +127,7 @@ abstract class AbstractRecursivePass implements CompilerPassInterface
         }
 
         if ($factory) {
-            list($class, $method) = $factory;
+            [$class, $method] = $factory;
             if ($class instanceof Reference) {
                 $class = $this->container->findDefinition((string) $class)->getClass();
             } elseif ($class instanceof Definition) {
@@ -198,7 +198,7 @@ abstract class AbstractRecursivePass implements CompilerPassInterface
     {
         if (null === $this->expressionLanguage) {
             if (!class_exists(ExpressionLanguage::class)) {
-                throw new LogicException('Unable to use expressions as the Symfony ExpressionLanguage component is not installed.');
+                throw new LogicException('Unable to use expressions as the Symfony ExpressionLanguage component is not installed. Try running "composer require symfony/expression-language".');
             }
 
             $providers = $this->container->getExpressionLanguageProviders();

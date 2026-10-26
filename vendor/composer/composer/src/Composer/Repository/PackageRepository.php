@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of Composer.
@@ -12,22 +12,30 @@
 
 namespace Composer\Repository;
 
+use Composer\Advisory\PartialSecurityAdvisory;
+use Composer\Advisory\SecurityAdvisory;
 use Composer\Package\Loader\ArrayLoader;
 use Composer\Package\Loader\ValidatingArrayLoader;
+use Composer\Package\Version\VersionParser;
+use Composer\Pcre\Preg;
 
 /**
  * Package repository.
  *
  * @author Jordi Boggiano <j.boggiano@seld.be>
  */
-class PackageRepository extends ArrayRepository
+class PackageRepository extends ArrayRepository implements AdvisoryProviderInterface
 {
+    /** @var mixed[] */
     private $config;
+
+    /** @var mixed[] */
+    private $securityAdvisories;
 
     /**
      * Initializes filesystem repository.
      *
-     * @param array $config package definition
+     * @param array{package: mixed[]} $config package definition
      */
     public function __construct(array $config)
     {
@@ -36,18 +44,20 @@ class PackageRepository extends ArrayRepository
 
         // make sure we have an array of package definitions
         if (!is_numeric(key($this->config))) {
-            $this->config = array($this->config);
+            $this->config = [$this->config];
         }
+
+        $this->securityAdvisories = $config['security-advisories'] ?? [];
     }
 
     /**
      * Initializes repository (reads file, or remote address).
      */
-    protected function initialize()
+    protected function initialize(): void
     {
         parent::initialize();
 
-        $loader = new ValidatingArrayLoader(new ArrayLoader(null, true), false);
+        $loader = new ValidatingArrayLoader(new ArrayLoader(null, true), true);
         foreach ($this->config as $package) {
             try {
                 $package = $loader->load($package);
@@ -57,5 +67,43 @@ class PackageRepository extends ArrayRepository
 
             $this->addPackage($package);
         }
+    }
+
+    public function getRepoName(): string
+    {
+        return Preg::replace('{^array }', 'package ', parent::getRepoName());
+    }
+
+    public function hasSecurityAdvisories(): bool
+    {
+        return count($this->securityAdvisories) > 0;
+    }
+
+    /**
+     * @todo not sure if this is a good idea, just helped setting up the test fixtures
+     */
+    public function getSecurityAdvisories(array $packageConstraintMap, bool $allowPartialAdvisories = false): array
+    {
+        $parser = new VersionParser();
+
+        $advisories = [];
+        foreach ($this->securityAdvisories as $packageName => $packageAdvisories) {
+            if (isset($packageConstraintMap[$packageName])) {
+                $advisories[$packageName] = array_values(array_filter(array_map(function (array $data) use ($packageName, $allowPartialAdvisories, $packageConstraintMap, $parser) {
+                    $advisory = PartialSecurityAdvisory::create($packageName, $data, $parser);
+                    if (!$allowPartialAdvisories && !$advisory instanceof SecurityAdvisory) {
+                        throw new \RuntimeException('Advisory for '.$packageName.' could not be loaded as a full advisory from '.$this->getRepoName() . PHP_EOL . var_export($data, true));
+                    }
+
+                    if (!$advisory->affectedVersions->matches($packageConstraintMap[$packageName])) {
+                        return null;
+                    }
+
+                    return $advisory;
+                }, $packageAdvisories)));
+            }
+        }
+
+        return ['advisories' => array_filter($advisories, static function ($adv): bool { return \count($adv) > 0; }), 'namesFound' => array_keys($advisories)];
     }
 }

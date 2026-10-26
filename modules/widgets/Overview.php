@@ -70,6 +70,7 @@ class Overview extends AbstractWidget
                 Capsule::raw("DATE_FORMAT(date, '%k') AS dateTime"),
                 Capsule::raw('SUM(amountin/rate) AS amountIn')
             )
+            ->where('billingnoteid', '=', 0)
             ->where('date', '>', $today)
             ->groupBy(Capsule::raw("DATE_FORMAT(date, '%k')"))
             ->get()
@@ -85,6 +86,7 @@ class Overview extends AbstractWidget
                 Capsule::raw('SUM(amountin/rate) AS amountIn')
             )
             ->where('date', '>', $month)
+            ->where('billingnoteid', '=', 0)
             ->groupBy(Capsule::raw("DATE_FORMAT(date, '%e %M')"))
             ->get()
             ->all();
@@ -98,6 +100,7 @@ class Overview extends AbstractWidget
                 Capsule::raw('SUM(amountin/rate) AS amountIn')
             )
             ->where('date', '>', $year)
+            ->where('billingnoteid', '=', 0)
             ->groupBy(Capsule::raw("date_format(date, '%M %Y')"))
             ->get()
             ->all();
@@ -129,15 +132,15 @@ class Overview extends AbstractWidget
         if (isset($data['orders']['complete'][$viewPeriod])) {
             $completedOrderData = $data['orders']['complete'][$viewPeriod];
         }
-        $incomeData = (isset($data['revenue']['income'][$viewPeriod]))? $data['revenue']['income'][$viewPeriod] : [];
+        $incomeData = (isset($data['revenue']['income'][$viewPeriod])) ? $data['revenue']['income'][$viewPeriod] : [];
 
         $graphLabels = $graphData = $graphData2 = $graphData3 = array();
         if ($viewPeriod == 'today') {
             for ($i = 0; $i <= date("H"); $i++) {
                 $graphLabels[] = date("ga", mktime($i, date("i"), date("s"), date("m"), date("d"), date("Y")));
-                $graphData[] = isset($orderData[$i]) ? $orderData[$i] : 0;
-                $graphData2[] = isset($incomeData[$i]) ? $incomeData[$i] : 0;
-                $graphData3[] = isset($completedOrderData[$i]) ? $completedOrderData[$i] : 0;
+                $graphData[] = $orderData[$i] ?? 0;
+                $graphData2[] = $incomeData[$i] ?? 0;
+                $graphData3[] = $completedOrderData[$i] ?? 0;
             }
         } elseif ($viewPeriod == 'month') {
             for ($i = 0; $i < 30; $i++) {

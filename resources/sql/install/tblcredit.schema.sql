@@ -15,6 +15,7 @@ CREATE TABLE `tblcredit` (
   `description` text COLLATE utf8_unicode_ci NOT NULL,
   `amount` decimal(16,2) NOT NULL,
   `relid` int(10) NOT NULL DEFAULT '0',
+  `billing_note_id` int unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

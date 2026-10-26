@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of composer/spdx-licenses.
@@ -22,8 +22,9 @@ class SpdxLicensesUpdater
     /**
      * @param string $file
      * @param string $url
+     * @return void
      */
-    public function dumpLicenses($file = null, $url = 'https://raw.githubusercontent.com/spdx/license-list-data/master/json/licenses.json')
+    public function dumpLicenses($file = null, $url = 'https://raw.githubusercontent.com/spdx/license-list-data/main/json/licenses.json')
     {
         if (null === $file) {
             $file = SpdxLicenses::getResourcesDir() . '/' . SpdxLicenses::LICENSES_FILE;
@@ -46,8 +47,9 @@ class SpdxLicensesUpdater
     /**
      * @param string $file
      * @param string $url
+     * @return void
      */
-    public function dumpExceptions($file = null, $url = 'https://raw.githubusercontent.com/spdx/license-list-data/master/json/exceptions.json')
+    public function dumpExceptions($file = null, $url = 'https://raw.githubusercontent.com/spdx/license-list-data/main/json/exceptions.json')
     {
         if (null === $file) {
             $file = SpdxLicenses::getResourcesDir() . '/' . SpdxLicenses::EXCEPTIONS_FILE;
@@ -70,18 +72,23 @@ class SpdxLicensesUpdater
     /**
      * @param string $url
      *
-     * @return array
+     * @return array<string, array{0: string, 1: bool, 2: bool}>
      */
     private function getLicenses($url)
     {
-        $licenses = array();
+        $licenses = [];
 
-        $data = json_decode(file_get_contents($url), true);
+        $data = file_get_contents($url);
+        if (false === $data) {
+            throw new \RuntimeException('Could not fetch '.$url);
+        }
+        /** @var array{licenses: array{name: string, isOsiApproved: bool, isDeprecatedLicenseId: bool, licenseId: string}[]} $data */
+        $data = json_decode($data, true);
 
         foreach ($data['licenses'] as $info) {
-            $licenses[$info['licenseId']] = array(
-                trim($info['name']), $info['isOsiApproved'], $info['isDeprecatedLicenseId']
-            );
+            $licenses[$info['licenseId']] = [
+                trim($info['name']), $info['isOsiApproved'], $info['isDeprecatedLicenseId'],
+            ];
         }
 
         uksort($licenses, 'strcasecmp');
@@ -92,16 +99,21 @@ class SpdxLicensesUpdater
     /**
      * @param string $url
      *
-     * @return array
+     * @return array<string, array{0: string}>
      */
     private function getExceptions($url)
     {
-        $exceptions = array();
+        $exceptions = [];
 
-        $data = json_decode(file_get_contents($url), true);
+        $data = file_get_contents($url);
+        if (false === $data) {
+            throw new \RuntimeException('Could not fetch '.$url);
+        }
+        /** @var array{exceptions: array{name: string, licenseExceptionId: string}[]} $data */
+        $data = json_decode($data, true);
 
         foreach ($data['exceptions'] as $info) {
-            $exceptions[$info['licenseExceptionId']] = array(trim($info['name']));
+            $exceptions[$info['licenseExceptionId']] = [trim($info['name'])];
         }
 
         uksort($exceptions, 'strcasecmp');

@@ -1,11 +1,5 @@
 <?php
 
-/**
- * @see       https://github.com/laminas/laminas-mail for the canonical source repository
- * @copyright https://github.com/laminas/laminas-mail/blob/master/COPYRIGHT.md
- * @license   https://github.com/laminas/laminas-mail/blob/master/LICENSE.md New BSD License
- */
-
 declare(strict_types=1);
 
 namespace Laminas\Mail;
@@ -16,12 +10,40 @@ use Iterator;
 use Laminas\Loader\PluginClassLocator;
 use Laminas\Mail\Header\GenericHeader;
 use Laminas\Mail\Header\HeaderInterface;
+use Laminas\Mail\Header\HeaderLocatorInterface;
+use ReturnTypeWillChange;
 use Traversable;
+
+use function array_keys;
+use function array_shift;
+use function assert;
+use function count;
+use function current;
+use function explode;
+use function gettype;
+use function in_array;
+use function is_array;
+use function is_int;
+use function is_object;
+use function is_string;
+use function key;
+use function next;
+use function preg_match;
+use function reset;
+use function sprintf;
+use function str_replace;
+use function strtolower;
+use function trigger_error;
+use function trim;
+
+use const E_USER_DEPRECATED;
 
 /**
  * Basic mail headers collection functionality
  *
  * Handles aggregation of headers
+ *
+ * @implements Iterator<int, HeaderInterface>
  */
 class Headers implements Countable, Iterator
 {
@@ -31,10 +53,7 @@ class Headers implements Countable, Iterator
     /** @var string Start of Line when folding */
     public const FOLDING = "\r\n ";
 
-    /**
-     * @var null|Header\HeaderLocatorInterface
-     */
-    private $headerLocator;
+    private ?HeaderLocatorInterface $headerLocator = null;
 
     /**
      * @todo Remove for 3.0.0.
@@ -42,14 +61,10 @@ class Headers implements Countable, Iterator
      */
     protected $pluginClassLoader;
 
-    /**
-     * @var array key names for $headers array
-     */
+    /** @var list<string> key names for $headers array */
     protected $headersKeys = [];
 
-    /**
-     * @var  Header\HeaderInterface[] instances
-     */
+    /** @var  list<HeaderInterface> instances */
     protected $headers = [];
 
     /**
@@ -67,18 +82,18 @@ class Headers implements Countable, Iterator
      * will be lazy loaded)
      *
      * @param  string $string
-     * @param  string $EOL EOL string; defaults to {@link EOL}
-     * @throws Exception\RuntimeException
+     * @param  string $eol EOL string; defaults to {@link EOL}
      * @return Headers
+     * @throws Exception\RuntimeException
      */
-    public static function fromString($string, $EOL = self::EOL)
+    public static function fromString($string, $eol = self::EOL)
     {
         $headers     = new static();
         $currentLine = '';
         $emptyLine   = 0;
 
         // iterate the header lines, some might be continuations
-        $lines = explode($EOL, $string);
+        $lines = explode($eol, $string);
         $total = count($lines);
         for ($i = 0; $i < $total; $i += 1) {
             $line = $lines[$i];
@@ -122,10 +137,6 @@ class Headers implements Countable, Iterator
             }
 
             // Line does not match header format!
-            throw new Exception\RuntimeException(sprintf(
-                'Line "%s" does not match header format!',
-                $line
-            ));
         }
         if ($currentLine) {
             try {
@@ -141,6 +152,7 @@ class Headers implements Countable, Iterator
      * Set an alternate PluginClassLocator implementation for loading header classes.
      *
      * @deprecated since 2.12.0
+     *
      * @todo Remove for version 3.0.0
      * @return $this
      */
@@ -150,7 +162,7 @@ class Headers implements Countable, Iterator
         @trigger_error(sprintf(
             'Since laminas/laminas-mail 2.12.0: Usage of %s is deprecated; use %s::setHeaderLocator() instead',
             __METHOD__,
-            __CLASS__
+            self::class
         ), E_USER_DEPRECATED);
 
         $this->pluginClassLoader = $pluginClassLoader;
@@ -163,6 +175,7 @@ class Headers implements Countable, Iterator
      * Lazyloads a Header\HeaderLoader if necessary.
      *
      * @deprecated since 2.12.0
+     *
      * @todo Remove for version 3.0.0
      * @return PluginClassLocator
      */
@@ -172,7 +185,7 @@ class Headers implements Countable, Iterator
         @trigger_error(sprintf(
             'Since laminas/laminas-mail 2.12.0: Usage of %s is deprecated; use %s::getHeaderLocator() instead',
             __METHOD__,
-            __CLASS__
+            self::class
         ), E_USER_DEPRECATED);
 
         if (! $this->pluginClassLoader) {
@@ -187,11 +200,14 @@ class Headers implements Countable, Iterator
      *
      * Lazyloads a Header\HeaderLocator instance if necessary.
      */
-    public function getHeaderLocator(): Header\HeaderLocatorInterface
+    public function getHeaderLocator(): HeaderLocatorInterface
     {
         if (! $this->headerLocator) {
             $this->setHeaderLocator(new Header\HeaderLocator());
         }
+
+        assert($this->headerLocator instanceof HeaderLocatorInterface);
+
         return $this->headerLocator;
     }
 
@@ -199,7 +215,7 @@ class Headers implements Countable, Iterator
      * @todo Return self when we update to 7.4 or later as minimum PHP version.
      * @return $this
      */
-    public function setHeaderLocator(Header\HeaderLocatorInterface $headerLocator)
+    public function setHeaderLocator(HeaderLocatorInterface $headerLocator)
     {
         $this->headerLocator = $headerLocator;
         return $this;
@@ -244,7 +260,7 @@ class Headers implements Countable, Iterator
         if (! is_array($headers) && ! $headers instanceof Traversable) {
             throw new Exception\InvalidArgumentException(sprintf(
                 'Expected array or Traversable; received "%s"',
-                (is_object($headers) ? get_class($headers) : gettype($headers))
+                is_object($headers) ? $headers::class : gettype($headers)
             ));
         }
 
@@ -284,9 +300,9 @@ class Headers implements Countable, Iterator
             throw new Exception\InvalidArgumentException(sprintf(
                 '%s expects its first argument to be a string; received "%s"',
                 __METHOD__,
-                (is_object($headerFieldNameOrLine)
-                ? get_class($headerFieldNameOrLine)
-                : gettype($headerFieldNameOrLine))
+                is_object($headerFieldNameOrLine)
+                ? $headerFieldNameOrLine::class
+                : gettype($headerFieldNameOrLine)
             ));
         }
 
@@ -301,7 +317,7 @@ class Headers implements Countable, Iterator
                 $this->addHeader(Header\GenericMultiHeader::fromString($headerFieldNameOrLine . ':' . $i));
             }
         } else {
-            $this->addHeader(Header\GenericHeader::fromString($headerFieldNameOrLine . ':' . $fieldValue));
+            $this->addHeader(GenericHeader::fromString($headerFieldNameOrLine . ':' . $fieldValue));
         }
 
         return $this;
@@ -310,14 +326,13 @@ class Headers implements Countable, Iterator
     /**
      * Add a Header\Interface to this container, for raw values see {@link addHeaderLine()} and {@link addHeaders()}
      *
-     * @param  Header\HeaderInterface $header
      * @return Headers
      */
-    public function addHeader(Header\HeaderInterface $header)
+    public function addHeader(HeaderInterface $header)
     {
-        $key = $this->normalizeFieldName($header->getFieldName());
+        $key                 = $this->normalizeFieldName($header->getFieldName());
         $this->headersKeys[] = $key;
-        $this->headers[] = $header;
+        $this->headers[]     = $header;
         if ($this->getEncoding() !== 'ASCII') {
             $header->setEncoding($this->getEncoding());
         }
@@ -327,7 +342,7 @@ class Headers implements Countable, Iterator
     /**
      * Remove a Header from the container
      *
-     * @param  string|Header\HeaderInterface field name or specific header instance to remove
+     * @param  string|HeaderInterface $instanceOrFieldName field name or specific header instance to remove
      * @return bool
      */
     public function removeHeader($instanceOrFieldName)
@@ -336,8 +351,8 @@ class Headers implements Countable, Iterator
             throw new Exception\InvalidArgumentException(sprintf(
                 '%s requires a string or %s instance; received %s',
                 __METHOD__,
-                Header\HeaderInterface::class,
-                is_object($instanceOrFieldName) ? get_class($instanceOrFieldName) : gettype($instanceOrFieldName)
+                HeaderInterface::class,
+                is_object($instanceOrFieldName) ? $instanceOrFieldName::class : gettype($instanceOrFieldName)
             ));
         }
 
@@ -346,7 +361,7 @@ class Headers implements Countable, Iterator
         }
 
         if (is_string($instanceOrFieldName)) {
-            $key = $this->normalizeFieldName($instanceOrFieldName);
+            $key     = $this->normalizeFieldName($instanceOrFieldName);
             $indexes = array_keys($this->headersKeys, $key, true);
         }
 
@@ -378,16 +393,16 @@ class Headers implements Countable, Iterator
      * Get all headers of a certain name/type
      *
      * @param  string $name
-     * @return bool|ArrayIterator|Header\HeaderInterface Returns false if there is no headers with $name in this
+     * @return false|ArrayIterator|HeaderInterface Returns false if there is no headers with $name in this
      * contain, an ArrayIterator if the header is a MultipleHeadersInterface instance and finally returns
      * HeaderInterface for the rest of cases.
      */
     public function get($name)
     {
-        $key = $this->normalizeFieldName($name);
+        $key     = $this->normalizeFieldName($name);
         $results = [];
 
-        foreach (array_keys($this->headersKeys, $key) as $index) {
+        foreach (array_keys($this->headersKeys, $key, true) as $index) {
             if ($this->headers[$index] instanceof Header\GenericHeader) {
                 $results[] = $this->lazyLoadHeader($index);
             } else {
@@ -417,13 +432,13 @@ class Headers implements Countable, Iterator
     public function has($name)
     {
         $name = $this->normalizeFieldName($name);
-        return in_array($name, $this->headersKeys);
+        return in_array($name, $this->headersKeys, true);
     }
 
     /**
      * Advance the pointer for this object as an iterator
-     *
      */
+    #[ReturnTypeWillChange]
     public function next()
     {
         next($this->headers);
@@ -434,6 +449,7 @@ class Headers implements Countable, Iterator
      *
      * @return mixed
      */
+    #[ReturnTypeWillChange]
     public function key()
     {
         return key($this->headers);
@@ -444,15 +460,16 @@ class Headers implements Countable, Iterator
      *
      * @return bool
      */
+    #[ReturnTypeWillChange]
     public function valid()
     {
-        return (current($this->headers) !== false);
+        return current($this->headers) !== false;
     }
 
     /**
      * Reset the internal pointer for this object as an iterator
-     *
      */
+    #[ReturnTypeWillChange]
     public function rewind()
     {
         reset($this->headers);
@@ -461,8 +478,9 @@ class Headers implements Countable, Iterator
     /**
      * Return the current value for this iterator, lazy loading it if need be
      *
-     * @return Header\HeaderInterface
+     * @return HeaderInterface
      */
+    #[ReturnTypeWillChange]
     public function current()
     {
         $current = current($this->headers);
@@ -478,6 +496,7 @@ class Headers implements Countable, Iterator
      *
      * @return int count of currently known headers
      */
+    #[ReturnTypeWillChange]
     public function count()
     {
         return count($this->headers);
@@ -507,13 +526,12 @@ class Headers implements Countable, Iterator
      * Return the headers container as an array
      *
      * @param  bool $format Return the values in Mime::Encoded or in Raw format
-     * @return array
+     * @return array<string, list<string>|string>
      * @todo determine how to produce single line headers, if they are supported
      */
-    public function toArray($format = Header\HeaderInterface::FORMAT_RAW)
+    public function toArray($format = HeaderInterface::FORMAT_RAW)
     {
         $headers = [];
-        /* @var $header Header\HeaderInterface */
         foreach ($this->headers as $header) {
             if ($header instanceof Header\MultipleHeadersInterface) {
                 $name = $header->getFieldName();
@@ -535,6 +553,7 @@ class Headers implements Countable, Iterator
      */
     public function forceLoading()
     {
+        // phpcs:ignore Generic.CodeAnalysis.EmptyStatement.DetectedForeach
         foreach ($this as $item) {
             // $item should now be loaded
         }
@@ -545,37 +564,40 @@ class Headers implements Countable, Iterator
      * Create Header object from header line
      *
      * @param string $headerLine
-     * @return Header\HeaderInterface|Header\HeaderInterface[]
+     * @return HeaderInterface|HeaderInterface[]
      */
     public function loadHeader($headerLine)
     {
-        list($name) = Header\GenericHeader::splitHeaderLine($headerLine);
+        [$name] = GenericHeader::splitHeaderLine($headerLine);
 
-        /** @var HeaderInterface $class */
         $class = $this->resolveHeaderClass($name);
+        assert(null !== $class);
+
         return $class::fromString($headerLine);
     }
 
     /**
-     * @param $index
+     * @param array-key $index
      * @return mixed
      */
     protected function lazyLoadHeader($index)
     {
         $current = $this->headers[$index];
 
-        $key   = $this->headersKeys[$index];
+        $key = $this->headersKeys[$index];
 
-        /** @var GenericHeader $class */
         $class = $this->resolveHeaderClass($key);
+        assert(null !== $class);
 
         $encoding = $current->getEncoding();
         $headers  = $class::fromString($current->toString());
         if (is_array($headers)) {
             $current = array_shift($headers);
+            assert($current instanceof HeaderInterface);
             $current->setEncoding($encoding);
             $this->headers[$index] = $current;
             foreach ($headers as $header) {
+                assert($header instanceof HeaderInterface);
                 $header->setEncoding($encoding);
                 $this->headersKeys[] = $key;
                 $this->headers[]     = $header;
@@ -602,13 +624,13 @@ class Headers implements Countable, Iterator
 
     /**
      * @param string $key
-     * @return string
+     * @return null|class-string<HeaderInterface>
      */
-    private function resolveHeaderClass($key)
+    private function resolveHeaderClass($key): ?string
     {
         if ($this->pluginClassLoader) {
-            return $this->pluginClassLoader->load($key) ?: Header\GenericHeader::class;
+            return $this->pluginClassLoader->load($key) ?: GenericHeader::class;
         }
-        return $this->getHeaderLocator()->get($key, Header\GenericHeader::class);
+        return $this->getHeaderLocator()->get($key, GenericHeader::class);
     }
 }

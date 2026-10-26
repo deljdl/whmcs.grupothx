@@ -1,7 +1,5 @@
 <?php
-/**
- * `ALTER` statement.
- */
+
 declare(strict_types=1);
 
 namespace PhpMyAdmin\SqlParser\Statements;
@@ -13,7 +11,9 @@ use PhpMyAdmin\SqlParser\Parser;
 use PhpMyAdmin\SqlParser\Statement;
 use PhpMyAdmin\SqlParser\Token;
 use PhpMyAdmin\SqlParser\TokensList;
+
 use function implode;
+use function trim;
 
 /**
  * `ALTER` statement.
@@ -23,27 +23,32 @@ class AlterStatement extends Statement
     /**
      * Table affected.
      *
-     * @var Expression
+     * @var Expression|null
      */
     public $table;
 
     /**
      * Column affected by this statement.
      *
-     * @var AlterOperation[]
+     * @var AlterOperation[]|null
      */
     public $altered = [];
 
     /**
      * Options of this statement.
      *
-     * @var array
+     * @var array<string, int|array<int, int|string>>
+     * @psalm-var array<string, (positive-int|array{positive-int, ('var'|'var='|'expr'|'expr=')})>
      */
     public static $OPTIONS = [
         'ONLINE' => 1,
         'OFFLINE' => 1,
         'IGNORE' => 2,
-
+        // `DEFINER` is also used for `ALTER EVENT`
+        'DEFINER' => [
+            2,
+            'expr=',
+        ],
         'DATABASE' => 3,
         'EVENT' => 3,
         'FUNCTION' => 3,
@@ -51,6 +56,7 @@ class AlterStatement extends Statement
         'SERVER' => 3,
         'TABLE' => 3,
         'TABLESPACE' => 3,
+        'USER' => 3,
         'VIEW' => 3,
     ];
 
@@ -61,11 +67,14 @@ class AlterStatement extends Statement
     public function parse(Parser $parser, TokensList $list)
     {
         ++$list->idx; // Skipping `ALTER`.
-        $this->options = OptionsArray::parse(
-            $parser,
-            $list,
-            static::$OPTIONS
-        );
+        $parsedOptions = OptionsArray::parse($parser, $list, static::$OPTIONS);
+        if ($parsedOptions->isEmpty()) {
+            $parser->error('Unrecognized alter operation.', $list->tokens[$list->idx]);
+
+            return;
+        }
+
+        $this->options = $parsedOptions;
         ++$list->idx;
 
         // Parsing affected table.
@@ -95,8 +104,6 @@ class AlterStatement extends Statement
         for (; $list->idx < $list->count; ++$list->idx) {
             /**
              * Token parsed at this moment.
-             *
-             * @var Token
              */
             $token = $list->tokens[$list->idx];
 
@@ -118,6 +125,12 @@ class AlterStatement extends Statement
                     $options = AlterOperation::$TABLE_OPTIONS;
                 } elseif ($this->options->has('VIEW')) {
                     $options = AlterOperation::$VIEW_OPTIONS;
+                } elseif ($this->options->has('USER')) {
+                    $options = AlterOperation::$USER_OPTIONS;
+                } elseif ($this->options->has('EVENT')) {
+                    $options = AlterOperation::$EVENT_OPTIONS;
+                } elseif ($this->options->has('FUNCTION') || $this->options->has('PROCEDURE')) {
+                    $options = AlterOperation::$ROUTINE_OPTIONS;
                 }
 
                 $this->altered[] = AlterOperation::parse($parser, $list, $options);
@@ -140,8 +153,10 @@ class AlterStatement extends Statement
             $tmp[] = $altered::build($altered);
         }
 
-        return 'ALTER ' . OptionsArray::build($this->options)
+        return trim(
+            'ALTER ' . OptionsArray::build($this->options)
             . ' ' . Expression::build($this->table)
-            . ' ' . implode(', ', $tmp);
+            . ' ' . implode(', ', $tmp)
+        );
     }
 }

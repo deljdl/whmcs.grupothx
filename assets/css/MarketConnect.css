@@ -109,6 +109,10 @@
     font-weight: bold;
     text-decoration: none;
 }
+.modal-marketconnect-login .gdpr-consent {
+    font-weight: normal;
+    font-size: 1em;
+}
 
 .panel-market-item {
     text-align: center;
@@ -950,7 +954,11 @@
     max-height: 400px;
     overflow: auto;
 }
-
+.modal-mc-service .dynamic-service.faq h4 {
+    color: #666;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
 .marketconnect-product-redirect {
     margin: 0 0 10px 0;
     padding: 65px 50px;
@@ -1047,7 +1055,34 @@
 .mc-sm-container .status.refunded {
     background-color:#de9e5b;
 }
-
+.marketconnect-dynamic-pricing .table-pricing {
+    font-size: 0.9em;
+    line-height: initial;
+    table-layout: fixed;
+    width: 100%;
+}
+.marketconnect-dynamic-pricing .table-pricing-header {
+    font-weight: bold;
+    margin-bottom: initial;
+}
+.marketconnect-dynamic-pricing td:first-child {
+    text-align: left;
+    font-weight: 600;
+}
+.marketconnect-dynamic-pricing .div-pricing-wrapper {
+    margin-top: 20px;
+}
+.marketconnect-dynamic-pricing .div-plans-wrapper {
+    display: none;
+}
+.marketconnect-dynamic-pricing .table-pricing span {
+    font-size: 0.875em;
+    font-weight: bold;
+    white-space: nowrap;
+    display: block;
+    margin-top: 2px;
+    color: #666;
+}
 @media (min-width:768px) {
     .mc-sm-container .field-label {
         text-align: right;

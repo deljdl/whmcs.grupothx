@@ -4,14 +4,20 @@ namespace Knp\Menu\Provider;
 
 use Knp\Menu\ItemInterface;
 
+/**
+ * @final since 3.8.0
+ */
 class ChainProvider implements MenuProviderInterface
 {
-    private $providers;
+    /**
+     * @var iterable<MenuProviderInterface>
+     */
+    private iterable $providers;
 
     /**
-     * @param MenuProviderInterface[]|iterable $providers
+     * @param iterable<MenuProviderInterface> $providers
      */
-    public function __construct($providers)
+    public function __construct(iterable $providers)
     {
         $this->providers = $providers;
     }

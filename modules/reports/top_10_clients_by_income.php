@@ -23,6 +23,7 @@ $results = Capsule::table('tblaccounts')
         'tblaccounts.rate'
     )
     ->join('tblclients', 'tblclients.id', '=', 'tblaccounts.userid')
+    ->where('tblaccounts.billingnoteid', '=', 0)
     ->groupBy('userid')
     ->orderBy('balance', 'desc')
     ->take(10)

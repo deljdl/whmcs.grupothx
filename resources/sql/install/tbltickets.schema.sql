@@ -38,6 +38,7 @@ CREATE TABLE `tbltickets` (
   `merged_ticket_id` int(11) NOT NULL DEFAULT '0',
   `editor` enum('plain','markdown','bbcode') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'plain',
   `pinned_at` datetime DEFAULT NULL,
+  `ai_token_charged_at` timestamp DEFAULT NULL,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   KEY `tid_c` (`tid`,`c`(64)),

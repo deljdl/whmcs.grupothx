@@ -1,11 +1,5 @@
 <?php
 
-/**
- * @see       https://github.com/laminas/laminas-mail for the canonical source repository
- * @copyright https://github.com/laminas/laminas-mail/blob/master/COPYRIGHT.md
- * @license   https://github.com/laminas/laminas-mail/blob/master/LICENSE.md New BSD License
- */
-
 namespace Laminas\Mail\Header;
 
 interface HeaderInterface
@@ -22,15 +16,16 @@ interface HeaderInterface
      *
      * @var bool
      */
-    public const FORMAT_RAW     = false;
+    public const FORMAT_RAW = false;
 
     /**
      * Factory to generate a header object from a string
      *
+     * @see http://tools.ietf.org/html/rfc2822#section-2.2
+     *
      * @param string $headerLine
      * @return static
      * @throws Exception\InvalidArgumentException If the header does not match with RFC 2822 definition.
-     * @see http://tools.ietf.org/html/rfc2822#section-2.2
      */
     public static function fromString($headerLine);
 
@@ -44,7 +39,7 @@ interface HeaderInterface
     /**
      * Retrieve header value
      *
-     * @param  bool $format Return the value in Mime::Encoded or in Raw format
+     * @param  HeaderInterface::FORMAT_* $format Return the value in Mime::Encoded or in Raw format
      * @return string
      */
     public function getFieldValue($format = self::FORMAT_RAW);

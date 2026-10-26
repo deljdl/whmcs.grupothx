@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of Composer.
@@ -19,4 +19,16 @@ namespace Composer\Repository;
  */
 class InstalledFilesystemRepository extends FilesystemRepository implements InstalledRepositoryInterface
 {
+    public function getRepoName()
+    {
+        return 'installed '.parent::getRepoName();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function isFresh()
+    {
+        return !$this->file->exists();
+    }
 }

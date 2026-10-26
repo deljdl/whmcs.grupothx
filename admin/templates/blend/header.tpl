@@ -11,7 +11,12 @@
     {\WHMCS\View\Asset::fontCssInclude('open-sans-family.css')}
     <link href="templates/{$template}/css/all.min.css?v={$versionHash}" rel="stylesheet" />
     <link href="templates/{$template}/css/theme.min.css?v={$versionHash}" rel="stylesheet" />
-    <link href="{\WHMCS\Utility\Environment\WebHelper::getBaseUrl()}/assets/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="{$WEB_ROOT}/assets/fonts/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="{$WEB_ROOT}/assets/fonts/css/fontawesome-solid.min.css" rel="stylesheet" />
+    <link href="{$WEB_ROOT}/assets/fonts/css/fontawesome-regular.min.css" rel="stylesheet" />
+    <link href="{$WEB_ROOT}/assets/fonts/css/fontawesome-light.min.css" rel="stylesheet" />
+    <link href="{$WEB_ROOT}/assets/fonts/css/fontawesome-brands.min.css" rel="stylesheet" />
+    <link href="{$WEB_ROOT}/assets/fonts/css/fontawesome-duotone.min.css" rel="stylesheet" />
     <script type="text/javascript" src="templates/{$template}/js/vendor.min.js?v={$versionHash}"></script>
     <script type="text/javascript" src="templates/{$template}/js/scripts.min.js?v={$versionHash}"></script>
     <script>
@@ -38,6 +43,7 @@
     {$headeroutput}
 
     <div class="alert alert-warning global-admin-warning">
+        <i class="far fa-exclamation-triangle fa-fw"></i>
         {$globalAdminWarningMsg}
     </div>
 

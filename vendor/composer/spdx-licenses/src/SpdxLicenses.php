@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of composer/spdx-licenses.
@@ -14,10 +14,10 @@ namespace Composer\Spdx;
 class SpdxLicenses
 {
     /** @var string */
-    const LICENSES_FILE = 'spdx-licenses.json';
+    public const LICENSES_FILE = 'spdx-licenses.json';
 
     /** @var string */
-    const EXCEPTIONS_FILE = 'spdx-exceptions.json';
+    public const EXCEPTIONS_FILE = 'spdx-exceptions.json';
 
     /**
      * Contains all the licenses.
@@ -30,7 +30,7 @@ class SpdxLicenses
      *    , ...
      *  ]
      *
-     * @var array
+     * @var array<string, array{0: string, 1: string, 2: bool, 3: bool}>
      */
     private $licenses;
 
@@ -50,7 +50,7 @@ class SpdxLicenses
      *    , ...
      *  ]
      *
-     * @var array
+     * @var array<string, array{0: string, 1: string}>
      */
     private $exceptions;
 
@@ -75,30 +75,30 @@ class SpdxLicenses
      *
      * @param string $identifier
      *
-     * @return array|null
+     * @return array{0: string, 1: bool, 2: string, 3: bool}|null
      */
     public function getLicenseByIdentifier($identifier)
     {
         $key = strtolower($identifier);
 
         if (!isset($this->licenses[$key])) {
-            return;
+            return null;
         }
 
-        list($identifier, $name, $isOsiApproved, $isDeprecatedLicenseId) = $this->licenses[$key];
+        [$identifier, $name, $isOsiApproved, $isDeprecatedLicenseId] = $this->licenses[$key];
 
-        return array(
+        return [
             $name,
             $isOsiApproved,
             'https://spdx.org/licenses/' . $identifier . '.html#licenseText',
             $isDeprecatedLicenseId,
-        );
+        ];
     }
 
     /**
      * Returns all licenses information, keyed by the lowercased license identifier.
      *
-     * @return array[] Each item is [ 0 => identifier (string), 1 => full name (string), 2 => osi certified (bool), 3 => deprecated (bool) ]
+     * @return array{0: string, 1: string, 2: bool, 3: bool}[] Each item is [ 0 => identifier (string), 1 => full name (string), 2 => osi certified (bool), 3 => deprecated (bool) ]
      */
     public function getLicenses()
     {
@@ -115,22 +115,22 @@ class SpdxLicenses
      *
      * @param string $identifier
      *
-     * @return array|null
+     * @return array{0: string, 1: string}|null
      */
     public function getExceptionByIdentifier($identifier)
     {
         $key = strtolower($identifier);
 
         if (!isset($this->exceptions[$key])) {
-            return;
+            return null;
         }
 
-        list($identifier, $name) = $this->exceptions[$key];
+        [$identifier, $name] = $this->exceptions[$key];
 
-        return array(
+        return [
             $name,
             'https://spdx.org/licenses/' . $identifier . '.html#licenseExceptionText',
-        );
+        ];
     }
 
     /**
@@ -153,6 +153,8 @@ class SpdxLicenses
                 return $licenseData[0];
             }
         }
+
+        return null;
     }
 
     /**
@@ -180,7 +182,7 @@ class SpdxLicenses
     }
 
     /**
-     * @param array|string $license
+     * @param string[]|string $license
      *
      * @throws \InvalidArgumentException
      *
@@ -193,7 +195,7 @@ class SpdxLicenses
             if ($count !== count(array_filter($license, 'is_string'))) {
                 throw new \InvalidArgumentException('Array of strings expected.');
             }
-            $license = $count > 1  ? '(' . implode(' OR ', $license) . ')' : (string) reset($license);
+            $license = $count > 1 ? '(' . implode(' OR ', $license) . ')' : (string) reset($license);
         }
 
         if (!is_string($license)) {
@@ -214,6 +216,9 @@ class SpdxLicenses
         return dirname(__DIR__) . '/res';
     }
 
+    /**
+     * @return void
+     */
     private function loadLicenses()
     {
         if (null !== $this->licenses) {
@@ -221,13 +226,19 @@ class SpdxLicenses
         }
 
         $json = file_get_contents(self::getResourcesDir() . '/' . self::LICENSES_FILE);
-        $this->licenses = array();
+        if (false === $json) {
+            throw new \RuntimeException('Missing license file in ' . self::getResourcesDir() . '/' . self::LICENSES_FILE);
+        }
+        $this->licenses = [];
 
         foreach (json_decode($json, true) as $identifier => $license) {
-            $this->licenses[strtolower($identifier)] = array($identifier, $license[0], $license[1], $license[2]);
+            $this->licenses[strtolower($identifier)] = [$identifier, $license[0], $license[1], $license[2]];
         }
     }
 
+    /**
+     * @return void
+     */
     private function loadExceptions()
     {
         if (null !== $this->exceptions) {
@@ -235,10 +246,13 @@ class SpdxLicenses
         }
 
         $json = file_get_contents(self::getResourcesDir() . '/' . self::EXCEPTIONS_FILE);
-        $this->exceptions = array();
+        if (false === $json) {
+            throw new \RuntimeException('Missing exceptions file in ' . self::getResourcesDir() . '/' . self::EXCEPTIONS_FILE);
+        }
+        $this->exceptions = [];
 
         foreach (json_decode($json, true) as $identifier => $exception) {
-            $this->exceptions[strtolower($identifier)] = array($identifier, $exception[0]);
+            $this->exceptions[strtolower($identifier)] = [$identifier, $exception[0]];
         }
     }
 
@@ -295,10 +309,10 @@ class SpdxLicenses
     (?<idstring>[\pL\pN.-]{1,})
 
     # license-id: taken from list
-    (?<licenseid>${licenses})
+    (?<licenseid>{$licenses})
 
     # license-exception-id: taken from list
-    (?<licenseexceptionid>${exceptions})
+    (?<licenseexceptionid>{$exceptions})
 
     # license-ref: [DocumentRef-1*(idstring):]LicenseRef-1*(idstring)
     (?<licenseref>(?:DocumentRef-(?&idstring):)?LicenseRef-(?&idstring))

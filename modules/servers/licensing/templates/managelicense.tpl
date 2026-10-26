@@ -169,7 +169,7 @@
             {if $firstpaymentamount neq $recurringamount || ($billingcycle != $LANG.orderpaymenttermonetime && $billingcycle != $LANG.orderpaymenttermfreeaccount)}
             <div class="col-sm-4 text-center">
                 <h4>{$LANG.orderpaymentmethod}</h4>
-                {$paymentmethod}
+                {$paymentmethod|escape}
             </div>
             {/if}
         </div>

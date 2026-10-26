@@ -17,11 +17,13 @@ CREATE TABLE `tblticketreplies` (
   `email` text COLLATE utf8_unicode_ci NOT NULL,
   `date` datetime NOT NULL,
   `message` text COLLATE utf8_unicode_ci NOT NULL,
+  `trace_id` VARCHAR(36) NULL DEFAULT NULL,
   `admin` text COLLATE utf8_unicode_ci NOT NULL,
   `attachment` text COLLATE utf8_unicode_ci NOT NULL,
   `attachments_removed` tinyint(1) NOT NULL DEFAULT '0',
   `rating` int(5) NOT NULL,
   `editor` enum('plain','markdown') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'plain',
+  `agent_score` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `tid_date` (`tid`,`date`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -32,4 +34,3 @@ CREATE TABLE `tblticketreplies` (
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-

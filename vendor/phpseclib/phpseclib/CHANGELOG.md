@@ -1,5 +1,449 @@
 # Changelog
 
+## 3.0.51 - 2026-04-09
+
+- SSH2: use constant time string comparison in get_binary_packet()
+- use new OpenSSL functionality (#2130)
+
+## 3.0.50 - 2026-03-18
+
+- fix for PHP 8.5 BC breaking changes on 32-bit machines (#2126)
+- make unpadding in CBC mode constant time (CVE-2026-32935)
+- X509: add support for organizationIdentifier (#2128)
+
+## 3.0.49 - 2026-01-27
+
+- more PHP 8.5 deprecations (#2113)
+- Keys/OpenSSH: add support for pub keys with multiple spaces / tabs (#2116)
+
+## 3.0.48 - 2025-12-15
+
+- readd SCP support (#2108)
+- SSH2: adjust want_reply handling for GLOBAL_REQUEST and CHANNEL_REQUEST (#2111)
+- ASN1: add more validation checks to asn1map (#2104)
+- RSA/PSS: more elegant int conversion (#2107)
+- more PHP 8.5 deprecations (#2103, #2113)
+
+## 3.0.47 - 2025-10-05
+
+- fix PHP 8.5 deprecations
+- SFTP: check if realpath succeeded when changing SFTP directory (#2098)
+- SFTP: add copy() method (only usable if copy-data ext is available) (#2101)
+
+## 3.0.46 - 2025-06-29
+
+- BigInteger/BCMath: strict_types fix (#2089)
+
+## 3.0.45 - 2025-06-22
+
+- BigInteger: modPow() calls with negative base gave incorrect result (#2086)
+- BigInteger: barrett reduction returned '' vs '0' for bcmath engine (#2087)
+
+## 3.0.44 - 2025-06-15
+
+- SSH2: add send_eof() method (#2062)
+- SSH2: server identification string handling enhancements (#2082, #2083)
+- SSH2: shore up terrapin counter measures
+- SSH2: fix for packets sent between KEXINIT packets (#2084)
+- SFTP: convert filenames to strings (#2065)
+- Hash: add cmac_aes algorithm (#1967)
+- ASN1: support tags with values >= 30 (#2066)
+- PublicKeyLoader: improve handling of bad keys (#2077, #2079)
+- RSA: fix for keys with negative modulos (#2085)
+- BigInteger: adjust priority with which BCMath is used for PHP 8.4+
+
+## 3.0.43 - 2024-12-14
+
+- fix PHP 8.4 deprecations
+- BigInteger: workaround for regression in GMP that PHP introduced
+- BigInteger: speed up Barrett reductions
+- X509: make the attributes section of new CSRs be blank (#1522)
+- X509: add getRequestedCertificateExtensions()
+- X509: algorithmidentifier parameters could get incorrectly set (#2051)
+- SSH2: ignore kex-strict-s-v00@openssh.com in key re-exchanges (#2050)
+- SSH2: make it so phpseclib initiates key re-exchange after 1GB (#2050)
+- SSH2: if string is passed to setPreferredAlgorithms treat as array
+- SSH2: update setPreferredAlgorithms() to accept csv's
+
+## 3.0.42 - 2024-09-15
+
+- X509: CRL version number wasn't correctly being saved (#2037)
+- Hash: significantly speed up umac algorithms
+- SSH2: fix possible infinite loop on packet timeout (#2031)
+- SSH2: logging enhancements
+- SSH2: identification strings > 255 bytes didnt get parsed correctly
+- SSH2: if string is passed to setPreferredAlgorithms() treat it as array
+- SSH2: update error message for people not connecting to SSH servers
+- SFTP: add getSupportedExtensions(), statvfs() and posix_rename() methods (#2024)
+
+## 3.0.41 - 2024-08-11
+
+- SFTP: fix deprecation warning (#2027)
+
+## 3.0.40 - 2024-08-11
+
+- SSH2: fix for setTimeout(0) (#2023)
+- SSH2: fix possible infinite loop on packet timeout
+- SSH2/Agent: make it so identities include key comments (#2022)
+- SSH2/Agent: add findIdentityByPublicKey() (#2022)
+- EC: fix for IEEE signatures (#2019)
+- BigInteger/BCMath: bitwise_or() was doing XOR (#2025)
+
+## 3.0.39 - 2024-06-24
+
+- SSH2: fix when keep alive packets are sent (#2009)
+- SSH2: fix for undefined variable when logging is enabled (#2010 / #2011)
+
+## 3.0.38 - 2024-06-17
+
+- BigInteger: EvalBarrett / Barrett could sometimes slow to a crawl (#1994)
+- SSH2: fix bug that prevented RC4 and ChaCha20 from ever being used
+- SSH2: SSH_MSG_EXT_INFO didn't work during key re-exchange (#2001, #2002)
+- SSH2: improvements to timeout handling (#2006)
+- System/SSH/Agent: reset supported_private_key_algorithms for every key (#1995)
+- Composer: use paragonie/constant_time_encoding (#1998)
+- Crypt/EC/Formats/PKCS8: fix Ed448 keys (#2003)
+
+## 3.0.37 - 2024-03-02
+
+- SSH2: don't set stream timeout if timeout is 0 (#1986)
+
+## 3.0.36 - 2024-02-25
+
+- BigInteger: put guardrails on isPrime() and randomPrime() (CVE-2024-27354)
+- ASN1: limit OID length (CVE-2024-27355)
+- EC: when using openssl to do signing use unencrypted key (#1979)
+- SSH2: add different options to isConnected() (#1983)
+
+## 3.0.35 - 2023-12-18
+
+- SSH2: implement terrapin attack countermeasures (#1972)
+- SSH2: only capture login info once (#1970)
+- Crypt/AsymmetricKey: loading hidden custom key plugins didn't work (#1971)
+
+## 3.0.34 - 2023-11-27
+
+- SSH2: add support for RFC8308 (#1960)
+- SSH2: don't use AES GCM for TurboFTP Server (#1957)
+- SSH2: reset more internal variables when connection is reset (#1961)
+- PKCS8: PBES1 / RC2 and PBES2 / DES keys didn't work (#1958)
+- EC/Signature/Format: add new IEEE format (#1956)
+- Math/BigInteger/Engines/PHP: PHP 8.2.13+ fixes Windows JIT issue
+- Math/BinaryField: fix for excessively large degrees (CVE-2023-49316)
+- Math/PrimeField: fix occasional error with squareRoot method
+
+## 3.0.33 - 2023-10-21
+
+- SSH2: fix for PHP 7.3 (#1953)
+- Crypt: improve ARM detection code (#1949)
+- Rijndael: fix for PHP 8.3+ compatability (#1944)
+- X509: fix for weird characters in subjaltname (#1943)
+- move JIT check to BigInteger (#1942)
+
+## 3.0.23 - 2023-09-18
+
+- fix "Undefined index: jit" error on Windows (#1940)
+
+## 3.0.22 - 2023-09-15
+
+- SFTP: make it so SFTP::RESUME also sets offset of local file (#1921)
+- SFTP: RESUME_START didn't work as described (#1921)
+- SFTP: fix SFTPv2 errors when logging errors (#1933)
+- SFTP: fix issue with get() downloading to files / streams (#1934)
+- BigInteger: use GMP if available (#1928)
+- Rijndael: fix E_DEPRECATED (#1935)
+- improve PHP32 compatibility (#1931)
+
+## 3.0.21 - 2023-07-09
+
+- BigInteger: speed up powMod() method (#1919)
+- SSH2: fix stream_select(): Unable to select [4]: Interrupted system call (max_fd=29) error (#1851)
+- SSH2: add EOF test isConnected() (#1926)
+- SFTP: make it so SFTP::RESUME also sets offset of local file (#1921)
+- SFTP: SFTP::RESUME_START didn't work as described (#1921)
+
+## 3.0.20 - 2023-06-13
+
+- SSH2: better support for multiple interactive channels & expose shell functions (#1888)
+- SFTP: add optional $recursive parameter to filesize() (#1782)
+- SFTP: fix NET_SFTP_ATTR_EXTENDED (#1907)
+- ASN1: speed up decodeBER (#1894)
+- X509: add support for EV DN's (#1916)
+- X509: getChain() should always return array of X509 objects (#1914)
+- RSA: setting sig padding broke enc padding and vice versa
+
+## 3.0.19 - 2023-03-05
+
+- AsymmetricKey: error out on unsupported operations (#1879)
+- Blowfish: fix issues on 32-bit PHP installs
+- BigInteger: fix for hex numbers with new lines in them
+- SFTP: fix "Creating default object from empty value" error (#1876)
+- SSH2: add getTimeout() method (#1889)
+- PrimeField: prevent infinite loop with composite primefields (CVE-2023-27560)
+
+## 3.0.18 - 2022-12-17
+
+- fix for PHP 8.2 deprecations (#1869, #1873)
+- SSH2: if logging in with rsa-sha2-256/512 fails, try ssh-rsa (#1865)
+- SSH/Agent: add support for named pipes on windows (for pageant) (#1866)
+- Crypt/Base: add a function to check continuous buffer status (#1870)
+- OpenSSL 3.0.1+ deprecated some algorithms (RC2, RC4, DES, Blowfish)
+
+## 3.0.17 - 2022-10-24
+
+- X509: make it so CRLs, CSRs and SPKACs can support PSS keys (#1837)
+- X509: make it so PKCS1 X509 certs can create PSS sigs (#1837)
+- SFTP: fix deprecated implicit float to int on 32-bit PHP 8.1 (#1841)
+- SFTP: restore orig behavior when deleting non-existant folder (#1847)
+- Random: fix fallback on PHP 8.1+
+
+## 3.0.16 - 2022-09-05
+
+- SSH2: fix type hinting for keyboard_interactive_process (#1836)
+
+## 3.0.15 - 2022-09-02
+
+- PublicKeyLoader: add support for OpenSSH encrypted keys (#1737, #1733, #1531, #1490)
+- PublicKeyLoader: add support for JSON Web Keys (#1817)
+- SSH2: make login method return false under rare situation (#1790)
+- SSH2: fix possibly undefined variable error (#1802)
+- SFTP: fix enableDatePreservation bug w.r.t. mtime (#1670)
+- SFTP: try to delete dir even if it can't be opened (#1791)
+- SFTP: try without path canonicalization if initial realpath() fails (#1796)
+- SFTP: detect if stream metadata has wrapper_type set for put() method (#1792)
+- BigInteger: tweak to the phpinfo checks (#1726)
+- BigInteger: fix behavior on 32-bit PHP installs (#1820)
+- EC/PKCS8: OpenSSL didn't like phpseclib formed Ed25519 public keys (#1819)
+- don't use dynamic properties, which are deprecated in PHP 8.2 (#1808, #1822)
+- fix deprecated implicit float to int on 32-bit PHP 8.1
+
+## 3.0.14 - 2022-04-04
+
+- RSA: add support for loading PuTTY v3 keys
+- Crypt/Base: fix CTR mode with continuous buffer with non-eval PHP
+- Crypt/Base: use sodium_increment in _increment_str
+- Crypt/Base: fix deprecation notice (#1770)
+- SSH2/Agent: rm unused parameter (#1757)
+- BigInteger: add precision to __debugInfo
+- BigInteger: fix random engine issues
+- call useBestEngine() when getEngine() is called
+
+## 3.0.13 - 2022-01-30
+
+- SSH2: make login() return false if no valid auth methods are found (#1744)
+- SSH2: show a more helpful error message when logging in with pubkey (#1718)
+- SSH2: rsa-sha2-256 and rsa-sha2-512 sigs weren't verifying (#1743)
+- SFTP: fix chgrp() for version < 4 (#1730)
+- Crypt/Base: add OFB8 as a new mode (phpseclib/mcrypt_compat#33)
+- Crypt/Salsa20: fix PHP 5.6 error (#1717)
+- RSA & BigInteger: check phpinfo() available before using it (#1726)
+- Fixed psalm level 6 errors in phpseclib/Net/ (#1746)
+
+## 3.0.12 - 2021-11-28
+
+- SSH2: add "smart multi factor" login mode (enabled by default) (#1648)
+- SSH2: error out when no data is received from the server (#1647)
+- SFTP: don't attempt to parse unsupported attributes (#1708)
+- SFTP: getSupportedVersions() call didn't work
+- EC: error out when scalar is out of range (#1712)
+- RSA: add support for raw private keys (#1711)
+- SymmetricKey: add getMode()
+
+## 3.0.11 - 2021-10-26
+
+- SSH2: add support for zlib and zlib@openssh.com compression
+- SFTP: add support for SFTPv4/5/6
+- SFTP: add option to allow arbitrary length packets (#1691)
+- SFTP: errors weren't being logged (#1702)
+- RSA: ssh-keygen -yf private.key fails if \r is present (#1698)
+
+## 3.0.10 - 2021-08-15
+
+- SFTP: don't check SFTP packet size after SFTP initialization (#1606)
+- SFTP: timeout during SFTP init should return false (#1684)
+- SFTP: return false if get_channel_packet returns false (#1678)
+- ASN1: return false when not enough bytes are available (#1676)
+- BigInteger: Serializable is being deprecated in PHP 8.1 (#1680)
+- explicitly define methods as being static (#1689)
+- plug memory leaks (#1672)
+
+## 3.0.9 - 2021-06-13
+
+- SSH2: add getAuthMethodsToContinue() method (#1648)
+- SSH2: timeout would occasionally infinitely loop
+- SSH2: fix PHP7.4 errors about accessing bool as string (#1656)
+- SSH2: fix issue with key re-exchange (#1644)
+- SFTP: reopen channel on channel closure (#1654)
+- X509: extra characters before cert weren't being removed (#1659)
+- X509: signing with pw protected PSS keys yielded errors (#1657)
+- ASN1: fix timezone issue when non-utc time is given (#1562)
+- ASN1: change how default values are processed for ints and enums (#1665)
+- RSA: OAEP decryption didn't check labels correctly (#1669)
+
+## 3.0.8 - 2021-04-20
+
+- AsymetrticKey: add getComment() method (#1638)
+- SymmetricKey: cipher_name_openssl_ecb shouldn't be static because of AES (#1636)
+- X509: don't filter basicConstraints on unique values (#1639)
+- X509: make it so extensions can be set as critical (#1640)
+
+## 3.0.7 - 2021-04-06
+
+- X509: always parse the first cert of a bundle (#1568)
+- SSH2: behave like putty with broken publickey auth (#1572)
+- SSH2: don't close channel on unexpected response to channel request (#1631)
+- RSA: cleanup RSA PKCS#1 v1.5 signature verification (CVE-2021-30130)
+- Crypt: use a custom error handler for mcrypt to avoid deprecation errors
+
+## 3.0.6 - 2021-03-13
+
+- SFTP/Stream: make it so you can write past the end of a file (#1618)
+- SFTP/Stream: fix undefined index notice in stream touch() (#1615)
+- SFTP/Stream: mkdir didn't work (#1617)
+- BigInteger: fix issue with toBits on 32-bit PHP 8 installs
+- SFTP: digit only filenames were converted to integers by php (#1623)
+
+## 3.0.5 - 2021-02-12
+
+- X509: add getCurrentCert method (since $currentCert is now private) (#1602)
+- PublicKeyLoader: add loadPrivateKey() and loadPublicKey() methods (#1603)
+- Rijndael: calling setIV() after setBlockLength() can result in err (#1599)
+- RSA: use OpenSSL for generating private keys (#1596)
+- BigInteger: big speedups for when OpenSSL is used (#1596)
+
+## 3.0.4 - 2021-01-25
+
+- Random: use v9.99.99 of random_compat if appropriate (#1585, #1571)
+- SSH/Agent: EC keys didn't work with agent (#1593)
+- X509: fix niche issue with computeKeyIdentifier (#1586)
+
+## 3.0.3 - 2021-01-16
+
+- X509: passing DateTime objects to setEndDate produced errors (#1578)
+- X509: always parse the first cert of a bundle (#1568)
+- X509: streamline the management of custom extensions (#1573)
+- EC: fix case sensitivity errors when using Symfony autoloader (#1570)
+- RSA: improve identification of public / private PKCS1 / PKCS8 keys (#1579)
+- RSA: add support for PSS keys that don't have parameters present (#1583)
+- RSA: tweaks to how the salt length works
+- RSA: throw exceptions instead of returning false
+- SSH2: behave like putty with broken publickey auth (#1572)
+
+## 3.0.2 - 2020-12-24
+
+- EC/PKCS1: throw exception when trying to load non-strings (#1559)
+- X509: make date methods accept DateTimeInterface instead of DateTime (#1562)
+- SSH2: suppress errors on stream_select calls (#1560)
+
+## 3.0.1 - 2020-12-19
+
+- PKCS8: fix E_WARNING (#1551)
+- SSH2/Stream: stream_select needs to be able to access $fsock (#1552)
+- SFTP: resuming uploads didn't work (#1553)
+
+## 3.0.0 - 2020-12-16
+
+- drop SSH1 and SCP support
+- add support for the following crypto algorithms:
+  - Ed25519 / Ed449 / Curve25519 / Curve449
+  - ECDSA / ECDH (66 curves)
+  - DSA / DH
+  - GCM / Poly1305
+  - Salsa20 / ChaCha20
+- namespace changed from `phpseclib\` to `\phpseclib3` to facilitate phpseclib 2 shim (phpseclib2_compat)
+
+## 2.0.53 - 2026-04-09
+
+- SSH2: use constant time string comparison in get_binary_packet()
+
+## 2.0.52 - 2026-03-18
+
+- fix for PHP 8.5 BC breaking changes on 32-bit machines (#2126)
+- make unpadding in CBC mode constant time (CVE-2026-32935)
+- X509: add support for organizationIdentifier (#2128)
+
+## 2.0.51 - 2026-01-27
+
+- more PHP 8.5 deprecations (#2113)
+- RSA: add support for OpenSSH pub keys with multiple spaces / tabs (#2116)
+
+## 2.0.50 - 2025-12-15
+
+- SCP: some downloads have an extra null byte tacked onto the end (#146)
+- SCP: uploading a file after trying to download a non existant file fails (#873)
+- more PHP 8.5 deprecations (#2103, #2113)
+
+## 2.0.49 - 2025-10-05
+
+- fix PHP 8.5 deprecations
+- SFTP: check if realpath succeeded when changing SFTP directory (#2098)
+- SSH2: server identification string handling enhancements (#2082, #2083)
+
+## 2.0.48 - 2024-12-14
+
+- BigInteger: workaround for regression in GMP that PHP introduced
+- X509: make the attributes section of new CSRs be blank (#1522)
+- X509: CRL version number wasn't correctly being saved (#2037)
+- SSH2: ignore kex-strict-s-v00@openssh.com in key re-exchanges (#2050)
+- SSH2: make it so phpseclib initiates key re-exchange after 1GB (#2050)
+- SSH2: if string is passed to setPreferredAlgorithms treat as array
+- SSH2: identification strings > 255 bytes didn't get parsed correctly
+- SSH2: fix possible infinite loop on packet timeout
+- SSH2: handle SSH2_MSG_EXT_INFO out of login (#2001, #2002)
+- SSH2/Agent: reset supported_private_key_algorithms for every key (#1995)
+
+## 2.0.47 - 2024-02-25
+
+- BigInteger: add getLength() and getLengthInBytes() methods
+- BigInteger: put guardrails on isPrime() and randomPrime() (CVE-2024-27354)
+- ASN1: limit OID length (CVE-2024-27355)
+
+## 2.0.46 - 2023-12-28
+
+- SSH2: implement terrapin attack countermeasures (#1972)
+- SSH2: only capture login info once (#1970)
+- SSH2: add support for RFC8308 (#1960)
+- Rijndael: fix for PHP 8.3+ compatability (#1944)
+- Crypt/Base: improve ARM detection code (#1949)
+- X509: fix for weird characters in subjaltname (#1943)
+
+## 2.0.45 - 2023-09-15
+
+- SFTP: make it so SFTP::RESUME also sets offset of local file (#1921)
+- SFTP: RESUME_START didn't work as described (#1921)
+- SFTP: fix SFTPv2 errors when logging errors (#1933)
+- SFTP: fix issue with get() downloading to files / streams (#1934)
+- Rijndael: fix E_DEPRECATED (#1935)
+- improve PHP32 compatibility (#1931)
+
+## 2.0.44 - 2023-06-13
+
+- SSH2: fix PHP 8.2 E_DEPRECATED errors (#1917)
+
+## 2.0.43 - 2023-06-13
+
+- SFTP: fix NET_SFTP_ATTR_EXTENDED (#1907)
+- SSH2: fix PHP 8.2 E_DEPRECATED errors (#1917)
+- X509: add support for EV DN's (#1916)
+
+## 2.0.42 - 2023-03-06
+
+- Blowfish: fix issues on 32-bit PHP installs
+- BigInteger: fix for hex numbers with new lines in them
+- SSH2: add getTimeout() method (#1889)
+
+## 2.0.41 - 2022-12-23
+
+- fix for more PHP 8.2 deprecations (#1875)
+
+## 2.0.40 - 2022-12-17
+
+- fix for PHP 8.2 deprecations (#1869)
+- SSH2: if logging in with rsa-sha2-256/512 fails, try ssh-rsa (#1865)
+- SSH/Agent: add support for named pipes on windows (for pageant) (#1866)
+- Crypt/Base: add a function to check continuous buffer status (#1870)
+- OpenSSL 3.0.1+ deprecated some algorithms (RC2, RC4, DES, Blowfish)
+
 ## 2.0.39 - 2022-10-24
 
 - SFTP: fix deprecated implicit float to int on 32-bit PHP 8.1 (#1841)
@@ -207,7 +651,7 @@
 ## 2.0.11 - 2018-04-15
 
 - X509: auto download intermediate certs
-- BigInteger: fix for (new BigInteger(48))->toString(true)) (#1264)
+- BigInteger: fix for (new BigInteger(48))->toString(true) (#1264)
 - ASN1: class is never set as key in _decode_ber
 - check if phpinfo() is available before using (#1256)
 - backport CFB8 support from master to 2.0 (#1257)
@@ -319,6 +763,73 @@
 
 - Classes were renamed and namespaced ([#243](https://github.com/phpseclib/phpseclib/issues/243))
 - The use of an autoloader is now required (e.g. Composer)
+
+## 1.0.28 - 2026-04-09
+
+- SSH2: use constant time string comparison in get_binary_packet()
+
+## 1.0.27 - 2026-03-18
+
+- fix for PHP 8.5 BC breaking changes on 32-bit machines (#2126)
+- make unpadding in CBC mode constant time (CVE-2026-32935)
+- X509: add support for organizationIdentifier (#2128)
+
+## 1.0.26 - 2026-01-27
+
+- more PHP 8.5 deprecations (#2113)
+- RSA: add support for OpenSSH pub keys with multiple spaces / tabs (#2116)
+
+## 1.0.25 - 2025-12-15
+
+- SCP: some downloads have an extra null byte tacked onto the end (#146)
+- SCP: uploading a file after trying to download a non existant file fails (#873)
+- more PHP 8.5 deprecations (#2103, #2113)
+
+## 1.0.24 - 2025-10-05
+
+- fix PHP 8.4 / 8.5 deprecations
+- X509: make the attributes section of new CSRs be blank (#1522)
+- X509: CRL version number wasn't correctly being saved (#2037)
+- SFTP: check if realpath succeeded when changing SFTP directory (#2098)
+- SFTP: convert filenames to strings (#2065)
+- SSH2: ignore kex-strict-s-v00@openssh.com in key re-exchanges (#2050)
+- SSH2: update setPreferredAlgorithms() to accept csv's
+- SSH2: fix possible infinite loop on packet timeout
+- SSH2: handle SSH2_MSG_EXT_INFO out of login (#2001, #2002)
+- SSH2/Agent: reset supported_private_key_algorithms for every key (#1995)
+
+## 1.0.23 - 2024-02-25
+
+- BigInteger: add getLength() and getLengthInBytes() methods
+- BigInteger: put guardrails on isPrime() and randomPrime() (CVE-2024-27354)
+- ASN1: limit OID length (CVE-2024-27355)
+
+## 1.0.22 - 2023-12-28
+
+- SFTP: fix issue with get() downloading to files / streams (#1934)
+- SFTP: fix SFTPv2 errors when logging errors (#1933)
+- SSH2: implement terrapin attack countermeasures (#1972)
+- SSH2: only capture login info once (#1970)
+- SSH2: add support for RFC8308 (#1960)
+- Rijndael: fix for PHP 8.3+ compatability (#1944)
+- Crypt/Base: improve ARM detection code (#1949)
+- X509: fix for weird characters in subjaltname (#1943)
+- ASN1: fix string conversion code for 32-bit PHP installs (#1931)
+
+## 1.0.21 - 2023-07-09
+
+- fix deprecation errors in newer PHP versions
+- OpenSSL 3.0.1+ deprecated some algorithms
+- RSA: add support for loading OpenSSH encrypted keys (#1737, #1733, #1531, #1490)
+- RSA: add support for loading PuTTY v3 keys
+- SSH2: if logging in with rsa-sha2-256/512 fails, try ssh-rsa (#1865)
+- SSH2: add EOF test isConnected() (#1926)
+- SFTP: try without path canonicalization if initial realpath() fails (#1796)
+- SFTP: fix chgrp() for version < 4 (#1730)
+- SFTP: try to delete dir even if it can't be opened (#1791)
+- SFTP: make it so SFTP::RESUME also sets offset of local file (#1921)
+- SFTP: SFTP::RESUME_START didn't work as described (#1921)
+- Crypt/Base: fix CTR mode with continuous buffer with non-eval PHP
 
 ## 1.0.20 - 2021-12-28
 
@@ -640,7 +1151,7 @@ Crypt/Base:
 
 ## 0.3.0 - 2012-07-08
 
-- add support for reuming Net_SFTP::put()
+- add support for resuming Net_SFTP::put()
 - add support for recursive deletes and recursive chmods to Net_SFTP
 - add setTimeout() to Net_SSH2
 - add support for PBKDF2 to the various Crypt_* classes via setPassword()
@@ -659,3 +1170,28 @@ Crypt/Base:
 - add Net_SFTP::stat(), Net_SFTP::lstat() and Net_SFTP::rawlist()
 - logging was added to Net_SSH1
 - the license was changed to the less restrictive MIT license
+
+## 0.2.1 - 2010-05-03
+
+- across the board speedups
+- improved compatibility
+- implements RSA blinding
+- support for more public / private RSA keys added
+- implements CTR mode for block ciphers
+- adds Net_SFTP::rawlist() and Net_SFTP::size()
+- improves debugging capabilities
+- Crypt_Random should be more cryptographically secure
+
+## 0.2.0 - 2009-12-05
+
+- added Crypt_RSA
+- added support for RSA publickey authentication in Net_SSH2
+- compatibility improvements
+- speed improvements
+
+## 0.1.5 - 2009-06-11
+
+- SFTP support
+- misc bug fixes
+
+## 0.1.1 - 2009-02-17

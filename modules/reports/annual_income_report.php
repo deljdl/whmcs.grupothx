@@ -30,6 +30,7 @@ $results = Capsule::table('tblaccounts')
         Capsule::raw("SUM(amountout/rate) as amountout")
     )
     ->where('date', '>=', ($currentyear - 2) . '-01-01')
+    ->where('billingnoteid', '=', 0)
     ->groupBy(Capsule::raw("date_format(date,'%M %Y')"))
     ->orderBy('date', 'asc')
     ->get()
@@ -50,14 +51,16 @@ foreach ($results as $result) {
     ];
 }
 
+$overallbalance = 0;
+
 foreach ($months as $k => $monthName) {
 
     if ($monthName) {
 
-        $amountin = $reportvalues[$currentyear][$k][0];
-        $fees = $reportvalues[$currentyear][$k][1];
-        $amountout = $reportvalues[$currentyear][$k][2];
-        $monthlybalance = $reportvalues[$currentyear][$k][3];
+        $amountin = $reportvalues[$currentyear][$k][0] ?? 0;
+        $fees = $reportvalues[$currentyear][$k][1] ?? 0;
+        $amountout = $reportvalues[$currentyear][$k][2] ?? 0;
+        $monthlybalance = $reportvalues[$currentyear][$k][3] ?? 0;
 
         $reportdata['tablevalues'][] = array(
             $monthName . ' ' . $currentyear,
@@ -87,16 +90,16 @@ for ($i = 1; $i <= 12; $i++) {
                 'v'=>$months[$i],
             ),
             array(
-                'v'=>$reportvalues[$currentyear-2][$i][3],
-                'f'=>formatCurrency($reportvalues[$currentyear-2][$i][3])->toFull(),
+                'v'=>$reportvalues[$currentyear-2][$i][3] ?? 0,
+                'f'=>formatCurrency($reportvalues[$currentyear-2][$i][3] ?? 0)->toFull(),
             ),
             array(
-                'v'=>$reportvalues[$currentyear-1][$i][3],
-                'f'=>formatCurrency($reportvalues[$currentyear-1][$i][3])->toFull(),
+                'v'=>$reportvalues[$currentyear-1][$i][3] ?? 0,
+                'f'=>formatCurrency($reportvalues[$currentyear-1][$i][3] ?? 0)->toFull(),
             ),
             array(
-                'v'=>$reportvalues[$currentyear][$i][3],
-                'f'=>formatCurrency($reportvalues[$currentyear][$i][3])->toFull(),
+                'v'=>$reportvalues[$currentyear][$i][3] ?? 0,
+                'f'=>formatCurrency($reportvalues[$currentyear][$i][3] ?? 0)->toFull(),
             ),
         ),
     );

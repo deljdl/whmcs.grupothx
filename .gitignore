@@ -18,3 +18,9 @@
 /admin/email-data-kutyfkuvkjhfhNOTACESS/
 /admin/disk-data-history/
 modules/gateways/callback/mercadopago/vendor/mercadopago/
+
+/php.ini
+/.user.ini
+/thx/cache/
+/vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache/Serializer/CSS/
+/vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache/Serializer/HTML/

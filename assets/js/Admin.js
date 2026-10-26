@@ -204,7 +204,7 @@ jQuery(document).ready(function() {
         e.preventDefault();
 
         const action = getQueryParam('action');
-        if (action === 'edit') {
+        if (action === 'edit' && typeof handleUnsavedChanges === 'function') {
             handleUnsavedChanges(e, function() {
                 handleAddPaymentSubmit();
             });
@@ -298,7 +298,7 @@ jQuery(document).ready(function() {
         var itemCount = mcProductPromos.find('.item').length;
         mcProductPromos.owlCarousel({
             loop: true,
-            margin: 10,
+            margin: 16,
             responsiveClass: true,
             responsive: {
                 0: {
@@ -1145,6 +1145,34 @@ function trackWizardAction(stepNumber, action) {
     mixpanel.track(`${stepPageData.title} (${action})`, {
         "\$current_url": fullUrl,
     });
+}
+
+function trackAppModalEvent(type, name, data = {}) {
+    if (!isMixpanelEnabled()) return;
+
+    const defaultData = {
+        "\$current_url": getFullUrl(window.location.href),
+        "\$referrer": getFullUrl(document.referrer),
+    };
+
+    const payload = Object.assign({}, defaultData, data);
+
+    switch (type) {
+        case 'page':
+            mixpanel.track_pageview({
+                page: name,
+                ...payload
+            });
+            break;
+        case 'event':
+            mixpanel.track(
+                name,
+                payload
+            );
+            break;
+        default:
+            console.warn(`Unknown Mixpanel event type: ${type}`);
+    }
 }
 
 function getFullUrl(path) {

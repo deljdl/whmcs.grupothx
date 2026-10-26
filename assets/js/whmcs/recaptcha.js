@@ -9,6 +9,8 @@ var recaptchaLoadComplete = false,
     recaptchaType = 'recaptcha',
     recaptchaValidationComplete = false;
 
+var PASSWORD_RESET_BUTTON_ID = 'resetPasswordButton';
+
 (function(module) {
     if (!WHMCS.hasModule('recaptcha')) {
         WHMCS.loadModule('recaptcha', module);
@@ -36,10 +38,14 @@ var recaptchaLoadComplete = false,
                     console.error('Recaptcha client js api object name not defined');
                     return;
                 }
-                recaptchaCount += 1;
                 var frm = jQuery(el),
-                    btnRecaptcha = frm.find(".btn-recaptcha"),
-                    required = (typeof recaptcha.requiredText !== 'undefined')
+                    btnRecaptcha = frm.find(".btn-recaptcha");
+
+                if (btnRecaptcha.attr('id') === PASSWORD_RESET_BUTTON_ID && !btnRecaptcha.data('captcha-required')) {
+                    return;
+                }
+
+                var required = (typeof recaptcha.requiredText !== 'undefined')
                         ? recaptcha.requiredText
                         : 'Required',
                     recaptchaId = 'divDynamicRecaptcha' + recaptchaCount;
@@ -103,6 +109,13 @@ var recaptchaLoadComplete = false,
                         recaptchaContent.find(':first').addClass('center-block');
                     });
                 }
+
+                // Increment so that each captcha form on the page receives a
+                // unique element id and callback name. Without this, multiple
+                // captcha forms (e.g. the login and register forms on the user
+                // invite acceptance page) share a single callback, causing an
+                // invisible captcha to submit the wrong form.
+                recaptchaCount++;
             });
 
             window.recaptchaLoadCallback = function() {

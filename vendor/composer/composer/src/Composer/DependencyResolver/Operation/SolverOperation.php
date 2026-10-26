@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of Composer.
@@ -12,39 +12,31 @@
 
 namespace Composer\DependencyResolver\Operation;
 
-use Composer\Package\PackageInterface;
-
 /**
- * Abstract solver operation class.
+ * Abstract operation class.
  *
- * @author Konstantin Kudryashov <ever.zet@gmail.com>
+ * @author Aleksandr Bezpiatov <aleksandr.bezpiatov@spryker.com>
  */
 abstract class SolverOperation implements OperationInterface
 {
-    protected $reason;
+    /**
+     * @abstract must be redefined by extending classes
+     */
+    protected const TYPE = '';
 
     /**
-     * Initializes operation.
-     *
-     * @param string $reason operation reason
+     * Returns operation type.
      */
-    public function __construct($reason = null)
+    public function getOperationType(): string
     {
-        $this->reason = $reason;
+        return static::TYPE;
     }
 
     /**
-     * Returns operation reason.
-     *
-     * @return string
+     * @inheritDoc
      */
-    public function getReason()
+    public function __toString()
     {
-        return $this->reason;
-    }
-
-    protected function formatVersion(PackageInterface $package)
-    {
-        return $package->getFullPrettyVersion();
+        return $this->show(false);
     }
 }

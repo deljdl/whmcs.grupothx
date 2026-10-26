@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of Composer.
@@ -13,55 +13,39 @@
 namespace Composer\DependencyResolver\Operation;
 
 use Composer\Package\AliasPackage;
-use Composer\Package\PackageInterface;
 
 /**
  * Solver install operation.
  *
  * @author Nils Adermann <naderman@naderman.de>
  */
-class MarkAliasInstalledOperation extends SolverOperation
+class MarkAliasInstalledOperation extends SolverOperation implements OperationInterface
 {
-    protected $package;
+    protected const TYPE = 'markAliasInstalled';
 
     /**
-     * Initializes operation.
-     *
-     * @param AliasPackage $package package instance
-     * @param string       $reason  operation reason
+     * @var AliasPackage
      */
-    public function __construct(AliasPackage $package, $reason = null)
-    {
-        parent::__construct($reason);
+    protected $package;
 
+    public function __construct(AliasPackage $package)
+    {
         $this->package = $package;
     }
 
     /**
      * Returns package instance.
-     *
-     * @return PackageInterface
      */
-    public function getPackage()
+    public function getPackage(): AliasPackage
     {
         return $this->package;
     }
 
     /**
-     * Returns job type.
-     *
-     * @return string
+     * @inheritDoc
      */
-    public function getJobType()
+    public function show($lock): string
     {
-        return 'markAliasInstalled';
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function __toString()
-    {
-        return 'Marking '.$this->package->getPrettyName().' ('.$this->formatVersion($this->package).') as installed, alias of '.$this->package->getAliasOf()->getPrettyName().' ('.$this->formatVersion($this->package->getAliasOf()).')';
+        return 'Marking <info>'.$this->package->getPrettyName().'</info> (<comment>'.$this->package->getFullPrettyVersion().'</comment>) as installed, alias of <info>'.$this->package->getAliasOf()->getPrettyName().'</info> (<comment>'.$this->package->getAliasOf()->getFullPrettyVersion().'</comment>)';
     }
 }

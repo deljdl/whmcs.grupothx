@@ -186,7 +186,7 @@
                         {$LANG.orderpaymentmethod}
                     </div>
                     <div class="col-xs-6 col-6">
-                        {$paymentmethod}
+                        {$paymentmethod|escape}
                     </div>
                 </div>
             </div>

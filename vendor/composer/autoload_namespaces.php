@@ -6,12 +6,10 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Pimple' => array($vendorDir . '/pimple/pimple/src'),
     'PhpCollection' => array($vendorDir . '/phpcollection/phpcollection/src'),
     'OAuth2\\HttpFoundationBridge' => array($vendorDir . '/bshaffer/oauth2-server-httpfoundation-bridge/src'),
     'OAuth2' => array($vendorDir . '/bshaffer/oauth2-server-php/src'),
-    'Metadata\\' => array($vendorDir . '/jms/metadata/src'),
-    'JMS\\Serializer' => array($vendorDir . '/jms/serializer/src'),
-    'JMS\\' => array($vendorDir . '/jms/parser-lib/src'),
+    'JsonMapper' => array($vendorDir . '/netresearch/jsonmapper/src'),
     'HTMLPurifier' => array($vendorDir . '/ezyang/htmlpurifier/library'),
-    'Google_' => array($vendorDir . '/google/apiclient/src'),
 );

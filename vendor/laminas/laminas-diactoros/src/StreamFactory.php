@@ -1,21 +1,16 @@
 <?php
 
-/**
- * @see       https://github.com/laminas/laminas-diactoros for the canonical source repository
- * @copyright https://github.com/laminas/laminas-diactoros/blob/master/COPYRIGHT.md
- * @license   https://github.com/laminas/laminas-diactoros/blob/master/LICENSE.md New BSD License
- */
-
 declare(strict_types=1);
 
 namespace Laminas\Diactoros;
 
+use Override;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\StreamInterface;
 
+use function assert;
 use function fopen;
 use function fwrite;
-use function get_resource_type;
 use function is_resource;
 use function rewind;
 
@@ -24,9 +19,11 @@ class StreamFactory implements StreamFactoryInterface
     /**
      * {@inheritDoc}
      */
-    public function createStream(string $content = '') : StreamInterface
+    #[Override]
+    public function createStream(string $content = ''): StreamInterface
     {
         $resource = fopen('php://temp', 'r+');
+        assert(is_resource($resource), 'Something is really wrong if PHP failed to open stream in memory');
         fwrite($resource, $content);
         rewind($resource);
 
@@ -36,21 +33,18 @@ class StreamFactory implements StreamFactoryInterface
     /**
      * {@inheritDoc}
      */
-    public function createStreamFromFile(string $file, string $mode = 'r') : StreamInterface
+    #[Override]
+    public function createStreamFromFile(string $filename, string $mode = 'r'): StreamInterface
     {
-        return new Stream($file, $mode);
+        return new Stream($filename, $mode);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function createStreamFromResource($resource) : StreamInterface
+    #[Override]
+    public function createStreamFromResource($resource): StreamInterface
     {
-        if (! is_resource($resource) || 'stream' !== get_resource_type($resource)) {
-            throw new Exception\InvalidArgumentException(
-                'Invalid stream provided; must be a stream resource'
-            );
-        }
         return new Stream($resource);
     }
 }

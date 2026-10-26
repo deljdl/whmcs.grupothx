@@ -100,7 +100,7 @@ jQuery(document).ready(function () {
 
                                         <div id="productDescription"></div>
 
-                                        {if count($productGroup.features) > 0}
+                                        {if $productGroup.features && count($productGroup.features) > 0}
                                             <!-- Start: Includes Container -->
                                             <div class="includes-container">
                                                 <div class="row clearfix">

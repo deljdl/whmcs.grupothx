@@ -6,25 +6,20 @@ use Knp\Menu\ItemInterface;
 use Knp\Menu\Matcher\MatcherInterface;
 use Twig\Environment;
 
+/**
+ * @final since 3.8.0
+ */
 class TwigRenderer implements RendererInterface
 {
     /**
-     * @var Environment
+     * @param array<string, mixed> $defaultOptions
      */
-    private $environment;
-    private $matcher;
-    private $defaultOptions;
-
-    /**
-     * @param Environment      $environment
-     * @param string           $template
-     * @param MatcherInterface $matcher
-     * @param array            $defaultOptions
-     */
-    public function __construct(Environment $environment, $template, MatcherInterface $matcher, array $defaultOptions = [])
-    {
-        $this->environment = $environment;
-        $this->matcher = $matcher;
+    public function __construct(
+        private Environment $environment,
+        string $template,
+        private MatcherInterface $matcher,
+        private array $defaultOptions = []
+    ) {
         $this->defaultOptions = \array_merge([
             'depth' => null,
             'matchingDepth' => null,

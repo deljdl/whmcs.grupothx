@@ -1,11 +1,43 @@
+You can find newer changelog entries in [GitHub releases](https://github.com/composer/spdx-licenses/releases)
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [master]
+## [1.5.10] 2026-04-08
 
-  ...
+  * Changed: updated licenses list to SPDX 3.28.0
+
+## [1.5.9] 2025-05-12
+
+  * Changed: updated licenses list to SPDX 3.26.0
+
+## [1.5.8] 2023-11-20
+
+  * composer.json: Update IRC Support link by @reedy in https://github.com/composer/spdx-licenses/pull/43
+  * chore(spdx-list): update license list to SPDX 3.22 by @GMishx in https://github.com/composer/spdx-licenses/pull/44
+
+## [1.5.7] 2022-05-23
+
+  * Changed: updated licenses list to SPDX 3.17
+  * Changed: `${var}` PHP 8.2 deprecations resolved
+
+## [1.5.6] 2021-11-18
+
+  * Changed: updated licenses list to SPDX 3.15
+
+## [1.5.5] 2020-12-03
+
+  * Changed: updated licenses list to SPDX 3.11
+
+## [1.5.4] 2020-07-15
+
+  * Changed: updated licenses list to SPDX 3.9
+
+## [1.5.3] 2020-02-14
+
+  * Changed: updated licenses list to SPDX 3.8
 
 ## [1.5.2] 2019-07-29
 
@@ -77,7 +109,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     - Classname: `Updater` -> `SpdxLicensesUpdater`
   * Changed: validation via regex implementation instead of lexer.
 
-[master]: https://github.com/composer/spdx-licenses/compare/1.5.2...master
+[main]: https://github.com/composer/spdx-licenses/compare/1.5.10...main
+[1.5.10]: https://github.com/composer/spdx-licenses/compare/1.5.9...1.5.10
+[1.5.9]: https://github.com/composer/spdx-licenses/compare/1.5.8...1.5.9
+[1.5.8]: https://github.com/composer/spdx-licenses/compare/1.5.7...1.5.8
+[1.5.7]: https://github.com/composer/spdx-licenses/compare/1.5.6...1.5.7
+[1.5.6]: https://github.com/composer/spdx-licenses/compare/1.5.5...1.5.6
+[1.5.5]: https://github.com/composer/spdx-licenses/compare/1.5.4...1.5.5
+[1.5.4]: https://github.com/composer/spdx-licenses/compare/1.5.3...1.5.4
+[1.5.3]: https://github.com/composer/spdx-licenses/compare/1.5.2...1.5.3
 [1.5.2]: https://github.com/composer/spdx-licenses/compare/1.5.1...1.5.2
 [1.5.1]: https://github.com/composer/spdx-licenses/compare/1.5.0...1.5.1
 [1.5.0]: https://github.com/composer/spdx-licenses/compare/1.4.0...1.5.0

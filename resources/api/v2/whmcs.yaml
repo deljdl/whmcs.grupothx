@@ -1,8 +1,17 @@
 openapi: 3.0.3
 info:
   title: WHMCS API
-  description: WHMCS API
-  version: 2.0.0
+  description: |-
+    WHMCS API 2.1.0 adds end-to-end checkout using the API. The `POST /cart/{cart_id}/checkout` endpoint accepts a request body that places the order directly instead of redirecting to `cart.php`. It also supports a headless payment mode, which returns a gateway payment session, which your integration renders itself, instead of a redirect.
+
+    Six endpoints support this flow:
+    - `GET /user/invoices` and `GET /user/invoices/{invoice_id}` poll an authenticated client's invoices and issue a payment hand-off link.
+    - `POST /user/invoices/{invoice_id}/payment-session` and `POST /user/invoices/{invoice_id}/payment-session/confirm` pay an invoice that already exists, such as a renewal, without a redirect.
+    - `GET /user/paymethods` and `DELETE /user/paymethods/{paymethod_id}` let your integration offer a client a saved payment method or remove one.
+
+    This API never handles card data.
+
+  version: 2.1.0
 servers:
   - url: '/api/v2'
 
@@ -50,9 +59,55 @@ paths:
         default:
           $ref: '#/components/responses/GeneralError'
 
-  /currencies:
+  /countries:
+    get:
+      description: Retrieve all supported countries.
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Country'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /countries/{country_code}:
+    get:
+      description: Retrieve all supported states for a specific country.
+      parameters:
+        - $ref: "#/components/parameters/country_code"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/Country'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /billing/currencies:
     get:
       description: Retrieve all supported currencies.
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
       responses:
         200:
           description: Success
@@ -70,9 +125,12 @@ paths:
         default:
           $ref: '#/components/responses/GeneralError'
 
-  /cycles:
+  /billing/cycles:
     get:
-      description: List recurring cycles.
+      description: List billing cycles.
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
       responses:
         200:
           description: Success
@@ -90,9 +148,299 @@ paths:
         default:
           $ref: '#/components/responses/GeneralError'
 
+  /store/billing/gateways:
+    get:
+      description: List payment methods.
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/PaymentGateway'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /store/domain/spotlight:
+    get:
+      description: Retrieve a domain availability for spotlight TLDs.
+      parameters:
+        - $ref: "#/components/parameters/domain"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  meta:
+                    $ref: '#/components/schemas/Meta'
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/DomainStatus'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /store/domain/suggestions:
+    get:
+      description: List the domains suggestions options.
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  meta:
+                    allOf:
+                      - $ref: '#/components/schemas/Meta'
+                      - example: []
+                  data:
+                    $ref: '#/components/schemas/LookupProviderSuggestionOption'
+        default:
+          $ref: '#/components/responses/GeneralError'
+    post:
+      description: Query a list of domain suggestions.
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              anyOf:
+                - $ref: '#/components/schemas/DomainSuggestionRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  meta:
+                    $ref: '#/components/schemas/Meta'
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/DomainStatus'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /store/domain/availability:
+    get:
+      description: Retrieve the registration eligibility for a domain.
+      parameters:
+        - $ref: "#/components/parameters/domain"
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  meta:
+                    allOf:
+                      - $ref: '#/components/schemas/Meta'
+                      - example: []
+                  data:
+                    type: object
+                    properties:
+                      is_domain_available:
+                        type: boolean
+                        description: True if the requested domain is available for registration
+                      is_tld_available:
+                        type: boolean
+                        description: False if the TLD is not configured in the domain settings
+                      domain:
+                        $ref: '#/components/schemas/DomainStatus'
+        501:
+          $ref: '#/components/responses/NotImplemented'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /store/domain/pricing:
+    get:
+      description: Retrieve all TLD pricing.
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                properties:
+                  meta:
+                    $ref: '#/components/schemas/Meta'
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/TldPricing'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /store/domain/pricing/{tld_id}:
+    get:
+      description: Retrieve a single TLD's pricing.
+      parameters:
+        - $ref: "#/components/parameters/tld_id"
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                properties:
+                  meta:
+                    allOf:
+                      - $ref: '#/components/schemas/Meta'
+                      - example: []
+                  data:
+                    $ref: '#/components/schemas/TldPricing'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /store/domain/pricing/spotlight:
+    get:
+      description: Retrieve pricing for spotlight TLDs.
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                properties:
+                  meta:
+                    $ref: '#/components/schemas/Meta'
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/TldPricing'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /store/domain/idnlanguages:
+    get:
+      description: Retrieve supported IDN languages.
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: A list of all supported IDN languages.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  meta:
+                    $ref: '#/components/schemas/Meta'
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/IdnLanguage'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /store/domain/additionalfields:
+    get:
+      description: Retrieve all additional fields for a specific TLD.
+      parameters:
+        - $ref: "#/components/parameters/tld"
+      responses:
+        200:
+          description: Retrieve all additional fields for a specific TLD.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  meta:
+                    allOf:
+                      - $ref: '#/components/schemas/Meta'
+                      - example: []
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/AdditionalField'
+
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /store/products:
+    get:
+      description: Retrieve all products.
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: A list of all products.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ProductPricing'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /store/products/{product_id}:
+    get:
+      description: Retrieve a product.
+      parameters:
+        - $ref: "#/components/parameters/product_id"
+      responses:
+        200:
+          description: Properties of a product.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/ProductPricing'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
   /store/products/groups:
     get:
       description: Retrieve all product groups.
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
       responses:
         200:
           description: A list of all product groups.
@@ -105,7 +453,7 @@ paths:
                   data:
                     type: array
                     items:
-                      $ref: '#/components/schemas/ProductGroup'
+                      $ref: '#/components/schemas/Group'
 
         default:
           $ref: '#/components/responses/GeneralError'
@@ -115,6 +463,8 @@ paths:
       description: Retrieve a specific product group's data.
       parameters:
         - $ref: "#/components/parameters/group_id"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
       responses:
         200:
           description: A list of all product groups.
@@ -142,6 +492,8 @@ paths:
       description: Retrieve addons for a specific product.
       parameters:
         - $ref: "#/components/parameters/product_id"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
       responses:
         200:
           description: A list of all product addons.
@@ -154,7 +506,7 @@ paths:
                   data:
                     type: array
                     items:
-                      $ref: '#/components/schemas/Addon'
+                      $ref: '#/components/schemas/AddonPricing'
 
         404:
           $ref: '#/components/responses/NotFound'
@@ -162,6 +514,106 @@ paths:
         default:
           $ref: '#/components/responses/GeneralError'
 
+  /store/products/{product_id}/customfields:
+    get:
+      description: Retrieve custom fields for a specific product.
+      parameters:
+        - $ref: "#/components/parameters/product_id"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: A list of all product custom fields.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/CustomField'
+        404:
+          $ref: '#/components/responses/NotFound'
+
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /store/products/{product_id}/configoptions:
+    get:
+      description: Retrieve configurable options for a specific product.
+      parameters:
+        - $ref: "#/components/parameters/product_id"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: A list of all product configurable options.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ConfigOption'
+        404:
+          $ref: '#/components/responses/NotFound'
+
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /store/products/{product_id}/cross-sells:
+    get:
+      description: Retrieve all cross-sell products.
+      parameters:
+        - $ref: "#/components/parameters/product_id"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: A list of all cross-sell products.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ProductPricing'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /store/bundles/groups/{group_id}:
+    get:
+      description: Retrieve a specific product group's bundle data.
+      parameters:
+        - $ref: "#/components/parameters/group_id"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: A list of all group bundles.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: object
+                    allOf:
+                      - $ref: '#/components/schemas/BundleGroup'
+        404:
+          $ref: '#/components/responses/NotFound'
+
+        default:
+          $ref: '#/components/responses/GeneralError'
   /cart:
     post:
       description: Create a new cart.
@@ -181,6 +633,9 @@ paths:
 
     get:
       description: List all carts associated with logged-in user.
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
       responses:
         200:
           description: All of the carts for the logged-in user.
@@ -198,14 +653,16 @@ paths:
         default:
             $ref: '#/components/responses/GeneralError'
 
-  /cart/{cart_id}/totals:
+  /cart/{cart_id}:
     get:
-      description: Get cart totals.
+      description: Get cart information.
       parameters:
         - $ref: "#/components/parameters/cart_id"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
       responses:
         200:
-          description: The cart total.
+          description: The cart data.
           content:
             application/json:
               schema:
@@ -213,7 +670,34 @@ paths:
                   - data
                 properties:
                   data:
-                    $ref: '#/components/schemas/CartTotal'
+                    $ref: '#/components/schemas/CartContents'
+        404:
+          $ref: '#/components/responses/NotFound'
+
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /cart/{cart_id}/validate:
+    post:
+      description: Validate the content of a given cart.
+      parameters:
+        - $ref: "#/components/parameters/cart_id"
+      responses:
+        200:
+          description: List of errors if any.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      validation_errors:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/CartItemValidationError'
         404:
           $ref: '#/components/responses/NotFound'
 
@@ -221,6 +705,40 @@ paths:
           $ref: '#/components/responses/GeneralError'
 
   /cart/{cart_id}/items/{item_id}:
+    post:
+      description: Update an item in the cart.
+      parameters:
+        - $ref: "#/components/parameters/cart_id"
+        - $ref: "#/components/parameters/cart_item_id"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              anyOf:
+                - $ref: '#/components/schemas/CartItemTypeDomain'
+                - $ref: '#/components/schemas/CartItemTypeProductEdit'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/CartContents'
+        404:
+          $ref: '#/components/responses/NotFound'
+        422:
+          description: Invalid Item Id.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        default:
+          $ref: '#/components/responses/GeneralError'
     delete:
       description: Delete an item from the cart.
       parameters:
@@ -236,17 +754,28 @@ paths:
                   - data
                 properties:
                   data:
-                    $ref: '#/components/schemas/CartTotal'
+                    $ref: '#/components/schemas/CartContents'
         404:
           $ref: '#/components/responses/NotFound'
         default:
           $ref: '#/components/responses/GeneralError'
 
-  /cart/{cart_id}/items:
-    get:
-      description: Get cart items.
+  /cart/{cart_id}/items/{item_id}/addon:
+    post:
+      description: Associate product addons to an existing cart item.
       parameters:
         - $ref: "#/components/parameters/cart_id"
+        - $ref: "#/components/parameters/cart_item_id"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                addons:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/CartItemTypeProductAddonRequest'
       responses:
         200:
           description: Success
@@ -257,15 +786,19 @@ paths:
                   - data
                 properties:
                   data:
-                    type: array
-                    items:
-                      anyOf:
-                        - $ref: '#/components/schemas/CartItemTypeProduct'
+                    $ref: '#/components/schemas/CartContents'
         404:
           $ref: '#/components/responses/NotFound'
+        422:
+          description: Invalid Product Id.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
         default:
           $ref: '#/components/responses/GeneralError'
 
+  /cart/{cart_id}/items:
     post:
       description: Add one or more items to the cart.
       parameters:
@@ -280,7 +813,13 @@ paths:
                   type: array
                   items:
                     anyOf:
-                      - $ref: '#/components/schemas/CartItemTypeProduct'
+                      - $ref: '#/components/schemas/CartItemTypeProductRequest'
+                      - $ref: '#/components/schemas/CartItemTypeServiceAddonRequest'
+                      - $ref: '#/components/schemas/CartItemTypeBundleRequest'
+                      - $ref: '#/components/schemas/CartItemTypeDomainRegisterRequest'
+                      - $ref: '#/components/schemas/CartItemTypeDomainTransferRequest'
+                      - $ref: '#/components/schemas/CartItemTypeDomainRenewalRequest'
+                      - $ref: '#/components/schemas/CartItemTypeServiceRenewalRequest'
       responses:
         200:
           description: Success
@@ -291,7 +830,7 @@ paths:
                   - data
                 properties:
                   data:
-                    $ref: '#/components/schemas/CartTotal'
+                    $ref: '#/components/schemas/CartContents'
         404:
           $ref: '#/components/responses/NotFound'
         default:
@@ -311,17 +850,18 @@ paths:
                   - data
                 properties:
                   data:
-                    $ref: '#/components/schemas/CartTotal'
+                    $ref: '#/components/schemas/CartContents'
         404:
           $ref: '#/components/responses/NotFound'
         default:
           $ref: '#/components/responses/GeneralError'
 
-  /cart/{cart_id}/promotion:
-    get:
-      description: Get the currently-applied promotion code.
+  /cart/{cart_id}/items/{item_id}/addons:
+    delete:
+      description: Delete all addons from a product item in the cart.
       parameters:
         - $ref: "#/components/parameters/cart_id"
+        - $ref: "#/components/parameters/cart_item_id"
       responses:
         200:
           description: Success
@@ -332,7 +872,382 @@ paths:
                   - data
                 properties:
                   data:
-                    $ref: '#/components/schemas/Promotion'
+                    $ref: '#/components/schemas/CartContents'
+        404:
+          $ref: '#/components/responses/NotFound'
+        422:
+          description: Invalid Product ID.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /cart/{cart_id}/items/{item_id}/customfields:
+    delete:
+      description: Delete all custom fields from a product item in the cart.
+      parameters:
+        - $ref: "#/components/parameters/cart_id"
+        - $ref: "#/components/parameters/cart_item_id"
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/CartContents'
+        404:
+          $ref: '#/components/responses/NotFound'
+        422:
+          description: Invalid Product ID.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        default:
+          $ref: '#/components/responses/GeneralError'
+    post:
+      description: Associate product custom fields to an existing cart item.
+      parameters:
+        - $ref: "#/components/parameters/cart_id"
+        - $ref: "#/components/parameters/cart_item_id"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                custom_fields:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/CartItemTypeProductCustomFieldRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/CartContents'
+        404:
+          $ref: '#/components/responses/NotFound'
+        422:
+          description: Invalid Product ID.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /cart/{cart_id}/items/{item_id}/domain:
+    post:
+      description: Associate domain name to an existing cart item.
+      parameters:
+        - $ref: "#/components/parameters/cart_id"
+        - $ref: "#/components/parameters/cart_item_id"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Domain'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/CartContents'
+        404:
+          $ref: '#/components/responses/NotFound'
+        422:
+          description: Invalid Product ID.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /cart/{cart_id}/items/{item_id}/customfields/{custom_field_id}:
+    get:
+      description: Retrieve a specific custom field from an existing cart item.
+      parameters:
+        - $ref: "#/components/parameters/cart_id"
+        - $ref: "#/components/parameters/cart_item_id"
+        - $ref: "#/components/parameters/custom_field_id"
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/CartItemCustomField'
+        404:
+          $ref: '#/components/responses/NotFound'
+        422:
+          description: Invalid Product ID.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        default:
+          $ref: '#/components/responses/GeneralError'
+    delete:
+      description: Delete a custom field from a product item in the cart.
+      parameters:
+        - $ref: "#/components/parameters/cart_id"
+        - $ref: "#/components/parameters/cart_item_id"
+        - $ref: "#/components/parameters/custom_field_id"
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/CartContents'
+        404:
+          $ref: '#/components/responses/NotFound'
+        422:
+          description: Invalid Product ID.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        default:
+          $ref: '#/components/responses/GeneralError'
+    post:
+      description: Update a specific custom field value of an existing cart item.
+      parameters:
+        - $ref: "#/components/parameters/cart_id"
+        - $ref: "#/components/parameters/cart_item_id"
+        - $ref: "#/components/parameters/custom_field_id"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                value:
+                  $ref: '#/components/schemas/CustomFieldValueType'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/CartContents'
+        404:
+          $ref: '#/components/responses/NotFound'
+        422:
+          description: Invalid Product ID.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /cart/{cart_id}/items/{item_id}/configoptions:
+    delete:
+      description: Reset all configuration options for a product item in the cart to the default values.
+      parameters:
+        - $ref: "#/components/parameters/cart_id"
+        - $ref: "#/components/parameters/cart_item_id"
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/CartContents'
+        422:
+          description: Invalid Product ID.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        default:
+          $ref: '#/components/responses/GeneralError'
+    post:
+      description: Associate product configuration options to an existing cart item.
+      parameters:
+        - $ref: "#/components/parameters/cart_id"
+        - $ref: "#/components/parameters/cart_item_id"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                config_options:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/CartItemTypeProductConfigOptionRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/CartContents'
+        404:
+          $ref: '#/components/responses/NotFound'
+        422:
+          description: Invalid Product ID.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /cart/{cart_id}/items/{item_id}/configoptions/{config_option_id}:
+    get:
+      description: Retrieve a specific configuration option from a product item in the cart.
+      parameters:
+        - $ref: "#/components/parameters/cart_id"
+        - $ref: "#/components/parameters/cart_item_id"
+        - $ref: "#/components/parameters/config_option_id"
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/CartItemTypeProductConfigOption'
+        404:
+          $ref: '#/components/responses/NotFound'
+        422:
+          description: Invalid Product ID.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        default:
+          $ref: '#/components/responses/GeneralError'
+    delete:
+      description: Reset a configuration option for a product item in the cart to the default value.
+      parameters:
+        - $ref: "#/components/parameters/cart_id"
+        - $ref: "#/components/parameters/cart_item_id"
+        - $ref: "#/components/parameters/config_option_id"
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/CartContents'
+        404:
+          $ref: '#/components/responses/NotFound'
+        422:
+          description: Invalid Product ID.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        default:
+          $ref: '#/components/responses/GeneralError'
+    post:
+      description: Add/Update a specific configuration option value of an existing cart item.
+      parameters:
+        - $ref: "#/components/parameters/cart_id"
+        - $ref: "#/components/parameters/cart_item_id"
+        - $ref: "#/components/parameters/config_option_id"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                value:
+                  $ref: '#/components/schemas/ConfigOptionValueType'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/CartContents'
+        404:
+          $ref: '#/components/responses/NotFound'
+        422:
+          description: Invalid Product ID.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /cart/{cart_id}/promotions:
+    get:
+      description: Get the currently-applied promotion codes.
+      parameters:
+        - $ref: "#/components/parameters/cart_id"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Promotion'
         404:
           $ref: '#/components/responses/NotFound'
         default:
@@ -357,7 +1272,7 @@ paths:
                   - data
                 properties:
                   data:
-                    $ref: '#/components/schemas/CartTotal'
+                    $ref: '#/components/schemas/CartContents'
         422:
           description: Invalid Promotion Code
           content:
@@ -380,15 +1295,15 @@ paths:
                   - data
                 properties:
                   data:
-                    $ref: '#/components/schemas/CartTotal'
+                    $ref: '#/components/schemas/CartContents'
         404:
           $ref: '#/components/responses/NotFound'
         default:
           $ref: '#/components/responses/GeneralError'
 
-  /cart/{cart_id}/checkout:
-    post:
-      description: Begin the checkout process.
+  /cart/{cart_id}/counter:
+    get:
+      description: Get the total number of items in the cart.
       parameters:
         - $ref: "#/components/parameters/cart_id"
       responses:
@@ -403,13 +1318,247 @@ paths:
                   data:
                     type: object
                     required:
-                      - url
+                      - counter
                     properties:
-                      url:
-                        type: string
-                        example: https://example.com/
+                      counter:
+                        type: integer
+                        example: 3
+                        description: >
+                          The total number of items in the cart (which is not the same as the number of
+                          products/services entities in the cart) because a product's addon can be
+                          considered a separate item even if the addon is a part of the product entity.
         404:
           $ref: '#/components/responses/NotFound'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /cart/{cart_id}/upgrades/{upgrade_index}:
+    delete:
+      description: Remove an upgrade from the cart by its index.
+      parameters:
+        - $ref: "#/components/parameters/cart_id"
+        - name: upgrade_index
+          in: path
+          required: true
+          schema:
+            type: integer
+            minimum: 0
+          description: The zero-based index of the upgrade to remove.
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/CartContents'
+        404:
+          $ref: '#/components/responses/NotFound'
+        422:
+          description: Invalid upgrade index.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /cart/{cart_id}/upgrades/{upgrade_index}/quantity:
+    post:
+      description: >
+        Update the quantity for an upgrade entry in the cart. The new quantity must be
+        greater than zero and must not be lower than the upgrade's minimum quantity.
+      parameters:
+        - $ref: "#/components/parameters/cart_id"
+        - name: upgrade_index
+          in: path
+          required: true
+          schema:
+            type: integer
+            minimum: 0
+          description: The zero-based index of the upgrade to update.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - quantity
+              properties:
+                quantity:
+                  type: integer
+                  minimum: 1
+                  description: The new quantity for the upgrade.
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/CartContents'
+        404:
+          $ref: '#/components/responses/NotFound'
+        422:
+          description: Invalid upgrade index or quantity.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /cart/{cart_id}/geolocation:
+    post:
+      description: >
+        Set the cart's geolocation used for tax calculation when the user/client is not authenticated.
+        When authenticated, the client's billing address will be used.
+      parameters:
+        - $ref: "#/components/parameters/cart_id"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GeoLocation'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/CartContents'
+        404:
+          $ref: '#/components/responses/NotFound'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /cart/{cart_id}/checkout:
+    post:
+      description: |-
+        Begin the checkout process.
+
+        The request body determines the behavior:
+
+        - An empty or omitted body preserves the legacy `cart.php` redirect response (no changes).
+        - A non-empty JSON body runs the gateway-agnostic checkout: it places the order, resolves or registers the client, screens for fraud, and dispatches to the payment strategy for the gateway.
+
+        The payment strategies are:
+        - Already paid.
+        - Fraud hold.
+        - Nothing payable, when the order created no invoice.
+        - Stored-token capture.
+        - Offline or pending.
+        - A headless payment session, when the request sets the `payment.mode` value to `headless` and the gateway supports it.
+        - A hand-off that requires the shopper to complete payment using the returned `next_action.url` value.
+      parameters:
+        - $ref: "#/components/parameters/cart_id"
+      requestBody:
+        required: false
+        description: |-
+          Omit the body entirely or send `{}` for the legacy redirect behavior. See the `CheckoutRequestBody` object for the full property reference.
+
+          This body is intentionally not declared as a validated schema, only as examples. The empty-body legacy contract must keep working even when a caller sends a zero-byte body with a `Content-Type: application/json` header, and the spec-validation library treats a zero-byte body as invalid JSON whenever a requestBody `schema` exists for an operation, regardless of whether the `required` value is `false`.
+
+          The `CheckoutRequestBody` object in the `components/schemas` section holds the canonical, reusable definition of these properties. Because the operation does not declare it as its `requestBody` value, it ignores an unknown property instead of rejecting it.
+        content:
+          application/json:
+            examples:
+              legacyEmptyBody:
+                summary: "Empty body: legacy redirect, unchanged from 2.0.0"
+                value: {}
+              existingClientCheckout:
+                summary: Checkout as the already-authenticated caller
+                value:
+                  paymentmethod: stripe_dynamic
+              newCustomerCheckout:
+                summary: Checkout while registering a new client
+                value:
+                  paymentmethod: paypal
+                  customer:
+                    firstname: Jane
+                    lastname: Doe
+                    email: jane.doe@example.com
+                    password: S7r0ng!Passw0rd#2026
+                    country: GB
+      responses:
+        200:
+          description: |-
+            Success. An empty request body returns the legacy redirect `url` value. A non-empty body returns the full `CheckoutResult` object when the checkout is finished and needs nothing further from you: either it resolved as immediately paid, or it created no invoice and so has nothing payable.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    oneOf:
+                      - type: object
+                        required:
+                          - url
+                        properties:
+                          url:
+                            type: string
+                            example: https://example.com/
+                      - $ref: '#/components/schemas/CheckoutResult'
+        202:
+          description: |-
+            Accepted. The checkout completed but it requires follow-up: a payment hand-off, a fraud hold, or an offline or pending gateway. A checkout with nothing to pay needs no follow-up and answers `200` instead.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/CheckoutResult'
+        400:
+          description: Cart validation failure
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      validation_errors:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/CartItemValidationError'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        404:
+          $ref: '#/components/responses/NotFound'
+        409:
+          $ref: '#/components/responses/Conflict'
+        422:
+          description: |-
+            Invalid checkout request.
+
+            This status indicates one of the following scenarios:
+
+            - An inactive or unknown `paymentmethod` value.
+            - An invalid promotion code.
+            - A structurally impossible client and payment combination (for example, a new customer referencing a stored payment method).
+            - A `payment.mode` value of `headless`.
+              - Before order creation, if the gateway can neither start a session nor capture a supplied `paymethod_id` value, the system does not create an order or an invoice.
+              - After order creation, if no payment session can be offered — a supported gateway fails to start one, or a stored `paymethod_id` value is declined and no session can then be minted — the order and its invoice already exist, and the invoice remains payable through the `GET /user/invoices/{invoice_id}` endpoint.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
         default:
           $ref: '#/components/responses/GeneralError'
 
@@ -446,15 +1595,14 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/User'
-
-        404:
-          $ref: '#/components/responses/NotFound'
-        412:
-          description: A second authentication factor is required to finish login.
+        202:
+          description: You must provide a second authentication factor to login.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/SecondFactorChallenge'
+        401:
+          $ref: '#/components/responses/Unauthorized'
         default:
           $ref: '#/components/responses/GeneralError'
 
@@ -463,8 +1611,6 @@ paths:
       responses:
         200:
           description: Success
-        404:
-          $ref: '#/components/responses/NotFound'
         default:
           $ref: '#/components/responses/GeneralError'
 
@@ -495,9 +1641,10 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/User'
-
+        401:
+          $ref: '#/components/responses/Unauthorized'
         412:
-          description: The provided second factor is invalid.
+          description: You provided an invalid second factor.
           content:
             application/json:
               schema:
@@ -508,6 +1655,9 @@ paths:
   /user/clients:
     get:
       description: List the user's associated clients.
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
       responses:
         200:
           description: Success
@@ -524,19 +1674,867 @@ paths:
         default:
           $ref: '#/components/responses/GeneralError'
 
-  /user/session/client/{client_id}:
+  /user/session/client/{client_uuid}:
     put:
       description: Select an active client for the logged-in user.
       parameters:
-        - $ref: "#/components/parameters/client_id"
+        - $ref: "#/components/parameters/client_uuid"
       responses:
         200:
           description: Success
         default:
           $ref: '#/components/responses/GeneralError'
 
+  /user/services:
+    get:
+      description: Retrieve all services for the authenticated client.
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: A list of all services
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Service'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /user/services/{service_id}:
+    get:
+      description: Retrieve a specific service for the authenticated client.
+      parameters:
+        - $ref: "#/components/parameters/service_id"
+      responses:
+        200:
+          description: Service information including related components such as addons
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: object
+                    oneOf:
+                      - $ref: '#/components/schemas/Service'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /user/services/{service_id}/addons:
+    get:
+      description: Retrieve purchased addons for a specific service.
+      parameters:
+        - $ref: "#/components/parameters/service_id"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: A list of all addons of a specific service.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ServiceAddon'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /user/services/{service_id}/addons/{service_addon_id}:
+    get:
+      description: Retrieve a single purchased addon for a specific service.
+      parameters:
+        - $ref: "#/components/parameters/service_id"
+        - $ref: "#/components/parameters/service_addon_id"
+      responses:
+        200:
+          description: An addon of a specific service.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/ServiceAddon'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /user/services/{service_id}/customfields:
+    get:
+      description: Retrieve custom fields for a specific service.
+      parameters:
+        - $ref: "#/components/parameters/service_id"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: A list of all custom fields of a specific service.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ServiceCustomField'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /user/services/{service_id}/customfields/{service_customfield_id}:
+    get:
+      description: Retrieve a single custom field for a specific service.
+      parameters:
+        - $ref: "#/components/parameters/service_id"
+        - $ref: "#/components/parameters/service_customfield_id"
+      responses:
+        200:
+          description: A custom field of a specific service.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/ServiceCustomField'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /user/services/{service_id}/configoptions:
+    get:
+      description: Retrieve selected configurable options for a specific service.
+      parameters:
+        - $ref: "#/components/parameters/service_id"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: A list of selected configurable options of a specific service.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ServiceConfigOption'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /user/services/{service_id}/configoptions/{service_configoption_id}:
+    get:
+      description: Retrieve a single configuration option for a specific service.
+      parameters:
+        - $ref: "#/components/parameters/service_id"
+        - $ref: "#/components/parameters/service_configoption_id"
+      responses:
+        200:
+          description: A configuration option of a specific service.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/ServiceConfigOption'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /user/domains:
+    get:
+      description: Retrieve all domains for the authenticated client.
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: A list of all domains
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/DomainRenewal'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /user/domains/{domain_id}:
+    get:
+      description: Retrieve a specific domain for the authenticated client.
+      parameters:
+        - $ref: "#/components/parameters/domain_id"
+      responses:
+        200:
+          description: Domain information including renewal information
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: object
+                    oneOf:
+                      - $ref: '#/components/schemas/DomainRenewal'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /user/invoices:
+    get:
+      description: Retrieve all invoices for the authenticated client.
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: A list of all invoices.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Invoice'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        403:
+          $ref: '#/components/responses/Forbidden'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /user/invoices/{invoice_id}:
+    get:
+      description: |-
+        Retrieve a specific invoice for the authenticated client.
+
+        Poll this endpoint while a payment clears. Payment is complete only when the status is `Paid`. A `Payment Pending` invoice (an in-progress ACH or SEPA direct debit, for example) has not completed.
+
+        To hand the shopper off to a WHMCS payment page, use the `POST /user/invoices/{invoice_id}/payment-link` endpoint.
+      parameters:
+        - $ref: "#/components/parameters/invoice_id"
+      responses:
+        200:
+          description: |-
+            Invoice information.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/Invoice'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        403:
+          $ref: '#/components/responses/Forbidden'
+        404:
+          $ref: '#/components/responses/NotFound'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /user/invoices/{invoice_id}/payment-link:
+    post:
+      description: |-
+        Issue a single-use link that hands the shopper off to a WHMCS payment page. Each call issues a new link.
+      parameters:
+        - $ref: "#/components/parameters/invoice_id"
+      responses:
+        200:
+          description: |-
+            The hand-off link. The `url` value is single-use and short-lived.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: object
+                    required:
+                      - next_action
+                    properties:
+                      next_action:
+                        $ref: '#/components/schemas/NextActionRedirect'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        403:
+          $ref: '#/components/responses/Forbidden'
+        404:
+          $ref: '#/components/responses/NotFound'
+        422:
+          description: |-
+            The invoice is not awaiting payment. Only `Unpaid` and `Collections` status invoices can be handed off.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        429:
+          description: |-
+            Too many payment link requests have occurred (more than 30 within five minutes).
+
+            The system counts these requests per client IP address. Because of this, integrations that proxy shoppers server-side will reach this limit quickly.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /user/invoices/{invoice_id}/payment-session:
+    post:
+      description: |-
+        Start a headless payment for an invoice that already exists, without sending the shopper to a WHMCS payment page. Instead, this renders and confirms the payment from within your integration. A payment method may still redirect the shopper to their bank and then back to a URL that you own (see **Redirect methods** below).
+
+        **Behavior**
+        - This endpoint returns the session as the `data.payment_session` value. The `POST /cart/{cart_id}/checkout` endpoint only returns the same `PaymentSession` object as the `data.payment.next_action.session` value when its `next_action.type` value is `payment_session`.
+        - Issuing a session is not a payment. This endpoint does not place the order, change the invoice status, or record a transaction, so you can safely abandon and repeat the call.
+        - Unlike checkout, this endpoint refuses a gateway that cannot handle headless payment with a `422` error instead of returning a redirect. To avoid this, check the `supports_headless_payment_session` value on the `GET /store/billing/gateways` endpoint in advance.
+
+        **Choosing a Gateway**
+        This endpoint uses the invoice's own `payment_method` value unless you provide a `gateway` value, which pays with that gateway instead and records it on the invoice.
+
+        **Redirect Methods**
+        With the `stripe_dynamic` gateway, an issued session offers the same redirect methods that WHMCS's own invoice payment pages offer, such as iDEAL or Bancontact, where the merchant enabled them. A session that the `POST /cart/{cart_id}/checkout` endpoint issues does not offer them, because the order form does not.
+
+        - For sessions that include a redirect, give the SDK a return URL of your own when you confirm. The shopper returns to your own page, not to WHMCS.
+        - Redirect methods update the invoice status asynchronously. As a result, expect the invoice to still be unpaid when they return.
+
+        **Do Not Trust Input from the Return URL**
+        Never mark an order paid, grant access, or provision a service because a `redirect_status` value is `succeeded`. Instead, confirm the invoice status with WHMCS directly.
+
+        - For more information, see the `settlement` value's description on the `PaymentSession` schema.
+
+        Whether webhook handling recovers a confirmation you never make depends on the gateway, so read the per-gateway behavior on the confirmation endpoint before relying on it. Where it does apply, treat it as a backstop rather than as your settlement path, because it reports no outcome to your integration.
+      parameters:
+        - $ref: "#/components/parameters/invoice_id"
+      requestBody:
+        required: false
+        description: |-
+          Optional. Omit the body entirely or send `{}` to pay with the gateway the invoice already lists. See the `InvoicePaymentSessionRequestBody` object for the property reference.
+
+          This body is intentionally not declared as a validated schema, only as examples. The spec-validation library treats a zero-byte body as invalid JSON whenever a `requestBody` schema exists, regardless of whether the `required` value is `false`, and paying with the invoice's own gateway does not require a body.
+        content:
+          application/json:
+            examples:
+              invoiceOwnGateway:
+                summary: "Empty body: pay with the gateway the invoice already lists."
+                value: {}
+              namedGateway:
+                summary: Pay with another gateway and record it on the invoice.
+                value:
+                  gateway: stripe_dynamic
+      responses:
+        200:
+          description: |-
+            The session to render. Pass the `params` value to the SDK that the `provider` value lists, and then follow the `settlement` value.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: object
+                    required:
+                      - payment_session
+                    properties:
+                      payment_session:
+                        $ref: '#/components/schemas/PaymentSession'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        403:
+          $ref: '#/components/responses/Forbidden'
+        404:
+          $ref: '#/components/responses/NotFound'
+        422:
+          description: |-
+            The system cannot issue a session for this invoice due to one of the following reasons:
+
+            - The invoice is not awaiting payment. Only `Unpaid` and `Collections` status invoices are collectable. The `Payment Pending` status is excluded to avoid duplicating in-progress payments.
+            - The gateway cannot start a headless session.
+            - A named gateway cannot pay this invoice.
+            - The system refused the gateway because the `gateway` value was not a string.
+            - The body was not valid JSON.
+            - There is no `gateway` value and the invoice does not include a `payment_method` value. Set a `gateway` value to issue the session.
+
+            The system will not return a hand-off `url` value and no invoice changes will occur.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        429:
+          description: |-
+            Too many payment session requests have occurred (more than 30 within five minutes). This error prevents unbounded callers from exceeding the merchant's API quota, which could block valid orders.
+
+            The system counts these requests per client IP address. Because of this, integrations that proxy shoppers server-side will reach this limit quickly.
+
+            The system will not return a hand-off `url` value and no invoice changes will occur.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /user/invoices/{invoice_id}/payment-session/confirm:
+    post:
+      description: |-
+        Settle a headless payment the buyer has approved in your own integration. You **must** call this for any payment session where the `settlement` value is `sync_confirm`.
+
+        Behavior varies for each payment gateway:
+        - **PayPal** confirmation captures the approved order. If you skip it, the buyer's approval expires uncaptured, no payment occurs, and no webhook recovers it.
+        - **Stripe** confirmation records payment that has already occurred. If you skip it, the `charge.succeeded` webhook settles the payment.
+
+        The `payment.status` value has four outcomes:
+
+        - `paid` — The gateway accepted the payment.
+        - `pending` — The gateway took the payment but has not settled it (a PayPal `PENDING` capture, or a Stripe payment method still clearing, such as a bank debit or a redirect method) and the status is `Payment Pending`. Keep polling the `GET /user/invoices/{invoice_id}` endpoint.
+        - `declined` — The gateway declined the payment method. Present another payment method.
+        - `failed` — The attempt did not complete. Try again.
+
+      parameters:
+        - $ref: "#/components/parameters/invoice_id"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - provider_reference
+              properties:
+                provider_reference:
+                  type: string
+                  description: |-
+                    The gateway's identifier for the approved payment:
+                    - For PayPal, this is the `onApprove` order ID.
+                    - For Stripe, this is the `params.paymentIntentId` value from the payment session.
+
+                    WHMCS passes this identifier to the gateway without reading it.
+                  example: pi_3Ph2M2HeadlessIntent
+      responses:
+        200:
+          description: |-
+            The gateway's outcome.
+
+            A `200` status indicates that the system attempted confirmation and received a response, **not** that payment succeeded.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: object
+                    required:
+                      - payment
+                    properties:
+                      payment:
+                        type: object
+                        required:
+                          - status
+                        properties:
+                          status:
+                            type: string
+                            enum:
+                              - paid
+                              - pending
+                              - declined
+                              - failed
+                            description: |-
+                              - `paid` is the only accepted state.
+                              - `pending` indicates that the payment is still in progress. Continue polling the invoice.
+                              - `declined` indicates that the payment method was declined.
+                              - `failed` indicates that the attempt did not complete.
+                            example: paid
+                          message:
+                            type: string
+                            description: |-
+                              For `declined` and `failed` outcomes, the reason that the payment gateway reported for why payment was declined or failed.
+                            example: INSTRUMENT_DECLINED
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        403:
+          $ref: '#/components/responses/Forbidden'
+        404:
+          $ref: '#/components/responses/NotFound'
+        409:
+          description: |-
+            Settlement for this invoice is in progress.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        422:
+          description: |-
+            This status indicates that the `provider_reference` value is missing, the gateway does not settle using confirmation, or the gateway refused confirmation.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        429:
+          description: |-
+            Too many confirmation requests have occurred (more than 30 within five minutes). This error prevents unbounded callers from exceeding the merchant's API quota, which could block valid requests.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /user/paymethods:
+    get:
+      description: |-
+        Retrieve the authenticated client's stored payment methods.
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: |-
+            The client's stored payment methods, if any exist, starting with the default payment method.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/PayMethod'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        403:
+          $ref: '#/components/responses/Forbidden'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /user/paymethods/{paymethod_id}:
+    get:
+      description: |-
+        Retrieve one of the authenticated client's stored payment methods.
+      parameters:
+        - $ref: "#/components/parameters/paymethod_id"
+      responses:
+        200:
+          description: The stored payment method.
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/PayMethod'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        403:
+          $ref: '#/components/responses/Forbidden'
+        404:
+          $ref: '#/components/responses/NotFound'
+        default:
+          $ref: '#/components/responses/GeneralError'
+    delete:
+      description: |-
+        Remove one of the authenticated client's stored payment methods.
+      parameters:
+        - $ref: "#/components/parameters/paymethod_id"
+      responses:
+        200:
+          description: |-
+            The system removed the stored payment method. The system attempts to revoke the stored credential with the payment provider first. When it cannot revoke it - for example, when the gateway is inactive or the payment provider does not support revocation - the system still removes the local record and logs the reason.
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        403:
+          $ref: '#/components/responses/Forbidden'
+        404:
+          $ref: '#/components/responses/NotFound'
+        409:
+          description: |-
+            The system did not remove the stored payment method. Either a deletion of this method is already in progress, or the request to revoke the stored credential with the payment provider failed.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        422:
+          description: |-
+            The **Allow Client Pay Method Removal** setting in the **Security** tab at **Configuration > System Settings > General Settings** is disabled, so the system cannot remove the payment method.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        429:
+          description: |-
+            Too many removal requests have occurred (more than 30 within five minutes). This error prevents unbounded callers from exceeding the merchant's API quota at the payment provider, which the system contacts to revoke each stored token.
+
+            The system counts these requests per client IP address. Because of this, integrations that proxy shoppers server-side will reach this limit quickly.
+
+            The system does not remove the payment method.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /admin/session:
+    post:
+      description: Begin an administrator session.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - username
+                - password
+              properties:
+                username:
+                  allOf:
+                    - description: The administrator's username.
+                    - $ref: '#/components/schemas/Username'
+                password:
+                  allOf:
+                    - description: The administrator's password.
+                    - $ref: '#/components/schemas/Password'
+
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/Administrator'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        412:
+          description: You must provide a second authentication factor to login.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SecondFactorChallenge'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+    delete:
+      description: Log out of the administrator's session.
+      responses:
+        200:
+          description: Success
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /admin/session/verify:
+    post:
+      description: Submit an admin's two-factor challenge response.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              example: { "key": "928364" }
+              required:
+                - fields
+              properties:
+                fields:
+                  type: object
+
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/Administrator'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        412:
+          description: You provided an invalid second factor.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralError'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /admin/system/status:
+    get:
+      description: Obtain system status.
+      responses:
+        200:
+          description: System status information
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /admin/clients/search:
+    get:
+      description: Find clients matching a search query.
+      parameters:
+        - $ref: "#/components/parameters/search_query"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: Client list
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/AdminClient'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /admin/users/search:
+    get:
+      description: Find users matching a search query.
+      parameters:
+        - $ref: "#/components/parameters/search_query"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/page_size"
+      responses:
+        200:
+          description: User list
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/AdminUser'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /admin/clients/{client_id}/session:
+    post:
+      description: Masquerade as the owner of the client specified by client ID.
+      parameters:
+        - $ref: "#/components/parameters/client_id"
+      responses:
+        200:
+          description: Logged in user data
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/AdminUser'
+        default:
+          $ref: '#/components/responses/GeneralError'
+
+  /admin/users/{user_id}/session:
+    post:
+      description: Masquerade as a client owned by a user specified by user ID.
+      parameters:
+        - $ref: "#/components/parameters/user_id"
+      responses:
+        200:
+          description: Logged in user data
+          content:
+            application/json:
+              schema:
+                required:
+                  - data
+                properties:
+                  data:
+                    $ref: '#/components/schemas/AdminUser'
+        default:
+          $ref: '#/components/responses/GeneralError'
 components:
   schemas:
+    Meta:
+      oneOf:
+        - type: object
+          properties:
+            total_items:
+              type: integer
+              example: 10
+              description: The total number of results available.
+            page:
+              type: integer
+              example: 1
+            total_pages:
+              type: integer
+              example: 1
+            page_size:
+              type: integer
+              example: 50
+              description: The current number of results per page.
+          required:
+            - total_items
+            - page
+            - total_pages
+            - page_size
+        - type: array
+          items: {}
+          minItems: 0
+          maxItems: 0
+
     GeneralError:
       type: object
       properties:
@@ -544,16 +2542,14 @@ components:
           type: string
 
     CartItemId:
-      description: Unique cart item ID. Automatically generated when an item is added to cart.
+      description: Unique cart item ID. It is automatically generated when an item is added to cart.
       type: string
       minLength: 8
       maxLength: 16
 
-    CartItemTypeProduct:
+    CartItemTypeProductRequest:
       type: object
       properties:
-        item_id:
-          $ref: "#/components/schemas/CartItemId"
         type:
           type: string
           enum: [product]
@@ -564,6 +2560,10 @@ components:
           example: 123
         billing_cycle:
           $ref: '#/components/schemas/BillingCycle'
+        quantity:
+          type: integer
+          format: int32
+          example: 5
         domain:
           type: string
           nullable: true
@@ -571,18 +2571,208 @@ components:
         addons:
           type: array
           items:
-            $ref: '#/components/schemas/CartItemTypeProductAddon'
+            $ref: '#/components/schemas/CartItemTypeProductAddonRequest'
+        custom_fields:
+          type: array
+          items:
+            $ref: '#/components/schemas/CartItemTypeProductCustomFieldRequest'
+        config_options:
+          type: array
+          items:
+            $ref: '#/components/schemas/CartItemTypeProductConfigOptionRequest'
       required:
         - type
         - product_id
         - billing_cycle
 
-    CartItemTypeProductAddon:
+    CartItemTypeProductEdit:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: [product]
+          example: product
+        quantity:
+          type: integer
+          format: int32
+          example: 5
+          nullable: true
+        billing_cycle:
+          $ref: '#/components/schemas/BillingCycle'
+      required:
+        - billing_cycle
+
+    CartItemTypeBundleProductRequest:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: [product]
+          example: product
+        product_id:
+          type: integer
+          format: int64
+          example: 123
+        billing_cycle:
+          $ref: '#/components/schemas/BillingCycle'
+        quantity:
+          type: integer
+          format: int32
+          example: 5
+        domain:
+          anyOf:
+            - type: string
+            - $ref: '#/components/schemas/CartItemTypeDomainRegisterRequest'
+            - $ref: '#/components/schemas/CartItemTypeDomainTransferRequest'
+          nullable: true
+        addons:
+          type: array
+          items:
+            $ref: '#/components/schemas/CartItemTypeProductAddonRequest'
+        custom_fields:
+          type: array
+          items:
+            $ref: '#/components/schemas/CartItemTypeProductCustomFieldRequest'
+        config_options:
+          type: array
+          items:
+            $ref: '#/components/schemas/CartItemTypeProductConfigOptionRequest'
+      required:
+        - type
+        - product_id
+        - billing_cycle
+
+    CartItemTypeBundleRequest:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: [bundle]
+          example: bundle
+        id:
+          type: integer
+          format: int64
+          example: 123
+        items:
+          type: array
+          items:
+            anyOf:
+              - $ref: '#/components/schemas/CartItemTypeBundleProductRequest'
+              - $ref: '#/components/schemas/CartItemTypeDomainRegisterRequest'
+              - $ref: '#/components/schemas/CartItemTypeDomainTransferRequest'
+      required:
+        - type
+        - id
+
+    CartItemTypeBundleProduct:
       type: object
       properties:
         item_id:
           $ref: "#/components/schemas/CartItemId"
-        addon_id:
+        type:
+          type: string
+          enum: [product]
+          example: product
+        quantity:
+          type: integer
+          format: int32
+          example: 5
+        domain:
+          anyOf:
+            - type: string
+            - $ref: '#/components/schemas/CartItemTypeDomainRegister'
+            - $ref: '#/components/schemas/CartItemTypeDomainTransfer'
+          nullable: true
+        product:
+          $ref: "#/components/schemas/Product"
+        billing:
+          $ref: '#/components/schemas/CartItemBilling'
+        addons:
+          type: array
+          items:
+            $ref: '#/components/schemas/CartItemTypeProductAddon'
+        custom_fields:
+          type: array
+          items:
+            $ref: '#/components/schemas/CartItemCustomField'
+        config_options:
+          type: array
+          items:
+            $ref: '#/components/schemas/CartItemTypeProductConfigOption'
+      required:
+        - item_id
+        - product
+        - billing
+        - quantity
+
+    CartItemTypeProduct:
+      type: object
+      properties:
+        item_id:
+          $ref: "#/components/schemas/CartItemId"
+        type:
+          type: string
+          enum: [product]
+          example: product
+        quantity:
+          type: integer
+          format: int32
+          example: 5
+        domain:
+          type: string
+          nullable: true
+          example: example.com
+        product:
+          $ref: "#/components/schemas/Product"
+        billing:
+          $ref: '#/components/schemas/CartItemBilling'
+        addons:
+          type: array
+          items:
+            $ref: '#/components/schemas/CartItemTypeProductAddon'
+        custom_fields:
+          type: array
+          items:
+            $ref: '#/components/schemas/CartItemCustomField'
+        config_options:
+          type: array
+          items:
+            $ref: '#/components/schemas/CartItemTypeProductConfigOption'
+      required:
+        - item_id
+        - product
+        - billing
+        - quantity
+
+    CartItemTypeBundle:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: [bundle]
+          example: bundle
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+          description: The bundle display name
+          example: Starter Hosting Bundle
+        items:
+          type: array
+          items:
+            anyOf:
+              - $ref: '#/components/schemas/CartItemTypeBundleProduct'
+              - $ref: '#/components/schemas/CartItemTypeDomainRegister'
+              - $ref: '#/components/schemas/CartItemTypeDomainTransfer'
+      required:
+        - id
+        - type
+
+    CartItemTypeProductAddonRequest:
+      type: object
+      properties:
+        id:
           type: integer
           format: int64
           example: 456
@@ -591,21 +2781,265 @@ components:
           format: int32
           example: 5
       required:
-        - addon_id
+        - id
 
-    CartItemTypeServiceAddon:
+    CartItemTypeProductCustomFieldRequest:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 456
+        value:
+          $ref: "#/components/schemas/CustomFieldValueType"
+      required:
+        - id
+        - value
+
+    CartItemTypeProductConfigOptionRequest:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 456
+        value:
+          $ref: "#/components/schemas/ConfigOptionValueType"
+      required:
+        - id
+        - value
+
+    CartItemTypeDomain:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: [ domain_register, domain_transfer, domain_renewal ]
+          example: domain_register
+        period:
+          type: integer
+          description: the number of years to register the domain for
+          format: int32
+          example: 1
+          minimum: 1
+          maximum: 10
+        idn_language:
+          type: string
+          description: certain IDN domains require a language code to be specified
+          nullable: true
+          example: afr
+        dns_management:
+          type: boolean
+          example: true
+        email_forwarding:
+          type: boolean
+          example: true
+        id_protection:
+          type: boolean
+          example: true
+        nameservers:
+          type: array
+          items:
+            type: string
+            example: ns1.example.com
+          nullable: true
+          description: list of nameservers to use instead of defaults
+      required:
+        - type
+        - period
+
+    CartItemTypeServiceRenewalRequest:
+        type: object
+        properties:
+          type:
+            type: string
+            enum: [ service_renewal, addon_renewal, domain_renewal ]
+            example: service_renewal
+          id:
+            type: integer
+            format: int64
+            example: 123
+            description: the ID of the service, service addon, or domain to renew
+        required:
+          - id
+          - type
+
+    CartItemTypeDomainRenewalRequest:
+      allOf:
+        - $ref: '#/components/schemas/CartItemTypeServiceRenewalRequest'
+        - type: object
+          properties:
+            type:
+              type: string
+              enum: [ domain_renewal ]
+              example: domain_renewal
+            period:
+              type: integer
+              description: the number of years to renew the domain for
+              format: int32
+              example: 1
+              minimum: 1
+              maximum: 9
+      required:
+        - period
+
+
+    CartItemTypeDomainRequest:
+      allOf:
+        - $ref: '#/components/schemas/CartItemTypeDomain'
+        - type: object
+          properties:
+            name:
+              type: string
+              description: a valid domain name to register
+              example: thisisarandomwhmcsdomainname.com
+              minLength: 3
+              maxLength: 255
+      required:
+        - name
+
+    CartItemTypeDomainRegisterRequest:
+      allOf:
+        - $ref: '#/components/schemas/CartItemTypeDomainRequest'
+        - type: object
+          properties:
+            additional_fields:
+              type: array
+              description: certain TLDs require additional fields to be specified
+              nullable: true
+              items:
+                type: string
+                example: C1
+
+    CartItemTypeDomainTransferRequest:
+      allOf:
+        - $ref: '#/components/schemas/CartItemTypeDomainRegisterRequest'
+        - type: object
+          properties:
+            type:
+              type: string
+              enum: [ domain_transfer ]
+              example: domain_transfer
+            period:
+              type: integer
+              description: the number of years to extend the domain registration
+              format: int32
+              example: 1
+              minimum: 1
+              maximum: 9
+            epp_code:
+              type: string
+              description: the EPP code for transferring the domain
+              minLength: 1
+              maxLength: 255
+              example: 12345abcde
+        - required:
+            - epp_code
+
+    CartItemTypeDomainRegister:
+      allOf:
+        - $ref: '#/components/schemas/CartItemTypeDomainRequest'
+        - type: object
+          properties:
+            item_id:
+              $ref: "#/components/schemas/CartItemId"
+            additional_fields:
+              type: array
+              items:
+                $ref: '#/components/schemas/AdditionalField'
+            billing:
+              $ref: '#/components/schemas/CartItemBilling'
+      required:
+        - item_id
+        - billing
+
+    CartItemTypeDomainTransfer:
+      allOf:
+        - $ref: '#/components/schemas/CartItemTypeDomainRegister'
+        - $ref: '#/components/schemas/CartItemTypeDomainTransferRequest'
+      required:
+        - item_id
+
+    CartItemTypeDomainRenewal:
+      allOf:
+        - $ref: '#/components/schemas/CartItemTypeDomainRenewalRequest'
       type: object
       properties:
         item_id:
           $ref: "#/components/schemas/CartItemId"
+        name:
+          type: string
+          description: a valid domain name to renew
+          example: example.com
+          minLength: 3
+        billing:
+          $ref: '#/components/schemas/CartItemBilling'
+      required:
+        - item_id
+        - name
+        - billing
+
+    CartItemTypeServiceRenewal:
+      allOf:
+        - $ref: '#/components/schemas/CartItemTypeServiceRenewalRequest'
+      type: object
+      properties:
+        item_id:
+          $ref: "#/components/schemas/CartItemId"
+        name:
+          type: string
+          description: Name of the service
+          example: cPanel Hosting
+        domain:
+          type: string
+          description: service domain if applicable
+          example: example.com
+          nullable: true
+        next_due_date:
+          type: string
+          format: date
+          description: service next due date if applicable
+          example: 2024-12-31
+          nullable: true
+        status:
+          type: string
+          description: service status
+        billing:
+          $ref: '#/components/schemas/CartItemBilling'
+      required:
+        - item_id
+        - name
+        - billing
+
+
+    CartItemTypeProductAddon:
+      type: object
+      properties:
+        item_id:
+          $ref: "#/components/schemas/CartItemId"
+        quantity:
+          type: integer
+          format: int32
+          example: 5
+        addon:
+          $ref: "#/components/schemas/Addon"
+        billing:
+          $ref: '#/components/schemas/CartItemBilling'
+      required:
+        - item_id
+        - quantity
+        - addon
+        - billing
+
+    CartItemTypeServiceAddonRequest:
+      type: object
+      properties:
         type:
           type: string
           enum: [addon]
           example: addon
-        addon_id:
-          type: integer
-          format: int64
-          example: 456
+        data:
+          $ref: '#/components/schemas/Addon'
         service_id:
           type: integer
           format: int64
@@ -618,32 +3052,21 @@ components:
           nullable: true
       required:
         - type
-        - addon_id
 
-    ProductGroup:
-      type: object
-      required:
-        - id
-        - name
-      properties:
-        id:
-          type: integer
-          format: int64
-          example: 1
-        name:
-          type: string
-          example: Web hosting
-        products:
-          type: array
-          items:
-            $ref: '#/components/schemas/Product'
+    CartItemTypeServiceAddon:
+      allOf:
+        - $ref: '#/components/schemas/CartItemTypeProductAddon'
+        - type: object
+          properties:
+            service_id:
+              type: integer
+              format: int64
+              example: 123
+            billing_cycle:
+              $ref: '#/components/schemas/BillingCycle'
 
-    Product:
+    CartItemTypeProductConfigOption:
       type: object
-      required:
-        - id
-        - name
-        - pricing
       properties:
         id:
           type: integer
@@ -651,32 +3074,332 @@ components:
           example: 123
         name:
           type: string
-          minLength: 3
-          example: Shared web hosting
-        description:
-          type: string
-        pricing:
-          $ref: '#/components/schemas/Pricing'
+          example: Number of mailing lists
+        type:
+          $ref: "#/components/schemas/ConfigOptionType"
+        option:
+          type: object
+          properties:
+            name:
+              type: string
+              minLength: 1
+              example: Config Option Name
+            value:
+              $ref: '#/components/schemas/ConfigOptionValueType'
+        billing:
+          $ref: '#/components/schemas/CartItemBilling'
+      required:
+        - id
+        - type
+        - billing
 
-    Addon:
+    ProductGroup:
+      allOf:
+        - $ref: "#/components/schemas/Group"
+        - type: object
+          properties:
+            products:
+              type: array
+              items:
+                $ref: '#/components/schemas/ProductPricing'
+
+    BundleGroup:
+      allOf:
+        - $ref: "#/components/schemas/Group"
+        - type: object
+          properties:
+            bundles:
+              type: array
+              items:
+                $ref: '#/components/schemas/BundlePricing'
+
+    Group:
+      allOf:
+        - $ref: "#/components/schemas/Entity"
+        - type: object
+          properties:
+            icon:
+              type: string
+              nullable: true
+              example: fa-solid
+            headline:
+              type: string
+              nullable: true
+              example: Headline
+            tagline:
+              type: string
+              nullable: true
+              example: Tagline
+            order:
+              type: integer
+              format: int32
+              example: 123
+              description: The display order of the group as configured in the application.
+            features:
+              type: array
+              items:
+                $ref: '#/components/schemas/Feature'
+
+    BundleItemProduct:
+      allOf:
+        - $ref: "#/components/schemas/Entity"
+        - type: object
+          properties:
+            bundle_type:
+              type: string
+              enum:
+                - product
+              nullable: false
+            billing_cycle:
+              $ref: '#/components/schemas/BillingCycle'
+            price_override:
+              type: boolean
+            price:
+              $ref: '#/components/schemas/Amount'
+            config_option:
+              type: array
+              nullable: true
+              items:
+                type: object
+                properties:
+                  id:
+                    description: Configurable Option ID
+                  value:
+                    description: Required configurable option value
+                    $ref: '#/components/schemas/ConfigOptionValueType'
+            addons:
+              type: array
+              nullable: true
+              items:
+                type: integer
+                description: Addon ID
+            tlds:
+              type: array
+              nullable: true
+              items:
+                type: string
+                example: '.com'
+            domain_registration_period:
+              type: integer
+              minimum: 0
+              maximum: 10
+            domain_price_override:
+              type: boolean
+            domain_price:
+              $ref: '#/components/schemas/Amount'
+            domain_addons:
+              type: array
+              nullable: true
+              items:
+                type: string
+                enum:
+                  - dnsmanagement
+                  - emailforwarding
+                  - idprotection
+
+    BundleItemDomain:
+      allOf:
+        - $ref: "#/components/schemas/Entity"
+        - type: object
+          properties:
+            bundle_type:
+              type: string
+              enum: [domain]
+              nullable: false
+            tlds:
+              type: array
+              nullable: true
+              items:
+                type: string
+                example: '.com'
+            registration_period:
+              type: integer
+              minimum: 0
+              maximum: 10
+            price_override:
+              type: boolean
+            price:
+              $ref: '#/components/schemas/Amount'
+            addons:
+              type: array
+              nullable: true
+              items:
+                type: string
+                enum:
+                  - dnsmanagement
+                  - emailforwarding
+                  - idprotection
+
+    Feature:
+      allOf:
+        - $ref: "#/components/schemas/Entity"
+        - type: object
+          required:
+            - id
+            - name
+            - order
+          properties:
+            order:
+              type: integer
+              format: int64
+              example: 123
+
+    ServerGroup:
+      allOf:
+        - $ref: "#/components/schemas/Entity"
+
+    Server:
+      allOf:
+        - $ref: "#/components/schemas/Entity"
+        - type: object
+          properties:
+            groups:
+              type: array
+              items:
+                $ref: "#/components/schemas/ServerGroup"
+
+    Entity:
       type: object
       required:
         - id
-        - name
-        - pricing
       properties:
         id:
           type: integer
           format: int64
-          example: 456
+          example: 123
+        name:
+          nullable: true
+          type: string
+          minLength: 1
+          example: Shared web hosting
+        description:
+          nullable: true
+          type: string
+
+    Product:
+      allOf:
+        - $ref: "#/components/schemas/Entity"
+        - type: object
+          properties:
+            tagline:
+              type: string
+              nullable: true
+              example: Start with shared web hosting today!
+            allow_multiple_quantities:
+              $ref: '#/components/schemas/ProductMultipleQuantities'
+            is_domain_required:
+              type: boolean
+              description: Whether a domain is required to order this product
+            stock_control_enabled:
+              type: boolean
+              description: Whether stock control is enabled for this product
+            stock_quantity:
+              type: integer
+              description: The current stock quantity if stock control is enabled
+              format: int32
+              nullable: true
+            order:
+              type: integer
+              format: int32
+              example: 123
+              description: The display order of the product as configured in the application.
+            group:
+              $ref: '#/components/schemas/Group'
+
+    ProductType:
+      type: object
+      properties:
         name:
           type: string
-          minLength: 3
-          example: Extra disk space
-        description:
+          enum:
+            - hostingaccount
+            - reselleraccount
+            - server
+            - other
+          example: hostingaccount
+        display_name:
           type: string
-        pricing:
-          $ref: '#/components/schemas/Pricing'
+          example: Hosting Account
+
+    Bundle:
+      allOf:
+        - $ref: "#/components/schemas/Entity"
+        - type: object
+          properties:
+            price:
+              $ref: '#/components/schemas/Amount'
+            max_uses:
+              type: integer
+            uses:
+              type: integer
+            allow_promo:
+              type: boolean
+            is_featured:
+              type: boolean
+            bundle_items:
+              anyOf:
+                - $ref: '#/components/schemas/BundleItemDomain'
+                - $ref: '#/components/schemas/BundleItemProduct'
+            group:
+              $ref: '#/components/schemas/Group'
+
+    ProductPricing:
+      allOf:
+        - $ref: "#/components/schemas/Product"
+        - type: object
+          required:
+            - pricing
+          properties:
+            type:
+              $ref: '#/components/schemas/ProductType'
+            pricing:
+              $ref: '#/components/schemas/Pricing'
+
+    BundlePricing:
+      allOf:
+        - $ref: "#/components/schemas/Bundle"
+        - type: object
+          required:
+            - price
+          properties:
+            price:
+              $ref: '#/components/schemas/Amount'
+
+    Addon:
+      allOf:
+        - $ref: "#/components/schemas/Entity"
+
+    AddonPricing:
+      allOf:
+        - $ref: "#/components/schemas/Addon"
+        - type: object
+          required:
+            - pricing
+          properties:
+            type:
+              $ref: '#/components/schemas/ProductType'
+            pricing:
+              $ref: '#/components/schemas/Pricing'
+
+    ProductMultipleQuantities:
+      type: object
+      properties:
+        is_supported:
+          type: boolean
+          example: false
+          description: Indicates whether the product supports multiple quantities.
+        type:
+          type: object
+          properties:
+            code:
+              type: integer
+              format: int32
+              example: 1
+              description: The internal code representing the multiple quantities setting.
+            display:
+              type: string
+              example: No
+              description: The human-readable display value for the multiple quantities setting.
 
     Pricing:
       type: object
@@ -688,7 +3411,36 @@ components:
         onetime:
           $ref: '#/components/schemas/OneTimePrice'
         recurring:
-          $ref: '#/components/schemas/RecurringPricing'
+          type: array
+          items:
+            $ref: '#/components/schemas/CycleRecurringPrice'
+
+    LineItemPrice:
+      type: object
+      properties:
+        onetime:
+          $ref: '#/components/schemas/OneTimePrice'
+        recurring:
+          $ref: '#/components/schemas/RecurringPrice'
+
+    CartItemBilling:
+      type: object
+      nullable: true
+      properties:
+        cycle:
+          $ref: '#/components/schemas/BillingCycle'
+        price:
+          nullable: true
+          allOf:
+            - $ref: '#/components/schemas/LineItemPrice'
+
+    ServicePrice:
+      type: object
+      properties:
+        first_payment:
+          $ref: '#/components/schemas/ServiceFirstPaymentPrice'
+        recurring:
+          $ref: '#/components/schemas/ServiceRecurringPrice'
 
     Amount:
       type: object
@@ -698,6 +3450,23 @@ components:
           example: "19.99"
         code:
           $ref: "#/components/schemas/CurrencyCode"
+        display_value:
+          type: string
+          example: "$19.99 USD"
+        prefix:
+          type: string
+          description: Optional currency prefix
+          example: "$"
+        suffix:
+          type: string
+          description: Optional currency prefix
+          example: " USD"
+      required:
+        - value
+        - code
+        - display_value
+        - prefix
+        - suffix
 
     Currency:
       type: object
@@ -716,6 +3485,41 @@ components:
           type: boolean
           description: This is true if the currency is currently the system default.
 
+    Country:
+      type: object
+      required:
+        - code
+        - name
+      properties:
+        code:
+          type: string
+          minLength: 2
+          description: The ISO 3166-1 alpha-2 country code or the customized country code.
+          example: US
+        name:
+          type: string
+          example: United States
+        states:
+          type: array
+          nullable: true
+          items:
+            $ref: '#/components/schemas/State'
+
+    State:
+      type: object
+      required:
+        - code
+        - name
+      properties:
+        code:
+          type: string
+          minLength: 1
+          maxLength: 10
+          example: CA
+        name:
+          type: string
+          example: California
+
     CurrencyCode:
       type: string
       pattern: "^[A-Z]{3}$"
@@ -726,6 +3530,12 @@ components:
       minLength: 6
       maxLength: 255
       example: me@example.com
+
+    Username:
+      type: string
+      minLength: 3
+      maxLength: 255
+      example: administrator
 
     Password:
       type: string
@@ -738,6 +3548,21 @@ components:
       minLength: 2
       maxLength: 64
       example: Davis
+
+    Administrator:
+      type: object
+      description: Logged-in administrator data.
+      required:
+        - email
+        - firstname
+        - lastname
+      properties:
+        email:
+          $ref: '#/components/schemas/Email'
+        firstname:
+          $ref: '#/components/schemas/Name'
+        lastname:
+          $ref: '#/components/schemas/Name'
 
     User:
       type: object
@@ -762,9 +3587,9 @@ components:
     Client:
       type: object
       required:
-        - id
+        - uuid
       properties:
-        id:
+        uuid:
           type: string
           minLength: 36
           maxLength: 36
@@ -775,31 +3600,72 @@ components:
         selected:
           type: boolean
 
-    RecurringPricing:
-      type: array
-      items:
-        $ref: '#/components/schemas/RecurringPrice'
+    AdminClient:
+      allOf:
+        - $ref: '#/components/schemas/Client'
+        - type: object
+          properties:
+            id:
+              type: integer
+              format: int64
+              example: 123
+
+    AdminUser:
+      allOf:
+        - $ref: '#/components/schemas/User'
+        - type: object
+          properties:
+            id:
+              type: integer
+              format: int64
+              example: 123
 
     OneTimePrice:
       type: object
+      required:
+        - setup
+        - amount
       properties:
         setup:
           $ref: '#/components/schemas/Amount'
         amount:
           $ref: '#/components/schemas/Amount'
 
+    ServiceFirstPaymentPrice:
+      type: object
+      required:
+        - amount
+      properties:
+        amount:
+          $ref: '#/components/schemas/Amount'
+
+    ServiceRecurringPrice:
+      type: object
+      required:
+        - amount
+      properties:
+        amount:
+          $ref: '#/components/schemas/Amount'
+
     RecurringPrice:
-        type: object
-        required:
-          - cycle
-          - amount
-        properties:
-          cycle:
-            $ref: '#/components/schemas/BillingCycle'
-          setup:
-            $ref: '#/components/schemas/Amount'
-          amount:
-            $ref: '#/components/schemas/Amount'
+      allOf:
+        - type: object
+          properties:
+            setup:
+              $ref: '#/components/schemas/Amount'
+          required:
+            - setup
+        - $ref: "#/components/schemas/ServiceRecurringPrice"
+
+    CycleRecurringPrice:
+      allOf:
+        - type: object
+          properties:
+            cycle:
+              $ref: '#/components/schemas/BillingCycle'
+          required:
+            - cycle
+        - $ref: "#/components/schemas/RecurringPrice"
 
     RecurringCycle:
       type: object
@@ -818,35 +3684,181 @@ components:
           example: 1
 
     BillingCycle:
-        type: string
-        description: Billing cycle's frequency.
-        example: monthly
-        enum:
-          - onetime
-          - monthly
-          - quarterly
-          - semiannually
-          - annually
-          - biennially
-          - triennially
+      type: string
+      nullable: true
+      description: Billing cycle's frequency.
+      example: monthly
+      enum:
+        - free
+        - onetime
+        - monthly
+        - quarterly
+        - semiannually
+        - annually
+        - biennially
+        - triennially
 
     CartTotal:
       type: object
       properties:
         recurring:
-          $ref: '#/components/schemas/RecurringPricing'
+          type: array
+          items:
+            type: object
+            required:
+              - cycle
+              - amount
+            properties:
+              cycle:
+                $ref: '#/components/schemas/BillingCycle'
+              amount:
+                $ref: '#/components/schemas/Amount'
         subtotal:
           $ref: '#/components/schemas/Amount'
-        discount:
+        discounts:
           type: array
           items:
             $ref: '#/components/schemas/Discount'
-        tax:
+        geolocation:
+          $ref: '#/components/schemas/GeoLocation'
+        taxes:
           type: array
           items:
             $ref: '#/components/schemas/Tax'
         total:
           $ref: '#/components/schemas/Amount'
+
+    CartContents:
+      required:
+        - items
+        - upgrades
+        - promotions
+        - totals
+      properties:
+        items:
+          type: array
+          items:
+            anyOf:
+              - $ref: '#/components/schemas/CartItemTypeProduct'
+              - $ref: '#/components/schemas/CartItemTypeServiceAddon'
+              - $ref: '#/components/schemas/CartItemTypeDomainRegister'
+              - $ref: '#/components/schemas/CartItemTypeDomainTransfer'
+              - $ref: '#/components/schemas/CartItemTypeDomainRenewal'
+              - $ref: '#/components/schemas/CartItemTypeServiceRenewal'
+              - $ref: '#/components/schemas/CartItemTypeBundle'
+        upgrades:
+          type: array
+          description: Pending service or addon upgrades in the cart
+          items:
+            $ref: '#/components/schemas/CartUpgrade'
+        promotions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Promotion'
+        totals:
+          $ref: '#/components/schemas/CartTotal'
+
+    CartUpgrade:
+      type: object
+      description: A pending service or addon upgrade in the cart
+      required:
+        - index
+        - type
+        - newRecurringAmount
+        - upgradeAmount
+        - creditAmount
+        - newCycle
+        - daysRemaining
+        - totalDaysInCycle
+      properties:
+        index:
+          type: integer
+          description: Zero-based position of this upgrade in the cart
+          example: 0
+        type:
+          type: string
+          enum: [service, addon]
+          description: Whether this is a service (product) or addon upgrade
+        originalProductName:
+          type: string
+          description: Current product name (service upgrades only)
+          example: "Starter Hosting"
+        newProductName:
+          type: string
+          description: Target product name (service upgrades only)
+          example: "Pro Hosting"
+        groupName:
+          type: string
+          description: Product group name (service upgrades only)
+          example: "Shared Hosting"
+        domain:
+          type: string
+          description: Service domain (service upgrades only)
+          example: "example.com"
+        originalAddonName:
+          type: string
+          description: Current addon name (addon upgrades only)
+          example: "Basic SSL"
+        newAddonName:
+          type: string
+          description: Target addon name (addon upgrades only)
+          example: "Wildcard SSL"
+        newRecurringAmount:
+          $ref: '#/components/schemas/Amount'
+        upgradeAmount:
+          $ref: '#/components/schemas/Amount'
+        creditAmount:
+          $ref: '#/components/schemas/Amount'
+        newCycle:
+          type: string
+          description: Localised billing cycle label for the new plan
+          example: "Monthly"
+        daysRemaining:
+          type: integer
+          description: Days left in the current billing cycle
+          example: 18
+        totalDaysInCycle:
+          type: integer
+          description: Total days in the current billing cycle
+          example: 30
+
+    CartItemValidationError:
+      type: object
+      properties:
+        item_id:
+          type: string
+        errors:
+          type: array
+          items:
+            anyOf:
+              - type: string
+              - type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                  type:
+                    type: string
+                    enum: [product, addon, service, customfield, configoption, bundle]
+                  error:
+                    type: string
+
+    GeoLocation:
+      type: object
+      properties:
+        country_code:
+          type: string
+          minLength: 2
+          example: US
+          description: The ISO 3166-1 alpha-2 country code or the customized country code.
+        state:
+          type: string
+          maxLength: 64
+          example: California
+          description: State, province, or region code if applicable
+          nullable: true
+      required:
+          - country_code
 
     Tax:
       type: object
@@ -868,12 +3880,12 @@ components:
     Discount:
       type: object
       required:
-        - name
+        - type
         - amount
       properties:
-        name:
+        type:
           type: string
-          enum: [promo, client_group]
+          enum: [promotions, client]
         amount:
           $ref: '#/components/schemas/Amount'
 
@@ -890,6 +3902,7 @@ components:
 
     Promotion:
       type: object
+      nullable: true
       required:
         - code
       properties:
@@ -897,6 +3910,24 @@ components:
           type: string
           nullable: true
           example: PROMOCODE
+        type:
+          type: string
+          example: Fixed Amount
+          nullable: true
+        value:
+          type: number
+          format: float
+          example: 5.0
+          description: Monetary amount or discount percentage
+          nullable: true
+        is_recurring:
+          type: boolean
+          nullable: true
+        number_of_recurring:
+          type: integer
+          nullable: true
+          example: 5
+          description: maximum number of times the promotion code will be applied if set
 
     TwoFaField:
       type: object
@@ -927,7 +3958,1281 @@ components:
           items:
             $ref: '#/components/schemas/TwoFaField'
 
+    PayMethod:
+      type: object
+      # Closed on purpose, and the only schema here that is. This object is assembled
+      # from a stored payment method, whose record also holds the token that can charge
+      # it, the card number and the bank account number. The formatter publishes an
+      # allow-list, but without this line the spec would accept anything it ever emitted
+      # by accident - so a future field carrying a credential would ship silently, past a
+      # response validator and past the test whose stated purpose is to catch exactly
+      # that.
+      #
+      # Know what this costs before adding a field: ApiNgSpecValidator validates every
+      # response in production too, not only where display_errors is on, so an
+      # undeclared field is a client-facing 500 - not a warning, and not dev-only. That
+      # is the intended trade (a 500 beats shipping a credential), but it means adding a
+      # field to PayMethodService::format() without declaring it here breaks the
+      # endpoint for real clients.
+      additionalProperties: false
+      description: |-
+        A payment method the client stored, as the system displays it to that client.
+
+        A `null` value indicates that a property applies to that payment method but does not have a value.
+      required:
+        - id
+        - type
+        - kind
+        - description
+        - gateway
+        - gateway_is_active
+        - is_default
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: |-
+            Pass this value as the `payment.paymethod_id` value when checking out a cart to pay with this stored method.
+          example: 12
+        type:
+          type: string
+          description: |-
+            How WHMCS stores the method internally.
+          example: RemoteCreditCard
+        kind:
+          type: string
+          nullable: true
+          enum:
+            - card
+            - wallet
+            - bank_account
+          description: |-
+            The type of payment method.
+
+            A `null` value indicates that the system could not find the payment method's stored details.
+          example: card
+        description:
+          type: string
+          description: |-
+            The client's label for this method, if they set one.
+          example: Weekend Card
+        gateway:
+          type: string
+          description: |-
+            The payment gateway module for this payment method.
+          example: stripe_dynamic
+        gateway_is_active:
+          type: boolean
+          description: |-
+            Whether the payment gateway is currently active on this installation.
+
+            If the payment gateway is not currently active, the client cannot pay using this method.
+          example: true
+        is_default:
+          type: boolean
+          description: >-
+            Whether this is the client's default payment method. Exactly one of a client's
+            methods is the default.
+          example: true
+        label:
+          type: string
+          description: |-
+            A short human-readable display name for the payment method.
+          example: Visa-4242
+        card_type:
+          type: string
+          description: |-
+            The card brand, if the `kind` value is `card`.
+          example: Visa
+        card_last_four:
+          type: string
+          description: The last four digits of the card. Present only when `kind` is `card`.
+          example: "4242"
+        expiry_date:
+          type: string
+          nullable: true
+          description: |-
+            The card expiry date in the `MM/YY` format, if the `kind` value is `card`.
+
+            This value is `null` when the stored method does not have an expiry date.
+          example: 06/30
+        is_expired:
+          type: boolean
+          description: |-
+            Whether that expiry date has passed, if the `kind` value is `card`.
+
+            If the expiry date has passed, the client cannot pay using this method.
+          example: false
+        bank_name:
+          type: string
+          nullable: true
+          description: |-
+            The bank holding the account, if the `kind` value is `bank_account`.
+
+            This value is `null` when the gateway did not supply bank information.
+          example: STRIPE TEST BANK
+
+    Invoice:
+      type: object
+      required:
+        - id
+        - status
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 456
+        invoice_number:
+          type: string
+          nullable: true
+          example: "0001"
+        date_created:
+          type: string
+          format: date
+          nullable: true
+          example: 2026-07-01
+        date_due:
+          type: string
+          format: date
+          nullable: true
+          example: 2026-07-15
+        status:
+          type: string
+          enum:
+            - Draft
+            - Unpaid
+            - Payment Pending
+            - Paid
+            - Collections
+            - Cancelled
+            - Refunded
+          example: Unpaid
+          description: |-
+            The payment lifecycle status.
+            - `Paid` is the only accepted, terminal state. The order provisions on that transition.
+            - `Payment Pending` indicates that payment is in progress but has not yet cleared. Keep polling until the status is `Paid`.
+
+            Only `Unpaid` and `Collections` status invoices can be paid. The `POST /user/invoices/{invoice_id}/payment-link` and `POST /user/invoices/{invoice_id}/payment-session` endpoints refuse any other status with a `422` error.
+        subtotal:
+          type: number
+          format: float
+          example: 10.00
+        total:
+          type: number
+          format: float
+          example: 10.00
+        balance:
+          type: number
+          format: float
+          example: 10.00
+        payment_method:
+          type: string
+          nullable: true
+          example: stripe_dynamic
+
+    NextAction:
+      description: |-
+        How to proceed with payment.
+
+        - `redirect` returns a single-use hand-off `url` value (the default).
+        - `payment_session` returns a `session` object that your integration passes to the matching gateway SDK and carries no `url` value.
+      oneOf:
+        - $ref: '#/components/schemas/NextActionRedirect'
+        - $ref: '#/components/schemas/NextActionPaymentSession'
+
+    NextActionRedirect:
+      type: object
+      required:
+        - type
+        - url
+      properties:
+        type:
+          type: string
+          enum:
+            - redirect
+        url:
+          type: string
+          example: https://example.com/oauth/singlesignon.php?access_token=...
+
+    NextActionPaymentSession:
+      type: object
+      description: |-
+        Returned when the checkout set the `payment.mode` value to `headless` for a gateway that supports it.
+      required:
+        - type
+        - session
+      properties:
+        type:
+          type: string
+          enum:
+            - payment_session
+        session:
+          $ref: '#/components/schemas/PaymentSession'
+
+    PaymentSession:
+      type: object
+      description: |-
+        A gateway-specific object of client-side parameters. The `params` keys depend on the `provider` value.
+      required:
+        - provider
+        - params
+        - settlement
+        - sdk
+      properties:
+        provider:
+          type: string
+          description: |-
+            A discriminator that tells your integration which gateway SDK to drive.
+          example: stripe
+        params:
+          type: object
+          additionalProperties: true
+          description: |-
+            The keys that the provider's SDK accepts.
+          example:
+            publishableKey: pk_live_...
+            clientSecret: pi_3Abc..._secret_XyZ
+            paymentIntentId: pi_3Abc...
+            mode: payment
+        settlement:
+          type: string
+          description: |-
+            The method to use to settle payment. Branch on the value you receive rather than assuming one:
+
+            - `sync_confirm` — Call the confirmation endpoint (`POST /user/invoices/{invoice_id}/payment-session/confirm`), which records the outcome in WHMCS.
+            - `async_webhook` — Do not call the confirmation endpoint. The gateway module records the outcome when the provider's signed webhook arrives, so poll the `GET /user/invoices/{invoice_id}` endpoint until the status reaches `Paid`.
+
+            After a `pending` result, poll regardless of this value. Success does not indicate that payment cleared.
+          enum:
+            - async_webhook
+            - sync_confirm
+          example: sync_confirm
+        sdk:
+          type: object
+          additionalProperties: true
+          description: |-
+            The method to use to load the SDK that renders this session.
+          required:
+            - scriptUrl
+          properties:
+            scriptUrl:
+              type: string
+              description: |-
+                The provider CDN URL your integration loads the SDK from.
+              example: https://js.stripe.com/v3/
+            apiVersion:
+              type: string
+              description: |-
+                The gateway API version your integration must use so that the browser and WHMCS agree. The system returns this value for providers that accept it.
+              example: '2023-10-16'
+          example:
+            scriptUrl: https://js.stripe.com/v3/
+            apiVersion: '2023-10-16'
+
+    InvoicePaymentSessionRequestBody:
+      type: object
+      description: |-
+        A reference definition of the `POST /user/invoices/{invoice_id}/payment-session` endpoint's request body.
+      properties:
+        gateway:
+          type: string
+          description: |-
+            The gateway module to pay with, if it is not the gateway already on the invoice.
+
+            - Specifying a different gateway changes the gateway on the invoice and triggers the `InvoiceChangeGateway` hook. This requires that the installation allows clients to choose the payment method for invoices.
+            - If you omit this value, send it empty, set it to `null`, or name the gateway the invoice already lists, payment uses the invoice's listed gateway and nothing changes on the invoice.
+
+            The module that you specify must be available for the invoice:
+
+            - It must support the invoice's currency.
+            - It must support headless payments.
+            - It must appear on the order form.
+            - It must be available for the product groups for every product on the invoice.
+
+            If you specify an invalid gateway, you will receive a `422` error status and no change will occur for the invoice.
+          example: stripe_dynamic
+
+    CheckoutRequestBody:
+      type: object
+      description: |-
+        A reference definition of the `POST /cart/{cart_id}/checkout` endpoint's request body.
+      properties:
+        paymentmethod:
+          type: string
+          description: |-
+            The name of the active payment gateway module.
+          example: stripe_dynamic
+        client_id:
+          type: integer
+          format: int64
+          description: |-
+            An existing client to check out as.
+
+            You can supply this value **or** a `customer` value, but not both. Omit both to check out as the authenticated caller.
+          example: 789
+        customer:
+          $ref: '#/components/schemas/CheckoutCustomer'
+        payment:
+          type: object
+          properties:
+            paymethod_id:
+              type: integer
+              format: int64
+              description: |-
+                The stored payment method ID, for `credit card` or `bank` gateways.
+
+                If the gateway processes payments offline, the system will not honor this value and the payment status will be `pending`.
+
+                This value takes precedence over the `mode` value.
+              example: 12
+            mode:
+              type: string
+              description: |-
+                The payment mode:
+
+                - `handoff` returns a single-use redirect to the WHMCS payment page.
+                - `headless` requests a `payment_session` value from the gateway's SDK. The system returns a `422` error status if payment does not complete for one of the following reasons:
+                  - The selected gateway can neither start a payment session nor capture a supplied `paymethod_id` value.
+                  - The gateway supports payment sessions but the session failed to start due to a misconfiguration or an outage.
+                  - The gateway declined a supplied `paymethod_id` value and no payment session could then be minted. A decline on its own answers a `failed` payment status carrying a `payment_session`, not a `422` error status.
+
+                If you do not specify a value, the system defaults to `handoff`.
+              enum:
+                - handoff
+                - headless
+              default: handoff
+              example: headless
+        promo:
+          type: string
+          example: SUMMER10
+        notes:
+          type: string
+
+    CheckoutCustomer:
+      type: object
+      description: |-
+        Registers a new client as part of checkout.
+      required:
+        - firstname
+        - lastname
+        - email
+        - password
+      properties:
+        firstname:
+          type: string
+          example: Jane
+        lastname:
+          type: string
+          example: Doe
+        email:
+          allOf:
+            - $ref: '#/components/schemas/Email'
+        password:
+          allOf:
+            - $ref: '#/components/schemas/Password'
+        companyname:
+          type: string
+          nullable: true
+        address1:
+          type: string
+          nullable: true
+        address2:
+          type: string
+          nullable: true
+        city:
+          type: string
+          nullable: true
+        state:
+          type: string
+          nullable: true
+        postcode:
+          type: string
+          nullable: true
+        country:
+          type: string
+          nullable: true
+        phonenumber:
+          type: string
+          nullable: true
+        customfields:
+          type: object
+          additionalProperties: true
+
+    CheckoutPayment:
+      type: object
+      required:
+        - method
+        - status
+      properties:
+        method:
+          type: string
+          example: stripe_dynamic
+        status:
+          type: string
+          description: |-
+            `not_required` means the order created no invoice and there is nothing to collect, so `invoice_id` is `0` and `next_action` is `null`. A free billing cycle produces no invoice; an order discounted to zero is invoiced and answers `paid`.
+
+            `failed` means the capture of the stored payment method did not succeed: the gateway declined it, or the attempt did not complete. Under a `payment.mode` value of `headless`, `next_action` carries a `payment_session` so that another method can be collected in place, and the request answers a `422` error status instead when no session can be minted; otherwise it carries a `redirect` to the hosted pay page.
+
+            `failed` describes the attempt that did not succeed. Checking the same cart out again answers `paid` if the invoice settled in the meantime, `pending` once a payment is in flight, `action_required` with a freshly minted session while it is neither, and a `422` error status if a session cannot be minted again.
+          enum:
+            - paid
+            - pending
+            - action_required
+            - not_required
+            - failed
+        next_action:
+          type: object
+          nullable: true
+          allOf:
+            - $ref: '#/components/schemas/NextAction'
+
+    CheckoutResult:
+      type: object
+      required:
+        - order_id
+        - invoice_id
+        - client_id
+        - order_status
+        - payment
+      properties:
+        order_id:
+          type: integer
+          format: int64
+          example: 123
+        invoice_id:
+          type: integer
+          format: int64
+          description: |-
+            `0` when the order created no invoice. Do not treat `0` as an error and do not request the invoice. A `payment.status` of `not_required` is the ordinary case; a free-cycle order held for fraud review reports `pending` with the same `0`.
+          example: 456
+        client_id:
+          type: integer
+          format: int64
+          example: 789
+        service_ids:
+          type: array
+          items:
+            type: integer
+            format: int64
+        addon_ids:
+          type: array
+          items:
+            type: integer
+            format: int64
+        domain_ids:
+          type: array
+          items:
+            type: integer
+            format: int64
+        domain_renewal_ids:
+          type: array
+          description: |-
+            The domains the checkout renewed. A renewal reuses the client's existing domain, so these identifiers are not new.
+          items:
+            type: integer
+            format: int64
+        service_renewal_ids:
+          type: array
+          description: |-
+            The services the checkout renewed. A renewal reuses the client's existing service, so these identifiers are not new.
+          items:
+            type: integer
+            format: int64
+        addon_renewal_ids:
+          type: array
+          description: |-
+            The addons the checkout renewed. A renewal reuses the client's existing addon, so these identifiers are not new.
+          items:
+            type: integer
+            format: int64
+        upgrade_ids:
+          type: array
+          description: |-
+            The upgrades the checkout created.
+          items:
+            type: integer
+            format: int64
+        order_status:
+          type: string
+          example: Pending
+        payment:
+          $ref: '#/components/schemas/CheckoutPayment'
+        url:
+          type: string
+          nullable: true
+          description: |-
+            Mirrors the `payment.next_action.url` value, for single-page application compatibility.
+
+    Service:
+      type: object
+      required:
+        - id
+        - quantity
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 789
+        product:
+          $ref: "#/components/schemas/Product"
+        server:
+          nullable: true
+          allOf:
+            - $ref: "#/components/schemas/Server"
+        domain:
+          type: string
+          nullable: true
+          example: example.com
+        status:
+          type: string
+          example: pending
+          nullable: true
+        quantity:
+          type: integer
+          format: int32
+          example: 1
+        registration_date:
+          type: string
+          format: date
+          example: 2022-03-14
+        billing:
+          $ref: '#/components/schemas/ServiceBillingExtended'
+        addons:
+          type: array
+          items:
+            $ref: '#/components/schemas/ServiceAddon'
+        custom_fields:
+          type: array
+          items:
+            $ref: '#/components/schemas/ServiceCustomField'
+        config_options:
+          type: array
+          items:
+            $ref: '#/components/schemas/ServiceConfigOption'
+        renewal:
+          $ref: '#/components/schemas/ServiceRenewal'
+
+    ServiceAddon:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 456
+        addon:
+          $ref: '#/components/schemas/Addon'
+        service:
+          type: object
+          properties:
+            id:
+              type: integer
+              format: int64
+              example: 123
+          required:
+            - id
+        quantity:
+          type: integer
+          format: int32
+          nullable: true
+        status:
+          type: string
+          example: Active
+        registration_date:
+          type: string
+          format: date
+          example: 2022-01-05
+        billing:
+          $ref: '#/components/schemas/ServiceBilling'
+        renewal:
+          $ref: '#/components/schemas/ServiceAddonRenewal'
+      required:
+        - id
+        - billing
+
+    ServiceConfigOptionBilling:
+      type: object
+      nullable: true
+      properties:
+        price:
+          nullable: true
+          allOf:
+            - $ref: '#/components/schemas/ServicePrice'
+
+    ServiceBilling:
+      type: object
+      nullable: true
+      properties:
+        cycle:
+          $ref: '#/components/schemas/BillingCycle'
+        price:
+          nullable: true
+          allOf:
+            - $ref: '#/components/schemas/ServicePrice'
+        payment_gateway:
+          nullable: true
+          allOf:
+            - $ref: '#/components/schemas/PaymentGateway'
+        next_due_date:
+          type: string
+          format: date
+          example: 2022-05-01
+          nullable: true
+
+    ServiceBillingExtended:
+      allOf:
+        - type: object
+          properties:
+            promotions:
+              type: array
+              items:
+                $ref: '#/components/schemas/Promotion'
+          required:
+            - promotions
+        - $ref: "#/components/schemas/ServiceBilling"
+
+    ServiceRenewal:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 789
+        type:
+          type: string
+          enum: [ service, addon ]
+          example: service
+        is_renewable:
+          type: boolean
+        non_renewable_reason:
+          type: string
+          nullable: true
+          example: This service is not renewable because it has been cancelled.
+        renewal_period:
+          type: object
+          properties:
+            start:
+              type: string
+              format: date
+              example: 2023-03-14
+            end:
+              type: string
+              format: date
+              example: 2024-04-14
+          example: Active
+        price:
+          nullable: true
+          allOf:
+            - $ref: '#/components/schemas/Amount'
+      required:
+        - id
+        - type
+        - is_renewable
+        - price
+
+    ServiceAddonRenewal:
+      allOf:
+        - $ref: '#/components/schemas/ServiceRenewal'
+        - type: object
+          properties:
+            type:
+              type: string
+              enum: [ addon ]
+              example: addon
+            non_renewable_reason:
+              type: string
+              nullable: true
+              example: This service addon is not renewable because it has been cancelled.
+
+    PaymentGateway:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the payment gateway module.
+          example: banktransfer
+        description:
+          type: string
+          description: The friendly name of the payment gateway module.
+          example: Bank Transfer
+        supports_headless_payment_session:
+          type: boolean
+          description: |-
+            Whether this gateway can return a `payment_session` value for a checkout that includes a `payment.mode` value of `headless`.
+
+            - An integration that cannot follow a redirect should present only gateways where this value is true.
+            - Sending `headless` to a gateway where it is false returns the hand-off redirect instead, or, when the `payment.mode` value is `headless`, a `422` error status.
+          example: true
+      required:
+        - name
+
+    CustomField:
+      allOf:
+        - $ref: "#/components/schemas/Entity"
+        - type: object
+          properties:
+            type:
+              type: string
+              enum: [text, link, password, dropdown, checkbox, textarea]
+              description: Field type
+              example: text
+            options:
+              type: array
+              nullable: true
+              items:
+                $ref: "#/components/schemas/CustomFieldValueType"
+            validation:
+              type: string
+              nullable: true
+              example:
+            required:
+              type: boolean
+          required:
+            - id
+            - type
+            - required
+
+    CustomFieldValueType:
+      description: Custom Field Value
+      anyOf:
+        - type: string
+          example: DL123456789
+        - type: boolean
+          example: true
+
+    ConfigOptionValueType:
+      description: Configuration Option Value
+      anyOf:
+        - type: boolean
+          example: true
+          description: for yesno type, the value should be true or false
+        - type: integer
+          example: 1
+          description: for quantity type, the value is the inputted numeric value while for radio and dropdown type, the value is the predefined option id
+      nullable: true
+
+    CartItemCustomField:
+      allOf:
+        - $ref: "#/components/schemas/CustomField"
+        - type: object
+          properties:
+            value:
+              $ref: "#/components/schemas/CustomFieldValueType"
+          required:
+            - value
+
+    AdditionalFieldValueType:
+      type: object
+      description: Domain Additional Field Value
+      properties:
+        value:
+          type: string
+          example: C11
+        display_name:
+          type: string
+          nullable: true
+          example: C11 - United States Citizen
+
+    AdditionalField:
+      type: object
+      properties:
+        name:
+          type: string
+          nullable: true
+          description: The name of Domain Additional Field
+          example: Nexus Category
+        required:
+          oneOf:
+            - type: boolean
+              example: true
+            - type: object
+              additionalProperties:
+                type: array
+                items:
+                  type: string
+              example:
+                Legal Type:
+                  - UK Limited Company
+                  - UK Public Limited Company
+
+          nullable: true
+          description: Whether the additional field is never required, always required, or conditionally required.
+        type:
+          type: string
+          nullable: true
+          enum: [ dropdown, radio, tickbox, text, display ]
+          description: Additional Field type
+          example: dropdown
+        default:
+          type: string
+          nullable: true
+          description: The default input field value
+          example: C11
+        options:
+          type: array
+          nullable: true
+          description: Certain Domain Additional Field types have predefined options
+          items:
+            $ref: "#/components/schemas/AdditionalFieldValueType"
+
+    ServiceCustomField:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 456
+        custom_field:
+          $ref: '#/components/schemas/CustomField'
+        service:
+          type: object
+          properties:
+            id:
+              type: integer
+              format: int64
+              example: 123
+          required:
+            - id
+        value:
+          $ref: '#/components/schemas/CustomFieldValueType'
+      required:
+        - id
+        - custom_field
+
+    ConfigOptionType:
+      type: string
+      enum: [dropdown, radio, yesno, quantity]
+      description: Config option type
+      example: dropdown
+
+    ConfigOption:
+      allOf:
+        - $ref: "#/components/schemas/Entity"
+        - type: object
+          properties:
+            type:
+              $ref: "#/components/schemas/ConfigOptionType"
+            quantity_minimum:
+              type: integer
+              format: int32
+              nullable: true
+              example: 1
+            quantity_maximum:
+              type: integer
+              format: int32
+              nullable: true
+              example: 99
+            sort_order:
+              type: integer
+              format: int32
+              example: 1
+            group:
+              nullable: true
+              allOf:
+                - $ref: '#/components/schemas/Group'
+            options:
+              type: array
+              nullable: true
+              items:
+                $ref: "#/components/schemas/ConfigOptionSelection"
+          required:
+            - id
+            - type
+
+    ConfigOptionSelection:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Daily Virus Scanning
+        value:
+          $ref: "#/components/schemas/ConfigOptionValueType"
+        sort_order:
+          type: integer
+          format: int32
+          example: 2
+        pricing:
+          $ref: '#/components/schemas/Pricing'
+      required:
+        - name
+        - value
+        - pricing
+
+    ServiceConfigOption:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 456
+        config_option:
+          type: object
+          properties:
+            id:
+              type: integer
+              format: int64
+              example: 12
+            name:
+              type: string
+              minLength: 1
+              example: Config Option Name
+            type:
+              $ref: "#/components/schemas/ConfigOptionType"
+          required:
+            - id
+            - name
+            - type
+        service:
+          type: object
+          properties:
+            id:
+              type: integer
+              format: int64
+              example: 123
+          required:
+            - id
+        option:
+          type: object
+          properties:
+            name:
+              type: string
+              minLength: 1
+              example: Config Option Name
+            value:
+              $ref: '#/components/schemas/ConfigOptionValueType'
+        billing:
+          $ref: '#/components/schemas/ServiceConfigOptionBilling'
+      required:
+        - id
+        - config_option
+        - option
+
+    Domain:
+      type: object
+      properties:
+        domain_name:
+          type: string
+      required:
+        - domain_name
+
+    LookupProviderSuggestionOption:
+        type: object
+        properties:
+          lookup_provider:
+            type: string
+            description: the unique system name of the Lookup Provider
+            example: WhmcsDomains
+          maximum_length_supported:
+            type: boolean
+            description: if the Maximum Length property is supported by the Lookup Provider
+          tld_override_supported:
+            type: boolean
+            description: if the TLD Override property is supported by the Lookup Provider
+          sensitive_filter_override_supported:
+            type: boolean
+            description: if sensitive word filtering override is supported by the Lookup Provider
+          maximum_term_length:
+            type: integer
+            description: the maximum length of the search term supported by the Lookup Provider
+            format: int32
+            example: 1500
+            minimum: 3
+            maximum: 1500
+            nullable: true
+          configured_suggestion_tlds:
+            type: array
+            description: an array of default TLDs configured for suggestions
+            items:
+              type: string
+              example: com
+            nullable: true
+        required:
+          - lookup_provider
+          - maximum_length_supported
+          - tld_override_supported
+          - sensitive_filter_override_supported
+          - configured_suggestion_tlds
+
+    DomainSuggestionRequest:
+      type: object
+      properties:
+        term:
+          type: string
+          description: domain, keyword, or phrase to use as the basis for suggestions depending on the Lookup Provider capabilities
+          example: example.com, example, or 'A automotive repair shop in New York'
+          minLength: 3
+          maxLength: 1500
+        tlds:
+          type: array
+          description: an optional array of top level domains (TLDs) to check for suggestions (not all Lookup Providers support this)
+          items:
+            type: string
+            example: com
+          minItems: 0
+          maxItems: 255
+          nullable: true
+        maximum_length:
+          type: integer
+          description: the optional maximum number of characters for the suggested domain names (not all Lookup Providers support this)
+          format: int32
+          example: 10
+          minimum: 3
+          maximum: 63
+          nullable: true
+        filter_sensitive_content:
+          type: boolean
+          description: whether to filter out sensitive words from the suggestions (not all Lookup Providers support this)
+          nullable: true
+      required:
+          - term
+
+    DomainStatus:
+      allOf:
+        - $ref: "#/components/schemas/Domain"
+        - type: object
+          properties:
+            idn_domain_name:
+              type: string
+            tld:
+              type: string
+            sld:
+              type: string
+            idn_sld:
+              type: string
+            status:
+              type: string
+              enum:
+                - registered
+                - available for registration
+                - reserved
+                - unknown
+                - tld not supported
+            group:
+              type: string
+              nullable: true
+            pricing:
+              type: array
+              items:
+                $ref: '#/components/schemas/DomainPricing'
+            shortest_period:
+              $ref: '#/components/schemas/DomainPricing'
+            is_premium:
+              type: boolean
+            premium_cost_pricing:
+              nullable: true
+              allOf:
+                - $ref: '#/components/schemas/DomainPricing'
+          required:
+            - idn_domain_name
+            - sld
+            - idn_sld
+            - status
+            - pricing
+            - shortest_period
+            - group
+            - is_premium
+            - premium_cost_pricing
+
+    DomainRenewalPricing:
+      type: object
+      properties:
+        period:
+          type: integer
+        pricing:
+          nullable: false
+          allOf:
+            - $ref: '#/components/schemas/Amount'
+      required:
+        - period
+        - pricing
+
+    DomainAddon:
+      type: object
+      properties:
+        dns_management:
+          type: boolean
+          example: true
+          description: Whether DNS management is included
+        email_forwarding:
+          type: boolean
+          example: true
+          description: Whether email forwarding is included
+        id_protection:
+          type: boolean
+          example: true
+          description: Whether ID protection is included
+        epp_code_required:
+          type: boolean
+          example: false
+          description: Whether an EPP code is required for domain transfers
+      required:
+        - dns_management
+        - email_forwarding
+        - id_protection
+        - epp_code_required
+
+    DomainPricing:
+      type: object
+      properties:
+        period:
+          type: integer
+        register:
+          nullable: true
+          allOf:
+          - $ref: '#/components/schemas/Amount'
+        transfer:
+          nullable: true
+          allOf:
+           - $ref: '#/components/schemas/Amount'
+        renew:
+          nullable: true
+          allOf:
+           - $ref: '#/components/schemas/Amount'
+      required:
+        - register
+        - transfer
+        - renew
+        - period
+
+    TldPricing:
+      type: object
+      required:
+        - tld
+        - categories
+        - group
+        - pricing
+      properties:
+        tld:
+          type: string
+          example: com
+        categories:
+          type: array
+          items:
+            type: string
+          example: ["Other"]
+        group:
+          type: string
+          nullable: true
+          example: "Sale"
+        addons:
+          $ref: '#/components/schemas/DomainAddon'
+        pricing:
+          type: array
+          items:
+            $ref: '#/components/schemas/DomainPricing'
+        grace_period:
+          $ref: '#/components/schemas/DomainGracePeriod'
+        redemption_period:
+          $ref: '#/components/schemas/DomainGracePeriod'
+
+    DomainGracePeriod:
+      type: object
+      nullable: true
+      required:
+        - days
+        - price
+      properties:
+        days:
+          type: integer
+          example: 1
+        price:
+          $ref: '#/components/schemas/Amount'
+
+    DomainRenewal:
+      allOf:
+        - $ref: "#/components/schemas/Domain"
+        - type: object
+          properties:
+            id:
+              type: integer
+              format: int64
+              example: 123456
+              description: the unique ID for the domain within the application
+            status:
+              enum: [Active, Expired, Grace, Redemption, Pending, Cancelled]
+              description: the current status of the domain
+            expiry_date:
+              type: string
+              format: date
+              example: 2026-03-14
+              description: the date the domain is due to expire
+            days_to_expiry:
+              type: integer
+              format: int32
+              example: 45
+              description: the number of days until the domain expires
+            days_of_grace_period:
+                type: integer
+                format: int32
+                example: 30
+                description: the number of days in the grace period after expiry
+            in_grace_period:
+              type: boolean
+              description: whether the domain is currently within the grace period after expiry
+            days_of_redemption_period:
+                type: integer
+                format: int32
+                example: 30
+                description: the number of days in the redemption period after expiry
+            past_redemption_period:
+              type: boolean
+              description: whether the domain is currently within the redemption period after expiry
+            days_left_in_period:
+              type: integer
+              format: int32
+              example: 15
+              description: the number of days left in the current grace or redemption period
+            in_redemption_period:
+              type: boolean
+              description: whether the domain is currently within the redemption period after expiry
+            is_premium:
+              type: boolean
+              description: whether the domain is a premium domain
+            is_expiring_soon:
+              type: boolean
+              description: whether the domain is within the renewal period
+            eligible_for_renewal:
+              type: boolean
+              description: whether the domain is eligible for renewal
+            free_domain_renewal:
+              type: boolean
+              description: whether the domain renewal is free
+            renewal_periods:
+              type: array
+              description: the available renewal periods for the domain
+              items:
+                $ref: '#/components/schemas/DomainRenewalPricing'
+          required:
+            - id
+            - status
+            - expiry_date
+            - eligible_for_renewal
+            - renewal_periods
+
+    IdnLanguage:
+      type: object
+      required:
+        - code
+        - language
+      properties:
+        code:
+          type: string
+          example: eng
+        language:
+          type: string
+          example: English
+
   parameters:
+    search_query:
+      name: query
+      in: query
+      description: Search query
+      required: true
+      schema:
+        type: string
+        minLength: 3
+        maxLength: 128
+
     cart_item_id:
       name: item_id
       in: path
@@ -966,10 +5271,112 @@ components:
         minLength: 16
         maxLength: 16
 
+    service_id:
+      name: service_id
+      in: path
+      description: Service ID
+      required: true
+      schema:
+        type: integer
+        format: int64
+        example: 789
+
+    invoice_id:
+      name: invoice_id
+      in: path
+      description: Invoice ID
+      required: true
+      schema:
+        type: integer
+        format: int64
+        example: 456
+
+    paymethod_id:
+      name: paymethod_id
+      in: path
+      description: |-
+        A stored payment method ID from the `GET /user/paymethods` endpoint. This is the same value that the `POST /cart/{cart_id}/checkout` endpoint accepts as the `payment.paymethod_id` value.
+
+        The minimum possible value is `1`.
+      required: true
+      schema:
+        type: integer
+        format: int64
+        minimum: 1
+        example: 12
+
+    service_addon_id:
+      name: service_addon_id
+      in: path
+      description: Service Addon ID
+      required: true
+      schema:
+        type: integer
+        format: int64
+        example: 567
+
+    service_customfield_id:
+      name: service_customfield_id
+      in: path
+      description: Service Custom Field ID
+      required: true
+      schema:
+        type: integer
+        format: int64
+        example: 234
+
+    service_configoption_id:
+      name: service_configoption_id
+      in: path
+      description: Service Configuration Option ID
+      required: true
+      schema:
+        type: integer
+        format: int64
+        example: 89
+
+    custom_field_id:
+      name: custom_field_id
+      in: path
+      description: Custom Field ID
+      required: true
+      schema:
+        type: integer
+        format: int64
+        example: 345
+
+    config_option_id:
+      name: config_option_id
+      in: path
+      description: Configuration Option ID
+      required: true
+      schema:
+        type: integer
+        format: int64
+        example: 345
+
     client_id:
       name: client_id
       in: path
       description: Client ID
+      required: true
+      schema:
+        type: integer
+        format: int64
+
+    user_id:
+      name: user_id
+      in: path
+      description: User ID
+      required: true
+      schema:
+        type: integer
+        format: int64
+
+    client_uuid:
+      name: client_uuid
+      in: path
+      description: Client UUID
       required: true
       schema:
         type: string
@@ -977,9 +5384,101 @@ components:
         maxLength: 36
         example: 11C2M72y-z54n-5721-nnF8-13492be5uHiu
 
+    domain:
+      name: domain
+      in: query
+      description: Domain name
+      required: true
+      schema:
+        type: string
+        example: example.com
+
+    domain_id:
+      name: domain_id
+      in: path
+      description: Domain ID
+      required: true
+      schema:
+        type: integer
+        format: int64
+        example: 789
+
+    tld:
+      name: tld
+      in: query
+      description: Top level domain
+      required: true
+      schema:
+        type: string
+        example: com
+
+    tld_id:
+      name: tld_id
+      in: path
+      description: Top level domain ID
+      required: true
+      schema:
+        type: string
+        example: com
+
+    page:
+      name: page
+      in: query
+      description: Page number
+      required: false
+      schema:
+        type: integer
+        minimum: 1
+        example: 1
+
+    page_size:
+      name: page_size
+      in: query
+      description: >
+        Number of items per page. The maximum allowed value is 500.
+        The default value is 50.
+      required: false
+      schema:
+        type: integer
+        minimum: 1
+        example: 10
+        maximum: 500
+
+    country_code:
+      name: country_code
+      in: path
+      description: The ISO 3166-1 alpha-2 country code or the customized country code.
+      required: true
+      schema:
+        type: string
+        minLength: 2
+        example: US
+
   responses:
+    Unauthorized:
+      description: Access Not Authorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GeneralError'
+
+    Forbidden:
+      description: |-
+        The caller is authenticated but does not have permission to use this resource (the _View & Pay Invoices_ permission).
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GeneralError'
+
     NotFound:
       description: Entity Not Found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GeneralError'
+
+    NotImplemented:
+      description: Functionality Not Implemented
       content:
         application/json:
           schema:
@@ -991,3 +5490,21 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/GeneralError'
+
+    Conflict:
+      description: |-
+        The request conflicts with the current state of the resource (for example, cart-lock contention, or an item-mutating operation on a cart that has already checked out).
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GeneralError'
+
+  securitySchemes:
+    XApiState:
+      type: apiKey
+      in: header
+      name: X-Api-State
+      description: |-
+        The `/user/session` state token, which includes the authenticated client and user IDs.
+
+        All `/user/*` endpoints and checkout request bodies that authenticate as a client require this token.

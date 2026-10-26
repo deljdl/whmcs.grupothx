@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of Composer.
@@ -22,48 +22,59 @@ use Composer\Repository\PlatformRepository;
  */
 abstract class BasePackage implements PackageInterface
 {
-    public static $supportedLinkTypes = array(
-        'require' => array('description' => 'requires', 'method' => 'requires'),
-        'conflict' => array('description' => 'conflicts', 'method' => 'conflicts'),
-        'provide' => array('description' => 'provides', 'method' => 'provides'),
-        'replace' => array('description' => 'replaces', 'method' => 'replaces'),
-        'require-dev' => array('description' => 'requires (for development)', 'method' => 'devRequires'),
-    );
+    /**
+     * @phpstan-var array<non-empty-string, array{description: string, method: Link::TYPE_*}>
+     * @internal
+     */
+    public static $supportedLinkTypes = [
+        'require' => ['description' => 'requires', 'method' => Link::TYPE_REQUIRE],
+        'conflict' => ['description' => 'conflicts', 'method' => Link::TYPE_CONFLICT],
+        'provide' => ['description' => 'provides', 'method' => Link::TYPE_PROVIDE],
+        'replace' => ['description' => 'replaces', 'method' => Link::TYPE_REPLACE],
+        'require-dev' => ['description' => 'requires (for development)', 'method' => Link::TYPE_DEV_REQUIRE],
+    ];
 
-    const STABILITY_STABLE = 0;
-    const STABILITY_RC = 5;
-    const STABILITY_BETA = 10;
-    const STABILITY_ALPHA = 15;
-    const STABILITY_DEV = 20;
+    public const STABILITY_STABLE = 0;
+    public const STABILITY_RC = 5;
+    public const STABILITY_BETA = 10;
+    public const STABILITY_ALPHA = 15;
+    public const STABILITY_DEV = 20;
 
-    public static $stabilities = array(
+    public const STABILITIES = [
         'stable' => self::STABILITY_STABLE,
         'RC' => self::STABILITY_RC,
         'beta' => self::STABILITY_BETA,
         'alpha' => self::STABILITY_ALPHA,
         'dev' => self::STABILITY_DEV,
-    );
+    ];
+
+    /**
+     * @deprecated
+     * @readonly
+     * @var array<key-of<BasePackage::STABILITIES>, self::STABILITY_*>
+     * @phpstan-ignore property.readOnlyByPhpDocDefaultValue
+     */
+    public static $stabilities = self::STABILITIES;
 
     /**
      * READ-ONLY: The package id, public for fast access in dependency solver
      * @var int
+     * @internal
      */
     public $id;
     /** @var string */
     protected $name;
     /** @var string */
     protected $prettyName;
-    /** @var RepositoryInterface */
-    protected $repository;
-    /** @var array */
-    protected $transportOptions = array();
+    /** @var ?RepositoryInterface */
+    protected $repository = null;
 
     /**
      * All descendants' constructors should call this parent constructor
      *
      * @param string $name The package's name
      */
-    public function __construct($name)
+    public function __construct(string $name)
     {
         $this->prettyName = $name;
         $this->name = strtolower($name);
@@ -71,32 +82,34 @@ abstract class BasePackage implements PackageInterface
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
-    public function getPrettyName()
+    public function getPrettyName(): string
     {
         return $this->prettyName;
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
-    public function getNames()
+    public function getNames($provides = true): array
     {
-        $names = array(
+        $names = [
             $this->getName() => true,
-        );
+        ];
 
-        foreach ($this->getProvides() as $link) {
-            $names[$link->getTarget()] = true;
+        if ($provides) {
+            foreach ($this->getProvides() as $link) {
+                $names[$link->getTarget()] = true;
+            }
         }
 
         foreach ($this->getReplaces() as $link) {
@@ -107,79 +120,62 @@ abstract class BasePackage implements PackageInterface
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
-    public function setId($id)
+    public function setId(int $id): void
     {
         $this->id = $id;
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
-    public function getId()
+    public function getId(): int
     {
         return $this->id;
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
-    public function setRepository(RepositoryInterface $repository)
+    public function setRepository(RepositoryInterface $repository): void
     {
         if ($this->repository && $repository !== $this->repository) {
-            throw new \LogicException('A package can only be added to one repository');
+            throw new \LogicException(sprintf(
+                'Package "%s" cannot be added to repository "%s" as it is already in repository "%s".',
+                $this->getPrettyName(),
+                $repository->getRepoName(),
+                $this->repository->getRepoName()
+            ));
         }
         $this->repository = $repository;
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
-    public function getRepository()
+    public function getRepository(): ?RepositoryInterface
     {
         return $this->repository;
     }
 
     /**
-     * {@inheritDoc}
-     */
-    public function getTransportOptions()
-    {
-        return $this->transportOptions;
-    }
-
-    /**
-     * Configures the list of options to download package dist files
-     *
-     * @param array $options
-     */
-    public function setTransportOptions(array $options)
-    {
-        $this->transportOptions = $options;
-    }
-
-    /**
      * checks if this package is a platform package
-     *
-     * @return bool
      */
-    public function isPlatform()
+    public function isPlatform(): bool
     {
         return $this->getRepository() instanceof PlatformRepository;
     }
 
     /**
      * Returns package unique name, constructed from name, version and release type.
-     *
-     * @return string
      */
-    public function getUniqueName()
+    public function getUniqueName(): string
     {
         return $this->getName().'-'.$this->getVersion();
     }
 
-    public function equals(PackageInterface $package)
+    public function equals(PackageInterface $package): bool
     {
         $self = $this;
         if ($this instanceof AliasPackage) {
@@ -194,39 +190,67 @@ abstract class BasePackage implements PackageInterface
 
     /**
      * Converts the package into a readable and unique string
-     *
-     * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return $this->getUniqueName();
     }
 
-    public function getPrettyString()
+    public function getPrettyString(): string
     {
         return $this->getPrettyName().' '.$this->getPrettyVersion();
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
-    public function getFullPrettyVersion($truncate = true)
+    public function getFullPrettyVersion(bool $truncate = true, int $displayMode = PackageInterface::DISPLAY_SOURCE_REF_IF_DEV): string
     {
-        if (!$this->isDev() || !in_array($this->getSourceType(), array('hg', 'git'))) {
+        if (
+            $displayMode === PackageInterface::DISPLAY_SOURCE_REF_IF_DEV
+            && (
+                !$this->isDev()
+                || (
+                    !\in_array($this->getSourceType(), ['hg', 'git'])
+                    && ((string) $this->getSourceType() !== '' || (string) $this->getDistReference() === '')
+                )
+            )
+        ) {
+            return $this->getPrettyVersion();
+        }
+
+        switch ($displayMode) {
+            case PackageInterface::DISPLAY_SOURCE_REF_IF_DEV:
+                $reference = (string) $this->getSourceReference() !== '' ? $this->getSourceReference() : $this->getDistReference();
+                break;
+            case PackageInterface::DISPLAY_SOURCE_REF:
+                $reference = $this->getSourceReference();
+                break;
+            case PackageInterface::DISPLAY_DIST_REF:
+                $reference = $this->getDistReference();
+                break;
+            default:
+                throw new \UnexpectedValueException('Display mode '.$displayMode.' is not supported');
+        }
+
+        if (null === $reference) {
             return $this->getPrettyVersion();
         }
 
         // if source reference is a sha1 hash -- truncate
-        if ($truncate && strlen($this->getSourceReference()) === 40) {
-            return $this->getPrettyVersion() . ' ' . substr($this->getSourceReference(), 0, 7);
+        if ($truncate && \strlen($reference) === 40 && $this->getSourceType() !== 'svn') {
+            return $this->getPrettyVersion() . ' ' . substr($reference, 0, 7);
         }
 
-        return $this->getPrettyVersion() . ' ' . $this->getSourceReference();
+        return $this->getPrettyVersion() . ' ' . $reference;
     }
 
-    public function getStabilityPriority()
+    /**
+     * @phpstan-return self::STABILITY_*
+     */
+    public function getStabilityPriority(): int
     {
-        return self::$stabilities[$this->getStability()];
+        return self::STABILITIES[$this->getStability()];
     }
 
     public function __clone()
@@ -238,14 +262,32 @@ abstract class BasePackage implements PackageInterface
     /**
      * Build a regexp from a package name, expanding * globs as required
      *
-     * @param  string $whiteListedPattern
-     * @param  string $wrap Wrap the cleaned string by the given string
-     * @return string
+     * @param  non-empty-string $wrap         Wrap the cleaned string by the given string
+     * @return non-empty-string
      */
-    public static function packageNameToRegexp($whiteListedPattern, $wrap = '{^%s$}i')
+    public static function packageNameToRegexp(string $allowPattern, string $wrap = '{^%s$}i'): string
     {
-        $cleanedWhiteListedPattern = str_replace('\\*', '.*', preg_quote($whiteListedPattern));
+        $cleanedAllowPattern = str_replace('\\*', '.*', preg_quote($allowPattern));
 
-        return sprintf($wrap, $cleanedWhiteListedPattern);
+        return sprintf($wrap, $cleanedAllowPattern);
+    }
+
+    /**
+     * Build a regexp from package names, expanding * globs as required
+     *
+     * @param string[] $packageNames
+     * @param non-empty-string $wrap
+     * @return non-empty-string
+     */
+    public static function packageNamesToRegexp(array $packageNames, string $wrap = '{^(?:%s)$}iD'): string
+    {
+        $packageNames = array_map(
+            static function ($packageName): string {
+                return BasePackage::packageNameToRegexp($packageName, '%s');
+            },
+            $packageNames
+        );
+
+        return sprintf($wrap, implode('|', $packageNames));
     }
 }

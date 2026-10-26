@@ -1,5 +1,7 @@
 <?php
 
+use WHMCS\Billing\BillingNote\Status as BillingNoteStatus;
+use WHMCS\Billing\Invoice;
 use WHMCS\Database\Capsule;
 
 if (!defined("WHMCS")) {
@@ -30,36 +32,57 @@ for ( $day = 0; $day < 120; $day += 30) {
     $rowdata[] = "{$day} - " . ($day + 30);
 
     $currencytotals = [];
-    $subQuery = Capsule::table('tblaccounts')
-        ->select(Capsule::raw('sum(amountin - amountout)'))
-        ->join('tblinvoices', 'tblinvoices.id', '=', 'tblaccounts.invoiceid')
-        ->join('tblclients as t2', 't2.id', '=', 'tblinvoices.userid')
-        ->where('tblinvoices.duedate', '<=', $startdate)
-        ->where('tblinvoices.duedate', '>=', $enddate)
-        ->where('tblinvoices.status', '=', 'Unpaid')
-        ->where('t2.currency', '=', 'tblclients.currency');
-    $results = Capsule::table('tblinvoices')
-        ->select(
-            'tblclients.currency',
-            Capsule::raw('sum(tblinvoices.total) as `sum`'),
-            Capsule::raw('(' . $subQuery->toSQL() . ') as `sum2`')
-        )
-        ->mergeBindings($subQuery)
-        ->join('tblclients', 'tblclients.id', '=', 'tblinvoices.userid')
-        ->where('tblinvoices.duedate', '<=', $startdate)
-        ->where('tblinvoices.duedate', '>=', $enddate)
-        ->where('tblinvoices.status', '=', 'Unpaid')
-        ->groupBy('tblclients.currency')
-        ->get()
-        ->all();
+
+    $query = <<<SQL
+SELECT 
+    `tblclients`.`currency`, 
+    SUM(tblinvoices.total) AS `sum`, 
+    (
+        SELECT COALESCE(SUM(`tblaccounts`.`amountin` - `tblaccounts`.`amountout`), 0) FROM `tblaccounts`
+            INNER JOIN `tblinvoices` ON `tblinvoices`.`id` = `tblaccounts`.`invoiceid`
+            INNER JOIN `tblclients` AS `t2` ON `t2`.`id` = `tblinvoices`.`userid`
+            LEFT JOIN `tblbillingnotes` ON `tblaccounts`.`billingnoteid` = `tblbillingnotes`.`id`                                                                              
+        WHERE `tblinvoices`.`duedate` <= ?
+            AND `tblinvoices`.`duedate` >= ?
+            AND `tblinvoices`.`status` = ?
+            AND `t2`.`currency` = `tblclients`.`currency`
+            AND (
+                `tblbillingnotes`.`id` IS NULL 
+                    OR `tblbillingnotes`.`status` = ?
+                )
+    ) AS `sum2` 
+
+FROM `tblinvoices`
+    INNER JOIN `tblclients` ON `tblclients`.`id` = `tblinvoices`.`userid`
+
+WHERE `tblinvoices`.`duedate` <= ?
+  AND `tblinvoices`.`duedate` >= ?
+  AND `tblinvoices`.`status` = ?
+
+GROUP BY `tblclients`.`currency`;
+SQL;
+
+    $results = Capsule::select(
+        $query,
+        [
+            $startdate,
+            $enddate,
+            Invoice::STATUS_UNPAID,
+            BillingNoteStatus::Closed->value,
+            $startdate,
+            $enddate,
+            Invoice::STATUS_UNPAID,
+        ]
+    );
+
     foreach ($results as $result) {
         $currencytotals[$result->currency] = ($result->sum - $result->sum2);
     }
 
     foreach ($currencies as $currencyid => $currencyname) {
-        $currencyamount = $currencytotals[$currencyid];
-        if (!$currencyamount) {
-            $currencyamount = 0;
+        $currencyamount = $currencytotals[$currencyid] ?? 0;
+        if (!isset($totals[$currencyid])) {
+            $totals[$currencyid] = 0;
         }
         $totals[$currencyid] += $currencyamount;
         $currency = getCurrency(null, $currencyid);
@@ -103,9 +126,9 @@ foreach ($results as $result) {
 }
 
 foreach ($currencies as $currencyid => $currencyname) {
-    $currencyamount = $currencytotals[$currencyid];
-    if (!$currencyamount) {
-        $currencyamount=0;
+    $currencyamount = $currencytotals[$currencyid] ?? 0;
+    if (!isset($totals[$currencyid])) {
+        $totals[$currencyid] = 0;
     }
     $totals[$currencyid] += $currencyamount;
     $currency = getCurrency(null, $currencyid);

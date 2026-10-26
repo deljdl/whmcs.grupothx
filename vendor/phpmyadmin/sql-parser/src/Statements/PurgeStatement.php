@@ -1,7 +1,5 @@
 <?php
-/**
- * `PURGE` statement.
- */
+
 declare(strict_types=1);
 
 namespace PhpMyAdmin\SqlParser\Statements;
@@ -11,6 +9,7 @@ use PhpMyAdmin\SqlParser\Parser;
 use PhpMyAdmin\SqlParser\Statement;
 use PhpMyAdmin\SqlParser\Token;
 use PhpMyAdmin\SqlParser\TokensList;
+
 use function in_array;
 use function trim;
 
@@ -25,21 +24,21 @@ class PurgeStatement extends Statement
     /**
      * The type of logs
      *
-     * @var String
+     * @var string|null
      */
     public $log_type;
 
     /**
      * The end option of this query.
      *
-     * @var String
+     * @var string|null
      */
     public $end_option;
 
     /**
      * The end expr of this query.
      *
-     * @var String
+     * @var string|null
      */
     public $end_expr;
 
@@ -73,8 +72,6 @@ class PurgeStatement extends Statement
         for (; $list->idx < $list->count; ++$list->idx) {
             /**
              * Token parsed at this moment.
-             *
-             * @var Token
              */
             $token = $list->tokens[$list->idx];
 
@@ -115,26 +112,30 @@ class PurgeStatement extends Statement
         }
 
         // Only one possible end state
-        if ($state !== 4) {
-            $parser->error('Unexpected token.', $prevToken);
+        if ($state === 4) {
+            return;
         }
+
+        $parser->error('Unexpected token.', $prevToken);
     }
 
     /**
      * Parse expected keyword (or throw relevant error)
      *
-     * @param Parser $parser            the instance that requests parsing
-     * @param Token  $token             token to be parsed
-     * @param Array  $expected_keywords array of possibly expected keywords at this point
+     * @param Parser   $parser           the instance that requests parsing
+     * @param Token    $token            token to be parsed
+     * @param string[] $expectedKeywords array of possibly expected keywords at this point
+     *
+     * @return mixed|null
      */
-    private static function parseExpectedKeyword($parser, $token, $expected_keywords)
+    private static function parseExpectedKeyword($parser, $token, $expectedKeywords)
     {
         if ($token->type === Token::TYPE_KEYWORD) {
-            if (in_array($token->keyword, $expected_keywords)) {
+            if (in_array($token->keyword, $expectedKeywords)) {
                 return $token->keyword;
-            } else {
-                $parser->error('Unexpected keyword', $token);
             }
+
+            $parser->error('Unexpected keyword', $token);
         } else {
             $parser->error('Unexpected token.', $token);
         }

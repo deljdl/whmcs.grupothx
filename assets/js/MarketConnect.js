@@ -64,6 +64,15 @@ jQuery(document).ready(function() {
             }
         }, 'json').fail(function (xhr) {
             var response = (xhr.responseText != '' ? xhr.responseText : xhr.statusText);
+
+            var contentType = xhr.getResponseHeader('content-type') || '';
+            if (contentType.includes('text/html')) {
+                document.open();
+                document.write(xhr.responseText);
+                document.close();
+                return;
+            }
+
             $.growl.error({ title: '', message: response })
         }).always(function (xhr) {
             buttonIcon.removeClass().addClass(iconState);

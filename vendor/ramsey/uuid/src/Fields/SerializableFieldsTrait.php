@@ -14,13 +14,16 @@ declare(strict_types=1);
 
 namespace Ramsey\Uuid\Fields;
 
+use ValueError;
+
 use function base64_decode;
-use function base64_encode;
+use function sprintf;
+use function strlen;
 
 /**
  * Provides common serialization functionality to fields
  *
- * @psalm-immutable
+ * @immutable
  */
 trait SerializableFieldsTrait
 {
@@ -35,22 +38,46 @@ trait SerializableFieldsTrait
     abstract public function getBytes(): string;
 
     /**
-     * Returns a string representation of object
+     * Returns a string representation of the object
      */
     public function serialize(): string
     {
-        return base64_encode($this->getBytes());
+        return $this->getBytes();
+    }
+
+    /**
+     * @return array{bytes: string}
+     */
+    public function __serialize(): array
+    {
+        return ['bytes' => $this->getBytes()];
     }
 
     /**
      * Constructs the object from a serialized string representation
      *
-     * @param string $serialized The serialized string representation of the object
-     *
-     * @phpcsSuppress SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint
+     * @param string $data The serialized string representation of the object
      */
-    public function unserialize($serialized): void
+    public function unserialize(string $data): void
     {
-        $this->__construct(base64_decode($serialized));
+        if (strlen($data) === 16) {
+            $this->__construct($data);
+        } else {
+            $this->__construct(base64_decode($data));
+        }
+    }
+
+    /**
+     * @param array{bytes?: string} $data
+     */
+    public function __unserialize(array $data): void
+    {
+        // @codeCoverageIgnoreStart
+        if (!isset($data['bytes'])) {
+            throw new ValueError(sprintf('%s(): Argument #1 ($data) is invalid', __METHOD__));
+        }
+        // @codeCoverageIgnoreEnd
+
+        $this->unserialize($data['bytes']);
     }
 }

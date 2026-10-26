@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of Composer.
@@ -19,48 +19,38 @@ use Composer\Package\PackageInterface;
  *
  * @author Konstantin Kudryashov <ever.zet@gmail.com>
  */
-class InstallOperation extends SolverOperation
+class InstallOperation extends SolverOperation implements OperationInterface
 {
-    protected $package;
+    protected const TYPE = 'install';
 
     /**
-     * Initializes operation.
-     *
-     * @param PackageInterface $package package instance
-     * @param string           $reason  operation reason
+     * @var PackageInterface
      */
-    public function __construct(PackageInterface $package, $reason = null)
-    {
-        parent::__construct($reason);
+    protected $package;
 
+    public function __construct(PackageInterface $package)
+    {
         $this->package = $package;
     }
 
     /**
      * Returns package instance.
-     *
-     * @return PackageInterface
      */
-    public function getPackage()
+    public function getPackage(): PackageInterface
     {
         return $this->package;
     }
 
     /**
-     * Returns job type.
-     *
-     * @return string
+     * @inheritDoc
      */
-    public function getJobType()
+    public function show($lock): string
     {
-        return 'install';
+        return self::format($this->package, $lock);
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    public function __toString()
+    public static function format(PackageInterface $package, bool $lock = false): string
     {
-        return 'Installing '.$this->package->getPrettyName().' ('.$this->formatVersion($this->package).')';
+        return ($lock ? 'Locking ' : 'Installing ').'<info>'.$package->getPrettyName().'</info> (<comment>'.$package->getFullPrettyVersion().'</comment>)';
     }
 }

@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of Composer.
@@ -15,50 +15,95 @@ namespace Composer\Installer;
 use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\DependencyResolver\Operation\OperationInterface;
-use Composer\DependencyResolver\PolicyInterface;
-use Composer\DependencyResolver\Pool;
-use Composer\DependencyResolver\Request;
-use Composer\Repository\CompositeRepository;
+use Composer\Repository\RepositoryInterface;
+use Composer\EventDispatcher\Event;
 
 /**
  * The Package Event.
  *
  * @author Jordi Boggiano <j.boggiano@seld.be>
  */
-class PackageEvent extends InstallerEvent
+class PackageEvent extends Event
 {
     /**
-     * @var OperationInterface The package instance
+     * @var Composer
+     */
+    private $composer;
+
+    /**
+     * @var IOInterface
+     */
+    private $io;
+
+    /**
+     * @var bool
+     */
+    private $devMode;
+
+    /**
+     * @var RepositoryInterface
+     */
+    private $localRepo;
+
+    /**
+     * @var OperationInterface[]
+     */
+    private $operations;
+
+    /**
+     * @var OperationInterface The operation instance which is being executed
      */
     private $operation;
 
     /**
      * Constructor.
      *
-     * @param string               $eventName
-     * @param Composer             $composer
-     * @param IOInterface          $io
-     * @param bool                 $devMode
-     * @param PolicyInterface      $policy
-     * @param Pool                 $pool
-     * @param CompositeRepository  $installedRepo
-     * @param Request              $request
      * @param OperationInterface[] $operations
-     * @param OperationInterface   $operation
      */
-    public function __construct($eventName, Composer $composer, IOInterface $io, $devMode, PolicyInterface $policy, Pool $pool, CompositeRepository $installedRepo, Request $request, array $operations, OperationInterface $operation)
+    public function __construct(string $eventName, Composer $composer, IOInterface $io, bool $devMode, RepositoryInterface $localRepo, array $operations, OperationInterface $operation)
     {
-        parent::__construct($eventName, $composer, $io, $devMode, $policy, $pool, $installedRepo, $request, $operations);
+        parent::__construct($eventName);
 
+        $this->composer = $composer;
+        $this->io = $io;
+        $this->devMode = $devMode;
+        $this->localRepo = $localRepo;
+        $this->operations = $operations;
         $this->operation = $operation;
+    }
+
+    public function getComposer(): Composer
+    {
+        return $this->composer;
+    }
+
+    public function getIO(): IOInterface
+    {
+        return $this->io;
+    }
+
+    public function isDevMode(): bool
+    {
+        return $this->devMode;
+    }
+
+    public function getLocalRepo(): RepositoryInterface
+    {
+        return $this->localRepo;
+    }
+
+    /**
+     * @return OperationInterface[]
+     */
+    public function getOperations(): array
+    {
+        return $this->operations;
     }
 
     /**
      * Returns the package instance.
-     *
-     * @return OperationInterface
      */
-    public function getOperation()
+    public function getOperation(): OperationInterface
     {
         return $this->operation;
     }

@@ -1,7 +1,5 @@
 <?php
-/**
- * Miscellaneous utilities.
- */
+
 declare(strict_types=1);
 
 namespace PhpMyAdmin\SqlParser\Utils;
@@ -20,14 +18,11 @@ class Misc
      * @param SelectStatement $statement the statement to be processed
      * @param string          $database  the name of the database
      *
-     * @return array
+     * @return array<string, array<string, array<string, array<string, array<string, string>|string|null>>|null>>
      */
     public static function getAliases($statement, $database)
     {
-        if (! ($statement instanceof SelectStatement)
-            || empty($statement->expr)
-            || empty($statement->from)
-        ) {
+        if (! ($statement instanceof SelectStatement) || empty($statement->expr) || empty($statement->from)) {
             return [];
         }
 
@@ -81,8 +76,7 @@ class Misc
         }
 
         foreach ($statement->expr as $expr) {
-            if (! isset($expr->column, $expr->alias) || ($expr->column === '') || ($expr->alias === '')
-            ) {
+            if (! isset($expr->column, $expr->alias) || ($expr->column === '') || ($expr->alias === '')) {
                 continue;
             }
 

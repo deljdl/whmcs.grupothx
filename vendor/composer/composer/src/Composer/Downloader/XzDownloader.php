@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of Composer.
@@ -12,13 +12,8 @@
 
 namespace Composer\Downloader;
 
-use Composer\Config;
-use Composer\Cache;
-use Composer\EventDispatcher\EventDispatcher;
+use React\Promise\PromiseInterface;
 use Composer\Package\PackageInterface;
-use Composer\Util\ProcessExecutor;
-use Composer\Util\RemoteFilesystem;
-use Composer\IO\IOInterface;
 
 /**
  * Xz archive downloader.
@@ -28,33 +23,16 @@ use Composer\IO\IOInterface;
  */
 class XzDownloader extends ArchiveDownloader
 {
-    protected $process;
-
-    public function __construct(IOInterface $io, Config $config, EventDispatcher $eventDispatcher = null, Cache $cache = null, ProcessExecutor $process = null, RemoteFilesystem $rfs = null)
+    protected function extract(PackageInterface $package, string $file, string $path): PromiseInterface
     {
-        $this->process = $process ?: new ProcessExecutor($io);
-
-        parent::__construct($io, $config, $eventDispatcher, $cache, $rfs);
-    }
-
-    protected function extract($file, $path)
-    {
-        $command = 'tar -xJf ' . ProcessExecutor::escape($file) . ' -C ' . ProcessExecutor::escape($path);
+        $command = ['tar', '-xJf', $file, '-C', $path];
 
         if (0 === $this->process->execute($command, $ignoredOutput)) {
-            return;
+            return \React\Promise\resolve(null);
         }
 
-        $processError = 'Failed to execute ' . $command . "\n\n" . $this->process->getErrorOutput();
+        $processError = 'Failed to execute ' . implode(' ', $command) . "\n\n" . $this->process->getErrorOutput();
 
         throw new \RuntimeException($processError);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function getFileName(PackageInterface $package, $path)
-    {
-        return $path.'/'.pathinfo(parse_url($package->getDistUrl(), PHP_URL_PATH), PATHINFO_BASENAME);
     }
 }

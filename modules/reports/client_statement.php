@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Database\Query\Builder;
+use WHMCS\Billing\BillingNote\Status;
+use WHMCS\Billing\Payment\Transaction\LedgerType;
 use WHMCS\Carbon;
 use WHMCS\Database\Capsule;
 
@@ -62,16 +65,15 @@ $statement = array();
 $count = $balance = $totalcredits = $totaldebits = 0;
 
 if ($userid) {
+    $invoiceStatusesForReport = [
+        'Unpaid',
+        'Paid',
+        'Collections',
+    ];
+
     $results = Capsule::table('tblinvoices')
         ->where('userid', '=', $userid)
-        ->whereIn(
-            'status',
-            [
-                'Unpaid',
-                'Paid',
-                'Collections',
-            ]
-        )
+        ->whereIn('status', $invoiceStatusesForReport)
         ->orderBy('date', 'asc')
         ->get()
         ->all();
@@ -104,8 +106,25 @@ if ($userid) {
     }
 
     $results = Capsule::table('tblaccounts')
-        ->where('userid', '=', $userid)
-        ->orderBy('date', 'asc')
+        ->select(
+            'tblaccounts.id',
+            'tblaccounts.date',
+            'tblaccounts.description',
+            'tblaccounts.amountin',
+            'tblaccounts.amountout',
+            'tblaccounts.invoiceid'
+        )
+        ->leftJoin('tblbillingnotes', 'tblaccounts.billingnoteid', '=', 'tblbillingnotes.id')
+        ->leftJoin('tblinvoices', 'tblaccounts.invoiceid', '=', 'tblinvoices.id')
+        ->where('tblaccounts.userid', '=', $userid)
+        ->where(static function (Builder $query) use ($invoiceStatusesForReport) {
+            $query->whereNull('tblbillingnotes.id')
+                ->orWhere(static function (Builder $query) use ($invoiceStatusesForReport) {
+                    $query->whereIn('tblinvoices.status', $invoiceStatusesForReport)
+                        ->where('tblbillingnotes.status', '=', Status::Closed);
+                });
+        })
+        ->orderBy('tblaccounts.date', 'asc')
         ->get()
         ->all();
     foreach ($results as $result) {
@@ -123,7 +142,10 @@ if ($userid) {
         if ($itemtype == "AddFunds") {
             $description = "Credit Prefunding";
         } elseif ($itemtype == "Invoice") {
-            $description = "Mass Invoice Payment - ";
+            $description = 'Mass Invoice Payment (See applied credit notes.) - ';
+            $amountin = 0;
+            // This amount is being recorded as a credit on the invoice record,
+            // so set to 0 here to avoid duplication in the statement.
 
             $relids = Capsule::table('tblinvoiceitems')
                 ->where('invoiceid', '=', $invoiceid)
@@ -160,11 +182,28 @@ if ($range) {
 }
 
 $reportdata['tableheadings'] = ['Type', 'Date', 'Description', 'Credits', 'Debits', 'Balance'];
-ksort($statement);
+uksort(
+    $statement,
+    static function ($a, $b){
+        [$datePartA, $countPartA] = explode('_', $a, 2);
+        [$datePartB, $countPartB] = explode('_', $b, 2);
+
+        // Sort by dates first, then by count as ints to ensure consistent order
+        // for transactions on the same date.
+        return strcmp($datePartA, $datePartB)
+            ?: ((int)$countPartA - (int)$countPartB);
+    }
+);
 $previousBalance = null;
 foreach ($statement as $entry) {
-    /** @var Carbon $carbonDate */
+    /** @var Carbon|false $carbonDate */
     $carbonDate = $entry['date'];
+    // Skip entries without a resolvable date (eg: a transaction whose linked
+    // invoice has been deleted), as they cannot be placed on the statement
+    // timeline and safeCreateFromMySqlDate() returns false for them.
+    if (!$carbonDate instanceof Carbon) {
+        continue;
+    }
     // only update the total balance to include previous balance through to ending date of report
     if ($carbonDate->lte($dateto)) {
         $balance += ($entry['credits'] - $entry['debits']);
@@ -210,5 +249,5 @@ $reportdata["tablevalues"][] = array(
     '<b>Ending Balance</b>',
     '<b>'.formatCurrency($totalcredits).'</b>',
     '<b>'.formatCurrency($totaldebits).'</b>',
-    '<b>'.formatCurrency($balance).'</b>'
+    '<b>'.formatCurrency($balance).'</b>',
 );

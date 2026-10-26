@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of Composer.
@@ -20,18 +20,19 @@ namespace Composer\DependencyResolver\Operation;
 interface OperationInterface
 {
     /**
-     * Returns job type.
+     * Returns operation type.
      *
      * @return string
      */
-    public function getJobType();
+    public function getOperationType();
 
     /**
-     * Returns operation reason.
+     * Serializes the operation in a human readable format
      *
+     * @param  bool   $lock Whether this is an operation on the lock file
      * @return string
      */
-    public function getReason();
+    public function show(bool $lock);
 
     /**
      * Serializes the operation in a human readable format

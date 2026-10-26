@@ -1,7 +1,5 @@
 <?php
-/**
- * `JOIN` keyword parser.
- */
+
 declare(strict_types=1);
 
 namespace PhpMyAdmin\SqlParser\Components;
@@ -10,18 +8,21 @@ use PhpMyAdmin\SqlParser\Component;
 use PhpMyAdmin\SqlParser\Parser;
 use PhpMyAdmin\SqlParser\Token;
 use PhpMyAdmin\SqlParser\TokensList;
+
 use function array_search;
 use function implode;
 
 /**
  * `JOIN` keyword parser.
+ *
+ * @final
  */
 class JoinKeyword extends Component
 {
     /**
      * Types of join.
      *
-     * @var array
+     * @var array<string, string>
      */
     public static $JOINS = [
         'CROSS JOIN' => 'CROSS',
@@ -72,25 +73,34 @@ class JoinKeyword extends Component
     public $using;
 
     /**
+     * Index hints
+     *
+     * @var IndexHint[]
+     */
+     public $indexHints = [];
+
+    /**
      * @see JoinKeyword::$JOINS
      *
-     * @param string      $type  Join type
-     * @param Expression  $expr  join expression
-     * @param Condition[] $on    join conditions
-     * @param ArrayObj    $using columns joined
+     * @param string      $type       Join type
+     * @param Expression  $expr       join expression
+     * @param Condition[] $on         join conditions
+     * @param ArrayObj    $using      columns joined
+     * @param IndexHint[] $indexHints index hints
      */
-    public function __construct($type = null, $expr = null, $on = null, $using = null)
+    public function __construct($type = null, $expr = null, $on = null, $using = null, $indexHints = [])
     {
         $this->type = $type;
         $this->expr = $expr;
         $this->on = $on;
         $this->using = $using;
+        $this->indexHints = $indexHints;
     }
 
     /**
-     * @param Parser     $parser  the parser that serves as context
-     * @param TokensList $list    the list of tokens that are being parsed
-     * @param array      $options parameters for parsing
+     * @param Parser               $parser  the parser that serves as context
+     * @param TokensList           $list    the list of tokens that are being parsed
+     * @param array<string, mixed> $options parameters for parsing
      *
      * @return JoinKeyword[]
      */
@@ -109,6 +119,7 @@ class JoinKeyword extends Component
          *
          *      1 -----------------------[ expr ]----------------------> 2
          *
+         *      2 -------------------[ index_hints ]-------------------> 2
          *      2 ------------------------[ ON ]-----------------------> 3
          *      2 -----------------------[ USING ]---------------------> 4
          *
@@ -130,8 +141,6 @@ class JoinKeyword extends Component
         for (; $list->idx < $list->count; ++$list->idx) {
             /**
              * Token parsed at this moment.
-             *
-             * @var Token
              */
             $token = $list->tokens[$list->idx];
 
@@ -146,14 +155,12 @@ class JoinKeyword extends Component
             }
 
             if ($state === 0) {
-                if (($token->type === Token::TYPE_KEYWORD)
-                    && ! empty(static::$JOINS[$token->keyword])
-                ) {
-                    $expr->type = static::$JOINS[$token->keyword];
-                    $state = 1;
-                } else {
+                if (($token->type !== Token::TYPE_KEYWORD) || empty(static::$JOINS[$token->keyword])) {
                     break;
                 }
+
+                $expr->type = static::$JOINS[$token->keyword];
+                $state = 1;
             } elseif ($state === 1) {
                 $expr->expr = Expression::parse($parser, $list, ['field' => 'table']);
                 $state = 2;
@@ -166,17 +173,22 @@ class JoinKeyword extends Component
                         case 'USING':
                             $state = 4;
                             break;
+                        case 'USE':
+                        case 'IGNORE':
+                        case 'FORCE':
+                            // Adding index hint on the JOIN clause.
+                            $expr->indexHints = IndexHint::parse($parser, $list);
+                            break;
                         default:
-                            if (! empty(static::$JOINS[$token->keyword])
-                            ) {
-                                $ret[] = $expr;
-                                $expr = new static();
-                                $expr->type = static::$JOINS[$token->keyword];
-                                $state = 1;
-                            } else {
+                            if (empty(static::$JOINS[$token->keyword])) {
                                 /* Next clause is starting */
                                 break 2;
                             }
+
+                            $ret[] = $expr;
+                            $expr = new static();
+                            $expr->type = static::$JOINS[$token->keyword];
+                            $state = 1;
 
                             break;
                     }
@@ -204,8 +216,8 @@ class JoinKeyword extends Component
     }
 
     /**
-     * @param JoinKeyword[] $component the component to be built
-     * @param array         $options   parameters for building
+     * @param JoinKeyword[]        $component the component to be built
+     * @param array<string, mixed> $options   parameters for building
      *
      * @return string
      */
@@ -214,6 +226,7 @@ class JoinKeyword extends Component
         $ret = [];
         foreach ($component as $c) {
             $ret[] = array_search($c->type, static::$JOINS) . ' ' . $c->expr
+                . ($c->indexHints !== [] ? ' ' . IndexHint::build($c->indexHints) : '')
                 . (! empty($c->on)
                     ? ' ON ' . Condition::build($c->on) : '')
                 . (! empty($c->using)

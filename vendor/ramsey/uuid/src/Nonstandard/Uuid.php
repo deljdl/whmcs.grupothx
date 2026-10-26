@@ -18,20 +18,20 @@ use Ramsey\Uuid\Codec\CodecInterface;
 use Ramsey\Uuid\Converter\NumberConverterInterface;
 use Ramsey\Uuid\Converter\TimeConverterInterface;
 use Ramsey\Uuid\Uuid as BaseUuid;
-use Ramsey\Uuid\UuidInterface;
 
 /**
- * Nonstandard\Uuid is a UUID that doesn't conform to RFC 4122
+ * Nonstandard\Uuid is a UUID that doesn't conform to RFC 9562 (formerly RFC 4122)
  *
- * @psalm-immutable
+ * @immutable
+ * @pure
  */
-final class Uuid extends BaseUuid implements UuidInterface
+final class Uuid extends BaseUuid
 {
     public function __construct(
         Fields $fields,
         NumberConverterInterface $numberConverter,
         CodecInterface $codec,
-        TimeConverterInterface $timeConverter
+        TimeConverterInterface $timeConverter,
     ) {
         parent::__construct($fields, $numberConverter, $codec, $timeConverter);
     }

@@ -185,7 +185,7 @@ INSERT INTO `tblconfiguration` VALUES (1,'Language','english','0000-00-00 00:00:
 (180,'BannedSubdomainPrefixes','mail,mx,gapps,gmail,webmail,cpanel,whm,ftp,clients,billing,members,login,accounts,access','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 (181,'FreeDomainAutoRenewRequiresProduct','on','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 (182,'DomainToDoListEntries','on','0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(183,'Version','8.13.7-release.1','0000-00-00 00:00:00','2021-01-07 10:30:00'),
+(183,'Version','9.1.0-release.1','0000-00-00 00:00:00','2021-01-07 10:30:00'),
 (184,'OrderDaysGrace','0','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 (185,'OrderFormSidebarToggle','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 (187,'UpdaterLatestVersion','7.5.1-release.1','2018-04-18 10:21:38','2018-04-18 10:21:38'),
@@ -203,7 +203,6 @@ INSERT INTO `tblconfiguration` VALUES (1,'Language','english','0000-00-00 00:00:
 (199,'ActiveBackupSystems','','2018-04-18 10:21:42','2018-04-18 10:21:42'),
 (200,'PhoneNumberDropdown','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 (201,'EmailMarketingOptInMessage','We would like to send you occasional news, information and special offers by email. Choose below whether you want to join our mailing list. You can unsubscribe at any time.','2018-04-18 15:21:43','2018-04-18 15:21:43'),
-(202,'DomainExpirationFeeHandling','existing','2018-04-18 15:21:43','2018-04-18 15:21:43'),
 (203,'TaxPerLineItem','1','2018-04-18 15:21:43','2018-04-18 15:21:43'),
 (204,'AdminUserNamesWithSpaces','0','2018-04-18 10:21:43','2018-04-18 10:21:43'),
 (205,'EnableSafeInclude','1','2018-04-18 15:21:43','2018-04-18 15:21:43'),
@@ -213,7 +212,7 @@ INSERT INTO `tblconfiguration` VALUES (1,'Language','english','0000-00-00 00:00:
 (209,'MemberPubKey','+br5lw02EqZUeHdqfcG5jJcEpvJ2RgsXVrKoJT1mnlhrewSRI3arCqJRn82Kd3QYWvLncC4KMYxsgMgDATjMxzXf7ckxfV8ZcRIACRv9Yw9ikOCha7m5FVFXI/wh3fPfLtHpDQAqcBgPcz6uHi2wuZNuStIcTIrjs6qq8HhnzhnIGdMeMLcCKRUsKtqu0vZbm1VIA+4pbjFF36BSEFRIMD3YAq+hX04ndcX6seX0jgLf2azZLJy4Js3nVTwYqUHN4CZSWtRvwtchG14xGyT4yImxNSqe+XuGn/NmARrPa/BgzQXA5ghdqTYxhcCym0rxy0W3HVOrbTnVFlRb0krJN7R9pPC09uuQwKhFe0BMci8PxnAqGaRCwEkt0gqlVNzytVs6VA273danddbRxOg/7XQ39Mv6RLa8zxegn9RkJGLYg3xt5ALK5dSb7x7pnDsC+B6zy8ifA9lGfZU8D5OJEUe0PlC70xYBoVtEgf3XL/ZFEvOprVOxVGI4A0MctGsmO7YbWETlX9CjZvDGjh4ZLZWf4UUCz8xpgLIyvGiIfG8RCglvCYRB/P2eayhd/tfhppakPRbcTn5YxAJ6SjIuVWlaHWmpaEtShsimfkvWIQgx27zjMXPr85dLNhpG/zYWGOuxE6bx/VrGEUxlxCBbltnPj80DEPLi5VZL4yqQq2FjJVS89TCMI7H8J5yq29bchDoTrkz3rgwfnr+pgt+xahklPiOUC2yhMP1oJaD3F3pDb/OAIABfTTTTBMsAKY7fXt5UtMCV06Lbjp1B+57p7kudrTvyl64a/4qOL2wGcZpdgwSzuSsgvl8RkTW+cWmMv57oEgyWm2mIlelhrzo6JxCdwlnmPwvdTWEeH2RMZRG9pwJBFDwwLw6PqtT1e4AIifmmd9T/nqKlqH96/jprnl5bsgCfJmYPMlm3F4HF/S3PSeP0MaFAvi81lbfusMvZGOx68ag9p1htAXt4ozcgZ3zMRJwRGs49upn2i22pXMLIteK5ZYfaI3blyCplpPC9lfuapAl9PIIaa5Pv7jjg9FcYlMsENkRSAFPYZlHysSc5RM0hXDM=','2018-04-23 17:19:29','2018-04-23 17:19:29'),
 (210,'domainLookupProvider','WhmcsDomains','2018-06-19 16:29:29','2018-06-19 16:29:29'),
 (211,'ReCAPTCHAForms','{\"checkoutCompletion\":false}','2018-07-26 12:10:09','2018-07-26 12:10:09'),
-(212,'TaxEUTaxValidation','0','2018-08-09 09:00:00','2018-08-09 09:00:00'),
+(212,'TaxEUTaxValidation','disabled','2018-08-09 09:00:00','2018-08-09 09:00:00'),
 (213,'TaxVatCustomFieldId','0','2018-08-09 09:00:00','2018-08-09 09:00:00'),
 (214,'TaxEUHomeCountry','','2018-08-09 09:00:00','2018-08-09 09:00:00'),
 (215,'TaxEUTaxExempt','0','2018-08-09 09:00:00','2018-08-09 09:00:00'),
@@ -255,11 +254,23 @@ INSERT INTO `tblconfiguration` VALUES (1,'Language','english','0000-00-00 00:00:
 (254,'OnDemandRenewalPeriodAnnually','366','2022-01-05 00:00:00','2022-01-05 00:00:00'),
 (255,'OnDemandRenewalPeriodBiennially','731','2022-01-05 00:00:00','2022-01-05 00:00:00'),
 (256,'OnDemandRenewalPeriodTriennially','1096','2022-01-05 00:00:00','2022-01-05 00:00:00'),
-(257,'UndefinedProductAddonOnDemandRenewalOption','global','2023-08-29 00:00:00','2023-08-29 00:00:00');
+(257,'UndefinedProductAddonOnDemandRenewalOption','global','2023-08-29 00:00:00','2023-08-29 00:00:00'),
+(258,'BillingNoteIncrement', '1', '2025-09-01 00:00:00', '2025-09-01 00:00:00'),
+(259,'TaxCustomBillingNotes', 'on', '2025-09-01 00:00:00', '2025-09-01 00:00:00'),
+(260,'TaxCustomBillingNoteNumbering', '0', '2025-09-01 00:00:00', '2025-09-01 00:00:00'),
+(261,'TaxCustomBillingNoteNumberFormat', '{NUMBER}', '2025-09-01 00:00:00', '2025-09-01 00:00:00'),
+(262,'TaxAutoResetNumberingBillingNote', 'never', '2025-09-01 00:00:00', '2025-09-01 00:00:00'),
+(263,'TaxNextCustomBillingNoteNumber', '1', '2025-09-01 00:00:00', '2025-09-01 00:00:00'),
+(264,'TaxLastCustomBillingNoteNumberResetDate', '2025-09-01 00:00:00', '2025-09-01 00:00:00', '2025-09-01 00:00:00'),
+(265,'AutoUpdatePatchEnabled','','2025-10-10 00:00:00','2025-10-10 00:00:00'),
+(266,'AutoUpdatePatchSchedule','{"frequency":"","day":"","time":"","timezone":""}','2025-10-10 00:00:00','2025-10-10 00:00:00'),
+(267,'InvoiceImmutability','full','2025-10-10 00:00:00','2025-10-10 00:00:00'),
+(268,'PasswordMinimumLength','12','2026-09-09 00:00:00','2026-09-09 00:00:00'),
+(269,'PasswordHistoryDepth','4','2026-09-09 00:00:00','2026-09-09 00:00:00'),
+(270,'MarketConnectOnboardingRequired','1','2026-09-25 00:00:00','2026-09-25 00:00:00');
 /*!40000 ALTER TABLE `tblconfiguration` ENABLE KEYS */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-

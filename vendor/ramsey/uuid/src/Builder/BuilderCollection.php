@@ -15,7 +15,6 @@ declare(strict_types=1);
 namespace Ramsey\Uuid\Builder;
 
 use Ramsey\Collection\AbstractCollection;
-use Ramsey\Collection\CollectionInterface;
 use Ramsey\Uuid\Converter\Number\GenericNumberConverter;
 use Ramsey\Uuid\Converter\Time\GenericTimeConverter;
 use Ramsey\Uuid\Converter\Time\PhpTimeConverter;
@@ -27,19 +26,21 @@ use Traversable;
 
 /**
  * A collection of UuidBuilderInterface objects
+ *
+ * @deprecated this class has been deprecated and will be removed in 5.0.0. The use-case for this class comes from a
+ *     pre-`phpstan/phpstan` and pre-`vimeo/psalm` ecosystem, in which type safety had to be mostly enforced at runtime:
+ *     that is no longer necessary, now that you can safely verify your code to be correct, and use more generic types
+ *     like `iterable<T>` instead.
+ *
+ * @extends AbstractCollection<UuidBuilderInterface>
  */
-class BuilderCollection extends AbstractCollection implements CollectionInterface
+class BuilderCollection extends AbstractCollection
 {
     public function getType(): string
     {
         return UuidBuilderInterface::class;
     }
 
-    /**
-     * @psalm-mutation-free
-     * @psalm-suppress ImpureMethodCall
-     * @psalm-suppress InvalidTemplateParam
-     */
     public function getIterator(): Traversable
     {
         return parent::getIterator();
@@ -48,14 +49,11 @@ class BuilderCollection extends AbstractCollection implements CollectionInterfac
     /**
      * Re-constructs the object from its serialized form
      *
-     * @param string $serialized The serialized PHP string to unserialize into
-     *     a UuidInterface instance
-     *
-     * @phpcsSuppress SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint
+     * @param string $serialized The serialized PHP string to unserialize into a UuidInterface instance
      */
     public function unserialize($serialized): void
     {
-        /** @var mixed[] $data */
+        /** @var array<array-key, UuidBuilderInterface> $data */
         $data = unserialize($serialized, [
             'allowed_classes' => [
                 BrickMathCalculator::class,
@@ -68,6 +66,12 @@ class BuilderCollection extends AbstractCollection implements CollectionInterfac
             ],
         ]);
 
-        $this->data = $data;
+        $this->data = array_filter(
+            $data,
+            function ($unserialized): bool {
+                /** @phpstan-ignore instanceof.alwaysTrue */
+                return $unserialized instanceof UuidBuilderInterface;
+            },
+        );
     }
 }

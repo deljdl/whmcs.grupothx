@@ -1,13 +1,14 @@
 <?php
-/**
- * Defines the core helper infrastructure of the library.
- */
+
 declare(strict_types=1);
 
 namespace PhpMyAdmin\SqlParser;
 
 use Exception;
 
+/**
+ * Defines the core helper infrastructure of the library.
+ */
 class Core
 {
     /**
@@ -36,6 +37,8 @@ class Core
      * Creates a new error log.
      *
      * @param Exception $error the error exception
+     *
+     * @return void
      *
      * @throws Exception throws the exception, if strict mode is enabled.
      */

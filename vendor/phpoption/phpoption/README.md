@@ -5,8 +5,6 @@ This package implements the Option type for PHP!
 ![Banner](https://user-images.githubusercontent.com/2829600/71564011-3077bf00-2a91-11ea-9083-905702cc262b.png)
 
 <p align="center">
-<a href="https://travis-ci.org/schmittjoh/php-option"><img src="https://img.shields.io/travis/schmittjoh/php-option/master.svg?style=flat-square" alt="Build Status"></img></a>
-<a href="https://scrutinizer-ci.com/g/schmittjoh/php-option"><img src="https://img.shields.io/scrutinizer/g/schmittjoh/php-option.svg?style=flat-square" alt="Quality Score"></img></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-brightgreen.svg?style=flat-square" alt="Software License"></img></a>
 <a href="https://packagist.org/packages/phpoption/phpoption"><img src="https://img.shields.io/packagist/dt/phpoption/phpoption.svg?style=flat-square" alt="Total Downloads"></img></a>
 <a href="https://github.com/schmittjoh/php-option/releases"><img src="https://img.shields.io/github/release/schmittjoh/php-option.svg?style=flat-square" alt="Latest Version"></img></a>
@@ -52,7 +50,7 @@ or add it by hand to your `composer.json` file.
 ```php
 class MyRepository
 {
-    public function findSomeEntity($criteria)
+    public function findSomeEntity($criteria): \PhpOption\Option
     {
         if (null !== $entity = $this->em->find(...)) {
             return new \PhpOption\Some($entity);
@@ -65,12 +63,12 @@ class MyRepository
 ```
 
 If you are consuming an existing library, you can also use a shorter version
-which by default treats ``null`` as ``None``, and everything else as ``Some`` case:
+which by default treats `null` as `None`, and everything else as `Some` case:
 
 ```php
 class MyRepository
 {
-    public function findSomeEntity($criteria)
+    public function findSomeEntity($criteria): \PhpOption\Option
     {
         return \PhpOption\Option::fromValue($this->em->find(...));
 
@@ -103,7 +101,8 @@ $entity = $repo->findSomeEntity(...)->getOrCall(function() {
 
 ```php
 // Before
-if (null === $entity = $this->findSomeEntity()) {
+$entity = $this->findSomeEntity();
+if (null === $entity) {
     throw new NotFoundException();
 }
 echo $entity->name;
@@ -143,13 +142,13 @@ return $this->findSomeEntity()->getOrElse(new Entity());
 
 ### Trying Multiple Alternative Options
 
-If you'd like to try multiple alternatives, the ``orElse`` method allows you to
+If you'd like to try multiple alternatives, the `orElse` method allows you to
 do this very elegantly:
 
 ```php
 return $this->findSomeEntity()
-            ->orElse($this->findSomeOtherEntity())
-            ->orElse($this->createEntity());
+    ->orElse($this->findSomeOtherEntity())
+    ->orElse($this->createEntity());
 ```
 The first option which is non-empty will be returned. This is especially useful 
 with lazy-evaluated options, see below.
@@ -160,12 +159,12 @@ The above example has the flaw that we would need to evaluate all options when
 the method is called which creates unnecessary overhead if the first option is 
 already non-empty.
 
-Fortunately, we can easily solve this by using the ``LazyOption`` class:
+Fortunately, we can easily solve this by using the `LazyOption` class:
 
 ```php
 return $this->findSomeEntity()
-            ->orElse(new LazyOption(array($this, 'findSomeOtherEntity')))
-            ->orElse(new LazyOption(array($this, 'createEntity')));
+    ->orElse(new LazyOption(array($this, 'findSomeOtherEntity')))
+    ->orElse(new LazyOption(array($this, 'createEntity')));
 ```
 
 This way, only the options that are necessary will actually be evaluated.
@@ -173,27 +172,23 @@ This way, only the options that are necessary will actually be evaluated.
 ## Performance Considerations
 
 Of course, performance is important. Attached is a performance benchmark which
-you can run on a machine of your choosing.
-
-The overhead incurred by the Option type comes down to the time that it takes to
-create one object, our wrapper. Also, we need to perform one additional method call
-to retrieve the value from the wrapper.
-
-* Overhead: Creation of 1 Object, and 1 Method Call
-* Average Overhead per Invocation (some case/value returned): 0.000000761s (that is 761 nano seconds)
-* Average Overhead per Invocation (none case/null returned): 0.000000368s (that is 368 nano seconds)
-
-The benchmark was run under Ubuntu precise with PHP 5.4.6. As you can see the
-overhead is surprisingly low, almost negligible.
-
-So in conclusion, unless you plan to call a method thousands of times during a
-request, there is no reason to stick to the ``object|null`` return value; better give
-your code some options!
+you can run on a machine of your choosing. The overhead incurred by the Option
+type comes down to the time that it takes to create one object, our wrapper,
+and one additional method call to retrieve the value from the wrapper. Unless
+you plan to call a method thousands of times during a request, there is no
+reason to stick to the `object|null` return value; better give your code some
+options!
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an email to one of the security contacts. All security vulnerabilities will be promptly addressed. You may view our full security policy [here](https://github.com/schmittjoh/php-option/security/policy).
+If you discover a security vulnerability within this package, please send an email to security@tidelift.com. All security vulnerabilities will be promptly addressed. You may view our full security policy [here](https://github.com/schmittjoh/php-option/security/policy).
 
 ## License
 
 PHP Option Type is licensed under [Apache License 2.0](LICENSE).
+
+## For Enterprise
+
+Available as part of the Tidelift Subscription
+
+The maintainers of `phpoption/phpoption` and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/packagist-phpoption-phpoption?utm_source=packagist-phpoption-phpoption&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)

@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of Composer.
@@ -13,9 +13,11 @@
 namespace Composer\Util;
 
 use Composer\CaBundle\CaBundle;
+use Composer\Pcre\Preg;
 
 /**
  * @author Chris Smith <chris@cs278.org>
+ * @deprecated Use composer/ca-bundle and composer/composer 2.2 if you still need PHP 5 compatibility, this class will be removed in Composer 3.0
  */
 final class TlsHelper
 {
@@ -25,10 +27,8 @@ final class TlsHelper
      * @param mixed  $certificate X.509 certificate
      * @param string $hostname    Hostname in the URL
      * @param string $cn          Set to the common name of the certificate iff match found
-     *
-     * @return bool
      */
-    public static function checkCertificateHost($certificate, $hostname, &$cn = null)
+    public static function checkCertificateHost($certificate, string $hostname, ?string &$cn = null): bool
     {
         $names = self::getCertificateNames($certificate);
 
@@ -36,7 +36,7 @@ final class TlsHelper
             return false;
         }
 
-        $combinedNames = array_merge($names['san'], array($names['cn']));
+        $combinedNames = array_merge($names['san'], [$names['cn']]);
         $hostname = strtolower($hostname);
 
         foreach ($combinedNames as $certName) {
@@ -57,9 +57,9 @@ final class TlsHelper
      *
      * @param mixed $certificate X.509 certificate
      *
-     * @return array|null
+     * @return array{cn: string, san: string[]}|null
      */
-    public static function getCertificateNames($certificate)
+    public static function getCertificateNames($certificate): ?array
     {
         if (is_array($certificate)) {
             $info = $certificate;
@@ -72,24 +72,29 @@ final class TlsHelper
         }
 
         $commonName = strtolower($info['subject']['commonName']);
-        $subjectAltNames = array();
+        $subjectAltNames = [];
 
         if (isset($info['extensions']['subjectAltName'])) {
-            $subjectAltNames = preg_split('{\s*,\s*}', $info['extensions']['subjectAltName']);
-            $subjectAltNames = array_filter(array_map(function ($name) {
-                if (0 === strpos($name, 'DNS:')) {
-                    return strtolower(ltrim(substr($name, 4)));
-                }
+            $subjectAltNames = Preg::split('{\s*,\s*}', $info['extensions']['subjectAltName']);
+            $subjectAltNames = array_filter(
+                array_map(static function ($name): ?string {
+                    if (0 === strpos($name, 'DNS:')) {
+                        return strtolower(ltrim(substr($name, 4)));
+                    }
 
-                return null;
-            }, $subjectAltNames));
+                    return null;
+                }, $subjectAltNames),
+                static function (?string $san) {
+                    return $san !== null;
+                }
+            );
             $subjectAltNames = array_values($subjectAltNames);
         }
 
-        return array(
+        return [
             'cn' => $commonName,
             'san' => $subjectAltNames,
-        );
+        ];
     }
 
     /**
@@ -98,7 +103,7 @@ final class TlsHelper
      * By Kevin McArthur of StormTide Digital Studios Inc.
      * @KevinSMcArthur / https://github.com/StormTide
      *
-     * See http://tools.ietf.org/html/draft-ietf-websec-key-pinning-02
+     * See https://tools.ietf.org/html/draft-ietf-websec-key-pinning-02
      *
      * This method was adapted from Sslurp.
      * https://github.com/EvanDotPro/Sslurp
@@ -131,9 +136,13 @@ final class TlsHelper
      * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
      * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
      */
-    public static function getCertificateFingerprint($certificate)
+    public static function getCertificateFingerprint(string $certificate): string
     {
-        $pubkeydetails = openssl_pkey_get_details(openssl_get_publickey($certificate));
+        $pubkey = openssl_get_publickey($certificate);
+        if ($pubkey === false) {
+            throw new \RuntimeException('Failed to retrieve the public key from certificate');
+        }
+        $pubkeydetails = openssl_pkey_get_details($pubkey);
         $pubkeypem = $pubkeydetails['key'];
         //Convert PEM to DER before SHA1'ing
         $start = '-----BEGIN PUBLIC KEY-----';
@@ -141,7 +150,7 @@ final class TlsHelper
         $pemtrim = substr($pubkeypem, strpos($pubkeypem, $start) + strlen($start), (strlen($pubkeypem) - strpos($pubkeypem, $end)) * (-1));
         $der = base64_decode($pemtrim);
 
-        return sha1($der);
+        return hash('sha1', $der);
     }
 
     /**
@@ -149,10 +158,8 @@ final class TlsHelper
      *
      * This checks if OpenSSL extensions is vulnerable to remote code execution
      * via the exploit documented as CVE-2013-6420.
-     *
-     * @return bool
      */
-    public static function isOpensslParseSafe()
+    public static function isOpensslParseSafe(): bool
     {
         return CaBundle::isOpensslParseSafe();
     }
@@ -161,16 +168,14 @@ final class TlsHelper
      * Convert certificate name into matching function.
      *
      * @param string $certName CN/SAN
-     *
-     * @return callable|void
      */
-    private static function certNameMatcher($certName)
+    private static function certNameMatcher(string $certName): ?callable
     {
         $wildcards = substr_count($certName, '*');
 
         if (0 === $wildcards) {
             // Literal match.
-            return function ($hostname) use ($certName) {
+            return static function ($hostname) use ($certName): bool {
                 return $hostname === $certName;
             };
         }
@@ -180,23 +185,25 @@ final class TlsHelper
 
             if (3 > count($components)) {
                 // Must have 3+ components
-                return;
+                return null;
             }
 
             $firstComponent = $components[0];
 
             // Wildcard must be the last character.
             if ('*' !== $firstComponent[strlen($firstComponent) - 1]) {
-                return;
+                return null;
             }
 
             $wildcardRegex = preg_quote($certName);
             $wildcardRegex = str_replace('\\*', '[a-z0-9-]+', $wildcardRegex);
             $wildcardRegex = "{^{$wildcardRegex}$}";
 
-            return function ($hostname) use ($wildcardRegex) {
-                return 1 === preg_match($wildcardRegex, $hostname);
+            return static function ($hostname) use ($wildcardRegex): bool {
+                return Preg::isMatch($wildcardRegex, $hostname);
             };
         }
+
+        return null;
     }
 }

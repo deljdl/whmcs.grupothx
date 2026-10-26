@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Abraham\TwitterOAuth;
 
 /**
@@ -10,20 +12,20 @@ namespace Abraham\TwitterOAuth;
 class Response
 {
     /** @var string|null API path from the most recent request */
-    private $apiPath;
+    private ?string $apiPath = null;
     /** @var int HTTP status code from the most recent request */
-    private $httpCode = 0;
+    private int $httpCode = 0;
     /** @var array HTTP headers from the most recent request */
-    private $headers = [];
-    /** @var array|object Response body from the most recent request */
-    private $body = [];
+    private array $headers = [];
+    /** @var array|object|null Response body from the most recent request */
+    private array|object|null $body = [];
     /** @var array HTTP headers from the most recent request that start with X */
-    private $xHeaders = [];
+    private array $xHeaders = [];
 
     /**
      * @param string $apiPath
      */
-    public function setApiPath($apiPath)
+    public function setApiPath(string $apiPath): void
     {
         $this->apiPath = $apiPath;
     }
@@ -31,7 +33,7 @@ class Response
     /**
      * @return string|null
      */
-    public function getApiPath()
+    public function getApiPath(): ?string
     {
         return $this->apiPath;
     }
@@ -55,7 +57,7 @@ class Response
     /**
      * @param int $httpCode
      */
-    public function setHttpCode($httpCode)
+    public function setHttpCode(int $httpCode): void
     {
         $this->httpCode = $httpCode;
     }
@@ -63,7 +65,7 @@ class Response
     /**
      * @return int
      */
-    public function getHttpCode()
+    public function getHttpCode(): int
     {
         return $this->httpCode;
     }
@@ -71,7 +73,7 @@ class Response
     /**
      * @param array $headers
      */
-    public function setHeaders(array $headers)
+    public function setHeaders(array $headers): void
     {
         foreach ($headers as $key => $value) {
             if (substr($key, 0, 1) == 'x') {
@@ -84,7 +86,7 @@ class Response
     /**
      * @return array
      */
-    public function getsHeaders()
+    public function getsHeaders(): array
     {
         return $this->headers;
     }
@@ -92,7 +94,7 @@ class Response
     /**
      * @param array $xHeaders
      */
-    public function setXHeaders(array $xHeaders = [])
+    public function setXHeaders(array $xHeaders = []): void
     {
         $this->xHeaders = $xHeaders;
     }
@@ -100,7 +102,7 @@ class Response
     /**
      * @return array
      */
-    public function getXHeaders()
+    public function getXHeaders(): array
     {
         return $this->xHeaders;
     }

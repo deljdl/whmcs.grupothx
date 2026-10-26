@@ -9,20 +9,19 @@ use Knp\Menu\ItemInterface;
  * Loader importing a menu tree from an array.
  *
  * The array should match the output of MenuManipulator::toArray
+ *
+ * @final since 3.8.0
  */
 class ArrayLoader implements LoaderInterface
 {
-    private $factory;
-
-    public function __construct(FactoryInterface $factory)
+    public function __construct(private FactoryInterface $factory)
     {
-        $this->factory = $factory;
     }
 
     public function load($data): ItemInterface
     {
         if (!$this->supports($data)) {
-            throw new \InvalidArgumentException(\sprintf('Unsupported data. Expected an array but got %s', \is_object($data) ? \get_class($data) : \gettype($data)));
+            throw new \InvalidArgumentException(\sprintf('Unsupported data. Expected an array but got %s', \get_debug_type($data)));
         }
 
         return $this->fromArray($data);
@@ -34,14 +33,12 @@ class ArrayLoader implements LoaderInterface
     }
 
     /**
-     * @param array       $data
-     * @param string|null $name (the name of the item, used only if there is no name in the data themselves)
-     *
-     * @return ItemInterface
+     * @param array<string, mixed> $data
+     * @param string|null          $name (the name of the item, used only if there is no name in the data themselves)
      */
     private function fromArray(array $data, ?string $name = null): ItemInterface
     {
-        $name = isset($data['name']) ? $data['name'] : $name;
+        $name = $data['name'] ?? $name;
 
         if (isset($data['children'])) {
             $children = $data['children'];
@@ -52,8 +49,8 @@ class ArrayLoader implements LoaderInterface
 
         $item = $this->factory->createItem($name, $data);
 
-        foreach ($children as $name => $child) {
-            $item->addChild($this->fromArray($child, $name));
+        foreach ($children as $childName => $child) {
+            $item->addChild($this->fromArray($child, $childName));
         }
 
         return $item;

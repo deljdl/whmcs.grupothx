@@ -4,20 +4,36 @@ namespace Illuminate\Console\Scheduling;
 
 use Closure;
 use DateTimeInterface;
+use Illuminate\Bus\UniqueLock;
 use Illuminate\Console\Application;
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Bus\Dispatcher;
+use Illuminate\Contracts\Cache\Repository as Cache;
 use Illuminate\Contracts\Container\BindingResolutionException;
+use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\CallQueuedClosure;
 use Illuminate\Support\ProcessUtils;
-use Illuminate\Support\Str;
 use Illuminate\Support\Traits\Macroable;
 use RuntimeException;
 
 class Schedule
 {
     use Macroable;
+
+    const SUNDAY = 0;
+
+    const MONDAY = 1;
+
+    const TUESDAY = 2;
+
+    const WEDNESDAY = 3;
+
+    const THURSDAY = 4;
+
+    const FRIDAY = 5;
+
+    const SATURDAY = 6;
 
     /**
      * All of the events on the schedule.
@@ -59,6 +75,8 @@ class Schedule
      *
      * @param  \DateTimeZone|string|null  $timezone
      * @return void
+     *
+     * @throws \RuntimeException
      */
     public function __construct($timezone = null)
     {
@@ -66,7 +84,7 @@ class Schedule
 
         if (! class_exists(Container::class)) {
             throw new RuntimeException(
-                'A container implementation is required to use the scheduler. Please install illuminate/container.'
+                'A container implementation is required to use the scheduler. Please install the illuminate/container package.'
             );
         }
 
@@ -91,7 +109,7 @@ class Schedule
     public function call($callback, array $parameters = [])
     {
         $this->events[] = $event = new CallbackEvent(
-            $this->eventMutex, $callback, $parameters
+            $this->eventMutex, $callback, $parameters, $this->timezone
         );
 
         return $event;
@@ -107,7 +125,11 @@ class Schedule
     public function command($command, array $parameters = [])
     {
         if (class_exists($command)) {
-            $command = Container::getInstance()->make($command)->getName();
+            $command = Container::getInstance()->make($command);
+
+            return $this->exec(
+                Application::formatCommandString($command->getName()), $parameters,
+            )->description($command->getDescription());
         }
 
         return $this->exec(
@@ -143,17 +165,48 @@ class Schedule
      * @param  string|null  $queue
      * @param  string|null  $connection
      * @return void
+     *
+     * @throws \RuntimeException
      */
     protected function dispatchToQueue($job, $queue, $connection)
     {
         if ($job instanceof Closure) {
             if (! class_exists(CallQueuedClosure::class)) {
                 throw new RuntimeException(
-                    'To enable support for closure jobs, please install illuminate/queue.'
+                    'To enable support for closure jobs, please install the illuminate/queue package.'
                 );
             }
 
             $job = CallQueuedClosure::create($job);
+        }
+
+        if ($job instanceof ShouldBeUnique) {
+            return $this->dispatchUniqueJobToQueue($job, $queue, $connection);
+        }
+
+        $this->getDispatcher()->dispatch(
+            $job->onConnection($connection)->onQueue($queue)
+        );
+    }
+
+    /**
+     * Dispatch the given unique job to the queue.
+     *
+     * @param  object  $job
+     * @param  string|null  $queue
+     * @param  string|null  $connection
+     * @return void
+     *
+     * @throws \RuntimeException
+     */
+    protected function dispatchUniqueJobToQueue($job, $queue, $connection)
+    {
+        if (! Container::getInstance()->bound(Cache::class)) {
+            throw new RuntimeException('Cache driver not available. Scheduling unique jobs not supported.');
+        }
+
+        if (! (new UniqueLock(Container::getInstance()->make(Cache::class)))->acquire($job)) {
+            return;
         }
 
         $this->getDispatcher()->dispatch(
@@ -224,11 +277,11 @@ class Schedule
             return ProcessUtils::escapeArgument($value);
         });
 
-        if (Str::startsWith($key, '--')) {
+        if (str_starts_with($key, '--')) {
             $value = $value->map(function ($value) use ($key) {
                 return "{$key}={$value}";
             });
-        } elseif (Str::startsWith($key, '-')) {
+        } elseif (str_starts_with($key, '-')) {
             $value = $value->map(function ($value) use ($key) {
                 return "{$key} {$value}";
             });
@@ -293,6 +346,8 @@ class Schedule
      * Get the job dispatcher, if available.
      *
      * @return \Illuminate\Contracts\Bus\Dispatcher
+     *
+     * @throws \RuntimeException
      */
     protected function getDispatcher()
     {
@@ -301,8 +356,8 @@ class Schedule
                 $this->dispatcher = Container::getInstance()->make(Dispatcher::class);
             } catch (BindingResolutionException $e) {
                 throw new RuntimeException(
-                    'Unable to resolve the dispatcher from the service container. Please bind it or install illuminate/bus.',
-                    $e->getCode(), $e
+                    'Unable to resolve the dispatcher from the service container. Please bind it or install the illuminate/bus package.',
+                    is_int($e->getCode()) ? $e->getCode() : 0, $e
                 );
             }
         }

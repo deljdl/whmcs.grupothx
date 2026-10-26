@@ -142,8 +142,8 @@
     },
     {
         "extensions": ".ac.in,.co.in,.org.in,.ernet.in,.gov.in,.net.in,.res.in,.in",
-        "uri": "socket://whois.registry.in",
-        "available": "No Data Found"
+        "uri": "socket://whois.nixiregistry.in",
+        "available": "available for registration"
     },
     {
         "extensions": ".is",

@@ -9,22 +9,16 @@ use Psr\Container\ContainerInterface;
  *
  * This menu provider does not support using options, as it cannot pass them to the container
  * to alter the menu building. Use a different provider in case you need support for options.
+ *
+ * @final since 3.8.0
  */
 class PsrProvider implements RendererProviderInterface
 {
-    private $container;
-    private $defaultRenderer;
-
     /**
-     * PsrProvider constructor.
-     *
-     * @param ContainerInterface $container
-     * @param string             $defaultRenderer id of the default renderer (it should exist in the container to avoid weird failures)
+     * @param string $defaultRenderer id of the default renderer (it should exist in the container to avoid weird failures)
      */
-    public function __construct(ContainerInterface $container, $defaultRenderer)
+    public function __construct(private ContainerInterface $container, private string $defaultRenderer)
     {
-        $this->container = $container;
-        $this->defaultRenderer = $defaultRenderer;
     }
 
     public function get(?string $name = null): RendererInterface
