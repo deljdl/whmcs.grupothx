@@ -5,7 +5,8 @@ use WHMCS\Database\Capsule;
 
 
 
-require_once dirname(dirname(__DIR__)) . '/tarifasTHX.php';
+$rootWhmcs = dirname(dirname(dirname(dirname(__DIR__))));
+require_once $rootWhmcs . '/tarifasTHX.php';
 
 /**
  *
