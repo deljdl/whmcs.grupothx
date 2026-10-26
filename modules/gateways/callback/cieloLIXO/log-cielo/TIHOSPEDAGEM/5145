@@ -1,0 +1,325 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5145
+    [id] => 5145
+    [1] => 323
+    [userid] => 323
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-29
+    [date] => 2018-08-29
+    [4] => 2018-08-29
+    [duedate] => 2018-08-29
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 323
+    [id] => 323
+    [uuid] => a9e2bd8e-106a-4136-bf6c-69ea46acd280
+    [firstname] => Ênio
+    [lastname] => de Assis fatica
+    [fullname] => Ênio de Assis fatica
+    [companyname] => Suzano incorporadora Ltda
+    [email] => mirleideassis@yahoo.com.br
+    [address1] => rua Washington Luiz Pereira de souza, 101, sala 06
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-515
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 4653-2768 (11)97280-6108
+    [password] => $2y$10$JY91a3XRUnSkiXU8Wo1fQONKXqqr8tqidJM1ZSFOQ5unTYa7EglrO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114653276811972806108
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 29/08/2018 17:30<br>IP Address: 168.195.170.28<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11972806108
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 14.922.268/0001-95
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11972806108
+    [customfields3] => 14.922.268/0001-95
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5145
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - suzanoconstrutora.com.br (29/08/2018 - 28/09/2018)
+                            [Description] => TIH - Master  - suzanoconstrutora.com.br (29/08/2018 - 28/09/2018)
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Ênio de Assis fatica
+            [Email] => mirleideassis@yahoo.com.br
+            [Identity] => 14922268000195
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5145
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Master  - suzanoconstrutora.com.br (29/08/2018 - 28/09/2018)
+                            [description] => TIH - Master  - suzanoconstrutora.com.br (29/08/2018 - 28/09/2018)
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 14922268000195
+            [fullName] => Ênio de Assis fatica
+            [email] => mirleideassis@yahoo.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/5936fb1c-4d6d-4d40-b14c-d9e4a8e15c0c
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+29/08/2018 17:58:36
+INICIO_______________________________________________________________LOG:BEGIN:::29/08/2018 17:36<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 5145
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => c1e8668e9be34fc5a4ca194d557b8740
+    [created_date] => 29/08/2018 17:36:56
+    [customer_name] => Fabiola fatica
+    [customer_phone] => 11987528616
+    [customer_identity] => 14922268000195
+    [customer_email] => bilafa@yahoo.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544731******3214
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627FRAAULGVB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+29/08/2018 17:59:36
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->5145 | Result->success | ValorPago ->32.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 5145
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => c1e8668e9be34fc5a4ca194d557b8740
+    [created_date] => 29/08/2018 17:36:56
+    [customer_name] => Fabiola fatica
+    [customer_phone] => 11987528616
+    [customer_identity] => 14922268000195
+    [customer_email] => bilafa@yahoo.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544731******3214
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627FRAAULGVB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+29/08/2018 17:07:46
+INICIO_______________________________________________________________LOG:BEGIN:::29/08/2018 17:46<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c1e8668e9be34fc5a4ca194d557b8740
+    [amount] => 3297
+    [order_number] => 5145
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+29/08/2018 17:07:46
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c1e8668e9be34fc5a4ca194d557b8740
+    [amount] => 3297
+    [order_number] => 5145
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

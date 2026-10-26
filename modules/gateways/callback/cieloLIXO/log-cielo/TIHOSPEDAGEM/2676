@@ -1,0 +1,1998 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2676
+    [id] => 2676
+    [1] => 243
+    [userid] => 243
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-18
+    [date] => 2016-11-18
+    [4] => 2016-11-18
+    [duedate] => 2016-11-18
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 678.97
+    [subtotal] => 678.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 678.97
+    [total] => 678.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2676
+    [SoftDescriptor] => 2676
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - adrianebecker.com.br
+                            [Description] => Site Básico - adrianebecker.com.br
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [Description] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002676
+            [FullName] =>  
+            [Email] => 
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2676
+    [softDescriptor] => 2676
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - adrianebecker.com.br
+                            [description] => Site Básico - adrianebecker.com.br
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [description] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002676
+            [fullName] =>  
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/45905f98-bcce-41db-8515-04d5a3812661
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2676
+    [id] => 2676
+    [1] => 243
+    [userid] => 243
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-18
+    [date] => 2016-11-18
+    [4] => 2016-11-18
+    [duedate] => 2016-11-18
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 678.97
+    [subtotal] => 678.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 678.97
+    [total] => 678.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2676
+    [SoftDescriptor] => 2676
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - adrianebecker.com.br
+                            [Description] => Site Básico - adrianebecker.com.br
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [Description] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002676
+            [FullName] =>  
+            [Email] => 
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2676
+    [softDescriptor] => 2676
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - adrianebecker.com.br
+                            [description] => Site Básico - adrianebecker.com.br
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [description] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002676
+            [fullName] =>  
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/697a1e33-0fd6-474c-975f-6ca072086bd8
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2676
+    [id] => 2676
+    [1] => 243
+    [userid] => 243
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-18
+    [date] => 2016-11-18
+    [4] => 2016-11-18
+    [duedate] => 2016-11-18
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 678.97
+    [subtotal] => 678.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 678.97
+    [total] => 678.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 243
+    [id] => 243
+    [uuid] => 9160c458-8074-4956-9fdb-eba4fb3ed8ed
+    [firstname] => Adriane
+    [lastname] => Becker
+    [fullname] => Adriane Becker
+    [companyname] => adrianebecker.com.br
+    [email] => arquiteta_adriane@yahoo.com.br
+    [address1] => Avenida Internacional (Etn Pacaembú), 322
+    [address2] => São Bento
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07438-720
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11964291833
+    [password] => $2y$10$1fOm45qSJtVQ3BZ26OmaXe1ld/2MzDwLPW1YsVjwBnNMXNWHH2fIe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11964291833
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 18/11/2016 08:50<br>IP Address: 186.214.5.189<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11964291833
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 14299189850
+                )
+
+        )
+
+    [customfields2] => 11964291833
+    [customfields3] => 14299189850
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2676
+    [SoftDescriptor] => 2676
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - adrianebecker.com.br
+                            [Description] => Site Básico - adrianebecker.com.br
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [Description] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002676
+            [FullName] => Adriane Becker
+            [Email] => arquiteta_adriane@yahoo.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2676
+    [softDescriptor] => 2676
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - adrianebecker.com.br
+                            [description] => Site Básico - adrianebecker.com.br
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [description] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002676
+            [fullName] => Adriane Becker
+            [email] => arquiteta_adriane@yahoo.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/a3e65c67-7c56-4e25-91f9-985cf6aaee86
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2676
+    [id] => 2676
+    [1] => 243
+    [userid] => 243
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-18
+    [date] => 2016-11-18
+    [4] => 2016-11-18
+    [duedate] => 2016-11-18
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 678.97
+    [subtotal] => 678.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 678.97
+    [total] => 678.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2676
+    [SoftDescriptor] => 2676
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - adrianebecker.com.br
+                            [Description] => Site Básico - adrianebecker.com.br
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [Description] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002676
+            [FullName] =>  
+            [Email] => 
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2676
+    [softDescriptor] => 2676
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - adrianebecker.com.br
+                            [description] => Site Básico - adrianebecker.com.br
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [description] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002676
+            [fullName] =>  
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/5b9a2936-7c33-4ba0-9ec1-60d3ef1df0dd
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2676
+    [id] => 2676
+    [1] => 243
+    [userid] => 243
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-18
+    [date] => 2016-11-18
+    [4] => 2016-11-18
+    [duedate] => 2016-11-18
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 678.97
+    [subtotal] => 678.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 678.97
+    [total] => 678.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 243
+    [id] => 243
+    [uuid] => 9160c458-8074-4956-9fdb-eba4fb3ed8ed
+    [firstname] => Adriane
+    [lastname] => Becker
+    [fullname] => Adriane Becker
+    [companyname] => adrianebecker.com.br
+    [email] => arquiteta_adriane@yahoo.com.br
+    [address1] => Avenida Internacional (Etn Pacaembú), 322
+    [address2] => São Bento
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07438-720
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11964291833
+    [password] => $2y$10$1fOm45qSJtVQ3BZ26OmaXe1ld/2MzDwLPW1YsVjwBnNMXNWHH2fIe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11964291833
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 18/11/2016 08:53<br>IP Address: 186.214.5.189<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11964291833
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 14299189850
+                )
+
+        )
+
+    [customfields2] => 11964291833
+    [customfields3] => 14299189850
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2676
+    [SoftDescriptor] => 2676
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - adrianebecker.com.br
+                            [Description] => Site Básico - adrianebecker.com.br
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [Description] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002676
+            [FullName] => Adriane Becker
+            [Email] => arquiteta_adriane@yahoo.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2676
+    [softDescriptor] => 2676
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - adrianebecker.com.br
+                            [description] => Site Básico - adrianebecker.com.br
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [description] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002676
+            [fullName] => Adriane Becker
+            [email] => arquiteta_adriane@yahoo.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/9950c779-94a0-4d6b-bc11-6f221949a3f9
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2676
+    [id] => 2676
+    [1] => 243
+    [userid] => 243
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-18
+    [date] => 2016-11-18
+    [4] => 2016-11-18
+    [duedate] => 2016-11-18
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 678.97
+    [subtotal] => 678.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 678.97
+    [total] => 678.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 243
+    [id] => 243
+    [uuid] => 9160c458-8074-4956-9fdb-eba4fb3ed8ed
+    [firstname] => Adriane
+    [lastname] => Becker
+    [fullname] => Adriane Becker
+    [companyname] => adrianebecker.com.br
+    [email] => arquiteta_adriane@yahoo.com.br
+    [address1] => Avenida Internacional (Etn Pacaembú), 322
+    [address2] => São Bento
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07438-720
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11964291833
+    [password] => $2y$10$ei7vyn7vmfkUe.wLLrva6OnVIV3NTxHORNtse7NxaGMwNnRSerQ1y
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11964291833
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 18/11/2016 08:57<br>IP Address: 186.214.5.189<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11964291833
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 14299189850
+                )
+
+        )
+
+    [customfields2] => 11964291833
+    [customfields3] => 14299189850
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2676
+    [SoftDescriptor] => 2676
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - adrianebecker.com.br
+                            [Description] => Site Básico - adrianebecker.com.br
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [Description] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002676
+            [FullName] => Adriane Becker
+            [Email] => arquiteta_adriane@yahoo.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2676
+    [softDescriptor] => 2676
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - adrianebecker.com.br
+                            [description] => Site Básico - adrianebecker.com.br
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [description] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002676
+            [fullName] => Adriane Becker
+            [email] => arquiteta_adriane@yahoo.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/a0ae1ef5-98e5-4834-8348-430e0a510c30
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2676
+    [id] => 2676
+    [1] => 243
+    [userid] => 243
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-18
+    [date] => 2016-11-18
+    [4] => 2016-11-18
+    [duedate] => 2016-11-18
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 678.97
+    [subtotal] => 678.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 678.97
+    [total] => 678.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2676
+    [SoftDescriptor] => 2676
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - adrianebecker.com.br
+                            [Description] => Site Básico - adrianebecker.com.br
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [Description] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002676
+            [FullName] =>  
+            [Email] => 
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2676
+    [softDescriptor] => 2676
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - adrianebecker.com.br
+                            [description] => Site Básico - adrianebecker.com.br
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [description] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002676
+            [fullName] =>  
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/42dace08-a6b9-4bc3-8f44-812956e5aacc
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2676
+    [id] => 2676
+    [1] => 243
+    [userid] => 243
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-18
+    [date] => 2016-11-18
+    [4] => 2016-11-18
+    [duedate] => 2016-11-18
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 678.97
+    [subtotal] => 678.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 678.97
+    [total] => 678.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2676
+    [SoftDescriptor] => 2676
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - adrianebecker.com.br
+                            [Description] => Site Básico - adrianebecker.com.br
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [Description] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002676
+            [FullName] =>  
+            [Email] => 
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2676
+    [softDescriptor] => 2676
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - adrianebecker.com.br
+                            [description] => Site Básico - adrianebecker.com.br
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [description] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002676
+            [fullName] =>  
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/15a26c0a-08c5-46d9-b0db-7ccfd68ef3a8
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2676
+    [id] => 2676
+    [1] => 243
+    [userid] => 243
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-18
+    [date] => 2016-11-18
+    [4] => 2016-11-18
+    [duedate] => 2016-11-18
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 678.97
+    [subtotal] => 678.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 678.97
+    [total] => 678.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 243
+    [id] => 243
+    [uuid] => 9160c458-8074-4956-9fdb-eba4fb3ed8ed
+    [firstname] => Adriane
+    [lastname] => Becker
+    [fullname] => Adriane Becker
+    [companyname] => adrianebecker.com.br
+    [email] => arquiteta_adriane@yahoo.com.br
+    [address1] => Avenida Internacional (Etn Pacaembú), 322
+    [address2] => São Bento
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07438-720
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11964291833
+    [password] => $2y$10$ei7vyn7vmfkUe.wLLrva6OnVIV3NTxHORNtse7NxaGMwNnRSerQ1y
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11964291833
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 18/11/2016 11:08<br>IP Address: 201.159.27.110<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11964291833
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 14299189850
+                )
+
+        )
+
+    [customfields2] => 11964291833
+    [customfields3] => 14299189850
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2676
+    [SoftDescriptor] => 2676
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - adrianebecker.com.br
+                            [Description] => Site Básico - adrianebecker.com.br
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [Description] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002676
+            [FullName] => Adriane Becker
+            [Email] => arquiteta_adriane@yahoo.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2676
+    [softDescriptor] => 2676
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - adrianebecker.com.br
+                            [description] => Site Básico - adrianebecker.com.br
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [description] => TIH - Master - adrianebecker.com.br (18/11/2016 - 17/12/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002676
+            [fullName] => Adriane Becker
+            [email] => arquiteta_adriane@yahoo.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/e6f769b7-0eff-4d6c-9732-8db0f726bcd0
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+18/11/2016 11:59:09
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2676
+    [amount] => 67897
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 05ae840fe2ee4c018d79031b63af495b
+    [created_date] => 18/11/2016 15:09:56
+    [customer_name] => Adriane Becker
+    [customer_phone] => 11964291833
+    [customer_identity] => 14299189850
+    [customer_email] => arquiteta_adriane@yahoo.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 421960******3482
+    [payment_installments] => 3
+    [payment_status] => 2
+    [tid] => 10760777625O0P7BNELB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+18/11/2016 11:06:10
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->243 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2676
+    [amount] => 67897
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 05ae840fe2ee4c018d79031b63af495b
+    [created_date] => 18/11/2016 15:09:56
+    [customer_name] => Adriane Becker
+    [customer_phone] => 11964291833
+    [customer_identity] => 14299189850
+    [customer_email] => arquiteta_adriane@yahoo.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 421960******3482
+    [payment_installments] => 3
+    [payment_status] => 2
+    [tid] => 10760777625O0P7BNELB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+18/11/2016 11:23:11
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 05ae840fe2ee4c018d79031b63af495b
+    [amount] => 67897
+    [order_number] => 2676
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+18/11/2016 11:23:11
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 05ae840fe2ee4c018d79031b63af495b
+    [amount] => 67897
+    [order_number] => 2676
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 2676
+    [id] => 2676
+    [1] => 243
+    [userid] => 243
+    [2] => #1900
+    [invoicenum] => #1900
+    [3] => 2016-11-18
+    [date] => 2016-11-18
+    [4] => 2016-11-18
+    [duedate] => 2016-11-18
+    [5] => 2016-11-18 11:09:59
+    [datepaid] => 2016-11-18 11:09:59
+    [6] => 678.97
+    [subtotal] => 678.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 678.97
+    [total] => 678.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Paid
+    [status] => Paid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>

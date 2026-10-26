@@ -1,0 +1,1319 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2221
+    [id] => 2221
+    [1] => 219
+    [userid] => 219
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-07-26
+    [date] => 2016-07-26
+    [4] => 2016-07-26
+    [duedate] => 2016-07-26
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 990.00
+    [subtotal] => 990.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 990.00
+    [total] => 990.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 219
+    [id] => 219
+    [uuid] => 840743ca-acb6-4ccf-9ea2-e9ce32477400
+    [firstname] => Cibele
+    [lastname] => 
+    [fullname] => Cibele 
+    [companyname] => METALIC ACESSORIOS PARA LABORATORIOS LTDA - EPP
+    [email] => cibele@metalicnet.com.br
+    [address1] => Rua Meca
+    [address2] => 
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07210-110
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 24124198
+    [password] => $2y$10$GaS1sNOqI7UNPzbKNckta.2DrSjYXkw.jxTaAqkxQJxVptyK7iiJe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1124124198
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => cielo
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 26/07/2016 15:38<br>IP Address: 177.206.77.30<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 46286944000178
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 46286944000178
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2221
+    [SoftDescriptor] => 2221
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - metalicnet.com.br
+Observações:: Conforme Proposta N° 1094
+                            [Description] => Site Básico - metalicnet.com.br
+Observações:: Conforme Proposta N° 1094
+                            [UnitPrice] => 99000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Cibele 
+            [Email] => cibele@metalicnet.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2221
+    [softDescriptor] => 2221
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - metalicnet.com.br
+Observações:: Conforme Proposta N° 1094
+                            [description] => Site Básico - metalicnet.com.br
+Observações:: Conforme Proposta N° 1094
+                            [unitPrice] => 99000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Cibele 
+            [email] => cibele@metalicnet.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/955a7273-e6df-49ac-8429-20b5832ddb96
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2221
+    [id] => 2221
+    [1] => 219
+    [userid] => 219
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-07-26
+    [date] => 2016-07-26
+    [4] => 2016-07-26
+    [duedate] => 2016-07-26
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 990.00
+    [subtotal] => 990.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 990.00
+    [total] => 990.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 219
+    [id] => 219
+    [uuid] => 840743ca-acb6-4ccf-9ea2-e9ce32477400
+    [firstname] => Cibele
+    [lastname] => 
+    [fullname] => Cibele 
+    [companyname] => METALIC ACESSORIOS PARA LABORATORIOS LTDA - EPP
+    [email] => cibele@metalicnet.com.br
+    [address1] => Rua Meca
+    [address2] => 
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07210-110
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 24124198
+    [password] => $2y$10$GaS1sNOqI7UNPzbKNckta.2DrSjYXkw.jxTaAqkxQJxVptyK7iiJe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1124124198
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => cielo
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 26/07/2016 15:43<br>IP Address: 177.206.77.30<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 46286944000178
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 46286944000178
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2221
+    [SoftDescriptor] => 2221
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - metalicnet.com.br
+Observações:: Conforme Proposta N° 1094
+                            [Description] => Site Básico - metalicnet.com.br
+Observações:: Conforme Proposta N° 1094
+                            [UnitPrice] => 99000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Cibele 
+            [Email] => cibele@metalicnet.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2221
+    [softDescriptor] => 2221
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - metalicnet.com.br
+Observações:: Conforme Proposta N° 1094
+                            [description] => Site Básico - metalicnet.com.br
+Observações:: Conforme Proposta N° 1094
+                            [unitPrice] => 99000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Cibele 
+            [email] => cibele@metalicnet.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/91b77a93-19c9-47af-8ac5-9bbc47970631
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2221
+    [id] => 2221
+    [1] => 219
+    [userid] => 219
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-07-26
+    [date] => 2016-07-26
+    [4] => 2016-07-26
+    [duedate] => 2016-07-26
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 990.00
+    [subtotal] => 990.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 990.00
+    [total] => 990.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 219
+    [id] => 219
+    [uuid] => 840743ca-acb6-4ccf-9ea2-e9ce32477400
+    [firstname] => Cibele
+    [lastname] => 
+    [fullname] => Cibele 
+    [companyname] => METALIC ACESSORIOS PARA LABORATORIOS LTDA - EPP
+    [email] => cibele@metalicnet.com.br
+    [address1] => Rua Meca
+    [address2] => 
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07210-110
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 24124198
+    [password] => $2y$10$GaS1sNOqI7UNPzbKNckta.2DrSjYXkw.jxTaAqkxQJxVptyK7iiJe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1124124198
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => cielo
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/07/2016 08:55<br>IP Address: 187.182.57.119<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 46286944000178
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 46286944000178
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2221
+    [SoftDescriptor] => 2221
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - metalicnet.com.br
+Observações:: Conforme Proposta N° 1094
+                            [Description] => Site Básico - metalicnet.com.br
+Observações:: Conforme Proposta N° 1094
+                            [UnitPrice] => 99000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Cibele 
+            [Email] => cibele@metalicnet.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2221
+    [softDescriptor] => 2221
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - metalicnet.com.br
+Observações:: Conforme Proposta N° 1094
+                            [description] => Site Básico - metalicnet.com.br
+Observações:: Conforme Proposta N° 1094
+                            [unitPrice] => 99000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Cibele 
+            [email] => cibele@metalicnet.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/96075e60-6a3e-4556-8288-2366cf790fef
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+27/07/2016 8:53:59
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2221
+    [amount] => 99300
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 60ee3a9954d841a595dc9cada2acc3c8
+    [created_date] => 27/07/2016 10:59:42
+    [customer_name] => Metalic Ltda.
+    [customer_phone] => 1124124198
+    [customer_identity] => 46286944000178
+    [customer_email] => nfe@metalicnet.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 421962******7848
+    [payment_installments] => 6
+    [payment_status] => 3
+    [tid] => 1076077762000000017A
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/07/2016 9:02:01
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 60ee3a9954d841a595dc9cada2acc3c8
+    [amount] => 99300
+    [order_number] => 2221
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 2221
+    [id] => 2221
+    [1] => 219
+    [userid] => 219
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-07-26
+    [date] => 2016-07-26
+    [4] => 2016-07-29
+    [duedate] => 2016-07-29
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 990.00
+    [subtotal] => 990.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 990.00
+    [total] => 990.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 219
+    [id] => 219
+    [uuid] => 840743ca-acb6-4ccf-9ea2-e9ce32477400
+    [firstname] => Cibele
+    [lastname] => 
+    [fullname] => Cibele 
+    [companyname] => METALIC ACESSORIOS PARA LABORATORIOS LTDA - EPP
+    [email] => cibele@metalicnet.com.br
+    [address1] => Rua Meca
+    [address2] => 
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07210-110
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 24124198
+    [password] => $2y$10$GaS1sNOqI7UNPzbKNckta.2DrSjYXkw.jxTaAqkxQJxVptyK7iiJe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1124124198
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => cielo
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/07/2016 10:20<br>IP Address: 177.206.76.112<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 46286944000178
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 46286944000178
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2221
+    [SoftDescriptor] => 2221
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - metalicnet.com.br
+Observações:: Conforme Proposta N° 1094
+                            [Description] => Site Básico - metalicnet.com.br
+Observações:: Conforme Proposta N° 1094
+                            [UnitPrice] => 99000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Cibele 
+            [Email] => cibele@metalicnet.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2221
+    [softDescriptor] => 2221
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - metalicnet.com.br
+Observações:: Conforme Proposta N° 1094
+                            [description] => Site Básico - metalicnet.com.br
+Observações:: Conforme Proposta N° 1094
+                            [unitPrice] => 99000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Cibele 
+            [email] => cibele@metalicnet.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/3780d46d-b21f-4869-9dfe-3bb1c67598fe
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2221
+    [id] => 2221
+    [1] => 219
+    [userid] => 219
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-07-26
+    [date] => 2016-07-26
+    [4] => 2016-07-29
+    [duedate] => 2016-07-29
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 990.00
+    [subtotal] => 990.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 990.00
+    [total] => 990.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 219
+    [id] => 219
+    [uuid] => 840743ca-acb6-4ccf-9ea2-e9ce32477400
+    [firstname] => Cibele
+    [lastname] => 
+    [fullname] => Cibele 
+    [companyname] => METALIC ACESSORIOS PARA LABORATORIOS LTDA - EPP
+    [email] => cibele@metalicnet.com.br
+    [address1] => Rua Meca
+    [address2] => 
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07210-110
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 24124198
+    [password] => $2y$10$GaS1sNOqI7UNPzbKNckta.2DrSjYXkw.jxTaAqkxQJxVptyK7iiJe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1124124198
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => cielo
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/07/2016 10:41<br>IP Address: 187.182.57.119<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 46286944000178
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 46286944000178
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2221
+    [SoftDescriptor] => 2221
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - metalicnet.com.br
+Observações:: Conforme Proposta N° 1094
+                            [Description] => Site Básico - metalicnet.com.br
+Observações:: Conforme Proposta N° 1094
+                            [UnitPrice] => 99000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Cibele 
+            [Email] => cibele@metalicnet.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2221
+    [softDescriptor] => 2221
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - metalicnet.com.br
+Observações:: Conforme Proposta N° 1094
+                            [description] => Site Básico - metalicnet.com.br
+Observações:: Conforme Proposta N° 1094
+                            [unitPrice] => 99000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Cibele 
+            [email] => cibele@metalicnet.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/a2592139-d74a-43c1-a904-203104a82e75
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+28/07/2016 10:35:43
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2221
+    [amount] => 99000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => e76252905f184ffb803fcad0b42c54f5
+    [created_date] => 28/07/2016 12:43:29
+    [customer_name] => Metalic Ltda.
+    [customer_phone] => 1124124198
+    [customer_identity] => 46286944000178
+    [customer_email] => nfe@metalicnet.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 536269******5054
+    [payment_installments] => 6
+    [payment_status] => 2
+    [tid] => 1076077762000000018A
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/07/2016 10:36:43
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->219 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2221
+    [amount] => 99000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => e76252905f184ffb803fcad0b42c54f5
+    [created_date] => 28/07/2016 12:43:29
+    [customer_name] => Metalic Ltda.
+    [customer_phone] => 1124124198
+    [customer_identity] => 46286944000178
+    [customer_email] => nfe@metalicnet.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 536269******5054
+    [payment_installments] => 6
+    [payment_status] => 2
+    [tid] => 1076077762000000018A
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/07/2016 10:52:50
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e76252905f184ffb803fcad0b42c54f5
+    [amount] => 99000
+    [order_number] => 2221
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/07/2016 10:52:50
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e76252905f184ffb803fcad0b42c54f5
+    [amount] => 99000
+    [order_number] => 2221
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

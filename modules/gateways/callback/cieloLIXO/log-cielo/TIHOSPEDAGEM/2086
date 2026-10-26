@@ -1,0 +1,17 @@
+
+
+05/07/2016 13:56:20
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => d324c5ef4c704a619a1ab6515611a79f
+    [amount] => 100
+    [order_number] => 2086
+    [payment_status] => 4
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

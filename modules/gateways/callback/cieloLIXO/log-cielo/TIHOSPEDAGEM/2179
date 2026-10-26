@@ -1,0 +1,1060 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2179
+    [id] => 2179
+    [1] => 11
+    [userid] => 11
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-07-14
+    [date] => 2016-07-14
+    [4] => 2016-07-14
+    [duedate] => 2016-07-14
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 2.00
+    [subtotal] => 2.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 2.00
+    [total] => 2.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 11
+    [id] => 11
+    [uuid] => f65fc105-91aa-460c-aae3-895180cdf176
+    [firstname] => Jardel
+    [lastname] => Jacomini
+    [fullname] => Jardel Jacomini
+    [companyname] => Grupo Thx
+    [email] => deljdl@gmail.com
+    [address1] => Rua Milton Ferreira Franco
+    [address2] => Barreto
+    [city] => aruja
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417-160
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146550330
+    [password] => 88a5557b316153c8969f402923133358:T)YLY
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146550330
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/07/2016 11:05<br>IP Address: 177.41.209.156<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2179
+    [SoftDescriptor] => 2179
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => teste cielo
+                            [Description] => teste cielo
+                            [UnitPrice] => 200
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Jardel Jacomini
+            [Email] => deljdl@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2179
+    [softDescriptor] => 2179
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => teste cielo
+                            [description] => teste cielo
+                            [unitPrice] => 200
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Jardel Jacomini
+            [email] => deljdl@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/2d0d5043-f6a9-48ab-a00e-eba888807a76
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2179
+    [id] => 2179
+    [1] => 11
+    [userid] => 11
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-07-14
+    [date] => 2016-07-14
+    [4] => 2016-07-11
+    [duedate] => 2016-07-11
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 2.00
+    [subtotal] => 2.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 2.00
+    [total] => 2.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 11
+    [id] => 11
+    [uuid] => f65fc105-91aa-460c-aae3-895180cdf176
+    [firstname] => Jardel
+    [lastname] => Jacomini
+    [fullname] => Jardel Jacomini
+    [companyname] => Grupo Thx
+    [email] => deljdl@gmail.com
+    [address1] => Rua Milton Ferreira Franco
+    [address2] => Barreto
+    [city] => aruja
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417-160
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146550330
+    [password] => 88a5557b316153c8969f402923133358:T)YLY
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146550330
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/07/2016 11:06<br>IP Address: 177.41.209.156<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2179
+    [SoftDescriptor] => 2179
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => teste cielo
+                            [Description] => teste cielo
+                            [UnitPrice] => 200
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Jardel Jacomini
+            [Email] => deljdl@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2179
+    [softDescriptor] => 2179
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => teste cielo
+                            [description] => teste cielo
+                            [unitPrice] => 200
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Jardel Jacomini
+            [email] => deljdl@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/03171fae-d093-451c-92c2-86b4653f6adf
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+14/07/2016 11:44:09
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2179
+    [amount] => 500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => f7a7c3b081464349a06c43c8bffcc49a
+    [created_date] => 14/07/2016 13:09:41
+    [customer_name] => Jardel Jacomini
+    [customer_phone] => 11985691184
+    [customer_identity] => 29466511858
+    [customer_email] => fake@grupothx.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 453211******7289
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776200000000FA
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+14/07/2016 11:44:09
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->11 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2179
+    [amount] => 500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => f7a7c3b081464349a06c43c8bffcc49a
+    [created_date] => 14/07/2016 13:09:41
+    [customer_name] => Jardel Jacomini
+    [customer_phone] => 11985691184
+    [customer_identity] => 29466511858
+    [customer_email] => fake@grupothx.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 453211******7289
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776200000000FA
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+14/07/2016 11:10:11
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => f7a7c3b081464349a06c43c8bffcc49a
+    [amount] => 500
+    [order_number] => 2179
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+14/07/2016 11:10:11
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => f7a7c3b081464349a06c43c8bffcc49a
+    [amount] => 500
+    [order_number] => 2179
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 2179
+    [id] => 2179
+    [1] => 11
+    [userid] => 11
+    [2] => #1525
+    [invoicenum] => #1525
+    [3] => 2016-07-14
+    [date] => 2016-07-14
+    [4] => 2016-07-11
+    [duedate] => 2016-07-11
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 2.00
+    [subtotal] => 2.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 2.00
+    [total] => 2.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 11
+    [id] => 11
+    [uuid] => f65fc105-91aa-460c-aae3-895180cdf176
+    [firstname] => Jardel
+    [lastname] => Jacomini
+    [fullname] => Jardel Jacomini
+    [companyname] => Grupo Thx
+    [email] => deljdl@gmail.com
+    [address1] => Rua Milton Ferreira Franco
+    [address2] => Barreto
+    [city] => aruja
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417-160
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146550330
+    [password] => 88a5557b316153c8969f402923133358:T)YLY
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146550330
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/07/2016 11:18<br>IP Address: 177.41.209.156<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2179
+    [SoftDescriptor] => 2179
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => teste cielo
+                            [Description] => teste cielo
+                            [UnitPrice] => 200
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Jardel Jacomini
+            [Email] => deljdl@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2179
+    [softDescriptor] => 2179
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => teste cielo
+                            [description] => teste cielo
+                            [unitPrice] => 200
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Jardel Jacomini
+            [email] => deljdl@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/91654b4f-ba4a-4975-9a08-4210f109e9f2
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2179
+    [id] => 2179
+    [1] => 11
+    [userid] => 11
+    [2] => #1525
+    [invoicenum] => #1525
+    [3] => 2016-07-14
+    [date] => 2016-07-14
+    [4] => 2016-07-11
+    [duedate] => 2016-07-11
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 2.00
+    [subtotal] => 2.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 2.00
+    [total] => 2.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 11
+    [id] => 11
+    [uuid] => f65fc105-91aa-460c-aae3-895180cdf176
+    [firstname] => Jardel
+    [lastname] => Jacomini
+    [fullname] => Jardel Jacomini
+    [companyname] => Grupo Thx
+    [email] => deljdl@gmail.com
+    [address1] => Rua Milton Ferreira Franco
+    [address2] => Barreto
+    [city] => aruja
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417-160
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146550330
+    [password] => 88a5557b316153c8969f402923133358:T)YLY
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146550330
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 26/08/2016 07:44<br>IP Address: 177.159.82.166<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2179
+    [SoftDescriptor] => 2179
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => teste cielo
+                            [Description] => teste cielo
+                            [UnitPrice] => 200
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Jardel Jacomini
+            [Email] => deljdl@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2179
+    [softDescriptor] => 2179
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => teste cielo
+                            [description] => teste cielo
+                            [unitPrice] => 200
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Jardel Jacomini
+            [email] => deljdl@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/367a31f6-c1aa-4cc3-9c1f-5374a6a843f0
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>

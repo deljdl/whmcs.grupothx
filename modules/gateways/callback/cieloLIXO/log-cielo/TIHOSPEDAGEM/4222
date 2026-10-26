@@ -1,0 +1,349 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4222
+    [id] => 4222
+    [1] => 213
+    [userid] => 213
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-01-05
+    [date] => 2018-01-05
+    [4] => 2018-01-08
+    [duedate] => 2018-01-08
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 75.00
+    [subtotal] => 75.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 75.00
+    [total] => 75.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 213
+    [id] => 213
+    [uuid] => eec8d1e0-13de-49a3-9730-8d4406419ffd
+    [firstname] => Vinicius
+    [lastname] => Zabotto
+    [fullname] => Vinicius Zabotto
+    [companyname] => MARCO ANTONO CURSINI ME
+    [email] => adm@pesqueiroaruja.com.br
+    [address1] => Estradas das Canjicas, 980
+    [address2] => Peinha
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07432-575
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137066400 - 11995518923
+    [password] => $2y$10$Bal/8MjTNFZVA7mrHundDuHOBGUwQZvWae0hrNAc1w87eYY7Fr/By
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113706640011995518923
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 06/01/2018 10:46<br>IP Address: 168.232.162.133<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995518923
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.759.063/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995518923
+    [customfields3] => 11.759.063/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4222
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes conforme email de 5 de janeiro de 2018 as 15:07
+                            [Description] => Desenvolvimento Por Hora - Alteracoes conforme email de 5 de janeiro de 2018 as 15:07
+                            [UnitPrice] => 7500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Vinicius Zabotto
+            [Email] => adm@pesqueiroaruja.com.br
+            [Identity] => 11759063000143
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4222
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alteracoes conforme email de 5 de janeiro de 2018 as 15:07
+                            [description] => Desenvolvimento Por Hora - Alteracoes conforme email de 5 de janeiro de 2018 as 15:07
+                            [unitPrice] => 7500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11759063000143
+            [fullName] => Vinicius Zabotto
+            [email] => adm@pesqueiroaruja.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/f9656f47-a402-4ef7-b752-e868c981d05c
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+06/01/2018 10:53:49
+INICIO_______________________________________________________________LOG:BEGIN:::06/01/2018 10:49<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 4222
+    [amount] => 7500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 09cfac65f5a74d0f84b9f95d8c2bd563
+    [created_date] => 06/01/2018 10:49:49
+    [customer_name] => Vinicius Zabotto
+    [customer_phone] => 11995518923
+    [customer_identity] => 25611904807
+    [customer_email] => adm@pesqueiroaruja.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544828******7816
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 1076077762790MRAAR9B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/01/2018 10:55:49
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->4222 | Result->success | ValorPago ->75.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 4222
+    [amount] => 7500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 09cfac65f5a74d0f84b9f95d8c2bd563
+    [created_date] => 06/01/2018 10:49:49
+    [customer_name] => Vinicius Zabotto
+    [customer_phone] => 11995518923
+    [customer_identity] => 25611904807
+    [customer_email] => adm@pesqueiroaruja.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544828******7816
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 1076077762790MRAAR9B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/01/2018 10:24:57
+INICIO_______________________________________________________________LOG:BEGIN:::06/01/2018 10:57<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 09cfac65f5a74d0f84b9f95d8c2bd563
+    [amount] => 7500
+    [order_number] => 4222
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/01/2018 10:24:57
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 09cfac65f5a74d0f84b9f95d8c2bd563
+    [amount] => 7500
+    [order_number] => 4222
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/01/2018 10:25:57
+INICIO_______________________________________________________________LOG:BEGIN:::06/01/2018 10:57<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 09cfac65f5a74d0f84b9f95d8c2bd563
+    [amount] => 7500
+    [order_number] => 4222
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/01/2018 10:25:57
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 09cfac65f5a74d0f84b9f95d8c2bd563
+    [amount] => 7500
+    [order_number] => 4222
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

@@ -1,0 +1,5293 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-09-27
+    [duedate] => 2016-09-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 03/10/2016 19:39<br>IP Address: 177.100.235.77<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [Description] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [UnitPrice] => -6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Cart.Items[3].UnitPrice] => Array
+                (
+                    [0] => [Cart.Item.UnitPrice] deve ser maior ou igual a zero.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-09-27
+    [duedate] => 2016-09-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 03/10/2016 19:39<br>IP Address: 177.100.235.77<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [Description] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [UnitPrice] => -6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Cart.Items[3].UnitPrice] => Array
+                (
+                    [0] => [Cart.Item.UnitPrice] deve ser maior ou igual a zero.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-09-27
+    [duedate] => 2016-09-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 03/10/2016 19:40<br>IP Address: 177.100.235.77<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [Description] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [UnitPrice] => -6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Cart.Items[3].UnitPrice] => Array
+                (
+                    [0] => [Cart.Item.UnitPrice] deve ser maior ou igual a zero.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-09-27
+    [duedate] => 2016-09-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/10/2016 11:34<br>IP Address: 177.100.235.77<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [Description] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [UnitPrice] => -6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Cart.Items[3].UnitPrice] => Array
+                (
+                    [0] => [Cart.Item.UnitPrice] deve ser maior ou igual a zero.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-09-27
+    [duedate] => 2016-09-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/10/2016 11:39<br>IP Address: 177.134.19.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [Description] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [UnitPrice] => -6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Cart.Items[3].UnitPrice] => Array
+                (
+                    [0] => [Cart.Item.UnitPrice] deve ser maior ou igual a zero.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-09-27
+    [duedate] => 2016-09-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/10/2016 11:43<br>IP Address: 177.134.19.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [Description] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [UnitPrice] => -6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Cart.Items[3].UnitPrice] => Array
+                (
+                    [0] => [Cart.Item.UnitPrice] deve ser maior ou igual a zero.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-09-27
+    [duedate] => 2016-09-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/10/2016 11:44<br>IP Address: 177.134.19.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [Description] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [UnitPrice] => -6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Cart.Items[3].UnitPrice] => Array
+                (
+                    [0] => [Cart.Item.UnitPrice] deve ser maior ou igual a zero.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-09-27
+    [duedate] => 2016-09-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/10/2016 11:44<br>IP Address: 177.134.19.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [Description] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [UnitPrice] => -6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Cart.Items[3].UnitPrice] => Array
+                (
+                    [0] => [Cart.Item.UnitPrice] deve ser maior ou igual a zero.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-09-27
+    [duedate] => 2016-09-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/10/2016 11:45<br>IP Address: 177.134.19.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [Description] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [UnitPrice] => -6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Cart.Items[3].UnitPrice] => Array
+                (
+                    [0] => [Cart.Item.UnitPrice] deve ser maior ou igual a zero.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-09-27
+    [duedate] => 2016-09-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/10/2016 11:47<br>IP Address: 177.134.19.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [Description] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [UnitPrice] => -6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Cart.Items[3].UnitPrice] => Array
+                (
+                    [0] => [Cart.Item.UnitPrice] deve ser maior ou igual a zero.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-09-27
+    [duedate] => 2016-09-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/10/2016 11:48<br>IP Address: 177.134.19.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [Description] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [UnitPrice] => -6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Cart.Items[3].UnitPrice] => Array
+                (
+                    [0] => [Cart.Item.UnitPrice] deve ser maior ou igual a zero.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-09-27
+    [duedate] => 2016-09-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/10/2016 11:50<br>IP Address: 177.134.19.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [Description] => Desconto por troca de conta CURSODEPERITOGRATIS
+                            [UnitPrice] => -6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Cart.Items[3].UnitPrice] => Array
+                (
+                    [0] => [Cart.Item.UnitPrice] deve ser maior ou igual a zero.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-09-27
+    [duedate] => 2016-09-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/10/2016 11:53<br>IP Address: 177.134.19.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2479
+    [softDescriptor] => 2479
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [unitPrice] => 6000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [unitPrice] => 6000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [unitPrice] => 6000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => João Gomes
+            [email] => mrscursos@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/6420a9b3-06ee-4184-9dda-2470fb0f19a9
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-09-27
+    [duedate] => 2016-09-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/10/2016 11:57<br>IP Address: 177.134.19.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 2479
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Customer.Identity] => Array
+                (
+                    [0] => [Customer.Identity] deve conter no mínimo 11 e no máximo 14 caracteres.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-09-27
+    [duedate] => 2016-09-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/10/2016 11:57<br>IP Address: 177.134.19.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 2479
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Customer.Identity] => Array
+                (
+                    [0] => [Customer.Identity] deve conter no mínimo 11 e no máximo 14 caracteres.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-09-27
+    [duedate] => 2016-09-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/10/2016 11:59<br>IP Address: 177.134.19.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => TiHosped-2479
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Customer.Identity] => Array
+                (
+                    [0] => [Customer.Identity] deve conter apenas números.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-09-27
+    [duedate] => 2016-09-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/10/2016 12:00<br>IP Address: 177.134.19.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 111111111112479
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Customer.Identity] => Array
+                (
+                    [0] => [Customer.Identity] deve conter no mínimo 11 e no máximo 14 caracteres.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-09-27
+    [duedate] => 2016-09-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/10/2016 12:02<br>IP Address: 177.134.19.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002479
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2479
+    [softDescriptor] => 2479
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [unitPrice] => 6000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [unitPrice] => 6000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [unitPrice] => 0
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002479
+            [fullName] => João Gomes
+            [email] => mrscursos@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/55227d14-46b1-4df0-a101-5ac944e874d9
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-09-27
+    [duedate] => 2016-09-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002479
+            [FullName] =>  
+            [Email] => 
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2479
+    [softDescriptor] => 2479
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [unitPrice] => 6000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [unitPrice] => 6000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [unitPrice] => 0
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002479
+            [fullName] =>  
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/d384c1eb-1299-4484-a3c8-35fc11d169c2
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-09-27
+    [duedate] => 2016-09-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/10/2016 12:03<br>IP Address: 177.134.19.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002479
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2479
+    [softDescriptor] => 2479
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [unitPrice] => 6000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [unitPrice] => 6000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [unitPrice] => 0
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002479
+            [fullName] => João Gomes
+            [email] => mrscursos@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/87323283-cec2-48c1-bd66-b4c7912652b7
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-10-04
+    [duedate] => 2016-10-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/10/2016 12:39<br>IP Address: 177.100.235.77<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002479
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2479
+    [softDescriptor] => 2479
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [unitPrice] => 6000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [unitPrice] => 6000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [unitPrice] => 0
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002479
+            [fullName] => João Gomes
+            [email] => mrscursos@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/285c5aae-43be-4b50-aec3-e01b3be0c1e3
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+04/10/2016 12:42:42
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2479
+    [amount] => 12000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 5701533c227541cd9fb1d4eaecef7a6a
+    [created_date] => 04/10/2016 14:42:40
+    [customer_name] => João Gomes
+    [customer_phone] => 2227731825
+    [customer_identity] => 73390054715
+    [customer_email] => mrscursos@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 459384*******3643
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777625MMRNPMEJB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+04/10/2016 12:20:43
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5701533c227541cd9fb1d4eaecef7a6a
+    [amount] => 12000
+    [order_number] => 2479
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 2479
+    [id] => 2479
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-27
+    [date] => 2016-09-27
+    [4] => 2016-10-04
+    [duedate] => 2016-10-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 120.00
+    [subtotal] => 120.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 120.00
+    [total] => 120.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/10/2016 13:01<br>IP Address: 177.134.19.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2479
+    [SoftDescriptor] => 2479
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [UnitPrice] => 000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002479
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2479
+    [softDescriptor] => 2479
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives....
+                            [description] => Gestor de Conteúdo Universal X-Painel® - cadastro-detetives.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-detetives.com.br
+                            [unitPrice] => 6000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com....
+                            [description] => Gestor de Conteúdo Universal X-Painel® - cadastro-peritos.com.br (27/09/2016 - 26/09/2017)
+Domínio: cadastro-peritos.com.br
+                            [unitPrice] => 6000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [description] => Gestor de Conteúdo Universal X-Painel® - denasp.com.br (27/09/2016 - 26/09/2017)
+Domínio: denasp.com.br
+                            [unitPrice] => 0
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002479
+            [fullName] => João Gomes
+            [email] => mrscursos@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/612f8bba-383b-47e1-b4bf-134efd43db31
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+04/10/2016 13:22:45
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5701533c227541cd9fb1d4eaecef7a6a
+    [amount] => 12000
+    [order_number] => 2479
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

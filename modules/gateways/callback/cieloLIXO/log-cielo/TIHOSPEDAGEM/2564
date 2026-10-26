@@ -1,0 +1,2029 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2564
+    [id] => 2564
+    [1] => 238
+    [userid] => 238
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-10-19
+    [date] => 2016-10-19
+    [4] => 2016-10-19
+    [duedate] => 2016-10-19
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 979.00
+    [subtotal] => 979.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 979.00
+    [total] => 979.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 238
+    [id] => 238
+    [uuid] => f70ba1c3-27ff-447f-8e71-4adb54e0c7dc
+    [firstname] => Fabiana
+    [lastname] => Boaventura Avelar Nogueira
+    [fullname] => Fabiana Boaventura Avelar Nogueira
+    [companyname] => Bia Avelar Estética Facial e Corporal
+    [email] => fabi_avelar@hotmail.com
+    [address1] => Avenida Louraci Della Nina Tavares, 221
+    [address2] => Loteamento Mogilar
+    [city] => Mogi da Cruzes
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08773-650
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11996429521 - 11999070543
+    [password] => $2y$10$su5/z9AfZZDny35qywzKSObTEVh61j.hANKxhbcZkUkHy3jJDklfq
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1199642952111999070543
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/10/2016 09:39<br>IP Address: 179.178.176.88<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11996429521
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 77994345549
+                )
+
+        )
+
+    [customfields2] => 11996429521
+    [customfields3] => 77994345549
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2564
+    [SoftDescriptor] => 2564
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidad...
+                            [Description] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidade SITE BÁSICO -  Conforme Proposta 1148
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Cou...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Couchê - 300g - 4x4
+Laminação Fosca e Verniz Local Frente e
+Verso -  Conforme Proposta 1148
+
+                            [UnitPrice] => 10000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme Proposta 1148
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê ...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê - 90g - 4x0
+Refile -  Conforme Proposta 1148
+                            [UnitPrice] => 15000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página ...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página do
+Facebook -  Conforme Proposta 1148
+                            [UnitPrice] => 3000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [5] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 2937
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [6] => stdClass Object
+                        (
+                            [Name] => Juros por 5 dias de atraso
+                            [Description] => Juros por 5 dias de atraso
+                            [UnitPrice] => 1513
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002564
+            [FullName] => Fabiana Boaventura Avelar Nogueira
+            [Email] => fabi_avelar@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2564
+    [softDescriptor] => 2564
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidad...
+                            [description] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidade SITE BÁSICO -  Conforme Proposta 1148
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Cou...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Couchê - 300g - 4x4
+Laminação Fosca e Verniz Local Frente e
+Verso -  Conforme Proposta 1148
+
+                            [unitPrice] => 10000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme Proposta 1148
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê ...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê - 90g - 4x0
+Refile -  Conforme Proposta 1148
+                            [unitPrice] => 15000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página ...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página do
+Facebook -  Conforme Proposta 1148
+                            [unitPrice] => 3000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [5] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 2937
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [6] => stdClass Object
+                        (
+                            [name] => Juros por 5 dias de atraso
+                            [description] => Juros por 5 dias de atraso
+                            [unitPrice] => 1513
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002564
+            [fullName] => Fabiana Boaventura Avelar Nogueira
+            [email] => fabi_avelar@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/56133f04-2f4f-4c8b-8da1-db6c8c00aa32
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2564
+    [id] => 2564
+    [1] => 238
+    [userid] => 238
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-10-19
+    [date] => 2016-10-19
+    [4] => 2016-10-24
+    [duedate] => 2016-10-24
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 979.00
+    [subtotal] => 979.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 979.00
+    [total] => 979.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2564
+    [SoftDescriptor] => 2564
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidad...
+                            [Description] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidade SITE BÁSICO -  Conforme Proposta 1148
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Cou...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Couchê - 300g - 4x4
+Laminação Fosca e Verniz Local Frente e
+Verso -  Conforme Proposta 1148
+
+                            [UnitPrice] => 10000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme Proposta 1148
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê ...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê - 90g - 4x0
+Refile -  Conforme Proposta 1148
+                            [UnitPrice] => 15000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página ...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página do
+Facebook -  Conforme Proposta 1148
+                            [UnitPrice] => 3000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002564
+            [FullName] =>  
+            [Email] => 
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2564
+    [softDescriptor] => 2564
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidad...
+                            [description] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidade SITE BÁSICO -  Conforme Proposta 1148
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Cou...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Couchê - 300g - 4x4
+Laminação Fosca e Verniz Local Frente e
+Verso -  Conforme Proposta 1148
+
+                            [unitPrice] => 10000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme Proposta 1148
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê ...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê - 90g - 4x0
+Refile -  Conforme Proposta 1148
+                            [unitPrice] => 15000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página ...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página do
+Facebook -  Conforme Proposta 1148
+                            [unitPrice] => 3000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002564
+            [fullName] =>  
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/bc16f485-bda6-43a6-955e-44a428b06496
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2564
+    [id] => 2564
+    [1] => 238
+    [userid] => 238
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-10-19
+    [date] => 2016-10-19
+    [4] => 2016-10-24
+    [duedate] => 2016-10-24
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 979.00
+    [subtotal] => 979.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 979.00
+    [total] => 979.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2564
+    [SoftDescriptor] => 2564
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidad...
+                            [Description] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidade SITE BÁSICO -  Conforme Proposta 1148
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Cou...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Couchê - 300g - 4x4
+Laminação Fosca e Verniz Local Frente e
+Verso -  Conforme Proposta 1148
+
+                            [UnitPrice] => 10000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme Proposta 1148
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê ...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê - 90g - 4x0
+Refile -  Conforme Proposta 1148
+                            [UnitPrice] => 15000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página ...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página do
+Facebook -  Conforme Proposta 1148
+                            [UnitPrice] => 3000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002564
+            [FullName] =>  
+            [Email] => 
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2564
+    [softDescriptor] => 2564
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidad...
+                            [description] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidade SITE BÁSICO -  Conforme Proposta 1148
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Cou...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Couchê - 300g - 4x4
+Laminação Fosca e Verniz Local Frente e
+Verso -  Conforme Proposta 1148
+
+                            [unitPrice] => 10000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme Proposta 1148
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê ...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê - 90g - 4x0
+Refile -  Conforme Proposta 1148
+                            [unitPrice] => 15000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página ...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página do
+Facebook -  Conforme Proposta 1148
+                            [unitPrice] => 3000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002564
+            [fullName] =>  
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/232b0988-822e-469a-836e-016a443b7e73
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2564
+    [id] => 2564
+    [1] => 238
+    [userid] => 238
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-10-19
+    [date] => 2016-10-19
+    [4] => 2016-10-24
+    [duedate] => 2016-10-24
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 979.00
+    [subtotal] => 979.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 979.00
+    [total] => 979.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 238
+    [id] => 238
+    [uuid] => f70ba1c3-27ff-447f-8e71-4adb54e0c7dc
+    [firstname] => Fabiana
+    [lastname] => Boaventura Avelar Nogueira
+    [fullname] => Fabiana Boaventura Avelar Nogueira
+    [companyname] => Bia Avelar Estética Facial e Corporal
+    [email] => fabi_avelar@hotmail.com
+    [address1] => Avenida Louraci Della Nina Tavares, 221
+    [address2] => Loteamento Mogilar
+    [city] => Mogi da Cruzes
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08773-650
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11996429521 - 11999070543
+    [password] => $2y$10$su5/z9AfZZDny35qywzKSObTEVh61j.hANKxhbcZkUkHy3jJDklfq
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1199642952111999070543
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/10/2016 09:45<br>IP Address: 179.178.176.88<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11996429521
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 77994345549
+                )
+
+        )
+
+    [customfields2] => 11996429521
+    [customfields3] => 77994345549
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2564
+    [SoftDescriptor] => 2564
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidad...
+                            [Description] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidade SITE BÁSICO -  Conforme Proposta 1148
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Cou...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Couchê - 300g - 4x4
+Laminação Fosca e Verniz Local Frente e
+Verso -  Conforme Proposta 1148
+
+                            [UnitPrice] => 10000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme Proposta 1148
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê ...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê - 90g - 4x0
+Refile -  Conforme Proposta 1148
+                            [UnitPrice] => 15000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página ...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página do
+Facebook -  Conforme Proposta 1148
+                            [UnitPrice] => 3000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002564
+            [FullName] => Fabiana Boaventura Avelar Nogueira
+            [Email] => fabi_avelar@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2564
+    [softDescriptor] => 2564
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidad...
+                            [description] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidade SITE BÁSICO -  Conforme Proposta 1148
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Cou...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Couchê - 300g - 4x4
+Laminação Fosca e Verniz Local Frente e
+Verso -  Conforme Proposta 1148
+
+                            [unitPrice] => 10000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme Proposta 1148
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê ...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê - 90g - 4x0
+Refile -  Conforme Proposta 1148
+                            [unitPrice] => 15000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página ...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página do
+Facebook -  Conforme Proposta 1148
+                            [unitPrice] => 3000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002564
+            [fullName] => Fabiana Boaventura Avelar Nogueira
+            [email] => fabi_avelar@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/f50d92b8-3640-4e73-8a33-a053b60c622b
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2564
+    [id] => 2564
+    [1] => 238
+    [userid] => 238
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-10-19
+    [date] => 2016-10-19
+    [4] => 2016-10-24
+    [duedate] => 2016-10-24
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 979.00
+    [subtotal] => 979.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 979.00
+    [total] => 979.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2564
+    [SoftDescriptor] => 2564
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidad...
+                            [Description] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidade SITE BÁSICO -  Conforme Proposta 1148
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Cou...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Couchê - 300g - 4x4
+Laminação Fosca e Verniz Local Frente e
+Verso -  Conforme Proposta 1148
+
+                            [UnitPrice] => 10000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme Proposta 1148
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê ...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê - 90g - 4x0
+Refile -  Conforme Proposta 1148
+                            [UnitPrice] => 15000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página ...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página do
+Facebook -  Conforme Proposta 1148
+                            [UnitPrice] => 3000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002564
+            [FullName] =>  
+            [Email] => 
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2564
+    [softDescriptor] => 2564
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidad...
+                            [description] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidade SITE BÁSICO -  Conforme Proposta 1148
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Cou...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Couchê - 300g - 4x4
+Laminação Fosca e Verniz Local Frente e
+Verso -  Conforme Proposta 1148
+
+                            [unitPrice] => 10000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme Proposta 1148
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê ...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê - 90g - 4x0
+Refile -  Conforme Proposta 1148
+                            [unitPrice] => 15000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página ...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página do
+Facebook -  Conforme Proposta 1148
+                            [unitPrice] => 3000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002564
+            [fullName] =>  
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/d6514641-d5c4-4533-bf94-1370324beff4
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2564
+    [id] => 2564
+    [1] => 238
+    [userid] => 238
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-10-19
+    [date] => 2016-10-19
+    [4] => 2016-10-24
+    [duedate] => 2016-10-24
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 979.00
+    [subtotal] => 979.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 979.00
+    [total] => 979.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 238
+    [id] => 238
+    [uuid] => f70ba1c3-27ff-447f-8e71-4adb54e0c7dc
+    [firstname] => Fabiana
+    [lastname] => Boaventura Avelar Nogueira
+    [fullname] => Fabiana Boaventura Avelar Nogueira
+    [companyname] => Bia Avelar Estética Facial e Corporal
+    [email] => fabi_avelar@hotmail.com
+    [address1] => Avenida Louraci Della Nina Tavares, 221
+    [address2] => Loteamento Mogilar
+    [city] => Mogi da Cruzes
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08773-650
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11996429521 - 11999070543
+    [password] => $2y$10$su5/z9AfZZDny35qywzKSObTEVh61j.hANKxhbcZkUkHy3jJDklfq
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1199642952111999070543
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/10/2016 11:39<br>IP Address: 200.142.128.16<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11996429521
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 77994345549
+                )
+
+        )
+
+    [customfields2] => 11996429521
+    [customfields3] => 77994345549
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2564
+    [SoftDescriptor] => 2564
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidad...
+                            [Description] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidade SITE BÁSICO -  Conforme Proposta 1148
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Cou...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Couchê - 300g - 4x4
+Laminação Fosca e Verniz Local Frente e
+Verso -  Conforme Proposta 1148
+
+                            [UnitPrice] => 10000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme Proposta 1148
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê ...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê - 90g - 4x0
+Refile -  Conforme Proposta 1148
+                            [UnitPrice] => 15000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página ...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página do
+Facebook -  Conforme Proposta 1148
+                            [UnitPrice] => 3000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002564
+            [FullName] => Fabiana Boaventura Avelar Nogueira
+            [Email] => fabi_avelar@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2564
+    [softDescriptor] => 2564
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidad...
+                            [description] => Site Básico - biaavelarestetica.com.br
+Observações:: Criação do site profissional para Clinica de Estética na modalidade SITE BÁSICO -  Conforme Proposta 1148
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Cou...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 500 Cartões de Visita - 48x88mm
+Couchê - 300g - 4x4
+Laminação Fosca e Verniz Local Frente e
+Verso -  Conforme Proposta 1148
+
+                            [unitPrice] => 10000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Vetorização de Logotipo -  Conforme Proposta 1148
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê ...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: 5.000 Panfletos - 100x140mm
+Couchê - 90g - 4x0
+Refile -  Conforme Proposta 1148
+                            [unitPrice] => 15000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página ...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página do
+Facebook -  Conforme Proposta 1148
+                            [unitPrice] => 3000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002564
+            [fullName] => Fabiana Boaventura Avelar Nogueira
+            [email] => fabi_avelar@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/c4680931-0aab-44cf-9e3c-be58bd62fefb
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+25/10/2016 11:58:43
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2564
+    [amount] => 97900
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => d341aaab457f4aad9811cb82e9abaa99
+    [created_date] => 25/10/2016 14:43:55
+    [customer_name] => Ricardo Nogueira
+    [customer_phone] => 11999070543
+    [customer_identity] => 25930277893
+    [customer_email] => ricardo.romero.br@outlook.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 422061******4405
+    [payment_installments] => 6
+    [payment_status] => 2
+    [tid] => 10760777625NADNO8I9B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/10/2016 11:59:43
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->238 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2564
+    [amount] => 97900
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => d341aaab457f4aad9811cb82e9abaa99
+    [created_date] => 25/10/2016 14:43:55
+    [customer_name] => Ricardo Nogueira
+    [customer_phone] => 11999070543
+    [customer_identity] => 25930277893
+    [customer_email] => ricardo.romero.br@outlook.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 422061******4405
+    [payment_installments] => 6
+    [payment_status] => 2
+    [tid] => 10760777625NADNO8I9B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/10/2016 11:56:52
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => d341aaab457f4aad9811cb82e9abaa99
+    [amount] => 97900
+    [order_number] => 2564
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/10/2016 11:56:52
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => d341aaab457f4aad9811cb82e9abaa99
+    [amount] => 97900
+    [order_number] => 2564
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 2564
+    [id] => 2564
+    [1] => 238
+    [userid] => 238
+    [2] => #1823
+    [invoicenum] => #1823
+    [3] => 2016-10-19
+    [date] => 2016-10-19
+    [4] => 2016-10-24
+    [duedate] => 2016-10-24
+    [5] => 2016-10-25 11:43:58
+    [datepaid] => 2016-10-25 11:43:58
+    [6] => 979.00
+    [subtotal] => 979.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 979.00
+    [total] => 979.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Paid
+    [status] => Paid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2564
+    [id] => 2564
+    [1] => 238
+    [userid] => 238
+    [2] => #1823
+    [invoicenum] => #1823
+    [3] => 2016-10-19
+    [date] => 2016-10-19
+    [4] => 2016-10-24
+    [duedate] => 2016-10-24
+    [5] => 2016-10-25 11:43:58
+    [datepaid] => 2016-10-25 11:43:58
+    [6] => 979.00
+    [subtotal] => 979.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 979.00
+    [total] => 979.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Paid
+    [status] => Paid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>

@@ -1,0 +1,1155 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2772
+    [id] => 2772
+    [1] => 239
+    [userid] => 239
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-19
+    [date] => 2016-12-19
+    [4] => 2016-12-24
+    [duedate] => 2016-12-24
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 239
+    [id] => 239
+    [uuid] => ae22ba0c-307f-4057-8405-fc6c6c80451f
+    [firstname] => Alcides
+    [lastname] => Dias dos Santos
+    [fullname] => Alcides Dias dos Santos
+    [companyname] => A D S CONSTRUCOES 
+    [email] => a.dias.santos1958@uol.com.br
+    [address1] => Rua Serra Acarai, 167
+    [address2] => Casa A
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08581-070
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11957673151
+    [password] => $2y$10$gDexAoc4bsTBthQD4aDfM.5GuiCMaArEJwuKjc88dBzyO4kPCfreC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11957673151
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/12/2016 06:29<br>IP Address: 177.97.130.235<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957673151
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 151.651.403-34
+                )
+
+        )
+
+    [customfields2] => 11957673151
+    [customfields3] => 151.651.403-34
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2772
+    [SoftDescriptor] => 2772
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - addossantosconstrucoes.com (24/12/2016 - 23/01/2017)
+                            [Description] => TIH - Master - addossantosconstrucoes.com (24/12/2016 - 23/01/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 90
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 3 dias de atraso
+                            [Description] => Juros por 3 dias de atraso
+                            [UnitPrice] => 28
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002772
+            [FullName] => Alcides Dias dos Santos
+            [Email] => a.dias.santos1958@uol.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2772
+    [softDescriptor] => 2772
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - addossantosconstrucoes.com (24/12/2016 - 23/01/2017)
+                            [description] => TIH - Master - addossantosconstrucoes.com (24/12/2016 - 23/01/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 90
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 3 dias de atraso
+                            [description] => Juros por 3 dias de atraso
+                            [unitPrice] => 28
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002772
+            [fullName] => Alcides Dias dos Santos
+            [email] => a.dias.santos1958@uol.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/d1b6ab1d-3552-4cd3-8d94-1a2f1afa6506
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2772
+    [id] => 2772
+    [1] => 239
+    [userid] => 239
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-19
+    [date] => 2016-12-19
+    [4] => 2016-12-24
+    [duedate] => 2016-12-24
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 239
+    [id] => 239
+    [uuid] => ae22ba0c-307f-4057-8405-fc6c6c80451f
+    [firstname] => Alcides
+    [lastname] => Dias dos Santos
+    [fullname] => Alcides Dias dos Santos
+    [companyname] => A D S CONSTRUCOES 
+    [email] => a.dias.santos1958@uol.com.br
+    [address1] => Rua Serra Acarai, 167
+    [address2] => Casa A
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08581-070
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11957673151
+    [password] => $2y$10$gDexAoc4bsTBthQD4aDfM.5GuiCMaArEJwuKjc88dBzyO4kPCfreC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11957673151
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/12/2016 06:30<br>IP Address: 177.97.130.235<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957673151
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 151.651.403-34
+                )
+
+        )
+
+    [customfields2] => 11957673151
+    [customfields3] => 151.651.403-34
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2772
+    [SoftDescriptor] => 2772
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - addossantosconstrucoes.com (24/12/2016 - 23/01/2017)
+                            [Description] => TIH - Master - addossantosconstrucoes.com (24/12/2016 - 23/01/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 90
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 3 dias de atraso
+                            [Description] => Juros por 3 dias de atraso
+                            [UnitPrice] => 28
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002772
+            [FullName] => Alcides Dias dos Santos
+            [Email] => a.dias.santos1958@uol.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2772
+    [softDescriptor] => 2772
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - addossantosconstrucoes.com (24/12/2016 - 23/01/2017)
+                            [description] => TIH - Master - addossantosconstrucoes.com (24/12/2016 - 23/01/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 90
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 3 dias de atraso
+                            [description] => Juros por 3 dias de atraso
+                            [unitPrice] => 28
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002772
+            [fullName] => Alcides Dias dos Santos
+            [email] => a.dias.santos1958@uol.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/31185672-b953-4bc4-a1cf-8ae561dbfb50
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2772
+    [id] => 2772
+    [1] => 239
+    [userid] => 239
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-19
+    [date] => 2016-12-19
+    [4] => 2016-12-24
+    [duedate] => 2016-12-24
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 239
+    [id] => 239
+    [uuid] => ae22ba0c-307f-4057-8405-fc6c6c80451f
+    [firstname] => Alcides
+    [lastname] => Dias dos Santos
+    [fullname] => Alcides Dias dos Santos
+    [companyname] => A D S CONSTRUCOES 
+    [email] => a.dias.santos1958@uol.com.br
+    [address1] => Rua Serra Acarai, 167
+    [address2] => Casa A
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08581-070
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11957673151
+    [password] => $2y$10$gDexAoc4bsTBthQD4aDfM.5GuiCMaArEJwuKjc88dBzyO4kPCfreC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11957673151
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/12/2016 06:39<br>IP Address: 177.97.130.235<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957673151
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 151.651.403-34
+                )
+
+        )
+
+    [customfields2] => 11957673151
+    [customfields3] => 151.651.403-34
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2772
+    [SoftDescriptor] => 2772
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - addossantosconstrucoes.com (24/12/2016 - 23/01/2017)
+                            [Description] => TIH - Master - addossantosconstrucoes.com (24/12/2016 - 23/01/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 90
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 3 dias de atraso
+                            [Description] => Juros por 3 dias de atraso
+                            [UnitPrice] => 28
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002772
+            [FullName] => Alcides Dias dos Santos
+            [Email] => a.dias.santos1958@uol.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2772
+    [softDescriptor] => 2772
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - addossantosconstrucoes.com (24/12/2016 - 23/01/2017)
+                            [description] => TIH - Master - addossantosconstrucoes.com (24/12/2016 - 23/01/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 90
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 3 dias de atraso
+                            [description] => Juros por 3 dias de atraso
+                            [unitPrice] => 28
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002772
+            [fullName] => Alcides Dias dos Santos
+            [email] => a.dias.santos1958@uol.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/fcaf2ca6-f49b-4576-bf45-c8b6a5785cd7
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2772
+    [id] => 2772
+    [1] => 239
+    [userid] => 239
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-19
+    [date] => 2016-12-19
+    [4] => 2016-12-24
+    [duedate] => 2016-12-24
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 239
+    [id] => 239
+    [uuid] => ae22ba0c-307f-4057-8405-fc6c6c80451f
+    [firstname] => Alcides
+    [lastname] => Dias dos Santos
+    [fullname] => Alcides Dias dos Santos
+    [companyname] => A D S CONSTRUCOES 
+    [email] => a.dias.santos1958@uol.com.br
+    [address1] => Rua Serra Acarai, 167
+    [address2] => Casa A
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08581-070
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11957673151
+    [password] => $2y$10$gDexAoc4bsTBthQD4aDfM.5GuiCMaArEJwuKjc88dBzyO4kPCfreC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11957673151
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:47<br>IP Address: 201.42.24.185<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957673151
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 151.651.403-34
+                )
+
+        )
+
+    [customfields2] => 11957673151
+    [customfields3] => 151.651.403-34
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2772
+    [SoftDescriptor] => 2772
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - addossantosconstrucoes.com (24/12/2016 - 23/01/2017)
+                            [Description] => TIH - Master - addossantosconstrucoes.com (24/12/2016 - 23/01/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 90
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 4 dias de atraso
+                            [Description] => Juros por 4 dias de atraso
+                            [UnitPrice] => 37
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002772
+            [FullName] => Alcides Dias dos Santos
+            [Email] => a.dias.santos1958@uol.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2772
+    [softDescriptor] => 2772
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - addossantosconstrucoes.com (24/12/2016 - 23/01/2017)
+                            [description] => TIH - Master - addossantosconstrucoes.com (24/12/2016 - 23/01/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 90
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 4 dias de atraso
+                            [description] => Juros por 4 dias de atraso
+                            [unitPrice] => 37
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002772
+            [fullName] => Alcides Dias dos Santos
+            [email] => a.dias.santos1958@uol.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/fcaebb52-a542-4a6a-955b-6b334e6c952a
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+28/12/2016 8:09:53
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2772
+    [amount] => 3124
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => ab0797c198004a00a55d0361ed4a2cbc
+    [created_date] => 28/12/2016 12:53:07
+    [customer_name] => Alcides Santos
+    [customer_phone] => 1146483731
+    [customer_identity] => 15165140334
+    [customer_email] => a.dias.santos1958@uol.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552128******1019
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777625P61L87JPB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/12/2016 8:11:53
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->239 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2772
+    [amount] => 3124
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => ab0797c198004a00a55d0361ed4a2cbc
+    [created_date] => 28/12/2016 12:53:07
+    [customer_name] => Alcides Santos
+    [customer_phone] => 1146483731
+    [customer_identity] => 15165140334
+    [customer_email] => a.dias.santos1958@uol.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552128******1019
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777625P61L87JPB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/12/2016 9:38:00
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => ab0797c198004a00a55d0361ed4a2cbc
+    [amount] => 3124
+    [order_number] => 2772
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/12/2016 9:38:00
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => ab0797c198004a00a55d0361ed4a2cbc
+    [amount] => 3124
+    [order_number] => 2772
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

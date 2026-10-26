@@ -1,0 +1,240 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2898
+    [id] => 2898
+    [1] => 79
+    [userid] => 79
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-23
+    [date] => 2017-01-23
+    [4] => 2017-01-30
+    [duedate] => 2017-01-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.94
+    [subtotal] => 59.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.94
+    [total] => 59.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 79
+    [id] => 79
+    [uuid] => 5e14f99e-f8fe-4655-9d0e-32e20170b39c
+    [firstname] => Márcio
+    [lastname] => Candido da Silva
+    [fullname] => Márcio Candido da Silva
+    [companyname] => Candido da Silva Advocacia e Consultoria Jurídica
+    [email] => candidosilva@aasp.org.br
+    [address1] => Rua Grécia, 53, Jardim Bonfiglioli
+    [address2] => 
+    [city] => Jundiaí
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 13207-511
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11983339783
+    [password] => 41aa51efd20d94195c0db7c69df8f872:h)i(M
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11983339783
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => boleto
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 23/01/2017 10:08<br>IP Address: 179.222.177.163<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11983339783
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 096.799.618-00
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11983339783
+    [customfields3] => 096.799.618-00
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2898
+    [id] => 2898
+    [1] => 79
+    [userid] => 79
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-23
+    [date] => 2017-01-23
+    [4] => 2017-01-30
+    [duedate] => 2017-01-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.94
+    [subtotal] => 59.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.94
+    [total] => 59.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 79
+    [id] => 79
+    [uuid] => 5e14f99e-f8fe-4655-9d0e-32e20170b39c
+    [firstname] => Márcio
+    [lastname] => Candido da Silva
+    [fullname] => Márcio Candido da Silva
+    [companyname] => Candido da Silva Advocacia e Consultoria Jurídica
+    [email] => candidosilva@aasp.org.br
+    [address1] => Rua Grécia, 53, Jardim Bonfiglioli
+    [address2] => 
+    [city] => Jundiaí
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 13207-511
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11983339783
+    [password] => 41aa51efd20d94195c0db7c69df8f872:h)i(M
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11983339783
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => boleto
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 30/01/2017 09:36<br>IP Address: 179.222.177.163<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11983339783
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 096.799.618-00
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11983339783
+    [customfields3] => 096.799.618-00
+    [customfields4] => 
+)
+</pre>

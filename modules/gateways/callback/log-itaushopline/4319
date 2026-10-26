@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4319
+    [id] => 4319
+    [1] => 144
+    [userid] => 144
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-01
+    [date] => 2018-02-01
+    [4] => 2018-02-08
+    [duedate] => 2018-02-08
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 144
+    [id] => 144
+    [uuid] => 6c18f740-c3ff-4ea1-9853-53be68ffa9a2
+    [firstname] => Carlos
+    [lastname] => Eduardo Nazareth Gomes
+    [fullname] => Carlos Eduardo Nazareth Gomes
+    [companyname] => Dudu Gomes Transportes Ltda Me
+    [email] => transdudu.gerencia@globo.com
+    [address1] => Rua Maranhão, 490
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07402-165
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 2511-6586 
+    [password] => b489dac3f98d98f25a8cb366fd66dd04:(!(%c
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1125116586
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 01/02/2018 09:41<br>IP Address: 177.103.183.223<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11975451329
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 17.154.442/0001-95
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11975451329
+    [customfields3] => 17.154.442/0001-95
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

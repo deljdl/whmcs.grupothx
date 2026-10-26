@@ -1,0 +1,1295 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3114
+    [id] => 3114
+    [1] => 263
+    [userid] => 263
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-20
+    [date] => 2017-03-20
+    [4] => 2017-03-20
+    [duedate] => 2017-03-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1000.00
+    [subtotal] => 1000.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1000.00
+    [total] => 1000.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 263
+    [id] => 263
+    [uuid] => b231fe3e-8f23-480b-a8e4-74c067911761
+    [firstname] => Fabio
+    [lastname] => Luiz Cardoso
+    [fullname] => Fabio Luiz Cardoso
+    [companyname] => Vittoria Calçados
+    [email] => vittoria.sapatilhas@gmail.com
+    [address1] => Estrada de São Bento - de 1150 a 1710, 1710
+    [address2] => Jardim São Paulo
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08598465
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146478648 11948193511
+    [password] => $2y$10$tYjmldMdpp.91x8R/q3LEOzib2AsbzmvJcsts1DCQkjHz9gaCpshS
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114647864811948193511
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => cielo
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/03/2017 16:02<br>IP Address: 201.95.94.167<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11948193511
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23356821000160
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11948193511
+    [customfields3] => 23356821000160
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3114
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Loja Virtual - melissacalcados.com
+observacoes:: Conforme proposta 1217-Criacao de Loja Virtual.
+Prazo de entrega : 15 dias
+                            [Description] => Loja Virtual - melissacalcados.com
+observacoes:: Conforme proposta 1217-Criacao de Loja Virtual.
+Prazo de entrega : 15 dias
+                            [UnitPrice] => 100000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Fabio Luiz Cardoso
+            [Email] => vittoria.sapatilhas@gmail.com
+            [Identity] => 23356821000160
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 3114
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Loja Virtual - melissacalcados.com
+observacoes:: Conforme proposta 1217-Criacao de Loja Virtual.
+Prazo de entrega : 15 dias
+                            [description] => Loja Virtual - melissacalcados.com
+observacoes:: Conforme proposta 1217-Criacao de Loja Virtual.
+Prazo de entrega : 15 dias
+                            [unitPrice] => 100000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 23356821000160
+            [fullName] => Fabio Luiz Cardoso
+            [email] => vittoria.sapatilhas@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/ecc2d355-cfa3-4263-8587-56209b251e80
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+20/03/2017 16:27:06
+INICIO_______________________________________________________________LOG:BEGIN:::20/03/2017 16:06<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3114
+    [amount] => 100000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 6ef5b2dfe71e4f8d9ff270c9ce59568f
+    [created_date] => 20/03/2017 16:06:24
+    [customer_name] => Fabio Cardoso
+    [customer_phone] => 1146478648
+    [customer_identity] => 23356821000160
+    [customer_email] => vittoria.sapatilhas@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 518814******4241
+    [payment_installments] => 3
+    [payment_status] => 3
+    [tid] => 10760777626E0T227J3B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/03/2017 16:27:06
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  3114
+
+POST:
+<pre>Array
+(
+    [order_number] => 3114
+    [amount] => 100000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 6ef5b2dfe71e4f8d9ff270c9ce59568f
+    [created_date] => 20/03/2017 16:06:24
+    [customer_name] => Fabio Cardoso
+    [customer_phone] => 1146478648
+    [customer_identity] => 23356821000160
+    [customer_email] => vittoria.sapatilhas@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 518814******4241
+    [payment_installments] => 3
+    [payment_status] => 3
+    [tid] => 10760777626E0T227J3B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 3114
+    [id] => 3114
+    [1] => 263
+    [userid] => 263
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-20
+    [date] => 2017-03-20
+    [4] => 2017-03-20
+    [duedate] => 2017-03-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1000.00
+    [subtotal] => 1000.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1000.00
+    [total] => 1000.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 263
+    [id] => 263
+    [uuid] => b231fe3e-8f23-480b-a8e4-74c067911761
+    [firstname] => Fabio
+    [lastname] => Luiz Cardoso
+    [fullname] => Fabio Luiz Cardoso
+    [companyname] => Vittoria Calçados
+    [email] => vittoria.sapatilhas@gmail.com
+    [address1] => Estrada de São Bento - de 1150 a 1710, 1710
+    [address2] => Jardim São Paulo
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08598465
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146478648 11948193511
+    [password] => $2y$10$tYjmldMdpp.91x8R/q3LEOzib2AsbzmvJcsts1DCQkjHz9gaCpshS
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114647864811948193511
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => cielo
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/03/2017 16:13<br>IP Address: 201.95.94.167<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11948193511
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23356821000160
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11948193511
+    [customfields3] => 23356821000160
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3114
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Loja Virtual - melissacalcados.com
+observacoes:: Conforme proposta 1217-Criacao de Loja Virtual.
+Prazo de entrega : 15 dias
+                            [Description] => Loja Virtual - melissacalcados.com
+observacoes:: Conforme proposta 1217-Criacao de Loja Virtual.
+Prazo de entrega : 15 dias
+                            [UnitPrice] => 100000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Fabio Luiz Cardoso
+            [Email] => vittoria.sapatilhas@gmail.com
+            [Identity] => 23356821000160
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 3114
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Loja Virtual - melissacalcados.com
+observacoes:: Conforme proposta 1217-Criacao de Loja Virtual.
+Prazo de entrega : 15 dias
+                            [description] => Loja Virtual - melissacalcados.com
+observacoes:: Conforme proposta 1217-Criacao de Loja Virtual.
+Prazo de entrega : 15 dias
+                            [unitPrice] => 100000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 23356821000160
+            [fullName] => Fabio Luiz Cardoso
+            [email] => vittoria.sapatilhas@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/387772f9-0c7c-4011-8532-be2ccec57faf
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+20/03/2017 16:46:13
+INICIO_______________________________________________________________LOG:BEGIN:::20/03/2017 16:13<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 6ef5b2dfe71e4f8d9ff270c9ce59568f
+    [amount] => 100000
+    [order_number] => 3114
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/03/2017 16:46:13
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  3114
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 6ef5b2dfe71e4f8d9ff270c9ce59568f
+    [amount] => 100000
+    [order_number] => 3114
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/03/2017 16:52:17
+INICIO_______________________________________________________________LOG:BEGIN:::20/03/2017 16:17<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3114
+    [amount] => 100000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 61b6e6fbaded4e398e373782092413f0
+    [created_date] => 20/03/2017 16:17:49
+    [customer_name] => Sergio Cardoso
+    [customer_phone] => 1146478648
+    [customer_identity] => 16022119812
+    [customer_email] => vittoria.sapatilhas@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 518814******4241
+    [payment_installments] => 3
+    [payment_status] => 3
+    [tid] => 10760777626E0T23FUPB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/03/2017 16:52:17
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  3114
+
+POST:
+<pre>Array
+(
+    [order_number] => 3114
+    [amount] => 100000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 61b6e6fbaded4e398e373782092413f0
+    [created_date] => 20/03/2017 16:17:49
+    [customer_name] => Sergio Cardoso
+    [customer_phone] => 1146478648
+    [customer_identity] => 16022119812
+    [customer_email] => vittoria.sapatilhas@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 518814******4241
+    [payment_installments] => 3
+    [payment_status] => 3
+    [tid] => 10760777626E0T23FUPB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 3114
+    [id] => 3114
+    [1] => 263
+    [userid] => 263
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-20
+    [date] => 2017-03-20
+    [4] => 2017-03-20
+    [duedate] => 2017-03-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1000.00
+    [subtotal] => 1000.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1000.00
+    [total] => 1000.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 263
+    [id] => 263
+    [uuid] => b231fe3e-8f23-480b-a8e4-74c067911761
+    [firstname] => Fabio
+    [lastname] => Luiz Cardoso
+    [fullname] => Fabio Luiz Cardoso
+    [companyname] => Vittoria Calçados
+    [email] => vittoria.sapatilhas@gmail.com
+    [address1] => Estrada de São Bento - de 1150 a 1710, 1710
+    [address2] => Jardim São Paulo
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08598465
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146478648 11948193511
+    [password] => $2y$10$tYjmldMdpp.91x8R/q3LEOzib2AsbzmvJcsts1DCQkjHz9gaCpshS
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114647864811948193511
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => cielo
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/03/2017 16:19<br>IP Address: 201.95.94.167<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11948193511
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23356821000160
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11948193511
+    [customfields3] => 23356821000160
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3114
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Loja Virtual - melissacalcados.com
+observacoes:: Conforme proposta 1217-Criacao de Loja Virtual.
+Prazo de entrega : 15 dias
+                            [Description] => Loja Virtual - melissacalcados.com
+observacoes:: Conforme proposta 1217-Criacao de Loja Virtual.
+Prazo de entrega : 15 dias
+                            [UnitPrice] => 100000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Fabio Luiz Cardoso
+            [Email] => vittoria.sapatilhas@gmail.com
+            [Identity] => 23356821000160
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 3114
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Loja Virtual - melissacalcados.com
+observacoes:: Conforme proposta 1217-Criacao de Loja Virtual.
+Prazo de entrega : 15 dias
+                            [description] => Loja Virtual - melissacalcados.com
+observacoes:: Conforme proposta 1217-Criacao de Loja Virtual.
+Prazo de entrega : 15 dias
+                            [unitPrice] => 100000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 23356821000160
+            [fullName] => Fabio Luiz Cardoso
+            [email] => vittoria.sapatilhas@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/0ad5c189-ed00-4e09-a88c-33d21c89c025
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+20/03/2017 16:41:26
+INICIO_______________________________________________________________LOG:BEGIN:::20/03/2017 16:26<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 61b6e6fbaded4e398e373782092413f0
+    [amount] => 100000
+    [order_number] => 3114
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/03/2017 16:41:26
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  3114
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 61b6e6fbaded4e398e373782092413f0
+    [amount] => 100000
+    [order_number] => 3114
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/03/2017 16:59:28
+INICIO_______________________________________________________________LOG:BEGIN:::20/03/2017 16:28<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3114
+    [amount] => 100000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 86766956a36c45bb91b3dc38902b7535
+    [created_date] => 20/03/2017 16:28:57
+    [customer_name] => Sergio Cardoso
+    [customer_phone] => 11948193511
+    [customer_identity] => 16022119812
+    [customer_email] => vittoria.sapatilhas@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 518814******4241
+    [payment_installments] => 3
+    [payment_status] => 3
+    [tid] => 10760777626E0T22BEHB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/03/2017 16:59:28
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  3114
+
+POST:
+<pre>Array
+(
+    [order_number] => 3114
+    [amount] => 100000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 86766956a36c45bb91b3dc38902b7535
+    [created_date] => 20/03/2017 16:28:57
+    [customer_name] => Sergio Cardoso
+    [customer_phone] => 11948193511
+    [customer_identity] => 16022119812
+    [customer_email] => vittoria.sapatilhas@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 518814******4241
+    [payment_installments] => 3
+    [payment_status] => 3
+    [tid] => 10760777626E0T22BEHB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/03/2017 16:55:33
+INICIO_______________________________________________________________LOG:BEGIN:::20/03/2017 16:33<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 86766956a36c45bb91b3dc38902b7535
+    [amount] => 100000
+    [order_number] => 3114
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/03/2017 16:55:33
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  3114
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 86766956a36c45bb91b3dc38902b7535
+    [amount] => 100000
+    [order_number] => 3114
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 3114
+    [id] => 3114
+    [1] => 263
+    [userid] => 263
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-20
+    [date] => 2017-03-20
+    [4] => 2017-03-20
+    [duedate] => 2017-03-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 900.00
+    [subtotal] => 900.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 900.00
+    [total] => 900.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 263
+    [id] => 263
+    [uuid] => b231fe3e-8f23-480b-a8e4-74c067911761
+    [firstname] => Fabio
+    [lastname] => Luiz Cardoso
+    [fullname] => Fabio Luiz Cardoso
+    [companyname] => Vittoria Calçados
+    [email] => vittoria.sapatilhas@gmail.com
+    [address1] => Estrada de São Bento - de 1150 a 1710, 1710
+    [address2] => Jardim São Paulo
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08598465
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146478648 11948193511
+    [password] => $2y$10$tYjmldMdpp.91x8R/q3LEOzib2AsbzmvJcsts1DCQkjHz9gaCpshS
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114647864811948193511
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => cielo
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/03/2017 16:34<br>IP Address: 201.95.94.167<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11948193511
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23356821000160
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11948193511
+    [customfields3] => 23356821000160
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3114
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Loja Virtual - melissacalcados.com
+observacoes:: Conforme proposta 1217-Criacao de Loja Virtual.
+Prazo de entrega : 15 dias...
+                            [Description] => Loja Virtual - melissacalcados.com
+observacoes:: Conforme proposta 1217-Criacao de Loja Virtual.
+Prazo de entrega : 15 dias
+Parcela 1/2
+                            [UnitPrice] => 90000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Fabio Luiz Cardoso
+            [Email] => vittoria.sapatilhas@gmail.com
+            [Identity] => 23356821000160
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 3114
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Loja Virtual - melissacalcados.com
+observacoes:: Conforme proposta 1217-Criacao de Loja Virtual.
+Prazo de entrega : 15 dias...
+                            [description] => Loja Virtual - melissacalcados.com
+observacoes:: Conforme proposta 1217-Criacao de Loja Virtual.
+Prazo de entrega : 15 dias
+Parcela 1/2
+                            [unitPrice] => 90000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 23356821000160
+            [fullName] => Fabio Luiz Cardoso
+            [email] => vittoria.sapatilhas@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/e494a959-ee89-464c-aea0-234703dc82c5
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+20/03/2017 16:10:38
+INICIO_______________________________________________________________LOG:BEGIN:::20/03/2017 16:38<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3114
+    [amount] => 90000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 27999e7d29024a7d95369a85a8eb0643
+    [created_date] => 20/03/2017 16:38:08
+    [customer_name] => Fabio Cardoso
+    [customer_phone] => 1146478648
+    [customer_identity] => 28803237895
+    [customer_email] => vittoria.sapatilhas@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 498453******8261
+    [payment_installments] => 3
+    [payment_status] => 2
+    [tid] => 10760777626E0T23IV3B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/03/2017 16:12:38
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3114 | Result->success | ValorPago ->900.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 3114
+    [amount] => 90000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 27999e7d29024a7d95369a85a8eb0643
+    [created_date] => 20/03/2017 16:38:08
+    [customer_name] => Fabio Cardoso
+    [customer_phone] => 1146478648
+    [customer_identity] => 28803237895
+    [customer_email] => vittoria.sapatilhas@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 498453******8261
+    [payment_installments] => 3
+    [payment_status] => 2
+    [tid] => 10760777626E0T23IV3B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/03/2017 16:06:44
+INICIO_______________________________________________________________LOG:BEGIN:::20/03/2017 16:44<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 27999e7d29024a7d95369a85a8eb0643
+    [amount] => 90000
+    [order_number] => 3114
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/03/2017 16:06:44
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 27999e7d29024a7d95369a85a8eb0643
+    [amount] => 90000
+    [order_number] => 3114
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

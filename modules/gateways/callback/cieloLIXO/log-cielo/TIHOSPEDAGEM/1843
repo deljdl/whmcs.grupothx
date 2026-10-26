@@ -1,0 +1,229 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 1843
+    [id] => 1843
+    [1] => 34
+    [userid] => 34
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-03-25
+    [date] => 2016-03-25
+    [4] => 2016-04-01
+    [duedate] => 2016-04-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1350.00
+    [subtotal] => 1350.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1350.00
+    [total] => 1350.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 34
+    [id] => 34
+    [uuid] => a04263a0-d5f1-4f4b-9be7-586e1fa49ce2
+    [firstname] => Alfredo
+    [lastname] => Alves Cavalcante
+    [fullname] => Alfredo Alves Cavalcante
+    [companyname] => Vereador Alfredinho PT
+    [email] => airyklaw@hotmail.com
+    [address1] => Viaduto Jacareí, 100
+    [address2] => 6 Andar - Sala 620 - Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01319-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => aG/34J5kcLt6SN/j/Y/KIpfDyOwHrSJl7LU7
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/07/2016 10:00<br>IP Address: 177.97.149.88<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 011.330.587-88
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 011.330.587-88
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 1843
+    [SoftDescriptor] => 1843
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Dinâmico - Criação do Novo Site - Vereador Alfredinho PT - Conforme proposta 1036
+                            [Description] => Site Dinâmico - Criação do Novo Site - Vereador Alfredinho PT - Conforme proposta 1036
+                            [UnitPrice] => 135000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Alfredo Alves Cavalcante
+            [Email] => airyklaw@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 1843
+    [softDescriptor] => 1843
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Dinâmico - Criação do Novo Site - Vereador Alfredinho PT - Conforme proposta 1036
+                            [description] => Site Dinâmico - Criação do Novo Site - Vereador Alfredinho PT - Conforme proposta 1036
+                            [unitPrice] => 135000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Alfredo Alves Cavalcante
+            [email] => airyklaw@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/41a412d8-2820-42ba-ad35-136c8b76a0a6
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>

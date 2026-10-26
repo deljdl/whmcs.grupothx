@@ -1,0 +1,279 @@
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 647
+    [clientid] => 307
+    [orderid] => 590
+    [pid] => 3
+    [regdate] => 2018-02-24
+    [name] => 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => carinamds.com.br
+    [dedicatedip] => 
+    [serverid] => 8
+    [servername] => TiHospedagem.com
+    [serverip] => 198.1.103.252
+    [serverhostname] => tihospedagem.com
+    [firstpaymentamount] => 32.97
+    [recurringamount] => 98.91
+    [paymentmethod] => deposito_ou_transferencia
+    [paymentmethodname] => Depósito ou Transferência
+    [billingcycle] => Quarterly
+    [nextduedate] => 2018-04-26
+    [status] => Active
+    [username] => carinamd
+    [password] => Oo2Z7agu45
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 10
+    [disklimit] => 10000
+    [bwusage] => 1
+    [bwlimit] => 0
+    [lastupdate] => 2018-05-03 09:00:21
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 307
+    [id] => 307
+    [uuid] => f7f22c1a-8979-423a-a502-e5082edf45da
+    [firstname] => Carina 
+    [lastname] => Mendes dos Santos
+    [fullname] => Carina  Mendes dos Santos
+    [companyname] => Carina Mendes Odonto
+    [email] => carinamds10@gmail.com
+    [address1] => Rua José Hemetério Andrade,558/303 Bloco 5
+    [address2] => Buritis
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 30493-180
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  3131410055
+    [password] => $2y$10$LBf2Wgg3U6pvB5Vh9.dLRecwGQLhlNG4llSRMUKOg9VTGBUjKaaRu
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3131410055
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 03/05/2018 10:09<br>IP Address: 177.79.4.161<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 31999191422
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05684954626
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 31999191422
+    [customfields3] => 05684954626
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s647
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 9891
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Quarterly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 05684954626
+            [FullName] => Carina  Mendes dos Santos
+            [Email] => carinamds10@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s647
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 9891
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [$id] => 6
+            [recurrentPayment] => stdClass Object
+                (
+                    [$id] => 7
+                    [endDate] => 
+                    [interval] => Quarterly
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 05684954626
+            [fullName] => Carina  Mendes dos Santos
+            [email] => carinamds10@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/725f8bde-f0b0-4816-af19-12892eb0f91a
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

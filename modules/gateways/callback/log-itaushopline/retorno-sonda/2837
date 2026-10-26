@@ -1,0 +1,395 @@
+
+POST
+<pre>Array
+(
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 2837
+    [fi] => 332837
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 2837
+    [fi] => 332837
+    [__utma] => 94375683.1809749872.1458049811.1458049811.1460123598.2
+    [WHMCSeWdrAiYR38h0] => 97f25eab8acb9915fb60be35d1c173ba
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTP_ACCEPT] => application/x-ms-application, image/jpeg, application/xaml+xml, image/gif, image/pjpeg, application/x-ms-xbap, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */*
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR
+    [HTTP_CACHE_CONTROL] => no-cache
+    [HTTP_CONNECTION] => Keep-Alive
+    [HTTP_COOKIE] => __utma=94375683.1809749872.1458049811.1458049811.1460123598.2; WHMCSeWdrAiYR38h0=97f25eab8acb9915fb60be35d1c173ba
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_USER_AGENT] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; GTB7.5; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C; .NET4.0E)
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=2837&fi=332837
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 177.25.83.146
+    [REMOTE_PORT] => 50565
+    [REQUEST_METHOD] => GET
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=2837&fi=332837
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 80
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [UNIQUE_ID] => WHj48qKQQaAAADK8XhEAAAAN
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1484323058
+    [argv] => Array
+        (
+            [0] => i=2837&fi=332837
+        )
+
+    [argc] => 1
+)
+</pre>
+
+POST
+<pre>Array
+(
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 2837
+    [fi] => 332837
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 2837
+    [fi] => 332837
+    [__utma] => 94375683.1809749872.1458049811.1458049811.1460123598.2
+    [WHMCSeWdrAiYR38h0] => 97f25eab8acb9915fb60be35d1c173ba
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTP_ACCEPT] => application/x-ms-application, image/jpeg, application/xaml+xml, image/gif, image/pjpeg, application/x-ms-xbap, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */*
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR
+    [HTTP_CACHE_CONTROL] => no-cache
+    [HTTP_CONNECTION] => Keep-Alive
+    [HTTP_COOKIE] => __utma=94375683.1809749872.1458049811.1458049811.1460123598.2; WHMCSeWdrAiYR38h0=97f25eab8acb9915fb60be35d1c173ba
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_USER_AGENT] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; GTB7.5; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C; .NET4.0E)
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=2837&fi=332837
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 177.25.83.146
+    [REMOTE_PORT] => 50575
+    [REQUEST_METHOD] => GET
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=2837&fi=332837
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 80
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [UNIQUE_ID] => WHj4-6KQQaAAADK8XkwAAAAF
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1484323071
+    [argv] => Array
+        (
+            [0] => i=2837&fi=332837
+        )
+
+    [argc] => 1
+)
+</pre>
+
+POST
+<pre>Array
+(
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 2837
+    [fi] => 332837
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 2837
+    [fi] => 332837
+    [__utma] => 94375683.1809749872.1458049811.1458049811.1460123598.2
+    [WHMCSeWdrAiYR38h0] => 97f25eab8acb9915fb60be35d1c173ba
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTP_ACCEPT] => application/x-ms-application, image/jpeg, application/xaml+xml, image/gif, image/pjpeg, application/x-ms-xbap, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */*
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR
+    [HTTP_CACHE_CONTROL] => no-cache
+    [HTTP_CONNECTION] => Keep-Alive
+    [HTTP_COOKIE] => __utma=94375683.1809749872.1458049811.1458049811.1460123598.2; WHMCSeWdrAiYR38h0=97f25eab8acb9915fb60be35d1c173ba
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_USER_AGENT] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; GTB7.5; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C; .NET4.0E)
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=2837&fi=332837
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 177.25.83.146
+    [REMOTE_PORT] => 50580
+    [REQUEST_METHOD] => GET
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=2837&fi=332837
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 80
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [UNIQUE_ID] => WHj5A6KQQaAAADK8XnYAAAAS
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1484323075
+    [argv] => Array
+        (
+            [0] => i=2837&fi=332837
+        )
+
+    [argc] => 1
+)
+</pre>
+
+POST
+<pre>Array
+(
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 2837
+    [fi] => 332837
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 2837
+    [fi] => 332837
+    [__utma] => 94375683.1809749872.1458049811.1458049811.1460123598.2
+    [WHMCSeWdrAiYR38h0] => 97f25eab8acb9915fb60be35d1c173ba
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTP_ACCEPT] => application/x-ms-application, image/jpeg, application/xaml+xml, image/gif, image/pjpeg, application/x-ms-xbap, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */*
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR
+    [HTTP_CACHE_CONTROL] => no-cache
+    [HTTP_CONNECTION] => Keep-Alive
+    [HTTP_COOKIE] => __utma=94375683.1809749872.1458049811.1458049811.1460123598.2; WHMCSeWdrAiYR38h0=97f25eab8acb9915fb60be35d1c173ba
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_USER_AGENT] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; GTB7.5; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C; .NET4.0E)
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=2837&fi=332837
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 177.25.83.146
+    [REMOTE_PORT] => 50585
+    [REQUEST_METHOD] => GET
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=2837&fi=332837
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 80
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [UNIQUE_ID] => WHj5C6KQQaAAADK8XqgAAAAX
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1484323083
+    [argv] => Array
+        (
+            [0] => i=2837&fi=332837
+        )
+
+    [argc] => 1
+)
+</pre>
+
+POST
+<pre>Array
+(
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 2837
+    [fi] => 332837
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 2837
+    [fi] => 332837
+    [__utma] => 94375683.1809749872.1458049811.1458049811.1460123598.2
+    [WHMCSeWdrAiYR38h0] => 97f25eab8acb9915fb60be35d1c173ba
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTP_ACCEPT] => application/x-ms-application, image/jpeg, application/xaml+xml, image/gif, image/pjpeg, application/x-ms-xbap, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */*
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR
+    [HTTP_CACHE_CONTROL] => no-cache
+    [HTTP_CONNECTION] => Keep-Alive
+    [HTTP_COOKIE] => __utma=94375683.1809749872.1458049811.1458049811.1460123598.2; WHMCSeWdrAiYR38h0=97f25eab8acb9915fb60be35d1c173ba
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_USER_AGENT] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; GTB7.5; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C; .NET4.0E)
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=2837&fi=332837
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 177.25.83.146
+    [REMOTE_PORT] => 50590
+    [REQUEST_METHOD] => GET
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=2837&fi=332837
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 80
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [UNIQUE_ID] => WHj5EaKQQaAAADK8XwEAAAAA
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1484323089
+    [argv] => Array
+        (
+            [0] => i=2837&fi=332837
+        )
+
+    [argc] => 1
+)
+</pre>
+
+POST
+<pre>Array
+(
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 2837
+    [fi] => 832837
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 2837
+    [fi] => 832837
+    [invoice-2813] => 2813
+    [invoice-2763] => 2763
+    [invoice-2800] => 2800
+    [invoice-2826] => 2826
+    [WHMCSUser] => 231:094de1b094b1aa5fdd45cd7f3d8a7e732ccea33d
+    [WHMCSeWdrAiYR38h0] => c2b9642e4fd07380fb74048fdbf1c189
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_COOKIE] => invoice-2813=2813; invoice-2763=2763; invoice-2800=2800; invoice-2826=2826; WHMCSUser=231%3A094de1b094b1aa5fdd45cd7f3d8a7e732ccea33d; WHMCSeWdrAiYR38h0=c2b9642e4fd07380fb74048fdbf1c189
+    [HTTP_DNT] => 1
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=2837&fi=832837
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 177.158.76.235
+    [REMOTE_PORT] => 62765
+    [REQUEST_METHOD] => GET
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=2837&fi=832837
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 80
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [UNIQUE_ID] => WHj5R6KQQaAAADK8YHcAAAAW
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1484323143
+    [argv] => Array
+        (
+            [0] => i=2837&fi=832837
+        )
+
+    [argc] => 1
+)
+</pre>

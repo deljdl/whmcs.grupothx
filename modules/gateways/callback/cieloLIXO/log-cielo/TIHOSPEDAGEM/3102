@@ -1,0 +1,2805 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3102
+    [id] => 3102
+    [1] => 83
+    [userid] => 83
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-17
+    [date] => 2017-03-17
+    [4] => 2017-03-17
+    [duedate] => 2017-03-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 649.00
+    [subtotal] => 649.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 649.00
+    [total] => 649.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 83
+    [id] => 83
+    [uuid] => 79fe7fad-fbf2-49f1-aad0-ce871920ed29
+    [firstname] => Michel
+    [lastname] => Costa
+    [fullname] => Michel Costa
+    [companyname] => MICHEL COSTA ME
+    [email] => drmichelcosta@hotmail.com
+    [address1] => Rua Leopoldo Couto de Magalhães Junior, 396
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 30784569, 36242001
+    [password] => d3e1795ad751bb44c70a0813a85dbc95:S)PFs
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3078456936242001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => boleto
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 354.16
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/03/2017 22:32<br>IP Address: 189.54.139.155<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995016683
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 008.279.944/0001-51
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995016683
+    [customfields3] => 008.279.944/0001-51
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3102
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [Description] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 008279944000151
+            [FullName] => Michel Costa
+            [Email] => drmichelcosta@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Customer.Identity] => Array
+                (
+                    [0] => [Customer.Identity] deve conter no mínimo 11 e no máximo 14 caracteres.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3102
+    [id] => 3102
+    [1] => 83
+    [userid] => 83
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-17
+    [date] => 2017-03-17
+    [4] => 2017-03-17
+    [duedate] => 2017-03-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 649.00
+    [subtotal] => 649.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 649.00
+    [total] => 649.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 83
+    [id] => 83
+    [uuid] => 79fe7fad-fbf2-49f1-aad0-ce871920ed29
+    [firstname] => Michel
+    [lastname] => Costa
+    [fullname] => Michel Costa
+    [companyname] => MICHEL COSTA ME
+    [email] => drmichelcosta@hotmail.com
+    [address1] => Rua Leopoldo Couto de Magalhães Junior, 396
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 30784569, 36242001
+    [password] => d3e1795ad751bb44c70a0813a85dbc95:S)PFs
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3078456936242001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => boleto
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 354.16
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/03/2017 22:36<br>IP Address: 191.32.170.214<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995016683
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 008.279.944/0001-51
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995016683
+    [customfields3] => 008.279.944/0001-51
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3102
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [Description] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 008279944000151
+            [FullName] => Michel Costa
+            [Email] => drmichelcosta@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Customer.Identity] => Array
+                (
+                    [0] => [Customer.Identity] deve conter no mínimo 11 e no máximo 14 caracteres.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3102
+    [id] => 3102
+    [1] => 83
+    [userid] => 83
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-17
+    [date] => 2017-03-17
+    [4] => 2017-03-17
+    [duedate] => 2017-03-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 649.00
+    [subtotal] => 649.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 649.00
+    [total] => 649.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 83
+    [id] => 83
+    [uuid] => 79fe7fad-fbf2-49f1-aad0-ce871920ed29
+    [firstname] => Michel
+    [lastname] => Costa
+    [fullname] => Michel Costa
+    [companyname] => MICHEL COSTA ME
+    [email] => drmichelcosta@hotmail.com
+    [address1] => Rua Leopoldo Couto de Magalhães Junior, 396
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 30784569, 36242001
+    [password] => d3e1795ad751bb44c70a0813a85dbc95:S)PFs
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3078456936242001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => boleto
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 354.16
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/03/2017 22:36<br>IP Address: 191.32.170.214<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995016683
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 008.279.944/0001-51
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995016683
+    [customfields3] => 008.279.944/0001-51
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3102
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [Description] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 008279944000151
+            [FullName] => Michel Costa
+            [Email] => drmichelcosta@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Customer.Identity] => Array
+                (
+                    [0] => [Customer.Identity] deve conter no mínimo 11 e no máximo 14 caracteres.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3102
+    [id] => 3102
+    [1] => 83
+    [userid] => 83
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-17
+    [date] => 2017-03-17
+    [4] => 2017-03-17
+    [duedate] => 2017-03-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 649.00
+    [subtotal] => 649.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 649.00
+    [total] => 649.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 83
+    [id] => 83
+    [uuid] => 79fe7fad-fbf2-49f1-aad0-ce871920ed29
+    [firstname] => Michel
+    [lastname] => Costa
+    [fullname] => Michel Costa
+    [companyname] => MICHEL COSTA ME
+    [email] => drmichelcosta@hotmail.com
+    [address1] => Rua Leopoldo Couto de Magalhães Junior, 396
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 30784569, 36242001
+    [password] => d3e1795ad751bb44c70a0813a85dbc95:S)PFs
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3078456936242001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => boleto
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 354.16
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/03/2017 22:39<br>IP Address: 191.32.170.214<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995016683
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 008.279.944/0001-51
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995016683
+    [customfields3] => 008.279.944/0001-51
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3102
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [Description] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 008279944000151
+            [FullName] => Michel Costa
+            [Email] => drmichelcosta@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Customer.Identity] => Array
+                (
+                    [0] => [Customer.Identity] deve conter no mínimo 11 e no máximo 14 caracteres.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3102
+    [id] => 3102
+    [1] => 83
+    [userid] => 83
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-17
+    [date] => 2017-03-17
+    [4] => 2017-03-17
+    [duedate] => 2017-03-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 649.00
+    [subtotal] => 649.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 649.00
+    [total] => 649.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 83
+    [id] => 83
+    [uuid] => 79fe7fad-fbf2-49f1-aad0-ce871920ed29
+    [firstname] => Michel
+    [lastname] => Costa
+    [fullname] => Michel Costa
+    [companyname] => MICHEL COSTA ME
+    [email] => drmichelcosta@hotmail.com
+    [address1] => Rua Leopoldo Couto de Magalhães Junior, 396
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 30784569, 36242001
+    [password] => d3e1795ad751bb44c70a0813a85dbc95:S)PFs
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3078456936242001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => boleto
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 354.16
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/03/2017 22:40<br>IP Address: 191.32.170.214<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995016683
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 008.279.944/0001-51
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995016683
+    [customfields3] => 008.279.944/0001-51
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3102
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [Description] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 008279944000151
+            [FullName] => Michel Costa
+            [Email] => drmichelcosta@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Customer.Identity] => Array
+                (
+                    [0] => [Customer.Identity] deve conter no mínimo 11 e no máximo 14 caracteres.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3102
+    [id] => 3102
+    [1] => 83
+    [userid] => 83
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-17
+    [date] => 2017-03-17
+    [4] => 2017-03-17
+    [duedate] => 2017-03-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 649.00
+    [subtotal] => 649.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 649.00
+    [total] => 649.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 83
+    [id] => 83
+    [uuid] => 79fe7fad-fbf2-49f1-aad0-ce871920ed29
+    [firstname] => Michel
+    [lastname] => Costa
+    [fullname] => Michel Costa
+    [companyname] => MICHEL COSTA ME
+    [email] => drmichelcosta@hotmail.com
+    [address1] => Rua Leopoldo Couto de Magalhães Junior, 396
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 30784569, 36242001
+    [password] => d3e1795ad751bb44c70a0813a85dbc95:S)PFs
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3078456936242001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => boleto
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 354.16
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/03/2017 22:42<br>IP Address: 191.32.170.214<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995016683
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 008.279.944/0001-51
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995016683
+    [customfields3] => 008.279.944/0001-51
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3102
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [Description] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 008279944000151
+            [FullName] => Michel Costa
+            [Email] => drmichelcosta@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Customer.Identity] => Array
+                (
+                    [0] => [Customer.Identity] deve conter no mínimo 11 e no máximo 14 caracteres.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3102
+    [id] => 3102
+    [1] => 83
+    [userid] => 83
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-17
+    [date] => 2017-03-17
+    [4] => 2017-03-17
+    [duedate] => 2017-03-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 649.00
+    [subtotal] => 649.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 649.00
+    [total] => 649.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 83
+    [id] => 83
+    [uuid] => 79fe7fad-fbf2-49f1-aad0-ce871920ed29
+    [firstname] => Michel
+    [lastname] => Costa
+    [fullname] => Michel Costa
+    [companyname] => MICHEL COSTA ME
+    [email] => drmichelcosta@hotmail.com
+    [address1] => Rua Leopoldo Couto de Magalhães Junior, 396
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 30784569, 36242001
+    [password] => d3e1795ad751bb44c70a0813a85dbc95:S)PFs
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3078456936242001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => boleto
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 354.16
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/03/2017 22:43<br>IP Address: 191.32.170.214<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995016683
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 008.279.944/0001-51
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995016683
+    [customfields3] => 008.279.944/0001-51
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3102
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [Description] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Michel Costa
+            [Email] => drmichelcosta@hotmail.com
+            [Identity] => 008279944000151
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Customer.Identity] => Array
+                (
+                    [0] => [Customer.Identity] deve conter no mínimo 11 e no máximo 14 caracteres.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3102
+    [id] => 3102
+    [1] => 83
+    [userid] => 83
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-17
+    [date] => 2017-03-17
+    [4] => 2017-03-17
+    [duedate] => 2017-03-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 649.00
+    [subtotal] => 649.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 649.00
+    [total] => 649.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 83
+    [id] => 83
+    [uuid] => 79fe7fad-fbf2-49f1-aad0-ce871920ed29
+    [firstname] => Michel
+    [lastname] => Costa
+    [fullname] => Michel Costa
+    [companyname] => MICHEL COSTA ME
+    [email] => drmichelcosta@hotmail.com
+    [address1] => Rua Leopoldo Couto de Magalhães Junior, 396
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 30784569, 36242001
+    [password] => d3e1795ad751bb44c70a0813a85dbc95:S)PFs
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3078456936242001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 354.16
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/03/2017 22:44<br>IP Address: 191.32.170.214<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995016683
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 08.279.944/0001-51
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995016683
+    [customfields3] => 08.279.944/0001-51
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3102
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [Description] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Michel Costa
+            [Email] => drmichelcosta@hotmail.com
+            [Identity] => 08279944000151
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 3102
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [description] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 08279944000151
+            [fullName] => Michel Costa
+            [email] => drmichelcosta@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/f5ed0bca-e258-486f-955c-52ca5df0586f
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3102
+    [id] => 3102
+    [1] => 83
+    [userid] => 83
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-17
+    [date] => 2017-03-17
+    [4] => 2017-03-17
+    [duedate] => 2017-03-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 649.00
+    [subtotal] => 649.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 649.00
+    [total] => 649.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 83
+    [id] => 83
+    [uuid] => 79fe7fad-fbf2-49f1-aad0-ce871920ed29
+    [firstname] => Michel
+    [lastname] => Costa
+    [fullname] => Michel Costa
+    [companyname] => MICHEL COSTA ME
+    [email] => drmichelcosta@hotmail.com
+    [address1] => Rua Leopoldo Couto de Magalhães Junior, 396
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 30784569, 36242001
+    [password] => d3e1795ad751bb44c70a0813a85dbc95:S)PFs
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3078456936242001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 354.16
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/03/2017 22:46<br>IP Address: 191.32.170.214<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995016683
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 08.279.944/0001-51
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995016683
+    [customfields3] => 08.279.944/0001-51
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3102
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [Description] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Michel Costa
+            [Email] => drmichelcosta@hotmail.com
+            [Identity] => 08279944000151
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 3102
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [description] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 08279944000151
+            [fullName] => Michel Costa
+            [email] => drmichelcosta@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/05dcd815-20d7-4fac-a970-3ac7f84c5f4f
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3102
+    [id] => 3102
+    [1] => 83
+    [userid] => 83
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-17
+    [date] => 2017-03-17
+    [4] => 2017-03-17
+    [duedate] => 2017-03-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 649.00
+    [subtotal] => 649.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 649.00
+    [total] => 649.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 83
+    [id] => 83
+    [uuid] => 79fe7fad-fbf2-49f1-aad0-ce871920ed29
+    [firstname] => Michel
+    [lastname] => Costa
+    [fullname] => Michel Costa
+    [companyname] => MICHEL COSTA ME
+    [email] => drmichelcosta@hotmail.com
+    [address1] => Rua Leopoldo Couto de Magalhães Junior, 396
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 30784569, 36242001
+    [password] => d3e1795ad751bb44c70a0813a85dbc95:S)PFs
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3078456936242001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 354.16
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/03/2017 22:51<br>IP Address: 191.32.170.214<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995016683
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 08.279.944/0001-51
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995016683
+    [customfields3] => 08.279.944/0001-51
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3102
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [Description] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Michel Costa
+            [Email] => drmichelcosta@hotmail.com
+            [Identity] => 08279944000151
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 3102
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [description] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 08279944000151
+            [fullName] => Michel Costa
+            [email] => drmichelcosta@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/0fb6cfd1-702c-490f-b59b-d56616b643fb
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3102
+    [id] => 3102
+    [1] => 83
+    [userid] => 83
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-17
+    [date] => 2017-03-17
+    [4] => 2017-03-17
+    [duedate] => 2017-03-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 649.00
+    [subtotal] => 649.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 649.00
+    [total] => 649.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 83
+    [id] => 83
+    [uuid] => 79fe7fad-fbf2-49f1-aad0-ce871920ed29
+    [firstname] => Michel
+    [lastname] => Costa
+    [fullname] => Michel Costa
+    [companyname] => MICHEL COSTA ME
+    [email] => drmichelcosta@hotmail.com
+    [address1] => Rua Leopoldo Couto de Magalhães Junior, 396
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 30784569, 36242001
+    [password] => d3e1795ad751bb44c70a0813a85dbc95:S)PFs
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3078456936242001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 354.16
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/03/2017 23:24<br>IP Address: 191.32.170.214<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995016683
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 08.279.944/0001-51
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995016683
+    [customfields3] => 08.279.944/0001-51
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3102
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [Description] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Michel Costa
+            [Email] => drmichelcosta@hotmail.com
+            [Identity] => 08279944000151
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 3102
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [description] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 08279944000151
+            [fullName] => Michel Costa
+            [email] => drmichelcosta@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/4aede62c-fa97-4b7b-8c98-7028ac8ed53b
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3102
+    [id] => 3102
+    [1] => 83
+    [userid] => 83
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-17
+    [date] => 2017-03-17
+    [4] => 2017-03-17
+    [duedate] => 2017-03-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 649.00
+    [subtotal] => 649.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 649.00
+    [total] => 649.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 83
+    [id] => 83
+    [uuid] => 79fe7fad-fbf2-49f1-aad0-ce871920ed29
+    [firstname] => Michel
+    [lastname] => Costa
+    [fullname] => Michel Costa
+    [companyname] => MICHEL COSTA ME
+    [email] => drmichelcosta@hotmail.com
+    [address1] => Rua Leopoldo Couto de Magalhães Junior, 396
+    [address2] => Itaim Bibi
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04542-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 30784569, 36242001
+    [password] => d3e1795ad751bb44c70a0813a85dbc95:S)PFs
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3078456936242001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 354.16
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/03/2017 23:31<br>IP Address: 191.32.170.214<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995016683
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 08.279.944/0001-51
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995016683
+    [customfields3] => 08.279.944/0001-51
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3102
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [Description] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Michel Costa
+            [Email] => drmichelcosta@hotmail.com
+            [Identity] => 08279944000151
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 3102
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [description] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 08279944000151
+            [fullName] => Michel Costa
+            [email] => drmichelcosta@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/18d39333-167f-45d6-9f20-04af5e4d3280
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3102
+    [id] => 3102
+    [1] => 83
+    [userid] => 83
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-17
+    [date] => 2017-03-17
+    [4] => 2017-03-17
+    [duedate] => 2017-03-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 649.00
+    [subtotal] => 649.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 649.00
+    [total] => 649.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 83
+    [id] => 83
+    [uuid] => 79fe7fad-fbf2-49f1-aad0-ce871920ed29
+    [firstname] => Michel
+    [lastname] => Costa
+    [fullname] => Michel Costa
+    [companyname] => MICHEL COSTA ME
+    [email] => drmichelcosta@hotmail.com
+    [address1] => Rua Leopoldo Couto de Magalhães Junior, 396
+    [address2] => Itaim Bibi
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04542-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 30784569, 36242001
+    [password] => d3e1795ad751bb44c70a0813a85dbc95:S)PFs
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3078456936242001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 354.16
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 18/03/2017 10:18<br>IP Address: 189.54.139.155<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995016683
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 08.279.944/0001-51
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995016683
+    [customfields3] => 08.279.944/0001-51
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3102
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [Description] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Michel Costa
+            [Email] => drmichelcosta@hotmail.com
+            [Identity] => 08279944000151
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 3102
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [description] => Site Basico - espacoprint.com.br
+observacoes:: Sera concedida a revitalizacao do logotipo
+Prazo de entrega: 10 dias
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 08279944000151
+            [fullName] => Michel Costa
+            [email] => drmichelcosta@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/ba5158f0-f440-42a2-ac4a-b00a974f6809
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+18/03/2017 10:11:24
+INICIO_______________________________________________________________LOG:BEGIN:::18/03/2017 10:24<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3102
+    [amount] => 64900
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 19c74294cbec4058b4d1a2c9074aff58
+    [created_date] => 18/03/2017 10:24:07
+    [customer_name] => Michel Costa
+    [customer_phone] => 11995016683
+    [customer_identity] => 08279944000151
+    [customer_email] => drmichelcosta@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 516220******9270
+    [payment_installments] => 3
+    [payment_status] => 2
+    [tid] => 10760777626DV1CDSFRB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+18/03/2017 10:13:24
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3102 | Result->success | ValorPago ->649.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 3102
+    [amount] => 64900
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 19c74294cbec4058b4d1a2c9074aff58
+    [created_date] => 18/03/2017 10:24:07
+    [customer_name] => Michel Costa
+    [customer_phone] => 11995016683
+    [customer_identity] => 08279944000151
+    [customer_email] => drmichelcosta@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 516220******9270
+    [payment_installments] => 3
+    [payment_status] => 2
+    [tid] => 10760777626DV1CDSFRB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+18/03/2017 10:37:33
+INICIO_______________________________________________________________LOG:BEGIN:::18/03/2017 10:33<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 19c74294cbec4058b4d1a2c9074aff58
+    [amount] => 64900
+    [order_number] => 3102
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+18/03/2017 10:37:33
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 19c74294cbec4058b4d1a2c9074aff58
+    [amount] => 64900
+    [order_number] => 3102
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

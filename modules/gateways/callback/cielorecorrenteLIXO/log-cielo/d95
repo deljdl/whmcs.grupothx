@@ -1,0 +1,474 @@
+
+Dados Dominio
+<pre>Array
+(
+    [id] => 95
+    [userid] => 247
+    [orderid] => 423
+    [regtype] => Register
+    [domainname] => thxteste.com
+    [registrar] => 
+    [regperiod] => 1
+    [firstpaymentamount] => 1.00
+    [recurringamount] => 1.00
+    [paymentmethod] => cielorecorrente
+    [paymentmethodname] => Cielo Pagamento Recorrente
+    [regdate] => 2017-02-13
+    [expirydate] => 0000-00-00
+    [nextduedate] => 2017-02-13
+    [status] => Active
+    [subscriptionid] => 
+    [promoid] => 0
+    [dnsmanagement] => 0
+    [emailforwarding] => 0
+    [idprotection] => 0
+    [donotrenew] => 0
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 247
+    [id] => 247
+    [uuid] => 496b6f08-59fa-4b72-967a-1c9234936ec5
+    [firstname] => Jardel
+    [lastname] => Jacomini
+    [fullname] => Jardel Jacomini
+    [companyname] => Grupo THX
+    [email] => deljdl@gmail.com
+    [address1] => Rua Milton Ferreira Franco
+    [address2] => Parque Rodrigo Barreto
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417-160
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146550330
+    [password] => $2y$10$a76gCwQYd4Eg7h1/3QWVtubB1PEo4Gv/1wHyBSQVxi2183BfucbES
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146550330
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 7.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 23:46<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11985691184
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29466511858
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11985691184
+    [customfields3] => 29466511858
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => d95
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Manutencao de Dominio - thxteste.com
+                            [Description] => Manutencao de Dominio - thxteste.com
+                            [UnitPrice] => 100
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Annual
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 29466511858
+            [FullName] => Jardel Jacomini
+            [Email] => deljdl@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => d95
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Manutencao de Dominio - thxteste.com
+                            [description] => Manutencao de Dominio - thxteste.com
+                            [unitPrice] => 100
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => Annual
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 29466511858
+            [fullName] => Jardel Jacomini
+            [email] => deljdl@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/3481a91c-2f72-4c6b-860b-96d238b2f53a
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Dominio
+<pre>Array
+(
+    [id] => 95
+    [userid] => 247
+    [orderid] => 423
+    [regtype] => Register
+    [domainname] => thxteste.com
+    [registrar] => email
+    [regperiod] => 1
+    [firstpaymentamount] => 1.00
+    [recurringamount] => 1.00
+    [paymentmethod] => cielorecorrente
+    [paymentmethodname] => Cielo Pagamento Recorrente
+    [regdate] => 2017-02-13
+    [expirydate] => 0000-00-00
+    [nextduedate] => 2017-02-13
+    [status] => Active
+    [subscriptionid] => 
+    [promoid] => 0
+    [dnsmanagement] => 0
+    [emailforwarding] => 0
+    [idprotection] => 0
+    [donotrenew] => 0
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 247
+    [id] => 247
+    [uuid] => 496b6f08-59fa-4b72-967a-1c9234936ec5
+    [firstname] => Jardel
+    [lastname] => Jacomini
+    [fullname] => Jardel Jacomini
+    [companyname] => Grupo THX
+    [email] => deljdl@gmail.com
+    [address1] => Rua Milton Ferreira Franco
+    [address2] => Parque Rodrigo Barreto
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417-160
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146550330
+    [password] => $2y$10$a76gCwQYd4Eg7h1/3QWVtubB1PEo4Gv/1wHyBSQVxi2183BfucbES
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146550330
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 7.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/02/2017 01:40<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11985691184
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29466511858
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11985691184
+    [customfields3] => 29466511858
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => d95
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Manutencao de Dominio - thxteste.com
+                            [Description] => Manutencao de Dominio - thxteste.com
+                            [UnitPrice] => 100
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Annual
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 29466511858
+            [FullName] => Jardel Jacomini
+            [Email] => deljdl@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => d95
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Manutencao de Dominio - thxteste.com
+                            [description] => Manutencao de Dominio - thxteste.com
+                            [unitPrice] => 100
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => Annual
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 29466511858
+            [fullName] => Jardel Jacomini
+            [email] => deljdl@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/5f6a49d7-9f7d-4ae2-a693-f8718b26fcdf
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

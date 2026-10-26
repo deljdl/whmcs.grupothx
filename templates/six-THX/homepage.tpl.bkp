@@ -1,0 +1,238 @@
+<div class="itens-home">
+	<div class="panel produto-home-x" onClick="location='https://grupothx.com/thx/hospedagem-de-sites/planos'">
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-8">
+					<img class="img-responsive" src="imagens/thx/hospedagem-sites.jpg" />
+				</div>
+				<div class="col-md-4">
+					<h3 class="text-info" style="margin-top:0px">Hospedagem de Sites</h3>
+					<p>
+						Datacenters com equipamentos de ponta próprios e padrões internacionais de redundância de energia, conexão e proteção.<br />
+						Garantindo o melhor custo benefício para seu negócio online e diversas outras vantagens.<br />
+						Garantia de funcionamento estabelecido em contrato de acordo com a legislação brasileira de 99,6% para seu site.<br />
+						
+					</p>
+					<div style="text-align:center">
+						<strong class="text-center">A partir de</strong>
+						<br>
+						<div class="lead text-center">
+							R$ 32.97 Mensal
+						</div>
+						<a href="https://grupothx.com/thx/hospedagem-de-sites/planos" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Contratar </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel produto-home-x" onClick="location='https://grupothx.com/thx/email-marketing'">
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-4">
+					<h3 class="text-info" style="margin-top:0px">E-Mail Marketing</h3>
+					<p>
+						Se precisa enviar milhares de emails, mas não sabe fazer isso depressa e sem caírem no spam, cuidamos de tudo para que você tenha a melhor eficácia de entrega, sempre ao abrigo das normas dos serviços de correio (ISP). <br />
+						E sem peso no seu site ou infra-estrutura!
+					</p>
+					<div style="text-align:center">
+						<strong class="text-center">A partir de</strong>
+						<br>
+						<div class="lead text-center">
+							R$ 9.99 Mensal
+						</div>
+						<a href="https://grupothx.com/thx/email-marketing" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Contratar </a>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<img class="img-responsive" src="imagens/thx/email-marketing.jpg" />
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel produto-home-x" onClick="location='https://grupothx.com/thx/gestor-de-conteudo-para-sites'">
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-8">
+					<img class="img-responsive" src="imagens/thx/gestor-de-conteudo.jpg" />
+				</div>
+				<div class="col-md-4">
+					<h3 class="text-info" style="margin-top:0px">Gestor de Conteúdo</h3>
+					<p>
+						Altere o conteúdo de seu site estejam onde estiverem. Você na praia, no campo, em casa e seu site em qualquer servidor à sua escolha.<br />
+						Nosso sistema pode gerenciar seu site, sistema ou seja qual for sua ferramenta WEB intuitivamente. Esteja onde estiver.
+						Conheça nosso Gestor de Conteúdo X-Painel® Rental Code
+					</p>
+					<div style="text-align:center">
+						<strong class="text-center">A partir de</strong>
+						<br>
+						<div class="lead text-center">
+							R$ 15.00 Mensal
+						</div>
+						<a href="https://grupothx.com/thx/gestor-de-conteudo-para-sites" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Contratar </a>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel produto-home-x" onClick="location='https://grupothx.com/thx/atendimento-on-line-para-seu-site'">
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-4">
+					<h3 class="text-info" style="margin-top:0px">Atendimento OnLine</h3>
+					<p>
+						O Atendimento Online é um sistema de atendimento online (chat) que visa aproximar o cliente que está navegando em seu site, e o atendente da sua organização.<br />
+						Você o instala em seu site através do código HTML que é disponibilizado e pronto! ​
+						Basta os atendentes ficarem online no sistema que os seus clientes poderão conversar com eles em tempo real.
+					</p>
+					<div style="text-align:center">
+						<strong class="text-center">A partir de</strong>
+						<br>
+						<div class="lead text-center">
+							R$ 50.00
+						</div>
+						<a href="https://grupothx.com/thx/atendimento-on-line-para-seu-site" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Contratar </a>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<img class="img-responsive" src="imagens/thx/atendimento-online.jpg" />
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel produto-home-x" onClick="location='https://grupothx.com/thx/links-patrocinados'">
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-8">
+					<img class="img-responsive" src="imagens/thx/links-patrocinados.jpg" />
+				</div>
+				<div class="col-md-4">
+					<h3 class="text-info" style="margin-top:0px">Links Patrocinados</h3>
+					<p>
+						Se você já fez uma pesquisa sobre métodos para se divulgar um website na internet, é provável que tenha ouvido falar sobre o Google AdWords, Bing ADS, Facebook ADS ou qualquer outro serviço de anuncio pago por cliques.<br />
+						E talvez já se tenha perguntado: afinal, o que é ?<br />
+					</p>
+					<div style="text-align:center">
+						<strong class="text-center">A partir de</strong>
+						<br>
+						<div class="lead text-center">
+							R$ 399,00
+						</div>
+						<a href="https://grupothx.com/thx/links-patrocinados" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Contratar</a>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel produto-home-x" onClick="location='https://grupothx.com/thx/criacao-de-sites'">
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-4">	
+					<h3 class="text-info" style="margin-top:0px">Criação de sites</h3>
+					<p>
+						Se necessita de Criação de Site para a sua empresa, fácil de gerir, que possa ser atualizado no momento, sem que para isso esteja dependente de um profissional em Criação de Sites e que, além de tudo isto, seja modular e cresça de acordo com as suas necessidades, seus problemas estão resolvidos!<br />
+						​Conosco é possível parametrizar os conteúdos das várias páginas que compõem o seu site sem recorrer a um profissional especializado e dispendioso.<br />
+					</p>
+					<div style="text-align:center">
+						<strong class="text-center">A partir de</strong>
+						<br>
+						<div class="lead text-center">
+							R$ 749.00
+						</div>
+						<a href="https://grupothx.com/thx/criacao-de-sites" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Contratar</a>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<img class="img-responsive" src="https://tiwebdesign.com.br/anuncios" />
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel produto-home-x" onClick="location='https://grupothx.com/thx/criacao-de-lojas-virtuais'">
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-8">
+					<img class="img-responsive" src="https://tiwebdesign.com.br/anuncios/lojas-virtuais" />
+				</div>
+				<div class="col-md-4">
+					<h3 class="text-info" style="margin-top:0px">Lojas Virtuais</h3>
+					<p>
+						Lojas Virtuais Profissionais com várias formas de pagamento disponíveis, cálculo de frete automatico e endereços completados automaticamente com nossa base de CEP's super atualizada.
+					</p>
+					<div style="text-align:center">
+						<strong class="text-center">A partir de</strong>
+						<br>
+						<div class="lead text-center">
+							R$ 1799,00
+						</div>
+						<a href="https://grupothx.com/thx/criacao-de-lojas-virtuais" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Contratar</a>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel produto-home-x" onClick="location='https://grupothx.com/thx/certificado-digital'">
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-4">
+					<h3 class="text-info" style="margin-top:0px">Certificado Digital</h3>
+					<p>
+						Ao realizar uma compra online, alguns consumidores já adquiriram o hábito de checar se na barra de endereço do navegador aparece o ícone do cadeado e a barra fica verde, indicando o uso do “HTTPS”. <br />
+						A letra “s” tem a ver com segurança e indica que a página possui Certificado SSL e criptografa os dados que serão digitados pelo usuário – item considerado primordial para a proteção das informações.<br />
+					</p>
+					<div style="text-align:center">
+						<strong class="text-center">A partir de</strong>
+						<br>
+						<div class="lead text-center">
+							R$ 50.00 Anual
+						</div>
+						<a href="https://grupothx.com/thx/certificado-digital" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Contratar</a>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<img class="img-responsive" src="imagens/thx/certificado-digital.jpg" />
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="panel">
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<a target="_blank" href="https://grupothx.com.br">
+						<img src="https://grupothx.com.br/img/logo.png" />
+					</a>
+					<br /><br /><br />
+					<h3 class="text-info" style="margin-top:0px">Conheça o Grupo THX</h3>
+					<br /><br /><br />
+				</div>
+				<div class="col-md-4 text-center">
+					<a target="_blank" href="https://tiwebdesign.com.br">
+						<img src="https://grupothx.com.br/img/tiweb.png" />
+					</a>
+				</div>
+				<div class="col-md-4 text-center">
+					<a href="https://grupothx.com/thx/">
+						<img src="https://grupothx.com.br/img/tihospedagem.png" />
+					</a>
+				</div>
+				<div class="col-md-4 text-center">
+					<a target="_blank" href="https://xpainel.com/site">
+						<img src="https://grupothx.com.br/img/xpainel.png" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	

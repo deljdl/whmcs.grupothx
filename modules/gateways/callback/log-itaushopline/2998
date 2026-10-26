@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2998
+    [id] => 2998
+    [1] => 257
+    [userid] => 257
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-17
+    [date] => 2017-02-17
+    [4] => 2017-02-20
+    [duedate] => 2017-02-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 583.00
+    [subtotal] => 583.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 583.00
+    [total] => 583.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 257
+    [id] => 257
+    [uuid] => caa8eaac-27a3-4a3f-ae2c-9cbcb7ff77a4
+    [firstname] => Eduardo
+    [lastname] => Malfi
+    [fullname] => Eduardo Malfi
+    [companyname] => 
+    [email] => dumalfi@hotmail.com
+    [address1] => Rua Lacônia, 251
+    [address2] => Parque Capuava
+    [city] => Santo André
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09271-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 34585186
+    [password] => $2y$10$U1wAtmjWbYqitEsEV3XMdeT5iuEfxNBFrz8iWvg4HMmd8GlgW.axu
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1134585186
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => deposito_ou_transferencia
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/02/2017 18:32<br>IP Address: 177.206.16.30<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 33207523838
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 33207523838
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

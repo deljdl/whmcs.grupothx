@@ -1,0 +1,369 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3914
+    [id] => 3914
+    [1] => 187
+    [userid] => 187
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-10-12
+    [date] => 2017-10-12
+    [4] => 2017-10-19
+    [duedate] => 2017-10-19
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 49.87
+    [subtotal] => 49.87
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 49.87
+    [total] => 49.87
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 187
+    [id] => 187
+    [uuid] => 80d2aab4-8dc9-4381-a9bc-760f5717090a
+    [firstname] => Sueli
+    [lastname] => Maria Alves Perandin Arambul
+    [fullname] => Sueli Maria Alves Perandin Arambul
+    [companyname] => APAE ASSOCIAÇÃO DE PAIS E AMIGOS DOS EXCEPCIONAIS DE ARUJA
+    [email] => diretoriaexecutiva.apaearuja@uol.com.br
+    [address1] => Avenida João Manoel
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-650
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4655-3438
+    [password] => d2110dded7ab2956ae00308d344a8f14:cy((w
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146553438
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 16/10/2017 08:29<br>IP Address: 201.43.33.223<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11999601492
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 58.488.073/0001-54
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11999601492
+    [customfields3] => 58.488.073/0001-54
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3914
+    [id] => 3914
+    [1] => 187
+    [userid] => 187
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-10-12
+    [date] => 2017-10-12
+    [4] => 2017-10-19
+    [duedate] => 2017-10-19
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 49.87
+    [subtotal] => 49.87
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 49.87
+    [total] => 49.87
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 187
+    [id] => 187
+    [uuid] => 80d2aab4-8dc9-4381-a9bc-760f5717090a
+    [firstname] => Sueli
+    [lastname] => Maria Alves Perandin Arambul
+    [fullname] => Sueli Maria Alves Perandin Arambul
+    [companyname] => APAE ASSOCIAÇÃO DE PAIS E AMIGOS DOS EXCEPCIONAIS DE ARUJA
+    [email] => diretoriaexecutiva.apaearuja@uol.com.br
+    [address1] => Avenida João Manoel
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-650
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4655-3438
+    [password] => d2110dded7ab2956ae00308d344a8f14:cy((w
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146553438
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 16/10/2017 08:29<br>IP Address: 201.43.33.223<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11999601492
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 58.488.073/0001-54
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11999601492
+    [customfields3] => 58.488.073/0001-54
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3914
+    [id] => 3914
+    [1] => 187
+    [userid] => 187
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-10-12
+    [date] => 2017-10-12
+    [4] => 2017-10-19
+    [duedate] => 2017-10-19
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 49.87
+    [subtotal] => 49.87
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 49.87
+    [total] => 49.87
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 187
+    [id] => 187
+    [uuid] => 80d2aab4-8dc9-4381-a9bc-760f5717090a
+    [firstname] => Sueli
+    [lastname] => Maria Alves Perandin Arambul
+    [fullname] => Sueli Maria Alves Perandin Arambul
+    [companyname] => APAE ASSOCIAÇÃO DE PAIS E AMIGOS DOS EXCEPCIONAIS DE ARUJA
+    [email] => diretoriaexecutiva.apaearuja@uol.com.br
+    [address1] => Avenida João Manoel
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-650
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4655-3438
+    [password] => d2110dded7ab2956ae00308d344a8f14:cy((w
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146553438
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 16/10/2017 08:30<br>IP Address: 201.43.33.223<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11999601492
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 58.488.073/0001-54
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11999601492
+    [customfields3] => 58.488.073/0001-54
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

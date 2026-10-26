@@ -1,0 +1,408 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4748
+    [id] => 4748
+    [1] => 13
+    [userid] => 13
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-05-22
+    [date] => 2018-05-22
+    [4] => 2018-05-25
+    [duedate] => 2018-05-25
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 600.00
+    [subtotal] => 600.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 600.00
+    [total] => 600.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 13
+    [id] => 13
+    [uuid] => 2a2492de-ed1a-4c0f-b699-d5940fe4c36a
+    [firstname] => Karina 
+    [lastname] => Rodrigues Lapezack Banhos
+    [fullname] => Karina  Rodrigues Lapezack Banhos
+    [companyname] => Karina Lapezack Interiores
+    [email] => karinalapezack@gmail.com
+    [address1] => Av Benedito Manuel dos santos
+    [address2] => Perova
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07428205
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 46526183
+    [password] => 5bebc39f74e8957ac5d609ad29239736:t)#TF
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.46526183
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/05/2018 19:37<br>IP Address: 191.254.50.18<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 382.907.288.08
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 382.907.288.08
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4748
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express - Criacao do Novo Site Karina Lapezack Interiores - Site com ate 5 paginas.Sao propostos ate 3 Temasobrigatoria ...
+                            [Description] => Site Express - Criacao do Novo Site Karina Lapezack Interiores - Site com ate 5 paginas.Sao propostos ate 3 Temasobrigatoria a contratacao da hospedagemNenhuma alteracao podera ser feita na estrutura do tema escolhido.os elementos utilizados deverao ...
+                            [UnitPrice] => 30000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes no novo site Karina Lapezack
+                            [Description] => Desenvolvimento Por Hora - Alteracoes no novo site Karina Lapezack
+                            [UnitPrice] => 30000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Karina  Rodrigues Lapezack Banhos
+            [Email] => karinalapezack@gmail.com
+            [Identity] => 38290728808
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4748
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Site Express - Criacao do Novo Site Karina Lapezack Interiores - Site com ate 5 paginas.Sao propostos ate 3 Temasobrigatoria ...
+                            [description] => Site Express - Criacao do Novo Site Karina Lapezack Interiores - Site com ate 5 paginas.Sao propostos ate 3 Temasobrigatoria a contratacao da hospedagemNenhuma alteracao podera ser feita na estrutura do tema escolhido.os elementos utilizados deverao ...
+                            [unitPrice] => 30000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Desenvolvimento Por Hora - Alteracoes no novo site Karina Lapezack
+                            [description] => Desenvolvimento Por Hora - Alteracoes no novo site Karina Lapezack
+                            [unitPrice] => 30000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 6
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 7
+            [identity] => 38290728808
+            [fullName] => Karina  Rodrigues Lapezack Banhos
+            [email] => karinalapezack@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 8
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 9
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/c8ac5805-16fb-4f93-a36a-6782e59ccb73
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+22/05/2018 19:54:39
+INICIO_______________________________________________________________LOG:BEGIN:::22/05/2018 19:39<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 4748
+    [amount] => 60000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => ac383177f344443f96d158693cc4e38c
+    [created_date] => 22/05/2018 19:39:47
+    [customer_name] => Karina Banhos
+    [customer_phone] => 11974575364
+    [customer_identity] => 38290728808
+    [customer_email] => karinalapezack@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 412177******8126
+    [payment_installments] => 2
+    [payment_status] => 2
+    [tid] => 10760777627CVO42H6NB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+22/05/2018 19:54:39
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->4748 | Result->success | ValorPago ->600.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 4748
+    [amount] => 60000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => ac383177f344443f96d158693cc4e38c
+    [created_date] => 22/05/2018 19:39:47
+    [customer_name] => Karina Banhos
+    [customer_phone] => 11974575364
+    [customer_identity] => 38290728808
+    [customer_email] => karinalapezack@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 412177******8126
+    [payment_installments] => 2
+    [payment_status] => 2
+    [tid] => 10760777627CVO42H6NB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+22/05/2018 19:58:45
+INICIO_______________________________________________________________LOG:BEGIN:::22/05/2018 19:45<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => ac383177f344443f96d158693cc4e38c
+    [amount] => 60000
+    [order_number] => 4748
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+22/05/2018 19:58:45
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => ac383177f344443f96d158693cc4e38c
+    [amount] => 60000
+    [order_number] => 4748
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+22/05/2018 19:59:45
+INICIO_______________________________________________________________LOG:BEGIN:::22/05/2018 19:45<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => ac383177f344443f96d158693cc4e38c
+    [amount] => 60000
+    [order_number] => 4748
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+22/05/2018 19:59:45
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => ac383177f344443f96d158693cc4e38c
+    [amount] => 60000
+    [order_number] => 4748
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+22/05/2018 19:00:46
+INICIO_______________________________________________________________LOG:BEGIN:::22/05/2018 19:46<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => ac383177f344443f96d158693cc4e38c
+    [amount] => 60000
+    [order_number] => 4748
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+22/05/2018 19:00:46
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => ac383177f344443f96d158693cc4e38c
+    [amount] => 60000
+    [order_number] => 4748
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

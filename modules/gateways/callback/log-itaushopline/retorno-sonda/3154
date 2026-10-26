@@ -1,0 +1,98 @@
+
+POST
+<pre>Array
+(
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zMTU0JmZpPTE1MzE1NGRk4Mcl50I5yUVepZNvEKLYs2z26VQ=
+    [__EVENTVALIDATION] => /wEWBgKnxvbIBALc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BYUzDuw46qMzW7T7uWHeVUWKSqyW
+    [DC] => T72P55B218I210L3L142Y60N100I111O52K51W150O138Q242I37E52T231T146C255U82M150I78G81S86U110H73B107P60F152B236T53N220U119P5O22F40P
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00153154
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 3154
+    [fi] => 153154
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 3154
+    [fi] => 153154
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zMTU0JmZpPTE1MzE1NGRk4Mcl50I5yUVepZNvEKLYs2z26VQ=
+    [__EVENTVALIDATION] => /wEWBgKnxvbIBALc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BYUzDuw46qMzW7T7uWHeVUWKSqyW
+    [DC] => T72P55B218I210L3L142Y60N100I111O52K51W150O138Q242I37E52T231T146C255U82M150I78G81S86U110H73B107P60F152B236T53N220U119P5O22F40P
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00153154
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+    [invoice-2813] => 2813
+    [invoice-2763] => 2763
+    [invoice-2800] => 2800
+    [invoice-2826] => 2826
+    [invoice-2887] => 2887
+    [invoice-2889] => 2889
+    [invoice-2914] => 2914
+    [invoice-2997] => 2997
+    [invoice-3069] => 3069
+    [invoice-3192] => 3192
+    [WHMCSUser] => 231:094de1b094b1aa5fdd45cd7f3d8a7e732ccea33d
+    [WHMCSeWdrAiYR38h0] => 9d4e90454b8056da14618c62e6eadf92
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [CONTENT_LENGTH] => 521
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_COOKIE] => invoice-2813=2813; invoice-2763=2763; invoice-2800=2800; invoice-2826=2826; invoice-2887=2887; invoice-2889=2889; invoice-2914=2914; invoice-2997=2997; invoice-3069=3069; invoice-3192=3192; WHMCSUser=231%3A094de1b094b1aa5fdd45cd7f3d8a7e732ccea33d; WHMCSeWdrAiYR38h0=9d4e90454b8056da14618c62e6eadf92
+    [HTTP_DNT] => 1
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_REFERER] => https://shopline.itau.com.br/shopline/Volta.aspx?codemp=J0194961710001810000024294&idloja=34902&npedido=00153154
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=3154&fi=153154
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 177.99.108.46
+    [REMOTE_PORT] => 59515
+    [REQUEST_METHOD] => POST
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=3154&fi=153154
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SCRIPT_URI] => https://tihospedagem.com.br/modules/gateways/callback/itauReT.php
+    [SCRIPT_URL] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [SSL_TLS_SNI] => tihospedagem.com.br
+    [UNIQUE_ID] => WST816KQQaAAAE8yL98AAAAK
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1495596247
+    [argv] => Array
+        (
+            [0] => i=3154&fi=153154
+        )
+
+    [argc] => 1
+)
+</pre>

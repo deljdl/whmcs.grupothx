@@ -1,0 +1,120 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3491
+    [id] => 3491
+    [1] => 85
+    [userid] => 85
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-06-21
+    [date] => 2017-06-21
+    [4] => 2017-06-28
+    [duedate] => 2017-06-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 47.70
+    [subtotal] => 47.70
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 47.70
+    [total] => 47.70
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 85
+    [id] => 85
+    [uuid] => a0993aee-919d-4f99-b5b9-ffd27908f0f5
+    [firstname] => Márcio
+    [lastname] => Pereira Rocha
+    [fullname] => Márcio Pereira Rocha
+    [companyname] => Advocacia Márcio Rocha
+    [email] => marcio@marciorocha.adv.br
+    [address1] => Rua Beneficência Portuguesa, 44
+    [address2] => Cjs 1108/1109
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 3227-5124 / 3227-5204
+    [password] => dbc82db71807ea601f3fe824c8247da0:gPLRA
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113227512432275204
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 1
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 21/06/2017 10:22<br>IP Address: 152.250.243.197<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11996950053
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 056.181.618-26
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11996950053
+    [customfields3] => 056.181.618-26
+    [customfields4] => 
+)
+</pre>

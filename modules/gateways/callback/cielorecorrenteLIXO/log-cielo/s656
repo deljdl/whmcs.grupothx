@@ -1,0 +1,1116 @@
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 656
+    [clientid] => 94
+    [orderid] => 598
+    [pid] => 3
+    [regdate] => 2018-03-14
+    [name] => 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => sitiolagoadaserra.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [firstpaymentamount] => 32.97
+    [recurringamount] => 32.97
+    [paymentmethod] => cielo
+    [paymentmethodname] => Cielo Cartões
+    [billingcycle] => Monthly
+    [nextduedate] => 2018-03-14
+    [status] => Pending
+    [username] => 
+    [password] => 
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 0
+    [disklimit] => 0
+    [bwusage] => 0
+    [bwlimit] => 0
+    [lastupdate] => 0000-00-00 00:00:00
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 94
+    [id] => 94
+    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+    [firstname] => Dulce
+    [lastname] => Naves
+    [fullname] => Dulce Naves
+    [companyname] => Sítio Lagoa da Serra
+    [email] => lagoadaserra1@hotmail.com
+    [address1] => Estrada das Maciéis, 112
+    [address2] => Embu Mirim
+    [city] => Itapecerica da Serra
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4666 - 2408
+    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146662408
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/03/2018 10:34<br>IP Address: 189.95.182.100<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s656
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000000000
+            [FullName] => Dulce Naves
+            [Email] => lagoadaserra1@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s656
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [$id] => 6
+            [recurrentPayment] => stdClass Object
+                (
+                    [$id] => 7
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 00000000000000
+            [fullName] => Dulce Naves
+            [email] => lagoadaserra1@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/595e4443-e909-4135-9258-4f786b86eb50
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 656
+    [clientid] => 94
+    [orderid] => 598
+    [pid] => 3
+    [regdate] => 2018-03-14
+    [name] => 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => sitiolagoadaserra.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [firstpaymentamount] => 32.97
+    [recurringamount] => 32.97
+    [paymentmethod] => cielo
+    [paymentmethodname] => Cielo Cartões
+    [billingcycle] => Monthly
+    [nextduedate] => 2018-03-14
+    [status] => Pending
+    [username] => 
+    [password] => 
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 0
+    [disklimit] => 0
+    [bwusage] => 0
+    [bwlimit] => 0
+    [lastupdate] => 0000-00-00 00:00:00
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 94
+    [id] => 94
+    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+    [firstname] => Dulce
+    [lastname] => Naves
+    [fullname] => Dulce Naves
+    [companyname] => Sítio Lagoa da Serra
+    [email] => lagoadaserra1@hotmail.com
+    [address1] => Estrada das Maciéis, 112
+    [address2] => Embu Mirim
+    [city] => Itapecerica da Serra
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4666 - 2408
+    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146662408
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/03/2018 10:42<br>IP Address: 189.95.182.100<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s656
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000000000
+            [FullName] => Dulce Naves
+            [Email] => lagoadaserra1@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s656
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [$id] => 6
+            [recurrentPayment] => stdClass Object
+                (
+                    [$id] => 7
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 00000000000000
+            [fullName] => Dulce Naves
+            [email] => lagoadaserra1@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/d863256a-bdbd-4aa9-b8a6-f0c6ef757c5c
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 656
+    [clientid] => 94
+    [orderid] => 598
+    [pid] => 3
+    [regdate] => 2018-03-14
+    [name] => 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => sitiolagoadaserra.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [firstpaymentamount] => 32.97
+    [recurringamount] => 32.97
+    [paymentmethod] => cielo
+    [paymentmethodname] => Cielo Cartões
+    [billingcycle] => Monthly
+    [nextduedate] => 2018-03-14
+    [status] => Pending
+    [username] => 
+    [password] => 
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 0
+    [disklimit] => 0
+    [bwusage] => 0
+    [bwlimit] => 0
+    [lastupdate] => 0000-00-00 00:00:00
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 94
+    [id] => 94
+    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+    [firstname] => Dulce
+    [lastname] => Naves
+    [fullname] => Dulce Naves
+    [companyname] => Sítio Lagoa da Serra
+    [email] => lagoadaserra1@hotmail.com
+    [address1] => Estrada das Maciéis, 112
+    [address2] => Embu Mirim
+    [city] => Itapecerica da Serra
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 06854120
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4666 - 2408
+    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146662408
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/03/2018 10:54<br>IP Address: 189.95.182.100<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11997320404
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 04498161840
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11997320404
+    [customfields3] => 04498161840
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s656
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 04498161840
+            [FullName] => Dulce Naves
+            [Email] => lagoadaserra1@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s656
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [$id] => 6
+            [recurrentPayment] => stdClass Object
+                (
+                    [$id] => 7
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 04498161840
+            [fullName] => Dulce Naves
+            [email] => lagoadaserra1@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/dbe9756a-4a43-4704-b11d-123fff536caa
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 656
+    [clientid] => 94
+    [orderid] => 598
+    [pid] => 3
+    [regdate] => 2018-03-14
+    [name] => 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => sitiolagoadaserra.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [firstpaymentamount] => 32.97
+    [recurringamount] => 32.97
+    [paymentmethod] => cielo
+    [paymentmethodname] => Cielo Cartões
+    [billingcycle] => Monthly
+    [nextduedate] => 2018-04-14
+    [status] => Active
+    [username] => sitiolag
+    [password] => cH861v1vfE
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 148
+    [disklimit] => 10000
+    [bwusage] => 1670
+    [bwlimit] => 0
+    [lastupdate] => 2018-04-04 09:00:14
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 94
+    [id] => 94
+    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+    [firstname] => Dulce
+    [lastname] => Naves
+    [fullname] => Dulce Naves
+    [companyname] => Sítio Lagoa da Serra
+    [email] => lagoadaserra1@hotmail.com
+    [address1] => Estrada das Maciéis, 112
+    [address2] => Embu Mirim
+    [city] => Itapecerica da Serra
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 06854120
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4666 - 2408
+    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146662408
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/04/2018 11:05<br>IP Address: 189.93.77.104<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11997320404
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 04498161840
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11997320404
+    [customfields3] => 04498161840
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s656
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 04498161840
+            [FullName] => Dulce Naves
+            [Email] => lagoadaserra1@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s656
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [$id] => 6
+            [recurrentPayment] => stdClass Object
+                (
+                    [$id] => 7
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 04498161840
+            [fullName] => Dulce Naves
+            [email] => lagoadaserra1@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/cec4f942-4f80-468e-b1d1-636247cb1302
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

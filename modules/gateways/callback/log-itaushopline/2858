@@ -1,0 +1,594 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2858
+    [id] => 2858
+    [1] => 248
+    [userid] => 248
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-11
+    [date] => 2017-01-11
+    [4] => 2017-01-11
+    [duedate] => 2017-01-11
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 723.97
+    [subtotal] => 723.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 723.97
+    [total] => 723.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 248
+    [id] => 248
+    [uuid] => 3854468a-6a0b-48a9-acd0-e96b78aada73
+    [firstname] => Rafaela
+    [lastname] => Aguiar
+    [fullname] => Rafaela Aguiar
+    [companyname] => S.G Fekete distribuidora de alimentos
+    [email] => rafaelaferreira.mendes@gmail.com
+    [address1] => Rua Adomiro Rodrigues dos Passos (Prq R Barreto), 144
+    [address2] => Parque Rodrigo Barreto
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417-225
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11931083008
+    [password] => $2y$10$u4wNrhRJp7sOdYnDEeSYu.ex16u5WV3p0V/84lNlJogUO3Up11yne
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11931083008
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 11/01/2017 10:37<br>IP Address: 177.205.216.28<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11931083008
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 06.093.425/0001-79
+                )
+
+        )
+
+    [customfields2] => 11931083008
+    [customfields3] => 06.093.425/0001-79
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2858
+    [id] => 2858
+    [1] => 248
+    [userid] => 248
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-11
+    [date] => 2017-01-11
+    [4] => 2017-01-11
+    [duedate] => 2017-01-11
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 723.97
+    [subtotal] => 723.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 723.97
+    [total] => 723.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 248
+    [id] => 248
+    [uuid] => 3854468a-6a0b-48a9-acd0-e96b78aada73
+    [firstname] => Rafaela
+    [lastname] => Aguiar
+    [fullname] => Rafaela Aguiar
+    [companyname] => S.G Fekete distribuidora de alimentos
+    [email] => rafaelaferreira.mendes@gmail.com
+    [address1] => Rua Adomiro Rodrigues dos Passos (Prq R Barreto), 144
+    [address2] => Parque Rodrigo Barreto
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417-225
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11931083008
+    [password] => $2y$10$u4wNrhRJp7sOdYnDEeSYu.ex16u5WV3p0V/84lNlJogUO3Up11yne
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11931083008
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 11/01/2017 10:37<br>IP Address: 177.205.216.28<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11931083008
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 06.093.425/0001-79
+                )
+
+        )
+
+    [customfields2] => 11931083008
+    [customfields3] => 06.093.425/0001-79
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2858
+    [id] => 2858
+    [1] => 248
+    [userid] => 248
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-11
+    [date] => 2017-01-11
+    [4] => 2017-01-11
+    [duedate] => 2017-01-11
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 723.97
+    [subtotal] => 723.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 723.97
+    [total] => 723.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 248
+    [id] => 248
+    [uuid] => 3854468a-6a0b-48a9-acd0-e96b78aada73
+    [firstname] => Rafaela
+    [lastname] => Aguiar
+    [fullname] => Rafaela Aguiar
+    [companyname] => S.G Fekete distribuidora de alimentos
+    [email] => rafaelaferreira.mendes@gmail.com
+    [address1] => Rua Adomiro Rodrigues dos Passos (Prq R Barreto), 144
+    [address2] => Parque Rodrigo Barreto
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417-225
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11931083008
+    [password] => $2y$10$u4wNrhRJp7sOdYnDEeSYu.ex16u5WV3p0V/84lNlJogUO3Up11yne
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11931083008
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 11/01/2017 14:38<br>IP Address: 191.250.19.233<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11931083008
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 06.093.425/0001-79
+                )
+
+        )
+
+    [customfields2] => 11931083008
+    [customfields3] => 06.093.425/0001-79
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2858
+    [id] => 2858
+    [1] => 248
+    [userid] => 248
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-11
+    [date] => 2017-01-11
+    [4] => 2017-01-11
+    [duedate] => 2017-01-11
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 723.97
+    [subtotal] => 723.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 723.97
+    [total] => 723.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 248
+    [id] => 248
+    [uuid] => 3854468a-6a0b-48a9-acd0-e96b78aada73
+    [firstname] => Rafaela
+    [lastname] => Aguiar
+    [fullname] => Rafaela Aguiar
+    [companyname] => S.G Fekete distribuidora de alimentos
+    [email] => rafaelaferreira.mendes@gmail.com
+    [address1] => Rua Adomiro Rodrigues dos Passos (Prq R Barreto), 144
+    [address2] => Parque Rodrigo Barreto
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417-225
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11931083008
+    [password] => $2y$10$u4wNrhRJp7sOdYnDEeSYu.ex16u5WV3p0V/84lNlJogUO3Up11yne
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11931083008
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/01/2017 14:41<br>IP Address: 177.99.116.54<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11931083008
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 06.093.425/0001-79
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11931083008
+    [customfields3] => 06.093.425/0001-79
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2858
+    [id] => 2858
+    [1] => 248
+    [userid] => 248
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-11
+    [date] => 2017-01-11
+    [4] => 2017-01-11
+    [duedate] => 2017-01-11
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 723.97
+    [subtotal] => 723.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 723.97
+    [total] => 723.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 248
+    [id] => 248
+    [uuid] => 3854468a-6a0b-48a9-acd0-e96b78aada73
+    [firstname] => Rafaela
+    [lastname] => Aguiar
+    [fullname] => Rafaela Aguiar
+    [companyname] => S.G Fekete distribuidora de alimentos
+    [email] => rafaelaferreira.mendes@gmail.com
+    [address1] => Rua Adomiro Rodrigues dos Passos (Prq R Barreto), 144
+    [address2] => Parque Rodrigo Barreto
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417-225
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11931083008
+    [password] => $2y$10$u4wNrhRJp7sOdYnDEeSYu.ex16u5WV3p0V/84lNlJogUO3Up11yne
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11931083008
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 26/01/2017 14:23<br>IP Address: 177.157.233.33<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11931083008
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 06.093.425/0001-79
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11931083008
+    [customfields3] => 06.093.425/0001-79
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

@@ -1,0 +1,369 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3894
+    [id] => 3894
+    [1] => 285
+    [userid] => 285
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-10-05
+    [date] => 2017-10-05
+    [4] => 2017-10-05
+    [duedate] => 2017-10-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 75.00
+    [subtotal] => 75.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 75.00
+    [total] => 75.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 285
+    [id] => 285
+    [uuid] => 925ed72d-cd60-4083-906a-47c50be34a4d
+    [firstname] => Rosangela
+    [lastname] => Marinho de Oliveira
+    [fullname] => Rosangela Marinho de Oliveira
+    [companyname] => Rosangela Marinho de Oliveira ME
+    [email] => rennan-cardoso@hotmail.com
+    [address1] => Rua prefeito José zampier Filho 1251
+    [address2] => vila Boask
+    [city] => São Mateus do sul
+    [fullstate] => PR
+    [state] => PR
+    [postcode] => 83900-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (42)988133073
+    [password] => $2y$10$If5mSXu.WadkW00JqG2To.zZmbPGEM.dIPTaHS2yvtSGzVbGG0f8S
+    [statecode] => PR
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.42988133073
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/10/2017 09:21<br>IP Address: 200.66.112.201<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 42988133073
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 25361416/0001-66
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 42988133073
+    [customfields3] => 25361416/0001-66
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3894
+    [id] => 3894
+    [1] => 285
+    [userid] => 285
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-10-05
+    [date] => 2017-10-05
+    [4] => 2017-10-05
+    [duedate] => 2017-10-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 75.00
+    [subtotal] => 75.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 75.00
+    [total] => 75.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 285
+    [id] => 285
+    [uuid] => 925ed72d-cd60-4083-906a-47c50be34a4d
+    [firstname] => Rosangela
+    [lastname] => Marinho de Oliveira
+    [fullname] => Rosangela Marinho de Oliveira
+    [companyname] => Rosangela Marinho de Oliveira ME
+    [email] => rennan-cardoso@hotmail.com
+    [address1] => Rua prefeito José zampier Filho 1251
+    [address2] => vila Boask
+    [city] => São Mateus do sul
+    [fullstate] => PR
+    [state] => PR
+    [postcode] => 83900-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (42)988133073
+    [password] => $2y$10$If5mSXu.WadkW00JqG2To.zZmbPGEM.dIPTaHS2yvtSGzVbGG0f8S
+    [statecode] => PR
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.42988133073
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/10/2017 09:21<br>IP Address: 200.66.112.201<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 42988133073
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 25361416/0001-66
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 42988133073
+    [customfields3] => 25361416/0001-66
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3894
+    [id] => 3894
+    [1] => 285
+    [userid] => 285
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-10-05
+    [date] => 2017-10-05
+    [4] => 2017-10-05
+    [duedate] => 2017-10-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 75.00
+    [subtotal] => 75.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 75.00
+    [total] => 75.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 285
+    [id] => 285
+    [uuid] => 925ed72d-cd60-4083-906a-47c50be34a4d
+    [firstname] => Rosangela
+    [lastname] => Marinho de Oliveira
+    [fullname] => Rosangela Marinho de Oliveira
+    [companyname] => Rosangela Marinho de Oliveira ME
+    [email] => rennan-cardoso@hotmail.com
+    [address1] => Rua prefeito José zampier Filho 1251
+    [address2] => vila Boask
+    [city] => São Mateus do sul
+    [fullstate] => PR
+    [state] => PR
+    [postcode] => 83900-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (42)988133073
+    [password] => $2y$10$If5mSXu.WadkW00JqG2To.zZmbPGEM.dIPTaHS2yvtSGzVbGG0f8S
+    [statecode] => PR
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.42988133073
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/10/2017 13:13<br>IP Address: 187.5.34.60<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 42988133073
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 25361416/0001-66
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 42988133073
+    [customfields3] => 25361416/0001-66
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

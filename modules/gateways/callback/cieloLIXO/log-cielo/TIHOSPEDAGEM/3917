@@ -1,0 +1,349 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3917
+    [id] => 3917
+    [1] => 259
+    [userid] => 259
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-10-13
+    [date] => 2017-10-13
+    [4] => 2017-10-20
+    [duedate] => 2017-10-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 50.00
+    [subtotal] => 50.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 50.00
+    [total] => 50.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 259
+    [id] => 259
+    [uuid] => 80deab10-3cd6-44d4-b6a4-2f2b2ab5d2d5
+    [firstname] => Diego 
+    [lastname] => Rafael da Silva Santos
+    [fullname] => Diego  Rafael da Silva Santos
+    [companyname] => Topsecret Acompanhantes
+    [email] => topsecretacompanhantes@gmail.com
+    [address1] => Rua Newton Vieira Novaes, 91
+    [address2] => Bosque dos Eucaliptos
+    [city] => São José dos Campos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 12233-100
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1239165218 12988034026
+    [password] => $2y$10$IgD8BL6bi6BdF5moX0FdQORDfhyo.LzxjUzFjhRDoDUJIjeXGKD7.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.123916521812988034026
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/10/2017 15:46<br>IP Address: 201.75.171.97<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 12988034026
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 34434790811
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 12988034026
+    [customfields3] => 34434790811
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3917
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => SEo - Search Engine optimization (otimizacao para Sites de Busca ) - acompanhantestopsecret.com.br (20/10/2017 - 19/11/2017)
+                            [Description] => SEo - Search Engine optimization (otimizacao para Sites de Busca ) - acompanhantestopsecret.com.br (20/10/2017 - 19/11/2017)
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Diego  Rafael da Silva Santos
+            [Email] => topsecretacompanhantes@gmail.com
+            [Identity] => 34434790811
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3917
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => SEo - Search Engine optimization (otimizacao para Sites de Busca ) - acompanhantestopsecret.com.br (20/10/2017 - 19/11/2017)
+                            [description] => SEo - Search Engine optimization (otimizacao para Sites de Busca ) - acompanhantestopsecret.com.br (20/10/2017 - 19/11/2017)
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 34434790811
+            [fullName] => Diego  Rafael da Silva Santos
+            [email] => topsecretacompanhantes@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/78c3e69f-7491-4372-9661-58a99576b7fe
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+20/10/2017 15:42:51
+INICIO_______________________________________________________________LOG:BEGIN:::20/10/2017 15:51<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3917
+    [amount] => 5000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 78e4e4df8661451589bf2ce84271d2a9
+    [created_date] => 20/10/2017 15:51:30
+    [customer_name] => Diego Santos
+    [customer_phone] => 12988034026
+    [customer_identity] => 34434790811
+    [customer_email] => topsecretacompanhantes@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 4
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544731******1162
+    [payment_installments] => 1
+    [payment_status] => 1
+    [tid] => 10760777626K8GOCF13B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/10/2017 15:42:51
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  3917
+
+POST:
+<pre>Array
+(
+    [order_number] => 3917
+    [amount] => 5000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 78e4e4df8661451589bf2ce84271d2a9
+    [created_date] => 20/10/2017 15:51:30
+    [customer_name] => Diego Santos
+    [customer_phone] => 12988034026
+    [customer_identity] => 34434790811
+    [customer_email] => topsecretacompanhantes@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 4
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544731******1162
+    [payment_installments] => 1
+    [payment_status] => 1
+    [tid] => 10760777626K8GOCF13B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/10/2017 17:27:00
+INICIO_______________________________________________________________LOG:BEGIN:::20/10/2017 17:00<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 78e4e4df8661451589bf2ce84271d2a9
+    [amount] => 5000
+    [order_number] => 3917
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/10/2017 17:27:00
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  3917
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 78e4e4df8661451589bf2ce84271d2a9
+    [amount] => 5000
+    [order_number] => 3917
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/10/2017 17:29:00
+INICIO_______________________________________________________________LOG:BEGIN:::20/10/2017 17:00<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 78e4e4df8661451589bf2ce84271d2a9
+    [amount] => 5000
+    [order_number] => 3917
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/10/2017 17:29:00
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  3917
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 78e4e4df8661451589bf2ce84271d2a9
+    [amount] => 5000
+    [order_number] => 3917
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

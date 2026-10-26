@@ -1,0 +1,1345 @@
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 566
+    [clientid] => 283
+    [orderid] => 511
+    [pid] => 3
+    [regdate] => 2017-07-31
+    [name] => 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => institutoelevar.com.br
+    [dedicatedip] => 
+    [serverid] => 8
+    [servername] => TiHospedagem.com
+    [serverip] => 198.1.103.252
+    [serverhostname] => tihospedagem.com
+    [firstpaymentamount] => 29.97
+    [recurringamount] => 29.97
+    [paymentmethod] => cielo
+    [paymentmethodname] => Cielo Cartões
+    [billingcycle] => Monthly
+    [nextduedate] => 2017-10-28
+    [status] => Suspended
+    [username] => institut
+    [password] => 96rKq4l6dX
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 252
+    [disklimit] => 10000
+    [bwusage] => 59
+    [bwlimit] => 0
+    [lastupdate] => 2017-11-08 09:00:26
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 283
+    [id] => 283
+    [uuid] => f16845c7-0570-436f-b7ec-6daff14671b4
+    [firstname] => Talles
+    [lastname] => Tatagiba Martins de Souza
+    [fullname] => Talles Tatagiba Martins de Souza
+    [companyname] => Instituto Elevar
+    [email] => talles@gmail.com
+    [address1] => Av. Nicolau Von Schilgen, 100
+    [address2] => Mata da Praia
+    [city] => Vitória
+    [fullstate] => ES
+    [state] => ES
+    [postcode] => 29065-130
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11974551875 
+    [password] => $2y$10$sA4G7EuB4fy6RDxNtafjHeEx4U5iTyxQ.TywUByvcHGULn4AvvN/.
+    [statecode] => ES
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11974551875
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/11/2017 13:39<br>IP Address: 121.244.113.167<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11974551875
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 12297475756
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11974551875
+    [customfields3] => 12297475756
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s566
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 12297475756
+            [FullName] => Talles Tatagiba Martins de Souza
+            [Email] => talles@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s566
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 12297475756
+            [fullName] => Talles Tatagiba Martins de Souza
+            [email] => talles@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/f0de661a-bddc-4bc1-8fbe-d3cfbf1a2ac5
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 566
+    [clientid] => 283
+    [orderid] => 511
+    [pid] => 3
+    [regdate] => 2017-07-31
+    [name] => 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => institutoelevar.com.br
+    [dedicatedip] => 
+    [serverid] => 8
+    [servername] => TiHospedagem.com
+    [serverip] => 198.1.103.252
+    [serverhostname] => tihospedagem.com
+    [firstpaymentamount] => 29.97
+    [recurringamount] => 29.97
+    [paymentmethod] => cielo
+    [paymentmethodname] => Cielo Cartões
+    [billingcycle] => Monthly
+    [nextduedate] => 2017-12-28
+    [status] => Active
+    [username] => institut
+    [password] => 96rKq4l6dX
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 254
+    [disklimit] => 10000
+    [bwusage] => 33
+    [bwlimit] => 0
+    [lastupdate] => 2018-01-05 09:00:19
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 283
+    [id] => 283
+    [uuid] => f16845c7-0570-436f-b7ec-6daff14671b4
+    [firstname] => Talles
+    [lastname] => Tatagiba Martins de Souza
+    [fullname] => Talles Tatagiba Martins de Souza
+    [companyname] => Instituto Elevar
+    [email] => talles@gmail.com
+    [address1] => Av. Nicolau Von Schilgen, 100
+    [address2] => Mata da Praia
+    [city] => Vitória
+    [fullstate] => ES
+    [state] => ES
+    [postcode] => 29065-130
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11974551875 
+    [password] => $2y$10$sA4G7EuB4fy6RDxNtafjHeEx4U5iTyxQ.TywUByvcHGULn4AvvN/.
+    [statecode] => ES
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11974551875
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/01/2018 20:02<br>IP Address: 185.216.128.13<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11974551875
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 12297475756
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11974551875
+    [customfields3] => 12297475756
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s566
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 12297475756
+            [FullName] => Talles Tatagiba Martins de Souza
+            [Email] => talles@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s566
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 12297475756
+            [fullName] => Talles Tatagiba Martins de Souza
+            [email] => talles@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/361fd784-3ae3-4a9c-858d-3147c4aaf2d4
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 566
+    [clientid] => 283
+    [orderid] => 511
+    [pid] => 3
+    [regdate] => 2017-07-31
+    [name] => 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => institutoelevar.com.br
+    [dedicatedip] => 
+    [serverid] => 8
+    [servername] => TiHospedagem.com
+    [serverip] => 198.1.103.252
+    [serverhostname] => tihospedagem.com
+    [firstpaymentamount] => 29.97
+    [recurringamount] => 29.97
+    [paymentmethod] => cielo
+    [paymentmethodname] => Cielo Cartões
+    [billingcycle] => Monthly
+    [nextduedate] => 2017-12-28
+    [status] => Active
+    [username] => institut
+    [password] => 96rKq4l6dX
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 254
+    [disklimit] => 10000
+    [bwusage] => 33
+    [bwlimit] => 0
+    [lastupdate] => 2018-01-05 09:00:19
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 283
+    [id] => 283
+    [uuid] => f16845c7-0570-436f-b7ec-6daff14671b4
+    [firstname] => Talles
+    [lastname] => Tatagiba Martins de Souza
+    [fullname] => Talles Tatagiba Martins de Souza
+    [companyname] => Instituto Elevar
+    [email] => talles@gmail.com
+    [address1] => Av. Nicolau Von Schilgen, 100
+    [address2] => Mata da Praia
+    [city] => Vitória
+    [fullstate] => ES
+    [state] => ES
+    [postcode] => 29065-130
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11974551875 
+    [password] => $2y$10$sA4G7EuB4fy6RDxNtafjHeEx4U5iTyxQ.TywUByvcHGULn4AvvN/.
+    [statecode] => ES
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11974551875
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/01/2018 20:02<br>IP Address: 185.216.128.13<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11974551875
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 12297475756
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11974551875
+    [customfields3] => 12297475756
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s566
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 12297475756
+            [FullName] => Talles Tatagiba Martins de Souza
+            [Email] => talles@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s566
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 12297475756
+            [fullName] => Talles Tatagiba Martins de Souza
+            [email] => talles@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/0f24d854-cdc1-439b-9f19-eaa5d5f3df79
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 566
+    [clientid] => 283
+    [orderid] => 511
+    [pid] => 3
+    [regdate] => 2017-07-31
+    [name] => 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => institutoelevar.com.br
+    [dedicatedip] => 
+    [serverid] => 8
+    [servername] => TiHospedagem.com
+    [serverip] => 198.1.103.252
+    [serverhostname] => tihospedagem.com
+    [firstpaymentamount] => 29.97
+    [recurringamount] => 29.97
+    [paymentmethod] => cielo
+    [paymentmethodname] => Cielo Cartões
+    [billingcycle] => Monthly
+    [nextduedate] => 2017-12-28
+    [status] => Active
+    [username] => institut
+    [password] => 96rKq4l6dX
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 254
+    [disklimit] => 10000
+    [bwusage] => 33
+    [bwlimit] => 0
+    [lastupdate] => 2018-01-05 09:00:19
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 283
+    [id] => 283
+    [uuid] => f16845c7-0570-436f-b7ec-6daff14671b4
+    [firstname] => Talles
+    [lastname] => Tatagiba Martins de Souza
+    [fullname] => Talles Tatagiba Martins de Souza
+    [companyname] => Instituto Elevar
+    [email] => talles@gmail.com
+    [address1] => Av. Nicolau Von Schilgen, 100
+    [address2] => Mata da Praia
+    [city] => Vitória
+    [fullstate] => ES
+    [state] => ES
+    [postcode] => 29065-130
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11974551875 
+    [password] => $2y$10$sA4G7EuB4fy6RDxNtafjHeEx4U5iTyxQ.TywUByvcHGULn4AvvN/.
+    [statecode] => ES
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11974551875
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/01/2018 20:39<br>IP Address: 185.216.128.13<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11974551875
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 12297475756
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11974551875
+    [customfields3] => 12297475756
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s566
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 12297475756
+            [FullName] => Talles Tatagiba Martins de Souza
+            [Email] => talles@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s566
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 12297475756
+            [fullName] => Talles Tatagiba Martins de Souza
+            [email] => talles@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/70299bb6-99d5-4ce5-8202-7ea6341cc284
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 566
+    [clientid] => 283
+    [orderid] => 511
+    [pid] => 3
+    [regdate] => 2017-07-31
+    [name] => 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => institutoelevar.com.br
+    [dedicatedip] => 
+    [serverid] => 8
+    [servername] => TiHospedagem.com
+    [serverip] => 198.1.103.252
+    [serverhostname] => tihospedagem.com
+    [firstpaymentamount] => 29.97
+    [recurringamount] => 29.97
+    [paymentmethod] => cielo
+    [paymentmethodname] => Cielo Cartões
+    [billingcycle] => Monthly
+    [nextduedate] => 2018-01-28
+    [status] => Active
+    [username] => institut
+    [password] => 96rKq4l6dX
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 260
+    [disklimit] => 10000
+    [bwusage] => 14
+    [bwlimit] => 0
+    [lastupdate] => 2018-02-02 09:00:25
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 283
+    [id] => 283
+    [uuid] => f16845c7-0570-436f-b7ec-6daff14671b4
+    [firstname] => Talles
+    [lastname] => Tatagiba Martins de Souza
+    [fullname] => Talles Tatagiba Martins de Souza
+    [companyname] => Instituto Elevar
+    [email] => talles@gmail.com
+    [address1] => Av. Nicolau Von Schilgen, 100
+    [address2] => Mata da Praia
+    [city] => Vitória
+    [fullstate] => ES
+    [state] => ES
+    [postcode] => 29065-130
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11974551875 
+    [password] => $2y$10$sA4G7EuB4fy6RDxNtafjHeEx4U5iTyxQ.TywUByvcHGULn4AvvN/.
+    [statecode] => ES
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11974551875
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 02/02/2018 11:53<br>IP Address: 206.188.26.36<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11974551875
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 12297475756
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11974551875
+    [customfields3] => 12297475756
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s566
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 12297475756
+            [FullName] => Talles Tatagiba Martins de Souza
+            [Email] => talles@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s566
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 12297475756
+            [fullName] => Talles Tatagiba Martins de Souza
+            [email] => talles@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/5c6bd23f-e223-47c9-91dd-1d85fe0cdb6f
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

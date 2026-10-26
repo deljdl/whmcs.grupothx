@@ -1,0 +1,412 @@
+
+Dados Invoice
+<pre>Array
+(
+    [id] => 6692
+    [0] => 6692
+    [userid] => 372
+    [1] => 372
+    [invoicenum] => 
+    [2] => 
+    [date] => 2019-10-21
+    [3] => 2019-10-21
+    [duedate] => 2019-11-06
+    [4] => 2019-11-06
+    [datepaid] => 0000-00-00 00:00:00
+    [5] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [7] => 32.97
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 0.00
+    [total] => 32.97
+    [11] => 32.97
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => 0.00
+    [status] => Unpaid
+    [14] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => deposito_ou_transferencia
+    [paymethodid] => 
+    [16] => 
+    [notes] => 
+    [17] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 372
+    [id] => 372
+    [uuid] => 8b8f94d6-1777-41e8-8819-12e7044e235b
+    [firstname] => JOAQUIM 
+    [lastname] => TAVARES DE SANTANA
+    [companyname] => Santana Seguros Gerais
+    [email] => santana@santanasegurosgerais.com.br
+    [address1] => Rua Oneyda Alvarenga, 89 Cj 72
+    [address2] => Vila da Saúde 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04146-020
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [tax_id] => 
+    [password] => $2y$10$ayKLY8DCsdOntXOvIafRxufjSH6Mpo7hURcXaLly2/mK5zUdHoT9y
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                    [passwordResetKeyExpiryDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                    [2] => passwordResetKeyExpiryDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                    [2] => groupName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 372
+                    [uuid] => 8b8f94d6-1777-41e8-8819-12e7044e235b
+                    [firstname] => JOAQUIM 
+                    [lastname] => TAVARES DE SANTANA
+                    [companyname] => Santana Seguros Gerais
+                    [email] => santana@santanasegurosgerais.com.br
+                    [address1] => Rua Oneyda Alvarenga, 89 Cj 72
+                    [address2] => Vila da Saúde 
+                    [city] => São Paulo
+                    [state] => SP
+                    [postcode] => 04146-020
+                    [country] => BR
+                    [phonenumber] => 
+                    [tax_id] => 
+                    [password] => $2y$10$ayKLY8DCsdOntXOvIafRxufjSH6Mpo7hURcXaLly2/mK5zUdHoT9y
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2019-06-06
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => cMGBZFhpZLNhZgn6nnDJzvO1oHE=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-21 16:33:14
+                    [ip] => 187.22.184.159
+                    [host] => bb16b89f.virtua.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 1
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2019-06-21 10:33:23
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 372
+                    [uuid] => 8b8f94d6-1777-41e8-8819-12e7044e235b
+                    [firstname] => JOAQUIM 
+                    [lastname] => TAVARES DE SANTANA
+                    [companyname] => Santana Seguros Gerais
+                    [email] => santana@santanasegurosgerais.com.br
+                    [address1] => Rua Oneyda Alvarenga, 89 Cj 72
+                    [address2] => Vila da Saúde 
+                    [city] => São Paulo
+                    [state] => SP
+                    [postcode] => 04146-020
+                    [country] => BR
+                    [phonenumber] => 
+                    [tax_id] => 
+                    [password] => $2y$10$ayKLY8DCsdOntXOvIafRxufjSH6Mpo7hURcXaLly2/mK5zUdHoT9y
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2019-06-06
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => cMGBZFhpZLNhZgn6nnDJzvO1oHE=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-21 16:33:14
+                    [ip] => 187.22.184.159
+                    [host] => bb16b89f.virtua.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 1
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2019-06-21 10:33:23
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [fullname] => JOAQUIM  TAVARES DE SANTANA
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [telephoneNumber] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 1
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 
+    [lastlogin] => Date: 21/10/2019 16:33<br>IP Address: 187.22.184.159<br>Host: bb16b89f.virtua.com.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 067.093.628-68
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 067.093.628-68
+    [customfields4] => 
+)
+</pre>

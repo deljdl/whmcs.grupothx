@@ -1,0 +1,385 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3971
+    [id] => 3971
+    [1] => 275
+    [userid] => 275
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-10-27
+    [date] => 2017-10-27
+    [4] => 2017-11-03
+    [duedate] => 2017-11-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 275
+    [id] => 275
+    [uuid] => 4ab155de-44ef-47d8-a03f-f8772d12ac1d
+    [firstname] => Carlos
+    [lastname] => Alberto Pangardi
+    [fullname] => Carlos Alberto Pangardi
+    [companyname] => 
+    [email] => stectelecom@gmail.com
+    [address1] => Avenida Dezenove de Fevereiro, 30
+    [address2] => km 18
+    [city] => Osasco
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 06192-220
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 43796224
+    [password] => $2y$10$lhQqhGvUie4V.n75Wg1RbeppQdUTV6/RRLP4DVHj42hGEdnwc4QSe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1143796224
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/11/2017 11:11<br>IP Address: 191.183.101.54<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 090.734.958-73
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 090.734.958-73
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3971
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - stecsolucoes.com.br (03/11/2017 - 02/12/2017)
+                            [Description] => TIH - Master  - stecsolucoes.com.br (03/11/2017 - 02/12/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 10 dias de atraso
+                            [Description] => Juros por 10 dias de atraso
+                            [UnitPrice] => 99
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Carlos Alberto Pangardi
+            [Email] => stectelecom@gmail.com
+            [Identity] => 09073495873
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3971
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master  - stecsolucoes.com.br (03/11/2017 - 02/12/2017)
+                            [description] => TIH - Master  - stecsolucoes.com.br (03/11/2017 - 02/12/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 10 dias de atraso
+                            [description] => Juros por 10 dias de atraso
+                            [unitPrice] => 99
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 09073495873
+            [fullName] => Carlos Alberto Pangardi
+            [email] => stectelecom@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/7cdc1bda-0b89-4a07-b7d6-85d525b69b04
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+13/11/2017 11:55:13
+INICIO_______________________________________________________________LOG:BEGIN:::13/11/2017 11:13<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3971
+    [amount] => 3396
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => a5a8d98e27004a349d533604906b84c6
+    [created_date] => 13/11/2017 11:13:52
+    [customer_name] => Carlos Pangardi
+    [customer_phone] => 1143796224
+    [customer_identity] => 09073495873
+    [customer_email] => stectelecom@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 530034******4238
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626KUTFN9B7B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/11/2017 11:07:14
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3971 | Result->success | ValorPago ->29.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 3971
+    [amount] => 3396
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => a5a8d98e27004a349d533604906b84c6
+    [created_date] => 13/11/2017 11:13:52
+    [customer_name] => Carlos Pangardi
+    [customer_phone] => 1143796224
+    [customer_identity] => 09073495873
+    [customer_email] => stectelecom@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 530034******4238
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626KUTFN9B7B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/11/2017 11:57:18
+INICIO_______________________________________________________________LOG:BEGIN:::13/11/2017 11:18<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => a5a8d98e27004a349d533604906b84c6
+    [amount] => 3396
+    [order_number] => 3971
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/11/2017 11:57:18
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => a5a8d98e27004a349d533604906b84c6
+    [amount] => 3396
+    [order_number] => 3971
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/11/2017 11:58:18
+INICIO_______________________________________________________________LOG:BEGIN:::13/11/2017 11:18<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => a5a8d98e27004a349d533604906b84c6
+    [amount] => 3396
+    [order_number] => 3971
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/11/2017 11:58:18
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => a5a8d98e27004a349d533604906b84c6
+    [amount] => 3396
+    [order_number] => 3971
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4925
+    [id] => 4925
+    [1] => 304
+    [userid] => 304
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-05
+    [date] => 2018-07-05
+    [4] => 2018-07-05
+    [duedate] => 2018-07-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 112.50
+    [subtotal] => 112.50
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 112.50
+    [total] => 112.50
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 304
+    [id] => 304
+    [uuid] => f6023c14-2e44-42e5-82c3-51c7d1e057d7
+    [firstname] => Vivian
+    [lastname] => Milene Santos
+    [fullname] => Vivian Milene Santos
+    [companyname] => Tânia Decorações
+    [email] => vivian_pekena@hotmail.com
+    [address1] => Rua Isabel de Góis, 08 Bloco 05 Apto 82
+    [address2] => Jardim Botucatu
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04173-150
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11959196887
+    [password] => $2y$10$vX1bvr8nK9B7YXj4t7GpWOvAdZ1Hp7XSlhcKNSj35wolsQfk32c3q
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11959196887
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/07/2018 15:32<br>IP Address: 191.39.36.121<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11959196887
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 04002799832
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11959196887
+    [customfields3] => 04002799832
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4985
+    [id] => 4985
+    [1] => 251
+    [userid] => 251
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-20
+    [date] => 2018-07-20
+    [4] => 2018-07-27
+    [duedate] => 2018-07-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.70
+    [subtotal] => 89.70
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.70
+    [total] => 89.70
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 251
+    [id] => 251
+    [uuid] => 8315176c-843d-4353-8cc2-209eb645d15c
+    [firstname] => Eduardo
+    [lastname] => Zanoli
+    [fullname] => Eduardo Zanoli
+    [companyname] => FERZA SOLUCOES EM ACOS PARA CONSTRUCAO CIVIL LTDA - EPP
+    [email] => vendas@ferza.com.br
+    [address1] => ESTRADA ARUJA ITAQUA , 777 
+    [address2] => LIMOEIRO
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07405-500
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 114654-1144 117808-7056 
+    [password] => $2y$10$PR5K3ieq29gLKrc2IiC7i.Rer0eOOISDhgnpr5/PBsEYiK7X04fK.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11465411441178087056
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/07/2018 11:34<br>IP Address: 177.95.84.83<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.865.562/0001-63
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 18.865.562/0001-63
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

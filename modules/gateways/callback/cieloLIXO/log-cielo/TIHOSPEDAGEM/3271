@@ -1,0 +1,234 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3271
+    [id] => 3271
+    [1] => 272
+    [userid] => 272
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-04-28
+    [date] => 2017-04-28
+    [4] => 2017-04-28
+    [duedate] => 2017-04-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 100.00
+    [subtotal] => 100.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 100.00
+    [total] => 100.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 272
+    [id] => 272
+    [uuid] => e7ec2769-3353-43b3-861d-bf8de7e2d18d
+    [firstname] => Érico
+    [lastname] => Barrence Alves de Deus
+    [fullname] => Érico Barrence Alves de Deus
+    [companyname] => 
+    [email] => kinhobarao1@gmail.com
+    [address1] => Rua cachoeira da bandeira N 21
+    [address2] => São Nicolau
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03254-380
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 2719-2338 - (11) 97414-2840
+    [password] => $2y$10$mP/Fgap3FEZoV9P67I00ROPEloSGvgA/3uoEmRFGACscSKSzJC4YC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.112719233811974142840
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/04/2017 12:33<br>IP Address: 177.95.213.106<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11974142840
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 384.768.698-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11974142840
+    [customfields3] => 384.768.698-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3271
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora
+Descricao do Servico Solicitado: Logotipo + Estampa
+Parcelado em duas vezes
+                            [Description] => Desenvolvimento Por Hora
+Descricao do Servico Solicitado: Logotipo + Estampa
+Parcelado em duas vezes
+                            [UnitPrice] => 10000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Érico Barrence Alves de Deus
+            [Email] => kinhobarao1@gmail.com
+            [Identity] => 38476869843
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3271
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora
+Descricao do Servico Solicitado: Logotipo + Estampa
+Parcelado em duas vezes
+                            [description] => Desenvolvimento Por Hora
+Descricao do Servico Solicitado: Logotipo + Estampa
+Parcelado em duas vezes
+                            [unitPrice] => 10000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 38476869843
+            [fullName] => Érico Barrence Alves de Deus
+            [email] => kinhobarao1@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/a197e90c-d2b8-4127-9836-e5516ff9a0d7
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

@@ -1,0 +1,464 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5254
+    [id] => 5254
+    [1] => 326
+    [userid] => 326
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-25
+    [date] => 2018-09-25
+    [4] => 2018-09-25
+    [duedate] => 2018-09-25
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 257.97
+    [subtotal] => 257.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 257.97
+    [total] => 257.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 326
+    [id] => 326
+    [uuid] => 56260ef4-3100-41ef-93dc-d3f3a46277cf
+    [firstname] => Jaime
+    [lastname] => Neira
+    [fullname] => Jaime Neira
+    [companyname] => DHS PAPEIS INDUSTRIA, COMERCIO E PRESTACAO DE SERVICOS LTDA
+    [email] => jneira.dhs@gmail.com
+    [address1] => Rua Ribeirão Preto, 360
+    [address2] => Jardim Caiubi
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08588-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 46431015 11995567334
+    [password] => $2y$10$4ACfHnBoNFtdE.kELw7MAOt62ALD2CsoyV4s4QSXX9C.wjTBnIFWa
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114643101511995567334
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/09/2018 10:49<br>IP Address: 179.99.201.249<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995567334
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.694.891/0001-99
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995567334
+    [customfields3] => 18.694.891/0001-99
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5254
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - dhspapeis.com.br (25/09/2018 - 24/10/2018)
+                            [Description] => TIH - Master  - dhspapeis.com.br (25/09/2018 - 24/10/2018)
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Site Express - Site com ate 5 paginas.Sao propostos ate 3 Temasobrigatoria a contratacao da hospedagemNenhuma alteracao poder...
+                            [Description] => Site Express - Site com ate 5 paginas.Sao propostos ate 3 Temasobrigatoria a contratacao da hospedagemNenhuma alteracao podera ser feita na estrutura do tema escolhido.os elementos utilizados deverao estar presentes no tema escolhido.Qualquer alterac...
+                            [UnitPrice] => 22500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Jaime Neira
+            [Email] => jneira.dhs@gmail.com
+            [Identity] => 18694891000199
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5254
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Master  - dhspapeis.com.br (25/09/2018 - 24/10/2018)
+                            [description] => TIH - Master  - dhspapeis.com.br (25/09/2018 - 24/10/2018)
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Site Express - Site com ate 5 paginas.Sao propostos ate 3 Temasobrigatoria a contratacao da hospedagemNenhuma alteracao poder...
+                            [description] => Site Express - Site com ate 5 paginas.Sao propostos ate 3 Temasobrigatoria a contratacao da hospedagemNenhuma alteracao podera ser feita na estrutura do tema escolhido.os elementos utilizados deverao estar presentes no tema escolhido.Qualquer alterac...
+                            [unitPrice] => 22500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 6
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 7
+            [identity] => 18694891000199
+            [fullName] => Jaime Neira
+            [email] => jneira.dhs@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 8
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 9
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/08f0c977-7a25-43b5-91fc-8c3975d4e0ca
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+25/09/2018 10:11:54
+INICIO_______________________________________________________________LOG:BEGIN:::25/09/2018 10:54<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 5254
+    [amount] => 25797
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => c54dbb7056ea41f889a241d547e84f9e
+    [created_date] => 25/09/2018 10:54:09
+    [customer_name] => Jaime Neira
+    [customer_phone] => 1146431015
+    [customer_identity] => 18694891000199
+    [customer_email] => jneira.dhs@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 515590******8788
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627GKHKHV7HB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/09/2018 10:13:54
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->5254 | Result->success | ValorPago ->257.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 5254
+    [amount] => 25797
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => c54dbb7056ea41f889a241d547e84f9e
+    [created_date] => 25/09/2018 10:54:09
+    [customer_name] => Jaime Neira
+    [customer_phone] => 1146431015
+    [customer_identity] => 18694891000199
+    [customer_email] => jneira.dhs@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 515590******8788
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627GKHKHV7HB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 5254
+    [id] => 5254
+    [1] => 326
+    [userid] => 326
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-25
+    [date] => 2018-09-25
+    [4] => 2018-09-25
+    [duedate] => 2018-09-25
+    [5] => 2018-09-25 10:54:12
+    [datepaid] => 2018-09-25 10:54:12
+    [6] => 257.97
+    [subtotal] => 257.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 257.97
+    [total] => 257.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Paid
+    [status] => Paid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 326
+    [id] => 326
+    [uuid] => 56260ef4-3100-41ef-93dc-d3f3a46277cf
+    [firstname] => Jaime
+    [lastname] => Neira
+    [fullname] => Jaime Neira
+    [companyname] => DHS PAPEIS INDUSTRIA, COMERCIO E PRESTACAO DE SERVICOS LTDA
+    [email] => jneira.dhs@gmail.com
+    [address1] => Rua Ribeirão Preto, 360
+    [address2] => Jardim Caiubi
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08588-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 46431015 11995567334
+    [password] => $2y$10$4ACfHnBoNFtdE.kELw7MAOt62ALD2CsoyV4s4QSXX9C.wjTBnIFWa
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114643101511995567334
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/09/2018 10:49<br>IP Address: 179.99.201.249<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995567334
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.694.891/0001-99
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995567334
+    [customfields3] => 18.694.891/0001-99
+    [customfields4] => 
+)
+</pre>
+
+
+25/09/2018 10:14:58
+INICIO_______________________________________________________________LOG:BEGIN:::25/09/2018 10:58<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c54dbb7056ea41f889a241d547e84f9e
+    [amount] => 25797
+    [order_number] => 5254
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/09/2018 10:14:58
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c54dbb7056ea41f889a241d547e84f9e
+    [amount] => 25797
+    [order_number] => 5254
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

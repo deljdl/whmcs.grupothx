@@ -1,0 +1,243 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4669
+    [id] => 4669
+    [1] => 315
+    [userid] => 315
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-05-03
+    [date] => 2018-05-03
+    [4] => 2018-05-04
+    [duedate] => 2018-05-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 232.97
+    [subtotal] => 232.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 232.97
+    [total] => 232.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 315
+    [id] => 315
+    [uuid] => 6b87dd5d-df34-4784-b85c-12fbbc230a51
+    [firstname] => Link Publicações
+    [lastname] => 
+    [fullname] => Link Publicações 
+    [companyname] => Link Publicações Eireli
+    [email] => rh@linkpublicacoes.com.br
+    [address1] => Rua Teodoro Sampaio, 2767
+    [address2] => Pinheiros
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05405-250
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 113798-3469 11983760558
+    [password] => $2y$10$R5HphewubhVSiGNVTqsyVeanjHCbeRZpD9ZqvGnb9zjYm91eRW0Fu
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113798346911983760558
+    [billingcid] => 0
+    [notes] => Juliana pelo chat
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/05/2018 11:14<br>IP Address: 177.32.149.52<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11983760558
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29693718000192
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11983760558
+    [customfields3] => 29693718000192
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4669
+    [id] => 4669
+    [1] => 315
+    [userid] => 315
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-05-03
+    [date] => 2018-05-03
+    [4] => 2018-05-04
+    [duedate] => 2018-05-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 232.97
+    [subtotal] => 232.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 232.97
+    [total] => 232.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 315
+    [id] => 315
+    [uuid] => 6b87dd5d-df34-4784-b85c-12fbbc230a51
+    [firstname] => Renata
+    [lastname] => de Andrade Rodrigues
+    [fullname] => Renata de Andrade Rodrigues
+    [companyname] => Link Publicações Eireli
+    [email] => rh@linkpublicacoes.com.br
+    [address1] => Rua Teodoro Sampaio, 2767
+    [address2] => Pinheiros
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05405-250
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 113798-3469 11983760558
+    [password] => $2y$10$R5HphewubhVSiGNVTqsyVeanjHCbeRZpD9ZqvGnb9zjYm91eRW0Fu
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113798346911983760558
+    [billingcid] => 0
+    [notes] => Juliana pelo chat
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/05/2018 11:48<br>IP Address: 177.32.149.52<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11983760558
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29693718000192
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11983760558
+    [customfields3] => 29693718000192
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

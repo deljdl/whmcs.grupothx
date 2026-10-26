@@ -1,0 +1,246 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3174
+    [id] => 3174
+    [1] => 268
+    [userid] => 268
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-04-05
+    [date] => 2017-04-05
+    [4] => 2017-04-05
+    [duedate] => 2017-04-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 50.00
+    [subtotal] => 50.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 50.00
+    [total] => 50.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 268
+    [id] => 268
+    [uuid] => cf42c6d6-8ac1-4477-a426-41d4ce44f5cc
+    [firstname] => José
+    [lastname] => Washington de lima
+    [fullname] => José Washington de lima
+    [companyname] => 
+    [email] => washingtondelima.92@gmail.com
+    [address1] => Av Cicera Maria Rodrigues, 448
+    [address2] => Barreto
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417530
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => $2y$10$fni3k8jbWiK/tF48G3ujOuxZlU4XsjwUj3cIMKrJKLf9OJKOcfxuy
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/04/2017 15:03<br>IP Address: 177.18.236.95<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11941239871
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 43424688835
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11941239871
+    [customfields3] => 43424688835
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3174
+    [id] => 3174
+    [1] => 268
+    [userid] => 268
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-04-05
+    [date] => 2017-04-05
+    [4] => 2017-04-05
+    [duedate] => 2017-04-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 50.00
+    [subtotal] => 50.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 50.00
+    [total] => 50.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 268
+    [id] => 268
+    [uuid] => cf42c6d6-8ac1-4477-a426-41d4ce44f5cc
+    [firstname] => José
+    [lastname] => Washington de lima
+    [fullname] => José Washington de lima
+    [companyname] => 
+    [email] => washingtondelima.92@gmail.com
+    [address1] => Av Cicera Maria Rodrigues, 448
+    [address2] => Barreto
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417530
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => $2y$10$fni3k8jbWiK/tF48G3ujOuxZlU4XsjwUj3cIMKrJKLf9OJKOcfxuy
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/04/2017 19:05<br>IP Address: 179.94.167.16<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11941239871
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 43424688835
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11941239871
+    [customfields3] => 43424688835
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

@@ -1,0 +1,1203 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 6445
+    [id] => 6445
+    [1] => 30
+    [userid] => 30
+    [2] => 
+    [invoicenum] => 
+    [3] => 2019-08-08
+    [date] => 2019-08-08
+    [4] => 2019-08-15
+    [duedate] => 2019-08-15
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 39.96
+    [subtotal] => 39.96
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 39.96
+    [total] => 39.96
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => cielo
+    [paymentmethod] => cielo
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 30
+    [id] => 30
+    [uuid] => 233398f1-5d88-412a-90b2-50debe2f81b6
+    [firstname] => Adelson
+    [lastname] => Alves de Queiroz
+    [fullname] => Adelson Alves de Queiroz
+    [companyname] => Móveis Queiroz Ltda - Me
+    [email] => adelsonaq@ig.com.br
+    [address1] => Rua Dom Manoel 	Nº: 	257
+    [address2] => Jardim Obelisco
+    [city] => Poá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08565200
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11463631161146395336
+    [password] => ujgUsMcG0wrDsjYyc+x++FYNVMfZsdEmp4XF
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 30
+                    [uuid] => 233398f1-5d88-412a-90b2-50debe2f81b6
+                    [firstname] => Adelson
+                    [lastname] => Alves de Queiroz
+                    [companyname] => Móveis Queiroz Ltda - Me
+                    [email] => adelsonaq@ig.com.br
+                    [address1] => Rua Dom Manoel 	Nº: 	257
+                    [address2] => Jardim Obelisco
+                    [city] => Poá
+                    [state] => SP
+                    [postcode] => 08565200
+                    [country] => BR
+                    [phonenumber] => (11) 4636-3116 / (11)4639-5336
+                    [password] => ujgUsMcG0wrDsjYyc+x++FYNVMfZsdEmp4XF
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2014-03-12
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => j+ZaEEf8iFS6RaAWX60+ijPjiCw=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-08-19 14:38:58
+                    [ip] => 168.227.12.71
+                    [host] => 168.227.12.71.access.a85.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 30
+                    [uuid] => 233398f1-5d88-412a-90b2-50debe2f81b6
+                    [firstname] => Adelson
+                    [lastname] => Alves de Queiroz
+                    [companyname] => Móveis Queiroz Ltda - Me
+                    [email] => adelsonaq@ig.com.br
+                    [address1] => Rua Dom Manoel 	Nº: 	257
+                    [address2] => Jardim Obelisco
+                    [city] => Poá
+                    [state] => SP
+                    [postcode] => 08565200
+                    [country] => BR
+                    [phonenumber] => (11) 4636-3116 / (11)4639-5336
+                    [password] => ujgUsMcG0wrDsjYyc+x++FYNVMfZsdEmp4XF
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2014-03-12
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => j+ZaEEf8iFS6RaAWX60+ijPjiCw=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-08-19 14:38:58
+                    [ip] => 168.227.12.71
+                    [host] => 168.227.12.71.access.a85.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11463631161146395336
+    [telephoneNumber] => +55.11463631161146395336
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 19/08/2019 14:38<br>IP Address: 168.227.12.71<br>Host: 168.227.12.71.access.a85.com.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947530003
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 09.531.444/0001-28
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947530003
+    [customfields3] => 09.531.444/0001-28
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 6445
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Premium - moveisqueiroz.com (15/08/2019 - 14/09/2019)
+                            [Description] => TIH - Premium - moveisqueiroz.com (15/08/2019 - 14/09/2019)
+                            [UnitPrice] => 3996
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 400
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 4 dias de atraso
+                            [Description] => Juros por 4 dias de atraso
+                            [UnitPrice] => 53
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Adelson Alves de Queiroz
+            [Email] => adelsonaq@ig.com.br
+            [Identity] => 09531444000128
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 6445
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Premium - moveisqueiroz.com (15/08/2019 - 14/09/2019)
+                            [description] => TIH - Premium - moveisqueiroz.com (15/08/2019 - 14/09/2019)
+                            [unitPrice] => 3996
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 400
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [$id] => 6
+                            [name] => Juros por 4 dias de atraso
+                            [description] => Juros por 4 dias de atraso
+                            [unitPrice] => 53
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 7
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 09531444000128
+            [fullName] => Adelson Alves de Queiroz
+            [email] => adelsonaq@ig.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/1d96702e-ac92-430d-bac1-387b621224ef
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 6445
+    [id] => 6445
+    [1] => 30
+    [userid] => 30
+    [2] => 
+    [invoicenum] => 
+    [3] => 2019-08-08
+    [date] => 2019-08-08
+    [4] => 2019-08-15
+    [duedate] => 2019-08-15
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 39.96
+    [subtotal] => 39.96
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 39.96
+    [total] => 39.96
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => cielo
+    [paymentmethod] => cielo
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 30
+    [id] => 30
+    [uuid] => 233398f1-5d88-412a-90b2-50debe2f81b6
+    [firstname] => Adelson
+    [lastname] => Alves de Queiroz
+    [fullname] => Adelson Alves de Queiroz
+    [companyname] => Móveis Queiroz Ltda - Me
+    [email] => adelsonaq@ig.com.br
+    [address1] => Rua Dom Manoel 	Nº: 	257
+    [address2] => Jardim Obelisco
+    [city] => Poá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08565200
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11463631161146395336
+    [password] => ujgUsMcG0wrDsjYyc+x++FYNVMfZsdEmp4XF
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 30
+                    [uuid] => 233398f1-5d88-412a-90b2-50debe2f81b6
+                    [firstname] => Adelson
+                    [lastname] => Alves de Queiroz
+                    [companyname] => Móveis Queiroz Ltda - Me
+                    [email] => adelsonaq@ig.com.br
+                    [address1] => Rua Dom Manoel 	Nº: 	257
+                    [address2] => Jardim Obelisco
+                    [city] => Poá
+                    [state] => SP
+                    [postcode] => 08565200
+                    [country] => BR
+                    [phonenumber] => (11) 4636-3116 / (11)4639-5336
+                    [password] => ujgUsMcG0wrDsjYyc+x++FYNVMfZsdEmp4XF
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2014-03-12
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => j+ZaEEf8iFS6RaAWX60+ijPjiCw=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-08-19 14:40:12
+                    [ip] => 168.227.12.71
+                    [host] => 168.227.12.71.access.a85.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 30
+                    [uuid] => 233398f1-5d88-412a-90b2-50debe2f81b6
+                    [firstname] => Adelson
+                    [lastname] => Alves de Queiroz
+                    [companyname] => Móveis Queiroz Ltda - Me
+                    [email] => adelsonaq@ig.com.br
+                    [address1] => Rua Dom Manoel 	Nº: 	257
+                    [address2] => Jardim Obelisco
+                    [city] => Poá
+                    [state] => SP
+                    [postcode] => 08565200
+                    [country] => BR
+                    [phonenumber] => (11) 4636-3116 / (11)4639-5336
+                    [password] => ujgUsMcG0wrDsjYyc+x++FYNVMfZsdEmp4XF
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2014-03-12
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => j+ZaEEf8iFS6RaAWX60+ijPjiCw=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-08-19 14:40:12
+                    [ip] => 168.227.12.71
+                    [host] => 168.227.12.71.access.a85.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11463631161146395336
+    [telephoneNumber] => +55.11463631161146395336
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 19/08/2019 14:40<br>IP Address: 168.227.12.71<br>Host: 168.227.12.71.access.a85.com.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947530003
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 09.531.444/0001-28
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947530003
+    [customfields3] => 09.531.444/0001-28
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 6445
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Premium - moveisqueiroz.com (15/08/2019 - 14/09/2019)
+                            [Description] => TIH - Premium - moveisqueiroz.com (15/08/2019 - 14/09/2019)
+                            [UnitPrice] => 3996
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 400
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 4 dias de atraso
+                            [Description] => Juros por 4 dias de atraso
+                            [UnitPrice] => 53
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Adelson Alves de Queiroz
+            [Email] => adelsonaq@ig.com.br
+            [Identity] => 09531444000128
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 6445
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Premium - moveisqueiroz.com (15/08/2019 - 14/09/2019)
+                            [description] => TIH - Premium - moveisqueiroz.com (15/08/2019 - 14/09/2019)
+                            [unitPrice] => 3996
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 400
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [$id] => 6
+                            [name] => Juros por 4 dias de atraso
+                            [description] => Juros por 4 dias de atraso
+                            [unitPrice] => 53
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 7
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 09531444000128
+            [fullName] => Adelson Alves de Queiroz
+            [email] => adelsonaq@ig.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/3854c189-b543-44d6-bbbb-d2e527c10076
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+19/08/2019 14:47:41
+INICIO_______________________________________________________________LOG:BEGIN:::19/08/2019 14:41<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 6445
+    [amount] => 4449
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 20b8bfd245bd4a69935ea57a1ce81a1a
+    [created_date] => 19/08/2019 14:41:43
+    [customer_name] => Adelson Queiroz
+    [customer_phone] => 1146363116
+    [customer_identity] => 26051757821
+    [customer_email] => adelsonaq@ig.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552693******9765
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628CLPVL8P3B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+19/08/2019 14:54:41
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->6445 | Result->success | ValorPago ->39.96 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 6445
+    [amount] => 4449
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 20b8bfd245bd4a69935ea57a1ce81a1a
+    [created_date] => 19/08/2019 14:41:43
+    [customer_name] => Adelson Queiroz
+    [customer_phone] => 1146363116
+    [customer_identity] => 26051757821
+    [customer_email] => adelsonaq@ig.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552693******9765
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628CLPVL8P3B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+19/08/2019 14:49:44
+INICIO_______________________________________________________________LOG:BEGIN:::19/08/2019 14:44<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 20b8bfd245bd4a69935ea57a1ce81a1a
+    [amount] => 4449
+    [order_number] => 6445
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+19/08/2019 14:49:44
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 20b8bfd245bd4a69935ea57a1ce81a1a
+    [amount] => 4449
+    [order_number] => 6445
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

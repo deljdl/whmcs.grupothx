@@ -1,0 +1,385 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3171
+    [id] => 3171
+    [1] => 228
+    [userid] => 228
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-04-05
+    [date] => 2017-04-05
+    [4] => 2017-04-12
+    [duedate] => 2017-04-12
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 228
+    [id] => 228
+    [uuid] => 75e362d4-26d3-4b42-b2dd-4404be6fdea3
+    [firstname] => Ronaldo
+    [lastname] => Cesario Pereira Gorga
+    [fullname] => Ronaldo Cesario Pereira Gorga
+    [companyname] => ronaldogorga.com.br
+    [email] => ro_gorga@yahoo.com
+    [address1] => Rua Funchal, 411
+    [address2] => Vila Olímpia
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04551-060
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11963676968, 11 3841 9555
+    [password] => $2y$10$7Y0.oo94nBFhQ3m0rSrb0.H4UQf1SBQGu0JuNwHwXJNnnEgqLdcba
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.119636769681138419555
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/04/2017 10:34<br>IP Address: 177.48.131.51<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11963676968
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 22428564803
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11963676968
+    [customfields3] => 22428564803
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3171
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - ronaldogorga.com.br (12/04/2017 - 11/05/2017)
+                            [Description] => TIH - Master  - ronaldogorga.com.br (12/04/2017 - 11/05/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 90
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 111
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Ronaldo Cesario Pereira Gorga
+            [Email] => ro_gorga@yahoo.com
+            [Identity] => 22428564803
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3171
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master  - ronaldogorga.com.br (12/04/2017 - 11/05/2017)
+                            [description] => TIH - Master  - ronaldogorga.com.br (12/04/2017 - 11/05/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 90
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 111
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 22428564803
+            [fullName] => Ronaldo Cesario Pereira Gorga
+            [email] => ro_gorga@yahoo.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/6a91d3d7-9ff9-4ed0-91f3-a58720b6f73d
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+24/04/2017 10:43:37
+INICIO_______________________________________________________________LOG:BEGIN:::24/04/2017 10:37<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3171
+    [amount] => 3198
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 8e75e8caee044602b8c5db291fc36c59
+    [created_date] => 24/04/2017 10:37:40
+    [customer_name] => Ronaldo Gorga
+    [customer_phone] => 11963676968
+    [customer_identity] => 22428564803
+    [customer_email] => ro_gorga@yahoo.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 493101******4432
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626F1HBND0NB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+24/04/2017 10:53:37
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3171 | Result->success | ValorPago ->29.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 3171
+    [amount] => 3198
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 8e75e8caee044602b8c5db291fc36c59
+    [created_date] => 24/04/2017 10:37:40
+    [customer_name] => Ronaldo Gorga
+    [customer_phone] => 11963676968
+    [customer_identity] => 22428564803
+    [customer_email] => ro_gorga@yahoo.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 493101******4432
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626F1HBND0NB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+24/04/2017 10:37:45
+INICIO_______________________________________________________________LOG:BEGIN:::24/04/2017 10:45<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 8e75e8caee044602b8c5db291fc36c59
+    [amount] => 3198
+    [order_number] => 3171
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+24/04/2017 10:37:45
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 8e75e8caee044602b8c5db291fc36c59
+    [amount] => 3198
+    [order_number] => 3171
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+24/04/2017 10:38:45
+INICIO_______________________________________________________________LOG:BEGIN:::24/04/2017 10:45<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 8e75e8caee044602b8c5db291fc36c59
+    [amount] => 3198
+    [order_number] => 3171
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+24/04/2017 10:38:45
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 8e75e8caee044602b8c5db291fc36c59
+    [amount] => 3198
+    [order_number] => 3171
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

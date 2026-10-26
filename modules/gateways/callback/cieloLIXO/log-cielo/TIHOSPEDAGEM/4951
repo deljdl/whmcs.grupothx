@@ -1,0 +1,725 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4951
+    [id] => 4951
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-13
+    [date] => 2018-07-13
+    [4] => 2018-07-20
+    [duedate] => 2018-07-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 119.98
+    [subtotal] => 119.98
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 119.98
+    [total] => 119.98
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => $2y$10$FuEboA8bWKiSqVtdZqb6QeM5LrWBDg5kq3sski/E7sQ5Og0NSQXgC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 1
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/07/2018 09:33<br>IP Address: 138.94.20.45<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 20
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+    [customfields4] => 20
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4951
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - emporiomundoart.com.br (20/07/2018 - 19/08/2018)
+                            [Description] => TIH - Especial - emporiomundoart.com.br (20/07/2018 - 19/08/2018)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - trucksistema.com.br (20/07/2018 - 19/08/2018)
+                            [Description] => TIH - Especial - trucksistema.com.br (20/07/2018 - 19/08/2018)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+            [Identity] => 18674038000105
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4951
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Especial - emporiomundoart.com.br (20/07/2018 - 19/08/2018)
+                            [description] => TIH - Especial - emporiomundoart.com.br (20/07/2018 - 19/08/2018)
+                            [unitPrice] => 5999
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => TIH - Especial - trucksistema.com.br (20/07/2018 - 19/08/2018)
+                            [description] => TIH - Especial - trucksistema.com.br (20/07/2018 - 19/08/2018)
+                            [unitPrice] => 5999
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 6
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 7
+            [identity] => 18674038000105
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 8
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 9
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/0cbc0055-1712-4a72-a40d-fbf0b50ae41f
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+20/07/2018 9:31:34
+INICIO_______________________________________________________________LOG:BEGIN:::20/07/2018 9:34<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 4951
+    [amount] => 11998
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => fbf43183cfbc40a69c419bf02d23e45f
+    [created_date] => 20/07/2018 09:34:27
+    [customer_name] => Victor Santos
+    [customer_phone] => 11947244983
+    [customer_identity] => 18674038000105
+    [customer_email] => victor.araujo@ntc.com.vc
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 547749******3861
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777627ELUC5QVRB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/07/2018 9:31:34
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  4951
+
+POST:
+<pre>Array
+(
+    [order_number] => 4951
+    [amount] => 11998
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => fbf43183cfbc40a69c419bf02d23e45f
+    [created_date] => 20/07/2018 09:34:27
+    [customer_name] => Victor Santos
+    [customer_phone] => 11947244983
+    [customer_identity] => 18674038000105
+    [customer_email] => victor.araujo@ntc.com.vc
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 547749******3861
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777627ELUC5QVRB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/07/2018 9:45:36
+INICIO_______________________________________________________________LOG:BEGIN:::20/07/2018 9:36<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => fbf43183cfbc40a69c419bf02d23e45f
+    [amount] => 11998
+    [order_number] => 4951
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/07/2018 9:45:36
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  4951
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => fbf43183cfbc40a69c419bf02d23e45f
+    [amount] => 11998
+    [order_number] => 4951
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 4951
+    [id] => 4951
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-13
+    [date] => 2018-07-13
+    [4] => 2018-07-20
+    [duedate] => 2018-07-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 119.98
+    [subtotal] => 119.98
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 119.98
+    [total] => 119.98
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => $2y$10$FuEboA8bWKiSqVtdZqb6QeM5LrWBDg5kq3sski/E7sQ5Og0NSQXgC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 1
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 23/07/2018 15:12<br>IP Address: 177.102.238.238<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 20
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+    [customfields4] => 20
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4951
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - emporiomundoart.com.br (20/07/2018 - 19/08/2018)
+                            [Description] => TIH - Especial - emporiomundoart.com.br (20/07/2018 - 19/08/2018)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - trucksistema.com.br (20/07/2018 - 19/08/2018)
+                            [Description] => TIH - Especial - trucksistema.com.br (20/07/2018 - 19/08/2018)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 1200
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Juros por 3 dias de atraso
+                            [Description] => Juros por 3 dias de atraso
+                            [UnitPrice] => 119
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+            [Identity] => 18674038000105
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4951
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Especial - emporiomundoart.com.br (20/07/2018 - 19/08/2018)
+                            [description] => TIH - Especial - emporiomundoart.com.br (20/07/2018 - 19/08/2018)
+                            [unitPrice] => 5999
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => TIH - Especial - trucksistema.com.br (20/07/2018 - 19/08/2018)
+                            [description] => TIH - Especial - trucksistema.com.br (20/07/2018 - 19/08/2018)
+                            [unitPrice] => 5999
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [$id] => 6
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 1200
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [$id] => 7
+                            [name] => Juros por 3 dias de atraso
+                            [description] => Juros por 3 dias de atraso
+                            [unitPrice] => 119
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 8
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 9
+            [identity] => 18674038000105
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 10
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 11
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/a41d0d0d-dacf-4183-acf4-ec0e40155309
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+23/07/2018 15:15:14
+INICIO_______________________________________________________________LOG:BEGIN:::23/07/2018 15:14<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 4951
+    [amount] => 13317
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => f7ca995e2fdc4f339d5301f372134598
+    [created_date] => 23/07/2018 15:14:13
+    [customer_name] => Victor Santos
+    [customer_phone] => 11947244983
+    [customer_identity] => 18674038000105
+    [customer_email] => victor.araujo@ntc.com.vc
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552693******1209
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627EOO3LLETB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+23/07/2018 15:22:14
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->4951 | Result->success | ValorPago ->119.98 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 4951
+    [amount] => 13317
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => f7ca995e2fdc4f339d5301f372134598
+    [created_date] => 23/07/2018 15:14:13
+    [customer_name] => Victor Santos
+    [customer_phone] => 11947244983
+    [customer_identity] => 18674038000105
+    [customer_email] => victor.araujo@ntc.com.vc
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552693******1209
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627EOO3LLETB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+23/07/2018 15:55:17
+INICIO_______________________________________________________________LOG:BEGIN:::23/07/2018 15:17<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => f7ca995e2fdc4f339d5301f372134598
+    [amount] => 13317
+    [order_number] => 4951
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+23/07/2018 15:55:17
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => f7ca995e2fdc4f339d5301f372134598
+    [amount] => 13317
+    [order_number] => 4951
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

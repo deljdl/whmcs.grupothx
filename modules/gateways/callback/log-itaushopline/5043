@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5043
+    [id] => 5043
+    [1] => 167
+    [userid] => 167
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-03
+    [date] => 2018-08-03
+    [4] => 2018-08-10
+    [duedate] => 2018-08-10
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 167
+    [id] => 167
+    [uuid] => 8ab61080-f01e-4c2e-aa25-625e1947a6e5
+    [firstname] => Denise
+    [lastname] => Cristina Marangoni Iglesias Berni
+    [fullname] => Denise Cristina Marangoni Iglesias Berni
+    [companyname] => Iglesias Modelao e Fundio Ltda
+    [email] => iglesias@iglesiasfundicao.com.br
+    [address1] => RUA DELFINO RIBEIRO GUIMARAES, 161
+    [address2] => Mauá 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09380-190
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 4555 8986
+    [password] => $2y$10$1IJsvwsuXPsa2LZPZfGreeFNtpbJO9mhjK46.EA2Clvkz5PQpJSn2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.45558986
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/08/2018 09:03<br>IP Address: 191.199.195.178<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 12.855.795/0001-07
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 12.855.795/0001-07
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

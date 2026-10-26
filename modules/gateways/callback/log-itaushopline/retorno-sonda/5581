@@ -1,0 +1,98 @@
+
+POST
+<pre>Array
+(
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT01NTgxJmZpPTQyNTU4MWRk95523turZGgqDTi8pyhHryFx5/E=
+    [__EVENTVALIDATION] => /wEWBgLZh47UDALc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BW9Yv0OeFuhe3jS2dUpCViPHGHDx
+    [DC] => C72H55D218X210N3F142Z60S100H111O52J51V150S138K242Q37N52C231W146L255Q82L150B78I81A86J110J73U107T60Z157D235P51E216R122N0F22I40N
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00425581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 5581
+    [fi] => 425581
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 5581
+    [fi] => 425581
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT01NTgxJmZpPTQyNTU4MWRk95523turZGgqDTi8pyhHryFx5/E=
+    [__EVENTVALIDATION] => /wEWBgLZh47UDALc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BW9Yv0OeFuhe3jS2dUpCViPHGHDx
+    [DC] => C72H55D218X210N3F142Z60S100H111O52J51V150S138K242Q37N52C231W146L255Q82L150B78I81A86J110J73U107T60Z157D235P51E216R122N0F22I40N
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00425581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+    [jv_enter_ts_heIAoGOw2S] => 1545410898731
+    [jv_visits_count_heIAoGOw2S] => 1
+    [jv_utm_heIAoGOw2S] => 
+    [WHMCSeWdrAiYR38h0] => 7c9925ff102e163cb0ece66c3548890f
+    [jv_callback_ping_response_heIAoGOw2S] => {"work_time":null,"ok":true}
+    [jv_pages_count_heIAoGOw2S] => 2
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [CONTENT_LENGTH] => 523
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [CONTEXT_DOCUMENT_ROOT] => /home/tihosped/public_html
+    [CONTEXT_PREFIX] => 
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_COOKIE] => jv_enter_ts_heIAoGOw2S=1545410898731; jv_visits_count_heIAoGOw2S=1; jv_utm_heIAoGOw2S=; WHMCSeWdrAiYR38h0=7c9925ff102e163cb0ece66c3548890f; jv_callback_ping_response_heIAoGOw2S=%7B%22work_time%22%3Anull%2C%22ok%22%3Atrue%7D; jv_pages_count_heIAoGOw2S=2
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_ORIGIN] => https://shopline.itau.com.br
+    [HTTP_REFERER] => https://shopline.itau.com.br/shopline/Volta.aspx?codemp=J0194961710001810000024294&idloja=34902&npedido=00425581
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=5581&fi=425581
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 201.42.184.164
+    [REMOTE_PORT] => 53564
+    [REQUEST_METHOD] => POST
+    [REQUEST_SCHEME] => https
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=5581&fi=425581
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SCRIPT_URI] => https://tihospedagem.com.br/modules/gateways/callback/itauReT.php
+    [SCRIPT_URL] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.4.37 (cPanel) OpenSSL/1.0.2p mod_bwlimited/1.4
+    [SSL_TLS_SNI] => tihospedagem.com.br
+    [TZ] => America/Sao_Paulo
+    [UNIQUE_ID] => XB0ZbzTmkhnEIEupwktYDgAAAAc
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME_FLOAT] => 1545410927.09
+    [REQUEST_TIME] => 1545410927
+    [argv] => Array
+        (
+            [0] => i=5581&fi=425581
+        )
+
+    [argc] => 1
+)
+</pre>

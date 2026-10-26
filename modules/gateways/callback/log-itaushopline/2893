@@ -1,0 +1,1127 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2893
+    [id] => 2893
+    [1] => 111
+    [userid] => 111
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-23
+    [date] => 2017-01-23
+    [4] => 2017-01-28
+    [duedate] => 2017-01-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 111
+    [id] => 111
+    [uuid] => a0636f8f-a9da-4e92-8549-6e2fdec30ed2
+    [firstname] => Katya
+    [lastname] => Regina Faro
+    [fullname] => Katya Regina Faro
+    [companyname] => Blessed 
+    [email] => katyafaro@blessed.net.br
+    [address1] => Rua Maranhão, 569, 1 andar
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => 
+    [state] => 
+    [postcode] => 01240-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => tel: (11) 3337-5067 / (11) 3926-6592 / (11) 3926-6594
+    [password] => 2cmo12jVbwomW7q7BDF4g/pcz+r2BTgQHlZy
+    [statecode] => 
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113337506711392665921139266594
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 23/01/2017 10:58<br>IP Address: 189.62.167.225<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11987004141
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 255.263.868-64
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11987004141
+    [customfields3] => 255.263.868-64
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2893
+    [id] => 2893
+    [1] => 111
+    [userid] => 111
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-23
+    [date] => 2017-01-23
+    [4] => 2017-01-28
+    [duedate] => 2017-01-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 111
+    [id] => 111
+    [uuid] => a0636f8f-a9da-4e92-8549-6e2fdec30ed2
+    [firstname] => Katya
+    [lastname] => Regina Faro
+    [fullname] => Katya Regina Faro
+    [companyname] => Blessed 
+    [email] => katyafaro@blessed.net.br
+    [address1] => Rua Maranhão, 569, 1 andar
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => 
+    [state] => 
+    [postcode] => 01240-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => tel: (11) 3337-5067 / (11) 3926-6592 / (11) 3926-6594
+    [password] => 2cmo12jVbwomW7q7BDF4g/pcz+r2BTgQHlZy
+    [statecode] => 
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113337506711392665921139266594
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 23/01/2017 10:59<br>IP Address: 189.62.167.225<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11987004141
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 255.263.868-64
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11987004141
+    [customfields3] => 255.263.868-64
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2893
+    [id] => 2893
+    [1] => 111
+    [userid] => 111
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-23
+    [date] => 2017-01-23
+    [4] => 2017-01-28
+    [duedate] => 2017-01-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 111
+    [id] => 111
+    [uuid] => a0636f8f-a9da-4e92-8549-6e2fdec30ed2
+    [firstname] => Katya
+    [lastname] => Regina Faro
+    [fullname] => Katya Regina Faro
+    [companyname] => Blessed 
+    [email] => katyafaro@blessed.net.br
+    [address1] => Rua Maranhão, 569, 1 andar
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => 
+    [state] => 
+    [postcode] => 01240-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => tel: (11) 3337-5067 / (11) 3926-6592 / (11) 3926-6594
+    [password] => 2cmo12jVbwomW7q7BDF4g/pcz+r2BTgQHlZy
+    [statecode] => 
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113337506711392665921139266594
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/01/2017 14:22<br>IP Address: 201.6.128.251<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11987004141
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 255.263.868-64
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11987004141
+    [customfields3] => 255.263.868-64
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2893
+    [id] => 2893
+    [1] => 111
+    [userid] => 111
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-23
+    [date] => 2017-01-23
+    [4] => 2017-01-28
+    [duedate] => 2017-01-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 111
+    [id] => 111
+    [uuid] => a0636f8f-a9da-4e92-8549-6e2fdec30ed2
+    [firstname] => Katya
+    [lastname] => Regina Faro
+    [fullname] => Katya Regina Faro
+    [companyname] => Blessed 
+    [email] => katyafaro@blessed.net.br
+    [address1] => Rua Maranhão, 569, 1 andar
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => 
+    [state] => 
+    [postcode] => 01240-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => tel: (11) 3337-5067 / (11) 3926-6592 / (11) 3926-6594
+    [password] => 2cmo12jVbwomW7q7BDF4g/pcz+r2BTgQHlZy
+    [statecode] => 
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113337506711392665921139266594
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/01/2017 14:24<br>IP Address: 201.6.128.251<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11987004141
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 255.263.868-64
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11987004141
+    [customfields3] => 255.263.868-64
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2893
+    [id] => 2893
+    [1] => 111
+    [userid] => 111
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-23
+    [date] => 2017-01-23
+    [4] => 2017-01-28
+    [duedate] => 2017-01-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 111
+    [id] => 111
+    [uuid] => a0636f8f-a9da-4e92-8549-6e2fdec30ed2
+    [firstname] => Katya
+    [lastname] => Regina Faro
+    [fullname] => Katya Regina Faro
+    [companyname] => Blessed 
+    [email] => katyafaro@blessed.net.br
+    [address1] => Rua Maranhão, 569, 1 andar
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => 
+    [state] => 
+    [postcode] => 01240-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => tel: (11) 3337-5067 / (11) 3926-6592 / (11) 3926-6594
+    [password] => 2cmo12jVbwomW7q7BDF4g/pcz+r2BTgQHlZy
+    [statecode] => 
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113337506711392665921139266594
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/01/2017 14:25<br>IP Address: 201.6.128.251<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11987004141
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 255.263.868-64
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11987004141
+    [customfields3] => 255.263.868-64
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2893
+    [id] => 2893
+    [1] => 111
+    [userid] => 111
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-23
+    [date] => 2017-01-23
+    [4] => 2017-01-28
+    [duedate] => 2017-01-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 111
+    [id] => 111
+    [uuid] => a0636f8f-a9da-4e92-8549-6e2fdec30ed2
+    [firstname] => Katya
+    [lastname] => Regina Faro
+    [fullname] => Katya Regina Faro
+    [companyname] => Blessed 
+    [email] => katyafaro@blessed.net.br
+    [address1] => Rua Maranhão, 569, 1 andar
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => 
+    [state] => 
+    [postcode] => 01240-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => tel: (11) 3337-5067 / (11) 3926-6592 / (11) 3926-6594
+    [password] => 2cmo12jVbwomW7q7BDF4g/pcz+r2BTgQHlZy
+    [statecode] => 
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113337506711392665921139266594
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/01/2017 14:50<br>IP Address: 201.6.128.251<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11987004141
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 255.263.868-64
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11987004141
+    [customfields3] => 255.263.868-64
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2893
+    [id] => 2893
+    [1] => 111
+    [userid] => 111
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-23
+    [date] => 2017-01-23
+    [4] => 2017-01-28
+    [duedate] => 2017-01-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 111
+    [id] => 111
+    [uuid] => a0636f8f-a9da-4e92-8549-6e2fdec30ed2
+    [firstname] => Katya
+    [lastname] => Regina Faro
+    [fullname] => Katya Regina Faro
+    [companyname] => Blessed 
+    [email] => katyafaro@blessed.net.br
+    [address1] => Rua Maranhão, 569, 1 andar
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => 
+    [state] => 
+    [postcode] => 01240-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => tel: (11) 3337-5067 / (11) 3926-6592 / (11) 3926-6594
+    [password] => 2cmo12jVbwomW7q7BDF4g/pcz+r2BTgQHlZy
+    [statecode] => 
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113337506711392665921139266594
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/01/2017 14:53<br>IP Address: 201.6.128.251<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11987004141
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 255.263.868-64
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11987004141
+    [customfields3] => 255.263.868-64
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2893
+    [id] => 2893
+    [1] => 111
+    [userid] => 111
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-23
+    [date] => 2017-01-23
+    [4] => 2017-01-28
+    [duedate] => 2017-01-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 111
+    [id] => 111
+    [uuid] => a0636f8f-a9da-4e92-8549-6e2fdec30ed2
+    [firstname] => Katya
+    [lastname] => Regina Faro
+    [fullname] => Katya Regina Faro
+    [companyname] => Blessed 
+    [email] => katyafaro@blessed.net.br
+    [address1] => Rua Maranhão, 569, 1 andar
+    [address2] => Bom Retiro
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01240-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => tel: (11) 3337-5067 / (11) 3926-6592 / (11) 3926-6594
+    [password] => 2cmo12jVbwomW7q7BDF4g/pcz+r2BTgQHlZy
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113337506711392665921139266594
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/01/2017 14:55<br>IP Address: 201.6.128.251<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11987004141
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 255.263.868-64
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11987004141
+    [customfields3] => 255.263.868-64
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2893
+    [id] => 2893
+    [1] => 111
+    [userid] => 111
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-23
+    [date] => 2017-01-23
+    [4] => 2017-01-28
+    [duedate] => 2017-01-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2893
+    [id] => 2893
+    [1] => 111
+    [userid] => 111
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-23
+    [date] => 2017-01-23
+    [4] => 2017-01-28
+    [duedate] => 2017-01-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 111
+    [id] => 111
+    [uuid] => a0636f8f-a9da-4e92-8549-6e2fdec30ed2
+    [firstname] => Katya
+    [lastname] => Regina Faro
+    [fullname] => Katya Regina Faro
+    [companyname] => Blessed 
+    [email] => katyafaro@blessed.net.br
+    [address1] => Rua Maranhão, 569, 1 andar
+    [address2] => Bom Retiro
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01240-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => tel: (11) 3337-5067 / (11) 3926-6592 / (11) 3926-6594
+    [password] => 2cmo12jVbwomW7q7BDF4g/pcz+r2BTgQHlZy
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113337506711392665921139266594
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/01/2017 14:56<br>IP Address: 201.6.128.251<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11987004141
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 255.263.868-64
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11987004141
+    [customfields3] => 255.263.868-64
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

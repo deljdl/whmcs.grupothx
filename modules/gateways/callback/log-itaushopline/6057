@@ -1,0 +1,407 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 6057
+    [id] => 6057
+    [1] => 337
+    [userid] => 337
+    [2] => 
+    [invoicenum] => 
+    [3] => 2019-04-22
+    [date] => 2019-04-22
+    [4] => 2019-04-28
+    [duedate] => 2019-04-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 32.97
+    [subtotal] => 32.97
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 32.97
+    [total] => 32.97
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => itaushopline
+    [paymentmethod] => itaushopline
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 337
+    [id] => 337
+    [uuid] => 01e919ad-d274-4a9b-9127-72a5901d68a3
+    [firstname] => Israel 
+    [lastname] => Vinicius Buscaratti de Almeida
+    [fullname] => Israel  Vinicius Buscaratti de Almeida
+    [companyname] => JOPACK EMBALAGENS 
+    [email] => vinicius@jopak.ind.br
+    [address1] => Avenida New Jersey (C Ind Arujá), 805
+    [address2] => Portão
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07411-670
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146551212
+    [password] => $2y$10$xuF0U77C40CelbFfUFaFteNED3nqT/Y0Dz/KB.lBl7Kg/v16d6Twm
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 337
+                    [uuid] => 01e919ad-d274-4a9b-9127-72a5901d68a3
+                    [firstname] => Israel 
+                    [lastname] => Vinicius Buscaratti de Almeida
+                    [companyname] => JOPACK EMBALAGENS 
+                    [email] => vinicius@jopak.ind.br
+                    [address1] => Avenida New Jersey (C Ind Arujá), 805
+                    [address2] => Portão
+                    [city] => Arujá
+                    [state] => SP
+                    [postcode] => 07411-670
+                    [country] => BR
+                    [phonenumber] => +55.11 4655-1212
+                    [password] => $2y$10$xuF0U77C40CelbFfUFaFteNED3nqT/Y0Dz/KB.lBl7Kg/v16d6Twm
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2019-02-01
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => WnuzSmj28fPPphQy+Mj6DspOtdc=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-05-02 18:36:24
+                    [ip] => 138.94.113.230
+                    [host] => ivlz-138-94-113-230.iveloz.net.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 1
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 337
+                    [uuid] => 01e919ad-d274-4a9b-9127-72a5901d68a3
+                    [firstname] => Israel 
+                    [lastname] => Vinicius Buscaratti de Almeida
+                    [companyname] => JOPACK EMBALAGENS 
+                    [email] => vinicius@jopak.ind.br
+                    [address1] => Avenida New Jersey (C Ind Arujá), 805
+                    [address2] => Portão
+                    [city] => Arujá
+                    [state] => SP
+                    [postcode] => 07411-670
+                    [country] => BR
+                    [phonenumber] => +55.11 4655-1212
+                    [password] => $2y$10$xuF0U77C40CelbFfUFaFteNED3nqT/Y0Dz/KB.lBl7Kg/v16d6Twm
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2019-02-01
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => WnuzSmj28fPPphQy+Mj6DspOtdc=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-05-02 18:36:24
+                    [ip] => 138.94.113.230
+                    [host] => ivlz-138-94-113-230.iveloz.net.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 1
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146551212
+    [telephoneNumber] => +55.1146551212
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 1
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 
+    [lastlogin] => Date: 02/05/2019 18:36<br>IP Address: 138.94.113.230<br>Host: ivlz-138-94-113-230.iveloz.net.br
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11989934187
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 30045969000140
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11989934187
+    [customfields3] => 30045969000140
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

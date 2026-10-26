@@ -1,0 +1,261 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2982
+    [id] => 2982
+    [1] => 98
+    [userid] => 98
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-15
+    [date] => 2017-02-15
+    [4] => 2017-02-22
+    [duedate] => 2017-02-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 39.90
+    [subtotal] => 39.90
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 39.90
+    [total] => 39.90
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 98
+    [id] => 98
+    [uuid] => f881ca5c-3f18-4fe6-8382-418323b1da93
+    [firstname] => RENAN
+    [lastname] => SINÉZIO DE SOUZA
+    [fullname] => RENAN SINÉZIO DE SOUZA
+    [companyname] => Paulistana Cons.de Bombas Hidr.e Elet.Ltda - ME
+    [email] => adm@cidromak.com.br
+    [address1] => Rua Atílio Piffer, 33, Sala 09
+    [address2] => Casa Verde
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 02516-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 3858-2163 / (11) 3858-4525
+    [password] => 93353af0a414a1ebe6e8bb5469c6a63a:PucQ#
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11385821631138584525
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/03/2017 11:15<br>IP Address: 177.205.191.111<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2982
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Premium - cidromak.com.br (22/02/2017 - 21/03/2017)
+                            [Description] => TIH - Premium - cidromak.com.br (22/02/2017 - 21/03/2017)
+                            [UnitPrice] => 3990
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 120
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 14 dias de atraso
+                            [Description] => Juros por 14 dias de atraso
+                            [UnitPrice] => 173
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002982
+            [FullName] => RENAN SINÉZIO DE SOUZA
+            [Email] => adm@cidromak.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2982
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Premium - cidromak.com.br (22/02/2017 - 21/03/2017)
+                            [description] => TIH - Premium - cidromak.com.br (22/02/2017 - 21/03/2017)
+                            [unitPrice] => 3990
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 120
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 14 dias de atraso
+                            [description] => Juros por 14 dias de atraso
+                            [unitPrice] => 173
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002982
+            [fullName] => RENAN SINÉZIO DE SOUZA
+            [email] => adm@cidromak.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/3bd3e540-b22d-43d6-b253-7beb43d21ca5
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

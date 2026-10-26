@@ -1,0 +1,384 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3067
+    [id] => 3067
+    [1] => 177
+    [userid] => 177
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-08
+    [date] => 2017-03-08
+    [4] => 2017-03-15
+    [duedate] => 2017-03-15
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 23.97
+    [subtotal] => 23.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 23.97
+    [total] => 23.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 177
+    [id] => 177
+    [uuid] => 57d1fa72-760d-4a6b-bc0c-515f9f47ca1f
+    [firstname] => Fabio
+    [lastname] => Roberto Alves de Lima
+    [fullname] => Fabio Roberto Alves de Lima
+    [companyname] => Revenda 
+    [email] => fabioradl@gmail.com
+    [address1] => Rua prefeito rinaldo Poli, 1184
+    [address2] => Jd. City
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07082530
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 9-87162489
+    [password] => $2y$10$6yAzVlADvTWYNu4nVDPTkO/MUTy9O7JdcSp5dHyLtQm7fK1fiDCp2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.987162489
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/03/2017 09:06<br>IP Address: 191.183.100.167<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11987162489
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 342931398-85
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11987162489
+    [customfields3] => 342931398-85
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3067
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - winetecnologia.com.br (15/03/2017 - 14/04/2017)
+                            [Description] => TIH - Master - winetecnologia.com.br (15/03/2017 - 14/04/2017)
+                            [UnitPrice] => 2397
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 72
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 89
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Fabio Roberto Alves de Lima
+            [Email] => fabioradl@gmail.com
+            [Identity] => 34293139885
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 3067
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - winetecnologia.com.br (15/03/2017 - 14/04/2017)
+                            [description] => TIH - Master - winetecnologia.com.br (15/03/2017 - 14/04/2017)
+                            [unitPrice] => 2397
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 72
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 89
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 34293139885
+            [fullName] => Fabio Roberto Alves de Lima
+            [email] => fabioradl@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/de4bd699-b5ab-4352-af88-a6ce6c82d3e9
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+27/03/2017 9:57:08
+INICIO_______________________________________________________________LOG:BEGIN:::27/03/2017 9:08<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3067
+    [amount] => 2558
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 1f73f1f8bb54424d9ae110bd817589db
+    [created_date] => 27/03/2017 09:08:54
+    [customer_name] => WINE LTDA
+    [customer_phone] => 1143796224
+    [customer_identity] => 23862933000193
+    [customer_email] => fabio.lima@winetecnologia.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******9468
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626E7DT0SHJB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/03/2017 9:02:09
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3067 | Result->success | ValorPago ->23.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 3067
+    [amount] => 2558
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 1f73f1f8bb54424d9ae110bd817589db
+    [created_date] => 27/03/2017 09:08:54
+    [customer_name] => WINE LTDA
+    [customer_phone] => 1143796224
+    [customer_identity] => 23862933000193
+    [customer_email] => fabio.lima@winetecnologia.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******9468
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626E7DT0SHJB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/03/2017 9:52:15
+INICIO_______________________________________________________________LOG:BEGIN:::27/03/2017 9:15<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1f73f1f8bb54424d9ae110bd817589db
+    [amount] => 2558
+    [order_number] => 3067
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/03/2017 9:52:15
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1f73f1f8bb54424d9ae110bd817589db
+    [amount] => 2558
+    [order_number] => 3067
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/03/2017 9:53:15
+INICIO_______________________________________________________________LOG:BEGIN:::27/03/2017 9:15<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1f73f1f8bb54424d9ae110bd817589db
+    [amount] => 2558
+    [order_number] => 3067
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/03/2017 9:53:15
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1f73f1f8bb54424d9ae110bd817589db
+    [amount] => 2558
+    [order_number] => 3067
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

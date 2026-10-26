@@ -1,0 +1,1072 @@
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 108
+    [clientid] => 83
+    [orderid] => 0
+    [pid] => 2
+    [regdate] => 2014-08-12
+    [name] => 
+    [translated_name] => TIH - PLUS
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => espacoprint.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [firstpaymentamount] => 129.16
+    [recurringamount] => 129.16
+    [paymentmethod] => boleto_itau_sem_registro
+    [paymentmethodname] => Boleto Itaú
+    [billingcycle] => Semi-Annually
+    [nextduedate] => 2017-08-15
+    [status] => Active
+    [username] => espacopr
+    [password] => 
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 2015-03-14
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => Imported using WHM Import Script - Payment Method, Pricing, Billing Cycle &amp; Next Due Date may be incorrect
+    [diskusage] => 156
+    [disklimit] => 5000
+    [bwusage] => 1559
+    [bwlimit] => 0
+    [lastupdate] => 2017-03-17 09:00:23
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 83
+    [id] => 83
+    [uuid] => 79fe7fad-fbf2-49f1-aad0-ce871920ed29
+    [firstname] => Michel
+    [lastname] => Costa
+    [fullname] => Michel Costa
+    [companyname] => MICHEL COSTA ME
+    [email] => drmichelcosta@hotmail.com
+    [address1] => Rua Leopoldo Couto de Magalhães Junior, 396
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 30784569, 36242001
+    [password] => d3e1795ad751bb44c70a0813a85dbc95:S)PFs
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3078456936242001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 354.16
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/03/2017 23:04<br>IP Address: 191.32.170.214<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995016683
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 08.279.944/0001-51
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995016683
+    [customfields3] => 08.279.944/0001-51
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s108
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - PLUS
+                            [UnitPrice] => 12916
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => SemiAnnual
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 08279944000151
+            [FullName] => Michel Costa
+            [Email] => drmichelcosta@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => s108
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - PLUS
+                            [unitPrice] => 12916
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => SemiAnnual
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 08279944000151
+            [fullName] => Michel Costa
+            [email] => drmichelcosta@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/375fd66f-f9e0-4553-8fa5-db0027b73331
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 108
+    [clientid] => 83
+    [orderid] => 0
+    [pid] => 2
+    [regdate] => 2014-08-12
+    [name] => 
+    [translated_name] => TIH - PLUS
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => espacoprint.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [firstpaymentamount] => 129.16
+    [recurringamount] => 129.16
+    [paymentmethod] => boleto_itau_sem_registro
+    [paymentmethodname] => Boleto Itaú
+    [billingcycle] => Semi-Annually
+    [nextduedate] => 2017-08-15
+    [status] => Active
+    [username] => espacopr
+    [password] => 
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 2015-03-14
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => Imported using WHM Import Script - Payment Method, Pricing, Billing Cycle &amp; Next Due Date may be incorrect
+    [diskusage] => 156
+    [disklimit] => 5000
+    [bwusage] => 1559
+    [bwlimit] => 0
+    [lastupdate] => 2017-03-17 09:00:23
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 83
+    [id] => 83
+    [uuid] => 79fe7fad-fbf2-49f1-aad0-ce871920ed29
+    [firstname] => Michel
+    [lastname] => Costa
+    [fullname] => Michel Costa
+    [companyname] => MICHEL COSTA ME
+    [email] => drmichelcosta@hotmail.com
+    [address1] => Rua Leopoldo Couto de Magalhães Junior, 396
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 30784569, 36242001
+    [password] => d3e1795ad751bb44c70a0813a85dbc95:S)PFs
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3078456936242001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 354.16
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/03/2017 23:14<br>IP Address: 191.32.170.214<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995016683
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 08.279.944/0001-51
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995016683
+    [customfields3] => 08.279.944/0001-51
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s108
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - PLUS
+                            [UnitPrice] => 12916
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => SemiAnnual
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 08279944000151
+            [FullName] => Michel Costa
+            [Email] => drmichelcosta@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => s108
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - PLUS
+                            [unitPrice] => 12916
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => SemiAnnual
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 08279944000151
+            [fullName] => Michel Costa
+            [email] => drmichelcosta@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/3160b50b-3cbc-416a-9412-bd78fd9fc139
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 108
+    [clientid] => 83
+    [orderid] => 0
+    [pid] => 2
+    [regdate] => 2014-08-12
+    [name] => 
+    [translated_name] => TIH - PLUS
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => espacoprint.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [firstpaymentamount] => 129.16
+    [recurringamount] => 129.16
+    [paymentmethod] => boleto_itau_sem_registro
+    [paymentmethodname] => Boleto Itaú
+    [billingcycle] => Semi-Annually
+    [nextduedate] => 2017-08-15
+    [status] => Active
+    [username] => espacopr
+    [password] => 
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 2015-03-14
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => Imported using WHM Import Script - Payment Method, Pricing, Billing Cycle &amp; Next Due Date may be incorrect
+    [diskusage] => 156
+    [disklimit] => 5000
+    [bwusage] => 1559
+    [bwlimit] => 0
+    [lastupdate] => 2017-03-17 09:00:23
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 83
+    [id] => 83
+    [uuid] => 79fe7fad-fbf2-49f1-aad0-ce871920ed29
+    [firstname] => Michel
+    [lastname] => Costa
+    [fullname] => Michel Costa
+    [companyname] => MICHEL COSTA ME
+    [email] => drmichelcosta@hotmail.com
+    [address1] => Rua Leopoldo Couto de Magalhães Junior, 396
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 30784569, 36242001
+    [password] => d3e1795ad751bb44c70a0813a85dbc95:S)PFs
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3078456936242001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 354.16
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/03/2017 23:25<br>IP Address: 191.32.170.214<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995016683
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 08.279.944/0001-51
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995016683
+    [customfields3] => 08.279.944/0001-51
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s108
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - PLUS
+                            [UnitPrice] => 12916
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => SemiAnnual
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 08279944000151
+            [FullName] => Michel Costa
+            [Email] => drmichelcosta@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => s108
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - PLUS
+                            [unitPrice] => 12916
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => SemiAnnual
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 08279944000151
+            [fullName] => Michel Costa
+            [email] => drmichelcosta@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/b34b1201-a325-437e-ba79-ec43593bdd24
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 108
+    [clientid] => 83
+    [orderid] => 0
+    [pid] => 2
+    [regdate] => 2014-08-12
+    [name] => 
+    [translated_name] => TIH - PLUS
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => espacoprint.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [firstpaymentamount] => 129.16
+    [recurringamount] => 129.16
+    [paymentmethod] => boleto_itau_sem_registro
+    [paymentmethodname] => Boleto Itaú
+    [billingcycle] => Semi-Annually
+    [nextduedate] => 2017-08-15
+    [status] => Active
+    [username] => espacopr
+    [password] => 
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 2015-03-14
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => Imported using WHM Import Script - Payment Method, Pricing, Billing Cycle &amp; Next Due Date may be incorrect
+    [diskusage] => 156
+    [disklimit] => 5000
+    [bwusage] => 1559
+    [bwlimit] => 0
+    [lastupdate] => 2017-03-17 09:00:23
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 83
+    [id] => 83
+    [uuid] => 79fe7fad-fbf2-49f1-aad0-ce871920ed29
+    [firstname] => Michel
+    [lastname] => Costa
+    [fullname] => Michel Costa
+    [companyname] => MICHEL COSTA ME
+    [email] => drmichelcosta@hotmail.com
+    [address1] => Rua Leopoldo Couto de Magalhães Junior, 396
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 30784569, 36242001
+    [password] => d3e1795ad751bb44c70a0813a85dbc95:S)PFs
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3078456936242001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 354.16
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/03/2017 23:27<br>IP Address: 191.32.170.214<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995016683
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 08.279.944/0001-51
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995016683
+    [customfields3] => 08.279.944/0001-51
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s108
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - PLUS
+                            [UnitPrice] => 12916
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => SemiAnnual
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 08279944000151
+            [FullName] => Michel Costa
+            [Email] => drmichelcosta@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => s108
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - PLUS
+                            [unitPrice] => 12916
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => SemiAnnual
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 08279944000151
+            [fullName] => Michel Costa
+            [email] => drmichelcosta@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/1740e525-11ea-43ec-87dd-2e91d29a5d19
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

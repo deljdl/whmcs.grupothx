@@ -1,0 +1,349 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3481
+    [id] => 3481
+    [1] => 276
+    [userid] => 276
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-06-19
+    [date] => 2017-06-19
+    [4] => 2017-06-19
+    [duedate] => 2017-06-19
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 200.00
+    [subtotal] => 200.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 200.00
+    [total] => 200.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 276
+    [id] => 276
+    [uuid] => fc55d0e8-ce84-4b40-9520-dd9439f21a3a
+    [firstname] => Valdir
+    [lastname] => Azevedo de Santana
+    [fullname] => Valdir Azevedo de Santana
+    [companyname] => InvestTeam
+    [email] => valdirinvest@gmail.com
+    [address1] => Rua Bernadete Dias, 21 C
+    [address2] => Boca do Rio
+    [city] => Salvador
+    [fullstate] => BA
+    [state] => BA
+    [postcode] => 41710040
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 71988523479
+    [password] => $2y$10$4Klqz0JMK94o2GKAeTjiHeBJ.LEOob7shp0Jxa8fm5uslY1dX/6Ai
+    [statecode] => BA
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.71988523479
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 19/06/2017 15:45<br>IP Address: 191.138.79.139<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 71988523479
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 94428000510
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 71988523479
+    [customfields3] => 94428000510
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3481
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Tradutor do google, correcao do site em celulares e correcao do analytics
+                            [Description] => Desenvolvimento Por Hora - Tradutor do google, correcao do site em celulares e correcao do analytics
+                            [UnitPrice] => 20000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Valdir Azevedo de Santana
+            [Email] => valdirinvest@gmail.com
+            [Identity] => 94428000510
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3481
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Tradutor do google, correcao do site em celulares e correcao do analytics
+                            [description] => Desenvolvimento Por Hora - Tradutor do google, correcao do site em celulares e correcao do analytics
+                            [unitPrice] => 20000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 94428000510
+            [fullName] => Valdir Azevedo de Santana
+            [email] => valdirinvest@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/5b84e344-28fe-44e7-8a55-9f0a8cfadbbe
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+19/06/2017 15:40:54
+INICIO_______________________________________________________________LOG:BEGIN:::19/06/2017 15:54<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3481
+    [amount] => 20000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 4a64356388e64d609f35b4cd21f2b38d
+    [created_date] => 19/06/2017 15:54:38
+    [customer_name] => Valdir Santana
+    [customer_phone] => 71988523479
+    [customer_identity] => 94428000510
+    [customer_email] => valdirinvest@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 516292******9840
+    [payment_installments] => 4
+    [payment_status] => 2
+    [tid] => 10760777626GLNT6OFDB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+19/06/2017 15:43:54
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3481 | Result->success | ValorPago ->200.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 3481
+    [amount] => 20000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 4a64356388e64d609f35b4cd21f2b38d
+    [created_date] => 19/06/2017 15:54:38
+    [customer_name] => Valdir Santana
+    [customer_phone] => 71988523479
+    [customer_identity] => 94428000510
+    [customer_email] => valdirinvest@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 516292******9840
+    [payment_installments] => 4
+    [payment_status] => 2
+    [tid] => 10760777626GLNT6OFDB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+19/06/2017 16:08:04
+INICIO_______________________________________________________________LOG:BEGIN:::19/06/2017 16:04<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 4a64356388e64d609f35b4cd21f2b38d
+    [amount] => 20000
+    [order_number] => 3481
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+19/06/2017 16:08:04
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 4a64356388e64d609f35b4cd21f2b38d
+    [amount] => 20000
+    [order_number] => 3481
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+19/06/2017 16:08:04
+INICIO_______________________________________________________________LOG:BEGIN:::19/06/2017 16:04<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 4a64356388e64d609f35b4cd21f2b38d
+    [amount] => 20000
+    [order_number] => 3481
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+19/06/2017 16:08:04
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 4a64356388e64d609f35b4cd21f2b38d
+    [amount] => 20000
+    [order_number] => 3481
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

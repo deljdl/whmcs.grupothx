@@ -1,0 +1,115 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2818
+    [id] => 2818
+    [1] => 109
+    [userid] => 109
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-02
+    [date] => 2017-01-02
+    [4] => 2017-01-09
+    [duedate] => 2017-01-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 498.96
+    [subtotal] => 498.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 498.96
+    [total] => 498.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 109
+    [id] => 109
+    [uuid] => 79e07457-5a77-4880-93c3-104468b5dea6
+    [firstname] => Daniela
+    [lastname] => Trindade Reis
+    [fullname] => Daniela Trindade Reis
+    [companyname] => Klipps - Comunicação e Marketing
+    [email] => daniela@klipps.com.br
+    [address1] => 
+    [address2] => 
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => 6dfb858e32c3157220c3fee8a5045208:NJf!k
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => Cobrar segunda parcela borvultex !!!
+
+Notas 8%
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 11/01/2017 09:11<br>IP Address: 177.205.216.28<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 3191066743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 35.695.796-97
+                )
+
+        )
+
+    [customfields2] => 3191066743
+    [customfields3] => 35.695.796-97
+)
+</pre>

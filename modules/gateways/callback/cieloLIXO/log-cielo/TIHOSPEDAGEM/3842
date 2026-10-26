@@ -1,0 +1,385 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3842
+    [id] => 3842
+    [1] => 283
+    [userid] => 283
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-09-21
+    [date] => 2017-09-21
+    [4] => 2017-09-28
+    [duedate] => 2017-09-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 283
+    [id] => 283
+    [uuid] => f16845c7-0570-436f-b7ec-6daff14671b4
+    [firstname] => Talles
+    [lastname] => Tatagiba Martins de Souza
+    [fullname] => Talles Tatagiba Martins de Souza
+    [companyname] => Instituto Elevar
+    [email] => talles@gmail.com
+    [address1] => Av. Nicolau Von Schilgen, 100
+    [address2] => Mata da Praia
+    [city] => Vitória
+    [fullstate] => ES
+    [state] => ES
+    [postcode] => 29065-130
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11974551875 
+    [password] => $2y$10$sA4G7EuB4fy6RDxNtafjHeEx4U5iTyxQ.TywUByvcHGULn4AvvN/.
+    [statecode] => ES
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11974551875
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/10/2017 09:08<br>IP Address: 202.1.195.110<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11974551875
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 12297475756
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11974551875
+    [customfields3] => 12297475756
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3842
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - institutoelevar.com.br (28/09/2017 - 27/10/2017)
+                            [Description] => TIH - Master  - institutoelevar.com.br (28/09/2017 - 27/10/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 10 dias de atraso
+                            [Description] => Juros por 10 dias de atraso
+                            [UnitPrice] => 99
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Talles Tatagiba Martins de Souza
+            [Email] => talles@gmail.com
+            [Identity] => 12297475756
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3842
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master  - institutoelevar.com.br (28/09/2017 - 27/10/2017)
+                            [description] => TIH - Master  - institutoelevar.com.br (28/09/2017 - 27/10/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 10 dias de atraso
+                            [description] => Juros por 10 dias de atraso
+                            [unitPrice] => 99
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 12297475756
+            [fullName] => Talles Tatagiba Martins de Souza
+            [email] => talles@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/bc4c71fa-6dbf-4f88-8014-67cd144650cf
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+08/10/2017 9:49:09
+INICIO_______________________________________________________________LOG:BEGIN:::08/10/2017 9:09<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3842
+    [amount] => 3396
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 1293f8b4ab45450d810fdcdaf63bc9b3
+    [created_date] => 08/10/2017 09:09:47
+    [customer_name] => Talles Souza
+    [customer_phone] => 11974551875
+    [customer_identity] => 12297475756
+    [customer_email] => talles@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 516220******6881
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626JTA8V1MDB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/10/2017 9:53:09
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3842 | Result->success | ValorPago ->29.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 3842
+    [amount] => 3396
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 1293f8b4ab45450d810fdcdaf63bc9b3
+    [created_date] => 08/10/2017 09:09:47
+    [customer_name] => Talles Souza
+    [customer_phone] => 11974551875
+    [customer_identity] => 12297475756
+    [customer_email] => talles@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 516220******6881
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626JTA8V1MDB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/10/2017 9:03:10
+INICIO_______________________________________________________________LOG:BEGIN:::08/10/2017 9:10<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1293f8b4ab45450d810fdcdaf63bc9b3
+    [amount] => 3396
+    [order_number] => 3842
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/10/2017 9:03:10
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1293f8b4ab45450d810fdcdaf63bc9b3
+    [amount] => 3396
+    [order_number] => 3842
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/10/2017 9:04:10
+INICIO_______________________________________________________________LOG:BEGIN:::08/10/2017 9:10<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1293f8b4ab45450d810fdcdaf63bc9b3
+    [amount] => 3396
+    [order_number] => 3842
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/10/2017 9:04:10
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1293f8b4ab45450d810fdcdaf63bc9b3
+    [amount] => 3396
+    [order_number] => 3842
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

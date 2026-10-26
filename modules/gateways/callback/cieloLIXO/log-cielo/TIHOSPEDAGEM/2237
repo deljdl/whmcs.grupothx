@@ -1,0 +1,251 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2237
+    [id] => 2237
+    [1] => 220
+    [userid] => 220
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-07-29
+    [date] => 2016-07-29
+    [4] => 2016-08-01
+    [duedate] => 2016-08-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1649.00
+    [subtotal] => 1649.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1649.00
+    [total] => 1649.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 220
+    [id] => 220
+    [uuid] => ceb87549-873c-41af-ac80-08e8f0862da4
+    [firstname] => Leandro
+    [lastname] => Oliveira da Silva
+    [fullname] => Leandro Oliveira da Silva
+    [companyname] => Arena Militar
+    [email] => le_oliveira2@hotmail.com
+    [address1] => Rua Adelaide Maria de Jesus, 137
+    [address2] => Sobrado azul
+    [city] => Santa Isabel
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 970993637
+    [password] => $2y$10$kxZ4u1V0njw3Wh.XepJ1wemVJL0NkaCGRsvR7cZP64Jbf7PJEySS.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11970993637
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 29/07/2016 15:43<br>IP Address: 177.41.209.5<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] =>  11970993637
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 320.541.098-00
+                )
+
+        )
+
+    [customfields2] =>  11970993637
+    [customfields3] => 320.541.098-00
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2237
+    [SoftDescriptor] => 2237
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Loja Virtual
+Observações:: Loja Virtual Conforme Proposta N° 1108-V2
+                            [Description] => Loja Virtual
+Observações:: Loja Virtual Conforme Proposta N° 1108-V2
+                            [UnitPrice] => 149900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Logo Criação
+                            [Description] => Logo Criação
+                            [UnitPrice] => 15000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Leandro Oliveira da Silva
+            [Email] => le_oliveira2@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2237
+    [softDescriptor] => 2237
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Loja Virtual
+Observações:: Loja Virtual Conforme Proposta N° 1108-V2
+                            [description] => Loja Virtual
+Observações:: Loja Virtual Conforme Proposta N° 1108-V2
+                            [unitPrice] => 149900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Logo Criação
+                            [description] => Logo Criação
+                            [unitPrice] => 15000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Leandro Oliveira da Silva
+            [email] => le_oliveira2@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/32c7b144-fcce-4bb8-814e-1bbca6a3ec61
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>

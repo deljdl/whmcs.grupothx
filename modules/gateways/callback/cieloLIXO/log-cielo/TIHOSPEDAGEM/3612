@@ -1,0 +1,1252 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3612
+    [id] => 3612
+    [1] => 4
+    [userid] => 4
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-07-25
+    [date] => 2017-07-25
+    [4] => 2017-08-01
+    [duedate] => 2017-08-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 4
+    [id] => 4
+    [uuid] => e08aadfd-b411-45b2-96e9-772bf034877a
+    [firstname] => Marcio
+    [lastname] => Chagas
+    [fullname] => Marcio Chagas
+    [companyname] => Buffet AbcKids
+    [email] => contato@abckidsbuffet.com.br
+    [address1] => Av. 31 de Março, 2249
+    [address2] => Vila Flórida
+    [city] => São Bernardo do Campo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09660-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 3424-8710  (11) 4361-6328  (11) 3445-6700
+    [password] => 7e14413655b0af14a0d03c73d265263c:z(uMp
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113424871011436163281134456700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/08/2017 23:10<br>IP Address: 189.54.65.252<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11956551782
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 008.961.479/0001-34
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11956551782
+    [customfields3] => 008.961.479/0001-34
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3612
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - buffetabckids.com.br (01/08/2017 - 31/07/2018)
+                            [Description] => TIH - Master  - buffetabckids.com.br (01/08/2017 - 31/07/2018)
+                            [UnitPrice] => 35964
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 3596
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 4 dias de atraso
+                            [Description] => Juros por 4 dias de atraso
+                            [UnitPrice] => 475
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Marcio Chagas
+            [Email] => contato@abckidsbuffet.com.br
+            [Identity] => 008961479000134
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Customer.Identity] => Array
+                (
+                    [0] => [Customer.Identity] deve conter no mínimo 11 e no máximo 14 caracteres.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3612
+    [id] => 3612
+    [1] => 4
+    [userid] => 4
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-07-25
+    [date] => 2017-07-25
+    [4] => 2017-08-01
+    [duedate] => 2017-08-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 4
+    [id] => 4
+    [uuid] => e08aadfd-b411-45b2-96e9-772bf034877a
+    [firstname] => Marcio
+    [lastname] => Chagas
+    [fullname] => Marcio Chagas
+    [companyname] => Buffet AbcKids
+    [email] => contato@abckidsbuffet.com.br
+    [address1] => Av. 31 de Março, 2249
+    [address2] => Vila Flórida
+    [city] => São Bernardo do Campo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09660-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 3424-8710  (11) 4361-6328  (11) 3445-6700
+    [password] => 7e14413655b0af14a0d03c73d265263c:z(uMp
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113424871011436163281134456700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/08/2017 23:10<br>IP Address: 189.54.65.252<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11956551782
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 008.961.479/0001-34
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11956551782
+    [customfields3] => 008.961.479/0001-34
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3612
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - buffetabckids.com.br (01/08/2017 - 31/07/2018)
+                            [Description] => TIH - Master  - buffetabckids.com.br (01/08/2017 - 31/07/2018)
+                            [UnitPrice] => 35964
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 3596
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 4 dias de atraso
+                            [Description] => Juros por 4 dias de atraso
+                            [UnitPrice] => 475
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Marcio Chagas
+            [Email] => contato@abckidsbuffet.com.br
+            [Identity] => 008961479000134
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Customer.Identity] => Array
+                (
+                    [0] => [Customer.Identity] deve conter no mínimo 11 e no máximo 14 caracteres.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3612
+    [id] => 3612
+    [1] => 4
+    [userid] => 4
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-07-25
+    [date] => 2017-07-25
+    [4] => 2017-08-01
+    [duedate] => 2017-08-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 4
+    [id] => 4
+    [uuid] => e08aadfd-b411-45b2-96e9-772bf034877a
+    [firstname] => Marcio
+    [lastname] => Chagas
+    [fullname] => Marcio Chagas
+    [companyname] => Buffet AbcKids
+    [email] => contato@abckidsbuffet.com.br
+    [address1] => Av. 31 de Março, 2249
+    [address2] => Vila Flórida
+    [city] => São Bernardo do Campo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09660-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 3424-8710  (11) 4361-6328  (11) 3445-6700
+    [password] => 7e14413655b0af14a0d03c73d265263c:z(uMp
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113424871011436163281134456700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/08/2017 23:47<br>IP Address: 189.54.65.252<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11956551782
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 008.961.479/0001-34
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11956551782
+    [customfields3] => 008.961.479/0001-34
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3612
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - buffetabckids.com.br (01/08/2017 - 31/07/2018)
+                            [Description] => TIH - Master  - buffetabckids.com.br (01/08/2017 - 31/07/2018)
+                            [UnitPrice] => 35964
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 3596
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 4 dias de atraso
+                            [Description] => Juros por 4 dias de atraso
+                            [UnitPrice] => 475
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Marcio Chagas
+            [Email] => contato@abckidsbuffet.com.br
+            [Identity] => 008961479000134
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Customer.Identity] => Array
+                (
+                    [0] => [Customer.Identity] deve conter no mínimo 11 e no máximo 14 caracteres.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3612
+    [id] => 3612
+    [1] => 4
+    [userid] => 4
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-07-25
+    [date] => 2017-07-25
+    [4] => 2017-08-01
+    [duedate] => 2017-08-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 4
+    [id] => 4
+    [uuid] => e08aadfd-b411-45b2-96e9-772bf034877a
+    [firstname] => Marcio
+    [lastname] => Chagas
+    [fullname] => Marcio Chagas
+    [companyname] => Buffet AbcKids
+    [email] => contato@abckidsbuffet.com.br
+    [address1] => Av. 31 de Março, 2249
+    [address2] => Vila Flórida
+    [city] => São Bernardo do Campo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09660-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 3424-8710  (11) 4361-6328  (11) 3445-6700
+    [password] => 7e14413655b0af14a0d03c73d265263c:z(uMp
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113424871011436163281134456700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 07/08/2017 11:06<br>IP Address: 201.74.58.176<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11956551782
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 08.961.479/0001-34
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11956551782
+    [customfields3] => 08.961.479/0001-34
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3612
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - buffetabckids.com.br (01/08/2017 - 31/07/2018)
+                            [Description] => TIH - Master  - buffetabckids.com.br (01/08/2017 - 31/07/2018)
+                            [UnitPrice] => 35964
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 3596
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 6 dias de atraso
+                            [Description] => Juros por 6 dias de atraso
+                            [UnitPrice] => 712
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Marcio Chagas
+            [Email] => contato@abckidsbuffet.com.br
+            [Identity] => 08961479000134
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3612
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master  - buffetabckids.com.br (01/08/2017 - 31/07/2018)
+                            [description] => TIH - Master  - buffetabckids.com.br (01/08/2017 - 31/07/2018)
+                            [unitPrice] => 35964
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 3596
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 6 dias de atraso
+                            [description] => Juros por 6 dias de atraso
+                            [unitPrice] => 712
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 08961479000134
+            [fullName] => Marcio Chagas
+            [email] => contato@abckidsbuffet.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/34b8ab82-e6a7-4bff-b34c-17c1d7cb6293
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+07/08/2017 11:43:11
+INICIO_______________________________________________________________LOG:BEGIN:::07/08/2017 11:11<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3612
+    [amount] => 40272
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 6862bb60144049beb45387f411d51867
+    [created_date] => 07/08/2017 11:11:41
+    [customer_name] => Marcio Chagas
+    [customer_phone] => 1143616328
+    [customer_identity] => 08961479000134
+    [customer_email] => abckids_contato@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 553645******5018
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626I3EKTJ7BB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/08/2017 11:45:11
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3612 | Result->success | ValorPago ->359.64 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 3612
+    [amount] => 40272
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 6862bb60144049beb45387f411d51867
+    [created_date] => 07/08/2017 11:11:41
+    [customer_name] => Marcio Chagas
+    [customer_phone] => 1143616328
+    [customer_identity] => 08961479000134
+    [customer_email] => abckids_contato@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 553645******5018
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626I3EKTJ7BB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/08/2017 12:56:23
+INICIO_______________________________________________________________LOG:BEGIN:::07/08/2017 12:23<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 6862bb60144049beb45387f411d51867
+    [amount] => 40272
+    [order_number] => 3612
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/08/2017 12:56:23
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 6862bb60144049beb45387f411d51867
+    [amount] => 40272
+    [order_number] => 3612
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/08/2017 12:57:23
+INICIO_______________________________________________________________LOG:BEGIN:::07/08/2017 12:23<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 6862bb60144049beb45387f411d51867
+    [amount] => 40272
+    [order_number] => 3612
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/08/2017 12:57:23
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 6862bb60144049beb45387f411d51867
+    [amount] => 40272
+    [order_number] => 3612
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 3612
+    [id] => 3612
+    [1] => 4
+    [userid] => 4
+    [2] => #2710
+    [invoicenum] => #2710
+    [3] => 2017-07-25
+    [date] => 2017-07-25
+    [4] => 2017-08-01
+    [duedate] => 2017-08-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 4
+    [id] => 4
+    [uuid] => e08aadfd-b411-45b2-96e9-772bf034877a
+    [firstname] => Marcio
+    [lastname] => Chagas
+    [fullname] => Marcio Chagas
+    [companyname] => Buffet AbcKids
+    [email] => contato@abckidsbuffet.com.br
+    [address1] => Av. 31 de Março, 2249
+    [address2] => Vila Flórida
+    [city] => São Bernardo do Campo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09660-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 3424-8710  (11) 4361-6328  (11) 3445-6700
+    [password] => 7e14413655b0af14a0d03c73d265263c:z(uMp
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113424871011436163281134456700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 07/08/2017 16:01<br>IP Address: 186.214.103.24<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11956551782
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 08.961.479/0001-34
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11956551782
+    [customfields3] => 08.961.479/0001-34
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3612
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - buffetabckids.com.br (01/08/2017 - 31/07/2018)
+                            [Description] => TIH - Master  - buffetabckids.com.br (01/08/2017 - 31/07/2018)
+                            [UnitPrice] => 35964
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 3596
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 6 dias de atraso
+                            [Description] => Juros por 6 dias de atraso
+                            [UnitPrice] => 712
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Marcio Chagas
+            [Email] => contato@abckidsbuffet.com.br
+            [Identity] => 08961479000134
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3612
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master  - buffetabckids.com.br (01/08/2017 - 31/07/2018)
+                            [description] => TIH - Master  - buffetabckids.com.br (01/08/2017 - 31/07/2018)
+                            [unitPrice] => 35964
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 3596
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 6 dias de atraso
+                            [description] => Juros por 6 dias de atraso
+                            [unitPrice] => 712
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 08961479000134
+            [fullName] => Marcio Chagas
+            [email] => contato@abckidsbuffet.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/6a056322-1f50-46af-b75d-49244d81fe79
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

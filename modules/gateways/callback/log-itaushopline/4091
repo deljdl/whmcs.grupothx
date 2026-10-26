@@ -1,0 +1,246 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4091
+    [id] => 4091
+    [1] => 197
+    [userid] => 197
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-11-28
+    [date] => 2017-11-28
+    [4] => 2017-12-05
+    [duedate] => 2017-12-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.99
+    [subtotal] => 59.99
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.99
+    [total] => 59.99
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 197
+    [id] => 197
+    [uuid] => 3757255a-6e05-4225-a185-d01ccf46c638
+    [firstname] => Antonio
+    [lastname] => Dias de Souza
+    [fullname] => Antonio Dias de Souza
+    [companyname] => Antonio Dias de Souza - Livraria - ME
+    [email] => nanahlivraria@gmail.com
+    [address1] => Rua Doutor Miguel Penteado, 1068
+    [address2] => Jardim Chapadão
+    [city] => Campinas
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 13070-118
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (19) 3342-6916 (19) 991468439
+    [password] => 42cf0a1abed891173a3e194c5c23c761:%z#e(
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.193342691619991468439
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/11/2017 12:24<br>IP Address: 189.61.200.151<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 19991468439
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00.163.889/0001-28
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 19991468439
+    [customfields3] => 00.163.889/0001-28
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4091
+    [id] => 4091
+    [1] => 197
+    [userid] => 197
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-11-28
+    [date] => 2017-11-28
+    [4] => 2017-12-05
+    [duedate] => 2017-12-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.99
+    [subtotal] => 59.99
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.99
+    [total] => 59.99
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 197
+    [id] => 197
+    [uuid] => 3757255a-6e05-4225-a185-d01ccf46c638
+    [firstname] => Antonio
+    [lastname] => Dias de Souza
+    [fullname] => Antonio Dias de Souza
+    [companyname] => Antonio Dias de Souza - Livraria - ME
+    [email] => nanahlivraria@gmail.com
+    [address1] => Rua Doutor Miguel Penteado, 1068
+    [address2] => Jardim Chapadão
+    [city] => Campinas
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 13070-118
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (19) 3342-6916 (19) 991468439
+    [password] => 42cf0a1abed891173a3e194c5c23c761:%z#e(
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.193342691619991468439
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/11/2017 12:24<br>IP Address: 189.61.200.151<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 19991468439
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00.163.889/0001-28
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 19991468439
+    [customfields3] => 00.163.889/0001-28
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

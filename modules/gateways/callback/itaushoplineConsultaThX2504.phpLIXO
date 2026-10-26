@@ -1,0 +1,24 @@
+<?
+    function logItauShopLine($titulo,$dados, $idlog)
+    {
+        $quebra = chr(13).chr(10);
+        $dados = $titulo.$quebra.'<pre>'.print_r($dados,1).'</pre>'.$quebra;       
+            
+        $abre = fopen('log-itaushopline/'.$idlog, 'a');
+        $escreve = fwrite($abre, $quebra.$dados);
+        fclose($abre);
+    }  
+
+
+
+    $dados = '<pre>POST-----'.print_r($_POST,true).'</pre>';
+    $dados.= '<pre>GET-----'.print_r($_GET,true).'</pre>';
+    $dados.= '<pre>SERVER'.print_r($_SERVER,true).'</pre>';
+    $dados.= '<pre>REQUEST'.print_r($_REQUEST,true).'</pre>';
+
+
+
+
+
+    logItauShopLine('Retorno de dados',$dados, 0);
+?>

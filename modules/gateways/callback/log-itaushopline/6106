@@ -1,0 +1,407 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 6106
+    [id] => 6106
+    [1] => 72
+    [userid] => 72
+    [2] => 
+    [invoicenum] => 
+    [3] => 2019-05-03
+    [date] => 2019-05-03
+    [4] => 2019-05-10
+    [duedate] => 2019-05-10
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 49.90
+    [subtotal] => 49.90
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 49.90
+    [total] => 49.90
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => itaushopline
+    [paymentmethod] => itaushopline
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 72
+    [id] => 72
+    [uuid] => f7c74592-fc5e-4e38-8e98-f7b567ff099c
+    [firstname] => Edinaldo
+    [lastname] => Ferreira
+    [fullname] => Edinaldo Ferreira
+    [companyname] => Codmarc Codificadores Marcação Com Serv Ltda
+    [email] => eder@codmarc.com.br
+    [address1] => Rua Ulisses Paschoal, 76
+    [address2] => Jardim Lourdes
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04328-040
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 115588048311957985906
+    [password] => cb770edf7794c2e6912cf68595b68ba4:!))F)
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 72
+                    [uuid] => f7c74592-fc5e-4e38-8e98-f7b567ff099c
+                    [firstname] => Edinaldo
+                    [lastname] => Ferreira
+                    [companyname] => Codmarc Codificadores Marcação Com Serv Ltda
+                    [email] => eder@codmarc.com.br
+                    [address1] => Rua Ulisses Paschoal, 76
+                    [address2] => Jardim Lourdes
+                    [city] => São Paulo
+                    [state] => SP
+                    [postcode] => 04328-040
+                    [country] => BR
+                    [phonenumber] => (11) 55880483 (11)957985906
+                    [password] => cb770edf7794c2e6912cf68595b68ba4:!))F)
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2013-09-26
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => gm2w1xfWBS/X7+Ka0XcCtoNxX/o=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-05-09 17:25:51
+                    [ip] => 187.10.128.238
+                    [host] => 187-10-128-238.dsl.telesp.net.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 72
+                    [uuid] => f7c74592-fc5e-4e38-8e98-f7b567ff099c
+                    [firstname] => Edinaldo
+                    [lastname] => Ferreira
+                    [companyname] => Codmarc Codificadores Marcação Com Serv Ltda
+                    [email] => eder@codmarc.com.br
+                    [address1] => Rua Ulisses Paschoal, 76
+                    [address2] => Jardim Lourdes
+                    [city] => São Paulo
+                    [state] => SP
+                    [postcode] => 04328-040
+                    [country] => BR
+                    [phonenumber] => (11) 55880483 (11)957985906
+                    [password] => cb770edf7794c2e6912cf68595b68ba4:!))F)
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2013-09-26
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => gm2w1xfWBS/X7+Ka0XcCtoNxX/o=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-05-09 17:25:51
+                    [ip] => 187.10.128.238
+                    [host] => 187-10-128-238.dsl.telesp.net.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.115588048311957985906
+    [telephoneNumber] => +55.115588048311957985906
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 09/05/2019 17:25<br>IP Address: 187.10.128.238<br>Host: 187-10-128-238.dsl.telesp.net.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957985906
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.494.423/0001-29
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11957985906
+    [customfields3] => 05.494.423/0001-29
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

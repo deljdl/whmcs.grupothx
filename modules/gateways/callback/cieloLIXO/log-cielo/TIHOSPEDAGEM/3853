@@ -1,0 +1,315 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3853
+    [id] => 3853
+    [1] => 291
+    [userid] => 291
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-09-26
+    [date] => 2017-09-26
+    [4] => 2017-09-26
+    [duedate] => 2017-09-26
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 580.00
+    [subtotal] => 580.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 580.00
+    [total] => 580.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 291
+    [id] => 291
+    [uuid] => 78f9e0d2-cacf-40ec-9b06-49eaab613378
+    [firstname] => gloria
+    [lastname] => ranzacci
+    [fullname] => gloria ranzacci
+    [companyname] => ivan gutierrez
+    [email] => toxictuc123@gmail.com
+    [address1] => juan alves, 112
+    [address2] => 112
+    [city] => tucuman
+    [fullstate] => Tucuman
+    [state] => Tucuman
+    [postcode] => 4000
+    [countrycode] => AR
+    [country] => AR
+    [phonenumber] => 3815667252
+    [password] => $2y$10$OVvuCHKjhm.9TkT/zfvPAeceGgx7FA0mVvj1Djq11F4BsN023o90G
+    [statecode] => Tucuman
+    [countryname] => Argentina
+    [phonecc] => 54
+    [phonenumberformatted] => +54.3815667252
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 26/09/2017 06:20<br>IP Address: 181.101.17.34<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 5321 9830 0859 5736
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 5321 9830 0859 5736
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3853
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => E-mail Marketing Professional (26/09/2017 - 25/10/2017)
+                            [Description] => E-mail Marketing Professional (26/09/2017 - 25/10/2017)
+                            [UnitPrice] => 58000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => gloria ranzacci
+            [Email] => toxictuc123@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3853
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => E-mail Marketing Professional (26/09/2017 - 25/10/2017)
+                            [description] => E-mail Marketing Professional (26/09/2017 - 25/10/2017)
+                            [unitPrice] => 58000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [fullName] => gloria ranzacci
+            [email] => toxictuc123@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/f8a5b9bb-3586-460a-a5d2-3c9a080fdc6d
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+26/09/2017 6:57:24
+INICIO_______________________________________________________________LOG:BEGIN:::26/09/2017 6:24<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3853
+    [amount] => 58000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 808d75c0c23d4312a0a966a2b32e67ff
+    [created_date] => 26/09/2017 06:24:52
+    [customer_name] => gloria ranzacci
+    [customer_phone] => 3815446739
+    [customer_identity] => 49836767088
+    [customer_email] => toxictuc123@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 550230******1626
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626JI3RM7VJB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/09/2017 6:57:24
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  3853
+
+POST:
+<pre>Array
+(
+    [order_number] => 3853
+    [amount] => 58000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 808d75c0c23d4312a0a966a2b32e67ff
+    [created_date] => 26/09/2017 06:24:52
+    [customer_name] => gloria ranzacci
+    [customer_phone] => 3815446739
+    [customer_identity] => 49836767088
+    [customer_email] => toxictuc123@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 550230******1626
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626JI3RM7VJB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/09/2017 6:05:30
+INICIO_______________________________________________________________LOG:BEGIN:::26/09/2017 6:30<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 808d75c0c23d4312a0a966a2b32e67ff
+    [amount] => 58000
+    [order_number] => 3853
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/09/2017 6:05:30
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  3853
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 808d75c0c23d4312a0a966a2b32e67ff
+    [amount] => 58000
+    [order_number] => 3853
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

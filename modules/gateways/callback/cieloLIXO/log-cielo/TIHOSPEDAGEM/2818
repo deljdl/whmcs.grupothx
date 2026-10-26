@@ -1,0 +1,1153 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2818
+    [id] => 2818
+    [1] => 109
+    [userid] => 109
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-02
+    [date] => 2017-01-02
+    [4] => 2017-01-09
+    [duedate] => 2017-01-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 498.96
+    [subtotal] => 498.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 498.96
+    [total] => 498.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 109
+    [id] => 109
+    [uuid] => 79e07457-5a77-4880-93c3-104468b5dea6
+    [firstname] => Daniela
+    [lastname] => Trindade Reis
+    [fullname] => Daniela Trindade Reis
+    [companyname] => Klipps - Comunicação e Marketing
+    [email] => daniela@klipps.com.br
+    [address1] => 
+    [address2] => 
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => 6dfb858e32c3157220c3fee8a5045208:NJf!k
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => Cobrar segunda parcela borvultex !!!
+
+Notas 8%
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 10/01/2017 19:22<br>IP Address: 201.17.135.29<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 3191066743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 35.695.796-97
+                )
+
+        )
+
+    [customfields2] => 3191066743
+    [customfields3] => 35.695.796-97
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2818
+    [SoftDescriptor] => 2818
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - Léo Fagundes - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 3/4
+                            [UnitPrice] => 16225
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - República Verdes Mares - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 3/3
+                            [UnitPrice] => 33671
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002818
+            [FullName] => Daniela Trindade Reis
+            [Email] => daniela@klipps.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2818
+    [softDescriptor] => 2818
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - Léo Fagundes - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 3/4
+                            [unitPrice] => 16225
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - República Verdes Mares - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 3/3
+                            [unitPrice] => 33671
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002818
+            [fullName] => Daniela Trindade Reis
+            [email] => daniela@klipps.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/ca674f11-7dbf-4592-93b9-fcf7cf5302f6
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+10/01/2017 19:17:25
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2818
+    [amount] => 49896
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 528483f0fe73435995646c29a6189a09
+    [created_date] => 10/01/2017 19:25:14
+    [customer_name] => Daniela Reis
+    [customer_phone] => 31991066743
+    [customer_identity] => 03569579697
+    [customer_email] => daniela@klipps.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 515590******2029
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626C0JS7LRBB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/01/2017 19:24:35
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 528483f0fe73435995646c29a6189a09
+    [amount] => 49896
+    [order_number] => 2818
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 2818
+    [id] => 2818
+    [1] => 109
+    [userid] => 109
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-02
+    [date] => 2017-01-02
+    [4] => 2017-01-09
+    [duedate] => 2017-01-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 498.96
+    [subtotal] => 498.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 498.96
+    [total] => 498.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 109
+    [id] => 109
+    [uuid] => 79e07457-5a77-4880-93c3-104468b5dea6
+    [firstname] => Daniela
+    [lastname] => Trindade Reis
+    [fullname] => Daniela Trindade Reis
+    [companyname] => Klipps - Comunicação e Marketing
+    [email] => daniela@klipps.com.br
+    [address1] => 
+    [address2] => 
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => 6dfb858e32c3157220c3fee8a5045208:NJf!k
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => Cobrar segunda parcela borvultex !!!
+
+Notas 8%
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 11/01/2017 09:10<br>IP Address: 177.205.216.28<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 3191066743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 35.695.796-97
+                )
+
+        )
+
+    [customfields2] => 3191066743
+    [customfields3] => 35.695.796-97
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2818
+    [SoftDescriptor] => 2818
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - Léo Fagundes - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 3/4
+                            [UnitPrice] => 16225
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - República Verdes Mares - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 3/3
+                            [UnitPrice] => 33671
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 1497
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Juros por 2 dias de atraso
+                            [Description] => Juros por 2 dias de atraso
+                            [UnitPrice] => 308
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002818
+            [FullName] => Daniela Trindade Reis
+            [Email] => daniela@klipps.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2818
+    [softDescriptor] => 2818
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - Léo Fagundes - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 3/4
+                            [unitPrice] => 16225
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - República Verdes Mares - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 3/3
+                            [unitPrice] => 33671
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 1497
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Juros por 2 dias de atraso
+                            [description] => Juros por 2 dias de atraso
+                            [unitPrice] => 308
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002818
+            [fullName] => Daniela Trindade Reis
+            [email] => daniela@klipps.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/bf6337c9-c502-443c-9643-8d98197829d8
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2818
+    [id] => 2818
+    [1] => 109
+    [userid] => 109
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-02
+    [date] => 2017-01-02
+    [4] => 2017-01-09
+    [duedate] => 2017-01-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 498.96
+    [subtotal] => 498.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 498.96
+    [total] => 498.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 109
+    [id] => 109
+    [uuid] => 79e07457-5a77-4880-93c3-104468b5dea6
+    [firstname] => Daniela
+    [lastname] => Trindade Reis
+    [fullname] => Daniela Trindade Reis
+    [companyname] => Klipps - Comunicação e Marketing
+    [email] => daniela@klipps.com.br
+    [address1] => 
+    [address2] => 
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => 6dfb858e32c3157220c3fee8a5045208:NJf!k
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => Cobrar segunda parcela borvultex !!!
+
+Notas 8%
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 11/01/2017 09:51<br>IP Address: 189.101.10.167<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 3191066743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 35.695.796-97
+                )
+
+        )
+
+    [customfields2] => 3191066743
+    [customfields3] => 35.695.796-97
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2818
+    [SoftDescriptor] => 2818
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - Léo Fagundes - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 3/4
+                            [UnitPrice] => 16225
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - República Verdes Mares - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 3/3
+                            [UnitPrice] => 33671
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 1497
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Juros por 2 dias de atraso
+                            [Description] => Juros por 2 dias de atraso
+                            [UnitPrice] => 308
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002818
+            [FullName] => Daniela Trindade Reis
+            [Email] => daniela@klipps.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2818
+    [softDescriptor] => 2818
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - Léo Fagundes - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 3/4
+                            [unitPrice] => 16225
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - República Verdes Mares - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 3/3
+                            [unitPrice] => 33671
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 1497
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Juros por 2 dias de atraso
+                            [description] => Juros por 2 dias de atraso
+                            [unitPrice] => 308
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002818
+            [fullName] => Daniela Trindade Reis
+            [email] => daniela@klipps.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/e32ee747-d656-4c49-924b-0db4a6d77206
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2818
+    [id] => 2818
+    [1] => 109
+    [userid] => 109
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-02
+    [date] => 2017-01-02
+    [4] => 2017-01-09
+    [duedate] => 2017-01-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 498.96
+    [subtotal] => 498.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 498.96
+    [total] => 498.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 109
+    [id] => 109
+    [uuid] => 79e07457-5a77-4880-93c3-104468b5dea6
+    [firstname] => Daniela
+    [lastname] => Trindade Reis
+    [fullname] => Daniela Trindade Reis
+    [companyname] => Klipps - Comunicação e Marketing
+    [email] => daniela@klipps.com.br
+    [address1] => 
+    [address2] => 
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => 6dfb858e32c3157220c3fee8a5045208:NJf!k
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => Cobrar segunda parcela borvultex !!!
+
+Notas 8%
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 11/01/2017 13:24<br>IP Address: 177.205.216.28<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 3191066743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 35.695.796-97
+                )
+
+        )
+
+    [customfields2] => 3191066743
+    [customfields3] => 35.695.796-97
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2818
+    [SoftDescriptor] => 2818
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - Léo Fagundes - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 3/4
+                            [UnitPrice] => 16225
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - República Verdes Mares - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 3/3
+                            [UnitPrice] => 33671
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 1497
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Juros por 2 dias de atraso
+                            [Description] => Juros por 2 dias de atraso
+                            [UnitPrice] => 308
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002818
+            [FullName] => Daniela Trindade Reis
+            [Email] => daniela@klipps.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2818
+    [softDescriptor] => 2818
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - Léo Fagundes - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 3/4
+                            [unitPrice] => 16225
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - República Verdes Mares - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 3/3
+                            [unitPrice] => 33671
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 1497
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Juros por 2 dias de atraso
+                            [description] => Juros por 2 dias de atraso
+                            [unitPrice] => 308
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002818
+            [fullName] => Daniela Trindade Reis
+            [email] => daniela@klipps.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/aa3e684a-a9e1-4ca4-a617-f744ddd48831
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3062
+    [id] => 3062
+    [1] => 162
+    [userid] => 162
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-08
+    [date] => 2017-03-08
+    [4] => 2017-03-15
+    [duedate] => 2017-03-15
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.94
+    [subtotal] => 59.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.94
+    [total] => 59.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 162
+    [id] => 162
+    [uuid] => 4b907660-30cb-4439-8ddd-d6ba9d65f681
+    [firstname] => Ana Paula 
+    [lastname] => Natalino de Araújo
+    [fullname] => Ana Paula  Natalino de Araújo
+    [companyname] => Canil Bibelô
+    [email] => anapaula.filhotes@gmail.com
+    [address1] => Rodovia Prefeito Joaquim Simão, Km 70
+    [address2] => Condomínio Santa Isabel 
+    [city] => Santa Isabel
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07500000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11999975657
+    [password] => 99f460d79db353783e6b4214ef80a240:uswKY
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11999975657
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/03/2017 09:09<br>IP Address: 201.159.24.1<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11999975657
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 142.956.098-38
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11999975657
+    [customfields3] => 142.956.098-38
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

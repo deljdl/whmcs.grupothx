@@ -1,0 +1,492 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2873
+    [id] => 2873
+    [1] => 161
+    [userid] => 161
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-16
+    [date] => 2017-01-16
+    [4] => 2017-01-23
+    [duedate] => 2017-01-23
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 161
+    [id] => 161
+    [uuid] => 4e10b12f-2c65-4e04-bf3f-38c90bc62cf7
+    [firstname] => Edson
+    [lastname] => Araújo da Silva 
+    [fullname] => Edson Araújo da Silva 
+    [companyname] => ED10
+    [email] => edsonaraujo_09@hotmail.com
+    [address1] => Rua Espanha, 269
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-410
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11)98124-7911
+    [password] => fd8060e1881eea8526818192521646dd:aF%Os
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11981247911
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/02/2017 15:23<br>IP Address: 177.157.134.61<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11981247911
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 219.144.188-24
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11981247911
+    [customfields3] => 219.144.188-24
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2873
+    [id] => 2873
+    [1] => 161
+    [userid] => 161
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-16
+    [date] => 2017-01-16
+    [4] => 2017-01-23
+    [duedate] => 2017-01-23
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 161
+    [id] => 161
+    [uuid] => 4e10b12f-2c65-4e04-bf3f-38c90bc62cf7
+    [firstname] => Edson
+    [lastname] => Araújo da Silva 
+    [fullname] => Edson Araújo da Silva 
+    [companyname] => ED10
+    [email] => edsonaraujo_09@hotmail.com
+    [address1] => Rua Espanha, 269
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-410
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11)98124-7911
+    [password] => fd8060e1881eea8526818192521646dd:aF%Os
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11981247911
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/02/2017 15:25<br>IP Address: 177.157.134.61<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11981247911
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 219.144.188-24
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11981247911
+    [customfields3] => 219.144.188-24
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2873
+    [id] => 2873
+    [1] => 161
+    [userid] => 161
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-16
+    [date] => 2017-01-16
+    [4] => 2017-01-23
+    [duedate] => 2017-01-23
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 161
+    [id] => 161
+    [uuid] => 4e10b12f-2c65-4e04-bf3f-38c90bc62cf7
+    [firstname] => Edson
+    [lastname] => Araújo da Silva 
+    [fullname] => Edson Araújo da Silva 
+    [companyname] => ED10
+    [email] => edsonaraujo_09@hotmail.com
+    [address1] => Rua Espanha, 269
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-410
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11)98124-7911
+    [password] => fd8060e1881eea8526818192521646dd:aF%Os
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11981247911
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/02/2017 15:29<br>IP Address: 177.157.134.61<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11981247911
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 219.144.188-24
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11981247911
+    [customfields3] => 219.144.188-24
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2873
+    [id] => 2873
+    [1] => 161
+    [userid] => 161
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-16
+    [date] => 2017-01-16
+    [4] => 2017-01-23
+    [duedate] => 2017-01-23
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 161
+    [id] => 161
+    [uuid] => 4e10b12f-2c65-4e04-bf3f-38c90bc62cf7
+    [firstname] => Edson
+    [lastname] => Araújo da Silva 
+    [fullname] => Edson Araújo da Silva 
+    [companyname] => ED10
+    [email] => edsonaraujo_09@hotmail.com
+    [address1] => Rua Espanha, 269
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-410
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11)98124-7911
+    [password] => fd8060e1881eea8526818192521646dd:aF%Os
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11981247911
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/02/2017 15:59<br>IP Address: 179.178.176.230<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11981247911
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 219.144.188-24
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11981247911
+    [customfields3] => 219.144.188-24
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

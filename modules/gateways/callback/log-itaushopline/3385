@@ -1,0 +1,246 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3385
+    [id] => 3385
+    [1] => 278
+    [userid] => 278
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-05-26
+    [date] => 2017-05-26
+    [4] => 2017-05-26
+    [duedate] => 2017-05-26
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 100.00
+    [subtotal] => 100.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 100.00
+    [total] => 100.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 278
+    [id] => 278
+    [uuid] => 493872ad-12b9-4840-87df-a9997772eb55
+    [firstname] => José
+    [lastname] => Benesio Rodrigues da Silva
+    [fullname] => José Benesio Rodrigues da Silva
+    [companyname] => J. B. Rodrigues da Silva-ME 
+    [email] => vendas@beneflexpersianas.com.br
+    [address1] => Padre Aníbal Difrância, 300
+    [address2] => Jd. Mangalot
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 0513-160
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 22310212 2359-0679 98070-0105
+    [password] => $2y$10$ROnlHdkl8iOKvzHD.eSeZeqTT9LrgoR3d5LwyxplYYdHMhMrLofeO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2231021223590679980700105
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 26/05/2017 13:23<br>IP Address: 177.18.224.141<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11980700105
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.047.019/0001-00
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11980700105
+    [customfields3] => 11.047.019/0001-00
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3385
+    [id] => 3385
+    [1] => 278
+    [userid] => 278
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-05-26
+    [date] => 2017-05-26
+    [4] => 2017-05-26
+    [duedate] => 2017-05-26
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 100.00
+    [subtotal] => 100.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 100.00
+    [total] => 100.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 278
+    [id] => 278
+    [uuid] => 493872ad-12b9-4840-87df-a9997772eb55
+    [firstname] => José
+    [lastname] => Benesio Rodrigues da Silva
+    [fullname] => José Benesio Rodrigues da Silva
+    [companyname] => J. B. Rodrigues da Silva-ME 
+    [email] => vendas@beneflexpersianas.com.br
+    [address1] => Padre Aníbal Difrância, 300
+    [address2] => Jd. Mangalot
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 0513-160
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 22310212 2359-0679 98070-0105
+    [password] => $2y$10$ROnlHdkl8iOKvzHD.eSeZeqTT9LrgoR3d5LwyxplYYdHMhMrLofeO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2231021223590679980700105
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 26/05/2017 21:19<br>IP Address: 177.81.144.194<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11980700105
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.047.019/0001-00
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11980700105
+    [customfields3] => 11.047.019/0001-00
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

@@ -1,0 +1,3336 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5375
+    [id] => 5375
+    [1] => 325
+    [userid] => 325
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-10-29
+    [date] => 2018-10-29
+    [4] => 2018-11-03
+    [duedate] => 2018-11-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 32.97
+    [subtotal] => 32.97
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 32.97
+    [total] => 32.97
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => cielo
+    [paymentmethod] => cielo
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 325
+    [id] => 325
+    [uuid] => 1656b464-cde4-4566-b41c-3d796c0eceae
+    [firstname] => Monica
+    [lastname] => Cristina Seixas Bonfim
+    [fullname] => Monica Cristina Seixas Bonfim
+    [companyname] => ELEICAO 2018 MONICA CRISTINA SEIXAS BONFIM DEPUTADO ESTADUAL
+    [email] => bancadaativista@gmail.com
+    [address1] => Alameda das Mangueiras, 1, lote 1
+    [address2] => Jardim Paraíso II
+    [city] => Itu
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 13304-366
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11991950103
+    [password] => $2y$10$nVLSRk0NmBsZabjWbEpJU.fnpUXjXsSb9AU4pEa4d0Nwb366HXAs2
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 325
+                    [uuid] => 1656b464-cde4-4566-b41c-3d796c0eceae
+                    [firstname] => Monica
+                    [lastname] => Cristina Seixas Bonfim
+                    [companyname] => ELEICAO 2018 MONICA CRISTINA SEIXAS BONFIM DEPUTADO ESTADUAL
+                    [email] => bancadaativista@gmail.com
+                    [address1] => Alameda das Mangueiras, 1, lote 1
+                    [address2] => Jardim Paraíso II
+                    [city] => Itu
+                    [state] => SP
+                    [postcode] => 13304-366
+                    [country] => BR
+                    [phonenumber] =>  (11) 991950103
+                    [password] => $2y$10$nVLSRk0NmBsZabjWbEpJU.fnpUXjXsSb9AU4pEa4d0Nwb366HXAs2
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2018-08-31
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => Tl/7QuRIxrz9Mje3gij8MlPzKdo=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2018-11-16 08:13:49
+                    [ip] => 177.79.45.156
+                    [host] => ip-177-79-45-156.user.vivozap.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 325
+                    [uuid] => 1656b464-cde4-4566-b41c-3d796c0eceae
+                    [firstname] => Monica
+                    [lastname] => Cristina Seixas Bonfim
+                    [companyname] => ELEICAO 2018 MONICA CRISTINA SEIXAS BONFIM DEPUTADO ESTADUAL
+                    [email] => bancadaativista@gmail.com
+                    [address1] => Alameda das Mangueiras, 1, lote 1
+                    [address2] => Jardim Paraíso II
+                    [city] => Itu
+                    [state] => SP
+                    [postcode] => 13304-366
+                    [country] => BR
+                    [phonenumber] =>  (11) 991950103
+                    [password] => $2y$10$nVLSRk0NmBsZabjWbEpJU.fnpUXjXsSb9AU4pEa4d0Nwb366HXAs2
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2018-08-31
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => Tl/7QuRIxrz9Mje3gij8MlPzKdo=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2018-11-16 08:13:49
+                    [ip] => 177.79.45.156
+                    [host] => ip-177-79-45-156.user.vivozap.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11991950103
+    [telephoneNumber] => +55.11991950103
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 16/11/2018 08:13<br>IP Address: 177.79.45.156<br>Host: ip-177-79-45-156.user.vivozap.com.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] =>  11991950103
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 31.138.427/0001-84
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] =>  11991950103
+    [customfields3] => 31.138.427/0001-84
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5375
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [Description] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 330
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 131
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Monica Cristina Seixas Bonfim
+            [Email] => bancadaativista@gmail.com
+            [Identity] => 31138427000184
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5375
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [description] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 330
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [$id] => 6
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 131
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 7
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 31138427000184
+            [fullName] => Monica Cristina Seixas Bonfim
+            [email] => bancadaativista@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/f2c19e93-5397-45fa-a486-bc92691f6b0b
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5375
+    [id] => 5375
+    [1] => 325
+    [userid] => 325
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-10-29
+    [date] => 2018-10-29
+    [4] => 2018-11-03
+    [duedate] => 2018-11-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 32.97
+    [subtotal] => 32.97
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 32.97
+    [total] => 32.97
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => cielo
+    [paymentmethod] => cielo
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 325
+    [id] => 325
+    [uuid] => 1656b464-cde4-4566-b41c-3d796c0eceae
+    [firstname] => Monica
+    [lastname] => Cristina Seixas Bonfim
+    [fullname] => Monica Cristina Seixas Bonfim
+    [companyname] => ELEICAO 2018 MONICA CRISTINA SEIXAS BONFIM DEPUTADO ESTADUAL
+    [email] => bancadaativista@gmail.com
+    [address1] => Alameda das Mangueiras, 1, lote 1
+    [address2] => Jardim Paraíso II
+    [city] => Itu
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 13304-366
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11991950103
+    [password] => $2y$10$nVLSRk0NmBsZabjWbEpJU.fnpUXjXsSb9AU4pEa4d0Nwb366HXAs2
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 325
+                    [uuid] => 1656b464-cde4-4566-b41c-3d796c0eceae
+                    [firstname] => Monica
+                    [lastname] => Cristina Seixas Bonfim
+                    [companyname] => ELEICAO 2018 MONICA CRISTINA SEIXAS BONFIM DEPUTADO ESTADUAL
+                    [email] => bancadaativista@gmail.com
+                    [address1] => Alameda das Mangueiras, 1, lote 1
+                    [address2] => Jardim Paraíso II
+                    [city] => Itu
+                    [state] => SP
+                    [postcode] => 13304-366
+                    [country] => BR
+                    [phonenumber] =>  (11) 991950103
+                    [password] => $2y$10$nVLSRk0NmBsZabjWbEpJU.fnpUXjXsSb9AU4pEa4d0Nwb366HXAs2
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2018-08-31
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => Tl/7QuRIxrz9Mje3gij8MlPzKdo=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2018-11-16 08:13:49
+                    [ip] => 177.79.45.156
+                    [host] => ip-177-79-45-156.user.vivozap.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 325
+                    [uuid] => 1656b464-cde4-4566-b41c-3d796c0eceae
+                    [firstname] => Monica
+                    [lastname] => Cristina Seixas Bonfim
+                    [companyname] => ELEICAO 2018 MONICA CRISTINA SEIXAS BONFIM DEPUTADO ESTADUAL
+                    [email] => bancadaativista@gmail.com
+                    [address1] => Alameda das Mangueiras, 1, lote 1
+                    [address2] => Jardim Paraíso II
+                    [city] => Itu
+                    [state] => SP
+                    [postcode] => 13304-366
+                    [country] => BR
+                    [phonenumber] =>  (11) 991950103
+                    [password] => $2y$10$nVLSRk0NmBsZabjWbEpJU.fnpUXjXsSb9AU4pEa4d0Nwb366HXAs2
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2018-08-31
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => Tl/7QuRIxrz9Mje3gij8MlPzKdo=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2018-11-16 08:13:49
+                    [ip] => 177.79.45.156
+                    [host] => ip-177-79-45-156.user.vivozap.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11991950103
+    [telephoneNumber] => +55.11991950103
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 16/11/2018 08:13<br>IP Address: 177.79.45.156<br>Host: ip-177-79-45-156.user.vivozap.com.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] =>  11991950103
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 31.138.427/0001-84
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] =>  11991950103
+    [customfields3] => 31.138.427/0001-84
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5375
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [Description] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 330
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 131
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Monica Cristina Seixas Bonfim
+            [Email] => bancadaativista@gmail.com
+            [Identity] => 31138427000184
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5375
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [description] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 330
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [$id] => 6
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 131
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 7
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 31138427000184
+            [fullName] => Monica Cristina Seixas Bonfim
+            [email] => bancadaativista@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/0392106b-bc8e-43ac-8dea-a4af78eecaca
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5375
+    [id] => 5375
+    [1] => 325
+    [userid] => 325
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-10-29
+    [date] => 2018-10-29
+    [4] => 2018-11-03
+    [duedate] => 2018-11-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 32.97
+    [subtotal] => 32.97
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 32.97
+    [total] => 32.97
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => cielo
+    [paymentmethod] => cielo
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 325
+    [id] => 325
+    [uuid] => 1656b464-cde4-4566-b41c-3d796c0eceae
+    [firstname] => Monica
+    [lastname] => Cristina Seixas Bonfim
+    [fullname] => Monica Cristina Seixas Bonfim
+    [companyname] => ELEICAO 2018 MONICA CRISTINA SEIXAS BONFIM DEPUTADO ESTADUAL
+    [email] => bancadaativista@gmail.com
+    [address1] => Alameda das Mangueiras, 1, lote 1
+    [address2] => Jardim Paraíso II
+    [city] => Itu
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 13304-366
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11991950103
+    [password] => $2y$10$nVLSRk0NmBsZabjWbEpJU.fnpUXjXsSb9AU4pEa4d0Nwb366HXAs2
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 325
+                    [uuid] => 1656b464-cde4-4566-b41c-3d796c0eceae
+                    [firstname] => Monica
+                    [lastname] => Cristina Seixas Bonfim
+                    [companyname] => ELEICAO 2018 MONICA CRISTINA SEIXAS BONFIM DEPUTADO ESTADUAL
+                    [email] => bancadaativista@gmail.com
+                    [address1] => Alameda das Mangueiras, 1, lote 1
+                    [address2] => Jardim Paraíso II
+                    [city] => Itu
+                    [state] => SP
+                    [postcode] => 13304-366
+                    [country] => BR
+                    [phonenumber] =>  (11) 991950103
+                    [password] => $2y$10$nVLSRk0NmBsZabjWbEpJU.fnpUXjXsSb9AU4pEa4d0Nwb366HXAs2
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2018-08-31
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => Tl/7QuRIxrz9Mje3gij8MlPzKdo=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2018-11-16 08:14:39
+                    [ip] => 177.79.45.156
+                    [host] => ip-177-79-45-156.user.vivozap.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 325
+                    [uuid] => 1656b464-cde4-4566-b41c-3d796c0eceae
+                    [firstname] => Monica
+                    [lastname] => Cristina Seixas Bonfim
+                    [companyname] => ELEICAO 2018 MONICA CRISTINA SEIXAS BONFIM DEPUTADO ESTADUAL
+                    [email] => bancadaativista@gmail.com
+                    [address1] => Alameda das Mangueiras, 1, lote 1
+                    [address2] => Jardim Paraíso II
+                    [city] => Itu
+                    [state] => SP
+                    [postcode] => 13304-366
+                    [country] => BR
+                    [phonenumber] =>  (11) 991950103
+                    [password] => $2y$10$nVLSRk0NmBsZabjWbEpJU.fnpUXjXsSb9AU4pEa4d0Nwb366HXAs2
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2018-08-31
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => Tl/7QuRIxrz9Mje3gij8MlPzKdo=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2018-11-16 08:14:39
+                    [ip] => 177.79.45.156
+                    [host] => ip-177-79-45-156.user.vivozap.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11991950103
+    [telephoneNumber] => +55.11991950103
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 16/11/2018 08:14<br>IP Address: 177.79.45.156<br>Host: ip-177-79-45-156.user.vivozap.com.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] =>  11991950103
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 31.138.427/0001-84
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] =>  11991950103
+    [customfields3] => 31.138.427/0001-84
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5375
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [Description] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 330
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 131
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Monica Cristina Seixas Bonfim
+            [Email] => bancadaativista@gmail.com
+            [Identity] => 31138427000184
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5375
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [description] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 330
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [$id] => 6
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 131
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 7
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 31138427000184
+            [fullName] => Monica Cristina Seixas Bonfim
+            [email] => bancadaativista@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/9e35ca35-9d57-4282-b488-455bd9124f10
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5375
+    [id] => 5375
+    [1] => 325
+    [userid] => 325
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-10-29
+    [date] => 2018-10-29
+    [4] => 2018-11-03
+    [duedate] => 2018-11-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 32.97
+    [subtotal] => 32.97
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 32.97
+    [total] => 32.97
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => cielo
+    [paymentmethod] => cielo
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 325
+    [id] => 325
+    [uuid] => 1656b464-cde4-4566-b41c-3d796c0eceae
+    [firstname] => Monica
+    [lastname] => Cristina Seixas Bonfim
+    [fullname] => Monica Cristina Seixas Bonfim
+    [companyname] => ELEICAO 2018 MONICA CRISTINA SEIXAS BONFIM DEPUTADO ESTADUAL
+    [email] => bancadaativista@gmail.com
+    [address1] => Alameda das Mangueiras, 1, lote 1
+    [address2] => Jardim Paraíso II
+    [city] => Itu
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 13304-366
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11991950103
+    [password] => $2y$10$nVLSRk0NmBsZabjWbEpJU.fnpUXjXsSb9AU4pEa4d0Nwb366HXAs2
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 325
+                    [uuid] => 1656b464-cde4-4566-b41c-3d796c0eceae
+                    [firstname] => Monica
+                    [lastname] => Cristina Seixas Bonfim
+                    [companyname] => ELEICAO 2018 MONICA CRISTINA SEIXAS BONFIM DEPUTADO ESTADUAL
+                    [email] => bancadaativista@gmail.com
+                    [address1] => Alameda das Mangueiras, 1, lote 1
+                    [address2] => Jardim Paraíso II
+                    [city] => Itu
+                    [state] => SP
+                    [postcode] => 13304-366
+                    [country] => BR
+                    [phonenumber] =>  (11) 991950103
+                    [password] => $2y$10$nVLSRk0NmBsZabjWbEpJU.fnpUXjXsSb9AU4pEa4d0Nwb366HXAs2
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2018-08-31
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => Tl/7QuRIxrz9Mje3gij8MlPzKdo=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2018-11-16 08:17:14
+                    [ip] => 189.18.139.220
+                    [host] => 189-18-139-220.dsl.telesp.net.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 325
+                    [uuid] => 1656b464-cde4-4566-b41c-3d796c0eceae
+                    [firstname] => Monica
+                    [lastname] => Cristina Seixas Bonfim
+                    [companyname] => ELEICAO 2018 MONICA CRISTINA SEIXAS BONFIM DEPUTADO ESTADUAL
+                    [email] => bancadaativista@gmail.com
+                    [address1] => Alameda das Mangueiras, 1, lote 1
+                    [address2] => Jardim Paraíso II
+                    [city] => Itu
+                    [state] => SP
+                    [postcode] => 13304-366
+                    [country] => BR
+                    [phonenumber] =>  (11) 991950103
+                    [password] => $2y$10$nVLSRk0NmBsZabjWbEpJU.fnpUXjXsSb9AU4pEa4d0Nwb366HXAs2
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2018-08-31
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => Tl/7QuRIxrz9Mje3gij8MlPzKdo=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2018-11-16 08:17:14
+                    [ip] => 189.18.139.220
+                    [host] => 189-18-139-220.dsl.telesp.net.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11991950103
+    [telephoneNumber] => +55.11991950103
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 16/11/2018 08:17<br>IP Address: 189.18.139.220<br>Host: 189-18-139-220.dsl.telesp.net.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] =>  11991950103
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 31.138.427/0001-84
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] =>  11991950103
+    [customfields3] => 31.138.427/0001-84
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5375
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [Description] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 330
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 131
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Monica Cristina Seixas Bonfim
+            [Email] => bancadaativista@gmail.com
+            [Identity] => 31138427000184
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5375
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [description] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 330
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [$id] => 6
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 131
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 7
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 31138427000184
+            [fullName] => Monica Cristina Seixas Bonfim
+            [email] => bancadaativista@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/292df88d-05d6-4fc5-9d12-d3e4ebad5ecf
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5375
+    [id] => 5375
+    [1] => 325
+    [userid] => 325
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-10-29
+    [date] => 2018-10-29
+    [4] => 2018-11-03
+    [duedate] => 2018-11-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 32.97
+    [subtotal] => 32.97
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 32.97
+    [total] => 32.97
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => cielo
+    [paymentmethod] => cielo
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 325
+    [id] => 325
+    [uuid] => 1656b464-cde4-4566-b41c-3d796c0eceae
+    [firstname] => Monica
+    [lastname] => Cristina Seixas Bonfim
+    [fullname] => Monica Cristina Seixas Bonfim
+    [companyname] => ELEICAO 2018 MONICA CRISTINA SEIXAS BONFIM DEPUTADO ESTADUAL
+    [email] => bancadaativista@gmail.com
+    [address1] => Alameda das Mangueiras, 1, lote 1
+    [address2] => Jardim Paraíso II
+    [city] => Itu
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 13304-366
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11991950103
+    [password] => $2y$10$nVLSRk0NmBsZabjWbEpJU.fnpUXjXsSb9AU4pEa4d0Nwb366HXAs2
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 325
+                    [uuid] => 1656b464-cde4-4566-b41c-3d796c0eceae
+                    [firstname] => Monica
+                    [lastname] => Cristina Seixas Bonfim
+                    [companyname] => ELEICAO 2018 MONICA CRISTINA SEIXAS BONFIM DEPUTADO ESTADUAL
+                    [email] => bancadaativista@gmail.com
+                    [address1] => Alameda das Mangueiras, 1, lote 1
+                    [address2] => Jardim Paraíso II
+                    [city] => Itu
+                    [state] => SP
+                    [postcode] => 13304-366
+                    [country] => BR
+                    [phonenumber] =>  (11) 991950103
+                    [password] => $2y$10$nVLSRk0NmBsZabjWbEpJU.fnpUXjXsSb9AU4pEa4d0Nwb366HXAs2
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2018-08-31
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => Tl/7QuRIxrz9Mje3gij8MlPzKdo=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2018-11-16 08:17:14
+                    [ip] => 189.18.139.220
+                    [host] => 189-18-139-220.dsl.telesp.net.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 325
+                    [uuid] => 1656b464-cde4-4566-b41c-3d796c0eceae
+                    [firstname] => Monica
+                    [lastname] => Cristina Seixas Bonfim
+                    [companyname] => ELEICAO 2018 MONICA CRISTINA SEIXAS BONFIM DEPUTADO ESTADUAL
+                    [email] => bancadaativista@gmail.com
+                    [address1] => Alameda das Mangueiras, 1, lote 1
+                    [address2] => Jardim Paraíso II
+                    [city] => Itu
+                    [state] => SP
+                    [postcode] => 13304-366
+                    [country] => BR
+                    [phonenumber] =>  (11) 991950103
+                    [password] => $2y$10$nVLSRk0NmBsZabjWbEpJU.fnpUXjXsSb9AU4pEa4d0Nwb366HXAs2
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2018-08-31
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => Tl/7QuRIxrz9Mje3gij8MlPzKdo=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2018-11-16 08:17:14
+                    [ip] => 189.18.139.220
+                    [host] => 189-18-139-220.dsl.telesp.net.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11991950103
+    [telephoneNumber] => +55.11991950103
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 16/11/2018 08:17<br>IP Address: 189.18.139.220<br>Host: 189-18-139-220.dsl.telesp.net.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] =>  11991950103
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 31.138.427/0001-84
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] =>  11991950103
+    [customfields3] => 31.138.427/0001-84
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5375
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [Description] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 330
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 131
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Monica Cristina Seixas Bonfim
+            [Email] => bancadaativista@gmail.com
+            [Identity] => 31138427000184
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5375
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [description] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 330
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [$id] => 6
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 131
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 7
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 31138427000184
+            [fullName] => Monica Cristina Seixas Bonfim
+            [email] => bancadaativista@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/22ebe68b-8599-4f23-8fc2-26d4e627fb91
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5375
+    [id] => 5375
+    [1] => 325
+    [userid] => 325
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-10-29
+    [date] => 2018-10-29
+    [4] => 2018-11-03
+    [duedate] => 2018-11-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 32.97
+    [subtotal] => 32.97
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 32.97
+    [total] => 32.97
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => cielo
+    [paymentmethod] => cielo
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 325
+    [id] => 325
+    [uuid] => 1656b464-cde4-4566-b41c-3d796c0eceae
+    [firstname] => Monica
+    [lastname] => Cristina Seixas Bonfim
+    [fullname] => Monica Cristina Seixas Bonfim
+    [companyname] => ELEICAO 2018 MONICA CRISTINA SEIXAS BONFIM DEPUTADO ESTADUAL
+    [email] => bancadaativista@gmail.com
+    [address1] => Alameda das Mangueiras, 1, lote 1
+    [address2] => Jardim Paraíso II
+    [city] => Itu
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 13304-366
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11991950103
+    [password] => $2y$10$nVLSRk0NmBsZabjWbEpJU.fnpUXjXsSb9AU4pEa4d0Nwb366HXAs2
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 325
+                    [uuid] => 1656b464-cde4-4566-b41c-3d796c0eceae
+                    [firstname] => Monica
+                    [lastname] => Cristina Seixas Bonfim
+                    [companyname] => ELEICAO 2018 MONICA CRISTINA SEIXAS BONFIM DEPUTADO ESTADUAL
+                    [email] => bancadaativista@gmail.com
+                    [address1] => Alameda das Mangueiras, 1, lote 1
+                    [address2] => Jardim Paraíso II
+                    [city] => Itu
+                    [state] => SP
+                    [postcode] => 13304-366
+                    [country] => BR
+                    [phonenumber] =>  (11) 991950103
+                    [password] => $2y$10$nVLSRk0NmBsZabjWbEpJU.fnpUXjXsSb9AU4pEa4d0Nwb366HXAs2
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2018-08-31
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => Tl/7QuRIxrz9Mje3gij8MlPzKdo=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2018-11-17 08:16:44
+                    [ip] => 177.79.40.224
+                    [host] => ip-177-79-40-224.user.vivozap.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 325
+                    [uuid] => 1656b464-cde4-4566-b41c-3d796c0eceae
+                    [firstname] => Monica
+                    [lastname] => Cristina Seixas Bonfim
+                    [companyname] => ELEICAO 2018 MONICA CRISTINA SEIXAS BONFIM DEPUTADO ESTADUAL
+                    [email] => bancadaativista@gmail.com
+                    [address1] => Alameda das Mangueiras, 1, lote 1
+                    [address2] => Jardim Paraíso II
+                    [city] => Itu
+                    [state] => SP
+                    [postcode] => 13304-366
+                    [country] => BR
+                    [phonenumber] =>  (11) 991950103
+                    [password] => $2y$10$nVLSRk0NmBsZabjWbEpJU.fnpUXjXsSb9AU4pEa4d0Nwb366HXAs2
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2018-08-31
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => Tl/7QuRIxrz9Mje3gij8MlPzKdo=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2018-11-17 08:16:44
+                    [ip] => 177.79.40.224
+                    [host] => ip-177-79-40-224.user.vivozap.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11991950103
+    [telephoneNumber] => +55.11991950103
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 17/11/2018 08:16<br>IP Address: 177.79.40.224<br>Host: ip-177-79-40-224.user.vivozap.com.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] =>  11991950103
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 31.138.427/0001-84
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] =>  11991950103
+    [customfields3] => 31.138.427/0001-84
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5375
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [Description] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 330
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 13 dias de atraso
+                            [Description] => Juros por 13 dias de atraso
+                            [UnitPrice] => 141
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Monica Cristina Seixas Bonfim
+            [Email] => bancadaativista@gmail.com
+            [Identity] => 31138427000184
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5375
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [description] => TIH - Master  - monicadabancada.com.br (03/11/2018 - 02/12/2018)
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 330
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [$id] => 6
+                            [name] => Juros por 13 dias de atraso
+                            [description] => Juros por 13 dias de atraso
+                            [unitPrice] => 141
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 7
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 31138427000184
+            [fullName] => Monica Cristina Seixas Bonfim
+            [email] => bancadaativista@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/f88103a9-01b2-4b84-9924-b9a6205be05b
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

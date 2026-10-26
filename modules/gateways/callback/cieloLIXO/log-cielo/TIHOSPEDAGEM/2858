@@ -1,0 +1,570 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2858
+    [id] => 2858
+    [1] => 248
+    [userid] => 248
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-11
+    [date] => 2017-01-11
+    [4] => 2017-01-11
+    [duedate] => 2017-01-11
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 723.97
+    [subtotal] => 723.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 723.97
+    [total] => 723.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 248
+    [id] => 248
+    [uuid] => 3854468a-6a0b-48a9-acd0-e96b78aada73
+    [firstname] => Rafaela
+    [lastname] => Aguiar
+    [fullname] => Rafaela Aguiar
+    [companyname] => S.G Fekete distribuidora de alimentos
+    [email] => rafaelaferreira.mendes@gmail.com
+    [address1] => Rua Adomiro Rodrigues dos Passos (Prq R Barreto), 144
+    [address2] => Parque Rodrigo Barreto
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417-225
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11931083008
+    [password] => $2y$10$u4wNrhRJp7sOdYnDEeSYu.ex16u5WV3p0V/84lNlJogUO3Up11yne
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11931083008
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 11/01/2017 10:38<br>IP Address: 177.205.216.28<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11931083008
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 06.093.425/0001-79
+                )
+
+        )
+
+    [customfields2] => 11931083008
+    [customfields3] => 06.093.425/0001-79
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2858
+    [SoftDescriptor] => 2858
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - sg-alimentos.com
+                            [Description] => Site Básico - sg-alimentos.com
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Master - sg-alimentos.com (11/01/2017 - 10/02/2017)
+                            [Description] => TIH - Master - sg-alimentos.com (11/01/2017 - 10/02/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Registro de domínio - sg-alimentos.com - 1 Ano(s) (11/01/2017 - 10/01/2018)
+                            [Description] => Registro de domínio - sg-alimentos.com - 1 Ano(s) (11/01/2017 - 10/01/2018)
+                            [UnitPrice] => 4500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002858
+            [FullName] => Rafaela Aguiar
+            [Email] => rafaelaferreira.mendes@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2858
+    [softDescriptor] => 2858
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - sg-alimentos.com
+                            [description] => Site Básico - sg-alimentos.com
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - Master - sg-alimentos.com (11/01/2017 - 10/02/2017)
+                            [description] => TIH - Master - sg-alimentos.com (11/01/2017 - 10/02/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Registro de domínio - sg-alimentos.com - 1 Ano(s) (11/01/2017 - 10/01/2018)
+                            [description] => Registro de domínio - sg-alimentos.com - 1 Ano(s) (11/01/2017 - 10/01/2018)
+                            [unitPrice] => 4500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002858
+            [fullName] => Rafaela Aguiar
+            [email] => rafaelaferreira.mendes@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/bf11e787-80d9-4da3-8076-df7f3298553e
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2858
+    [id] => 2858
+    [1] => 248
+    [userid] => 248
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-11
+    [date] => 2017-01-11
+    [4] => 2017-01-11
+    [duedate] => 2017-01-11
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 723.97
+    [subtotal] => 723.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 723.97
+    [total] => 723.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 248
+    [id] => 248
+    [uuid] => 3854468a-6a0b-48a9-acd0-e96b78aada73
+    [firstname] => Rafaela
+    [lastname] => Aguiar
+    [fullname] => Rafaela Aguiar
+    [companyname] => S.G Fekete distribuidora de alimentos
+    [email] => rafaelaferreira.mendes@gmail.com
+    [address1] => Rua Adomiro Rodrigues dos Passos (Prq R Barreto), 144
+    [address2] => Parque Rodrigo Barreto
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417-225
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11931083008
+    [password] => $2y$10$u4wNrhRJp7sOdYnDEeSYu.ex16u5WV3p0V/84lNlJogUO3Up11yne
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11931083008
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/01/2017 14:39<br>IP Address: 177.99.116.54<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11931083008
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 06.093.425/0001-79
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11931083008
+    [customfields3] => 06.093.425/0001-79
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2858
+    [SoftDescriptor] => 2858
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Basico - sg-alimentos.com
+                            [Description] => Site Basico - sg-alimentos.com
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Master - sg-alimentos.com (11/01/2017 - 10/02/2017)
+                            [Description] => TIH - Master - sg-alimentos.com (11/01/2017 - 10/02/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Registro de dominio - sg-alimentos.com - 1 Ano(s) (11/01/2017 - 10/01/2018)
+                            [Description] => Registro de dominio - sg-alimentos.com - 1 Ano(s) (11/01/2017 - 10/01/2018)
+                            [UnitPrice] => 4500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 2172
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Juros por 14 dias de atraso
+                            [Description] => Juros por 14 dias de atraso
+                            [UnitPrice] => 3132
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Discount] => stdClass Object
+        (
+            [Type] => 1
+            [Value] => 10
+            [Amount] => 10
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002858
+            [FullName] => Rafaela Aguiar
+            [Email] => rafaelaferreira.mendes@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2858
+    [softDescriptor] => 2858
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Basico - sg-alimentos.com
+                            [description] => Site Basico - sg-alimentos.com
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - Master - sg-alimentos.com (11/01/2017 - 10/02/2017)
+                            [description] => TIH - Master - sg-alimentos.com (11/01/2017 - 10/02/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Registro de dominio - sg-alimentos.com - 1 Ano(s) (11/01/2017 - 10/01/2018)
+                            [description] => Registro de dominio - sg-alimentos.com - 1 Ano(s) (11/01/2017 - 10/01/2018)
+                            [unitPrice] => 4500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 2172
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [name] => Juros por 14 dias de atraso
+                            [description] => Juros por 14 dias de atraso
+                            [unitPrice] => 3132
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002858
+            [fullName] => Rafaela Aguiar
+            [email] => rafaelaferreira.mendes@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/5dafd017-17ae-45e2-8390-1e04e96befb1
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

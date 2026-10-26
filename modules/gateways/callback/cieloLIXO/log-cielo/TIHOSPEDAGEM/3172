@@ -1,0 +1,349 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3172
+    [id] => 3172
+    [1] => 260
+    [userid] => 260
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-04-05
+    [date] => 2017-04-05
+    [4] => 2017-04-05
+    [duedate] => 2017-04-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 100.00
+    [subtotal] => 100.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 100.00
+    [total] => 100.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 260
+    [id] => 260
+    [uuid] => 0e11ec5f-a484-4fcf-8e2f-216e6055c683
+    [firstname] => Sérgio
+    [lastname] => da Silva Cardoso
+    [fullname] => Sérgio da Silva Cardoso
+    [companyname] => Moleca Calçados
+    [email] => ercm@rodiziosercm.com.br
+    [address1] => Estrada de São Bento, 1710
+    [address2] => Vila Ferlópolis
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08597-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 01146443301 11986947921
+    [password] => $2y$10$LsrHmFzl7ZQoArn9WP7n9eDNdoeRW.4XFLnK49/676m/b.w6xC7S2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114644330111986947921
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/04/2017 11:04<br>IP Address: 189.69.191.232<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986947921
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 16022119812
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11986947921
+    [customfields3] => 16022119812
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3172
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes da loja virtual molecacalcados.com.br - 01 - Par escreve mostruario R$ 170,00 frete gra...
+                            [Description] => Desenvolvimento Por Hora - Alteracoes da loja virtual molecacalcados.com.br - 01 - Par escreve mostruario R$ 170,00 frete gratis.  03- Pares R$ 19,90 cada par mais R$ 10,00 frete qdo finalizar a compra R$ 29,90 a unidade.  06 - Pares R$ 19,90 cada pa...
+                            [UnitPrice] => 10000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Sérgio da Silva Cardoso
+            [Email] => ercm@rodiziosercm.com.br
+            [Identity] => 16022119812
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3172
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alteracoes da loja virtual molecacalcados.com.br - 01 - Par escreve mostruario R$ 170,00 frete gra...
+                            [description] => Desenvolvimento Por Hora - Alteracoes da loja virtual molecacalcados.com.br - 01 - Par escreve mostruario R$ 170,00 frete gratis.  03- Pares R$ 19,90 cada par mais R$ 10,00 frete qdo finalizar a compra R$ 29,90 a unidade.  06 - Pares R$ 19,90 cada pa...
+                            [unitPrice] => 10000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 16022119812
+            [fullName] => Sérgio da Silva Cardoso
+            [email] => ercm@rodiziosercm.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/01929640-60c8-48e1-a339-5551adfcfa6b
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+05/04/2017 11:08:06
+INICIO_______________________________________________________________LOG:BEGIN:::05/04/2017 11:06<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3172
+    [amount] => 10000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 759f38c3865248428e520eda51b3ea69
+    [created_date] => 05/04/2017 11:06:05
+    [customer_name] => Sérgio Cardoso
+    [customer_phone] => 11986947921
+    [customer_identity] => 16022119812
+    [customer_email] => ercm@rodiziosercm.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 542820******2939
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626EFQDQV9NB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+05/04/2017 11:09:06
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3172 | Result->success | ValorPago ->100.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 3172
+    [amount] => 10000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 759f38c3865248428e520eda51b3ea69
+    [created_date] => 05/04/2017 11:06:05
+    [customer_name] => Sérgio Cardoso
+    [customer_phone] => 11986947921
+    [customer_identity] => 16022119812
+    [customer_email] => ercm@rodiziosercm.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 542820******2939
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626EFQDQV9NB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+05/04/2017 11:47:15
+INICIO_______________________________________________________________LOG:BEGIN:::05/04/2017 11:15<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 759f38c3865248428e520eda51b3ea69
+    [amount] => 10000
+    [order_number] => 3172
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+05/04/2017 11:47:15
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 759f38c3865248428e520eda51b3ea69
+    [amount] => 10000
+    [order_number] => 3172
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+05/04/2017 11:49:15
+INICIO_______________________________________________________________LOG:BEGIN:::05/04/2017 11:15<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 759f38c3865248428e520eda51b3ea69
+    [amount] => 10000
+    [order_number] => 3172
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+05/04/2017 11:49:15
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 759f38c3865248428e520eda51b3ea69
+    [amount] => 10000
+    [order_number] => 3172
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

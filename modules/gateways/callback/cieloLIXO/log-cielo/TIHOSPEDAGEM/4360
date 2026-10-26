@@ -1,0 +1,2007 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4360
+    [id] => 4360
+    [1] => 304
+    [userid] => 304
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-09
+    [date] => 2018-02-09
+    [4] => 2018-02-09
+    [duedate] => 2018-02-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 808.94
+    [subtotal] => 808.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 808.94
+    [total] => 808.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 304
+    [id] => 304
+    [uuid] => f6023c14-2e44-42e5-82c3-51c7d1e057d7
+    [firstname] => Vivian
+    [lastname] => Milene Santos
+    [fullname] => Vivian Milene Santos
+    [companyname] => Tânia Decorações
+    [email] => vivian_pekena@hotmail.com
+    [address1] => Rua Isabel de Góis, 08 Bloco 05 Apto 82
+    [address2] => Jardim Botucatu
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04173-150
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11959196887
+    [password] => $2y$10$vX1bvr8nK9B7YXj4t7GpWOvAdZ1Hp7XSlhcKNSj35wolsQfk32c3q
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11959196887
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/02/2018 15:32<br>IP Address: 191.180.31.74<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11959196887
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 04002799832
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11959196887
+    [customfields3] => 04002799832
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4360
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Pr...
+                            [Description] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Prazo de entrega: 10 dias
+                            [UnitPrice] => 74900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [Description] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [UnitPrice] => 5994
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Vivian Milene Santos
+            [Email] => vivian_pekena@hotmail.com
+            [Identity] => 04002799832
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4360
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Pr...
+                            [description] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Prazo de entrega: 10 dias
+                            [unitPrice] => 74900
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [description] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [unitPrice] => 5994
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 04002799832
+            [fullName] => Vivian Milene Santos
+            [email] => vivian_pekena@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/4e3d43ab-6b26-46e9-a02b-c1d4580bc370
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4360
+    [id] => 4360
+    [1] => 304
+    [userid] => 304
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-09
+    [date] => 2018-02-09
+    [4] => 2018-02-09
+    [duedate] => 2018-02-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 808.94
+    [subtotal] => 808.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 808.94
+    [total] => 808.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 304
+    [id] => 304
+    [uuid] => f6023c14-2e44-42e5-82c3-51c7d1e057d7
+    [firstname] => Vivian
+    [lastname] => Milene Santos
+    [fullname] => Vivian Milene Santos
+    [companyname] => Tânia Decorações
+    [email] => vivian_pekena@hotmail.com
+    [address1] => Rua Isabel de Góis, 08 Bloco 05 Apto 82
+    [address2] => Jardim Botucatu
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04173-150
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11959196887
+    [password] => $2y$10$vX1bvr8nK9B7YXj4t7GpWOvAdZ1Hp7XSlhcKNSj35wolsQfk32c3q
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11959196887
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/02/2018 15:32<br>IP Address: 191.180.31.74<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11959196887
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 04002799832
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11959196887
+    [customfields3] => 04002799832
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4360
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Pr...
+                            [Description] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Prazo de entrega: 10 dias
+                            [UnitPrice] => 74900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [Description] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [UnitPrice] => 5994
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Vivian Milene Santos
+            [Email] => vivian_pekena@hotmail.com
+            [Identity] => 04002799832
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4360
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Pr...
+                            [description] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Prazo de entrega: 10 dias
+                            [unitPrice] => 74900
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [description] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [unitPrice] => 5994
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 04002799832
+            [fullName] => Vivian Milene Santos
+            [email] => vivian_pekena@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/c852da08-bf6a-496c-8ef3-1778f9922e6f
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4360
+    [id] => 4360
+    [1] => 304
+    [userid] => 304
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-09
+    [date] => 2018-02-09
+    [4] => 2018-02-09
+    [duedate] => 2018-02-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 808.94
+    [subtotal] => 808.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 808.94
+    [total] => 808.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 304
+    [id] => 304
+    [uuid] => f6023c14-2e44-42e5-82c3-51c7d1e057d7
+    [firstname] => Vivian
+    [lastname] => Milene Santos
+    [fullname] => Vivian Milene Santos
+    [companyname] => Tânia Decorações
+    [email] => vivian_pekena@hotmail.com
+    [address1] => Rua Isabel de Góis, 08 Bloco 05 Apto 82
+    [address2] => Jardim Botucatu
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04173-150
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11959196887
+    [password] => $2y$10$vX1bvr8nK9B7YXj4t7GpWOvAdZ1Hp7XSlhcKNSj35wolsQfk32c3q
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11959196887
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/02/2018 15:39<br>IP Address: 191.39.20.122<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11959196887
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 04002799832
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11959196887
+    [customfields3] => 04002799832
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4360
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Pr...
+                            [Description] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Prazo de entrega: 10 dias
+                            [UnitPrice] => 74900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [Description] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [UnitPrice] => 5994
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Vivian Milene Santos
+            [Email] => vivian_pekena@hotmail.com
+            [Identity] => 04002799832
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4360
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Pr...
+                            [description] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Prazo de entrega: 10 dias
+                            [unitPrice] => 74900
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [description] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [unitPrice] => 5994
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 04002799832
+            [fullName] => Vivian Milene Santos
+            [email] => vivian_pekena@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/1a57bf50-26c2-404f-adfa-f70ec9dad102
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4360
+    [id] => 4360
+    [1] => 304
+    [userid] => 304
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-09
+    [date] => 2018-02-09
+    [4] => 2018-02-09
+    [duedate] => 2018-02-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 808.94
+    [subtotal] => 808.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 808.94
+    [total] => 808.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 304
+    [id] => 304
+    [uuid] => f6023c14-2e44-42e5-82c3-51c7d1e057d7
+    [firstname] => Vivian
+    [lastname] => Milene Santos
+    [fullname] => Vivian Milene Santos
+    [companyname] => Tânia Decorações
+    [email] => vivian_pekena@hotmail.com
+    [address1] => Rua Isabel de Góis, 08 Bloco 05 Apto 82
+    [address2] => Jardim Botucatu
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04173-150
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11959196887
+    [password] => $2y$10$vX1bvr8nK9B7YXj4t7GpWOvAdZ1Hp7XSlhcKNSj35wolsQfk32c3q
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11959196887
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/02/2018 15:42<br>IP Address: 179.187.52.233<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11959196887
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 04002799832
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11959196887
+    [customfields3] => 04002799832
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4360
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Pr...
+                            [Description] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Prazo de entrega: 10 dias
+                            [UnitPrice] => 74900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [Description] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [UnitPrice] => 5994
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Vivian Milene Santos
+            [Email] => vivian_pekena@hotmail.com
+            [Identity] => 04002799832
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4360
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Pr...
+                            [description] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Prazo de entrega: 10 dias
+                            [unitPrice] => 74900
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [description] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [unitPrice] => 5994
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 04002799832
+            [fullName] => Vivian Milene Santos
+            [email] => vivian_pekena@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/1538c805-464c-41bc-bc80-0f44ee03744a
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4360
+    [id] => 4360
+    [1] => 304
+    [userid] => 304
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-09
+    [date] => 2018-02-09
+    [4] => 2018-02-09
+    [duedate] => 2018-02-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 808.94
+    [subtotal] => 808.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 808.94
+    [total] => 808.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 304
+    [id] => 304
+    [uuid] => f6023c14-2e44-42e5-82c3-51c7d1e057d7
+    [firstname] => Vivian
+    [lastname] => Milene Santos
+    [fullname] => Vivian Milene Santos
+    [companyname] => Tânia Decorações
+    [email] => vivian_pekena@hotmail.com
+    [address1] => Rua Isabel de Góis, 08 Bloco 05 Apto 82
+    [address2] => Jardim Botucatu
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04173-150
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11959196887
+    [password] => $2y$10$vX1bvr8nK9B7YXj4t7GpWOvAdZ1Hp7XSlhcKNSj35wolsQfk32c3q
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11959196887
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/02/2018 15:42<br>IP Address: 191.39.20.122<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11959196887
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 04002799832
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11959196887
+    [customfields3] => 04002799832
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4360
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Pr...
+                            [Description] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Prazo de entrega: 10 dias
+                            [UnitPrice] => 74900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [Description] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [UnitPrice] => 5994
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Vivian Milene Santos
+            [Email] => vivian_pekena@hotmail.com
+            [Identity] => 04002799832
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4360
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Pr...
+                            [description] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Prazo de entrega: 10 dias
+                            [unitPrice] => 74900
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [description] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [unitPrice] => 5994
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 04002799832
+            [fullName] => Vivian Milene Santos
+            [email] => vivian_pekena@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/37089a72-fb97-4349-a881-34f9eede1904
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4360
+    [id] => 4360
+    [1] => 304
+    [userid] => 304
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-09
+    [date] => 2018-02-09
+    [4] => 2018-02-09
+    [duedate] => 2018-02-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 808.94
+    [subtotal] => 808.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 808.94
+    [total] => 808.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 304
+    [id] => 304
+    [uuid] => f6023c14-2e44-42e5-82c3-51c7d1e057d7
+    [firstname] => Vivian
+    [lastname] => Milene Santos
+    [fullname] => Vivian Milene Santos
+    [companyname] => Tânia Decorações
+    [email] => vivian_pekena@hotmail.com
+    [address1] => Rua Isabel de Góis, 08 Bloco 05 Apto 82
+    [address2] => Jardim Botucatu
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04173-150
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11959196887
+    [password] => $2y$10$vX1bvr8nK9B7YXj4t7GpWOvAdZ1Hp7XSlhcKNSj35wolsQfk32c3q
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11959196887
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/02/2018 15:43<br>IP Address: 179.187.52.233<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11959196887
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 04002799832
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11959196887
+    [customfields3] => 04002799832
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4360
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Pr...
+                            [Description] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Prazo de entrega: 10 dias
+                            [UnitPrice] => 74900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [Description] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [UnitPrice] => 5994
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Vivian Milene Santos
+            [Email] => vivian_pekena@hotmail.com
+            [Identity] => 04002799832
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4360
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Pr...
+                            [description] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Prazo de entrega: 10 dias
+                            [unitPrice] => 74900
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [description] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [unitPrice] => 5994
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 04002799832
+            [fullName] => Vivian Milene Santos
+            [email] => vivian_pekena@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/8f849ad2-01d2-4400-895c-f743393ffa8f
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4360
+    [id] => 4360
+    [1] => 304
+    [userid] => 304
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-09
+    [date] => 2018-02-09
+    [4] => 2018-02-09
+    [duedate] => 2018-02-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 808.94
+    [subtotal] => 808.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 808.94
+    [total] => 808.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 304
+    [id] => 304
+    [uuid] => f6023c14-2e44-42e5-82c3-51c7d1e057d7
+    [firstname] => Vivian
+    [lastname] => Milene Santos
+    [fullname] => Vivian Milene Santos
+    [companyname] => Tânia Decorações
+    [email] => vivian_pekena@hotmail.com
+    [address1] => Rua Isabel de Góis, 08 Bloco 05 Apto 82
+    [address2] => Jardim Botucatu
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04173-150
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11959196887
+    [password] => $2y$10$vX1bvr8nK9B7YXj4t7GpWOvAdZ1Hp7XSlhcKNSj35wolsQfk32c3q
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11959196887
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/02/2018 15:44<br>IP Address: 191.39.20.122<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11959196887
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 04002799832
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11959196887
+    [customfields3] => 04002799832
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4360
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Pr...
+                            [Description] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Prazo de entrega: 10 dias
+                            [UnitPrice] => 74900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [Description] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [UnitPrice] => 5994
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Vivian Milene Santos
+            [Email] => vivian_pekena@hotmail.com
+            [Identity] => 04002799832
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4360
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Pr...
+                            [description] => Site Express - taniadecoracoes.com
+observacoes:: Conforme Proposta 1319-Criacao de Site Express para Locacao de decoracoes
+Prazo de entrega: 10 dias
+                            [unitPrice] => 74900
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [description] => TIH - PLUS - taniadecoracoes.com (09/02/2018 - 08/05/2018)
+                            [unitPrice] => 5994
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 04002799832
+            [fullName] => Vivian Milene Santos
+            [email] => vivian_pekena@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/726c02c1-6595-4de9-ba48-3b7a4f492923
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+09/02/2018 15:17:46
+INICIO_______________________________________________________________LOG:BEGIN:::09/02/2018 15:46<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 4360
+    [amount] => 80894
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => cbd0ffceb5484eb9bcf70afd96d22376
+    [created_date] => 09/02/2018 15:46:13
+    [customer_name] => Vivian Santos
+    [customer_phone] => 11959196887
+    [customer_identity] => 04002799832
+    [customer_email] => vivian_pekena@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 422053******1069
+    [payment_installments] => 5
+    [payment_status] => 2
+    [tid] => 10760777627A0EOPJJTB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+09/02/2018 15:28:46
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->4360 | Result->success | ValorPago ->808.94 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 4360
+    [amount] => 80894
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => cbd0ffceb5484eb9bcf70afd96d22376
+    [created_date] => 09/02/2018 15:46:13
+    [customer_name] => Vivian Santos
+    [customer_phone] => 11959196887
+    [customer_identity] => 04002799832
+    [customer_email] => vivian_pekena@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 422053******1069
+    [payment_installments] => 5
+    [payment_status] => 2
+    [tid] => 10760777627A0EOPJJTB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 4360
+    [id] => 4360
+    [1] => 304
+    [userid] => 304
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-09
+    [date] => 2018-02-09
+    [4] => 2018-02-09
+    [duedate] => 2018-02-09
+    [5] => 2018-02-09 15:46:17
+    [datepaid] => 2018-02-09 15:46:17
+    [6] => 808.94
+    [subtotal] => 808.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 808.94
+    [total] => 808.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Paid
+    [status] => Paid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 304
+    [id] => 304
+    [uuid] => f6023c14-2e44-42e5-82c3-51c7d1e057d7
+    [firstname] => Vivian
+    [lastname] => Milene Santos
+    [fullname] => Vivian Milene Santos
+    [companyname] => Tânia Decorações
+    [email] => vivian_pekena@hotmail.com
+    [address1] => Rua Isabel de Góis, 08 Bloco 05 Apto 82
+    [address2] => Jardim Botucatu
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04173-150
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11959196887
+    [password] => $2y$10$vX1bvr8nK9B7YXj4t7GpWOvAdZ1Hp7XSlhcKNSj35wolsQfk32c3q
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11959196887
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/02/2018 15:44<br>IP Address: 191.39.20.122<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11959196887
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 04002799832
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11959196887
+    [customfields3] => 04002799832
+    [customfields4] => 
+)
+</pre>
+
+
+09/02/2018 15:44:52
+INICIO_______________________________________________________________LOG:BEGIN:::09/02/2018 15:52<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cbd0ffceb5484eb9bcf70afd96d22376
+    [amount] => 80894
+    [order_number] => 4360
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+09/02/2018 15:44:52
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cbd0ffceb5484eb9bcf70afd96d22376
+    [amount] => 80894
+    [order_number] => 4360
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+09/02/2018 15:44:52
+INICIO_______________________________________________________________LOG:BEGIN:::09/02/2018 15:52<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cbd0ffceb5484eb9bcf70afd96d22376
+    [amount] => 80894
+    [order_number] => 4360
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+09/02/2018 15:44:52
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cbd0ffceb5484eb9bcf70afd96d22376
+    [amount] => 80894
+    [order_number] => 4360
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

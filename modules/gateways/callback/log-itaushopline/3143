@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3143
+    [id] => 3143
+    [1] => 245
+    [userid] => 245
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-29
+    [date] => 2017-03-29
+    [4] => 2017-04-05
+    [duedate] => 2017-04-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 79.97
+    [subtotal] => 79.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 79.97
+    [total] => 79.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 245
+    [id] => 245
+    [uuid] => bfdcfd1e-3154-4fd0-b910-45b0a2aa4db6
+    [firstname] => Fernanda
+    [lastname] => Salem Fortuna
+    [fullname] => Fernanda Salem Fortuna
+    [companyname] => 
+    [email] => fisalem@hotmail.com
+    [address1] => Rua estrela d&#039;alva, 60 , casa 1
+    [address2] => Observatório
+    [city] => Vinhedo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 13280-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11981754900 - 19995567400
+    [password] => $2y$10$C.ijRGmvLFAnfozvwCighu49yLHooKY/MHUCyx1ruZoln87tau/ua
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1198175490019995567400
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 02/04/2017 20:22<br>IP Address: 177.139.225.37<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11981754900
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 30282106812
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11981754900
+    [customfields3] => 30282106812
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

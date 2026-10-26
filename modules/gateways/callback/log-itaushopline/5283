@@ -1,0 +1,246 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5283
+    [id] => 5283
+    [1] => 329
+    [userid] => 329
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-10-01
+    [date] => 2018-10-01
+    [4] => 2018-10-01
+    [duedate] => 2018-10-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 150.00
+    [subtotal] => 150.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 150.00
+    [total] => 150.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 329
+    [id] => 329
+    [uuid] => 0a1c30a0-efe3-48fa-9d22-356043d90def
+    [firstname] => Marciel
+    [lastname] => Novack
+    [fullname] => Marciel Novack
+    [companyname] => SULMIX DISTRIBUIDORA DE COSMETICOS E PERFUMARIA EIRELI 
+    [email] => distribuidorasulmix@gmail.com
+    [address1] => rua deputado antonio guglielmi sobrinho
+    [address2] => centro
+    [city] => morro da fumaca
+    [fullstate] => SC
+    [state] => SC
+    [postcode] => 88830000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 48996001398
+    [password] => $2y$10$GX6qinDlerLToyner8iNjeALvSpQcNn1BjyAVwi7WdpFApf/c4NLy
+    [statecode] => SC
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.48996001398
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 01/10/2018 10:56<br>IP Address: 177.66.136.34<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 48996001398
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 31.600.030/0001-62
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 48996001398
+    [customfields3] => 31.600.030/0001-62
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5283
+    [id] => 5283
+    [1] => 329
+    [userid] => 329
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-10-01
+    [date] => 2018-10-01
+    [4] => 2018-10-01
+    [duedate] => 2018-10-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 150.00
+    [subtotal] => 150.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 150.00
+    [total] => 150.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 329
+    [id] => 329
+    [uuid] => 0a1c30a0-efe3-48fa-9d22-356043d90def
+    [firstname] => Marciel
+    [lastname] => Novack
+    [fullname] => Marciel Novack
+    [companyname] => SULMIX DISTRIBUIDORA DE COSMETICOS E PERFUMARIA EIRELI 
+    [email] => distribuidorasulmix@gmail.com
+    [address1] => rua deputado antonio guglielmi sobrinho
+    [address2] => centro
+    [city] => morro da fumaca
+    [fullstate] => SC
+    [state] => SC
+    [postcode] => 88830000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 48996001398
+    [password] => $2y$10$GX6qinDlerLToyner8iNjeALvSpQcNn1BjyAVwi7WdpFApf/c4NLy
+    [statecode] => SC
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.48996001398
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 01/10/2018 11:00<br>IP Address: 177.66.136.34<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 48996001398
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 31.600.030/0001-62
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 48996001398
+    [customfields3] => 31.600.030/0001-62
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

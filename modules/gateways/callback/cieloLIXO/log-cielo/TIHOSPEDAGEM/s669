@@ -1,0 +1,4198 @@
+
+
+25/04/2018 13:56:50
+INICIO_______________________________________________________________LOG:BEGIN:::25/04/2018 13:50<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 5c8a5973808040e88d68479c1cb4720d
+    [created_date] => 25/04/2018 13:50:54
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627C6GIKH4LB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 25/04/2018 13:50:54
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/04/2018 13:56:50
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4630
+                            [userid] => 311
+                            [firstname] => IGOR
+                            [lastname] => DE ASSIS FATICA
+                            [companyname] => SOHANA INCORPORADORA EIRELI 
+                            [invoicenum] => 
+                            [date] => 2018-04-18
+                            [duedate] => 2018-04-18
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 32.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 32.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielo
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 5c8a5973808040e88d68479c1cb4720d
+    [created_date] => 25/04/2018 13:50:54
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627C6GIKH4LB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 25/04/2018 13:50:54
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/04/2018 13:56:50
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 4630
+            [userid] => 311
+            [firstname] => IGOR
+            [lastname] => DE ASSIS FATICA
+            [companyname] => SOHANA INCORPORADORA EIRELI 
+            [invoicenum] => 
+            [date] => 2018-04-18
+            [duedate] => 2018-04-18
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 32.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 32.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielo
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 5c8a5973808040e88d68479c1cb4720d
+    [created_date] => 25/04/2018 13:50:54
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627C6GIKH4LB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 25/04/2018 13:50:54
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/04/2018 13:56:50
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 4630
+    [userid] => 311
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA EIRELI 
+    [invoicenum] => 
+    [date] => 2018-04-18
+    [duedate] => 2018-04-18
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 5c8a5973808040e88d68479c1cb4720d
+    [created_date] => 25/04/2018 13:50:54
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627C6GIKH4LB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 25/04/2018 13:50:54
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/04/2018 13:56:50
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 4630
+    [invoicenum] => 
+    [userid] => 311
+    [date] => 2018-04-18
+    [duedate] => 2018-04-18
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [balance] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 7166
+                            [type] => Hosting
+                            [relid] => 669
+                            [description] => TIH - Master  - imoveisasantos.com.br (18/04/2018 - 17/05/2018)
+                            [amount] => 32.97
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 5c8a5973808040e88d68479c1cb4720d
+    [created_date] => 25/04/2018 13:50:54
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627C6GIKH4LB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 25/04/2018 13:50:54
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/04/2018 13:56:50
+INICIO_______________________________________________________________LOG:Checando -> 669 ==  669
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 5c8a5973808040e88d68479c1cb4720d
+    [created_date] => 25/04/2018 13:50:54
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627C6GIKH4LB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 25/04/2018 13:50:54
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/04/2018 13:56:50
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->4630 | Result->success | ValorPago ->32.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 5c8a5973808040e88d68479c1cb4720d
+    [created_date] => 25/04/2018 13:50:54
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627C6GIKH4LB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 25/04/2018 13:50:54
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/04/2018 14:53:04
+INICIO_______________________________________________________________LOG:BEGIN:::25/04/2018 14:04<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5c8a5973808040e88d68479c1cb4720d
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/04/2018 14:53:04
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5c8a5973808040e88d68479c1cb4720d
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/04/2018 14:53:04
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5c8a5973808040e88d68479c1cb4720d
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/04/2018 14:53:04
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5c8a5973808040e88d68479c1cb4720d
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/04/2018 14:54:04
+INICIO_______________________________________________________________LOG:BEGIN:::25/04/2018 14:04<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5c8a5973808040e88d68479c1cb4720d
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/04/2018 14:54:04
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5c8a5973808040e88d68479c1cb4720d
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/04/2018 14:54:04
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5c8a5973808040e88d68479c1cb4720d
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/04/2018 14:54:04
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5c8a5973808040e88d68479c1cb4720d
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/04/2018 14:56:04
+INICIO_______________________________________________________________LOG:BEGIN:::25/04/2018 14:04<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5c8a5973808040e88d68479c1cb4720d
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/04/2018 14:56:04
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5c8a5973808040e88d68479c1cb4720d
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/04/2018 14:56:04
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5c8a5973808040e88d68479c1cb4720d
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/04/2018 14:56:04
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5c8a5973808040e88d68479c1cb4720d
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/05/2018 20:17:00
+INICIO_______________________________________________________________LOG:BEGIN:::25/05/2018 20:00<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 7ec2f208c9ad4ce68aa63ab3b1bc357e
+    [created_date] => 25/05/2018 20:00:16
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627D1K09OT5B
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/05/2018 20:17:00
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4731
+                            [userid] => 311
+                            [firstname] => IGOR
+                            [lastname] => DE ASSIS FATICA
+                            [companyname] => SOHANA INCORPORADORA EIRELI 
+                            [invoicenum] => 
+                            [date] => 2018-05-18
+                            [duedate] => 2018-05-25
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 32.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 32.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielo
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 7ec2f208c9ad4ce68aa63ab3b1bc357e
+    [created_date] => 25/05/2018 20:00:16
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627D1K09OT5B
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/05/2018 20:17:00
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 4731
+            [userid] => 311
+            [firstname] => IGOR
+            [lastname] => DE ASSIS FATICA
+            [companyname] => SOHANA INCORPORADORA EIRELI 
+            [invoicenum] => 
+            [date] => 2018-05-18
+            [duedate] => 2018-05-25
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 32.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 32.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielo
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 7ec2f208c9ad4ce68aa63ab3b1bc357e
+    [created_date] => 25/05/2018 20:00:16
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627D1K09OT5B
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/05/2018 20:17:00
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 4731
+    [userid] => 311
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA EIRELI 
+    [invoicenum] => 
+    [date] => 2018-05-18
+    [duedate] => 2018-05-25
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 7ec2f208c9ad4ce68aa63ab3b1bc357e
+    [created_date] => 25/05/2018 20:00:16
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627D1K09OT5B
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/05/2018 20:17:00
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 4731
+    [invoicenum] => 
+    [userid] => 311
+    [date] => 2018-05-18
+    [duedate] => 2018-05-25
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [balance] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 7371
+                            [type] => Hosting
+                            [relid] => 669
+                            [description] => TIH - Master  - imoveisasantos.com.br (25/05/2018 - 24/06/2018)
+                            [amount] => 32.97
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 7ec2f208c9ad4ce68aa63ab3b1bc357e
+    [created_date] => 25/05/2018 20:00:16
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627D1K09OT5B
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/05/2018 20:17:00
+INICIO_______________________________________________________________LOG:Checando -> 669 ==  669
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 7ec2f208c9ad4ce68aa63ab3b1bc357e
+    [created_date] => 25/05/2018 20:00:16
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627D1K09OT5B
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/05/2018 20:17:00
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->4731 | Result->success | ValorPago ->32.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 7ec2f208c9ad4ce68aa63ab3b1bc357e
+    [created_date] => 25/05/2018 20:00:16
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627D1K09OT5B
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/05/2018 20:01:04
+INICIO_______________________________________________________________LOG:BEGIN:::25/05/2018 20:04<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 7ec2f208c9ad4ce68aa63ab3b1bc357e
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/05/2018 20:01:04
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 7ec2f208c9ad4ce68aa63ab3b1bc357e
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/05/2018 20:01:04
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 7ec2f208c9ad4ce68aa63ab3b1bc357e
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/05/2018 20:01:04
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 7ec2f208c9ad4ce68aa63ab3b1bc357e
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/06/2018 20:30:21
+INICIO_______________________________________________________________LOG:BEGIN:::25/06/2018 20:21<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => e42215f4adab4a2c9db5358bf865aa14
+    [created_date] => 25/06/2018 20:21:29
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627DUIRLA7PB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/06/2018 20:30:21
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4856
+                            [userid] => 311
+                            [firstname] => IGOR
+                            [lastname] => DE ASSIS FATICA
+                            [companyname] => SOHANA INCORPORADORA EIRELI 
+                            [invoicenum] => 
+                            [date] => 2018-06-18
+                            [duedate] => 2018-06-25
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 32.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 32.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielo
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => e42215f4adab4a2c9db5358bf865aa14
+    [created_date] => 25/06/2018 20:21:29
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627DUIRLA7PB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/06/2018 20:30:21
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 4856
+            [userid] => 311
+            [firstname] => IGOR
+            [lastname] => DE ASSIS FATICA
+            [companyname] => SOHANA INCORPORADORA EIRELI 
+            [invoicenum] => 
+            [date] => 2018-06-18
+            [duedate] => 2018-06-25
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 32.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 32.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielo
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => e42215f4adab4a2c9db5358bf865aa14
+    [created_date] => 25/06/2018 20:21:29
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627DUIRLA7PB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/06/2018 20:30:21
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 4856
+    [userid] => 311
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA EIRELI 
+    [invoicenum] => 
+    [date] => 2018-06-18
+    [duedate] => 2018-06-25
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => e42215f4adab4a2c9db5358bf865aa14
+    [created_date] => 25/06/2018 20:21:29
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627DUIRLA7PB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/06/2018 20:30:21
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 4856
+    [invoicenum] => 
+    [userid] => 311
+    [date] => 2018-06-18
+    [duedate] => 2018-06-25
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [balance] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 7576
+                            [type] => Hosting
+                            [relid] => 669
+                            [description] => TIH - Master  - imoveisasantos.com.br (25/06/2018 - 24/07/2018)
+                            [amount] => 32.97
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => e42215f4adab4a2c9db5358bf865aa14
+    [created_date] => 25/06/2018 20:21:29
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627DUIRLA7PB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/06/2018 20:30:21
+INICIO_______________________________________________________________LOG:Checando -> 669 ==  669
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => e42215f4adab4a2c9db5358bf865aa14
+    [created_date] => 25/06/2018 20:21:29
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627DUIRLA7PB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/06/2018 20:31:21
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->4856 | Result->success | ValorPago ->32.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => e42215f4adab4a2c9db5358bf865aa14
+    [created_date] => 25/06/2018 20:21:29
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627DUIRLA7PB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/06/2018 20:05:29
+INICIO_______________________________________________________________LOG:BEGIN:::25/06/2018 20:29<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e42215f4adab4a2c9db5358bf865aa14
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/06/2018 20:05:29
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e42215f4adab4a2c9db5358bf865aa14
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/06/2018 20:05:29
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e42215f4adab4a2c9db5358bf865aa14
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/06/2018 20:05:29
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e42215f4adab4a2c9db5358bf865aa14
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/07/2018 21:49:05
+INICIO_______________________________________________________________LOG:BEGIN:::25/07/2018 21:05<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 5113aca6f9e4428aaf875c494678c05d
+    [created_date] => 25/07/2018 21:05:47
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627EQJTT1BHB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/07/2018 21:49:05
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 2
+    [startnumber] => 0
+    [numreturned] => 2
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4974
+                            [userid] => 311
+                            [firstname] => IGOR
+                            [lastname] => DE ASSIS FATICA
+                            [companyname] => SOHANA INCORPORADORA EIRELI 
+                            [invoicenum] => 
+                            [date] => 2018-07-18
+                            [duedate] => 2018-07-25
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 32.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 32.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielo
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 4975
+                            [userid] => 311
+                            [firstname] => IGOR
+                            [lastname] => DE ASSIS FATICA
+                            [companyname] => SOHANA INCORPORADORA EIRELI 
+                            [invoicenum] => 
+                            [date] => 2018-07-18
+                            [duedate] => 2018-07-25
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 32.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 32.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielo
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 5113aca6f9e4428aaf875c494678c05d
+    [created_date] => 25/07/2018 21:05:47
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627EQJTT1BHB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/07/2018 21:49:05
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 4974
+            [userid] => 311
+            [firstname] => IGOR
+            [lastname] => DE ASSIS FATICA
+            [companyname] => SOHANA INCORPORADORA EIRELI 
+            [invoicenum] => 
+            [date] => 2018-07-18
+            [duedate] => 2018-07-25
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 32.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 32.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielo
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+    [1] => Array
+        (
+            [id] => 4975
+            [userid] => 311
+            [firstname] => IGOR
+            [lastname] => DE ASSIS FATICA
+            [companyname] => SOHANA INCORPORADORA EIRELI 
+            [invoicenum] => 
+            [date] => 2018-07-18
+            [duedate] => 2018-07-25
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 32.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 32.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielo
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 5113aca6f9e4428aaf875c494678c05d
+    [created_date] => 25/07/2018 21:05:47
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627EQJTT1BHB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/07/2018 21:49:05
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 4974
+    [userid] => 311
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA EIRELI 
+    [invoicenum] => 
+    [date] => 2018-07-18
+    [duedate] => 2018-07-25
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 5113aca6f9e4428aaf875c494678c05d
+    [created_date] => 25/07/2018 21:05:47
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627EQJTT1BHB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/07/2018 21:49:05
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 4974
+    [invoicenum] => 
+    [userid] => 311
+    [date] => 2018-07-18
+    [duedate] => 2018-07-25
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [balance] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 7760
+                            [type] => Hosting
+                            [relid] => 669
+                            [description] => TIH - Master  - imoveisasantos.com.br (25/07/2018 - 24/08/2018)
+                            [amount] => 32.97
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 5113aca6f9e4428aaf875c494678c05d
+    [created_date] => 25/07/2018 21:05:47
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627EQJTT1BHB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/07/2018 21:49:05
+INICIO_______________________________________________________________LOG:Checando -> 669 ==  669
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 5113aca6f9e4428aaf875c494678c05d
+    [created_date] => 25/07/2018 21:05:47
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627EQJTT1BHB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/07/2018 21:50:05
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->4974 | Result->success | ValorPago ->32.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 5113aca6f9e4428aaf875c494678c05d
+    [created_date] => 25/07/2018 21:05:47
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627EQJTT1BHB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/07/2018 21:29:08
+INICIO_______________________________________________________________LOG:BEGIN:::25/07/2018 21:08<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5113aca6f9e4428aaf875c494678c05d
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/07/2018 21:29:08
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4975
+                            [userid] => 311
+                            [firstname] => IGOR
+                            [lastname] => DE ASSIS FATICA
+                            [companyname] => SOHANA INCORPORADORA EIRELI 
+                            [invoicenum] => 
+                            [date] => 2018-07-18
+                            [duedate] => 2018-07-25
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 32.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 32.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielo
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5113aca6f9e4428aaf875c494678c05d
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/07/2018 21:29:08
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 4975
+            [userid] => 311
+            [firstname] => IGOR
+            [lastname] => DE ASSIS FATICA
+            [companyname] => SOHANA INCORPORADORA EIRELI 
+            [invoicenum] => 
+            [date] => 2018-07-18
+            [duedate] => 2018-07-25
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 32.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 32.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielo
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5113aca6f9e4428aaf875c494678c05d
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/07/2018 21:29:08
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 4975
+    [userid] => 311
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA EIRELI 
+    [invoicenum] => 
+    [date] => 2018-07-18
+    [duedate] => 2018-07-25
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5113aca6f9e4428aaf875c494678c05d
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/07/2018 21:29:08
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 4975
+    [invoicenum] => 
+    [userid] => 311
+    [date] => 2018-07-18
+    [duedate] => 2018-07-25
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [balance] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 7761
+                            [type] => Hosting
+                            [relid] => 668
+                            [description] => TIH - Master  - sohana.com.br (25/07/2018 - 24/08/2018)
+                            [amount] => 32.97
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5113aca6f9e4428aaf875c494678c05d
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/07/2018 21:29:08
+INICIO_______________________________________________________________LOG:Checando -> 668 ==  669
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5113aca6f9e4428aaf875c494678c05d
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/07/2018 21:29:08
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:Array
+(
+    [0] => Array
+        (
+            [id] => 4975
+            [userid] => 311
+            [firstname] => IGOR
+            [lastname] => DE ASSIS FATICA
+            [companyname] => SOHANA INCORPORADORA EIRELI 
+            [invoicenum] => 
+            [date] => 2018-07-18
+            [duedate] => 2018-07-25
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 32.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 32.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielo
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5113aca6f9e4428aaf875c494678c05d
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/08/2018 19:27:34
+INICIO_______________________________________________________________LOG:BEGIN:::25/08/2018 19:34<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 3bf0305f1f20473d9f6a06e1d3743364
+    [created_date] => 25/08/2018 19:34:27
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627FNIOTUDVB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/08/2018 19:27:34
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 5103
+                            [userid] => 311
+                            [firstname] => IGOR
+                            [lastname] => DE ASSIS FATICA
+                            [companyname] => SOHANA INCORPORADORA LTDA 
+                            [invoicenum] => 
+                            [date] => 2018-08-20
+                            [duedate] => 2018-08-25
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 32.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 32.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielo
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 3bf0305f1f20473d9f6a06e1d3743364
+    [created_date] => 25/08/2018 19:34:27
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627FNIOTUDVB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/08/2018 19:27:34
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 5103
+            [userid] => 311
+            [firstname] => IGOR
+            [lastname] => DE ASSIS FATICA
+            [companyname] => SOHANA INCORPORADORA LTDA 
+            [invoicenum] => 
+            [date] => 2018-08-20
+            [duedate] => 2018-08-25
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 32.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 32.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielo
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 3bf0305f1f20473d9f6a06e1d3743364
+    [created_date] => 25/08/2018 19:34:27
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627FNIOTUDVB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/08/2018 19:27:34
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 5103
+    [userid] => 311
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA LTDA 
+    [invoicenum] => 
+    [date] => 2018-08-20
+    [duedate] => 2018-08-25
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 3bf0305f1f20473d9f6a06e1d3743364
+    [created_date] => 25/08/2018 19:34:27
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627FNIOTUDVB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/08/2018 19:27:34
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 5103
+    [invoicenum] => 
+    [userid] => 311
+    [date] => 2018-08-20
+    [duedate] => 2018-08-25
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [balance] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 7944
+                            [type] => Hosting
+                            [relid] => 669
+                            [description] => TIH - Master  - imoveisasantos.com.br (25/08/2018 - 24/09/2018)
+                            [amount] => 32.97
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 3bf0305f1f20473d9f6a06e1d3743364
+    [created_date] => 25/08/2018 19:34:27
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627FNIOTUDVB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/08/2018 19:27:34
+INICIO_______________________________________________________________LOG:Checando -> 669 ==  669
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 3bf0305f1f20473d9f6a06e1d3743364
+    [created_date] => 25/08/2018 19:34:27
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627FNIOTUDVB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/08/2018 19:28:34
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->5103 | Result->success | ValorPago ->32.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => 3bf0305f1f20473d9f6a06e1d3743364
+    [created_date] => 25/08/2018 19:34:27
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627FNIOTUDVB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/08/2018 19:38:36
+INICIO_______________________________________________________________LOG:BEGIN:::25/08/2018 19:36<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 3bf0305f1f20473d9f6a06e1d3743364
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/08/2018 19:38:36
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 3bf0305f1f20473d9f6a06e1d3743364
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/08/2018 19:38:36
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 3bf0305f1f20473d9f6a06e1d3743364
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/08/2018 19:38:36
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 3bf0305f1f20473d9f6a06e1d3743364
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/10/2018 4:28:26
+INICIO_______________________________________________________________LOG:BEGIN:::26/10/2018 4:26<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => c5365c4936bd47d4b409c3bfd54183bc
+    [created_date] => 26/10/2018 04:26:27
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627HHH2FU39B
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/10/2018 4:28:26
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 5341
+                            [userid] => 311
+                            [firstname] => IGOR
+                            [lastname] => DE ASSIS FATICA
+                            [companyname] => SOHANA INCORPORADORA LTDA 
+                            [invoicenum] => 
+                            [date] => 2018-10-18
+                            [duedate] => 2018-10-25
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 32.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 32.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielo
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => c5365c4936bd47d4b409c3bfd54183bc
+    [created_date] => 26/10/2018 04:26:27
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627HHH2FU39B
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/10/2018 4:28:26
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 5341
+            [userid] => 311
+            [firstname] => IGOR
+            [lastname] => DE ASSIS FATICA
+            [companyname] => SOHANA INCORPORADORA LTDA 
+            [invoicenum] => 
+            [date] => 2018-10-18
+            [duedate] => 2018-10-25
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 32.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 32.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielo
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => c5365c4936bd47d4b409c3bfd54183bc
+    [created_date] => 26/10/2018 04:26:27
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627HHH2FU39B
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/10/2018 4:28:26
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 5341
+    [userid] => 311
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA LTDA 
+    [invoicenum] => 
+    [date] => 2018-10-18
+    [duedate] => 2018-10-25
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => c5365c4936bd47d4b409c3bfd54183bc
+    [created_date] => 26/10/2018 04:26:27
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627HHH2FU39B
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/10/2018 4:28:26
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 5341
+    [invoicenum] => 
+    [userid] => 311
+    [date] => 2018-10-18
+    [duedate] => 2018-10-25
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [balance] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 8314
+                            [type] => Hosting
+                            [relid] => 669
+                            [description] => TIH - Master  - imoveisasantos.com.br (25/10/2018 - 24/11/2018)
+                            [amount] => 32.97
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => c5365c4936bd47d4b409c3bfd54183bc
+    [created_date] => 26/10/2018 04:26:27
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627HHH2FU39B
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/10/2018 4:28:26
+INICIO_______________________________________________________________LOG:Checando -> 669 ==  669
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => c5365c4936bd47d4b409c3bfd54183bc
+    [created_date] => 26/10/2018 04:26:27
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627HHH2FU39B
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/10/2018 4:30:26
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->5341 | Result->success | ValorPago ->32.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => c5365c4936bd47d4b409c3bfd54183bc
+    [created_date] => 26/10/2018 04:26:27
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627HHH2FU39B
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/10/2018 4:11:36
+INICIO_______________________________________________________________LOG:BEGIN:::26/10/2018 4:36<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c5365c4936bd47d4b409c3bfd54183bc
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/10/2018 4:11:36
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c5365c4936bd47d4b409c3bfd54183bc
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/10/2018 4:11:36
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c5365c4936bd47d4b409c3bfd54183bc
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/10/2018 4:11:36
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c5365c4936bd47d4b409c3bfd54183bc
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/11/2018 20:03:26
+INICIO_______________________________________________________________LOG:BEGIN:::25/11/2018 20:26<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => ff0b6080dc014321b6a7cbde50448669
+    [created_date] => 25/11/2018 20:26:02
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627IDIPTK1JB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/11/2018 20:03:26
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 5474
+                            [userid] => 311
+                            [firstname] => IGOR
+                            [lastname] => DE ASSIS FATICA
+                            [companyname] => SOHANA INCORPORADORA LTDA 
+                            [invoicenum] => 
+                            [date] => 2018-11-19
+                            [duedate] => 2018-11-25
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 32.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 32.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielo
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => ff0b6080dc014321b6a7cbde50448669
+    [created_date] => 25/11/2018 20:26:02
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627IDIPTK1JB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/11/2018 20:03:26
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 5474
+            [userid] => 311
+            [firstname] => IGOR
+            [lastname] => DE ASSIS FATICA
+            [companyname] => SOHANA INCORPORADORA LTDA 
+            [invoicenum] => 
+            [date] => 2018-11-19
+            [duedate] => 2018-11-25
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 32.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 32.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielo
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => ff0b6080dc014321b6a7cbde50448669
+    [created_date] => 25/11/2018 20:26:02
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627IDIPTK1JB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/11/2018 20:03:26
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 5474
+    [userid] => 311
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA LTDA 
+    [invoicenum] => 
+    [date] => 2018-11-19
+    [duedate] => 2018-11-25
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => ff0b6080dc014321b6a7cbde50448669
+    [created_date] => 25/11/2018 20:26:02
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627IDIPTK1JB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/11/2018 20:03:26
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 5474
+    [invoicenum] => 
+    [userid] => 311
+    [date] => 2018-11-19
+    [duedate] => 2018-11-25
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [balance] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 8504
+                            [type] => Hosting
+                            [relid] => 669
+                            [description] => TIH - Master  - imoveisasantos.com.br (25/11/2018 - 24/12/2018)
+                            [amount] => 32.97
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => ff0b6080dc014321b6a7cbde50448669
+    [created_date] => 25/11/2018 20:26:02
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627IDIPTK1JB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/11/2018 20:03:26
+INICIO_______________________________________________________________LOG:Checando -> 669 ==  669
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => ff0b6080dc014321b6a7cbde50448669
+    [created_date] => 25/11/2018 20:26:02
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627IDIPTK1JB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/11/2018 20:04:26
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->5474 | Result->success | ValorPago ->32.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [checkout_cielo_order_number] => ff0b6080dc014321b6a7cbde50448669
+    [created_date] => 25/11/2018 20:26:02
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627IDIPTK1JB
+    [recurrent_payment_id] => 938a0f77-9f09-4fd7-a733-fe30ca3f28c0
+    [start_date] => 4/25/2018 1:50:54 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/11/2018 20:37:34
+INICIO_______________________________________________________________LOG:BEGIN:::25/11/2018 20:34<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => ff0b6080dc014321b6a7cbde50448669
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/11/2018 20:37:34
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => ff0b6080dc014321b6a7cbde50448669
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/11/2018 20:37:34
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => ff0b6080dc014321b6a7cbde50448669
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/11/2018 20:37:34
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => ff0b6080dc014321b6a7cbde50448669
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2019 14:17:59
+INICIO_______________________________________________________________LOG:BEGIN:::06/03/2019 14:59<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 030f28d0958c4353b59e3bffe1848ad9
+    [created_date] => 06/03/2019 14:59:14
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 1136541200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552316******1880
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776287QFHS0SNB
+    [recurrent_payment_id] => 21a5b4a7-6467-4dc6-9c8e-779b32d92bb2
+    [start_date] => 06/03/2019 14:59:14
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2019 14:17:59
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 2
+    [startnumber] => 0
+    [numreturned] => 2
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 5806
+                            [userid] => 311
+                            [firstname] => IGOR
+                            [lastname] => DE ASSIS FATICA
+                            [companyname] => SOHANA INCORPORADORA LTDA 
+                            [invoicenum] => 
+                            [date] => 2019-02-18
+                            [duedate] => 2019-02-25
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 32.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 32.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielo
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 5685
+                            [userid] => 311
+                            [firstname] => IGOR
+                            [lastname] => DE ASSIS FATICA
+                            [companyname] => SOHANA INCORPORADORA LTDA 
+                            [invoicenum] => 
+                            [date] => 2019-01-18
+                            [duedate] => 2019-01-25
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 32.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 32.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielo
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 030f28d0958c4353b59e3bffe1848ad9
+    [created_date] => 06/03/2019 14:59:14
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 1136541200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552316******1880
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776287QFHS0SNB
+    [recurrent_payment_id] => 21a5b4a7-6467-4dc6-9c8e-779b32d92bb2
+    [start_date] => 06/03/2019 14:59:14
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2019 14:17:59
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 5806
+            [userid] => 311
+            [firstname] => IGOR
+            [lastname] => DE ASSIS FATICA
+            [companyname] => SOHANA INCORPORADORA LTDA 
+            [invoicenum] => 
+            [date] => 2019-02-18
+            [duedate] => 2019-02-25
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 32.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 32.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielo
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+    [1] => Array
+        (
+            [id] => 5685
+            [userid] => 311
+            [firstname] => IGOR
+            [lastname] => DE ASSIS FATICA
+            [companyname] => SOHANA INCORPORADORA LTDA 
+            [invoicenum] => 
+            [date] => 2019-01-18
+            [duedate] => 2019-01-25
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 32.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 32.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielo
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 030f28d0958c4353b59e3bffe1848ad9
+    [created_date] => 06/03/2019 14:59:14
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 1136541200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552316******1880
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776287QFHS0SNB
+    [recurrent_payment_id] => 21a5b4a7-6467-4dc6-9c8e-779b32d92bb2
+    [start_date] => 06/03/2019 14:59:14
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2019 14:17:59
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 5806
+    [userid] => 311
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA LTDA 
+    [invoicenum] => 
+    [date] => 2019-02-18
+    [duedate] => 2019-02-25
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 030f28d0958c4353b59e3bffe1848ad9
+    [created_date] => 06/03/2019 14:59:14
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 1136541200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552316******1880
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776287QFHS0SNB
+    [recurrent_payment_id] => 21a5b4a7-6467-4dc6-9c8e-779b32d92bb2
+    [start_date] => 06/03/2019 14:59:14
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2019 14:17:59
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 5806
+    [invoicenum] => 
+    [userid] => 311
+    [date] => 2019-02-18
+    [duedate] => 2019-02-25
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [balance] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 9012
+                            [type] => Hosting
+                            [relid] => 669
+                            [description] => TIH - Master  - imoveisasantos.com.br (25/02/2019 - 24/03/2019)
+                            [amount] => 32.97
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 030f28d0958c4353b59e3bffe1848ad9
+    [created_date] => 06/03/2019 14:59:14
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 1136541200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552316******1880
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776287QFHS0SNB
+    [recurrent_payment_id] => 21a5b4a7-6467-4dc6-9c8e-779b32d92bb2
+    [start_date] => 06/03/2019 14:59:14
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2019 14:17:59
+INICIO_______________________________________________________________LOG:Checando -> 669 ==  669
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 030f28d0958c4353b59e3bffe1848ad9
+    [created_date] => 06/03/2019 14:59:14
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 1136541200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552316******1880
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776287QFHS0SNB
+    [recurrent_payment_id] => 21a5b4a7-6467-4dc6-9c8e-779b32d92bb2
+    [start_date] => 06/03/2019 14:59:14
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2019 14:22:59
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->5806 | Result->success | ValorPago ->32.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => s669
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 030f28d0958c4353b59e3bffe1848ad9
+    [created_date] => 06/03/2019 14:59:14
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 1136541200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552316******1880
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776287QFHS0SNB
+    [recurrent_payment_id] => 21a5b4a7-6467-4dc6-9c8e-779b32d92bb2
+    [start_date] => 06/03/2019 14:59:14
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2019 15:42:04
+INICIO_______________________________________________________________LOG:BEGIN:::06/03/2019 15:04<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 030f28d0958c4353b59e3bffe1848ad9
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2019 15:42:04
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 5685
+                            [userid] => 311
+                            [firstname] => IGOR
+                            [lastname] => DE ASSIS FATICA
+                            [companyname] => SOHANA INCORPORADORA LTDA 
+                            [invoicenum] => 
+                            [date] => 2019-01-18
+                            [duedate] => 2019-01-25
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 32.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 32.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielo
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 030f28d0958c4353b59e3bffe1848ad9
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2019 15:42:04
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 5685
+            [userid] => 311
+            [firstname] => IGOR
+            [lastname] => DE ASSIS FATICA
+            [companyname] => SOHANA INCORPORADORA LTDA 
+            [invoicenum] => 
+            [date] => 2019-01-18
+            [duedate] => 2019-01-25
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 32.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 32.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielo
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 030f28d0958c4353b59e3bffe1848ad9
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2019 15:42:04
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 5685
+    [userid] => 311
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA LTDA 
+    [invoicenum] => 
+    [date] => 2019-01-18
+    [duedate] => 2019-01-25
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 030f28d0958c4353b59e3bffe1848ad9
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2019 15:42:04
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 5685
+    [invoicenum] => 
+    [userid] => 311
+    [date] => 2019-01-18
+    [duedate] => 2019-01-25
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [balance] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 8838
+                            [type] => Hosting
+                            [relid] => 669
+                            [description] => TIH - Master  - imoveisasantos.com.br (25/01/2019 - 24/02/2019)
+                            [amount] => 32.97
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 030f28d0958c4353b59e3bffe1848ad9
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2019 15:42:04
+INICIO_______________________________________________________________LOG:Checando -> 669 ==  669
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 030f28d0958c4353b59e3bffe1848ad9
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2019 15:43:04
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->5685 | Result->success | ValorPago ->32.97 | Message->
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 030f28d0958c4353b59e3bffe1848ad9
+    [amount] => 3297
+    [order_number] => s669
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

@@ -1,0 +1,238 @@
+
+Dados Dominio
+<pre>Array
+(
+    [id] => 100
+    [userid] => 260
+    [orderid] => 436
+    [regtype] => Register
+    [domainname] => molecacalcados.com.br
+    [registrar] => email
+    [regperiod] => 1
+    [firstpaymentamount] => 55.00
+    [recurringamount] => 55.00
+    [paymentmethod] => cielorecorrente
+    [paymentmethodname] => Cielo Pagamento Recorrente
+    [regdate] => 2017-03-14
+    [expirydate] => 2018-03-14
+    [nextduedate] => 2018-03-14
+    [status] => Active
+    [subscriptionid] => 
+    [promoid] => 0
+    [dnsmanagement] => 0
+    [emailforwarding] => 0
+    [idprotection] => 0
+    [donotrenew] => 0
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 260
+    [id] => 260
+    [uuid] => 0e11ec5f-a484-4fcf-8e2f-216e6055c683
+    [firstname] => Sérgio
+    [lastname] => da Silva Cardoso
+    [fullname] => Sérgio da Silva Cardoso
+    [companyname] => Moleca Calçados
+    [email] => contato@sejaumafranqueada.com.br
+    [address1] => Estrada de São Bento, 1710
+    [address2] => Vila Ferlópolis
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08597-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 01146443301 11986947921
+    [password] => $2y$10$gap6l7OXKSVPeGaVguD7FOB3D1jY4zxB4X2SaNXYDiYxNG3n.XiS2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114644330111986947921
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => cielorecorrente
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/01/2018 10:28<br>IP Address: 179.111.4.184<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986947921
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 16022119812
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11986947921
+    [customfields3] => 16022119812
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => d100
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Manutencao de Dominio - molecacalcados.com.br
+                            [Description] => Manutencao de Dominio - molecacalcados.com.br
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Annual
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 16022119812
+            [FullName] => Sérgio da Silva Cardoso
+            [Email] => contato@sejaumafranqueada.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => d100
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Manutencao de Dominio - molecacalcados.com.br
+                            [description] => Manutencao de Dominio - molecacalcados.com.br
+                            [unitPrice] => 5500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => Annual
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 16022119812
+            [fullName] => Sérgio da Silva Cardoso
+            [email] => contato@sejaumafranqueada.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/8d0ae1d1-d2a9-4d7d-b7d9-adf833a779a9
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

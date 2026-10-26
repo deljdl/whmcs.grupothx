@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5206
+    [id] => 5206
+    [1] => 325
+    [userid] => 325
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-17
+    [date] => 2018-09-17
+    [4] => 2018-09-14
+    [duedate] => 2018-09-14
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 325
+    [id] => 325
+    [uuid] => 1656b464-cde4-4566-b41c-3d796c0eceae
+    [firstname] => Monica
+    [lastname] => Cristina Seixas Bonfim
+    [fullname] => Monica Cristina Seixas Bonfim
+    [companyname] => ELEICAO 2018 MONICA CRISTINA SEIXAS BONFIM DEPUTADO ESTADUAL
+    [email] => bancadaativista@gmail.com
+    [address1] => Alameda das Mangueiras, 1, lote 1
+    [address2] => Jardim Paraíso II
+    [city] => Itu
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 13304-366
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 991950103
+    [password] => $2y$10$nVLSRk0NmBsZabjWbEpJU.fnpUXjXsSb9AU4pEa4d0Nwb366HXAs2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11991950103
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/09/2018 18:30<br>IP Address: 189.100.1.248<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] =>  11991950103
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 31.138.427/0001-84
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] =>  11991950103
+    [customfields3] => 31.138.427/0001-84
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

@@ -1,0 +1,385 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3582
+    [id] => 3582
+    [1] => 218
+    [userid] => 218
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-07-17
+    [date] => 2017-07-17
+    [4] => 2017-07-22
+    [duedate] => 2017-07-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 218
+    [id] => 218
+    [uuid] => b2370119-b405-4b57-97f6-6e6a2043e29a
+    [firstname] => Natalie 
+    [lastname] => Machado
+    [fullname] => Natalie  Machado
+    [companyname] => 
+    [email] => nattykammers@gmail.com
+    [address1] => Rua Maria Martins,35
+    [address2] => Centro
+    [city] => Minas Novas
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 08597120
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 33991048052
+    [password] => $2y$10$X.DdeRBYysQUqoamolRaFOBxUVtrLmpj3ysbWS6ca.PotRqo1jAh2
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.33991048052
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 30/08/2017 11:05<br>IP Address: 200.164.154.49<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 33991048052
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 075.130.666-55
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 33991048052
+    [customfields3] => 075.130.666-55
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3582
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - nataliekammers.com (22/07/2017 - 21/08/2017)
+                            [Description] => TIH - Master  - nataliekammers.com (22/07/2017 - 21/08/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 39 dias de atraso
+                            [Description] => Juros por 39 dias de atraso
+                            [UnitPrice] => 386
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Natalie  Machado
+            [Email] => nattykammers@gmail.com
+            [Identity] => 07513066655
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3582
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master  - nataliekammers.com (22/07/2017 - 21/08/2017)
+                            [description] => TIH - Master  - nataliekammers.com (22/07/2017 - 21/08/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 39 dias de atraso
+                            [description] => Juros por 39 dias de atraso
+                            [unitPrice] => 386
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 07513066655
+            [fullName] => Natalie  Machado
+            [email] => nattykammers@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/840bce8b-b480-44ab-80bf-2246c53c7058
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+30/08/2017 11:19:08
+INICIO_______________________________________________________________LOG:BEGIN:::30/08/2017 11:08<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3582
+    [amount] => 3683
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 2ffa97a1939e4b769a1bb4ecb0789847
+    [created_date] => 30/08/2017 11:08:18
+    [customer_name] => Natalie Machado
+    [customer_phone] => 33991048052
+    [customer_identity] => 07513066655
+    [customer_email] => nattykammers@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 5
+    [payment_maskedcreditcard] => 506775******2306
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626IOTEU6DHB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/08/2017 11:20:08
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3582 | Result->success | ValorPago ->29.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 3582
+    [amount] => 3683
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 2ffa97a1939e4b769a1bb4ecb0789847
+    [created_date] => 30/08/2017 11:08:18
+    [customer_name] => Natalie Machado
+    [customer_phone] => 33991048052
+    [customer_identity] => 07513066655
+    [customer_email] => nattykammers@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 5
+    [payment_maskedcreditcard] => 506775******2306
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626IOTEU6DHB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/08/2017 11:57:11
+INICIO_______________________________________________________________LOG:BEGIN:::30/08/2017 11:11<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 2ffa97a1939e4b769a1bb4ecb0789847
+    [amount] => 3683
+    [order_number] => 3582
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/08/2017 11:57:11
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 2ffa97a1939e4b769a1bb4ecb0789847
+    [amount] => 3683
+    [order_number] => 3582
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/08/2017 11:58:11
+INICIO_______________________________________________________________LOG:BEGIN:::30/08/2017 11:11<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 2ffa97a1939e4b769a1bb4ecb0789847
+    [amount] => 3683
+    [order_number] => 3582
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/08/2017 11:58:11
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 2ffa97a1939e4b769a1bb4ecb0789847
+    [amount] => 3683
+    [order_number] => 3582
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

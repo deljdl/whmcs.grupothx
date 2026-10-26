@@ -1,0 +1,1517 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2331
+    [id] => 2331
+    [1] => 161
+    [userid] => 161
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-08-23
+    [date] => 2016-08-23
+    [4] => 2016-08-23
+    [duedate] => 2016-08-23
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 74.97
+    [subtotal] => 74.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 74.97
+    [total] => 74.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 161
+    [id] => 161
+    [uuid] => 4e10b12f-2c65-4e04-bf3f-38c90bc62cf7
+    [firstname] => Edson
+    [lastname] => Araújo da Silva 
+    [fullname] => Edson Araújo da Silva 
+    [companyname] => ED10
+    [email] => edsonaraujo_09@hotmail.com
+    [address1] => Rua Espanha, 269
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-410
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11)98124-7911
+    [password] => fd8060e1881eea8526818192521646dd:aF%Os
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11981247911
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/08/2016 10:53<br>IP Address: 177.18.237.106<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11981247911
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 219.144.188-24
+                )
+
+        )
+
+    [customfields2] => 11981247911
+    [customfields3] => 219.144.188-24
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2331
+    [SoftDescriptor] => 2331
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [Description] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [Description] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [UnitPrice] => 4500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Edson Araújo da Silva 
+            [Email] => edsonaraujo_09@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2331
+    [softDescriptor] => 2331
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [description] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [description] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [unitPrice] => 4500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Edson Araújo da Silva 
+            [email] => edsonaraujo_09@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/cc3ef125-916d-49c8-a21d-7e10c82693ca
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2331
+    [id] => 2331
+    [1] => 161
+    [userid] => 161
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-08-23
+    [date] => 2016-08-23
+    [4] => 2016-08-23
+    [duedate] => 2016-08-23
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 74.97
+    [subtotal] => 74.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 74.97
+    [total] => 74.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 161
+    [id] => 161
+    [uuid] => 4e10b12f-2c65-4e04-bf3f-38c90bc62cf7
+    [firstname] => Edson
+    [lastname] => Araújo da Silva 
+    [fullname] => Edson Araújo da Silva 
+    [companyname] => ED10
+    [email] => edsonaraujo_09@hotmail.com
+    [address1] => Rua Espanha, 269
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-410
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11)98124-7911
+    [password] => fd8060e1881eea8526818192521646dd:aF%Os
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11981247911
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/08/2016 10:54<br>IP Address: 66.102.6.188<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11981247911
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 219.144.188-24
+                )
+
+        )
+
+    [customfields2] => 11981247911
+    [customfields3] => 219.144.188-24
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2331
+    [SoftDescriptor] => 2331
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [Description] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [Description] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [UnitPrice] => 4500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Edson Araújo da Silva 
+            [Email] => edsonaraujo_09@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2331
+    [softDescriptor] => 2331
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [description] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [description] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [unitPrice] => 4500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Edson Araújo da Silva 
+            [email] => edsonaraujo_09@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/159ad604-9f34-4de7-95c8-84ccb2847412
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2331
+    [id] => 2331
+    [1] => 161
+    [userid] => 161
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-08-23
+    [date] => 2016-08-23
+    [4] => 2016-08-23
+    [duedate] => 2016-08-23
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 74.97
+    [subtotal] => 74.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 74.97
+    [total] => 74.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 161
+    [id] => 161
+    [uuid] => 4e10b12f-2c65-4e04-bf3f-38c90bc62cf7
+    [firstname] => Edson
+    [lastname] => Araújo da Silva 
+    [fullname] => Edson Araújo da Silva 
+    [companyname] => ED10
+    [email] => edsonaraujo_09@hotmail.com
+    [address1] => Rua Espanha, 269
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-410
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11)98124-7911
+    [password] => fd8060e1881eea8526818192521646dd:aF%Os
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11981247911
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/08/2016 10:54<br>IP Address: 177.157.135.130<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11981247911
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 219.144.188-24
+                )
+
+        )
+
+    [customfields2] => 11981247911
+    [customfields3] => 219.144.188-24
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2331
+    [SoftDescriptor] => 2331
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [Description] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [Description] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [UnitPrice] => 4500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Edson Araújo da Silva 
+            [Email] => edsonaraujo_09@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2331
+    [softDescriptor] => 2331
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [description] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [description] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [unitPrice] => 4500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Edson Araújo da Silva 
+            [email] => edsonaraujo_09@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/5106cddb-9d2a-496a-abc3-ec723923c7cd
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2331
+    [id] => 2331
+    [1] => 161
+    [userid] => 161
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-08-23
+    [date] => 2016-08-23
+    [4] => 2016-08-23
+    [duedate] => 2016-08-23
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 74.97
+    [subtotal] => 74.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 74.97
+    [total] => 74.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2331
+    [SoftDescriptor] => 2331
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [Description] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [Description] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [UnitPrice] => 4500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] =>  
+            [Email] => 
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2331
+    [softDescriptor] => 2331
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [description] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [description] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [unitPrice] => 4500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] =>  
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/d1730362-badb-4f29-92cb-168f4d7fbaa4
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2331
+    [id] => 2331
+    [1] => 161
+    [userid] => 161
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-08-23
+    [date] => 2016-08-23
+    [4] => 2016-08-23
+    [duedate] => 2016-08-23
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 74.97
+    [subtotal] => 74.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 74.97
+    [total] => 74.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 161
+    [id] => 161
+    [uuid] => 4e10b12f-2c65-4e04-bf3f-38c90bc62cf7
+    [firstname] => Edson
+    [lastname] => Araújo da Silva 
+    [fullname] => Edson Araújo da Silva 
+    [companyname] => ED10
+    [email] => edsonaraujo_09@hotmail.com
+    [address1] => Rua Espanha, 269
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-410
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11)98124-7911
+    [password] => fd8060e1881eea8526818192521646dd:aF%Os
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11981247911
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/08/2016 10:55<br>IP Address: 177.18.237.106<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11981247911
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 219.144.188-24
+                )
+
+        )
+
+    [customfields2] => 11981247911
+    [customfields3] => 219.144.188-24
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2331
+    [SoftDescriptor] => 2331
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [Description] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [Description] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [UnitPrice] => 4500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Edson Araújo da Silva 
+            [Email] => edsonaraujo_09@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2331
+    [softDescriptor] => 2331
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [description] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [description] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [unitPrice] => 4500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Edson Araújo da Silva 
+            [email] => edsonaraujo_09@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/e91c35c5-f8ef-411a-b837-8045eb63be63
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2331
+    [id] => 2331
+    [1] => 161
+    [userid] => 161
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-08-23
+    [date] => 2016-08-23
+    [4] => 2016-08-23
+    [duedate] => 2016-08-23
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 74.97
+    [subtotal] => 74.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 74.97
+    [total] => 74.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 161
+    [id] => 161
+    [uuid] => 4e10b12f-2c65-4e04-bf3f-38c90bc62cf7
+    [firstname] => Edson
+    [lastname] => Araújo da Silva 
+    [fullname] => Edson Araújo da Silva 
+    [companyname] => ED10
+    [email] => edsonaraujo_09@hotmail.com
+    [address1] => Rua Espanha, 269
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-410
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11)98124-7911
+    [password] => fd8060e1881eea8526818192521646dd:aF%Os
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11981247911
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/08/2016 10:57<br>IP Address: 177.18.237.106<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11981247911
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 219.144.188-24
+                )
+
+        )
+
+    [customfields2] => 11981247911
+    [customfields3] => 219.144.188-24
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2331
+    [SoftDescriptor] => 2331
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [Description] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [Description] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [UnitPrice] => 4500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Edson Araújo da Silva 
+            [Email] => edsonaraujo_09@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2331
+    [softDescriptor] => 2331
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [description] => TIH - Master - ed10.net.br (23/08/2016 - 22/09/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [description] => Registro de domínio - ed10.net.br - 1 Ano(s) (23/08/2016 - 22/08/2017)
+                            [unitPrice] => 4500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Edson Araújo da Silva 
+            [email] => edsonaraujo_09@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/e55252fa-c11b-4e07-9e36-bb0ebbbfcf7e
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>

@@ -1,0 +1,362 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2596
+    [id] => 2596
+    [1] => 240
+    [userid] => 240
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-10-27
+    [date] => 2016-10-27
+    [4] => 2016-11-03
+    [duedate] => 2016-11-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 65.00
+    [subtotal] => 65.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 65.00
+    [total] => 65.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 240
+    [id] => 240
+    [uuid] => 491133da-e916-465b-a086-30545322d6e4
+    [firstname] => Andrea
+    [lastname] => Santana Freitas Arouche de Toledo
+    [fullname] => Andrea Santana Freitas Arouche de Toledo
+    [companyname] => 
+    [email] => arq.andreatoledo@gmail.com
+    [address1] => Estrada do beija-flor, 415 - casa 340 / Q7L4 Residencial Veredas
+    [address2] => Botujuri
+    [city] => Mogi das Cruzes
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08840-550
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11971517152
+    [password] => $2y$10$pjcIE28DCcg0NyEm6zVwgO9aF5XlArMebgts5U05E1MNKr5Vy/pv.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11971517152
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 31/10/2016 11:18<br>IP Address: 191.254.85.154<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11971517152
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29365613884
+                )
+
+        )
+
+    [customfields2] => 11971517152
+    [customfields3] => 29365613884
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2596
+    [SoftDescriptor] => 2596
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Criação da Logomarca - Conforme Proposta 1151
+                            [Description] => Desenvolvimento Por Hora - Criação da Logomarca - Conforme Proposta 1151
+                            [UnitPrice] => 6500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002596
+            [FullName] => Andrea Santana Freitas Arouche de Toledo
+            [Email] => arq.andreatoledo@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2596
+    [softDescriptor] => 2596
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Criação da Logomarca - Conforme Proposta 1151
+                            [description] => Desenvolvimento Por Hora - Criação da Logomarca - Conforme Proposta 1151
+                            [unitPrice] => 6500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002596
+            [fullName] => Andrea Santana Freitas Arouche de Toledo
+            [email] => arq.andreatoledo@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/51d2f410-10de-4f65-9e48-cca72f6968da
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+31/10/2016 11:13:20
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2596
+    [amount] => 6500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 63397e7b1bbd44e982cd5d5673248815
+    [created_date] => 31/10/2016 14:20:11
+    [customer_name] => Andrea Toledo
+    [customer_phone] => 11971517152
+    [customer_identity] => 29365613884
+    [customer_email] => arq.andreatoledo@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 490172******3424
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777625NG0J6OT7B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2016 11:14:20
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->240 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2596
+    [amount] => 6500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 63397e7b1bbd44e982cd5d5673248815
+    [created_date] => 31/10/2016 14:20:11
+    [customer_name] => Andrea Toledo
+    [customer_phone] => 11971517152
+    [customer_identity] => 29365613884
+    [customer_email] => arq.andreatoledo@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 490172******3424
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777625NG0J6OT7B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 2596
+    [id] => 2596
+    [1] => 240
+    [userid] => 240
+    [2] => #1842
+    [invoicenum] => #1842
+    [3] => 2016-10-27
+    [date] => 2016-10-27
+    [4] => 2016-11-03
+    [duedate] => 2016-11-03
+    [5] => 2016-10-31 11:20:13
+    [datepaid] => 2016-10-31 11:20:13
+    [6] => 65.00
+    [subtotal] => 65.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 65.00
+    [total] => 65.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Paid
+    [status] => Paid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+
+31/10/2016 11:47:23
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 63397e7b1bbd44e982cd5d5673248815
+    [amount] => 6500
+    [order_number] => 2596
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2016 11:47:23
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 63397e7b1bbd44e982cd5d5673248815
+    [amount] => 6500
+    [order_number] => 2596
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

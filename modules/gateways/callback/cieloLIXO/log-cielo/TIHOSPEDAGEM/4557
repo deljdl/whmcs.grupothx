@@ -1,0 +1,397 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4557
+    [id] => 4557
+    [1] => 311
+    [userid] => 311
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-04-05
+    [date] => 2018-04-05
+    [4] => 2018-04-05
+    [duedate] => 2018-04-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 749.00
+    [subtotal] => 749.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 749.00
+    [total] => 749.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 311
+    [id] => 311
+    [uuid] => 1ecee16e-7041-4200-b481-bcb1590cca92
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [fullname] => IGOR DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA EIRELI 
+    [email] => contatoasantos@hotmail.com
+    [address1] => Rua Washington Luiz Pereira de Souza, 101- sala 05
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-515
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 37541200 11944401200
+    [password] => $2y$10$kKjJ4Pl1R449BI48usHzF.NKVYXoxLqM6eHHuEgmwFJzqExLHkG5S
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113754120011944401200
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 06/04/2018 11:33<br>IP Address: 179.187.59.243<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11944401200
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23945373000130
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11944401200
+    [customfields3] => 23945373000130
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4557
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express
+observacoes:: Conforme proposta nº 1334 - Criacao de Site Express - A Santos 
+Prazo de entrega: 15 dias uteis a...
+                            [Description] => Site Express
+observacoes:: Conforme proposta nº 1334 - Criacao de Site Express - A Santos 
+Prazo de entrega: 15 dias uteis apos o pagamento
+                            [UnitPrice] => 74900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => IGOR DE ASSIS FATICA
+            [Email] => contatoasantos@hotmail.com
+            [Identity] => 23945373000130
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4557
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Site Express
+observacoes:: Conforme proposta nº 1334 - Criacao de Site Express - A Santos 
+Prazo de entrega: 15 dias uteis a...
+                            [description] => Site Express
+observacoes:: Conforme proposta nº 1334 - Criacao de Site Express - A Santos 
+Prazo de entrega: 15 dias uteis apos o pagamento
+                            [unitPrice] => 74900
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 23945373000130
+            [fullName] => IGOR DE ASSIS FATICA
+            [email] => contatoasantos@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/41219bd5-ec47-4427-985e-69e777d29a03
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+06/04/2018 11:22:36
+INICIO_______________________________________________________________LOG:BEGIN:::06/04/2018 11:36<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 4557
+    [amount] => 74900
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 70431c0628f245eaa2ae83b2b4c5d9e4
+    [created_date] => 06/04/2018 11:36:19
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 1137541200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 421960******0040
+    [payment_installments] => 2
+    [payment_status] => 2
+    [tid] => 10760777627BKOE5559B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/04/2018 11:23:36
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->4557 | Result->success | ValorPago ->749.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 4557
+    [amount] => 74900
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 70431c0628f245eaa2ae83b2b4c5d9e4
+    [created_date] => 06/04/2018 11:36:19
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 1137541200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 421960******0040
+    [payment_installments] => 2
+    [payment_status] => 2
+    [tid] => 10760777627BKOE5559B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/04/2018 11:14:42
+INICIO_______________________________________________________________LOG:BEGIN:::06/04/2018 11:42<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 70431c0628f245eaa2ae83b2b4c5d9e4
+    [amount] => 74900
+    [order_number] => 4557
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/04/2018 11:14:42
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 70431c0628f245eaa2ae83b2b4c5d9e4
+    [amount] => 74900
+    [order_number] => 4557
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/04/2018 11:14:42
+INICIO_______________________________________________________________LOG:BEGIN:::06/04/2018 11:42<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 70431c0628f245eaa2ae83b2b4c5d9e4
+    [amount] => 74900
+    [order_number] => 4557
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/04/2018 11:14:42
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 70431c0628f245eaa2ae83b2b4c5d9e4
+    [amount] => 74900
+    [order_number] => 4557
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/04/2018 11:15:42
+INICIO_______________________________________________________________LOG:BEGIN:::06/04/2018 11:42<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 70431c0628f245eaa2ae83b2b4c5d9e4
+    [amount] => 74900
+    [order_number] => 4557
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/04/2018 11:15:42
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 70431c0628f245eaa2ae83b2b4c5d9e4
+    [amount] => 74900
+    [order_number] => 4557
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

@@ -1,0 +1,63 @@
+
+POST
+<pre>Array
+(
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 2922
+    [fi] => 872922
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 2922
+    [fi] => 872922
+    [WHMCSeWdrAiYR38h0] => 2e3afddc68c18075c87d3c1926d21156
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => pt-br
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_COOKIE] => WHMCSeWdrAiYR38h0=2e3afddc68c18075c87d3c1926d21156
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_USER_AGENT] => Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=2922&fi=872922
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 177.83.167.227
+    [REMOTE_PORT] => 52021
+    [REQUEST_METHOD] => GET
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=2922&fi=872922
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 80
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [UNIQUE_ID] => WJ2ml6KQQaAAACZN8soAAAHV
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1486726807
+    [argv] => Array
+        (
+            [0] => i=2922&fi=872922
+        )
+
+    [argc] => 1
+)
+</pre>

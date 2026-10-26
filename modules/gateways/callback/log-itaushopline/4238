@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4238
+    [id] => 4238
+    [1] => 168
+    [userid] => 168
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-01-08
+    [date] => 2018-01-08
+    [4] => 2018-01-13
+    [duedate] => 2018-01-13
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 98.91
+    [subtotal] => 98.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 98.91
+    [total] => 98.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 168
+    [id] => 168
+    [uuid] => f9207e3a-c445-4f31-b275-0caa0feb99ab
+    [firstname] => Eduardo
+    [lastname] => Silva de Oliveira
+    [fullname] => Eduardo Silva de Oliveira
+    [companyname] => AZPLAN ENGENHARIA LTDA - ME
+    [email] => eduardo.oliveira01@gmail.com
+    [address1] => R RIO DAS PEDRAS, 104
+    [address2] => JARDIM ALPES DE ITAQU
+    [city] => ITAQUAQUECETUBA
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08588-620
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 972950054
+    [password] => 58aae0e914047e353b62a694157dd315:G#N%Z
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.972950054
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/01/2018 17:11<br>IP Address: 177.157.135.181<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11972950054
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 22.465.731/0001-45
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11972950054
+    [customfields3] => 22.465.731/0001-45
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

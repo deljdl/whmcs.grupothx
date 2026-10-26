@@ -1,0 +1,407 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5810
+    [id] => 5810
+    [1] => 152
+    [userid] => 152
+    [2] => 
+    [invoicenum] => 
+    [3] => 2019-02-20
+    [date] => 2019-02-20
+    [4] => 2019-02-27
+    [duedate] => 2019-02-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 29.97
+    [subtotal] => 29.97
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 29.97
+    [total] => 29.97
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => itaushopline
+    [paymentmethod] => itaushopline
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 152
+    [id] => 152
+    [uuid] => e6182bac-4e9e-429d-aad8-c859b0bff1b9
+    [firstname] => RICARDO
+    [lastname] => ELIAS ALGRANTI
+    [fullname] => RICARDO ELIAS ALGRANTI
+    [companyname] => BRASTELHA â€“ TELHAS DE CONCRETO LTDA
+    [email] => financeiro@brastelha.com.br
+    [address1] => Estr. Pedro da Cunha Albuquerque Lopes, 1600 â€“ (Antiga Estr. do Perobal)
+    [address2] => Jd. PatrÃ­cia
+    [city] => Itaquaquecetuba/SP.
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-584
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 114648606846486530
+    [password] => $2y$10$ouhxMDojg4RiCQRLZD1wLubxEc0rWp.lgq05gazXu9uScg.nIF2oS
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 152
+                    [uuid] => e6182bac-4e9e-429d-aad8-c859b0bff1b9
+                    [firstname] => RICARDO
+                    [lastname] => ELIAS ALGRANTI
+                    [companyname] => BRASTELHA â€“ TELHAS DE CONCRETO LTDA
+                    [email] => financeiro@brastelha.com.br
+                    [address1] => Estr. Pedro da Cunha Albuquerque Lopes, 1600 â€“ (Antiga Estr. do Perobal)
+                    [address2] => Jd. PatrÃ­cia
+                    [city] => Itaquaquecetuba/SP.
+                    [state] => SP
+                    [postcode] => 08584-584
+                    [country] => BR
+                    [phonenumber] => (11) 4648-6068 â€“ 4648-6530
+                    [password] => $2y$10$ouhxMDojg4RiCQRLZD1wLubxEc0rWp.lgq05gazXu9uScg.nIF2oS
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2015-05-27
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => 5RqdVcg5j5Ue2APV5+Q6mgPMEd4=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => ý¤š8;‘qÍBÖÉo•¬
+                    [startdate] => ý¤š8;‘qÍBÖÉo•¬
+                    [expdate] => 3ä R-©ö@“Ôœ¤óÜ
+                    [issuenumber] => ý¤š8;‘qÍBÖÉo•¬
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-02-20 10:52:17
+                    [ip] => 187.56.255.29
+                    [host] => 187-56-255-29.dsl.telesp.net.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2019-01-18 11:03:30
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 152
+                    [uuid] => e6182bac-4e9e-429d-aad8-c859b0bff1b9
+                    [firstname] => RICARDO
+                    [lastname] => ELIAS ALGRANTI
+                    [companyname] => BRASTELHA â€“ TELHAS DE CONCRETO LTDA
+                    [email] => financeiro@brastelha.com.br
+                    [address1] => Estr. Pedro da Cunha Albuquerque Lopes, 1600 â€“ (Antiga Estr. do Perobal)
+                    [address2] => Jd. PatrÃ­cia
+                    [city] => Itaquaquecetuba/SP.
+                    [state] => SP
+                    [postcode] => 08584-584
+                    [country] => BR
+                    [phonenumber] => (11) 4648-6068 â€“ 4648-6530
+                    [password] => $2y$10$ouhxMDojg4RiCQRLZD1wLubxEc0rWp.lgq05gazXu9uScg.nIF2oS
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2015-05-27
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => 5RqdVcg5j5Ue2APV5+Q6mgPMEd4=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => ý¤š8;‘qÍBÖÉo•¬
+                    [startdate] => ý¤š8;‘qÍBÖÉo•¬
+                    [expdate] => 3ä R-©ö@“Ôœ¤óÜ
+                    [issuenumber] => ý¤š8;‘qÍBÖÉo•¬
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-02-20 10:52:17
+                    [ip] => 187.56.255.29
+                    [host] => 187-56-255-29.dsl.telesp.net.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2019-01-18 11:03:30
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114648606846486530
+    [telephoneNumber] => +55.114648606846486530
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 20/02/2019 10:52<br>IP Address: 187.56.255.29<br>Host: 187-56-255-29.dsl.telesp.net.br
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 10.388.382/0001-26
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 10.388.382/0001-26
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

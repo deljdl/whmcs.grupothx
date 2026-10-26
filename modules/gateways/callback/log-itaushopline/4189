@@ -1,0 +1,246 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4189
+    [id] => 4189
+    [1] => 121
+    [userid] => 121
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-12-27
+    [date] => 2017-12-27
+    [4] => 2018-01-03
+    [duedate] => 2018-01-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.94
+    [subtotal] => 59.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.94
+    [total] => 59.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 121
+    [id] => 121
+    [uuid] => e70b53d5-b6ee-4681-b9a0-e2fbaa6c0481
+    [firstname] => Lolita
+    [lastname] => Valero
+    [fullname] => Lolita Valero
+    [companyname] => Restaurante Cebolinha ME LTDA
+    [email] => cebolinha.buffet@gmail.com
+    [address1] => Av. João Manoel 538
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4274-0576 11 95048-8359
+    [password] => c15f632ea5d5e816344a34c1bf0274da:%Vw()
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114274057611950488359
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/01/2018 11:47<br>IP Address: 177.157.246.82<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11950488359
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 67.288.829/0001-02
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11950488359
+    [customfields3] => 67.288.829/0001-02
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4189
+    [id] => 4189
+    [1] => 121
+    [userid] => 121
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-12-27
+    [date] => 2017-12-27
+    [4] => 2018-01-03
+    [duedate] => 2018-01-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.94
+    [subtotal] => 59.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.94
+    [total] => 59.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 121
+    [id] => 121
+    [uuid] => e70b53d5-b6ee-4681-b9a0-e2fbaa6c0481
+    [firstname] => Lolita
+    [lastname] => Valero
+    [fullname] => Lolita Valero
+    [companyname] => Restaurante Cebolinha ME LTDA
+    [email] => cebolinha.buffet@gmail.com
+    [address1] => Av. João Manoel 538
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4274-0576 11 95048-8359
+    [password] => c15f632ea5d5e816344a34c1bf0274da:%Vw()
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114274057611950488359
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 11/01/2018 15:24<br>IP Address: 179.187.51.159<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11950488359
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 67.288.829/0001-02
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11950488359
+    [customfields3] => 67.288.829/0001-02
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

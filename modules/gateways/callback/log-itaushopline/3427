@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3427
+    [id] => 3427
+    [1] => 280
+    [userid] => 280
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-06-05
+    [date] => 2017-06-05
+    [4] => 2017-06-05
+    [duedate] => 2017-06-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1499.00
+    [subtotal] => 1499.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1499.00
+    [total] => 1499.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 280
+    [id] => 280
+    [uuid] => f29481d9-56f9-46cb-9374-5b7f128ecbd4
+    [firstname] => André
+    [lastname] => Luiz da Costa
+    [fullname] => André Luiz da Costa
+    [companyname] => 
+    [email] => andrebeer@hotmail.com
+    [address1] => Rua Ouro Preto, 200
+    [address2] => Vila Gilda
+    [city] => Santo André
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09190-450
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1123249712 11991788308
+    [password] => $2y$10$qENK1ZMbIKCD4JoUioCWou.Sxfv1zk50KrOHWuSbsg.0jKHBASYb2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.112324971211991788308
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/06/2017 11:03<br>IP Address: 200.210.82.72<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11991788308
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 28257857840
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11991788308
+    [customfields3] => 28257857840
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

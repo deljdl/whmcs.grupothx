@@ -1,0 +1,439 @@
+
+
+17/10/2019 10:03:28
+INICIO_______________________________________________________________
+
+LOG:Log Iniciada 17/10/2019 10:02: 
+<br /><h2>Mercado Pago Envio de Status </h2><pre>Array
+(
+    [data_id] => 5333492787
+    [type] => payment
+)
+</pre><br /><h2>Mercado Pago Find_by_id </h2><pre>MercadoPago\Payment Object
+(
+    [id:protected] => 5333492787
+    [acquirer:protected] => 
+    [acquirer_reconciliation:protected] => Array
+        (
+        )
+
+    [site_id:protected] => 
+    [sponsor_id:protected] => 
+    [operation_type:protected] => regular_payment
+    [order_id:protected] => 
+    [order:protected] => stdClass Object
+        (
+            [id] => 1155893404
+            [type] => mercadopago
+        )
+
+    [binary_mode:protected] => 
+    [external_reference:protected] => 6608
+    [status:protected] => approved
+    [status_detail:protected] => accredited
+    [store_id:protected] => 
+    [taxes_amount:protected] => 0
+    [payment_type:protected] => 
+    [date_created:protected] => 2019-10-17T09:28:00.000-04:00
+    [last_modified:protected] => 
+    [live_mode:protected] => 1
+    [date_last_updated:protected] => 2019-10-17T09:28:02.000-04:00
+    [date_of_expiration:protected] => 
+    [deduction_schema:protected] => 
+    [date_approved:protected] => 2019-10-17T09:28:02.000-04:00
+    [money_release_date:protected] => 2019-10-17T09:28:02.000-04:00
+    [money_release_schema:protected] => 
+    [currency_id:protected] => BRL
+    [transaction_amount:protected] => 38,71
+    [transaction_amount_refunded:protected] => 0
+    [shipping_cost:protected] => 
+    [total_paid_amount:protected] => 
+    [finance_charge:protected] => 
+    [net_received_amount:protected] => 
+    [marketplace:protected] => 
+    [marketplace_fee:protected] => 
+    [reason:protected] => 
+    [payer:protected] => MercadoPago\Payer Object
+        (
+            [id:protected] => 229104315
+            [entity_type:protected] => 
+            [type:protected] => guest
+            [name:protected] => 
+            [surname:protected] => 
+            [first_name:protected] => Washington 
+            [last_name:protected] => Varjao
+            [email:protected] => wlvarjao@gmail.com
+            [date_created:protected] => 
+            [phone:protected] => stdClass Object
+                (
+                    [area_code] => 
+                    [extension] => 
+                    [number] => 7734523651
+                )
+
+            [identification:protected] => stdClass Object
+                (
+                    [number] => 61342785568
+                    [type] => CPF
+                )
+
+            [address:protected] => 
+            [_last:protected] => 
+            [error:protected] => 
+            [_pagination_params:protected] => 
+            [_empty:protected] => 
+            [operator_id] => 
+        )
+
+    [collector:protected] => 
+    [collector_id:protected] => 165408372
+    [counter_currency:protected] => 
+    [payment_method_id:protected] => visa
+    [payment_type_id:protected] => credit_card
+    [pos_id:protected] => 
+    [transaction_details:protected] => stdClass Object
+        (
+            [acquirer_reference] => 
+            [external_resource_url] => 
+            [financial_institution] => 
+            [installment_amount] => 38,71
+            [net_received_amount] => 36,78
+            [overpaid_amount] => 0
+            [payable_deferral_period] => 
+            [payment_method_reference_id] => 579802
+            [total_paid_amount] => 38,71
+        )
+
+    [fee_details:protected] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [amount] => 1,93
+                    [fee_payer] => collector
+                    [type] => mercadopago_fee
+                )
+
+        )
+
+    [differential_pricing_id:protected] => 
+    [application_fee:protected] => 
+    [authorization_code:protected] => 653594
+    [capture:protected] => 
+    [captured:protected] => 1
+    [card:protected] => MercadoPago\Card Object
+        (
+            [id:protected] => 
+            [customer_id:protected] => 
+            [expiration_month:protected] => 10
+            [expiration_year:protected] => 2019
+            [first_six_digits:protected] => 498453
+            [last_four_digits:protected] => 0718
+            [payment_method:protected] => 
+            [security_code:protected] => 
+            [issuer:protected] => 
+            [cardholder:protected] => stdClass Object
+                (
+                    [identification] => stdClass Object
+                        (
+                            [number] => 61342785568
+                            [type] => CPF
+                        )
+
+                    [name] => WASHINGTON S VARJAO
+                )
+
+            [date_created:protected] => 2019-10-17T09:28:00.000-04:00
+            [date_last_updated:protected] => 2019-10-17T09:28:00.000-04:00
+            [_last:protected] => 
+            [error:protected] => 
+            [_pagination_params:protected] => 
+            [_empty:protected] => 
+        )
+
+    [call_for_authorize_id:protected] => 
+    [statement_descriptor:protected] => MERCPAGO*GRUPOTHX
+    [refunds:protected] => Array
+        (
+        )
+
+    [shipping_amount:protected] => 0
+    [additional_info:protected] => stdClass Object
+        (
+            [ip_address] => 177.179.254.184
+        )
+
+    [campaign_id:protected] => 
+    [coupon_amount:protected] => 0
+    [installments:protected] => 1
+    [token:protected] => 
+    [description:protected] => Pagamento do Pedido 6608
+    [notification_url:protected] => 
+    [issuer_id:protected] => 25
+    [processing_mode:protected] => aggregator
+    [merchant_account_id:protected] => 
+    [merchant_number:protected] => 
+    [metadata:protected] => Array
+        (
+        )
+
+    [callback_url:protected] => 
+    [amount_refunded:protected] => 
+    [coupon_code:protected] => 
+    [barcode:protected] => 
+    [marketplace_owner:protected] => 
+    [_last:protected] => MercadoPago\Payment Object
+        (
+            [id:protected] => 5333492787
+            [acquirer:protected] => 
+            [acquirer_reconciliation:protected] => Array
+                (
+                )
+
+            [site_id:protected] => 
+            [sponsor_id:protected] => 
+            [operation_type:protected] => regular_payment
+            [order_id:protected] => 
+            [order:protected] => stdClass Object
+                (
+                    [id] => 1155893404
+                    [type] => mercadopago
+                )
+
+            [binary_mode:protected] => 
+            [external_reference:protected] => 6608
+            [status:protected] => approved
+            [status_detail:protected] => accredited
+            [store_id:protected] => 
+            [taxes_amount:protected] => 0
+            [payment_type:protected] => 
+            [date_created:protected] => 2019-10-17T09:28:00.000-04:00
+            [last_modified:protected] => 
+            [live_mode:protected] => 1
+            [date_last_updated:protected] => 2019-10-17T09:28:02.000-04:00
+            [date_of_expiration:protected] => 
+            [deduction_schema:protected] => 
+            [date_approved:protected] => 2019-10-17T09:28:02.000-04:00
+            [money_release_date:protected] => 2019-10-17T09:28:02.000-04:00
+            [money_release_schema:protected] => 
+            [currency_id:protected] => BRL
+            [transaction_amount:protected] => 38,71
+            [transaction_amount_refunded:protected] => 0
+            [shipping_cost:protected] => 
+            [total_paid_amount:protected] => 
+            [finance_charge:protected] => 
+            [net_received_amount:protected] => 
+            [marketplace:protected] => 
+            [marketplace_fee:protected] => 
+            [reason:protected] => 
+            [payer:protected] => MercadoPago\Payer Object
+                (
+                    [id:protected] => 229104315
+                    [entity_type:protected] => 
+                    [type:protected] => guest
+                    [name:protected] => 
+                    [surname:protected] => 
+                    [first_name:protected] => Washington 
+                    [last_name:protected] => Varjao
+                    [email:protected] => wlvarjao@gmail.com
+                    [date_created:protected] => 
+                    [phone:protected] => stdClass Object
+                        (
+                            [area_code] => 
+                            [extension] => 
+                            [number] => 7734523651
+                        )
+
+                    [identification:protected] => stdClass Object
+                        (
+                            [number] => 61342785568
+                            [type] => CPF
+                        )
+
+                    [address:protected] => 
+                    [_last:protected] => 
+                    [error:protected] => 
+                    [_pagination_params:protected] => 
+                    [_empty:protected] => 
+                    [operator_id] => 
+                )
+
+            [collector:protected] => 
+            [collector_id:protected] => 165408372
+            [counter_currency:protected] => 
+            [payment_method_id:protected] => visa
+            [payment_type_id:protected] => credit_card
+            [pos_id:protected] => 
+            [transaction_details:protected] => stdClass Object
+                (
+                    [acquirer_reference] => 
+                    [external_resource_url] => 
+                    [financial_institution] => 
+                    [installment_amount] => 38,71
+                    [net_received_amount] => 36,78
+                    [overpaid_amount] => 0
+                    [payable_deferral_period] => 
+                    [payment_method_reference_id] => 579802
+                    [total_paid_amount] => 38,71
+                )
+
+            [fee_details:protected] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [amount] => 1,93
+                            [fee_payer] => collector
+                            [type] => mercadopago_fee
+                        )
+
+                )
+
+            [differential_pricing_id:protected] => 
+            [application_fee:protected] => 
+            [authorization_code:protected] => 653594
+            [capture:protected] => 
+            [captured:protected] => 1
+            [card:protected] => MercadoPago\Card Object
+                (
+                    [id:protected] => 
+                    [customer_id:protected] => 
+                    [expiration_month:protected] => 10
+                    [expiration_year:protected] => 2019
+                    [first_six_digits:protected] => 498453
+                    [last_four_digits:protected] => 0718
+                    [payment_method:protected] => 
+                    [security_code:protected] => 
+                    [issuer:protected] => 
+                    [cardholder:protected] => stdClass Object
+                        (
+                            [identification] => stdClass Object
+                                (
+                                    [number] => 61342785568
+                                    [type] => CPF
+                                )
+
+                            [name] => WASHINGTON S VARJAO
+                        )
+
+                    [date_created:protected] => 2019-10-17T09:28:00.000-04:00
+                    [date_last_updated:protected] => 2019-10-17T09:28:00.000-04:00
+                    [_last:protected] => 
+                    [error:protected] => 
+                    [_pagination_params:protected] => 
+                    [_empty:protected] => 
+                )
+
+            [call_for_authorize_id:protected] => 
+            [statement_descriptor:protected] => MERCPAGO*GRUPOTHX
+            [refunds:protected] => Array
+                (
+                )
+
+            [shipping_amount:protected] => 0
+            [additional_info:protected] => stdClass Object
+                (
+                    [ip_address] => 177.179.254.184
+                )
+
+            [campaign_id:protected] => 
+            [coupon_amount:protected] => 0
+            [installments:protected] => 1
+            [token:protected] => 
+            [description:protected] => Pagamento do Pedido 6608
+            [notification_url:protected] => 
+            [issuer_id:protected] => 25
+            [processing_mode:protected] => aggregator
+            [merchant_account_id:protected] => 
+            [merchant_number:protected] => 
+            [metadata:protected] => Array
+                (
+                )
+
+            [callback_url:protected] => 
+            [amount_refunded:protected] => 
+            [coupon_code:protected] => 
+            [barcode:protected] => 
+            [marketplace_owner:protected] => 
+            [_last:protected] => 
+            [error:protected] => 
+            [_pagination_params:protected] => 
+            [_empty:protected] => 
+            [corporation_id] => 
+            [integrator_id] => 
+            [platform_id] => 
+        )
+
+    [error:protected] => 
+    [_pagination_params:protected] => 
+    [_empty:protected] => 
+    [corporation_id] => 
+    [integrator_id] => 
+    [platform_id] => 
+)
+</pre><br /><h2>Id encontrado. Baixa Iniciada :) </h2><br /><h2>Baixando | InvoiceId->6608</h2><br /><h2>Dados da fatura</h2><pre>Array
+(
+    [result] => success
+    [invoiceid] => 6608
+    [invoicenum] => 
+    [userid] => 335
+    [date] => 2019-10-05
+    [duedate] => 2019-10-03
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32,97
+    [balance] => 32,97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 10353
+                            [type] => Hosting
+                            [relid] => 736
+                            [description] => TIH - Master  - pegasoseguranca.com.br (03/10/2019 - 02/11/2019)
+                            [amount] => 32.97
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+</pre><br /><h2>Atualizando a forma de pagamento para mercadopago </h2><pre>Array
+(
+    [result] => success
+    [invoiceid] => 6608
+)
+</pre><br /><h2>Dando a devida baixa no valor de R$ 32,97</h2><pre>Array
+(
+    [result] => success
+    [invoiceid] => 6608
+)
+</pre><br /><h2>Baixa ok. | InvoiceId->6608</h2><pre>Array
+(
+    [result] => success
+    [invoiceid] => 6608
+)
+</pre>
+
+GET:
+<pre>Array
+(
+    [data_id] => 5333492787
+    [type] => payment
+)
+</pre>
+
+_______________________________________________________________END

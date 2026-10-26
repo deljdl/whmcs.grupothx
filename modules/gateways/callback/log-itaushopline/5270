@@ -1,0 +1,1476 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5270
+    [id] => 5270
+    [1] => 324
+    [userid] => 324
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-28
+    [date] => 2018-09-28
+    [4] => 2018-10-05
+    [duedate] => 2018-10-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 324
+    [id] => 324
+    [uuid] => 91ece1d0-11d4-480f-98e4-a20861f4cd2b
+    [firstname] => RENATA
+    [lastname] => DE ANDRADE RODRIGUES
+    [fullname] => RENATA DE ANDRADE RODRIGUES
+    [companyname] => LINK PUBLICACOES EIRELI
+    [email] => administrativo@linkpublicacoes.com.br
+    [address1] => Rua Teodoro Sampaio, 2767
+    [address2] => Pinheiros
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05405-250
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137983469 11947814840
+    [password] => $2y$10$QngdCpK1DXVVhE1EneXiDuWP/YRKzYAnQ/CrEMGANbWaliCy9fmo.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113798346911947814840
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/10/2018 13:31<br>IP Address: 179.208.215.120<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947814840
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29.693.718/0001-92
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947814840
+    [customfields3] => 29.693.718/0001-92
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5270
+    [id] => 5270
+    [1] => 324
+    [userid] => 324
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-28
+    [date] => 2018-09-28
+    [4] => 2018-10-05
+    [duedate] => 2018-10-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 324
+    [id] => 324
+    [uuid] => 91ece1d0-11d4-480f-98e4-a20861f4cd2b
+    [firstname] => RENATA
+    [lastname] => DE ANDRADE RODRIGUES
+    [fullname] => RENATA DE ANDRADE RODRIGUES
+    [companyname] => LINK PUBLICACOES EIRELI
+    [email] => administrativo@linkpublicacoes.com.br
+    [address1] => Rua Teodoro Sampaio, 2767
+    [address2] => Pinheiros
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05405-250
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137983469 11947814840
+    [password] => $2y$10$QngdCpK1DXVVhE1EneXiDuWP/YRKzYAnQ/CrEMGANbWaliCy9fmo.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113798346911947814840
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/10/2018 12:02<br>IP Address: 179.208.215.120<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947814840
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29.693.718/0001-92
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947814840
+    [customfields3] => 29.693.718/0001-92
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5270
+    [id] => 5270
+    [1] => 324
+    [userid] => 324
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-28
+    [date] => 2018-09-28
+    [4] => 2018-10-05
+    [duedate] => 2018-10-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 324
+    [id] => 324
+    [uuid] => 91ece1d0-11d4-480f-98e4-a20861f4cd2b
+    [firstname] => RENATA
+    [lastname] => DE ANDRADE RODRIGUES
+    [fullname] => RENATA DE ANDRADE RODRIGUES
+    [companyname] => LINK PUBLICACOES EIRELI
+    [email] => administrativo@linkpublicacoes.com.br
+    [address1] => Rua Teodoro Sampaio, 2767
+    [address2] => Pinheiros
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05405-250
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137983469 11947814840
+    [password] => $2y$10$QngdCpK1DXVVhE1EneXiDuWP/YRKzYAnQ/CrEMGANbWaliCy9fmo.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113798346911947814840
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/10/2018 12:02<br>IP Address: 179.208.215.120<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947814840
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29.693.718/0001-92
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947814840
+    [customfields3] => 29.693.718/0001-92
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5270
+    [id] => 5270
+    [1] => 324
+    [userid] => 324
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-28
+    [date] => 2018-09-28
+    [4] => 2018-10-05
+    [duedate] => 2018-10-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 324
+    [id] => 324
+    [uuid] => 91ece1d0-11d4-480f-98e4-a20861f4cd2b
+    [firstname] => RENATA
+    [lastname] => DE ANDRADE RODRIGUES
+    [fullname] => RENATA DE ANDRADE RODRIGUES
+    [companyname] => LINK PUBLICACOES EIRELI
+    [email] => administrativo@linkpublicacoes.com.br
+    [address1] => Rua Teodoro Sampaio, 2767
+    [address2] => Pinheiros
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05405-250
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137983469 11947814840
+    [password] => $2y$10$QngdCpK1DXVVhE1EneXiDuWP/YRKzYAnQ/CrEMGANbWaliCy9fmo.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113798346911947814840
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/10/2018 12:02<br>IP Address: 179.208.215.120<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947814840
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29.693.718/0001-92
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947814840
+    [customfields3] => 29.693.718/0001-92
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5270
+    [id] => 5270
+    [1] => 324
+    [userid] => 324
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-28
+    [date] => 2018-09-28
+    [4] => 2018-10-05
+    [duedate] => 2018-10-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 324
+    [id] => 324
+    [uuid] => 91ece1d0-11d4-480f-98e4-a20861f4cd2b
+    [firstname] => RENATA
+    [lastname] => DE ANDRADE RODRIGUES
+    [fullname] => RENATA DE ANDRADE RODRIGUES
+    [companyname] => LINK PUBLICACOES EIRELI
+    [email] => administrativo@linkpublicacoes.com.br
+    [address1] => Rua Teodoro Sampaio, 2767
+    [address2] => Pinheiros
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05405-250
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137983469 11947814840
+    [password] => $2y$10$QngdCpK1DXVVhE1EneXiDuWP/YRKzYAnQ/CrEMGANbWaliCy9fmo.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113798346911947814840
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/10/2018 12:09<br>IP Address: 179.208.215.120<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947814840
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29.693.718/0001-92
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947814840
+    [customfields3] => 29.693.718/0001-92
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5270
+    [id] => 5270
+    [1] => 324
+    [userid] => 324
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-28
+    [date] => 2018-09-28
+    [4] => 2018-10-05
+    [duedate] => 2018-10-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 324
+    [id] => 324
+    [uuid] => 91ece1d0-11d4-480f-98e4-a20861f4cd2b
+    [firstname] => RENATA
+    [lastname] => DE ANDRADE RODRIGUES
+    [fullname] => RENATA DE ANDRADE RODRIGUES
+    [companyname] => LINK PUBLICACOES EIRELI
+    [email] => administrativo@linkpublicacoes.com.br
+    [address1] => Rua Teodoro Sampaio, 2767
+    [address2] => Pinheiros
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05405-250
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137983469 11947814840
+    [password] => $2y$10$QngdCpK1DXVVhE1EneXiDuWP/YRKzYAnQ/CrEMGANbWaliCy9fmo.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113798346911947814840
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/10/2018 12:12<br>IP Address: 168.227.12.101<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947814840
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29.693.718/0001-92
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947814840
+    [customfields3] => 29.693.718/0001-92
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5270
+    [id] => 5270
+    [1] => 324
+    [userid] => 324
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-28
+    [date] => 2018-09-28
+    [4] => 2018-10-05
+    [duedate] => 2018-10-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 324
+    [id] => 324
+    [uuid] => 91ece1d0-11d4-480f-98e4-a20861f4cd2b
+    [firstname] => RENATA
+    [lastname] => DE ANDRADE RODRIGUES
+    [fullname] => RENATA DE ANDRADE RODRIGUES
+    [companyname] => LINK PUBLICACOES EIRELI
+    [email] => administrativo@linkpublicacoes.com.br
+    [address1] => Rua Teodoro Sampaio, 2767
+    [address2] => Pinheiros
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05405-250
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137983469 11947814840
+    [password] => $2y$10$QngdCpK1DXVVhE1EneXiDuWP/YRKzYAnQ/CrEMGANbWaliCy9fmo.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113798346911947814840
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/10/2018 12:13<br>IP Address: 179.208.215.120<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947814840
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29.693.718/0001-92
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947814840
+    [customfields3] => 29.693.718/0001-92
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5270
+    [id] => 5270
+    [1] => 324
+    [userid] => 324
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-28
+    [date] => 2018-09-28
+    [4] => 2018-10-05
+    [duedate] => 2018-10-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 324
+    [id] => 324
+    [uuid] => 91ece1d0-11d4-480f-98e4-a20861f4cd2b
+    [firstname] => RENATA
+    [lastname] => DE ANDRADE RODRIGUES
+    [fullname] => RENATA DE ANDRADE RODRIGUES
+    [companyname] => LINK PUBLICACOES EIRELI
+    [email] => administrativo@linkpublicacoes.com.br
+    [address1] => Rua Teodoro Sampaio, 2767
+    [address2] => Pinheiros
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05405-250
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137983469 11947814840
+    [password] => $2y$10$QngdCpK1DXVVhE1EneXiDuWP/YRKzYAnQ/CrEMGANbWaliCy9fmo.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113798346911947814840
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/10/2018 12:13<br>IP Address: 179.208.215.120<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947814840
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29.693.718/0001-92
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947814840
+    [customfields3] => 29.693.718/0001-92
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5270
+    [id] => 5270
+    [1] => 324
+    [userid] => 324
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-28
+    [date] => 2018-09-28
+    [4] => 2018-10-05
+    [duedate] => 2018-10-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 324
+    [id] => 324
+    [uuid] => 91ece1d0-11d4-480f-98e4-a20861f4cd2b
+    [firstname] => RENATA
+    [lastname] => DE ANDRADE RODRIGUES
+    [fullname] => RENATA DE ANDRADE RODRIGUES
+    [companyname] => LINK PUBLICACOES EIRELI
+    [email] => administrativo@linkpublicacoes.com.br
+    [address1] => Rua Teodoro Sampaio, 2767
+    [address2] => Pinheiros
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05405-250
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137983469 11947814840
+    [password] => $2y$10$QngdCpK1DXVVhE1EneXiDuWP/YRKzYAnQ/CrEMGANbWaliCy9fmo.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113798346911947814840
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/10/2018 12:14<br>IP Address: 179.208.215.120<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947814840
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29.693.718/0001-92
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947814840
+    [customfields3] => 29.693.718/0001-92
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5270
+    [id] => 5270
+    [1] => 324
+    [userid] => 324
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-28
+    [date] => 2018-09-28
+    [4] => 2018-10-05
+    [duedate] => 2018-10-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 324
+    [id] => 324
+    [uuid] => 91ece1d0-11d4-480f-98e4-a20861f4cd2b
+    [firstname] => RENATA
+    [lastname] => DE ANDRADE RODRIGUES
+    [fullname] => RENATA DE ANDRADE RODRIGUES
+    [companyname] => LINK PUBLICACOES EIRELI
+    [email] => administrativo@linkpublicacoes.com.br
+    [address1] => Rua Teodoro Sampaio, 2767
+    [address2] => Pinheiros
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05405-250
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137983469 11947814840
+    [password] => $2y$10$QngdCpK1DXVVhE1EneXiDuWP/YRKzYAnQ/CrEMGANbWaliCy9fmo.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113798346911947814840
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/10/2018 12:16<br>IP Address: 179.208.215.120<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947814840
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29.693.718/0001-92
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947814840
+    [customfields3] => 29.693.718/0001-92
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5270
+    [id] => 5270
+    [1] => 324
+    [userid] => 324
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-28
+    [date] => 2018-09-28
+    [4] => 2018-10-05
+    [duedate] => 2018-10-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 324
+    [id] => 324
+    [uuid] => 91ece1d0-11d4-480f-98e4-a20861f4cd2b
+    [firstname] => RENATA
+    [lastname] => DE ANDRADE RODRIGUES
+    [fullname] => RENATA DE ANDRADE RODRIGUES
+    [companyname] => LINK PUBLICACOES EIRELI
+    [email] => administrativo@linkpublicacoes.com.br
+    [address1] => Rua Teodoro Sampaio, 2767
+    [address2] => Pinheiros
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05405-250
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137983469 11947814840
+    [password] => $2y$10$QngdCpK1DXVVhE1EneXiDuWP/YRKzYAnQ/CrEMGANbWaliCy9fmo.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113798346911947814840
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/10/2018 12:30<br>IP Address: 179.208.215.120<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947814840
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29.693.718/0001-92
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947814840
+    [customfields3] => 29.693.718/0001-92
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5270
+    [id] => 5270
+    [1] => 324
+    [userid] => 324
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-28
+    [date] => 2018-09-28
+    [4] => 2018-10-05
+    [duedate] => 2018-10-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 324
+    [id] => 324
+    [uuid] => 91ece1d0-11d4-480f-98e4-a20861f4cd2b
+    [firstname] => RENATA
+    [lastname] => DE ANDRADE RODRIGUES
+    [fullname] => RENATA DE ANDRADE RODRIGUES
+    [companyname] => LINK PUBLICACOES EIRELI
+    [email] => administrativo@linkpublicacoes.com.br
+    [address1] => Rua Teodoro Sampaio, 2767
+    [address2] => Pinheiros
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05405-250
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137983469 11947814840
+    [password] => $2y$10$QngdCpK1DXVVhE1EneXiDuWP/YRKzYAnQ/CrEMGANbWaliCy9fmo.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113798346911947814840
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 10/10/2018 09:10<br>IP Address: 179.208.215.120<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947814840
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29.693.718/0001-92
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947814840
+    [customfields3] => 29.693.718/0001-92
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

@@ -1,0 +1,537 @@
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 287
+    [clientid] => 189
+    [orderid] => 214
+    [pid] => 32
+    [regdate] => 2016-02-26
+    [name] => 
+    [translated_name] => TIH - Especial
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => fernandamutton.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [firstpaymentamount] => 59.99
+    [recurringamount] => 59.99
+    [paymentmethod] => boleto_itau_sem_registro
+    [paymentmethodname] => Boleto Itaú
+    [billingcycle] => Monthly
+    [nextduedate] => 2017-01-26
+    [status] => Suspended
+    [username] => fernanda
+    [password] => j74vtT0Hd6
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 2016-08-09
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 802
+    [disklimit] => 20000
+    [bwusage] => 80
+    [bwlimit] => 0
+    [lastupdate] => 2017-02-16 09:00:20
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 189
+    [id] => 189
+    [uuid] => c487ecad-c434-49a2-aa48-9f90abe30bfc
+    [firstname] => Fernanda
+    [lastname] => Mutton Pereira
+    [fullname] => Fernanda Mutton Pereira
+    [companyname] => 
+    [email] => femutton@hotmail.com
+    [address1] => rua manoel da nobrega, 582
+    [address2] => centro
+    [city] => diadema
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09910-720
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1140564576
+    [password] => $2y$10$M8RyZyqht2Hg0OwqiLWMQe1OjgKC3URUAhibErfbBTDP8x22Yub7K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1140564576
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 16/02/2017 15:05<br>IP Address: 177.181.31.140<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s287
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Especial
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000000000
+            [FullName] => Fernanda Mutton Pereira
+            [Email] => femutton@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => s287
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Especial
+                            [unitPrice] => 5999
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000000000
+            [fullName] => Fernanda Mutton Pereira
+            [email] => femutton@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/5ee3abbd-b668-4f3d-bf59-de568c9e6edf
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 287
+    [clientid] => 189
+    [orderid] => 214
+    [pid] => 32
+    [regdate] => 2016-02-26
+    [name] => 
+    [translated_name] => TIH - Especial
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => fernandamutton.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [firstpaymentamount] => 59.99
+    [recurringamount] => 59.99
+    [paymentmethod] => boleto_itau_sem_registro
+    [paymentmethodname] => Boleto Itaú
+    [billingcycle] => Monthly
+    [nextduedate] => 2017-06-26
+    [status] => Suspended
+    [username] => fernanda
+    [password] => j74vtT0Hd6
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 2017-03-18
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 898
+    [disklimit] => 20000
+    [bwusage] => 1
+    [bwlimit] => 0
+    [lastupdate] => 2017-08-01 09:00:39
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 189
+    [id] => 189
+    [uuid] => c487ecad-c434-49a2-aa48-9f90abe30bfc
+    [firstname] => Fernanda
+    [lastname] => Mutton Pereira
+    [fullname] => Fernanda Mutton Pereira
+    [companyname] => 
+    [email] => femutton@hotmail.com
+    [address1] => rua manoel da nobrega, 582
+    [address2] => centro
+    [city] => diadema
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09910-720
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1140564576
+    [password] => $2y$10$M8RyZyqht2Hg0OwqiLWMQe1OjgKC3URUAhibErfbBTDP8x22Yub7K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1140564576
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 01/08/2017 13:09<br>IP Address: 201.6.143.172<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s287
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Especial
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000000000
+            [FullName] => Fernanda Mutton Pereira
+            [Email] => femutton@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s287
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Especial
+                            [unitPrice] => 5999
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000000000
+            [fullName] => Fernanda Mutton Pereira
+            [email] => femutton@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/c76580de-b910-4077-82c5-bd3fb4e988d5
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

@@ -1,0 +1,1230 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4503
+    [id] => 4503
+    [1] => 18
+    [userid] => 18
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-03-20
+    [date] => 2018-03-20
+    [4] => 2018-03-27
+    [duedate] => 2018-03-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.94
+    [subtotal] => 59.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.94
+    [total] => 59.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 18
+    [id] => 18
+    [uuid] => 765d2913-1d79-4ca1-a8ce-8b72ddccf562
+    [firstname] => Sonia Maria
+    [lastname] => Davanzo
+    [fullname] => Sonia Maria Davanzo
+    [companyname] => Geraldi Comércio Confecção em Geral Ltda
+    [email] => suzyline@suzyline.com.br
+    [address1] => Rua Falchi Gianini, 904
+    [address2] => Vila Prudente
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03135-040
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 25012097
+    [password] => b14a06447f698110403833049ac12327:s!Ys!
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.25012097
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/03/2018 11:12<br>IP Address: 179.212.90.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11950381700
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00 689 071/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11950381700
+    [customfields3] => 00 689 071/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4503
+    [id] => 4503
+    [1] => 18
+    [userid] => 18
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-03-20
+    [date] => 2018-03-20
+    [4] => 2018-03-27
+    [duedate] => 2018-03-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.94
+    [subtotal] => 59.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.94
+    [total] => 59.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 18
+    [id] => 18
+    [uuid] => 765d2913-1d79-4ca1-a8ce-8b72ddccf562
+    [firstname] => Sonia Maria
+    [lastname] => Davanzo
+    [fullname] => Sonia Maria Davanzo
+    [companyname] => Geraldi Comércio Confecção em Geral Ltda
+    [email] => suzyline@suzyline.com.br
+    [address1] => Rua Falchi Gianini, 904
+    [address2] => Vila Prudente
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03135-040
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 25012097
+    [password] => b14a06447f698110403833049ac12327:s!Ys!
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.25012097
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/03/2018 11:12<br>IP Address: 179.212.90.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11950381700
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00 689 071/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11950381700
+    [customfields3] => 00 689 071/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4503
+    [id] => 4503
+    [1] => 18
+    [userid] => 18
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-03-20
+    [date] => 2018-03-20
+    [4] => 2018-03-27
+    [duedate] => 2018-03-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.94
+    [subtotal] => 59.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.94
+    [total] => 59.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 18
+    [id] => 18
+    [uuid] => 765d2913-1d79-4ca1-a8ce-8b72ddccf562
+    [firstname] => Sonia Maria
+    [lastname] => Davanzo
+    [fullname] => Sonia Maria Davanzo
+    [companyname] => Geraldi Comércio Confecção em Geral Ltda
+    [email] => suzyline@suzyline.com.br
+    [address1] => Rua Falchi Gianini, 904
+    [address2] => Vila Prudente
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03135-040
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 25012097
+    [password] => b14a06447f698110403833049ac12327:s!Ys!
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.25012097
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/03/2018 11:12<br>IP Address: 179.212.90.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11950381700
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00 689 071/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11950381700
+    [customfields3] => 00 689 071/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4503
+    [id] => 4503
+    [1] => 18
+    [userid] => 18
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-03-20
+    [date] => 2018-03-20
+    [4] => 2018-03-27
+    [duedate] => 2018-03-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.94
+    [subtotal] => 59.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.94
+    [total] => 59.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 18
+    [id] => 18
+    [uuid] => 765d2913-1d79-4ca1-a8ce-8b72ddccf562
+    [firstname] => Sonia Maria
+    [lastname] => Davanzo
+    [fullname] => Sonia Maria Davanzo
+    [companyname] => Geraldi Comércio Confecção em Geral Ltda
+    [email] => suzyline@suzyline.com.br
+    [address1] => Rua Falchi Gianini, 904
+    [address2] => Vila Prudente
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03135-040
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 25012097
+    [password] => b14a06447f698110403833049ac12327:s!Ys!
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.25012097
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/03/2018 11:13<br>IP Address: 179.212.90.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11950381700
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00 689 071/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11950381700
+    [customfields3] => 00 689 071/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4503
+    [id] => 4503
+    [1] => 18
+    [userid] => 18
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-03-20
+    [date] => 2018-03-20
+    [4] => 2018-03-27
+    [duedate] => 2018-03-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.94
+    [subtotal] => 59.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.94
+    [total] => 59.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 18
+    [id] => 18
+    [uuid] => 765d2913-1d79-4ca1-a8ce-8b72ddccf562
+    [firstname] => Sonia Maria
+    [lastname] => Davanzo
+    [fullname] => Sonia Maria Davanzo
+    [companyname] => Geraldi Comércio Confecção em Geral Ltda
+    [email] => suzyline@suzyline.com.br
+    [address1] => Rua Falchi Gianini, 904
+    [address2] => Vila Prudente
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03135-040
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 25012097
+    [password] => b14a06447f698110403833049ac12327:s!Ys!
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.25012097
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/03/2018 11:13<br>IP Address: 179.212.90.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11950381700
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00 689 071/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11950381700
+    [customfields3] => 00 689 071/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4503
+    [id] => 4503
+    [1] => 18
+    [userid] => 18
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-03-20
+    [date] => 2018-03-20
+    [4] => 2018-03-27
+    [duedate] => 2018-03-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.94
+    [subtotal] => 59.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.94
+    [total] => 59.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 18
+    [id] => 18
+    [uuid] => 765d2913-1d79-4ca1-a8ce-8b72ddccf562
+    [firstname] => Sonia Maria
+    [lastname] => Davanzo
+    [fullname] => Sonia Maria Davanzo
+    [companyname] => Geraldi Comércio Confecção em Geral Ltda
+    [email] => suzyline@suzyline.com.br
+    [address1] => Rua Falchi Gianini, 904
+    [address2] => Vila Prudente
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03135-040
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 25012097
+    [password] => b14a06447f698110403833049ac12327:s!Ys!
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.25012097
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/03/2018 11:14<br>IP Address: 179.212.90.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11950381700
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00 689 071/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11950381700
+    [customfields3] => 00 689 071/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4503
+    [id] => 4503
+    [1] => 18
+    [userid] => 18
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-03-20
+    [date] => 2018-03-20
+    [4] => 2018-03-27
+    [duedate] => 2018-03-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.94
+    [subtotal] => 59.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.94
+    [total] => 59.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 18
+    [id] => 18
+    [uuid] => 765d2913-1d79-4ca1-a8ce-8b72ddccf562
+    [firstname] => Sonia Maria
+    [lastname] => Davanzo
+    [fullname] => Sonia Maria Davanzo
+    [companyname] => Geraldi Comércio Confecção em Geral Ltda
+    [email] => suzyline@suzyline.com.br
+    [address1] => Rua Falchi Gianini, 904
+    [address2] => Vila Prudente
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03135-040
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 25012097
+    [password] => b14a06447f698110403833049ac12327:s!Ys!
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.25012097
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/03/2018 11:14<br>IP Address: 179.212.90.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11950381700
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00 689 071/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11950381700
+    [customfields3] => 00 689 071/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4503
+    [id] => 4503
+    [1] => 18
+    [userid] => 18
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-03-20
+    [date] => 2018-03-20
+    [4] => 2018-03-27
+    [duedate] => 2018-03-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.94
+    [subtotal] => 59.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.94
+    [total] => 59.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 18
+    [id] => 18
+    [uuid] => 765d2913-1d79-4ca1-a8ce-8b72ddccf562
+    [firstname] => Sonia Maria
+    [lastname] => Davanzo
+    [fullname] => Sonia Maria Davanzo
+    [companyname] => Geraldi Comércio Confecção em Geral Ltda
+    [email] => suzyline@suzyline.com.br
+    [address1] => Rua Falchi Gianini, 904
+    [address2] => Vila Prudente
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03135-040
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 25012097
+    [password] => b14a06447f698110403833049ac12327:s!Ys!
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.25012097
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/03/2018 11:16<br>IP Address: 179.212.90.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11950381700
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00 689 071/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11950381700
+    [customfields3] => 00 689 071/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4503
+    [id] => 4503
+    [1] => 18
+    [userid] => 18
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-03-20
+    [date] => 2018-03-20
+    [4] => 2018-03-27
+    [duedate] => 2018-03-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.94
+    [subtotal] => 59.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.94
+    [total] => 59.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 18
+    [id] => 18
+    [uuid] => 765d2913-1d79-4ca1-a8ce-8b72ddccf562
+    [firstname] => Sonia Maria
+    [lastname] => Davanzo
+    [fullname] => Sonia Maria Davanzo
+    [companyname] => Geraldi Comércio Confecção em Geral Ltda
+    [email] => suzyline@suzyline.com.br
+    [address1] => Rua Falchi Gianini, 904
+    [address2] => Vila Prudente
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03135-040
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 25012097
+    [password] => b14a06447f698110403833049ac12327:s!Ys!
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.25012097
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/03/2018 11:16<br>IP Address: 179.212.90.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11950381700
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00 689 071/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11950381700
+    [customfields3] => 00 689 071/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4503
+    [id] => 4503
+    [1] => 18
+    [userid] => 18
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-03-20
+    [date] => 2018-03-20
+    [4] => 2018-03-27
+    [duedate] => 2018-03-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.94
+    [subtotal] => 59.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.94
+    [total] => 59.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 18
+    [id] => 18
+    [uuid] => 765d2913-1d79-4ca1-a8ce-8b72ddccf562
+    [firstname] => Sonia Maria
+    [lastname] => Davanzo
+    [fullname] => Sonia Maria Davanzo
+    [companyname] => Geraldi Comércio Confecção em Geral Ltda
+    [email] => suzyline@suzyline.com.br
+    [address1] => Rua Falchi Gianini, 904
+    [address2] => Vila Prudente
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03135-040
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 25012097
+    [password] => b14a06447f698110403833049ac12327:s!Ys!
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.25012097
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/03/2018 11:18<br>IP Address: 179.212.90.198<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11950381700
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00 689 071/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11950381700
+    [customfields3] => 00 689 071/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

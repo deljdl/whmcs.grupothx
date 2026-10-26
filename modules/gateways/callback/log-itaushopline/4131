@@ -1,0 +1,492 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4131
+    [id] => 4131
+    [1] => 271
+    [userid] => 271
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-12-11
+    [date] => 2017-12-11
+    [4] => 2017-12-17
+    [duedate] => 2017-12-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 271
+    [id] => 271
+    [uuid] => caa04b7d-8a81-46fb-9730-077b4acd1de9
+    [firstname] => Mônica
+    [lastname] => de Alkmim Moreira Nunes
+    [fullname] => Mônica de Alkmim Moreira Nunes
+    [companyname] => Associação de Ex-Conselheiros e Conselheiros da Infância - AECCI
+    [email] => secretaria@promovendodireitos.org.br
+    [address1] => Rua México, nº 119 – sala 1401
+    [address2] => Centro
+    [city] => Rio de Janeiro
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 20.031-907
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (21) 3556-3976 - (21) 98151-9783
+    [password] => $2y$10$sp1zF.V75uK9XWfm/CcIQ./QgTuV5.4v2YlR26.53una5EEUZ5kcq
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.213556397621981519783
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 15/12/2017 10:11<br>IP Address: 177.158.38.54<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 21981519783
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15.600.285/0001-79
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 21981519783
+    [customfields3] => 15.600.285/0001-79
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4131
+    [id] => 4131
+    [1] => 271
+    [userid] => 271
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-12-11
+    [date] => 2017-12-11
+    [4] => 2017-12-17
+    [duedate] => 2017-12-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 271
+    [id] => 271
+    [uuid] => caa04b7d-8a81-46fb-9730-077b4acd1de9
+    [firstname] => Mônica
+    [lastname] => de Alkmim Moreira Nunes
+    [fullname] => Mônica de Alkmim Moreira Nunes
+    [companyname] => Associação de Ex-Conselheiros e Conselheiros da Infância - AECCI
+    [email] => secretaria@promovendodireitos.org.br
+    [address1] => Rua México, nº 119 – sala 1401
+    [address2] => Centro
+    [city] => Rio de Janeiro
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 20.031-907
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (21) 3556-3976 - (21) 98151-9783
+    [password] => $2y$10$sp1zF.V75uK9XWfm/CcIQ./QgTuV5.4v2YlR26.53una5EEUZ5kcq
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.213556397621981519783
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 02/01/2018 11:00<br>IP Address: 177.133.248.146<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 21981519783
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15.600.285/0001-79
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 21981519783
+    [customfields3] => 15.600.285/0001-79
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4131
+    [id] => 4131
+    [1] => 271
+    [userid] => 271
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-12-11
+    [date] => 2017-12-11
+    [4] => 2017-12-17
+    [duedate] => 2017-12-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 271
+    [id] => 271
+    [uuid] => caa04b7d-8a81-46fb-9730-077b4acd1de9
+    [firstname] => Mônica
+    [lastname] => de Alkmim Moreira Nunes
+    [fullname] => Mônica de Alkmim Moreira Nunes
+    [companyname] => Associação de Ex-Conselheiros e Conselheiros da Infância - AECCI
+    [email] => secretaria@promovendodireitos.org.br
+    [address1] => Rua México, nº 119 – sala 1401
+    [address2] => Centro
+    [city] => Rio de Janeiro
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 20.031-907
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (21) 3556-3976 - (21) 98151-9783
+    [password] => $2y$10$sp1zF.V75uK9XWfm/CcIQ./QgTuV5.4v2YlR26.53una5EEUZ5kcq
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.213556397621981519783
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/01/2018 15:20<br>IP Address: 177.98.12.241<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 21981519783
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15.600.285/0001-79
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 21981519783
+    [customfields3] => 15.600.285/0001-79
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4131
+    [id] => 4131
+    [1] => 271
+    [userid] => 271
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-12-11
+    [date] => 2017-12-11
+    [4] => 2017-12-17
+    [duedate] => 2017-12-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 271
+    [id] => 271
+    [uuid] => caa04b7d-8a81-46fb-9730-077b4acd1de9
+    [firstname] => Mônica
+    [lastname] => de Alkmim Moreira Nunes
+    [fullname] => Mônica de Alkmim Moreira Nunes
+    [companyname] => Associação de Ex-Conselheiros e Conselheiros da Infância - AECCI
+    [email] => secretaria@promovendodireitos.org.br
+    [address1] => Rua México, nº 119 – sala 1401
+    [address2] => Centro
+    [city] => Rio de Janeiro
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 20.031-907
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (21) 3556-3976 - (21) 98151-9783
+    [password] => $2y$10$sp1zF.V75uK9XWfm/CcIQ./QgTuV5.4v2YlR26.53una5EEUZ5kcq
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.213556397621981519783
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/01/2018 15:21<br>IP Address: 177.98.12.241<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 21981519783
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15.600.285/0001-79
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 21981519783
+    [customfields3] => 15.600.285/0001-79
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

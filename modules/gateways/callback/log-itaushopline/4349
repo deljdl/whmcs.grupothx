@@ -1,0 +1,246 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4349
+    [id] => 4349
+    [1] => 116
+    [userid] => 116
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-08
+    [date] => 2018-02-08
+    [4] => 2018-02-15
+    [duedate] => 2018-02-15
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.99
+    [subtotal] => 59.99
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.99
+    [total] => 59.99
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 116
+    [id] => 116
+    [uuid] => 0f6640d3-cae0-4c96-9e72-19b5820b4793
+    [firstname] => Cristiano
+    [lastname] => Aparecido da Rocha Januario
+    [fullname] => Cristiano Aparecido da Rocha Januario
+    [companyname] => CADNET BRASIL
+    [email] => cristianorocha@cadnetbrasil.com.br
+    [address1] => Rua Parapuã, 426
+    [address2] => Freguesia do Ó
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 02831000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  95990-9938
+    [password] => b294ad24fe6162870b37bac9a7aca676:%nR!#
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.959909938
+    [billingcid] => 115
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/02/2018 15:49<br>IP Address: 201.6.229.188<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11959909938
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 30224522841
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11959909938
+    [customfields3] => 30224522841
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4349
+    [id] => 4349
+    [1] => 116
+    [userid] => 116
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-08
+    [date] => 2018-02-08
+    [4] => 2018-02-15
+    [duedate] => 2018-02-15
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.99
+    [subtotal] => 59.99
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.99
+    [total] => 59.99
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 116
+    [id] => 116
+    [uuid] => 0f6640d3-cae0-4c96-9e72-19b5820b4793
+    [firstname] => Cristiano
+    [lastname] => Aparecido da Rocha Januario
+    [fullname] => Cristiano Aparecido da Rocha Januario
+    [companyname] => CADNET BRASIL
+    [email] => cristianorocha@cadnetbrasil.com.br
+    [address1] => Rua Parapuã, 426
+    [address2] => Freguesia do Ó
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 02831000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  95990-9938
+    [password] => b294ad24fe6162870b37bac9a7aca676:%nR!#
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.959909938
+    [billingcid] => 115
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/02/2018 16:31<br>IP Address: 201.6.229.188<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11959909938
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 30224522841
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11959909938
+    [customfields3] => 30224522841
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

@@ -1,0 +1,270 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2814
+    [id] => 2814
+    [1] => 231
+    [userid] => 231
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-02
+    [date] => 2017-01-02
+    [4] => 2017-01-08
+    [duedate] => 2017-01-08
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 600.00
+    [subtotal] => 600.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 600.00
+    [total] => 600.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 231
+    [id] => 231
+    [uuid] => 946f7d39-8f18-4722-ae9e-6a22205b52c4
+    [firstname] => Lígia
+    [lastname] => Maria Saraiva
+    [fullname] => Lígia Maria Saraiva
+    [companyname] => 
+    [email] => adm.mover@yahoo.com.br
+    [address1] => Petrolia Portela, 120
+    [address2] => 
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-160
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => $2y$10$UP1Cw34VL1JWuNJseZQX7OePOCfCi3luJIY4lQYmp2sXslLv388XG
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 10/01/2017 12:02<br>IP Address: 177.205.216.28<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982380696
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 306.895.018-03
+                )
+
+        )
+
+    [customfields2] => 11982380696
+    [customfields3] => 306.895.018-03
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2814
+    [SoftDescriptor] => 2814
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Cobrança Comum (08/01/2017 - 07/02/2017)
+Descrição do Serviço Solicitado: Aluguel Ana Lúcia
+                            [Description] => Cobrança Comum (08/01/2017 - 07/02/2017)
+Descrição do Serviço Solicitado: Aluguel Ana Lúcia
+                            [UnitPrice] => 60000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 1800
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 2 dias de atraso
+                            [Description] => Juros por 2 dias de atraso
+                            [UnitPrice] => 371
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002814
+            [FullName] => Lígia Maria Saraiva
+            [Email] => adm.mover@yahoo.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2814
+    [softDescriptor] => 2814
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Cobrança Comum (08/01/2017 - 07/02/2017)
+Descrição do Serviço Solicitado: Aluguel Ana Lúcia
+                            [description] => Cobrança Comum (08/01/2017 - 07/02/2017)
+Descrição do Serviço Solicitado: Aluguel Ana Lúcia
+                            [unitPrice] => 60000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 1800
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 2 dias de atraso
+                            [description] => Juros por 2 dias de atraso
+                            [unitPrice] => 371
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002814
+            [fullName] => Lígia Maria Saraiva
+            [email] => adm.mover@yahoo.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/1ae01370-85b4-4309-81ca-a04b2391d106
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5040
+    [id] => 5040
+    [1] => 72
+    [userid] => 72
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-03
+    [date] => 2018-08-03
+    [4] => 2018-08-10
+    [duedate] => 2018-08-10
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 49.90
+    [subtotal] => 49.90
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 49.90
+    [total] => 49.90
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 72
+    [id] => 72
+    [uuid] => f7c74592-fc5e-4e38-8e98-f7b567ff099c
+    [firstname] => Edinaldo
+    [lastname] => Ferreira
+    [fullname] => Edinaldo Ferreira
+    [companyname] => Codmarc Codificadores Marcação Com Serv Ltda
+    [email] => eder@codmarc.com.br
+    [address1] => Rua Ulisses Paschoal, 76
+    [address2] => Jardim Lourdes
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04328-040
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 55880483 (11)957985906
+    [password] => cb770edf7794c2e6912cf68595b68ba4:!))F)
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.115588048311957985906
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 03/08/2018 09:38<br>IP Address: 187.11.125.121<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957985906
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.494.423/0001-29
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11957985906
+    [customfields3] => 05.494.423/0001-29
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

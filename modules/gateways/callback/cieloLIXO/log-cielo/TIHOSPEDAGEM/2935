@@ -1,0 +1,232 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2935
+    [id] => 2935
+    [1] => 253
+    [userid] => 253
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-01
+    [date] => 2017-02-01
+    [4] => 2017-02-01
+    [duedate] => 2017-02-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 50.00
+    [subtotal] => 50.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 50.00
+    [total] => 50.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 253
+    [id] => 253
+    [uuid] => 11fd5990-f7f4-479c-8e66-9d7c58345c46
+    [firstname] => Silnara
+    [lastname] => Melo Pereira
+    [fullname] => Silnara Melo Pereira
+    [companyname] => 
+    [email] => silnara_guto@yahoo.com.br
+    [address1] => Rua Anhumas, 489
+    [address2] => Vila São João Batista
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07134-060
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => $2y$10$XF9pfz77twLnBMWh3txNj.U4iyXhnjkVEPjnUZUX2R4XWqysU0ON6
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => deposito_ou_transferencia
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 01/02/2017 13:22<br>IP Address: 177.41.209.73<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995961728
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 21557481830
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995961728
+    [customfields3] => 21557481830
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2935
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Criacao de FanPage Facebook - Conforme Proposta 1187
+                            [Description] => Desenvolvimento Por Hora - Criacao de FanPage Facebook - Conforme Proposta 1187
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Discount] => stdClass Object
+        (
+            [Type] => 1
+            [Value] => 10
+            [Amount] => 10
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 21557481830
+            [FullName] => Silnara Melo Pereira
+            [Email] => silnara_guto@yahoo.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2935
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Criacao de FanPage Facebook - Conforme Proposta 1187
+                            [description] => Desenvolvimento Por Hora - Criacao de FanPage Facebook - Conforme Proposta 1187
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 21557481830
+            [fullName] => Silnara Melo Pereira
+            [email] => silnara_guto@yahoo.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/53938cf1-5096-4117-86aa-f47b599c465a
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

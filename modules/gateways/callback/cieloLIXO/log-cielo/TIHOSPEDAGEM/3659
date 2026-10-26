@@ -1,0 +1,357 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3659
+    [id] => 3659
+    [1] => 283
+    [userid] => 283
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-08-04
+    [date] => 2017-08-04
+    [4] => 2017-08-04
+    [duedate] => 2017-08-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 50.00
+    [subtotal] => 50.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 50.00
+    [total] => 50.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 283
+    [id] => 283
+    [uuid] => f16845c7-0570-436f-b7ec-6daff14671b4
+    [firstname] => Talles
+    [lastname] => Tatagiba Martins de Souza
+    [fullname] => Talles Tatagiba Martins de Souza
+    [companyname] => Instituto Elevar
+    [email] => talles@gmail.com
+    [address1] => Av. Nicolau Von Schilgen, 100
+    [address2] => Mata da Praia
+    [city] => Vitória
+    [fullstate] => ES
+    [state] => ES
+    [postcode] => 29065-130
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11974551875 
+    [password] => $2y$10$sA4G7EuB4fy6RDxNtafjHeEx4U5iTyxQ.TywUByvcHGULn4AvvN/.
+    [statecode] => ES
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11974551875
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 06/08/2017 22:12<br>IP Address: 206.188.26.36<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11974551875
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 12297475756
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11974551875
+    [customfields3] => 12297475756
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3659
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Logo Criacao - institutoelevar.com.br
+Descricao do Servico Solicitado: Logotipo simples.
+Ate tres alteracoes de formato
+                            [Description] => Logo Criacao - institutoelevar.com.br
+Descricao do Servico Solicitado: Logotipo simples.
+Ate tres alteracoes de formato
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Talles Tatagiba Martins de Souza
+            [Email] => talles@gmail.com
+            [Identity] => 12297475756
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3659
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Logo Criacao - institutoelevar.com.br
+Descricao do Servico Solicitado: Logotipo simples.
+Ate tres alteracoes de formato
+                            [description] => Logo Criacao - institutoelevar.com.br
+Descricao do Servico Solicitado: Logotipo simples.
+Ate tres alteracoes de formato
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 12297475756
+            [fullName] => Talles Tatagiba Martins de Souza
+            [email] => talles@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/750a8676-87ad-4874-be3a-030f2059d257
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+06/08/2017 22:00:30
+INICIO_______________________________________________________________LOG:BEGIN:::06/08/2017 22:30<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3659
+    [amount] => 5000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 882ef7880dfc4923b265d4c85cafa932
+    [created_date] => 06/08/2017 22:29:57
+    [customer_name] => Talles Souza
+    [customer_phone] => 11974551875
+    [customer_identity] => 12297475756
+    [customer_email] => talles@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 516220******6881
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626I2GQCUL9B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/08/2017 22:02:30
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3659 | Result->success | ValorPago ->50.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 3659
+    [amount] => 5000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 882ef7880dfc4923b265d4c85cafa932
+    [created_date] => 06/08/2017 22:29:57
+    [customer_name] => Talles Souza
+    [customer_phone] => 11974551875
+    [customer_identity] => 12297475756
+    [customer_email] => talles@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 516220******6881
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626I2GQCUL9B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/08/2017 22:20:35
+INICIO_______________________________________________________________LOG:BEGIN:::06/08/2017 22:35<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 882ef7880dfc4923b265d4c85cafa932
+    [amount] => 5000
+    [order_number] => 3659
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/08/2017 22:20:35
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 882ef7880dfc4923b265d4c85cafa932
+    [amount] => 5000
+    [order_number] => 3659
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/08/2017 22:21:35
+INICIO_______________________________________________________________LOG:BEGIN:::06/08/2017 22:35<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 882ef7880dfc4923b265d4c85cafa932
+    [amount] => 5000
+    [order_number] => 3659
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/08/2017 22:21:35
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 882ef7880dfc4923b265d4c85cafa932
+    [amount] => 5000
+    [order_number] => 3659
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

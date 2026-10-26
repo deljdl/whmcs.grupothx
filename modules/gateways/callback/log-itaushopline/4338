@@ -1,0 +1,246 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4338
+    [id] => 4338
+    [1] => 52
+    [userid] => 52
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-07
+    [date] => 2018-02-07
+    [4] => 2018-02-14
+    [duedate] => 2018-02-14
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 55.00
+    [subtotal] => 55.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 55.00
+    [total] => 55.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 52
+    [id] => 52
+    [uuid] => e57730e3-1511-448b-b6f6-cbf43b27dbd9
+    [firstname] => Lourimar
+    [lastname] => Raimundo
+    [fullname] => Lourimar Raimundo
+    [companyname] => Lourimar Raimundo Da Silva Vulcanização-ME
+    [email] => lsvulcanizacao@hotmail.com
+    [address1] => Rua Auriverde,561
+    [address2] => Vila Idependência - Ipiranga 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04222-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 5623-2282, 2769-2282
+    [password] => a285f6d4104ee4ff04c4735d4f2ec7c2:IOcQ!
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.5623228227692282
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 01/03/2018 10:26<br>IP Address: 201.6.129.254<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 1178484196
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 97.531.309/0001-40
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 1178484196
+    [customfields3] => 97.531.309/0001-40
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4338
+    [id] => 4338
+    [1] => 52
+    [userid] => 52
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-07
+    [date] => 2018-02-07
+    [4] => 2018-02-14
+    [duedate] => 2018-02-14
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 55.00
+    [subtotal] => 55.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 55.00
+    [total] => 55.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 52
+    [id] => 52
+    [uuid] => e57730e3-1511-448b-b6f6-cbf43b27dbd9
+    [firstname] => Lourimar
+    [lastname] => Raimundo
+    [fullname] => Lourimar Raimundo
+    [companyname] => Lourimar Raimundo Da Silva Vulcanização-ME
+    [email] => lsvulcanizacao@hotmail.com
+    [address1] => Rua Auriverde,561
+    [address2] => Vila Idependência - Ipiranga 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04222-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 5623-2282, 2769-2282
+    [password] => a285f6d4104ee4ff04c4735d4f2ec7c2:IOcQ!
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.5623228227692282
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 01/03/2018 10:26<br>IP Address: 201.6.129.254<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 1178484196
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 97.531.309/0001-40
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 1178484196
+    [customfields3] => 97.531.309/0001-40
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

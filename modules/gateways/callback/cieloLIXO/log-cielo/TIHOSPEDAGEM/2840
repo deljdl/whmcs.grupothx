@@ -1,0 +1,466 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2840
+    [id] => 2840
+    [1] => 28
+    [userid] => 28
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-09
+    [date] => 2017-01-09
+    [4] => 2017-01-15
+    [duedate] => 2017-01-15
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 199.00
+    [subtotal] => 199.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 199.00
+    [total] => 199.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 28
+    [id] => 28
+    [uuid] => 86bfca5c-6305-4473-87a5-97fea7d91938
+    [firstname] => Vijay
+    [lastname] => Solank
+    [fullname] => Vijay Solank
+    [companyname] => Satguru Travel &amp; Tours Services Ltda
+    [email] => solankisp99@yahoo.com
+    [address1] => Av. Brigadeiro Faria Lima, 1912
+    [address2] => 5º andar - Conj. 5-G - Jd. Paulistano
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 3097-8560/61
+    [password] => $2y$10$ICwwYSBLCaLkZUaVDkEOhOZmfvjYW15y4hStZlClPxmGqsFLzgZQq
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3097856061
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 16/01/2017 19:13<br>IP Address: 201.13.44.180<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986415468
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 015.542.034/0001-85
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11986415468
+    [customfields3] => 015.542.034/0001-85
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2840
+    [SoftDescriptor] => 2840
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Sem Limite - satgurutravel.com.br (15/01/2017 - 14/02/2017)
+                            [Description] => TIH - Sem Limite - satgurutravel.com.br (15/01/2017 - 14/02/2017)
+                            [UnitPrice] => 14900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Adicionais (satgurutravel.com.br) - Mais 50 GB Adicionais de Espaço em disco. (15/01/2017 - 14/02/2017)
+                            [Description] => Adicionais (satgurutravel.com.br) - Mais 50 GB Adicionais de Espaço em disco. (15/01/2017 - 14/02/2017)
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002840
+            [FullName] => Vijay Solank
+            [Email] => solankisp99@yahoo.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2840
+    [softDescriptor] => 2840
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Sem Limite - satgurutravel.com.br (15/01/2017 - 14/02/2017)
+                            [description] => TIH - Sem Limite - satgurutravel.com.br (15/01/2017 - 14/02/2017)
+                            [unitPrice] => 14900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Adicionais (satgurutravel.com.br) - Mais 50 GB Adicionais de Espaço em disco. (15/01/2017 - 14/02/2017)
+                            [description] => Adicionais (satgurutravel.com.br) - Mais 50 GB Adicionais de Espaço em disco. (15/01/2017 - 14/02/2017)
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002840
+            [fullName] => Vijay Solank
+            [email] => solankisp99@yahoo.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/35ffb824-39a8-4c02-89c5-7f1abcd66f48
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+16/01/2017 19:47:14
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2840
+    [amount] => 19900
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 2f76a18eb0284cea9e3274f431210d83
+    [created_date] => 16/01/2017 19:14:44
+    [customer_name] => Vijay Solank
+    [customer_phone] => 1130978560
+    [customer_identity] => 15542034000185
+    [customer_email] => solankisp99@yahoo.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552693******5490
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626C65TK0E6B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+16/01/2017 19:49:14
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->28 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2840
+    [amount] => 19900
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 2f76a18eb0284cea9e3274f431210d83
+    [created_date] => 16/01/2017 19:14:44
+    [customer_name] => Vijay Solank
+    [customer_phone] => 1130978560
+    [customer_identity] => 15542034000185
+    [customer_email] => solankisp99@yahoo.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552693******5490
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626C65TK0E6B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 2840
+    [id] => 2840
+    [1] => 28
+    [userid] => 28
+    [2] => #2063
+    [invoicenum] => #2063
+    [3] => 2017-01-16
+    [date] => 2017-01-16
+    [4] => 2017-01-15
+    [duedate] => 2017-01-15
+    [5] => 2017-01-16 19:14:47
+    [datepaid] => 2017-01-16 19:14:47
+    [6] => 199.00
+    [subtotal] => 199.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 199.00
+    [total] => 199.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Paid
+    [status] => Paid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 28
+    [id] => 28
+    [uuid] => 86bfca5c-6305-4473-87a5-97fea7d91938
+    [firstname] => Vijay
+    [lastname] => Solank
+    [fullname] => Vijay Solank
+    [companyname] => Satguru Travel &amp; Tours Services Ltda
+    [email] => solankisp99@yahoo.com
+    [address1] => Av. Brigadeiro Faria Lima, 1912
+    [address2] => 5º andar - Conj. 5-G - Jd. Paulistano
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 3097-8560/61
+    [password] => $2y$10$ICwwYSBLCaLkZUaVDkEOhOZmfvjYW15y4hStZlClPxmGqsFLzgZQq
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3097856061
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 16/01/2017 19:13<br>IP Address: 201.13.44.180<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986415468
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 015.542.034/0001-85
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11986415468
+    [customfields3] => 015.542.034/0001-85
+    [customfields4] => 
+)
+</pre>
+
+
+16/01/2017 19:58:21
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 2f76a18eb0284cea9e3274f431210d83
+    [amount] => 19900
+    [order_number] => 2840
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+16/01/2017 19:58:21
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 2f76a18eb0284cea9e3274f431210d83
+    [amount] => 19900
+    [order_number] => 2840
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

@@ -1,0 +1,1083 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2492
+    [id] => 2492
+    [1] => 234
+    [userid] => 234
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-30
+    [date] => 2016-09-30
+    [4] => 2016-09-02
+    [duedate] => 2016-09-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 234
+    [id] => 234
+    [uuid] => cd16a081-26a2-4bdb-90b3-2e8aeff20b1d
+    [firstname] => Jefferson
+    [lastname] => Quintino Gomes
+    [fullname] => Jefferson Quintino Gomes
+    [companyname] => Global Demolidora Ltda
+    [email] => jefferson@globaldemolidora.com
+    [address1] => Rua Giuseppe Tosi, 92
+    [address2] => Demarchi
+    [city] => São Bernardo do Campo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09820440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => $2y$10$FEcbjPinG0AeHxopyONkue9PfhkcaanSb6NOJk9jHohJ5lNJilkqy
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 30/09/2016 15:21<br>IP Address: 189.54.144.29<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11971004117
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11144013000150
+                )
+
+        )
+
+    [customfields2] => 11971004117
+    [customfields3] => 11144013000150
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2492
+    [SoftDescriptor] => 2492
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - globaldemolidora.com (30/09/2016 - 29/10/2016)
+                            [Description] => TIH - Master - globaldemolidora.com (30/09/2016 - 29/10/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Jefferson Quintino Gomes
+            [Email] => jefferson@globaldemolidora.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2492
+    [softDescriptor] => 2492
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - globaldemolidora.com (30/09/2016 - 29/10/2016)
+                            [description] => TIH - Master - globaldemolidora.com (30/09/2016 - 29/10/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Jefferson Quintino Gomes
+            [email] => jefferson@globaldemolidora.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/a6600c9e-c619-469d-b6fc-48051f083b38
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2492
+    [id] => 2492
+    [1] => 234
+    [userid] => 234
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-30
+    [date] => 2016-09-30
+    [4] => 2016-09-02
+    [duedate] => 2016-09-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 234
+    [id] => 234
+    [uuid] => cd16a081-26a2-4bdb-90b3-2e8aeff20b1d
+    [firstname] => Jefferson
+    [lastname] => Quintino Gomes
+    [fullname] => Jefferson Quintino Gomes
+    [companyname] => Global Demolidora Ltda
+    [email] => jefferson@globaldemolidora.com
+    [address1] => Rua Giuseppe Tosi, 92
+    [address2] => Demarchi
+    [city] => São Bernardo do Campo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09820440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => $2y$10$FEcbjPinG0AeHxopyONkue9PfhkcaanSb6NOJk9jHohJ5lNJilkqy
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 30/09/2016 16:08<br>IP Address: 189.54.144.29<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11971004117
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11144013000150
+                )
+
+        )
+
+    [customfields2] => 11971004117
+    [customfields3] => 11144013000150
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2492
+    [SoftDescriptor] => 2492
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - globaldemolidora.com (30/09/2016 - 29/10/2016)
+                            [Description] => TIH - Master - globaldemolidora.com (30/09/2016 - 29/10/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Jefferson Quintino Gomes
+            [Email] => jefferson@globaldemolidora.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2492
+    [softDescriptor] => 2492
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - globaldemolidora.com (30/09/2016 - 29/10/2016)
+                            [description] => TIH - Master - globaldemolidora.com (30/09/2016 - 29/10/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Jefferson Quintino Gomes
+            [email] => jefferson@globaldemolidora.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/b5c728a8-40b7-4453-a399-1d5b06abede0
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2492
+    [id] => 2492
+    [1] => 234
+    [userid] => 234
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-30
+    [date] => 2016-09-30
+    [4] => 2016-09-02
+    [duedate] => 2016-09-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 234
+    [id] => 234
+    [uuid] => cd16a081-26a2-4bdb-90b3-2e8aeff20b1d
+    [firstname] => Jefferson
+    [lastname] => Quintino Gomes
+    [fullname] => Jefferson Quintino Gomes
+    [companyname] => Global Demolidora Ltda
+    [email] => jefferson@globaldemolidora.com
+    [address1] => Rua Giuseppe Tosi, 92
+    [address2] => Demarchi
+    [city] => São Bernardo do Campo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09820440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => $2y$10$FEcbjPinG0AeHxopyONkue9PfhkcaanSb6NOJk9jHohJ5lNJilkqy
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 30/09/2016 16:09<br>IP Address: 189.54.144.29<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11971004117
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11144013000150
+                )
+
+        )
+
+    [customfields2] => 11971004117
+    [customfields3] => 11144013000150
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2492
+    [SoftDescriptor] => 2492
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - globaldemolidora.com (30/09/2016 - 29/10/2016)
+                            [Description] => TIH - Master - globaldemolidora.com (30/09/2016 - 29/10/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Jefferson Quintino Gomes
+            [Email] => jefferson@globaldemolidora.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2492
+    [softDescriptor] => 2492
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - globaldemolidora.com (30/09/2016 - 29/10/2016)
+                            [description] => TIH - Master - globaldemolidora.com (30/09/2016 - 29/10/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Jefferson Quintino Gomes
+            [email] => jefferson@globaldemolidora.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/eff50522-aa8f-4bb3-94b6-fe9efddd6933
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2492
+    [id] => 2492
+    [1] => 234
+    [userid] => 234
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-30
+    [date] => 2016-09-30
+    [4] => 2016-09-02
+    [duedate] => 2016-09-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 234
+    [id] => 234
+    [uuid] => cd16a081-26a2-4bdb-90b3-2e8aeff20b1d
+    [firstname] => Jefferson
+    [lastname] => Quintino Gomes
+    [fullname] => Jefferson Quintino Gomes
+    [companyname] => Global Demolidora Ltda
+    [email] => jefferson@globaldemolidora.com
+    [address1] => Rua Giuseppe Tosi, 92
+    [address2] => Demarchi
+    [city] => São Bernardo do Campo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09820440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => $2y$10$FEcbjPinG0AeHxopyONkue9PfhkcaanSb6NOJk9jHohJ5lNJilkqy
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 30/09/2016 16:10<br>IP Address: 189.54.144.29<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11971004117
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11144013000150
+                )
+
+        )
+
+    [customfields2] => 11971004117
+    [customfields3] => 11144013000150
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2492
+    [SoftDescriptor] => 2492
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - globaldemolidora.com (30/09/2016 - 29/10/2016)
+                            [Description] => TIH - Master - globaldemolidora.com (30/09/2016 - 29/10/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Jefferson Quintino Gomes
+            [Email] => jefferson@globaldemolidora.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2492
+    [softDescriptor] => 2492
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - globaldemolidora.com (30/09/2016 - 29/10/2016)
+                            [description] => TIH - Master - globaldemolidora.com (30/09/2016 - 29/10/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Jefferson Quintino Gomes
+            [email] => jefferson@globaldemolidora.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/f3b43b85-3583-4c1c-a422-d11b4429b9ea
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+30/09/2016 16:22:12
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2492
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 3148bad5c7fa4655ae45649b7f805774
+    [created_date] => 30/09/2016 18:12:20
+    [customer_name] => Jefferson Gomes
+    [customer_phone] => 1141096039
+    [customer_identity] => 12935288890
+    [customer_email] => jefferson@globaldemolidora.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 439252******8325
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777625MJ4GH787B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/09/2016 16:24:12
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->234 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2492
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 3148bad5c7fa4655ae45649b7f805774
+    [created_date] => 30/09/2016 18:12:20
+    [customer_name] => Jefferson Gomes
+    [customer_phone] => 1141096039
+    [customer_identity] => 12935288890
+    [customer_email] => jefferson@globaldemolidora.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 439252******8325
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777625MJ4GH787B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/09/2016 16:28:13
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 3148bad5c7fa4655ae45649b7f805774
+    [amount] => 3297
+    [order_number] => 2492
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/09/2016 16:28:13
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 3148bad5c7fa4655ae45649b7f805774
+    [amount] => 3297
+    [order_number] => 2492
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

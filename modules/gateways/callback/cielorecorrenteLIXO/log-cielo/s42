@@ -1,0 +1,434 @@
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 42
+    [clientid] => 28
+    [orderid] => 0
+    [pid] => 10
+    [regdate] => 2013-06-10
+    [name] => 
+    [translated_name] => TIH - Sem Limite
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => satgurutravel.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [firstpaymentamount] => 39.96
+    [recurringamount] => 149.00
+    [paymentmethod] => boleto_itau_sem_registro
+    [paymentmethodname] => Boleto Itaú
+    [billingcycle] => Monthly
+    [nextduedate] => 2017-02-15
+    [status] => Active
+    [username] => satgurut
+    [password] => satvijay
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 2015-08-14
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => Imported using WHM Import Script - Payment Method, Pricing, Billing Cycle &amp; Next Due Date may be incorrect
+    [diskusage] => 100772
+    [disklimit] => 130000
+    [bwusage] => 16227
+    [bwlimit] => 0
+    [lastupdate] => 2017-02-17 16:42:54
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 28
+    [id] => 28
+    [uuid] => 86bfca5c-6305-4473-87a5-97fea7d91938
+    [firstname] => Vijay
+    [lastname] => Solank
+    [fullname] => Vijay Solank
+    [companyname] => Satguru Travel &amp; Tours Services Ltda
+    [email] => solankisp99@yahoo.com
+    [address1] => Av. Brigadeiro Faria Lima, 1912
+    [address2] => 5º andar - Conj. 5-G - Jd. Paulistano
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 3097-8560/61
+    [password] => $2y$10$ICwwYSBLCaLkZUaVDkEOhOZmfvjYW15y4hStZlClPxmGqsFLzgZQq
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3097856061
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/02/2017 18:29<br>IP Address: 152.254.194.90<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986415468
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 015.542.034/0001-85
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11986415468
+    [customfields3] => 015.542.034/0001-85
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s42
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Sem Limite
+                            [UnitPrice] => 14900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 015542034000185
+            [FullName] => Vijay Solank
+            [Email] => solankisp99@yahoo.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Customer.Identity] => Array
+                (
+                    [0] => [Customer.Identity] deve conter no mínimo 11 e no máximo 14 caracteres.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 42
+    [clientid] => 28
+    [orderid] => 0
+    [pid] => 10
+    [regdate] => 2013-06-10
+    [name] => 
+    [translated_name] => TIH - Sem Limite
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => satgurutravel.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [firstpaymentamount] => 39.96
+    [recurringamount] => 149.00
+    [paymentmethod] => boleto_itau_sem_registro
+    [paymentmethodname] => Boleto Itaú
+    [billingcycle] => Monthly
+    [nextduedate] => 2017-02-15
+    [status] => Active
+    [username] => satgurut
+    [password] => satvijay
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 2015-08-14
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => Imported using WHM Import Script - Payment Method, Pricing, Billing Cycle &amp; Next Due Date may be incorrect
+    [diskusage] => 100772
+    [disklimit] => 130000
+    [bwusage] => 16227
+    [bwlimit] => 0
+    [lastupdate] => 2017-02-17 16:42:54
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 28
+    [id] => 28
+    [uuid] => 86bfca5c-6305-4473-87a5-97fea7d91938
+    [firstname] => Vijay
+    [lastname] => Solank
+    [fullname] => Vijay Solank
+    [companyname] => Satguru Travel &amp; Tours Services Ltda
+    [email] => solankisp99@yahoo.com
+    [address1] => Av. Brigadeiro Faria Lima, 1912
+    [address2] => 5º andar - Conj. 5-G - Jd. Paulistano
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 3097-8560/61
+    [password] => $2y$10$ICwwYSBLCaLkZUaVDkEOhOZmfvjYW15y4hStZlClPxmGqsFLzgZQq
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3097856061
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/02/2017 18:30<br>IP Address: 152.254.194.90<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986415468
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 015.542.034/0001-85
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11986415468
+    [customfields3] => 015.542.034/0001-85
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s42
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Sem Limite
+                            [UnitPrice] => 14900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 015542034000185
+            [FullName] => Vijay Solank
+            [Email] => solankisp99@yahoo.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Customer.Identity] => Array
+                (
+                    [0] => [Customer.Identity] deve conter no mínimo 11 e no máximo 14 caracteres.
+                )
+
+        )
+
+)
+</pre>

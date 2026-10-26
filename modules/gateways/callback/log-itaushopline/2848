@@ -1,0 +1,113 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2848
+    [id] => 2848
+    [1] => 233
+    [userid] => 233
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-10
+    [date] => 2017-01-10
+    [4] => 2017-01-09
+    [duedate] => 2017-01-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 233
+    [id] => 233
+    [uuid] => 96477675-5af2-48c2-b9c3-0c2f2a7a5f7e
+    [firstname] => Leandro
+    [lastname] => F. Bastros
+    [fullname] => Leandro F. Bastros
+    [companyname] => Plasticos Prado - Ind. Bras. Prod. P/ Autos Ltda
+    [email] => leandro@plasticosprado.com.br
+    [address1] => Rua Alfa,249
+    [address2] => Una
+    [city] => Itaquaquecetuba 
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08599 670
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => $2y$10$kMpJkW.ffjI0S2Vu8q1QNOLYOkrvShyPasMKFncJOmhDeMv9jDrVm
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 11/01/2017 15:53<br>IP Address: 189.8.21.18<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11940366786
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 010.227.810/0001-39
+                )
+
+        )
+
+    [customfields2] => 11940366786
+    [customfields3] => 010.227.810/0001-39
+)
+</pre>

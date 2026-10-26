@@ -1,0 +1,889 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2706
+    [id] => 2706
+    [1] => 239
+    [userid] => 239
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-28
+    [date] => 2016-11-28
+    [4] => 2016-12-04
+    [duedate] => 2016-12-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 103.00
+    [subtotal] => 103.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 103.00
+    [total] => 103.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 239
+    [id] => 239
+    [uuid] => ae22ba0c-307f-4057-8405-fc6c6c80451f
+    [firstname] => Alcides
+    [lastname] => Dias dos Santos
+    [fullname] => Alcides Dias dos Santos
+    [companyname] => A D S CONSTRUCOES 
+    [email] => a.dias.santos1958@uol.com.br
+    [address1] => Rua Serra Acarai, 167
+    [address2] => Casa A
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08581-070
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11957673151
+    [password] => $2y$10$gDexAoc4bsTBthQD4aDfM.5GuiCMaArEJwuKjc88dBzyO4kPCfreC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11957673151
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/12/2016 12:54<br>IP Address: 191.209.13.245<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957673151
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 151.651.403-34
+                )
+
+        )
+
+    [customfields2] => 11957673151
+    [customfields3] => 151.651.403-34
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2706
+    [SoftDescriptor] => 2706
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [Description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [UnitPrice] => 10300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 309
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 5 dias de atraso
+                            [Description] => Juros por 5 dias de atraso
+                            [UnitPrice] => 159
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002706
+            [FullName] => Alcides Dias dos Santos
+            [Email] => a.dias.santos1958@uol.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2706
+    [softDescriptor] => 2706
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [unitPrice] => 10300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 309
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 5 dias de atraso
+                            [description] => Juros por 5 dias de atraso
+                            [unitPrice] => 159
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002706
+            [fullName] => Alcides Dias dos Santos
+            [email] => a.dias.santos1958@uol.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/cf17fc04-348b-4524-84ba-aaf3ecde0393
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2706
+    [id] => 2706
+    [1] => 239
+    [userid] => 239
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-28
+    [date] => 2016-11-28
+    [4] => 2016-12-04
+    [duedate] => 2016-12-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 103.00
+    [subtotal] => 103.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 103.00
+    [total] => 103.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 239
+    [id] => 239
+    [uuid] => ae22ba0c-307f-4057-8405-fc6c6c80451f
+    [firstname] => Alcides
+    [lastname] => Dias dos Santos
+    [fullname] => Alcides Dias dos Santos
+    [companyname] => A D S CONSTRUCOES 
+    [email] => a.dias.santos1958@uol.com.br
+    [address1] => Rua Serra Acarai, 167
+    [address2] => Casa A
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08581-070
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11957673151
+    [password] => $2y$10$gDexAoc4bsTBthQD4aDfM.5GuiCMaArEJwuKjc88dBzyO4kPCfreC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11957673151
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/12/2016 13:08<br>IP Address: 191.209.13.245<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957673151
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 151.651.403-34
+                )
+
+        )
+
+    [customfields2] => 11957673151
+    [customfields3] => 151.651.403-34
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2706
+    [SoftDescriptor] => 2706
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [Description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [UnitPrice] => 10300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 309
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 5 dias de atraso
+                            [Description] => Juros por 5 dias de atraso
+                            [UnitPrice] => 159
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002706
+            [FullName] => Alcides Dias dos Santos
+            [Email] => a.dias.santos1958@uol.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2706
+    [softDescriptor] => 2706
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [unitPrice] => 10300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 309
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 5 dias de atraso
+                            [description] => Juros por 5 dias de atraso
+                            [unitPrice] => 159
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002706
+            [fullName] => Alcides Dias dos Santos
+            [email] => a.dias.santos1958@uol.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/84fc2074-20f9-4f63-a77d-57d9fb441a5e
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2706
+    [id] => 2706
+    [1] => 239
+    [userid] => 239
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-28
+    [date] => 2016-11-28
+    [4] => 2016-12-04
+    [duedate] => 2016-12-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 103.00
+    [subtotal] => 103.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 103.00
+    [total] => 103.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 239
+    [id] => 239
+    [uuid] => ae22ba0c-307f-4057-8405-fc6c6c80451f
+    [firstname] => Alcides
+    [lastname] => Dias dos Santos
+    [fullname] => Alcides Dias dos Santos
+    [companyname] => A D S CONSTRUCOES 
+    [email] => a.dias.santos1958@uol.com.br
+    [address1] => Rua Serra Acarai, 167
+    [address2] => Casa A
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08581-070
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11957673151
+    [password] => $2y$10$gDexAoc4bsTBthQD4aDfM.5GuiCMaArEJwuKjc88dBzyO4kPCfreC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11957673151
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/12/2016 13:15<br>IP Address: 191.209.13.245<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957673151
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 151.651.403-34
+                )
+
+        )
+
+    [customfields2] => 11957673151
+    [customfields3] => 151.651.403-34
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2706
+    [SoftDescriptor] => 2706
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [Description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [UnitPrice] => 10300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 309
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 5 dias de atraso
+                            [Description] => Juros por 5 dias de atraso
+                            [UnitPrice] => 159
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002706
+            [FullName] => Alcides Dias dos Santos
+            [Email] => a.dias.santos1958@uol.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2706
+    [softDescriptor] => 2706
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [unitPrice] => 10300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 309
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 5 dias de atraso
+                            [description] => Juros por 5 dias de atraso
+                            [unitPrice] => 159
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002706
+            [fullName] => Alcides Dias dos Santos
+            [email] => a.dias.santos1958@uol.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/74ec4ea8-8ee6-4c73-8dfd-480e264443a2
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+09/12/2016 13:24:23
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2706
+    [amount] => 10768
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => d5c4097f461b4e5dbb3c511d1935fd7b
+    [created_date] => 09/12/2016 17:23:22
+    [customer_name] => Alcides Santos
+    [customer_phone] => 1146483731
+    [customer_identity] => 15165140334
+    [customer_email] => a.dias.santos1958@uol.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552128******1019
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777625OKB7MV4JB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+09/12/2016 13:27:23
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->239 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2706
+    [amount] => 10768
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => d5c4097f461b4e5dbb3c511d1935fd7b
+    [created_date] => 09/12/2016 17:23:22
+    [customer_name] => Alcides Santos
+    [customer_phone] => 1146483731
+    [customer_identity] => 15165140334
+    [customer_email] => a.dias.santos1958@uol.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552128******1019
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777625OKB7MV4JB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+09/12/2016 13:50:30
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => d5c4097f461b4e5dbb3c511d1935fd7b
+    [amount] => 10768
+    [order_number] => 2706
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+09/12/2016 13:50:30
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => d5c4097f461b4e5dbb3c511d1935fd7b
+    [amount] => 10768
+    [order_number] => 2706
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

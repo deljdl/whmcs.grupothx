@@ -1,0 +1,349 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4302
+    [id] => 4302
+    [1] => 257
+    [userid] => 257
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-01-29
+    [date] => 2018-01-29
+    [4] => 2018-02-05
+    [duedate] => 2018-02-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.99
+    [subtotal] => 59.99
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.99
+    [total] => 59.99
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 257
+    [id] => 257
+    [uuid] => caa8eaac-27a3-4a3f-ae2c-9cbcb7ff77a4
+    [firstname] => Eduardo
+    [lastname] => Malfi
+    [fullname] => Eduardo Malfi
+    [companyname] => 
+    [email] => dumalfi@hotmail.com
+    [address1] => Rua Lacônia, 251
+    [address2] => Parque Capuava
+    [city] => Santo André
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09271-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 34585186
+    [password] => $2y$10$Z2hQz60sRKqEH6i9TY.NPOJiy49ARqzVkzpYgy/BH/9gTA1SeL1IO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1134585186
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 30/01/2018 00:14<br>IP Address: 173.35.58.45<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 33207523838
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 33207523838
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4302
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - girapost.com (05/02/2018 - 04/03/2018)
+                            [Description] => TIH - Especial - girapost.com (05/02/2018 - 04/03/2018)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Eduardo Malfi
+            [Email] => dumalfi@hotmail.com
+            [Identity] => 33207523838
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4302
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Especial - girapost.com (05/02/2018 - 04/03/2018)
+                            [description] => TIH - Especial - girapost.com (05/02/2018 - 04/03/2018)
+                            [unitPrice] => 5999
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 33207523838
+            [fullName] => Eduardo Malfi
+            [email] => dumalfi@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/1fd36a29-0221-4ca3-b685-f69610110245
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+30/01/2018 0:13:17
+INICIO_______________________________________________________________LOG:BEGIN:::30/01/2018 0:17<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 4302
+    [amount] => 5999
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 59fe606c5f2446aeac4af64204b5c893
+    [created_date] => 30/01/2018 00:17:05
+    [customer_name] => Eduardo Malfi
+    [customer_phone] => 1134585186
+    [customer_identity] => 33207523838
+    [customer_email] => dumalfi@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 4
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 498401******5770
+    [payment_installments] => 1
+    [payment_status] => 1
+    [tid] => 107607776279N4085DLB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/01/2018 0:13:17
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  4302
+
+POST:
+<pre>Array
+(
+    [order_number] => 4302
+    [amount] => 5999
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 59fe606c5f2446aeac4af64204b5c893
+    [created_date] => 30/01/2018 00:17:05
+    [customer_name] => Eduardo Malfi
+    [customer_phone] => 1134585186
+    [customer_identity] => 33207523838
+    [customer_email] => dumalfi@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 4
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 498401******5770
+    [payment_installments] => 1
+    [payment_status] => 1
+    [tid] => 107607776279N4085DLB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/01/2018 0:23:57
+INICIO_______________________________________________________________LOG:BEGIN:::30/01/2018 0:57<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 59fe606c5f2446aeac4af64204b5c893
+    [amount] => 5999
+    [order_number] => 4302
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/01/2018 0:23:57
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  4302
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 59fe606c5f2446aeac4af64204b5c893
+    [amount] => 5999
+    [order_number] => 4302
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/01/2018 0:24:57
+INICIO_______________________________________________________________LOG:BEGIN:::30/01/2018 0:57<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 59fe606c5f2446aeac4af64204b5c893
+    [amount] => 5999
+    [order_number] => 4302
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/01/2018 0:24:57
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  4302
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 59fe606c5f2446aeac4af64204b5c893
+    [amount] => 5999
+    [order_number] => 4302
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

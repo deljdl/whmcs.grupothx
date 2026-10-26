@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4842
+    [id] => 4842
+    [1] => 181
+    [userid] => 181
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-06-15
+    [date] => 2018-06-15
+    [4] => 2018-06-22
+    [duedate] => 2018-06-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 181
+    [id] => 181
+    [uuid] => 91dab6b7-6ae4-4eaf-a166-36d57296a104
+    [firstname] => Paulo
+    [lastname] => Henrique Benevides
+    [fullname] => Paulo Henrique Benevides
+    [companyname] => PH Benevides Prestação de Serviços
+    [email] => pauloh.benevides@gmail.com
+    [address1] => Rua Engenheiro Cesar Polilo, 486
+    [address2] => Vila Giordano
+    [city] => São Paulo 
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08012-150
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 2956-8225
+    [password] => f3a0dcd37f8b08c6315d7210d945d213:jtv#a
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1129568225
+    [billingcid] => 0
+    [notes] => Cliente não pagou dois meses e por isso fatura foi mesclada
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/06/2018 19:51<br>IP Address: 189.33.149.85<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995608169
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23.872.646/0001-64
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995608169
+    [customfields3] => 23.872.646/0001-64
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

@@ -1,0 +1,276 @@
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 477
+    [clientid] => 247
+    [orderid] => 420
+    [pid] => 89
+    [regdate] => 2017-02-08
+    [name] => 
+    [translated_name] => Plano Mensal de Desenvolvimento, Suporte e Diversos
+    [groupname] => Desenvolvimento
+    [translated_groupname] => Desenvolvimento
+    [domain] => cielook.com.br
+    [dedicatedip] => 
+    [serverid] => 0
+    [servername] => 
+    [serverip] => 
+    [serverhostname] => 
+    [firstpaymentamount] => 2.50
+    [recurringamount] => 2.50
+    [paymentmethod] => cielorecorrente
+    [paymentmethodname] => Cielo Pagamento Recorrente
+    [billingcycle] => Monthly
+    [nextduedate] => 2017-02-08
+    [status] => Pending
+    [username] => 
+    [password] => 
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 0
+    [disklimit] => 0
+    [bwusage] => 0
+    [bwlimit] => 0
+    [lastupdate] => 0000-00-00 00:00:00
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 46
+                            [name] => Itens do Plano
+                            [translated_name] => Itens do Plano
+                            [value] => 
+                        )
+
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 247
+    [id] => 247
+    [uuid] => 496b6f08-59fa-4b72-967a-1c9234936ec5
+    [firstname] => Jardel
+    [lastname] => Jacomini
+    [fullname] => Jardel Jacomini
+    [companyname] => Grupo THX
+    [email] => deljdl@gmail.com
+    [address1] => Rua Milton Ferreira Franco
+    [address2] => Parque Rodrigo Barreto
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417-160
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146550330
+    [password] => $2y$10$a76gCwQYd4Eg7h1/3QWVtubB1PEo4Gv/1wHyBSQVxi2183BfucbES
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146550330
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 7.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/02/2017 02:33<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11985691184
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29466511858
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11985691184
+    [customfields3] => 29466511858
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s477
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento
+                            [Description] => Plano Mensal de Desenvolvimento, Suporte e Diversos
+                            [UnitPrice] => 250
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 29466511858
+            [FullName] => Jardel Jacomini
+            [Email] => deljdl@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => s477
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento
+                            [description] => Plano Mensal de Desenvolvimento, Suporte e Diversos
+                            [unitPrice] => 250
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 29466511858
+            [fullName] => Jardel Jacomini
+            [email] => deljdl@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/4e7d789f-52db-4062-821c-02e9a9556ea2
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

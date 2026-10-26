@@ -1,0 +1,3537 @@
+
+
+28/09/2019 18:20:27
+INICIO_______________________________________________________________LOG:BEGIN:::28/09/2019 18:27<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 9f368443d0f346209d27d20f33f8b6f3
+    [created_date] => 28/09/2019 18:27:19
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628DQAL64SLE
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2019 18:20:27
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6593
+                            [userid] => 285
+                            [firstname] => Rosangela
+                            [lastname] => Marinho de Oliveira
+                            [companyname] => Rosangela Marinho de Oliveira ME
+                            [invoicenum] => 
+                            [date] => 2019-09-25
+                            [duedate] => 2019-09-28
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 59.99
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 59.99
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielorecorrente
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 9f368443d0f346209d27d20f33f8b6f3
+    [created_date] => 28/09/2019 18:27:19
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628DQAL64SLE
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2019 18:20:27
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6593
+            [userid] => 285
+            [firstname] => Rosangela
+            [lastname] => Marinho de Oliveira
+            [companyname] => Rosangela Marinho de Oliveira ME
+            [invoicenum] => 
+            [date] => 2019-09-25
+            [duedate] => 2019-09-28
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 59.99
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 59.99
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielorecorrente
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 9f368443d0f346209d27d20f33f8b6f3
+    [created_date] => 28/09/2019 18:27:19
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628DQAL64SLE
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2019 18:20:27
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6593
+    [userid] => 285
+    [firstname] => Rosangela
+    [lastname] => Marinho de Oliveira
+    [companyname] => Rosangela Marinho de Oliveira ME
+    [invoicenum] => 
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [paymethodid] => 
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 9f368443d0f346209d27d20f33f8b6f3
+    [created_date] => 28/09/2019 18:27:19
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628DQAL64SLE
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2019 18:20:27
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6593
+    [invoicenum] => 
+    [userid] => 285
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [balance] => 59,99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 10289
+                            [type] => Hosting
+                            [relid] => 501
+                            [description] => TIH - Especial - melissacalcados.com (28/09/2019 - 27/10/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 9f368443d0f346209d27d20f33f8b6f3
+    [created_date] => 28/09/2019 18:27:19
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628DQAL64SLE
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2019 18:20:27
+INICIO_______________________________________________________________LOG:Checando -> 501 ==  501
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 9f368443d0f346209d27d20f33f8b6f3
+    [created_date] => 28/09/2019 18:27:19
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628DQAL64SLE
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2019 18:21:27
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 9f368443d0f346209d27d20f33f8b6f3
+    [created_date] => 28/09/2019 18:27:19
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628DQAL64SLE
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2019 18:49:31
+INICIO_______________________________________________________________LOG:BEGIN:::28/09/2019 18:31<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 9f368443d0f346209d27d20f33f8b6f3
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2019 18:50:31
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6593
+                            [userid] => 285
+                            [firstname] => Rosangela
+                            [lastname] => Marinho de Oliveira
+                            [companyname] => Rosangela Marinho de Oliveira ME
+                            [invoicenum] => 
+                            [date] => 2019-09-25
+                            [duedate] => 2019-09-28
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 59.99
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 59.99
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielorecorrente
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 9f368443d0f346209d27d20f33f8b6f3
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2019 18:50:31
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6593
+            [userid] => 285
+            [firstname] => Rosangela
+            [lastname] => Marinho de Oliveira
+            [companyname] => Rosangela Marinho de Oliveira ME
+            [invoicenum] => 
+            [date] => 2019-09-25
+            [duedate] => 2019-09-28
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 59.99
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 59.99
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielorecorrente
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 9f368443d0f346209d27d20f33f8b6f3
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2019 18:50:31
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6593
+    [userid] => 285
+    [firstname] => Rosangela
+    [lastname] => Marinho de Oliveira
+    [companyname] => Rosangela Marinho de Oliveira ME
+    [invoicenum] => 
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [paymethodid] => 
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 9f368443d0f346209d27d20f33f8b6f3
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2019 18:50:31
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6593
+    [invoicenum] => 
+    [userid] => 285
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [balance] => 59,99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 10289
+                            [type] => Hosting
+                            [relid] => 501
+                            [description] => TIH - Especial - melissacalcados.com (28/09/2019 - 27/10/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 9f368443d0f346209d27d20f33f8b6f3
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2019 18:50:31
+INICIO_______________________________________________________________LOG:Checando -> 501 ==  501
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 9f368443d0f346209d27d20f33f8b6f3
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2019 18:50:31
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 9f368443d0f346209d27d20f33f8b6f3
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2019 22:37:01
+INICIO_______________________________________________________________LOG:BEGIN:::28/09/2019 22:01<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 0298e0aae0ed4325ab3a5071aa527a50
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2019 22:37:01
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6593
+                            [userid] => 285
+                            [firstname] => Rosangela
+                            [lastname] => Marinho de Oliveira
+                            [companyname] => Rosangela Marinho de Oliveira ME
+                            [invoicenum] => 
+                            [date] => 2019-09-25
+                            [duedate] => 2019-09-28
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 59.99
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 59.99
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielorecorrente
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 0298e0aae0ed4325ab3a5071aa527a50
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2019 22:37:01
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6593
+            [userid] => 285
+            [firstname] => Rosangela
+            [lastname] => Marinho de Oliveira
+            [companyname] => Rosangela Marinho de Oliveira ME
+            [invoicenum] => 
+            [date] => 2019-09-25
+            [duedate] => 2019-09-28
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 59.99
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 59.99
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielorecorrente
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 0298e0aae0ed4325ab3a5071aa527a50
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2019 22:37:01
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6593
+    [userid] => 285
+    [firstname] => Rosangela
+    [lastname] => Marinho de Oliveira
+    [companyname] => Rosangela Marinho de Oliveira ME
+    [invoicenum] => 
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [paymethodid] => 
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 0298e0aae0ed4325ab3a5071aa527a50
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2019 22:37:01
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6593
+    [invoicenum] => 
+    [userid] => 285
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [balance] => 59,99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 10289
+                            [type] => Hosting
+                            [relid] => 501
+                            [description] => TIH - Especial - melissacalcados.com (28/09/2019 - 27/10/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 0298e0aae0ed4325ab3a5071aa527a50
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2019 22:37:01
+INICIO_______________________________________________________________LOG:Checando -> 501 ==  501
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 0298e0aae0ed4325ab3a5071aa527a50
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2019 22:37:01
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 0298e0aae0ed4325ab3a5071aa527a50
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 18:52:42
+INICIO_______________________________________________________________LOG:BEGIN:::02/10/2019 18:42<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 2fc64a930fb74d6484d9c6d75a425000
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 18:52:42
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6593
+                            [userid] => 285
+                            [firstname] => Rosangela
+                            [lastname] => Marinho de Oliveira
+                            [companyname] => Rosangela Marinho de Oliveira ME
+                            [invoicenum] => 
+                            [date] => 2019-09-25
+                            [duedate] => 2019-09-28
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 59.99
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 59.99
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielorecorrente
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 2fc64a930fb74d6484d9c6d75a425000
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 18:52:42
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6593
+            [userid] => 285
+            [firstname] => Rosangela
+            [lastname] => Marinho de Oliveira
+            [companyname] => Rosangela Marinho de Oliveira ME
+            [invoicenum] => 
+            [date] => 2019-09-25
+            [duedate] => 2019-09-28
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 59.99
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 59.99
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielorecorrente
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 2fc64a930fb74d6484d9c6d75a425000
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 18:52:42
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6593
+    [userid] => 285
+    [firstname] => Rosangela
+    [lastname] => Marinho de Oliveira
+    [companyname] => Rosangela Marinho de Oliveira ME
+    [invoicenum] => 
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [paymethodid] => 
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 2fc64a930fb74d6484d9c6d75a425000
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 18:52:42
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6593
+    [invoicenum] => 
+    [userid] => 285
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [balance] => 59,99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 10289
+                            [type] => Hosting
+                            [relid] => 501
+                            [description] => TIH - Especial - melissacalcados.com (28/09/2019 - 27/10/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 2fc64a930fb74d6484d9c6d75a425000
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 18:52:42
+INICIO_______________________________________________________________LOG:Checando -> 501 ==  501
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 2fc64a930fb74d6484d9c6d75a425000
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 18:53:42
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 2fc64a930fb74d6484d9c6d75a425000
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 20:13:37
+INICIO_______________________________________________________________LOG:BEGIN:::02/10/2019 20:37<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 1a86ffd2782c4086ba27e51505108c71
+    [created_date] => 02/10/2019 20:37:12
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628DU18ROLRD
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 20:13:37
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6593
+                            [userid] => 285
+                            [firstname] => Rosangela
+                            [lastname] => Marinho de Oliveira
+                            [companyname] => Rosangela Marinho de Oliveira ME
+                            [invoicenum] => 
+                            [date] => 2019-09-25
+                            [duedate] => 2019-09-28
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 59.99
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 59.99
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielorecorrente
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 1a86ffd2782c4086ba27e51505108c71
+    [created_date] => 02/10/2019 20:37:12
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628DU18ROLRD
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 20:13:37
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6593
+            [userid] => 285
+            [firstname] => Rosangela
+            [lastname] => Marinho de Oliveira
+            [companyname] => Rosangela Marinho de Oliveira ME
+            [invoicenum] => 
+            [date] => 2019-09-25
+            [duedate] => 2019-09-28
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 59.99
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 59.99
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielorecorrente
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 1a86ffd2782c4086ba27e51505108c71
+    [created_date] => 02/10/2019 20:37:12
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628DU18ROLRD
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 20:13:37
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6593
+    [userid] => 285
+    [firstname] => Rosangela
+    [lastname] => Marinho de Oliveira
+    [companyname] => Rosangela Marinho de Oliveira ME
+    [invoicenum] => 
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [paymethodid] => 
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 1a86ffd2782c4086ba27e51505108c71
+    [created_date] => 02/10/2019 20:37:12
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628DU18ROLRD
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 20:13:37
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6593
+    [invoicenum] => 
+    [userid] => 285
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [balance] => 59,99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 10289
+                            [type] => Hosting
+                            [relid] => 501
+                            [description] => TIH - Especial - melissacalcados.com (28/09/2019 - 27/10/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 1a86ffd2782c4086ba27e51505108c71
+    [created_date] => 02/10/2019 20:37:12
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628DU18ROLRD
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 20:13:37
+INICIO_______________________________________________________________LOG:Checando -> 501 ==  501
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 1a86ffd2782c4086ba27e51505108c71
+    [created_date] => 02/10/2019 20:37:12
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628DU18ROLRD
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 20:13:37
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 1a86ffd2782c4086ba27e51505108c71
+    [created_date] => 02/10/2019 20:37:12
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628DU18ROLRD
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 20:51:41
+INICIO_______________________________________________________________LOG:BEGIN:::02/10/2019 20:41<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1a86ffd2782c4086ba27e51505108c71
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 20:51:41
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6593
+                            [userid] => 285
+                            [firstname] => Rosangela
+                            [lastname] => Marinho de Oliveira
+                            [companyname] => Rosangela Marinho de Oliveira ME
+                            [invoicenum] => 
+                            [date] => 2019-09-25
+                            [duedate] => 2019-09-28
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 59.99
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 59.99
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielorecorrente
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1a86ffd2782c4086ba27e51505108c71
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 20:51:41
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6593
+            [userid] => 285
+            [firstname] => Rosangela
+            [lastname] => Marinho de Oliveira
+            [companyname] => Rosangela Marinho de Oliveira ME
+            [invoicenum] => 
+            [date] => 2019-09-25
+            [duedate] => 2019-09-28
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 59.99
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 59.99
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielorecorrente
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1a86ffd2782c4086ba27e51505108c71
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 20:51:41
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6593
+    [userid] => 285
+    [firstname] => Rosangela
+    [lastname] => Marinho de Oliveira
+    [companyname] => Rosangela Marinho de Oliveira ME
+    [invoicenum] => 
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [paymethodid] => 
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1a86ffd2782c4086ba27e51505108c71
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 20:51:41
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6593
+    [invoicenum] => 
+    [userid] => 285
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [balance] => 59,99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 10289
+                            [type] => Hosting
+                            [relid] => 501
+                            [description] => TIH - Especial - melissacalcados.com (28/09/2019 - 27/10/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1a86ffd2782c4086ba27e51505108c71
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 20:51:41
+INICIO_______________________________________________________________LOG:Checando -> 501 ==  501
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1a86ffd2782c4086ba27e51505108c71
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 20:51:41
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1a86ffd2782c4086ba27e51505108c71
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/10/2019 0:39:41
+INICIO_______________________________________________________________LOG:BEGIN:::07/10/2019 0:41<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 4b0725d1592d4c00b91d2a213ac6c102
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/10/2019 0:39:41
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6593
+                            [userid] => 285
+                            [firstname] => Rosangela
+                            [lastname] => Marinho de Oliveira
+                            [companyname] => Rosangela Marinho de Oliveira ME
+                            [invoicenum] => 
+                            [date] => 2019-09-25
+                            [duedate] => 2019-09-28
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 59.99
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 59.99
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielorecorrente
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 4b0725d1592d4c00b91d2a213ac6c102
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/10/2019 0:39:41
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6593
+            [userid] => 285
+            [firstname] => Rosangela
+            [lastname] => Marinho de Oliveira
+            [companyname] => Rosangela Marinho de Oliveira ME
+            [invoicenum] => 
+            [date] => 2019-09-25
+            [duedate] => 2019-09-28
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 59.99
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 59.99
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielorecorrente
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 4b0725d1592d4c00b91d2a213ac6c102
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/10/2019 0:39:41
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6593
+    [userid] => 285
+    [firstname] => Rosangela
+    [lastname] => Marinho de Oliveira
+    [companyname] => Rosangela Marinho de Oliveira ME
+    [invoicenum] => 
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [paymethodid] => 
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 4b0725d1592d4c00b91d2a213ac6c102
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/10/2019 0:39:41
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6593
+    [invoicenum] => 
+    [userid] => 285
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [balance] => 59,99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 10289
+                            [type] => Hosting
+                            [relid] => 501
+                            [description] => TIH - Especial - melissacalcados.com (28/09/2019 - 27/10/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 4b0725d1592d4c00b91d2a213ac6c102
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/10/2019 0:39:41
+INICIO_______________________________________________________________LOG:Checando -> 501 ==  501
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 4b0725d1592d4c00b91d2a213ac6c102
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/10/2019 0:39:41
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 4b0725d1592d4c00b91d2a213ac6c102
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 18:11:52
+INICIO_______________________________________________________________LOG:BEGIN:::10/10/2019 18:52<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 7c12a258f254401bad99d72a773a95f3
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 18:11:52
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6593
+                            [userid] => 285
+                            [firstname] => Rosangela
+                            [lastname] => Marinho de Oliveira
+                            [companyname] => Rosangela Marinho de Oliveira ME
+                            [invoicenum] => 
+                            [date] => 2019-09-25
+                            [duedate] => 2019-09-28
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 59.99
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 59.99
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielorecorrente
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 7c12a258f254401bad99d72a773a95f3
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 18:11:52
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6593
+            [userid] => 285
+            [firstname] => Rosangela
+            [lastname] => Marinho de Oliveira
+            [companyname] => Rosangela Marinho de Oliveira ME
+            [invoicenum] => 
+            [date] => 2019-09-25
+            [duedate] => 2019-09-28
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 59.99
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 59.99
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielorecorrente
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 7c12a258f254401bad99d72a773a95f3
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 18:11:52
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6593
+    [userid] => 285
+    [firstname] => Rosangela
+    [lastname] => Marinho de Oliveira
+    [companyname] => Rosangela Marinho de Oliveira ME
+    [invoicenum] => 
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [paymethodid] => 
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 7c12a258f254401bad99d72a773a95f3
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 18:11:52
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6593
+    [invoicenum] => 
+    [userid] => 285
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [balance] => 59,99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 10289
+                            [type] => Hosting
+                            [relid] => 501
+                            [description] => TIH - Especial - melissacalcados.com (28/09/2019 - 27/10/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 7c12a258f254401bad99d72a773a95f3
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 18:11:52
+INICIO_______________________________________________________________LOG:Checando -> 501 ==  501
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 7c12a258f254401bad99d72a773a95f3
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 18:12:52
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 7c12a258f254401bad99d72a773a95f3
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 20:04:43
+INICIO_______________________________________________________________LOG:BEGIN:::10/10/2019 20:43<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 0bef13202f27458584156fa47616e8b9
+    [created_date] => 10/10/2019 20:43:03
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628E5F12CDQB
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 20:04:43
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6593
+                            [userid] => 285
+                            [firstname] => Rosangela
+                            [lastname] => Marinho de Oliveira
+                            [companyname] => Rosangela Marinho de Oliveira ME
+                            [invoicenum] => 
+                            [date] => 2019-09-25
+                            [duedate] => 2019-09-28
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 59.99
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 59.99
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielorecorrente
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 0bef13202f27458584156fa47616e8b9
+    [created_date] => 10/10/2019 20:43:03
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628E5F12CDQB
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 20:04:43
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6593
+            [userid] => 285
+            [firstname] => Rosangela
+            [lastname] => Marinho de Oliveira
+            [companyname] => Rosangela Marinho de Oliveira ME
+            [invoicenum] => 
+            [date] => 2019-09-25
+            [duedate] => 2019-09-28
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 59.99
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 59.99
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielorecorrente
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 0bef13202f27458584156fa47616e8b9
+    [created_date] => 10/10/2019 20:43:03
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628E5F12CDQB
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 20:04:43
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6593
+    [userid] => 285
+    [firstname] => Rosangela
+    [lastname] => Marinho de Oliveira
+    [companyname] => Rosangela Marinho de Oliveira ME
+    [invoicenum] => 
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [paymethodid] => 
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 0bef13202f27458584156fa47616e8b9
+    [created_date] => 10/10/2019 20:43:03
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628E5F12CDQB
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 20:04:43
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6593
+    [invoicenum] => 
+    [userid] => 285
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [balance] => 59,99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 10289
+                            [type] => Hosting
+                            [relid] => 501
+                            [description] => TIH - Especial - melissacalcados.com (28/09/2019 - 27/10/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 0bef13202f27458584156fa47616e8b9
+    [created_date] => 10/10/2019 20:43:03
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628E5F12CDQB
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 20:04:43
+INICIO_______________________________________________________________LOG:Checando -> 501 ==  501
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 0bef13202f27458584156fa47616e8b9
+    [created_date] => 10/10/2019 20:43:03
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628E5F12CDQB
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 20:05:43
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => 0bef13202f27458584156fa47616e8b9
+    [created_date] => 10/10/2019 20:43:03
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628E5F12CDQB
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 20:51:51
+INICIO_______________________________________________________________LOG:BEGIN:::10/10/2019 20:51<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 0bef13202f27458584156fa47616e8b9
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 20:51:51
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6593
+                            [userid] => 285
+                            [firstname] => Rosangela
+                            [lastname] => Marinho de Oliveira
+                            [companyname] => Rosangela Marinho de Oliveira ME
+                            [invoicenum] => 
+                            [date] => 2019-09-25
+                            [duedate] => 2019-09-28
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 59.99
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 59.99
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielorecorrente
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 0bef13202f27458584156fa47616e8b9
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 20:51:51
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6593
+            [userid] => 285
+            [firstname] => Rosangela
+            [lastname] => Marinho de Oliveira
+            [companyname] => Rosangela Marinho de Oliveira ME
+            [invoicenum] => 
+            [date] => 2019-09-25
+            [duedate] => 2019-09-28
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 59.99
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 59.99
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielorecorrente
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 0bef13202f27458584156fa47616e8b9
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 20:51:51
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6593
+    [userid] => 285
+    [firstname] => Rosangela
+    [lastname] => Marinho de Oliveira
+    [companyname] => Rosangela Marinho de Oliveira ME
+    [invoicenum] => 
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [paymethodid] => 
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 0bef13202f27458584156fa47616e8b9
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 20:51:51
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6593
+    [invoicenum] => 
+    [userid] => 285
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [balance] => 59,99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 10289
+                            [type] => Hosting
+                            [relid] => 501
+                            [description] => TIH - Especial - melissacalcados.com (28/09/2019 - 27/10/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 0bef13202f27458584156fa47616e8b9
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 20:51:51
+INICIO_______________________________________________________________LOG:Checando -> 501 ==  501
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 0bef13202f27458584156fa47616e8b9
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 20:51:51
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 0bef13202f27458584156fa47616e8b9
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 22:08:43
+INICIO_______________________________________________________________LOG:BEGIN:::10/10/2019 22:43<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => e0ee684a367d446494c4a50f007cd42a
+    [created_date] => 10/10/2019 22:43:07
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628E5F12CDQB
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 22:08:43
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6593
+                            [userid] => 285
+                            [firstname] => Rosangela
+                            [lastname] => Marinho de Oliveira
+                            [companyname] => Rosangela Marinho de Oliveira ME
+                            [invoicenum] => 
+                            [date] => 2019-09-25
+                            [duedate] => 2019-09-28
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 59.99
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 59.99
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielorecorrente
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => e0ee684a367d446494c4a50f007cd42a
+    [created_date] => 10/10/2019 22:43:07
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628E5F12CDQB
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 22:08:43
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6593
+            [userid] => 285
+            [firstname] => Rosangela
+            [lastname] => Marinho de Oliveira
+            [companyname] => Rosangela Marinho de Oliveira ME
+            [invoicenum] => 
+            [date] => 2019-09-25
+            [duedate] => 2019-09-28
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 59.99
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 59.99
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielorecorrente
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => e0ee684a367d446494c4a50f007cd42a
+    [created_date] => 10/10/2019 22:43:07
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628E5F12CDQB
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 22:08:43
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6593
+    [userid] => 285
+    [firstname] => Rosangela
+    [lastname] => Marinho de Oliveira
+    [companyname] => Rosangela Marinho de Oliveira ME
+    [invoicenum] => 
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [paymethodid] => 
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => e0ee684a367d446494c4a50f007cd42a
+    [created_date] => 10/10/2019 22:43:07
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628E5F12CDQB
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 22:08:43
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6593
+    [invoicenum] => 
+    [userid] => 285
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [balance] => 59,99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 10289
+                            [type] => Hosting
+                            [relid] => 501
+                            [description] => TIH - Especial - melissacalcados.com (28/09/2019 - 27/10/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => e0ee684a367d446494c4a50f007cd42a
+    [created_date] => 10/10/2019 22:43:07
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628E5F12CDQB
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 22:08:43
+INICIO_______________________________________________________________LOG:Checando -> 501 ==  501
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => e0ee684a367d446494c4a50f007cd42a
+    [created_date] => 10/10/2019 22:43:07
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628E5F12CDQB
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 22:09:43
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [order_number] => s501
+    [amount] => 4000
+    [checkout_cielo_order_number] => e0ee684a367d446494c4a50f007cd42a
+    [created_date] => 10/10/2019 22:43:07
+    [customer_name] => Rosangela Oliveira
+    [customer_phone] => 42988133073
+    [customer_identity] => 25361416000166
+    [customer_email] => rennan-cardoso@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544540******9104
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628E5F12CDQB
+    [recurrent_payment_id] => 2457c4c8-7f32-4239-88ea-6f63da5c43a1
+    [start_date] => 7/28/2017 5:25:35 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 22:17:52
+INICIO_______________________________________________________________LOG:BEGIN:::10/10/2019 22:52<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e0ee684a367d446494c4a50f007cd42a
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 22:17:52
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6593
+                            [userid] => 285
+                            [firstname] => Rosangela
+                            [lastname] => Marinho de Oliveira
+                            [companyname] => Rosangela Marinho de Oliveira ME
+                            [invoicenum] => 
+                            [date] => 2019-09-25
+                            [duedate] => 2019-09-28
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 59.99
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 59.99
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielorecorrente
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e0ee684a367d446494c4a50f007cd42a
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 22:17:52
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6593
+            [userid] => 285
+            [firstname] => Rosangela
+            [lastname] => Marinho de Oliveira
+            [companyname] => Rosangela Marinho de Oliveira ME
+            [invoicenum] => 
+            [date] => 2019-09-25
+            [duedate] => 2019-09-28
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 59.99
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 59.99
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielorecorrente
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e0ee684a367d446494c4a50f007cd42a
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 22:17:52
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6593
+    [userid] => 285
+    [firstname] => Rosangela
+    [lastname] => Marinho de Oliveira
+    [companyname] => Rosangela Marinho de Oliveira ME
+    [invoicenum] => 
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [paymethodid] => 
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e0ee684a367d446494c4a50f007cd42a
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 22:17:52
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6593
+    [invoicenum] => 
+    [userid] => 285
+    [date] => 2019-09-25
+    [duedate] => 2019-09-28
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [balance] => 59,99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 10289
+                            [type] => Hosting
+                            [relid] => 501
+                            [description] => TIH - Especial - melissacalcados.com (28/09/2019 - 27/10/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e0ee684a367d446494c4a50f007cd42a
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 22:17:52
+INICIO_______________________________________________________________LOG:Checando -> 501 ==  501
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e0ee684a367d446494c4a50f007cd42a
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 22:18:52
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e0ee684a367d446494c4a50f007cd42a
+    [amount] => 4000
+    [order_number] => s501
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

@@ -1,0 +1,120 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3508
+    [id] => 3508
+    [1] => 235
+    [userid] => 235
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-06-28
+    [date] => 2017-06-28
+    [4] => 2017-07-05
+    [duedate] => 2017-07-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 19.00
+    [subtotal] => 19.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 19.00
+    [total] => 19.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 235
+    [id] => 235
+    [uuid] => 372342bd-79bb-4365-89e1-84f4d61f22ac
+    [firstname] => Cristiano 
+    [lastname] => Alves da Silva
+    [fullname] => Cristiano  Alves da Silva
+    [companyname] => CAS - Consultoria
+    [email] => silva.cristiano@hotmail.com
+    [address1] => Rua Manoel Pereira Sobrinho, 586
+    [address2] => 
+    [city] => Franco da Rocha
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07862-170
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1144447632
+    [password] => $2y$10$ozJBM7RbQRKE7SOD8JuEr.Kgb7KK7ix9OfMWfo0XWjYkccR7Rs1SK
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1144447632
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 29/06/2017 20:09<br>IP Address: 177.215.99.23<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11974858435
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 28328287870
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11974858435
+    [customfields3] => 28328287870
+    [customfields4] => 
+)
+</pre>

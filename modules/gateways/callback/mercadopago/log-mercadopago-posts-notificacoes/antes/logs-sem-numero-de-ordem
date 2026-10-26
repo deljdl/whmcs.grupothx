@@ -1,0 +1,148 @@
+
+
+16/10/2019 8:03:56
+INICIO_______________________________________________________________LOG:Id não encontrado. Baixa não iniciada :(
+
+POST:
+<pre>Array
+(
+)
+</pre>
+
+GET:
+<pre>Array
+(
+    [data_id] => 532435203666
+    [type] => payment
+)
+</pre>
+
+SERVER:
+<pre>Array
+(
+    [CONTEXT_DOCUMENT_ROOT] => /home/thxcom/public_html
+    [CONTEXT_PREFIX] => 
+    [DOCUMENT_ROOT] => /home/thxcom/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_COOKIE] => invoice-6551=6551; roundcube_cookies=enabled; WHMCSAutoRefresh=5; G_ENABLED_IDPS=google; PHPSESSID=7d8bcs909p7g39k714mhlq05i2; WHMCSFD=eyJjbGludiI6eyJzZXJ2aWNlaWQiOiIiLCJhZGRvbmlkIjoiIiwiZG9tYWluaWQiOiIiLCJjbGllbnRuYW1lIjoiIiwiaW52b2ljZW51bSI6IiIsImxpbmVpdGVtIjoiIiwicGF5bWVudG1ldGhvZCI6IiIsImludm9pY2VkYXRlIjoiIiwiZHVlZGF0ZSI6IiIsImRhdGVwYWlkIjoiIiwidG90YWxmcm9tdG90YWx0byI6IiIsInN0YXR1cyI6IiIsInRvdGFsZnJvbSI6IiIsInRvdGFsdG8iOiIifSwidGlja2V0cyI6eyJ2aWV3IjoiIiwibXVsdGlfdmlldyI6IiIsImRlcHRpZCI6IiIsIm11bHRpX2RlcHRfaWQiOiIiLCJwcmlvcml0eSI6IiIsImNsaWVudCI6IiIsImNsaWVudGlkIjoiIiwiY2xpZW50bmFtZSI6IiIsInN1YmplY3QiOiIiLCJlbWFpbCI6IiIsInRhZyI6IiJ9LCJvcmRlcnMiOnsiY2xpZW50IjoiIiwiY2xpZW50aWQiOiIiLCJjbGllbnRuYW1lIjoiIiwib3JkZXJpZCI6IiIsIm9yZGVybnVtIjoiIiwicGF5bWVudHN0YXR1cyI6IiIsIm9yZGVyZGF0ZSI6IiIsInN0YXR1cyI6IlBlbmRpbmciLCJhbW91bnQiOiIiLCJvcmRlcmlwIjoiIn0sImludm9pY2VzIjp7ImNsaWVudGlkIjoiIiwiaW52b2ljZW51bSI6IiIsInN0YXR1cyI6Ik92ZXJkdWUiLCJjbGllbnRuYW1lIjoiIiwiaW52b2ljZWRhdGUiOiIiLCJsaW5laXRlbSI6IiIsImR1ZWRhdGUiOiIiLCJwYXltZW50bWV0aG9kIjoiIiwiZGF0ZXBhaWQiOiIiLCJsYXN0X2NhcHR1cmVfYXR0ZW1wdCI6IiIsInRvdGFsZnJvbSI6IiIsInRvdGFsdG8iOiIifSwiY2xpZW50cyI6eyJ1c2VyaWQiOiIiLCJuYW1lIjoiIiwiZW1haWwiOiIiLCJjb3VudHJ5LWNhbGxpbmctY29kZS1waG9uZSI6IiIsInBob25lIjoiIiwiZ3JvdXAiOiIiLCJzdGF0dXMiOiIiLCJhZGRyZXNzMSI6IiIsImFkZHJlc3MyIjoiIiwiY2l0eSI6IiIsInN0YXRlIjoiIiwicG9zdGNvZGUiOiIiLCJjb3VudHJ5IjoiIiwicGF5bWVudG1ldGhvZCI6IiIsImNjdHlwZSI6IiIsImNjbGFzdGZvdXIiOiIiLCJhdXRvY2NiaWxsaW5nIjoiIiwiY3JlZGl0IjoiIiwiY3VycmVuY3kiOiIiLCJzaWdudXBkYXRlcmFuZ2UiOiIiLCJsYW5ndWFnZSI6IiIsIm1hcmtldGluZ29wdGluIjoiIiwiZW1haWx2ZXJpZmljYXRpb24iOiIiLCJhdXRvc3RhdHVzIjoiIiwidGF4ZXhlbXB0IjoiIiwibGF0ZWZlZXMiOiIiLCJvdmVyZHVlbm90aWNlcyI6IiIsInNlcGFyYXRlaW52b2ljZXMiOiIiLCJjdXN0b21maWVsZHMiOiIiLCJlbWFpbDIiOiIiLCJjb3VudHJ5LWNhbGxpbmctY29kZS1waG9uZTIiOiIiLCJwaG9uZTIiOiIiLCJncm91cDIiOiIifX0%3D; jv_visits_count_heIAoGOw2S=2; WHMCSeWdrAiYR38h0=dgemuvk3up0njvp8msbpar2045
+    [HTTP_HOST] => grupothx.com
+    [HTTP_SEC_FETCH_MODE] => navigate
+    [HTTP_SEC_FETCH_SITE] => none
+    [HTTP_SEC_FETCH_USER] => ?1
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [PHP_INI_SCAN_DIR] => /opt/cpanel/ea-php70/root/etc:/opt/cpanel/ea-php70/root/etc/php.d:.
+    [QUERY_STRING] => data_id=532435203666&amp;type=payment
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 187.22.184.159
+    [REMOTE_PORT] => 3207
+    [REQUEST_METHOD] => GET
+    [REQUEST_SCHEME] => https
+    [REQUEST_URI] => /thx/modules/gateways/callback/mercadopago/webhookmercadopagox-cript.php?data_id=532435203666&amp;type=payment
+    [SCRIPT_FILENAME] => /home/thxcom/public_html/thx/modules/gateways/callback/mercadopago/webhookmercadopagox-cript.php
+    [SCRIPT_NAME] => /thx/modules/gateways/callback/mercadopago/webhookmercadopagox-cript.php
+    [SCRIPT_URI] => https://grupothx.com/thx/modules/gateways/callback/mercadopago/webhookmercadopagox-cript.php
+    [SCRIPT_URL] => /thx/modules/gateways/callback/mercadopago/webhookmercadopagox-cript.php
+    [SERVER_ADDR] => 162.241.54.109
+    [SERVER_ADMIN] => webmaster@grupothx.com
+    [SERVER_NAME] => grupothx.com
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache
+    [SSL_TLS_SNI] => grupothx.com
+    [TZ] => 
+    [UNIQUE_ID] => XacFUuVT3fga2A7BJrXYbwAAAVA
+    [PHP_SELF] => /thx/modules/gateways/callback/mercadopago/webhookmercadopagox-cript.php
+    [REQUEST_TIME_FLOAT] => 1571226962.8692
+    [REQUEST_TIME] => 1571226962
+    [argv] => Array
+        (
+            [0] => data_id=532435203666&amp;type=payment
+        )
+
+    [argc] => 1
+)
+</pre>
+
+_______________________________________________________________END
+
+16/10/2019 8:21:56
+INICIO_______________________________________________________________LOG:Id não encontrado. Baixa não iniciada :(
+
+POST:
+<pre>Array
+(
+)
+</pre>
+
+GET:
+<pre>Array
+(
+    [data_id] => $dados-&gt;external_reference
+    [type] => payment
+)
+</pre>
+
+SERVER:
+<pre>Array
+(
+    [CONTEXT_DOCUMENT_ROOT] => /home/thxcom/public_html
+    [CONTEXT_PREFIX] => 
+    [DOCUMENT_ROOT] => /home/thxcom/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_COOKIE] => invoice-6551=6551; roundcube_cookies=enabled; WHMCSAutoRefresh=5; G_ENABLED_IDPS=google; PHPSESSID=7d8bcs909p7g39k714mhlq05i2; WHMCSFD=eyJjbGludiI6eyJzZXJ2aWNlaWQiOiIiLCJhZGRvbmlkIjoiIiwiZG9tYWluaWQiOiIiLCJjbGllbnRuYW1lIjoiIiwiaW52b2ljZW51bSI6IiIsImxpbmVpdGVtIjoiIiwicGF5bWVudG1ldGhvZCI6IiIsImludm9pY2VkYXRlIjoiIiwiZHVlZGF0ZSI6IiIsImRhdGVwYWlkIjoiIiwidG90YWxmcm9tdG90YWx0byI6IiIsInN0YXR1cyI6IiIsInRvdGFsZnJvbSI6IiIsInRvdGFsdG8iOiIifSwidGlja2V0cyI6eyJ2aWV3IjoiIiwibXVsdGlfdmlldyI6IiIsImRlcHRpZCI6IiIsIm11bHRpX2RlcHRfaWQiOiIiLCJwcmlvcml0eSI6IiIsImNsaWVudCI6IiIsImNsaWVudGlkIjoiIiwiY2xpZW50bmFtZSI6IiIsInN1YmplY3QiOiIiLCJlbWFpbCI6IiIsInRhZyI6IiJ9LCJvcmRlcnMiOnsiY2xpZW50IjoiIiwiY2xpZW50aWQiOiIiLCJjbGllbnRuYW1lIjoiIiwib3JkZXJpZCI6IiIsIm9yZGVybnVtIjoiIiwicGF5bWVudHN0YXR1cyI6IiIsIm9yZGVyZGF0ZSI6IiIsInN0YXR1cyI6IlBlbmRpbmciLCJhbW91bnQiOiIiLCJvcmRlcmlwIjoiIn0sImludm9pY2VzIjp7ImNsaWVudGlkIjoiIiwiaW52b2ljZW51bSI6IiIsInN0YXR1cyI6Ik92ZXJkdWUiLCJjbGllbnRuYW1lIjoiIiwiaW52b2ljZWRhdGUiOiIiLCJsaW5laXRlbSI6IiIsImR1ZWRhdGUiOiIiLCJwYXltZW50bWV0aG9kIjoiIiwiZGF0ZXBhaWQiOiIiLCJsYXN0X2NhcHR1cmVfYXR0ZW1wdCI6IiIsInRvdGFsZnJvbSI6IiIsInRvdGFsdG8iOiIifSwiY2xpZW50cyI6eyJ1c2VyaWQiOiIiLCJuYW1lIjoiIiwiZW1haWwiOiIiLCJjb3VudHJ5LWNhbGxpbmctY29kZS1waG9uZSI6IiIsInBob25lIjoiIiwiZ3JvdXAiOiIiLCJzdGF0dXMiOiIiLCJhZGRyZXNzMSI6IiIsImFkZHJlc3MyIjoiIiwiY2l0eSI6IiIsInN0YXRlIjoiIiwicG9zdGNvZGUiOiIiLCJjb3VudHJ5IjoiIiwicGF5bWVudG1ldGhvZCI6IiIsImNjdHlwZSI6IiIsImNjbGFzdGZvdXIiOiIiLCJhdXRvY2NiaWxsaW5nIjoiIiwiY3JlZGl0IjoiIiwiY3VycmVuY3kiOiIiLCJzaWdudXBkYXRlcmFuZ2UiOiIiLCJsYW5ndWFnZSI6IiIsIm1hcmtldGluZ29wdGluIjoiIiwiZW1haWx2ZXJpZmljYXRpb24iOiIiLCJhdXRvc3RhdHVzIjoiIiwidGF4ZXhlbXB0IjoiIiwibGF0ZWZlZXMiOiIiLCJvdmVyZHVlbm90aWNlcyI6IiIsInNlcGFyYXRlaW52b2ljZXMiOiIiLCJjdXN0b21maWVsZHMiOiIiLCJlbWFpbDIiOiIiLCJjb3VudHJ5LWNhbGxpbmctY29kZS1waG9uZTIiOiIiLCJwaG9uZTIiOiIiLCJncm91cDIiOiIifX0%3D; jv_visits_count_heIAoGOw2S=2; WHMCSeWdrAiYR38h0=dgemuvk3up0njvp8msbpar2045
+    [HTTP_HOST] => grupothx.com
+    [HTTP_SEC_FETCH_MODE] => navigate
+    [HTTP_SEC_FETCH_SITE] => none
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [PHP_INI_SCAN_DIR] => /opt/cpanel/ea-php70/root/etc:/opt/cpanel/ea-php70/root/etc/php.d:.
+    [QUERY_STRING] => data_id=$dados-%3Eexternal_reference&amp;type=payment
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 187.22.184.159
+    [REMOTE_PORT] => 3210
+    [REQUEST_METHOD] => GET
+    [REQUEST_SCHEME] => https
+    [REQUEST_URI] => /thx/modules/gateways/callback/mercadopago/webhookmercadopagox-cript.php?data_id=$dados-%3Eexternal_reference&amp;type=payment
+    [SCRIPT_FILENAME] => /home/thxcom/public_html/thx/modules/gateways/callback/mercadopago/webhookmercadopagox-cript.php
+    [SCRIPT_NAME] => /thx/modules/gateways/callback/mercadopago/webhookmercadopagox-cript.php
+    [SCRIPT_URI] => https://grupothx.com/thx/modules/gateways/callback/mercadopago/webhookmercadopagox-cript.php
+    [SCRIPT_URL] => /thx/modules/gateways/callback/mercadopago/webhookmercadopagox-cript.php
+    [SERVER_ADDR] => 162.241.54.109
+    [SERVER_ADMIN] => webmaster@grupothx.com
+    [SERVER_NAME] => grupothx.com
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache
+    [SSL_TLS_SNI] => grupothx.com
+    [TZ] => 
+    [UNIQUE_ID] => XacFZLvSnRsyb8WaJm2bsgAAAEk
+    [PHP_SELF] => /thx/modules/gateways/callback/mercadopago/webhookmercadopagox-cript.php
+    [REQUEST_TIME_FLOAT] => 1571226981.0014
+    [REQUEST_TIME] => 1571226981
+    [argv] => Array
+        (
+            [0] => data_id=$dados-%3Eexternal_reference&amp;type=payment
+        )
+
+    [argc] => 1
+)
+</pre>
+
+_______________________________________________________________END

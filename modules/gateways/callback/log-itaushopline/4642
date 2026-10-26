@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4642
+    [id] => 4642
+    [1] => 197
+    [userid] => 197
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-04-30
+    [date] => 2018-04-30
+    [4] => 2018-05-05
+    [duedate] => 2018-05-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 197
+    [id] => 197
+    [uuid] => 3757255a-6e05-4225-a185-d01ccf46c638
+    [firstname] => Antonio
+    [lastname] => Dias de Souza
+    [fullname] => Antonio Dias de Souza
+    [companyname] => Antonio Dias de Souza - Livraria - ME
+    [email] => nanahlivraria@gmail.com
+    [address1] => Rua Doutor Miguel Penteado, 1068
+    [address2] => Jardim Chapadão
+    [city] => Campinas
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 13070-118
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (19) 3342-6916 (19) 991468439
+    [password] => 42cf0a1abed891173a3e194c5c23c761:%z#e(
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.193342691619991468439
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 30/04/2018 20:28<br>IP Address: 179.159.106.128<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 19991468439
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00.163.889/0001-28
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 19991468439
+    [customfields3] => 00.163.889/0001-28
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

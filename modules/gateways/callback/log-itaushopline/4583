@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4583
+    [id] => 4583
+    [1] => 310
+    [userid] => 310
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-04-13
+    [date] => 2018-04-13
+    [4] => 2018-04-16
+    [duedate] => 2018-04-16
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 575.00
+    [subtotal] => 575.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 575.00
+    [total] => 575.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 310
+    [id] => 310
+    [uuid] => c4222f46-eb58-40e0-8d35-5c0e6ff9e712
+    [firstname] => Egidio
+    [lastname] => Marinelli
+    [fullname] => Egidio Marinelli
+    [companyname] => Sisarcom Sistema de Armazenagem Compacto Ltda
+    [email] => em@sisarcom.com.br
+    [address1] => Avenida Antonio Afonso de Lima, 670 cj 06
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-560
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 114655-2552 
+    [password] => $2y$10$gif451t6RisaDsydcxOD5OFHjN664QLjWkNfm3e67Wtzd1Xoex0RS
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146552552
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/04/2018 11:50<br>IP Address: 177.139.110.115<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982829800
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 13536643000104
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982829800
+    [customfields3] => 13536643000104
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

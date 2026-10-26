@@ -1,0 +1,924 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2887
+    [id] => 2887
+    [1] => 247
+    [userid] => 247
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-19
+    [date] => 2017-01-19
+    [4] => 2017-01-19
+    [duedate] => 2017-01-19
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 369.00
+    [subtotal] => 369.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 369.00
+    [total] => 369.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 247
+    [id] => 247
+    [uuid] => 496b6f08-59fa-4b72-967a-1c9234936ec5
+    [firstname] => Jardel
+    [lastname] => Jacomini
+    [fullname] => Jardel Jacomini
+    [companyname] => Grupo THX
+    [email] => deljdl@gmail.com
+    [address1] => Rua Milton Ferreira Franco
+    [address2] => Parque Rodrigo Barreto
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417-160
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146550330
+    [password] => $2y$10$a76gCwQYd4Eg7h1/3QWVtubB1PEo4Gv/1wHyBSQVxi2183BfucbES
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146550330
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/01/2017 00:23<br>IP Address: 177.99.119.156<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11985691184
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29466511858
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11985691184
+    [customfields3] => 29466511858
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2887
+    [SoftDescriptor] => 2887
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Links Patrocinados - Plano I - deljdl.com.br (19/01/2017 - 18/02/2017)
+                            [Description] => Links Patrocinados - Plano I - deljdl.com.br (19/01/2017 - 18/02/2017)
+                            [UnitPrice] => 39900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Pagamento Parcial
+                            [Description] => Pagamento Parcial
+                            [UnitPrice] => -3000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 1107
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Juros por 5 dias de atraso
+                            [Description] => Juros por 5 dias de atraso
+                            [UnitPrice] => 570
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002887
+            [FullName] => Jardel Jacomini
+            [Email] => deljdl@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Cart.Items[1].UnitPrice] => Array
+                (
+                    [0] => [Cart.Item.UnitPrice] deve ser maior ou igual a zero.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2887
+    [id] => 2887
+    [1] => 247
+    [userid] => 247
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-19
+    [date] => 2017-01-19
+    [4] => 2017-01-19
+    [duedate] => 2017-01-19
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 399.00
+    [subtotal] => 399.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 399.00
+    [total] => 399.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 247
+    [id] => 247
+    [uuid] => 496b6f08-59fa-4b72-967a-1c9234936ec5
+    [firstname] => Jardel
+    [lastname] => Jacomini
+    [fullname] => Jardel Jacomini
+    [companyname] => Grupo THX
+    [email] => deljdl@gmail.com
+    [address1] => Rua Milton Ferreira Franco
+    [address2] => Parque Rodrigo Barreto
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417-160
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146550330
+    [password] => $2y$10$a76gCwQYd4Eg7h1/3QWVtubB1PEo4Gv/1wHyBSQVxi2183BfucbES
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146550330
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/01/2017 00:24<br>IP Address: 177.99.119.156<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11985691184
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29466511858
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11985691184
+    [customfields3] => 29466511858
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2887
+    [SoftDescriptor] => 2887
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Links Patrocinados - Plano I - deljdl.com.br (19/01/2017 - 18/02/2017)
+                            [Description] => Links Patrocinados - Plano I - deljdl.com.br (19/01/2017 - 18/02/2017)
+                            [UnitPrice] => 39900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => 
+                            [Description] => 
+                            [UnitPrice] => 000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 1197
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Juros por 5 dias de atraso
+                            [Description] => Juros por 5 dias de atraso
+                            [UnitPrice] => 616
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002887
+            [FullName] => Jardel Jacomini
+            [Email] => deljdl@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Cart.Items[1].Name] => Array
+                (
+                    [0] => [Cart.Item.Name] é obrigatório.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2887
+    [id] => 2887
+    [1] => 247
+    [userid] => 247
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-19
+    [date] => 2017-01-19
+    [4] => 2017-01-19
+    [duedate] => 2017-01-19
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 399.00
+    [subtotal] => 399.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 399.00
+    [total] => 399.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 247
+    [id] => 247
+    [uuid] => 496b6f08-59fa-4b72-967a-1c9234936ec5
+    [firstname] => Jardel
+    [lastname] => Jacomini
+    [fullname] => Jardel Jacomini
+    [companyname] => Grupo THX
+    [email] => deljdl@gmail.com
+    [address1] => Rua Milton Ferreira Franco
+    [address2] => Parque Rodrigo Barreto
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417-160
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146550330
+    [password] => $2y$10$a76gCwQYd4Eg7h1/3QWVtubB1PEo4Gv/1wHyBSQVxi2183BfucbES
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146550330
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/01/2017 00:24<br>IP Address: 177.99.119.156<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11985691184
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29466511858
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11985691184
+    [customfields3] => 29466511858
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2887
+    [SoftDescriptor] => 2887
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Links Patrocinados - Plano I - deljdl.com.br (19/01/2017 - 18/02/2017)
+                            [Description] => Links Patrocinados - Plano I - deljdl.com.br (19/01/2017 - 18/02/2017)
+                            [UnitPrice] => 39900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => 
+                            [Description] => 
+                            [UnitPrice] => 000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 1197
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Juros por 5 dias de atraso
+                            [Description] => Juros por 5 dias de atraso
+                            [UnitPrice] => 616
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002887
+            [FullName] => Jardel Jacomini
+            [Email] => deljdl@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Cart.Items[1].Name] => Array
+                (
+                    [0] => [Cart.Item.Name] é obrigatório.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2887
+    [id] => 2887
+    [1] => 247
+    [userid] => 247
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-19
+    [date] => 2017-01-19
+    [4] => 2017-01-19
+    [duedate] => 2017-01-19
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 399.00
+    [subtotal] => 399.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 399.00
+    [total] => 399.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 247
+    [id] => 247
+    [uuid] => 496b6f08-59fa-4b72-967a-1c9234936ec5
+    [firstname] => Jardel
+    [lastname] => Jacomini
+    [fullname] => Jardel Jacomini
+    [companyname] => Grupo THX
+    [email] => deljdl@gmail.com
+    [address1] => Rua Milton Ferreira Franco
+    [address2] => Parque Rodrigo Barreto
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417-160
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146550330
+    [password] => $2y$10$a76gCwQYd4Eg7h1/3QWVtubB1PEo4Gv/1wHyBSQVxi2183BfucbES
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146550330
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/01/2017 00:25<br>IP Address: 177.99.119.156<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11985691184
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29466511858
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11985691184
+    [customfields3] => 29466511858
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2887
+    [SoftDescriptor] => 2887
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Links Patrocinados - Plano I - deljdl.com.br (19/01/2017 - 18/02/2017)
+                            [Description] => Links Patrocinados - Plano I - deljdl.com.br (19/01/2017 - 18/02/2017)
+                            [UnitPrice] => 39900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 1197
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 5 dias de atraso
+                            [Description] => Juros por 5 dias de atraso
+                            [UnitPrice] => 616
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002887
+            [FullName] => Jardel Jacomini
+            [Email] => deljdl@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2887
+    [softDescriptor] => 2887
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Links Patrocinados - Plano I - deljdl.com.br (19/01/2017 - 18/02/2017)
+                            [description] => Links Patrocinados - Plano I - deljdl.com.br (19/01/2017 - 18/02/2017)
+                            [unitPrice] => 39900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 1197
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 5 dias de atraso
+                            [description] => Juros por 5 dias de atraso
+                            [unitPrice] => 616
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002887
+            [fullName] => Jardel Jacomini
+            [email] => deljdl@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/f57a71ce-1bd0-44e7-90bb-20aeaaf63a8c
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

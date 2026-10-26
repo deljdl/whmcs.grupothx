@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5293
+    [id] => 5293
+    [1] => 328
+    [userid] => 328
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-10-03
+    [date] => 2018-10-03
+    [4] => 2018-10-03
+    [duedate] => 2018-10-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 26.37
+    [subtotal] => 26.37
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 26.37
+    [total] => 26.37
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 328
+    [id] => 328
+    [uuid] => 348d2b55-882b-4958-b45b-705586aad71f
+    [firstname] => Lucas
+    [lastname] => Brauner Freitas
+    [fullname] => Lucas Brauner Freitas
+    [companyname] => Lagarto Digital
+    [email] => lucas@lagartodigital.com.br
+    [address1] => Rua doutor Armando Fagundes - 610
+    [address2] => Areal
+    [city] => Pelotas
+    [fullstate] => RS
+    [state] => RS
+    [postcode] => 96080060
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 53 981640050
+    [password] => $2y$10$uSvNNLABTwfk7jOkST7u9ese4vbK82BKl64CU3ST6Xli.6yuE0jgG
+    [statecode] => RS
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.53981640050
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 03/10/2018 19:13<br>IP Address: 177.194.206.57<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 53981640050
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 031.063.190-46
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 20
+                )
+
+        )
+
+    [customfields2] => 53981640050
+    [customfields3] => 031.063.190-46
+    [customfields4] => 20
+)
+</pre>
+
+Order
+<pre></pre>

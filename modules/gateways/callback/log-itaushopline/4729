@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4729
+    [id] => 4729
+    [1] => 81
+    [userid] => 81
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-05-18
+    [date] => 2018-05-18
+    [4] => 2018-05-25
+    [duedate] => 2018-05-25
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 35.00
+    [subtotal] => 35.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 35.00
+    [total] => 35.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 81
+    [id] => 81
+    [uuid] => 77954b78-0ebe-4b32-9e3a-fb49d5f579bd
+    [firstname] => Alexandre
+    [lastname] => Dotoli DOnofrio
+    [fullname] => Alexandre Dotoli DOnofrio
+    [companyname] => Alexandre Dotoli DOnofrio - ME
+    [email] => alexandre@ddembalagens.com.br
+    [address1] => Rua Hélio Manzoni, 18
+    [address2] => Gopouva
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07192070
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 38577178
+    [password] => IGJDVzXiIRg1udw5RxJkcVvCQ2EP64ycWG9/
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1138577178
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 23/05/2018 09:08<br>IP Address: 201.13.214.158<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947084901
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.038.291/0001-23
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947084901
+    [customfields3] => 11.038.291/0001-23
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

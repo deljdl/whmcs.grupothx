@@ -1,0 +1,6650 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:09<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 764775
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 764775
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/478f8740-c7c7-4387-90eb-8d039839c609
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:12<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 764775
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 764775
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/98f73cd6-a0d7-477a-822a-45782e9cf331
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:13<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 764775
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 764775
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/63417063-dcb4-447f-b722-22367ed78d60
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:14<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 764775
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 764775
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/9aeb8434-05cc-48f3-8b66-98648a9f2a93
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:14<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 764775
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 764775
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/fff7c3e8-f821-4944-af17-6295b4763062
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:15<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 764775
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 764775
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/17bcd2dd-4b40-4236-aaeb-9fcc7742216b
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:16<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 764775
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 764775
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/b7496b1a-fab8-4c2b-bdaa-fbec19f66f35
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:17<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 76477500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 76477500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/faba100d-ce10-4ebf-81d5-f77639475ba2
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:17<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 764775
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 764775
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/bec53a41-d9db-40c3-b6f3-bf267b9f802b
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:18<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 764775
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 764775
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/4161c45b-4786-4d7c-95c5-5b62d17a94cc
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:19<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 0764775
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 764775
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/622ec43d-3387-40be-b92a-8f49d3f4c5cf
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:21<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 764775
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 764775
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/185d5bcb-1fd7-4c17-b589-837d289c34e2
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:21<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 764775
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 764775
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/faa4c961-6466-4be2-acc6-eefdda1374d5
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:22<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 764775
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 764775
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/7017bcd7-a28f-4527-9d80-281fd1c40297
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:22<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 764775
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 764775
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/0a00a51c-3147-4e1a-9940-083e8213b0fb
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:24<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 7600
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 7600
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/d3fe81ce-0999-4071-aae5-a2d82cd51c75
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:25<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 7600
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 7600
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/419893ef-bacc-4200-9081-1bce6fe38121
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:25<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 7600
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 7600
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/33242e46-d781-4633-959f-e74608db1b7e
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:26<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 7600
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 7600
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/826abde2-b467-47b0-8b4d-0eeafd1d0149
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:28<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 7600
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 7600
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/fc3ee324-82dc-4c6d-99f7-a51eaf62d690
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:29<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 7600
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 7600
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/2091408d-b590-43c2-b86f-44fe4059b2f6
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:29<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 7600
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 7600
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/093a5b40-e424-47dc-aa40-a18396fdc765
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:30<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 7600
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 7600
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/4f120043-ffa4-423d-9222-f34176f5ff39
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/10/2016 13:31<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 7600
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 7600
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/d6164a8b-6394-4c28-8cce-a1c080f1a5ec
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2467
+    [id] => 2467
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-02
+    [duedate] => 2016-10-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1875.00
+    [subtotal] => 1875.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1875.00
+    [total] => 1875.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/10/2016 11:02<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2467
+    [SoftDescriptor] => 2467
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [Description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [UnitPrice] => 187500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 5625
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 14 dias de atraso
+                            [Description] => Juros por 14 dias de atraso
+                            [UnitPrice] => 13519
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002467
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2467
+    [softDescriptor] => 2467
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [description] => Desenvolvimento Por Hora - Sistema /trucksistema.com.br - Parcela 4/4
+                            [unitPrice] => 187500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 5625
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 14 dias de atraso
+                            [description] => Juros por 14 dias de atraso
+                            [unitPrice] => 13519
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002467
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/b103317d-4c76-499b-97f5-f3b87769af1d
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

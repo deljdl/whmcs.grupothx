@@ -1,0 +1,240 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4280
+    [id] => 4280
+    [1] => 98
+    [userid] => 98
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-01-22
+    [date] => 2018-01-22
+    [4] => 2018-01-27
+    [duedate] => 2018-01-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 55.00
+    [subtotal] => 55.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 55.00
+    [total] => 55.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 98
+    [id] => 98
+    [uuid] => f881ca5c-3f18-4fe6-8382-418323b1da93
+    [firstname] => RENAN
+    [lastname] => SINÉZIO DE SOUZA
+    [fullname] => RENAN SINÉZIO DE SOUZA
+    [companyname] => Paulistana Cons.de Bombas Hidr.e Elet.Ltda - ME
+    [email] => adm@cidromak.com.br
+    [address1] => Rua Atílio Piffer, 33, Sala 09
+    [address2] => Casa Verde
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 02516-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 3858-2163 / (11) 3858-4525
+    [password] => 93353af0a414a1ebe6e8bb5469c6a63a:PucQ#
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11385821631138584525
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/01/2018 09:58<br>IP Address: 187.34.254.222<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4280
+    [id] => 4280
+    [1] => 98
+    [userid] => 98
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-01-22
+    [date] => 2018-01-22
+    [4] => 2018-01-27
+    [duedate] => 2018-01-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 55.00
+    [subtotal] => 55.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 55.00
+    [total] => 55.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 98
+    [id] => 98
+    [uuid] => f881ca5c-3f18-4fe6-8382-418323b1da93
+    [firstname] => RENAN
+    [lastname] => SINÉZIO DE SOUZA
+    [fullname] => RENAN SINÉZIO DE SOUZA
+    [companyname] => Paulistana Cons.de Bombas Hidr.e Elet.Ltda - ME
+    [email] => adm@cidromak.com.br
+    [address1] => Rua Atílio Piffer, 33, Sala 09
+    [address2] => Casa Verde
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 02516-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 3858-2163 / (11) 3858-4525
+    [password] => 93353af0a414a1ebe6e8bb5469c6a63a:PucQ#
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11385821631138584525
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/01/2018 09:58<br>IP Address: 187.34.254.222<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>

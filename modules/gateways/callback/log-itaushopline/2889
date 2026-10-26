@@ -1,0 +1,615 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2889
+    [id] => 2889
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-20
+    [date] => 2017-01-20
+    [4] => 2017-01-27
+    [duedate] => 2017-01-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 79.97
+    [subtotal] => 79.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 79.97
+    [total] => 79.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => RAQUEL DE FIGUEIREDO FONSECA - ME
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 23/01/2017 23:49<br>IP Address: 177.99.119.156<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2889
+    [id] => 2889
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-20
+    [date] => 2017-01-20
+    [4] => 2017-01-27
+    [duedate] => 2017-01-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 79.97
+    [subtotal] => 79.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 79.97
+    [total] => 79.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => RAQUEL DE FIGUEIREDO FONSECA - ME
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/01/2017 01:09<br>IP Address: 177.99.119.156<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2889
+    [id] => 2889
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-20
+    [date] => 2017-01-20
+    [4] => 2017-01-27
+    [duedate] => 2017-01-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 79.97
+    [subtotal] => 79.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 79.97
+    [total] => 79.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => RAQUEL DE FIGUEIREDO FONSECA - ME
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 03/02/2017 13:57<br>IP Address: 191.178.236.241<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2889
+    [id] => 2889
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-20
+    [date] => 2017-01-20
+    [4] => 2017-01-27
+    [duedate] => 2017-01-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 79.97
+    [subtotal] => 79.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 79.97
+    [total] => 79.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => RAQUEL DE FIGUEIREDO FONSECA - ME
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 06/02/2017 12:57<br>IP Address: 191.178.236.241<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2889
+    [id] => 2889
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-20
+    [date] => 2017-01-20
+    [4] => 2017-01-27
+    [duedate] => 2017-01-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 79.97
+    [subtotal] => 79.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 79.97
+    [total] => 79.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => RAQUEL DE FIGUEIREDO FONSECA - ME
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 06/02/2017 13:53<br>IP Address: 191.178.236.241<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

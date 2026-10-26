@@ -1,0 +1,2786 @@
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 668
+    [clientid] => 311
+    [orderid] => 610
+    [pid] => 3
+    [regdate] => 2018-04-18
+    [name] => 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => sohana.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [firstpaymentamount] => 32.97
+    [recurringamount] => 32.97
+    [paymentmethod] => cielo
+    [paymentmethodname] => Cielo Cartões
+    [billingcycle] => Monthly
+    [nextduedate] => 2018-04-18
+    [status] => Active
+    [username] => sohanaco
+    [password] => 7300ruUfeR
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 48
+    [disklimit] => 10000
+    [bwusage] => 102
+    [bwlimit] => 0
+    [lastupdate] => 2018-04-25 09:00:34
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 311
+    [id] => 311
+    [uuid] => 1ecee16e-7041-4200-b481-bcb1590cca92
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [fullname] => IGOR DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA EIRELI 
+    [email] => contatoasantos@hotmail.com
+    [address1] => Rua Washington Luiz Pereira de Souza, 101- sala 05
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-515
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 37541200 11944401200
+    [password] => $2y$10$kKjJ4Pl1R449BI48usHzF.NKVYXoxLqM6eHHuEgmwFJzqExLHkG5S
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113754120011944401200
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 1
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/04/2018 13:45<br>IP Address: 179.176.92.19<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11944401200
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23945373000130
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11944401200
+    [customfields3] => 23945373000130
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s668
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 23945373000130
+            [FullName] => IGOR DE ASSIS FATICA
+            [Email] => contatoasantos@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s668
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [$id] => 6
+            [recurrentPayment] => stdClass Object
+                (
+                    [$id] => 7
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 23945373000130
+            [fullName] => IGOR DE ASSIS FATICA
+            [email] => contatoasantos@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/9ae9aa0c-b9ba-416d-8253-ce9f7e6a34d8
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 668
+    [clientid] => 311
+    [orderid] => 610
+    [pid] => 3
+    [regdate] => 2018-04-18
+    [name] => 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => sohana.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [firstpaymentamount] => 32.97
+    [recurringamount] => 32.97
+    [paymentmethod] => cielo
+    [paymentmethodname] => Cielo Cartões
+    [billingcycle] => Monthly
+    [nextduedate] => 2018-09-25
+    [status] => Active
+    [username] => sohanaco
+    [password] => 7300ruUfeR
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 131
+    [disklimit] => 10000
+    [bwusage] => 28
+    [bwlimit] => 0
+    [lastupdate] => 2018-08-07 09:00:15
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 311
+    [id] => 311
+    [uuid] => 1ecee16e-7041-4200-b481-bcb1590cca92
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [fullname] => IGOR DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA LTDA 
+    [email] => contatoasantos@hotmail.com
+    [address1] => Rua Washington Luiz Pereira de Souza, 101- sala 05
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-515
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 37541200 11944401200
+    [password] => $2y$10$kKjJ4Pl1R449BI48usHzF.NKVYXoxLqM6eHHuEgmwFJzqExLHkG5S
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113754120011944401200
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 1
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/09/2018 09:57<br>IP Address: 177.18.230.191<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11944401200
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23945373000130
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11944401200
+    [customfields3] => 23945373000130
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s668
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 23945373000130
+            [FullName] => IGOR DE ASSIS FATICA
+            [Email] => contatoasantos@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s668
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [$id] => 6
+            [recurrentPayment] => stdClass Object
+                (
+                    [$id] => 7
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+            [numberOfPayments] => 0
+            [createdDate] => 0001-01-01T00:00:00
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 23945373000130
+            [fullName] => IGOR DE ASSIS FATICA
+            [email] => contatoasantos@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/4f657224-21bc-4a04-8b25-750672560b01
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 668
+    [clientid] => 311
+    [orderid] => 610
+    [pid] => 3
+    [regdate] => 2018-04-18
+    [name] => TIH - Master 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => sohana.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [suspensionreason] => 
+    [firstpaymentamount] => 32.97
+    [recurringamount] => 32.97
+    [paymentmethod] => cielo
+    [paymentmethodname] => Cielo Cartões
+    [billingcycle] => Monthly
+    [nextduedate] => 2019-01-25
+    [status] => Suspended
+    [username] => sohanaco
+    [password] => 7300ruUfeR
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 322
+    [disklimit] => 10000
+    [bwusage] => 0
+    [bwlimit] => 0
+    [lastupdate] => 2019-03-01 09:00:18
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 311
+    [id] => 311
+    [uuid] => 1ecee16e-7041-4200-b481-bcb1590cca92
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [fullname] => IGOR DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA LTDA 
+    [email] => contatoasantos@hotmail.com
+    [address1] => Rua Washington Luiz Pereira de Souza, 101- sala 05
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-515
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 113754120011944401200
+    [password] => $2y$10$kKjJ4Pl1R449BI48usHzF.NKVYXoxLqM6eHHuEgmwFJzqExLHkG5S
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113754120011944401200
+    [telephoneNumber] => +55.113754120011944401200
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 1
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 02/03/2019 10:47<br>IP Address: 177.18.208.86<br>Host: 177.18.208.86.static.host.gvt.net.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11944401200
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23945373000130
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11944401200
+    [customfields3] => 23945373000130
+    [customfields4] => 
+    [currency_code] => BRL
+    [client] => Array
+        (
+            [userid] => 311
+            [id] => 311
+            [uuid] => 1ecee16e-7041-4200-b481-bcb1590cca92
+            [firstname] => IGOR
+            [lastname] => DE ASSIS FATICA
+            [fullname] => IGOR DE ASSIS FATICA
+            [companyname] => SOHANA INCORPORADORA LTDA 
+            [email] => contatoasantos@hotmail.com
+            [address1] => Rua Washington Luiz Pereira de Souza, 101- sala 05
+            [address2] => Centro
+            [city] => Arujá
+            [fullstate] => SP
+            [state] => SP
+            [postcode] => 07400-515
+            [countrycode] => BR
+            [country] => BR
+            [phonenumber] => 113754120011944401200
+            [password] => $2y$10$kKjJ4Pl1R449BI48usHzF.NKVYXoxLqM6eHHuEgmwFJzqExLHkG5S
+            [statecode] => SP
+            [countryname] => Brazil
+            [phonecc] => 55
+            [phonenumberformatted] => +55.113754120011944401200
+            [telephoneNumber] => +55.113754120011944401200
+            [billingcid] => 0
+            [notes] => 
+            [twofaenabled] => 
+            [currency] => 1
+            [defaultgateway] => 
+            [cctype] => 
+            [cclastfour] => 
+            [gatewayid] => 
+            [securityqid] => 0
+            [securityqans] => 
+            [groupid] => 0
+            [status] => Active
+            [credit] => 0.00
+            [taxexempt] => 
+            [latefeeoveride] => 
+            [overideduenotices] => 
+            [separateinvoices] => 1
+            [disableautocc] => 
+            [emailoptout] => 
+            [marketing_emails_opt_in] => 
+            [overrideautoclose] => 
+            [allowSingleSignOn] => 1
+            [language] => 
+            [isOptedInToMarketingEmails] => 1
+            [lastlogin] => Date: 02/03/2019 10:47<br>IP Address: 177.18.208.86<br>Host: 177.18.208.86.static.host.gvt.net.br
+            [customfields1] => on
+            [customfields] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 1
+                            [value] => on
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 2
+                            [value] => 11944401200
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 3
+                            [value] => 23945373000130
+                        )
+
+                    [3] => Array
+                        (
+                            [id] => 70
+                            [value] => 
+                        )
+
+                )
+
+            [customfields2] => 11944401200
+            [customfields3] => 23945373000130
+            [customfields4] => 
+            [currency_code] => BRL
+        )
+
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s668
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 23945373000130
+            [FullName] => IGOR DE ASSIS FATICA
+            [Email] => contatoasantos@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s668
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [$id] => 6
+            [recurrentPayment] => stdClass Object
+                (
+                    [$id] => 7
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+            [numberOfPayments] => 0
+            [createdDate] => 0001-01-01T00:00:00
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 23945373000130
+            [fullName] => IGOR DE ASSIS FATICA
+            [email] => contatoasantos@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/79372e66-7f18-44a6-9346-4a293f6e9543
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 668
+    [clientid] => 311
+    [orderid] => 610
+    [pid] => 3
+    [regdate] => 2018-04-18
+    [name] => TIH - Master 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => sohana.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [suspensionreason] => 
+    [firstpaymentamount] => 32.97
+    [recurringamount] => 32.97
+    [paymentmethod] => cielo
+    [paymentmethodname] => Cielo Cartões
+    [billingcycle] => Monthly
+    [nextduedate] => 2019-02-25
+    [status] => Active
+    [username] => sohanaco
+    [password] => 7300ruUfeR
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 322
+    [disklimit] => 10000
+    [bwusage] => 0
+    [bwlimit] => 0
+    [lastupdate] => 2019-03-01 09:00:18
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 311
+    [id] => 311
+    [uuid] => 1ecee16e-7041-4200-b481-bcb1590cca92
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [fullname] => IGOR DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA LTDA 
+    [email] => contatoasantos@hotmail.com
+    [address1] => Rua Washington Luiz Pereira de Souza, 101- sala 05
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-515
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 113754120011944401200
+    [password] => $2y$10$kKjJ4Pl1R449BI48usHzF.NKVYXoxLqM6eHHuEgmwFJzqExLHkG5S
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113754120011944401200
+    [telephoneNumber] => +55.113754120011944401200
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 1
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 02/03/2019 10:52<br>IP Address: 177.18.208.86<br>Host: 177.18.208.86.static.host.gvt.net.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11944401200
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23945373000130
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11944401200
+    [customfields3] => 23945373000130
+    [customfields4] => 
+    [currency_code] => BRL
+    [client] => Array
+        (
+            [userid] => 311
+            [id] => 311
+            [uuid] => 1ecee16e-7041-4200-b481-bcb1590cca92
+            [firstname] => IGOR
+            [lastname] => DE ASSIS FATICA
+            [fullname] => IGOR DE ASSIS FATICA
+            [companyname] => SOHANA INCORPORADORA LTDA 
+            [email] => contatoasantos@hotmail.com
+            [address1] => Rua Washington Luiz Pereira de Souza, 101- sala 05
+            [address2] => Centro
+            [city] => Arujá
+            [fullstate] => SP
+            [state] => SP
+            [postcode] => 07400-515
+            [countrycode] => BR
+            [country] => BR
+            [phonenumber] => 113754120011944401200
+            [password] => $2y$10$kKjJ4Pl1R449BI48usHzF.NKVYXoxLqM6eHHuEgmwFJzqExLHkG5S
+            [statecode] => SP
+            [countryname] => Brazil
+            [phonecc] => 55
+            [phonenumberformatted] => +55.113754120011944401200
+            [telephoneNumber] => +55.113754120011944401200
+            [billingcid] => 0
+            [notes] => 
+            [twofaenabled] => 
+            [currency] => 1
+            [defaultgateway] => 
+            [cctype] => 
+            [cclastfour] => 
+            [gatewayid] => 
+            [securityqid] => 0
+            [securityqans] => 
+            [groupid] => 0
+            [status] => Active
+            [credit] => 0.00
+            [taxexempt] => 
+            [latefeeoveride] => 
+            [overideduenotices] => 
+            [separateinvoices] => 1
+            [disableautocc] => 
+            [emailoptout] => 
+            [marketing_emails_opt_in] => 
+            [overrideautoclose] => 
+            [allowSingleSignOn] => 1
+            [language] => 
+            [isOptedInToMarketingEmails] => 1
+            [lastlogin] => Date: 02/03/2019 10:52<br>IP Address: 177.18.208.86<br>Host: 177.18.208.86.static.host.gvt.net.br
+            [customfields1] => on
+            [customfields] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 1
+                            [value] => on
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 2
+                            [value] => 11944401200
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 3
+                            [value] => 23945373000130
+                        )
+
+                    [3] => Array
+                        (
+                            [id] => 70
+                            [value] => 
+                        )
+
+                )
+
+            [customfields2] => 11944401200
+            [customfields3] => 23945373000130
+            [customfields4] => 
+            [currency_code] => BRL
+        )
+
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s668
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 23945373000130
+            [FullName] => IGOR DE ASSIS FATICA
+            [Email] => contatoasantos@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s668
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [$id] => 6
+            [recurrentPayment] => stdClass Object
+                (
+                    [$id] => 7
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+            [numberOfPayments] => 0
+            [createdDate] => 0001-01-01T00:00:00
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 23945373000130
+            [fullName] => IGOR DE ASSIS FATICA
+            [email] => contatoasantos@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/c9ec7439-0887-47d1-9fd4-146b388d3eb4
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 668
+    [clientid] => 311
+    [orderid] => 610
+    [pid] => 3
+    [regdate] => 2018-04-18
+    [name] => TIH - Master 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => sohana.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [suspensionreason] => 
+    [firstpaymentamount] => 32.97
+    [recurringamount] => 32.97
+    [paymentmethod] => cielo
+    [paymentmethodname] => Cielo Cartões
+    [billingcycle] => Monthly
+    [nextduedate] => 2019-02-25
+    [status] => Active
+    [username] => sohanaco
+    [password] => 7300ruUfeR
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 322
+    [disklimit] => 10000
+    [bwusage] => 0
+    [bwlimit] => 0
+    [lastupdate] => 2019-03-01 09:00:18
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 311
+    [id] => 311
+    [uuid] => 1ecee16e-7041-4200-b481-bcb1590cca92
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [fullname] => IGOR DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA LTDA 
+    [email] => contatoasantos@hotmail.com
+    [address1] => Rua Washington Luiz Pereira de Souza, 101- sala 05
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-515
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 113754120011944401200
+    [password] => $2y$10$kKjJ4Pl1R449BI48usHzF.NKVYXoxLqM6eHHuEgmwFJzqExLHkG5S
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113754120011944401200
+    [telephoneNumber] => +55.113754120011944401200
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 1
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 02/03/2019 10:52<br>IP Address: 177.18.208.86<br>Host: 177.18.208.86.static.host.gvt.net.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11944401200
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23945373000130
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11944401200
+    [customfields3] => 23945373000130
+    [customfields4] => 
+    [currency_code] => BRL
+    [client] => Array
+        (
+            [userid] => 311
+            [id] => 311
+            [uuid] => 1ecee16e-7041-4200-b481-bcb1590cca92
+            [firstname] => IGOR
+            [lastname] => DE ASSIS FATICA
+            [fullname] => IGOR DE ASSIS FATICA
+            [companyname] => SOHANA INCORPORADORA LTDA 
+            [email] => contatoasantos@hotmail.com
+            [address1] => Rua Washington Luiz Pereira de Souza, 101- sala 05
+            [address2] => Centro
+            [city] => Arujá
+            [fullstate] => SP
+            [state] => SP
+            [postcode] => 07400-515
+            [countrycode] => BR
+            [country] => BR
+            [phonenumber] => 113754120011944401200
+            [password] => $2y$10$kKjJ4Pl1R449BI48usHzF.NKVYXoxLqM6eHHuEgmwFJzqExLHkG5S
+            [statecode] => SP
+            [countryname] => Brazil
+            [phonecc] => 55
+            [phonenumberformatted] => +55.113754120011944401200
+            [telephoneNumber] => +55.113754120011944401200
+            [billingcid] => 0
+            [notes] => 
+            [twofaenabled] => 
+            [currency] => 1
+            [defaultgateway] => 
+            [cctype] => 
+            [cclastfour] => 
+            [gatewayid] => 
+            [securityqid] => 0
+            [securityqans] => 
+            [groupid] => 0
+            [status] => Active
+            [credit] => 0.00
+            [taxexempt] => 
+            [latefeeoveride] => 
+            [overideduenotices] => 
+            [separateinvoices] => 1
+            [disableautocc] => 
+            [emailoptout] => 
+            [marketing_emails_opt_in] => 
+            [overrideautoclose] => 
+            [allowSingleSignOn] => 1
+            [language] => 
+            [isOptedInToMarketingEmails] => 1
+            [lastlogin] => Date: 02/03/2019 10:52<br>IP Address: 177.18.208.86<br>Host: 177.18.208.86.static.host.gvt.net.br
+            [customfields1] => on
+            [customfields] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 1
+                            [value] => on
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 2
+                            [value] => 11944401200
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 3
+                            [value] => 23945373000130
+                        )
+
+                    [3] => Array
+                        (
+                            [id] => 70
+                            [value] => 
+                        )
+
+                )
+
+            [customfields2] => 11944401200
+            [customfields3] => 23945373000130
+            [customfields4] => 
+            [currency_code] => BRL
+        )
+
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s668
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 23945373000130
+            [FullName] => IGOR DE ASSIS FATICA
+            [Email] => contatoasantos@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s668
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [$id] => 6
+            [recurrentPayment] => stdClass Object
+                (
+                    [$id] => 7
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+            [numberOfPayments] => 0
+            [createdDate] => 0001-01-01T00:00:00
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 23945373000130
+            [fullName] => IGOR DE ASSIS FATICA
+            [email] => contatoasantos@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/555b6820-37f5-440f-b750-b9bde07461fe
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 668
+    [clientid] => 311
+    [orderid] => 610
+    [pid] => 3
+    [regdate] => 2018-04-18
+    [name] => TIH - Master 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => sohana.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [suspensionreason] => 
+    [firstpaymentamount] => 32.97
+    [recurringamount] => 32.97
+    [paymentmethod] => cielo
+    [paymentmethodname] => Cielo Cartões
+    [billingcycle] => Monthly
+    [nextduedate] => 2019-03-25
+    [status] => Active
+    [username] => sohanaco
+    [password] => 7300ruUfeR
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 325
+    [disklimit] => 10000
+    [bwusage] => 54
+    [bwlimit] => 0
+    [lastupdate] => 2019-03-06 09:00:18
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 311
+    [id] => 311
+    [uuid] => 1ecee16e-7041-4200-b481-bcb1590cca92
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [fullname] => IGOR DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA LTDA 
+    [email] => contatoasantos@hotmail.com
+    [address1] => Rua Washington Luiz Pereira de Souza, 101- sala 05
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-515
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 113754120011944401200
+    [password] => $2y$10$PdwLAQIN0Z4Be2UUF8JWQ.5VPWzkBwef3cFh3jUnioR8Ci0xgB1RG
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113754120011944401200
+    [telephoneNumber] => +55.113754120011944401200
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 1
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 06/03/2019 15:03<br>IP Address: 191.250.23.111<br>Host: 191.250.23.111.dynamic.adsl.gvt.net.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11944401200
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23945373000130
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11944401200
+    [customfields3] => 23945373000130
+    [customfields4] => 
+    [currency_code] => BRL
+    [client] => Array
+        (
+            [userid] => 311
+            [id] => 311
+            [uuid] => 1ecee16e-7041-4200-b481-bcb1590cca92
+            [firstname] => IGOR
+            [lastname] => DE ASSIS FATICA
+            [fullname] => IGOR DE ASSIS FATICA
+            [companyname] => SOHANA INCORPORADORA LTDA 
+            [email] => contatoasantos@hotmail.com
+            [address1] => Rua Washington Luiz Pereira de Souza, 101- sala 05
+            [address2] => Centro
+            [city] => Arujá
+            [fullstate] => SP
+            [state] => SP
+            [postcode] => 07400-515
+            [countrycode] => BR
+            [country] => BR
+            [phonenumber] => 113754120011944401200
+            [password] => $2y$10$PdwLAQIN0Z4Be2UUF8JWQ.5VPWzkBwef3cFh3jUnioR8Ci0xgB1RG
+            [statecode] => SP
+            [countryname] => Brazil
+            [phonecc] => 55
+            [phonenumberformatted] => +55.113754120011944401200
+            [telephoneNumber] => +55.113754120011944401200
+            [billingcid] => 0
+            [notes] => 
+            [twofaenabled] => 
+            [currency] => 1
+            [defaultgateway] => 
+            [cctype] => 
+            [cclastfour] => 
+            [gatewayid] => 
+            [securityqid] => 0
+            [securityqans] => 
+            [groupid] => 0
+            [status] => Active
+            [credit] => 0.00
+            [taxexempt] => 
+            [latefeeoveride] => 
+            [overideduenotices] => 
+            [separateinvoices] => 1
+            [disableautocc] => 
+            [emailoptout] => 
+            [marketing_emails_opt_in] => 
+            [overrideautoclose] => 
+            [allowSingleSignOn] => 1
+            [language] => 
+            [isOptedInToMarketingEmails] => 1
+            [lastlogin] => Date: 06/03/2019 15:03<br>IP Address: 191.250.23.111<br>Host: 191.250.23.111.dynamic.adsl.gvt.net.br
+            [customfields1] => on
+            [customfields] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 1
+                            [value] => on
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 2
+                            [value] => 11944401200
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 3
+                            [value] => 23945373000130
+                        )
+
+                    [3] => Array
+                        (
+                            [id] => 70
+                            [value] => 
+                        )
+
+                )
+
+            [customfields2] => 11944401200
+            [customfields3] => 23945373000130
+            [customfields4] => 
+            [currency_code] => BRL
+        )
+
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s668
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 23945373000130
+            [FullName] => IGOR DE ASSIS FATICA
+            [Email] => contatoasantos@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s668
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [$id] => 6
+            [recurrentPayment] => stdClass Object
+                (
+                    [$id] => 7
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+            [numberOfPayments] => 0
+            [createdDate] => 0001-01-01T00:00:00
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 23945373000130
+            [fullName] => IGOR DE ASSIS FATICA
+            [email] => contatoasantos@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/833b9795-431b-4953-992c-c588e2c45291
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 668
+    [clientid] => 311
+    [orderid] => 610
+    [pid] => 3
+    [regdate] => 2018-04-18
+    [name] => TIH - Master 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => sohana.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [suspensionreason] => 
+    [firstpaymentamount] => 32.97
+    [recurringamount] => 32.97
+    [paymentmethod] => cielo
+    [paymentmethodname] => Cielo Cartões
+    [billingcycle] => Monthly
+    [nextduedate] => 2019-05-25
+    [status] => Suspended
+    [username] => sohanaco
+    [password] => 7300ruUfeR
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 445
+    [disklimit] => 10000
+    [bwusage] => 4
+    [bwlimit] => 0
+    [lastupdate] => 2019-06-27 09:00:28
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 311
+    [id] => 311
+    [uuid] => 1ecee16e-7041-4200-b481-bcb1590cca92
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [fullname] => IGOR DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA LTDA 
+    [email] => contatoasantos@hotmail.com
+    [address1] => Rua Washington Luiz Pereira de Souza, 101- sala 05
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-515
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 113754120011944401200
+    [password] => $2y$10$PdwLAQIN0Z4Be2UUF8JWQ.5VPWzkBwef3cFh3jUnioR8Ci0xgB1RG
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113754120011944401200
+    [telephoneNumber] => +55.113754120011944401200
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 1
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 27/06/2019 10:34<br>IP Address: 177.159.81.72<br>Host: 177.159.81.72.dynamic.adsl.gvt.net.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11944401200
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23945373000130
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11944401200
+    [customfields3] => 23945373000130
+    [customfields4] => 
+    [currency_code] => BRL
+    [client] => Array
+        (
+            [userid] => 311
+            [id] => 311
+            [uuid] => 1ecee16e-7041-4200-b481-bcb1590cca92
+            [firstname] => IGOR
+            [lastname] => DE ASSIS FATICA
+            [fullname] => IGOR DE ASSIS FATICA
+            [companyname] => SOHANA INCORPORADORA LTDA 
+            [email] => contatoasantos@hotmail.com
+            [address1] => Rua Washington Luiz Pereira de Souza, 101- sala 05
+            [address2] => Centro
+            [city] => Arujá
+            [fullstate] => SP
+            [state] => SP
+            [postcode] => 07400-515
+            [countrycode] => BR
+            [country] => BR
+            [phonenumber] => 113754120011944401200
+            [password] => $2y$10$PdwLAQIN0Z4Be2UUF8JWQ.5VPWzkBwef3cFh3jUnioR8Ci0xgB1RG
+            [statecode] => SP
+            [countryname] => Brazil
+            [phonecc] => 55
+            [phonenumberformatted] => +55.113754120011944401200
+            [telephoneNumber] => +55.113754120011944401200
+            [billingcid] => 0
+            [notes] => 
+            [twofaenabled] => 
+            [currency] => 1
+            [defaultgateway] => 
+            [cctype] => 
+            [cclastfour] => 
+            [gatewayid] => 
+            [securityqid] => 0
+            [securityqans] => 
+            [groupid] => 0
+            [status] => Active
+            [credit] => 0.00
+            [taxexempt] => 
+            [latefeeoveride] => 
+            [overideduenotices] => 
+            [separateinvoices] => 1
+            [disableautocc] => 
+            [emailoptout] => 
+            [marketing_emails_opt_in] => 
+            [overrideautoclose] => 
+            [allowSingleSignOn] => 1
+            [language] => 
+            [isOptedInToMarketingEmails] => 1
+            [lastlogin] => Date: 27/06/2019 10:34<br>IP Address: 177.159.81.72<br>Host: 177.159.81.72.dynamic.adsl.gvt.net.br
+            [customfields1] => on
+            [customfields] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 1
+                            [value] => on
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 2
+                            [value] => 11944401200
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 3
+                            [value] => 23945373000130
+                        )
+
+                    [3] => Array
+                        (
+                            [id] => 70
+                            [value] => 
+                        )
+
+                )
+
+            [customfields2] => 11944401200
+            [customfields3] => 23945373000130
+            [customfields4] => 
+            [currency_code] => BRL
+        )
+
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s668
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 23945373000130
+            [FullName] => IGOR DE ASSIS FATICA
+            [Email] => contatoasantos@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s668
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [$id] => 6
+            [recurrentPayment] => stdClass Object
+                (
+                    [$id] => 7
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+            [numberOfPayments] => 0
+            [createdDate] => 0001-01-01T00:00:00
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 23945373000130
+            [fullName] => IGOR DE ASSIS FATICA
+            [email] => contatoasantos@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/9771a6e1-0b49-4da4-93c5-3f1031e0b8ec
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 668
+    [clientid] => 311
+    [orderid] => 610
+    [pid] => 3
+    [regdate] => 2018-04-18
+    [name] => TIH - Master 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => sohana.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [suspensionreason] => 
+    [firstpaymentamount] => 32.97
+    [recurringamount] => 32.97
+    [paymentmethod] => cielo
+    [paymentmethodname] => Cielo Cartões
+    [billingcycle] => Monthly
+    [nextduedate] => 2019-05-25
+    [status] => Suspended
+    [username] => sohanaco
+    [password] => 7300ruUfeR
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 445
+    [disklimit] => 10000
+    [bwusage] => 4
+    [bwlimit] => 0
+    [lastupdate] => 2019-06-27 09:00:28
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 311
+    [id] => 311
+    [uuid] => 1ecee16e-7041-4200-b481-bcb1590cca92
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [fullname] => IGOR DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA LTDA 
+    [email] => contatoasantos@hotmail.com
+    [address1] => Rua Washington Luiz Pereira de Souza, 101- sala 05
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-515
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 113754120011944401200
+    [password] => $2y$10$PdwLAQIN0Z4Be2UUF8JWQ.5VPWzkBwef3cFh3jUnioR8Ci0xgB1RG
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113754120011944401200
+    [telephoneNumber] => +55.113754120011944401200
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 1
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 27/06/2019 14:01<br>IP Address: 177.159.81.72<br>Host: 177.159.81.72.dynamic.adsl.gvt.net.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11944401200
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23945373000130
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11944401200
+    [customfields3] => 23945373000130
+    [customfields4] => 
+    [currency_code] => BRL
+    [client] => Array
+        (
+            [userid] => 311
+            [id] => 311
+            [uuid] => 1ecee16e-7041-4200-b481-bcb1590cca92
+            [firstname] => IGOR
+            [lastname] => DE ASSIS FATICA
+            [fullname] => IGOR DE ASSIS FATICA
+            [companyname] => SOHANA INCORPORADORA LTDA 
+            [email] => contatoasantos@hotmail.com
+            [address1] => Rua Washington Luiz Pereira de Souza, 101- sala 05
+            [address2] => Centro
+            [city] => Arujá
+            [fullstate] => SP
+            [state] => SP
+            [postcode] => 07400-515
+            [countrycode] => BR
+            [country] => BR
+            [phonenumber] => 113754120011944401200
+            [password] => $2y$10$PdwLAQIN0Z4Be2UUF8JWQ.5VPWzkBwef3cFh3jUnioR8Ci0xgB1RG
+            [statecode] => SP
+            [countryname] => Brazil
+            [phonecc] => 55
+            [phonenumberformatted] => +55.113754120011944401200
+            [telephoneNumber] => +55.113754120011944401200
+            [billingcid] => 0
+            [notes] => 
+            [twofaenabled] => 
+            [currency] => 1
+            [defaultgateway] => 
+            [cctype] => 
+            [cclastfour] => 
+            [gatewayid] => 
+            [securityqid] => 0
+            [securityqans] => 
+            [groupid] => 0
+            [status] => Active
+            [credit] => 0.00
+            [taxexempt] => 
+            [latefeeoveride] => 
+            [overideduenotices] => 
+            [separateinvoices] => 1
+            [disableautocc] => 
+            [emailoptout] => 
+            [marketing_emails_opt_in] => 
+            [overrideautoclose] => 
+            [allowSingleSignOn] => 1
+            [language] => 
+            [isOptedInToMarketingEmails] => 1
+            [lastlogin] => Date: 27/06/2019 14:01<br>IP Address: 177.159.81.72<br>Host: 177.159.81.72.dynamic.adsl.gvt.net.br
+            [customfields1] => on
+            [customfields] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 1
+                            [value] => on
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 2
+                            [value] => 11944401200
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 3
+                            [value] => 23945373000130
+                        )
+
+                    [3] => Array
+                        (
+                            [id] => 70
+                            [value] => 
+                        )
+
+                )
+
+            [customfields2] => 11944401200
+            [customfields3] => 23945373000130
+            [customfields4] => 
+            [currency_code] => BRL
+        )
+
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s668
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 23945373000130
+            [FullName] => IGOR DE ASSIS FATICA
+            [Email] => contatoasantos@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s668
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [$id] => 6
+            [recurrentPayment] => stdClass Object
+                (
+                    [$id] => 7
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+            [numberOfPayments] => 0
+            [createdDate] => 0001-01-01T00:00:00
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 23945373000130
+            [fullName] => IGOR DE ASSIS FATICA
+            [email] => contatoasantos@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/95faa549-6d5c-4874-ab56-bc50b3692d39
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

@@ -1,0 +1,833 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4339
+    [id] => 4339
+    [1] => 303
+    [userid] => 303
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-07
+    [date] => 2018-02-07
+    [4] => 2018-02-22
+    [duedate] => 2018-02-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1850.00
+    [subtotal] => 1850.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1850.00
+    [total] => 1850.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 303
+    [id] => 303
+    [uuid] => 5860f80d-f287-4e58-9c9c-cfeaf1357183
+    [firstname] => Fernando 
+    [lastname] => Vilela Soares
+    [fullname] => Fernando  Vilela Soares
+    [companyname] => FERNANDO VILELA SOARES ME
+    [email] => fernando_vilelas@hotmail.com
+    [address1] => Rua Catumbi 1213 ap 1004
+    [address2] => Catumbi
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03021-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11984820886
+    [password] => $2y$10$rrBh4LLB4Mm1rI2RdVaPLughZh/2KeE32Q0hC5MTR74yk7KSspGN2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11984820886
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/02/2018 13:49<br>IP Address: 177.79.13.173<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11984820886
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29570545000115
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11984820886
+    [customfields3] => 29570545000115
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4339
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Criacao de Sistema para Locacao de Jogos e consoles Integrado a plataforma VINDI  - Conforme propo...
+                            [Description] => Desenvolvimento Por Hora - Criacao de Sistema para Locacao de Jogos e consoles Integrado a plataforma VINDI  - Conforme proposta 1309
+                            [UnitPrice] => 185000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Fernando  Vilela Soares
+            [Email] => fernando_vilelas@hotmail.com
+            [Identity] => 29570545000115
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4339
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Criacao de Sistema para Locacao de Jogos e consoles Integrado a plataforma VINDI  - Conforme propo...
+                            [description] => Desenvolvimento Por Hora - Criacao de Sistema para Locacao de Jogos e consoles Integrado a plataforma VINDI  - Conforme proposta 1309
+                            [unitPrice] => 185000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 29570545000115
+            [fullName] => Fernando  Vilela Soares
+            [email] => fernando_vilelas@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/844f12c7-f484-48b0-a475-ed33fd21515f
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4339
+    [id] => 4339
+    [1] => 303
+    [userid] => 303
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-07
+    [date] => 2018-02-07
+    [4] => 2018-02-22
+    [duedate] => 2018-02-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1850.00
+    [subtotal] => 1850.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1850.00
+    [total] => 1850.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 303
+    [id] => 303
+    [uuid] => 5860f80d-f287-4e58-9c9c-cfeaf1357183
+    [firstname] => Fernando 
+    [lastname] => Vilela Soares
+    [fullname] => Fernando  Vilela Soares
+    [companyname] => FERNANDO VILELA SOARES ME
+    [email] => fernando_vilelas@hotmail.com
+    [address1] => Rua Catumbi 1213 ap 1004
+    [address2] => Catumbi
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03021-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11984820886
+    [password] => $2y$10$rrBh4LLB4Mm1rI2RdVaPLughZh/2KeE32Q0hC5MTR74yk7KSspGN2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11984820886
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/02/2018 15:12<br>IP Address: 177.79.10.246<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11984820886
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29570545000115
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11984820886
+    [customfields3] => 29570545000115
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4339
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Criacao de Sistema para Locacao de Jogos e consoles Integrado a plataforma VINDI  - Conforme propo...
+                            [Description] => Desenvolvimento Por Hora - Criacao de Sistema para Locacao de Jogos e consoles Integrado a plataforma VINDI  - Conforme proposta 1309
+                            [UnitPrice] => 185000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Fernando  Vilela Soares
+            [Email] => fernando_vilelas@hotmail.com
+            [Identity] => 29570545000115
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4339
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Criacao de Sistema para Locacao de Jogos e consoles Integrado a plataforma VINDI  - Conforme propo...
+                            [description] => Desenvolvimento Por Hora - Criacao de Sistema para Locacao de Jogos e consoles Integrado a plataforma VINDI  - Conforme proposta 1309
+                            [unitPrice] => 185000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 29570545000115
+            [fullName] => Fernando  Vilela Soares
+            [email] => fernando_vilelas@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/92a4cb22-a747-4cfc-83ce-e93562d61f3e
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4339
+    [id] => 4339
+    [1] => 303
+    [userid] => 303
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-07
+    [date] => 2018-02-07
+    [4] => 2018-02-22
+    [duedate] => 2018-02-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1850.00
+    [subtotal] => 1850.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1850.00
+    [total] => 1850.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 303
+    [id] => 303
+    [uuid] => 5860f80d-f287-4e58-9c9c-cfeaf1357183
+    [firstname] => Fernando 
+    [lastname] => Vilela Soares
+    [fullname] => Fernando  Vilela Soares
+    [companyname] => FERNANDO VILELA SOARES ME
+    [email] => fernando_vilelas@hotmail.com
+    [address1] => Rua Catumbi 1213 ap 1004
+    [address2] => Catumbi
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03021-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11984820886
+    [password] => $2y$10$aDhPO3NDw6ssfiDMM7C5YOTiwRLvP9ctufZT7To.ZnbFD9bRfG5.6
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11984820886
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/02/2018 16:05<br>IP Address: 177.79.10.246<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11984820886
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29570545000115
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11984820886
+    [customfields3] => 29570545000115
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4339
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Criacao de Sistema para Locacao de Jogos e consoles Integrado a plataforma VINDI  - Conforme propo...
+                            [Description] => Desenvolvimento Por Hora - Criacao de Sistema para Locacao de Jogos e consoles Integrado a plataforma VINDI  - Conforme proposta 1309
+                            [UnitPrice] => 185000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Fernando  Vilela Soares
+            [Email] => fernando_vilelas@hotmail.com
+            [Identity] => 29570545000115
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4339
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Criacao de Sistema para Locacao de Jogos e consoles Integrado a plataforma VINDI  - Conforme propo...
+                            [description] => Desenvolvimento Por Hora - Criacao de Sistema para Locacao de Jogos e consoles Integrado a plataforma VINDI  - Conforme proposta 1309
+                            [unitPrice] => 185000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 29570545000115
+            [fullName] => Fernando  Vilela Soares
+            [email] => fernando_vilelas@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/08045437-4999-4a99-99e9-fb35a82709b6
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+20/02/2018 16:13:37
+INICIO_______________________________________________________________LOG:BEGIN:::20/02/2018 16:37<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 4339
+    [amount] => 185000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => c6c7d57ee25e477b96f8309703244c85
+    [created_date] => 20/02/2018 16:37:10
+    [customer_name] => Fernando Soares
+    [customer_phone] => 11984820886
+    [customer_identity] => 29570545000115
+    [customer_email] => fernando_vilelas@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 546056******0077
+    [payment_installments] => 5
+    [payment_status] => 2
+    [tid] => 10760777627AANGC6RFB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/02/2018 16:13:37
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->4339 | Result->success | ValorPago ->1850.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 4339
+    [amount] => 185000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => c6c7d57ee25e477b96f8309703244c85
+    [created_date] => 20/02/2018 16:37:10
+    [customer_name] => Fernando Soares
+    [customer_phone] => 11984820886
+    [customer_identity] => 29570545000115
+    [customer_email] => fernando_vilelas@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 546056******0077
+    [payment_installments] => 5
+    [payment_status] => 2
+    [tid] => 10760777627AANGC6RFB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/02/2018 16:42:42
+INICIO_______________________________________________________________LOG:BEGIN:::20/02/2018 16:42<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c6c7d57ee25e477b96f8309703244c85
+    [amount] => 185000
+    [order_number] => 4339
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/02/2018 16:42:42
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c6c7d57ee25e477b96f8309703244c85
+    [amount] => 185000
+    [order_number] => 4339
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/02/2018 16:43:42
+INICIO_______________________________________________________________LOG:BEGIN:::20/02/2018 16:42<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c6c7d57ee25e477b96f8309703244c85
+    [amount] => 185000
+    [order_number] => 4339
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/02/2018 16:43:42
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c6c7d57ee25e477b96f8309703244c85
+    [amount] => 185000
+    [order_number] => 4339
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/02/2018 16:43:42
+INICIO_______________________________________________________________LOG:BEGIN:::20/02/2018 16:42<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c6c7d57ee25e477b96f8309703244c85
+    [amount] => 185000
+    [order_number] => 4339
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/02/2018 16:43:42
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c6c7d57ee25e477b96f8309703244c85
+    [amount] => 185000
+    [order_number] => 4339
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

@@ -1,0 +1,33 @@
+
+
+26/09/2019 11:19:08
+INICIO_______________________________________________________________LOG:BEGIN:::26/09/2019 11:08<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 96faaa8542d64e46a9f110472c0a86ea
+    [amount] => 4462
+    [order_number] => 6547
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/09/2019 11:20:08
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->6547 | Result->success | ValorPago ->39.96 | Message->
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 96faaa8542d64e46a9f110472c0a86ea
+    [amount] => 4462
+    [order_number] => 6547
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

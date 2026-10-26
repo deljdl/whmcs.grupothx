@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5072
+    [id] => 5072
+    [1] => 301
+    [userid] => 301
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-13
+    [date] => 2018-08-13
+    [4] => 2018-08-18
+    [duedate] => 2018-08-18
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 301
+    [id] => 301
+    [uuid] => c0e77869-eff3-4267-b093-7aa311c6b284
+    [firstname] => Rogerio
+    [lastname] => Luz Wendland
+    [fullname] => Rogerio Luz Wendland
+    [companyname] => Distriland - Distribuidora Wendland Ltda - Epp
+    [email] => vendas@distriland.com.br
+    [address1] => Rua Pastor Lorez Hahn, 217
+    [address2] => Amizade
+    [city] => Guaramirim
+    [fullstate] => SC
+    [state] => SC
+    [postcode] => 89270-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 47 992484122
+    [password] => $2y$10$6Sgs/zropmFuVBDCoE/mbe1LkUbaCDe5n/VppIFA42BhztF6BUHXK
+    [statecode] => SC
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.47992484122
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/08/2018 11:02<br>IP Address: 186.235.58.173<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 47992484122
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 24.201.833/0001-89
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 47992484122
+    [customfields3] => 24.201.833/0001-89
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

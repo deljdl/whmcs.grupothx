@@ -1,0 +1,674 @@
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 606
+    [clientid] => 295
+    [orderid] => 551
+    [pid] => 3
+    [regdate] => 2017-11-08
+    [name] => 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => apoyoconsultoria.com.br
+    [dedicatedip] => 
+    [serverid] => 8
+    [servername] => TiHospedagem.com
+    [serverip] => 198.1.103.252
+    [serverhostname] => tihospedagem.com
+    [firstpaymentamount] => 32.97
+    [recurringamount] => 32.97
+    [paymentmethod] => deposito_ou_transferencia
+    [paymentmethodname] => Depósito ou Transferência
+    [billingcycle] => Monthly
+    [nextduedate] => 2017-12-09
+    [status] => Active
+    [username] => apoyocon
+    [password] => 5WY1a57jyj
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => ANTES apoyoconsultoria.com.br
+
+MX
+1:aspmx.l.google.com
+5:alt1.aspmx.l.google.com
+5:alt2.aspmx.l.google.com
+10:alt3.aspmx.l.google.com
+10:alt4.aspmx.l.google.com
+
+
+ANTES apoyoimoveis.com.br
+
+NS
+ns1.dominios.uol.com.br
+ns2.dominios.uol.com.br
+ns3.dominios.uol.com.br
+
+A 187.17.111.103
+    [diskusage] => 2946
+    [disklimit] => 10000
+    [bwusage] => 10539
+    [bwlimit] => 0
+    [lastupdate] => 2017-11-24 09:00:24
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 295
+    [id] => 295
+    [uuid] => 1b03f454-bdfe-4bb3-89f8-c40bcbb92e5c
+    [firstname] => Alexandre
+    [lastname] => Medeiros de Assis
+    [fullname] => Alexandre Medeiros de Assis
+    [companyname] => APOYO IMOVEIS LTDA ME
+    [email] => alexandre@apoyoimoveis.com.br
+    [address1] => Avenida Nossa Senhora do Sabará
+    [address2] => Vila Emir
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04447-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1123692433
+    [password] => $2y$10$MEAdL8lHzVAUHj8X2XyylO55K8yLsDyqZvvdOrgpaWb6R3yjIOYOC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1123692433
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/12/2017 11:31<br>IP Address: 177.141.165.145<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11989577616
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.071.814/0001-33
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11989577616
+    [customfields3] => 11.071.814/0001-33
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s606
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11071814000133
+            [FullName] => Alexandre Medeiros de Assis
+            [Email] => alexandre@apoyoimoveis.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s606
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11071814000133
+            [fullName] => Alexandre Medeiros de Assis
+            [email] => alexandre@apoyoimoveis.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/624e9a83-36ff-4a7d-8e72-8da4d8c7dc76
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 606
+    [clientid] => 295
+    [orderid] => 551
+    [pid] => 3
+    [regdate] => 2017-11-08
+    [name] => TIH - Master 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => apoyoconsultoria.com.br
+    [dedicatedip] => 
+    [serverid] => 8
+    [servername] => TiHospedagem.com
+    [serverip] => 198.1.103.252
+    [serverhostname] => tihospedagem.com
+    [suspensionreason] => 
+    [firstpaymentamount] => 32.97
+    [recurringamount] => 32.97
+    [paymentmethod] => deposito_ou_transferencia
+    [paymentmethodname] => Depósito ou Transferência
+    [billingcycle] => Monthly
+    [nextduedate] => 2019-08-09
+    [status] => Active
+    [username] => apoyocon
+    [password] => 5WY1a57jyj
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => ANTES apoyoconsultoria.com.br
+
+MX
+1:aspmx.l.google.com
+5:alt1.aspmx.l.google.com
+5:alt2.aspmx.l.google.com
+10:alt3.aspmx.l.google.com
+10:alt4.aspmx.l.google.com
+
+
+ANTES apoyoimoveis.com.br
+
+NS
+ns1.dominios.uol.com.br
+ns2.dominios.uol.com.br
+ns3.dominios.uol.com.br
+
+A 187.17.111.103
+    [diskusage] => 2946
+    [disklimit] => 10000
+    [bwusage] => 10539
+    [bwlimit] => 0
+    [lastupdate] => 2017-11-24 09:00:24
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 295
+    [id] => 295
+    [uuid] => 1b03f454-bdfe-4bb3-89f8-c40bcbb92e5c
+    [firstname] => Alexandre
+    [lastname] => Medeiros de Assis
+    [fullname] => Alexandre Medeiros de Assis
+    [companyname] => APOYO IMOVEIS LTDA ME
+    [email] => alexandre@apoyoimoveis.com.br
+    [address1] => Avenida Nossa Senhora do Sabará
+    [address2] => Vila Emir
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04447-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1123692433
+    [password] => $2y$10$RzR0ILXsK30rsAhInO57DOLvDpEfUHIqAZylHIkhU6sXEhxqw3HlO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1123692433
+    [telephoneNumber] => +55.1123692433
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 02/08/2019 14:07<br>IP Address: 201.81.96.187<br>Host: c95160bb.virtua.com.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11989577616
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.071.814/0001-33
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11989577616
+    [customfields3] => 11.071.814/0001-33
+    [customfields4] => 
+    [currency_code] => BRL
+    [client] => Array
+        (
+            [userid] => 295
+            [id] => 295
+            [uuid] => 1b03f454-bdfe-4bb3-89f8-c40bcbb92e5c
+            [firstname] => Alexandre
+            [lastname] => Medeiros de Assis
+            [fullname] => Alexandre Medeiros de Assis
+            [companyname] => APOYO IMOVEIS LTDA ME
+            [email] => alexandre@apoyoimoveis.com.br
+            [address1] => Avenida Nossa Senhora do Sabará
+            [address2] => Vila Emir
+            [city] => São Paulo
+            [fullstate] => SP
+            [state] => SP
+            [postcode] => 04447-010
+            [countrycode] => BR
+            [country] => BR
+            [phonenumber] => 1123692433
+            [password] => $2y$10$RzR0ILXsK30rsAhInO57DOLvDpEfUHIqAZylHIkhU6sXEhxqw3HlO
+            [statecode] => SP
+            [countryname] => Brazil
+            [phonecc] => 55
+            [phonenumberformatted] => +55.1123692433
+            [telephoneNumber] => +55.1123692433
+            [billingcid] => 0
+            [notes] => 
+            [twofaenabled] => 
+            [currency] => 1
+            [defaultgateway] => 
+            [cctype] => 
+            [cclastfour] => 
+            [gatewayid] => 
+            [securityqid] => 0
+            [securityqans] => 
+            [groupid] => 0
+            [status] => Active
+            [credit] => 0.00
+            [taxexempt] => 
+            [latefeeoveride] => 
+            [overideduenotices] => 
+            [separateinvoices] => 
+            [disableautocc] => 
+            [emailoptout] => 
+            [marketing_emails_opt_in] => 
+            [overrideautoclose] => 
+            [allowSingleSignOn] => 1
+            [language] => 
+            [isOptedInToMarketingEmails] => 1
+            [lastlogin] => Date: 02/08/2019 14:07<br>IP Address: 201.81.96.187<br>Host: c95160bb.virtua.com.br
+            [customfields1] => on
+            [customfields] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 1
+                            [value] => on
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 2
+                            [value] => 11989577616
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 3
+                            [value] => 11.071.814/0001-33
+                        )
+
+                    [3] => Array
+                        (
+                            [id] => 70
+                            [value] => 
+                        )
+
+                )
+
+            [customfields2] => 11989577616
+            [customfields3] => 11.071.814/0001-33
+            [customfields4] => 
+            [currency_code] => BRL
+        )
+
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s606
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11071814000133
+            [FullName] => Alexandre Medeiros de Assis
+            [Email] => alexandre@apoyoimoveis.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s606
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [$id] => 6
+            [recurrentPayment] => stdClass Object
+                (
+                    [$id] => 7
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+            [numberOfPayments] => 0
+            [createdDate] => 0001-01-01T00:00:00
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 11071814000133
+            [fullName] => Alexandre Medeiros de Assis
+            [email] => alexandre@apoyoimoveis.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/39b6e918-3f3c-4a8b-be44-b89287e394c2
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

@@ -1,0 +1,247 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2282
+    [id] => 2282
+    [1] => 111
+    [userid] => 111
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-08-10
+    [date] => 2016-08-10
+    [4] => 2016-05-07
+    [duedate] => 2016-05-07
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 45.00
+    [subtotal] => 45.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 45.00
+    [total] => 45.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 111
+    [id] => 111
+    [uuid] => a0636f8f-a9da-4e92-8549-6e2fdec30ed2
+    [firstname] => Katya
+    [lastname] => Regina Faro
+    [fullname] => Katya Regina Faro
+    [companyname] => Blessed 
+    [email] => katyafaro@blessed.net.br
+    [address1] => Rua Maranhão, 569, 1 andar
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => 
+    [state] => 
+    [postcode] => 01240-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => tel: (11) 3337-5067 / (11) 3926-6592 / (11) 3926-6594
+    [password] => 2cmo12jVbwomW7q7BDF4g/pcz+r2BTgQHlZy
+    [statecode] => 
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113337506711392665921139266594
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 10/08/2016 17:53<br>IP Address: 189.62.51.18<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11987004141
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 255.263.868-64
+                )
+
+        )
+
+    [customfields2] => 11987004141
+    [customfields3] => 255.263.868-64
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2282
+    [SoftDescriptor] => 2282
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Renovação de Domínio - blessedstoreonline.com.br - 1 Ano(s) (07/05/2016 - 06/05/2017)
+                            [Description] => Renovação de Domínio - blessedstoreonline.com.br - 1 Ano(s) (07/05/2016 - 06/05/2017)
+                            [UnitPrice] => 4500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Katya Regina Faro
+            [Email] => katyafaro@blessed.net.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2282
+    [softDescriptor] => 2282
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Renovação de Domínio - blessedstoreonline.com.br - 1 Ano(s) (07/05/2016 - 06/05/2017)
+                            [description] => Renovação de Domínio - blessedstoreonline.com.br - 1 Ano(s) (07/05/2016 - 06/05/2017)
+                            [unitPrice] => 4500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Katya Regina Faro
+            [email] => katyafaro@blessed.net.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/4fe44306-29eb-416d-b0c9-4544ad74cda5
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>

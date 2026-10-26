@@ -1,0 +1,1628 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 6288
+    [id] => 6288
+    [1] => 94
+    [userid] => 94
+    [2] => 
+    [invoicenum] => 
+    [3] => 2019-06-27
+    [date] => 2019-06-27
+    [4] => 2019-07-04
+    [duedate] => 2019-07-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 98.91
+    [subtotal] => 98.91
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 98.91
+    [total] => 98.91
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => itaushopline
+    [paymentmethod] => itaushopline
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 94
+    [id] => 94
+    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+    [firstname] => Dulce
+    [lastname] => Naves
+    [fullname] => Dulce Naves
+    [companyname] => Sítio Lagoa da Serra
+    [email] => lagoadaserra1@hotmail.com
+    [address1] => Estrada das Maciéis, 112
+    [address2] => Embu Mirim
+    [city] => Itapecerica da Serra
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 06854120
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146662408
+    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 94
+                    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+                    [firstname] => Dulce
+                    [lastname] => Naves
+                    [companyname] => Sítio Lagoa da Serra
+                    [email] => lagoadaserra1@hotmail.com
+                    [address1] => Estrada das Maciéis, 112
+                    [address2] => Embu Mirim
+                    [city] => Itapecerica da Serra
+                    [state] => SP
+                    [postcode] => 06854120
+                    [country] => BR
+                    [phonenumber] => 11 4666 - 2408
+                    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2014-08-12
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => 4re7xRoRGIOzqDjYJrr0z2lqwQ0=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-07-05 09:29:20
+                    [ip] => 189.95.5.51
+                    [host] => 189-95-5-51.3g.claro.net.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 607b79cad1036d49347c462d223de56f
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2018-02-20 10:33:29
+                    [pwresetexpiry] => 2018-05-14 14:43:45
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 94
+                    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+                    [firstname] => Dulce
+                    [lastname] => Naves
+                    [companyname] => Sítio Lagoa da Serra
+                    [email] => lagoadaserra1@hotmail.com
+                    [address1] => Estrada das Maciéis, 112
+                    [address2] => Embu Mirim
+                    [city] => Itapecerica da Serra
+                    [state] => SP
+                    [postcode] => 06854120
+                    [country] => BR
+                    [phonenumber] => 11 4666 - 2408
+                    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2014-08-12
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => 4re7xRoRGIOzqDjYJrr0z2lqwQ0=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-07-05 09:29:20
+                    [ip] => 189.95.5.51
+                    [host] => 189-95-5-51.3g.claro.net.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 607b79cad1036d49347c462d223de56f
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2018-02-20 10:33:29
+                    [pwresetexpiry] => 2018-05-14 14:43:45
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146662408
+    [telephoneNumber] => +55.1146662408
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 05/07/2019 09:29<br>IP Address: 189.95.5.51<br>Host: 189-95-5-51.3g.claro.net.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11997320404
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 04498161840
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11997320404
+    [customfields3] => 04498161840
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 6288
+    [id] => 6288
+    [1] => 94
+    [userid] => 94
+    [2] => 
+    [invoicenum] => 
+    [3] => 2019-06-27
+    [date] => 2019-06-27
+    [4] => 2019-07-04
+    [duedate] => 2019-07-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 98.91
+    [subtotal] => 98.91
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 98.91
+    [total] => 98.91
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => itaushopline
+    [paymentmethod] => itaushopline
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 94
+    [id] => 94
+    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+    [firstname] => Dulce
+    [lastname] => Naves
+    [fullname] => Dulce Naves
+    [companyname] => Sítio Lagoa da Serra
+    [email] => lagoadaserra1@hotmail.com
+    [address1] => Estrada das Maciéis, 112
+    [address2] => Embu Mirim
+    [city] => Itapecerica da Serra
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 06854120
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146662408
+    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 94
+                    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+                    [firstname] => Dulce
+                    [lastname] => Naves
+                    [companyname] => Sítio Lagoa da Serra
+                    [email] => lagoadaserra1@hotmail.com
+                    [address1] => Estrada das Maciéis, 112
+                    [address2] => Embu Mirim
+                    [city] => Itapecerica da Serra
+                    [state] => SP
+                    [postcode] => 06854120
+                    [country] => BR
+                    [phonenumber] => 11 4666 - 2408
+                    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2014-08-12
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => 4re7xRoRGIOzqDjYJrr0z2lqwQ0=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-07-05 09:29:20
+                    [ip] => 189.95.5.51
+                    [host] => 189-95-5-51.3g.claro.net.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 607b79cad1036d49347c462d223de56f
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2018-02-20 10:33:29
+                    [pwresetexpiry] => 2018-05-14 14:43:45
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 94
+                    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+                    [firstname] => Dulce
+                    [lastname] => Naves
+                    [companyname] => Sítio Lagoa da Serra
+                    [email] => lagoadaserra1@hotmail.com
+                    [address1] => Estrada das Maciéis, 112
+                    [address2] => Embu Mirim
+                    [city] => Itapecerica da Serra
+                    [state] => SP
+                    [postcode] => 06854120
+                    [country] => BR
+                    [phonenumber] => 11 4666 - 2408
+                    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2014-08-12
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => 4re7xRoRGIOzqDjYJrr0z2lqwQ0=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-07-05 09:29:20
+                    [ip] => 189.95.5.51
+                    [host] => 189-95-5-51.3g.claro.net.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 607b79cad1036d49347c462d223de56f
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2018-02-20 10:33:29
+                    [pwresetexpiry] => 2018-05-14 14:43:45
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146662408
+    [telephoneNumber] => +55.1146662408
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 05/07/2019 09:29<br>IP Address: 189.95.5.51<br>Host: 189-95-5-51.3g.claro.net.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11997320404
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 04498161840
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11997320404
+    [customfields3] => 04498161840
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 6288
+    [id] => 6288
+    [1] => 94
+    [userid] => 94
+    [2] => 
+    [invoicenum] => 
+    [3] => 2019-06-27
+    [date] => 2019-06-27
+    [4] => 2019-07-04
+    [duedate] => 2019-07-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 98.91
+    [subtotal] => 98.91
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 98.91
+    [total] => 98.91
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => itaushopline
+    [paymentmethod] => itaushopline
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 94
+    [id] => 94
+    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+    [firstname] => Dulce
+    [lastname] => Naves
+    [fullname] => Dulce Naves
+    [companyname] => Sítio Lagoa da Serra
+    [email] => lagoadaserra1@hotmail.com
+    [address1] => Estrada das Maciéis, 112
+    [address2] => Embu Mirim
+    [city] => Itapecerica da Serra
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 06854120
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146662408
+    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 94
+                    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+                    [firstname] => Dulce
+                    [lastname] => Naves
+                    [companyname] => Sítio Lagoa da Serra
+                    [email] => lagoadaserra1@hotmail.com
+                    [address1] => Estrada das Maciéis, 112
+                    [address2] => Embu Mirim
+                    [city] => Itapecerica da Serra
+                    [state] => SP
+                    [postcode] => 06854120
+                    [country] => BR
+                    [phonenumber] => 11 4666 - 2408
+                    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2014-08-12
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => 4re7xRoRGIOzqDjYJrr0z2lqwQ0=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-07-05 09:29:20
+                    [ip] => 189.95.5.51
+                    [host] => 189-95-5-51.3g.claro.net.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 607b79cad1036d49347c462d223de56f
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2018-02-20 10:33:29
+                    [pwresetexpiry] => 2018-05-14 14:43:45
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 94
+                    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+                    [firstname] => Dulce
+                    [lastname] => Naves
+                    [companyname] => Sítio Lagoa da Serra
+                    [email] => lagoadaserra1@hotmail.com
+                    [address1] => Estrada das Maciéis, 112
+                    [address2] => Embu Mirim
+                    [city] => Itapecerica da Serra
+                    [state] => SP
+                    [postcode] => 06854120
+                    [country] => BR
+                    [phonenumber] => 11 4666 - 2408
+                    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2014-08-12
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => 4re7xRoRGIOzqDjYJrr0z2lqwQ0=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-07-05 09:29:20
+                    [ip] => 189.95.5.51
+                    [host] => 189-95-5-51.3g.claro.net.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 607b79cad1036d49347c462d223de56f
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2018-02-20 10:33:29
+                    [pwresetexpiry] => 2018-05-14 14:43:45
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146662408
+    [telephoneNumber] => +55.1146662408
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 05/07/2019 09:29<br>IP Address: 189.95.5.51<br>Host: 189-95-5-51.3g.claro.net.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11997320404
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 04498161840
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11997320404
+    [customfields3] => 04498161840
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 6288
+    [id] => 6288
+    [1] => 94
+    [userid] => 94
+    [2] => 
+    [invoicenum] => 
+    [3] => 2019-06-27
+    [date] => 2019-06-27
+    [4] => 2019-07-04
+    [duedate] => 2019-07-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 98.91
+    [subtotal] => 98.91
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 98.91
+    [total] => 98.91
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => itaushopline
+    [paymentmethod] => itaushopline
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 94
+    [id] => 94
+    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+    [firstname] => Dulce
+    [lastname] => Naves
+    [fullname] => Dulce Naves
+    [companyname] => Sítio Lagoa da Serra
+    [email] => lagoadaserra1@hotmail.com
+    [address1] => Estrada das Maciéis, 112
+    [address2] => Embu Mirim
+    [city] => Itapecerica da Serra
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 06854120
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146662408
+    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 94
+                    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+                    [firstname] => Dulce
+                    [lastname] => Naves
+                    [companyname] => Sítio Lagoa da Serra
+                    [email] => lagoadaserra1@hotmail.com
+                    [address1] => Estrada das Maciéis, 112
+                    [address2] => Embu Mirim
+                    [city] => Itapecerica da Serra
+                    [state] => SP
+                    [postcode] => 06854120
+                    [country] => BR
+                    [phonenumber] => 11 4666 - 2408
+                    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2014-08-12
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => 4re7xRoRGIOzqDjYJrr0z2lqwQ0=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-07-05 09:29:20
+                    [ip] => 189.95.5.51
+                    [host] => 189-95-5-51.3g.claro.net.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 607b79cad1036d49347c462d223de56f
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2018-02-20 10:33:29
+                    [pwresetexpiry] => 2018-05-14 14:43:45
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 94
+                    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+                    [firstname] => Dulce
+                    [lastname] => Naves
+                    [companyname] => Sítio Lagoa da Serra
+                    [email] => lagoadaserra1@hotmail.com
+                    [address1] => Estrada das Maciéis, 112
+                    [address2] => Embu Mirim
+                    [city] => Itapecerica da Serra
+                    [state] => SP
+                    [postcode] => 06854120
+                    [country] => BR
+                    [phonenumber] => 11 4666 - 2408
+                    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2014-08-12
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => 4re7xRoRGIOzqDjYJrr0z2lqwQ0=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-07-05 09:29:20
+                    [ip] => 189.95.5.51
+                    [host] => 189-95-5-51.3g.claro.net.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 607b79cad1036d49347c462d223de56f
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2018-02-20 10:33:29
+                    [pwresetexpiry] => 2018-05-14 14:43:45
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146662408
+    [telephoneNumber] => +55.1146662408
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 05/07/2019 09:29<br>IP Address: 189.95.5.51<br>Host: 189-95-5-51.3g.claro.net.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11997320404
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 04498161840
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11997320404
+    [customfields3] => 04498161840
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

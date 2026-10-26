@@ -1,0 +1,246 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5016
+    [id] => 5016
+    [1] => 250
+    [userid] => 250
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-30
+    [date] => 2018-07-30
+    [4] => 2018-08-05
+    [duedate] => 2018-08-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 250
+    [id] => 250
+    [uuid] => 470b0c4f-7d32-41c5-9484-bd04c14cec10
+    [firstname] => Ana
+    [lastname] => Carolina Nunes
+    [fullname] => Ana Carolina Nunes
+    [companyname] => Engesafe
+    [email] => contato@engesafe.com.br
+    [address1] => Rua Valdemar Paiva e Almeida
+    [address2] => Cidade Nova São Miguel
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08042-360
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 95770-8074 
+    [password] => $2y$10$dOYPGucNx1Bjevi8t7FIMOWaBkwGvAQOaV/N3L2tbvKiVqnW2sK/S
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11957708074
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/08/2018 09:10<br>IP Address: 200.155.142.66<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957708074
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 36008744897
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11957708074
+    [customfields3] => 36008744897
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5016
+    [id] => 5016
+    [1] => 250
+    [userid] => 250
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-30
+    [date] => 2018-07-30
+    [4] => 2018-08-05
+    [duedate] => 2018-08-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 250
+    [id] => 250
+    [uuid] => 470b0c4f-7d32-41c5-9484-bd04c14cec10
+    [firstname] => Ana
+    [lastname] => Carolina Nunes
+    [fullname] => Ana Carolina Nunes
+    [companyname] => Engesafe
+    [email] => contato@engesafe.com.br
+    [address1] => Rua Valdemar Paiva e Almeida
+    [address2] => Cidade Nova São Miguel
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08042-360
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 95770-8074 
+    [password] => $2y$10$dOYPGucNx1Bjevi8t7FIMOWaBkwGvAQOaV/N3L2tbvKiVqnW2sK/S
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11957708074
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/08/2018 09:10<br>IP Address: 200.155.142.66<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957708074
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 36008744897
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11957708074
+    [customfields3] => 36008744897
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

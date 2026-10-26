@@ -1,0 +1,262 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3789
+    [id] => 3789
+    [1] => 30
+    [userid] => 30
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-09-08
+    [date] => 2017-09-08
+    [4] => 2017-09-15
+    [duedate] => 2017-09-15
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 39.96
+    [subtotal] => 39.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 39.96
+    [total] => 39.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 30
+    [id] => 30
+    [uuid] => 233398f1-5d88-412a-90b2-50debe2f81b6
+    [firstname] => Adelson
+    [lastname] => Alves de Queiroz
+    [fullname] => Adelson Alves de Queiroz
+    [companyname] => Móveis Queiroz Ltda - Me
+    [email] => adelsonaq@ig.com.br
+    [address1] => Rua Dom Manoel 	Nº: 	257
+    [address2] => Jardim Obelisco
+    [city] => Poá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08565200
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 4636-3116 / (11)4639-5336
+    [password] => ujgUsMcG0wrDsjYyc+x++FYNVMfZsdEmp4XF
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11463631161146395336
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/09/2017 09:16<br>IP Address: 168.227.12.162<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947530003
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 09.531.444/0001-28
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947530003
+    [customfields3] => 09.531.444/0001-28
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3789
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Premium - moveisqueiroz.com (15/09/2017 - 14/10/2017)
+                            [Description] => TIH - Premium - moveisqueiroz.com (15/09/2017 - 14/10/2017)
+                            [UnitPrice] => 3996
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 400
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 5 dias de atraso
+                            [Description] => Juros por 5 dias de atraso
+                            [UnitPrice] => 66
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Adelson Alves de Queiroz
+            [Email] => adelsonaq@ig.com.br
+            [Identity] => 09531444000128
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3789
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Premium - moveisqueiroz.com (15/09/2017 - 14/10/2017)
+                            [description] => TIH - Premium - moveisqueiroz.com (15/09/2017 - 14/10/2017)
+                            [unitPrice] => 3996
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 400
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 5 dias de atraso
+                            [description] => Juros por 5 dias de atraso
+                            [unitPrice] => 66
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 09531444000128
+            [fullName] => Adelson Alves de Queiroz
+            [email] => adelsonaq@ig.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/78b741b7-f8d1-4cdf-aedf-4cfb3347ff86
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

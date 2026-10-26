@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3135
+    [id] => 3135
+    [1] => 186
+    [userid] => 186
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-27
+    [date] => 2017-03-27
+    [4] => 2017-04-03
+    [duedate] => 2017-04-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 186
+    [id] => 186
+    [uuid] => a5d1995d-ddfc-4c7f-90d4-8f0f5bc305cd
+    [firstname] => Christiane
+    [lastname] => Sperandéo
+    [fullname] => Christiane Sperandéo
+    [companyname] => LIGHT CRIAÇÃO E COMUNICAÇÃO LTDA
+    [email] => chris@lightad.com.br
+    [address1] => Rua Paulistânia 551
+    [address2] => Sumarezinho
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05440-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 113816-1933
+    [password] => 3c65aea275d18a04eb0f004ab515fcfa:RmIlr
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1138161933
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/03/2017 11:37<br>IP Address: 191.32.192.234<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11987300363
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00340324/0002-50
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11987300363
+    [customfields3] => 00340324/0002-50
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

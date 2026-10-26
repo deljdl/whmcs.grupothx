@@ -1,0 +1,320 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2151
+    [id] => 2151
+    [1] => 177
+    [userid] => 177
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-07-05
+    [date] => 2016-07-05
+    [4] => 2016-07-05
+    [duedate] => 2016-07-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 23.97
+    [subtotal] => 23.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 23.97
+    [total] => 23.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 177
+    [id] => 177
+    [uuid] => 57d1fa72-760d-4a6b-bc0c-515f9f47ca1f
+    [firstname] => Fabio
+    [lastname] => Roberto Alves de Lima
+    [fullname] => Fabio Roberto Alves de Lima
+    [companyname] => Revenda 
+    [email] => fabioradl@gmail.com
+    [address1] => Rua prefeito rinaldo Poli, 1184
+    [address2] => Jd. City
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07082530
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 9-87162489
+    [password] => $2y$10$FEBhq3160dF.0Ub4mZOVNOu3tkGYKAbMvbhiLnQtECnwaoGHtjRBK
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.987162489
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/07/2016 12:54<br>IP Address: 187.122.125.189<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11987162489
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 342931398-85
+                )
+
+        )
+
+    [customfields2] => 11987162489
+    [customfields3] => 342931398-85
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2151
+    [SoftDescriptor] => 2151
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - nativeti.com.br (05/07/2016 - 04/08/2016)
+                            [Description] => TIH - Master - nativeti.com.br (05/07/2016 - 04/08/2016)
+                            [UnitPrice] => 2397
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Fabio Roberto Alves de Lima
+            [Email] => fabioradl@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2151
+    [softDescriptor] => 2151
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - nativeti.com.br (05/07/2016 - 04/08/2016)
+                            [description] => TIH - Master - nativeti.com.br (05/07/2016 - 04/08/2016)
+                            [unitPrice] => 2397
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Fabio Roberto Alves de Lima
+            [email] => fabioradl@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/bf387e51-e217-462e-bfad-22154410af0b
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+05/07/2016 13:26:09
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2151
+    [amount] => 2397
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => ffe59b02a8364fa3ad7f342bf33e6f5b
+    [created_date] => 05/07/2016 15:09:23
+    [customer_name] => Raimundo Lima
+    [customer_phone] => 1123046677
+    [customer_identity] => 87248670804
+    [customer_email] => fabioradl@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 5
+    [payment_maskedcreditcard] => 438935******3389
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776200000000DA
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+05/07/2016 13:47:09
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->177 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2151
+    [amount] => 2397
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => ffe59b02a8364fa3ad7f342bf33e6f5b
+    [created_date] => 05/07/2016 15:09:23
+    [customer_name] => Raimundo Lima
+    [customer_phone] => 1123046677
+    [customer_identity] => 87248670804
+    [customer_email] => fabioradl@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 5
+    [payment_maskedcreditcard] => 438935******3389
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776200000000DA
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+05/07/2016 13:02:11
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => ffe59b02a8364fa3ad7f342bf33e6f5b
+    [amount] => 2397
+    [order_number] => 2151
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+05/07/2016 13:02:11
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => ffe59b02a8364fa3ad7f342bf33e6f5b
+    [amount] => 2397
+    [order_number] => 2151
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

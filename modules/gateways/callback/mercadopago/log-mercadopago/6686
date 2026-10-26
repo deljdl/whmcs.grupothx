@@ -1,0 +1,2190 @@
+
+Dados Invoice
+<pre>Array
+(
+    [id] => 6686
+    [0] => 6686
+    [userid] => 107
+    [1] => 107
+    [invoicenum] => 
+    [2] => 
+    [date] => 2019-10-20
+    [3] => 2019-10-20
+    [duedate] => 2019-10-27
+    [4] => 2019-10-27
+    [datepaid] => 0000-00-00 00:00:00
+    [5] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [subtotal] => 89.70
+    [7] => 89.70
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 0.00
+    [total] => 89.70
+    [11] => 89.70
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => 0.00
+    [status] => Unpaid
+    [14] => Unpaid
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => boleto_itau_sem_registro
+    [paymethodid] => 
+    [16] => 
+    [notes] => 
+    [17] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 107
+    [id] => 107
+    [uuid] => 142cf5c2-c2d3-4347-9391-db75c80cfaef
+    [firstname] => Eduardo
+    [lastname] => Zanoli
+    [companyname] => H2E - Engenharia
+    [email] => financeiro@ferza.com.br
+    [address1] => ESTRADA ARUJA ITAQUA , 777
+    [address2] => LIMOEIRO
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07405-500
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11465411441178087056
+    [tax_id] => 
+    [password] => fad95b8bc3c3c995777354e47ea6cfdd:(U(D(
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                    [passwordResetKeyExpiryDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                    [2] => passwordResetKeyExpiryDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                    [2] => groupName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 107
+                    [uuid] => 142cf5c2-c2d3-4347-9391-db75c80cfaef
+                    [firstname] => Eduardo
+                    [lastname] => Zanoli
+                    [companyname] => H2E - Engenharia
+                    [email] => financeiro@ferza.com.br
+                    [address1] => ESTRADA ARUJA ITAQUA , 777
+                    [address2] => LIMOEIRO
+                    [city] => Arujá
+                    [state] => SP
+                    [postcode] => 07405-500
+                    [country] => BR
+                    [phonenumber] => 114654-1144 117808-7056 
+                    [tax_id] => 
+                    [password] => fad95b8bc3c3c995777354e47ea6cfdd:(U(D(
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 1
+                    [disableautocc] => 0
+                    [datecreated] => 2014-10-06
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => OkPpl3I/BCSUgoGNDeX9V3Pi4ns=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-22 13:58:58
+                    [ip] => 66.102.8.167
+                    [host] => google-proxy-66-102-8-167.google.com
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 107
+                    [uuid] => 142cf5c2-c2d3-4347-9391-db75c80cfaef
+                    [firstname] => Eduardo
+                    [lastname] => Zanoli
+                    [companyname] => H2E - Engenharia
+                    [email] => financeiro@ferza.com.br
+                    [address1] => ESTRADA ARUJA ITAQUA , 777
+                    [address2] => LIMOEIRO
+                    [city] => Arujá
+                    [state] => SP
+                    [postcode] => 07405-500
+                    [country] => BR
+                    [phonenumber] => 114654-1144 117808-7056 
+                    [tax_id] => 
+                    [password] => fad95b8bc3c3c995777354e47ea6cfdd:(U(D(
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 1
+                    [disableautocc] => 0
+                    [datecreated] => 2014-10-06
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => OkPpl3I/BCSUgoGNDeX9V3Pi4ns=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-22 13:58:58
+                    [ip] => 66.102.8.167
+                    [host] => google-proxy-66-102-8-167.google.com
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [fullname] => Eduardo Zanoli
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11465411441178087056
+    [telephoneNumber] => +55.11465411441178087056
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 1
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 22/10/2019 13:58<br>IP Address: 66.102.8.167<br>Host: google-proxy-66-102-8-167.google.com
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 17353325852
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 17353325852
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [id] => 6686
+    [0] => 6686
+    [userid] => 107
+    [1] => 107
+    [invoicenum] => 
+    [2] => 
+    [date] => 2019-10-20
+    [3] => 2019-10-20
+    [duedate] => 2019-10-27
+    [4] => 2019-10-27
+    [datepaid] => 0000-00-00 00:00:00
+    [5] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [subtotal] => 89.70
+    [7] => 89.70
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 0.00
+    [total] => 89.70
+    [11] => 89.70
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => 0.00
+    [status] => Unpaid
+    [14] => Unpaid
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => boleto_itau_sem_registro
+    [paymethodid] => 
+    [16] => 
+    [notes] => 
+    [17] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 107
+    [id] => 107
+    [uuid] => 142cf5c2-c2d3-4347-9391-db75c80cfaef
+    [firstname] => Eduardo
+    [lastname] => Zanoli
+    [companyname] => H2E - Engenharia
+    [email] => financeiro@ferza.com.br
+    [address1] => ESTRADA ARUJA ITAQUA , 777
+    [address2] => LIMOEIRO
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07405-500
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11465411441178087056
+    [tax_id] => 
+    [password] => fad95b8bc3c3c995777354e47ea6cfdd:(U(D(
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                    [passwordResetKeyExpiryDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                    [2] => passwordResetKeyExpiryDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                    [2] => groupName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 107
+                    [uuid] => 142cf5c2-c2d3-4347-9391-db75c80cfaef
+                    [firstname] => Eduardo
+                    [lastname] => Zanoli
+                    [companyname] => H2E - Engenharia
+                    [email] => financeiro@ferza.com.br
+                    [address1] => ESTRADA ARUJA ITAQUA , 777
+                    [address2] => LIMOEIRO
+                    [city] => Arujá
+                    [state] => SP
+                    [postcode] => 07405-500
+                    [country] => BR
+                    [phonenumber] => 114654-1144 117808-7056 
+                    [tax_id] => 
+                    [password] => fad95b8bc3c3c995777354e47ea6cfdd:(U(D(
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 1
+                    [disableautocc] => 0
+                    [datecreated] => 2014-10-06
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => OkPpl3I/BCSUgoGNDeX9V3Pi4ns=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-22 13:58:59
+                    [ip] => 66.102.8.171
+                    [host] => google-proxy-66-102-8-171.google.com
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 107
+                    [uuid] => 142cf5c2-c2d3-4347-9391-db75c80cfaef
+                    [firstname] => Eduardo
+                    [lastname] => Zanoli
+                    [companyname] => H2E - Engenharia
+                    [email] => financeiro@ferza.com.br
+                    [address1] => ESTRADA ARUJA ITAQUA , 777
+                    [address2] => LIMOEIRO
+                    [city] => Arujá
+                    [state] => SP
+                    [postcode] => 07405-500
+                    [country] => BR
+                    [phonenumber] => 114654-1144 117808-7056 
+                    [tax_id] => 
+                    [password] => fad95b8bc3c3c995777354e47ea6cfdd:(U(D(
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 1
+                    [disableautocc] => 0
+                    [datecreated] => 2014-10-06
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => OkPpl3I/BCSUgoGNDeX9V3Pi4ns=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-22 13:58:59
+                    [ip] => 66.102.8.171
+                    [host] => google-proxy-66-102-8-171.google.com
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [fullname] => Eduardo Zanoli
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11465411441178087056
+    [telephoneNumber] => +55.11465411441178087056
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 1
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 22/10/2019 13:58<br>IP Address: 66.102.8.171<br>Host: google-proxy-66-102-8-171.google.com
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 17353325852
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 17353325852
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [id] => 6686
+    [0] => 6686
+    [userid] => 107
+    [1] => 107
+    [invoicenum] => 
+    [2] => 
+    [date] => 2019-10-20
+    [3] => 2019-10-20
+    [duedate] => 2019-10-27
+    [4] => 2019-10-27
+    [datepaid] => 0000-00-00 00:00:00
+    [5] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [subtotal] => 89.70
+    [7] => 89.70
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 0.00
+    [total] => 89.70
+    [11] => 89.70
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => 0.00
+    [status] => Unpaid
+    [14] => Unpaid
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => boleto_itau_sem_registro
+    [paymethodid] => 
+    [16] => 
+    [notes] => 
+    [17] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 107
+    [id] => 107
+    [uuid] => 142cf5c2-c2d3-4347-9391-db75c80cfaef
+    [firstname] => Eduardo
+    [lastname] => Zanoli
+    [companyname] => H2E - Engenharia
+    [email] => financeiro@ferza.com.br
+    [address1] => ESTRADA ARUJA ITAQUA , 777
+    [address2] => LIMOEIRO
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07405-500
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11465411441178087056
+    [tax_id] => 
+    [password] => fad95b8bc3c3c995777354e47ea6cfdd:(U(D(
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                    [passwordResetKeyExpiryDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                    [2] => passwordResetKeyExpiryDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                    [2] => groupName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 107
+                    [uuid] => 142cf5c2-c2d3-4347-9391-db75c80cfaef
+                    [firstname] => Eduardo
+                    [lastname] => Zanoli
+                    [companyname] => H2E - Engenharia
+                    [email] => financeiro@ferza.com.br
+                    [address1] => ESTRADA ARUJA ITAQUA , 777
+                    [address2] => LIMOEIRO
+                    [city] => Arujá
+                    [state] => SP
+                    [postcode] => 07405-500
+                    [country] => BR
+                    [phonenumber] => 114654-1144 117808-7056 
+                    [tax_id] => 
+                    [password] => fad95b8bc3c3c995777354e47ea6cfdd:(U(D(
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 1
+                    [disableautocc] => 0
+                    [datecreated] => 2014-10-06
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => OkPpl3I/BCSUgoGNDeX9V3Pi4ns=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-22 13:59:02
+                    [ip] => 201.46.19.127
+                    [host] => 201.46.19.127
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 107
+                    [uuid] => 142cf5c2-c2d3-4347-9391-db75c80cfaef
+                    [firstname] => Eduardo
+                    [lastname] => Zanoli
+                    [companyname] => H2E - Engenharia
+                    [email] => financeiro@ferza.com.br
+                    [address1] => ESTRADA ARUJA ITAQUA , 777
+                    [address2] => LIMOEIRO
+                    [city] => Arujá
+                    [state] => SP
+                    [postcode] => 07405-500
+                    [country] => BR
+                    [phonenumber] => 114654-1144 117808-7056 
+                    [tax_id] => 
+                    [password] => fad95b8bc3c3c995777354e47ea6cfdd:(U(D(
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 1
+                    [disableautocc] => 0
+                    [datecreated] => 2014-10-06
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => OkPpl3I/BCSUgoGNDeX9V3Pi4ns=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-22 13:59:02
+                    [ip] => 201.46.19.127
+                    [host] => 201.46.19.127
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [fullname] => Eduardo Zanoli
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11465411441178087056
+    [telephoneNumber] => +55.11465411441178087056
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 1
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 22/10/2019 13:59<br>IP Address: 201.46.19.127<br>Host: 201.46.19.127
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 17353325852
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 17353325852
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [id] => 6686
+    [0] => 6686
+    [userid] => 107
+    [1] => 107
+    [invoicenum] => 
+    [2] => 
+    [date] => 2019-10-20
+    [3] => 2019-10-20
+    [duedate] => 2019-10-27
+    [4] => 2019-10-27
+    [datepaid] => 0000-00-00 00:00:00
+    [5] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [subtotal] => 89.70
+    [7] => 89.70
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 0.00
+    [total] => 89.70
+    [11] => 89.70
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => 0.00
+    [status] => Unpaid
+    [14] => Unpaid
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => boleto_itau_sem_registro
+    [paymethodid] => 
+    [16] => 
+    [notes] => 
+    [17] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [id] => 6686
+    [0] => 6686
+    [userid] => 107
+    [1] => 107
+    [invoicenum] => 
+    [2] => 
+    [date] => 2019-10-20
+    [3] => 2019-10-20
+    [duedate] => 2019-10-27
+    [4] => 2019-10-27
+    [datepaid] => 0000-00-00 00:00:00
+    [5] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [subtotal] => 89.70
+    [7] => 89.70
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 0.00
+    [total] => 89.70
+    [11] => 89.70
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => 0.00
+    [status] => Unpaid
+    [14] => Unpaid
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => boleto_itau_sem_registro
+    [paymethodid] => 
+    [16] => 
+    [notes] => 
+    [17] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+
+22/10/2019 14:19:00
+INICIO_______________________________________________________________LOG:BEGIN:::22/10/2019 14:00<br />
+
+POST:
+<pre>Array
+(
+    [preference_id] => 165408372-9a0a56af-358c-4feb-8d78-0007cca7e965
+    [external_reference] => 6686
+    [back_url] => https://grupothx.com/thx/modules/gateways/callback/mercadopago/retornoMercadoPagoX-Cript.php?collection_id=5355243463&amp;collection_status=pending&amp;external_reference=6686&amp;payment_type=ticket&amp;merchant_order_id=1157778584&amp;preference_id=165408372-9a0a56af-358c-4feb-8d78-0007cca7e965&amp;site_id=MLB&amp;processing_mode=aggregator&amp;merchant_account_id=null
+    [payment_id] => 5355243463
+    [payment_status] => pending
+    [payment_status_detail] => pending_waiting_payment
+    [merchant_order_id] => 1157778584
+    [processing_mode] => aggregator
+    [merchant_account_id] => 
+)
+</pre>
+
+_______________________________________________________________END
+
+22/10/2019 14:19:00
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [preference_id] => 165408372-9a0a56af-358c-4feb-8d78-0007cca7e965
+    [external_reference] => 6686
+    [back_url] => https://grupothx.com/thx/modules/gateways/callback/mercadopago/retornoMercadoPagoX-Cript.php?collection_id=5355243463&amp;collection_status=pending&amp;external_reference=6686&amp;payment_type=ticket&amp;merchant_order_id=1157778584&amp;preference_id=165408372-9a0a56af-358c-4feb-8d78-0007cca7e965&amp;site_id=MLB&amp;processing_mode=aggregator&amp;merchant_account_id=null
+    [payment_id] => 5355243463
+    [payment_status] => pending
+    [payment_status_detail] => pending_waiting_payment
+    [merchant_order_id] => 1157778584
+    [processing_mode] => aggregator
+    [merchant_account_id] => 
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [id] => 6686
+    [0] => 6686
+    [userid] => 107
+    [1] => 107
+    [invoicenum] => 
+    [2] => 
+    [date] => 2019-10-20
+    [3] => 2019-10-20
+    [duedate] => 2019-10-27
+    [4] => 2019-10-27
+    [datepaid] => 0000-00-00 00:00:00
+    [5] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [subtotal] => 89.70
+    [7] => 89.70
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 0.00
+    [total] => 89.70
+    [11] => 89.70
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => 0.00
+    [status] => Unpaid
+    [14] => Unpaid
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => boleto_itau_sem_registro
+    [paymethodid] => 
+    [16] => 
+    [notes] => 
+    [17] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 107
+    [id] => 107
+    [uuid] => 142cf5c2-c2d3-4347-9391-db75c80cfaef
+    [firstname] => Eduardo
+    [lastname] => Zanoli
+    [companyname] => H2E - Engenharia
+    [email] => financeiro@ferza.com.br
+    [address1] => ESTRADA ARUJA ITAQUA , 777
+    [address2] => LIMOEIRO
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07405-500
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11465411441178087056
+    [tax_id] => 
+    [password] => fad95b8bc3c3c995777354e47ea6cfdd:(U(D(
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                    [passwordResetKeyExpiryDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                    [2] => passwordResetKeyExpiryDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                    [2] => groupName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 107
+                    [uuid] => 142cf5c2-c2d3-4347-9391-db75c80cfaef
+                    [firstname] => Eduardo
+                    [lastname] => Zanoli
+                    [companyname] => H2E - Engenharia
+                    [email] => financeiro@ferza.com.br
+                    [address1] => ESTRADA ARUJA ITAQUA , 777
+                    [address2] => LIMOEIRO
+                    [city] => Arujá
+                    [state] => SP
+                    [postcode] => 07405-500
+                    [country] => BR
+                    [phonenumber] => 114654-1144 117808-7056 
+                    [tax_id] => 
+                    [password] => fad95b8bc3c3c995777354e47ea6cfdd:(U(D(
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 1
+                    [disableautocc] => 0
+                    [datecreated] => 2014-10-06
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => OkPpl3I/BCSUgoGNDeX9V3Pi4ns=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-22 14:00:29
+                    [ip] => 201.46.19.127
+                    [host] => 201.46.19.127
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 107
+                    [uuid] => 142cf5c2-c2d3-4347-9391-db75c80cfaef
+                    [firstname] => Eduardo
+                    [lastname] => Zanoli
+                    [companyname] => H2E - Engenharia
+                    [email] => financeiro@ferza.com.br
+                    [address1] => ESTRADA ARUJA ITAQUA , 777
+                    [address2] => LIMOEIRO
+                    [city] => Arujá
+                    [state] => SP
+                    [postcode] => 07405-500
+                    [country] => BR
+                    [phonenumber] => 114654-1144 117808-7056 
+                    [tax_id] => 
+                    [password] => fad95b8bc3c3c995777354e47ea6cfdd:(U(D(
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 1
+                    [disableautocc] => 0
+                    [datecreated] => 2014-10-06
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => OkPpl3I/BCSUgoGNDeX9V3Pi4ns=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-22 14:00:29
+                    [ip] => 201.46.19.127
+                    [host] => 201.46.19.127
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [fullname] => Eduardo Zanoli
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11465411441178087056
+    [telephoneNumber] => +55.11465411441178087056
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 1
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 22/10/2019 14:00<br>IP Address: 201.46.19.127<br>Host: 201.46.19.127
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 17353325852
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 17353325852
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [id] => 6686
+    [0] => 6686
+    [userid] => 107
+    [1] => 107
+    [invoicenum] => 
+    [2] => 
+    [date] => 2019-10-20
+    [3] => 2019-10-20
+    [duedate] => 2019-10-27
+    [4] => 2019-10-27
+    [datepaid] => 2019-10-26 10:41:05
+    [5] => 2019-10-26 10:41:05
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [subtotal] => 89.70
+    [7] => 89.70
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 0.00
+    [total] => 89.70
+    [11] => 89.70
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => 0.00
+    [status] => Paid
+    [14] => Paid
+    [paymentmethod] => gofasgerencianetboleto
+    [15] => gofasgerencianetboleto
+    [paymethodid] => 
+    [16] => 
+    [notes] => 
+    [17] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 107
+    [id] => 107
+    [uuid] => 142cf5c2-c2d3-4347-9391-db75c80cfaef
+    [firstname] => Eduardo
+    [lastname] => Zanoli
+    [companyname] => H2E - Engenharia
+    [email] => financeiro@ferza.com.br
+    [address1] => ESTRADA ARUJA ITAQUA , 777
+    [address2] => LIMOEIRO
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07405-500
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11465411441178087056
+    [tax_id] => 
+    [password] => fad95b8bc3c3c995777354e47ea6cfdd:(U(D(
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                    [passwordResetKeyExpiryDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                    [2] => passwordResetKeyExpiryDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                    [2] => groupName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 107
+                    [uuid] => 142cf5c2-c2d3-4347-9391-db75c80cfaef
+                    [firstname] => Eduardo
+                    [lastname] => Zanoli
+                    [companyname] => H2E - Engenharia
+                    [email] => financeiro@ferza.com.br
+                    [address1] => ESTRADA ARUJA ITAQUA , 777
+                    [address2] => LIMOEIRO
+                    [city] => Arujá
+                    [state] => SP
+                    [postcode] => 07405-500
+                    [country] => BR
+                    [phonenumber] => 114654-1144 117808-7056 
+                    [tax_id] => 
+                    [password] => fad95b8bc3c3c995777354e47ea6cfdd:(U(D(
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 1
+                    [disableautocc] => 0
+                    [datecreated] => 2014-10-06
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => OkPpl3I/BCSUgoGNDeX9V3Pi4ns=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-31 07:23:04
+                    [ip] => 201.46.18.124
+                    [host] => 201.46.18.124
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 107
+                    [uuid] => 142cf5c2-c2d3-4347-9391-db75c80cfaef
+                    [firstname] => Eduardo
+                    [lastname] => Zanoli
+                    [companyname] => H2E - Engenharia
+                    [email] => financeiro@ferza.com.br
+                    [address1] => ESTRADA ARUJA ITAQUA , 777
+                    [address2] => LIMOEIRO
+                    [city] => Arujá
+                    [state] => SP
+                    [postcode] => 07405-500
+                    [country] => BR
+                    [phonenumber] => 114654-1144 117808-7056 
+                    [tax_id] => 
+                    [password] => fad95b8bc3c3c995777354e47ea6cfdd:(U(D(
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 1
+                    [disableautocc] => 0
+                    [datecreated] => 2014-10-06
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => OkPpl3I/BCSUgoGNDeX9V3Pi4ns=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-31 07:23:04
+                    [ip] => 201.46.18.124
+                    [host] => 201.46.18.124
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [fullname] => Eduardo Zanoli
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11465411441178087056
+    [telephoneNumber] => +55.11465411441178087056
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 1
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 31/10/2019 07:23<br>IP Address: 201.46.18.124<br>Host: 201.46.18.124
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 17353325852
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 17353325852
+    [customfields4] => 
+)
+</pre>

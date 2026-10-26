@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3229
+    [id] => 3229
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-04-18
+    [date] => 2017-04-18
+    [4] => 2017-04-20
+    [duedate] => 2017-04-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 879.97
+    [subtotal] => 879.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 879.97
+    [total] => 879.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 1
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 19/04/2017 08:40<br>IP Address: 138.94.20.45<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 20
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+    [customfields4] => 20
+)
+</pre>
+
+Order
+<pre></pre>

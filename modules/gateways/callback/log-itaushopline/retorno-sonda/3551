@@ -1,0 +1,94 @@
+
+POST
+<pre>Array
+(
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTUxJmZpPTU2MzU1MWRkCmtvBxaNp+PLyJAXsLjXaFbrMPg=
+    [__EVENTVALIDATION] => /wEWBgLp+vPzBwLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BdBlomPcB9ltLiuRI2IJtxaWrDVz
+    [DC] => K72I55T218Z210C3F142F60I100E111O52P51B150O138D242X37I52I231J146E255E82J150Z78K81N86N110B73S107A60U156E239V53R216X119T0P22C40Z
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00563551
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 3551
+    [fi] => 563551
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 3551
+    [fi] => 563551
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTUxJmZpPTU2MzU1MWRkCmtvBxaNp+PLyJAXsLjXaFbrMPg=
+    [__EVENTVALIDATION] => /wEWBgLp+vPzBwLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BdBlomPcB9ltLiuRI2IJtxaWrDVz
+    [DC] => K72I55T218Z210C3F142F60I100E111O52P51B150O138D242X37I52I231J146E255E82J150Z78K81N86N110B73S107A60U156E239V53R216X119T0P22C40Z
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00563551
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+    [invoice-2837] => 2837
+    [invoice-2964] => 2964
+    [invoice-3063] => 3063
+    [invoice-3311] => 3311
+    [invoice-3439] => 3439
+    [__utma] => 94375683.1809749872.1458049811.1458049811.1460123598.2
+    [WHMCSeWdrAiYR38h0] => 71e1655dd4581ed41f5721fc929aeba9
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [CONTENT_LENGTH] => 525
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => application/x-ms-application, image/jpeg, application/xaml+xml, image/gif, image/pjpeg, application/x-ms-xbap, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */*
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR
+    [HTTP_CACHE_CONTROL] => no-cache
+    [HTTP_CONNECTION] => Keep-Alive
+    [HTTP_COOKIE] => invoice-2837=2837; invoice-2964=2964; invoice-3063=3063; invoice-3311=3311; invoice-3439=3439; __utma=94375683.1809749872.1458049811.1458049811.1460123598.2; WHMCSeWdrAiYR38h0=71e1655dd4581ed41f5721fc929aeba9
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_REFERER] => https://shopline.itau.com.br/shopline/Volta.aspx?codemp=J0194961710001810000024294&idloja=34902&npedido=00563551
+    [HTTP_USER_AGENT] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; GTB7.5; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C; .NET4.0E)
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=3551&fi=563551
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 201.1.70.49
+    [REMOTE_PORT] => 49885
+    [REQUEST_METHOD] => POST
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=3551&fi=563551
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SCRIPT_URI] => https://tihospedagem.com.br/modules/gateways/callback/itauReT.php
+    [SCRIPT_URL] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [SSL_TLS_SNI] => tihospedagem.com.br
+    [UNIQUE_ID] => WWN7vqKQQaAAAB5xNyUAAAHR
+    [nokeepalive] => 1
+    [ssl_unclean_shutdown] => 1
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1499691966
+    [argv] => Array
+        (
+            [0] => i=3551&fi=563551
+        )
+
+    [argc] => 1
+)
+</pre>

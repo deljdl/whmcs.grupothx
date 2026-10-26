@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4312
+    [id] => 4312
+    [1] => 83
+    [userid] => 83
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-01-30
+    [date] => 2018-01-30
+    [4] => 2018-01-31
+    [duedate] => 2018-01-31
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 225.00
+    [subtotal] => 225.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 225.00
+    [total] => 225.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 83
+    [id] => 83
+    [uuid] => 79fe7fad-fbf2-49f1-aad0-ce871920ed29
+    [firstname] => Michel
+    [lastname] => Costa
+    [fullname] => Michel Costa
+    [companyname] => MICHEL COSTA ME
+    [email] => drmichelcosta@hotmail.com
+    [address1] => Rua Leopoldo Couto de Magalhães Junior, 396
+    [address2] => Itaim Bibi
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04542-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 30784569, 36242001
+    [password] => d3e1795ad751bb44c70a0813a85dbc95:S)PFs
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3078456936242001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 31/01/2018 08:40<br>IP Address: 201.74.91.185<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995016683
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 08.279.944/0001-51
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995016683
+    [customfields3] => 08.279.944/0001-51
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

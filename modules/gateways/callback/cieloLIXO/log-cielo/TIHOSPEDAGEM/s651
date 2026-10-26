@@ -1,0 +1,836 @@
+
+
+06/03/2018 10:30:35
+INICIO_______________________________________________________________LOG:BEGIN:::06/03/2018 10:35<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s651
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [created_date] => 06/03/2018 10:35:27
+    [customer_name] => Dulce Naves
+    [customer_phone] => 1146662408
+    [customer_identity] => 04498161840
+    [customer_email] => lagoadaserra1@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 526863******2132
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777627ANPVABTNB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2018 10:30:35
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4451
+                            [userid] => 94
+                            [firstname] => Dulce
+                            [lastname] => Naves
+                            [companyname] => Sítio Lagoa da Serra
+                            [invoicenum] => 
+                            [date] => 2018-03-06
+                            [duedate] => 2018-03-06
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 32.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 32.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielo
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s651
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [created_date] => 06/03/2018 10:35:27
+    [customer_name] => Dulce Naves
+    [customer_phone] => 1146662408
+    [customer_identity] => 04498161840
+    [customer_email] => lagoadaserra1@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 526863******2132
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777627ANPVABTNB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2018 10:30:35
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 4451
+            [userid] => 94
+            [firstname] => Dulce
+            [lastname] => Naves
+            [companyname] => Sítio Lagoa da Serra
+            [invoicenum] => 
+            [date] => 2018-03-06
+            [duedate] => 2018-03-06
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 32.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 32.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielo
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s651
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [created_date] => 06/03/2018 10:35:27
+    [customer_name] => Dulce Naves
+    [customer_phone] => 1146662408
+    [customer_identity] => 04498161840
+    [customer_email] => lagoadaserra1@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 526863******2132
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777627ANPVABTNB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2018 10:30:35
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 4451
+    [userid] => 94
+    [firstname] => Dulce
+    [lastname] => Naves
+    [companyname] => Sítio Lagoa da Serra
+    [invoicenum] => 
+    [date] => 2018-03-06
+    [duedate] => 2018-03-06
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s651
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [created_date] => 06/03/2018 10:35:27
+    [customer_name] => Dulce Naves
+    [customer_phone] => 1146662408
+    [customer_identity] => 04498161840
+    [customer_email] => lagoadaserra1@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 526863******2132
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777627ANPVABTNB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2018 10:30:35
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 4451
+    [invoicenum] => 
+    [userid] => 94
+    [date] => 2018-03-06
+    [duedate] => 2018-03-06
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [balance] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6888
+                            [type] => Hosting
+                            [relid] => 651
+                            [description] => TIH - Master  - sitiolagoadaserra.com.br (06/03/2018 - 05/04/2018)
+                            [amount] => 32.97
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s651
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [created_date] => 06/03/2018 10:35:27
+    [customer_name] => Dulce Naves
+    [customer_phone] => 1146662408
+    [customer_identity] => 04498161840
+    [customer_email] => lagoadaserra1@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 526863******2132
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777627ANPVABTNB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2018 10:30:35
+INICIO_______________________________________________________________LOG:Checando -> 651 ==  651
+
+POST:
+<pre>Array
+(
+    [order_number] => s651
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [created_date] => 06/03/2018 10:35:27
+    [customer_name] => Dulce Naves
+    [customer_phone] => 1146662408
+    [customer_identity] => 04498161840
+    [customer_email] => lagoadaserra1@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 526863******2132
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777627ANPVABTNB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2018 10:30:35
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [order_number] => s651
+    [amount] => 3297
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [created_date] => 06/03/2018 10:35:27
+    [customer_name] => Dulce Naves
+    [customer_phone] => 1146662408
+    [customer_identity] => 04498161840
+    [customer_email] => lagoadaserra1@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 526863******2132
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777627ANPVABTNB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2018 10:56:41
+INICIO_______________________________________________________________LOG:BEGIN:::06/03/2018 10:41<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [amount] => 3297
+    [order_number] => s651
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2018 10:56:41
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4451
+                            [userid] => 94
+                            [firstname] => Dulce
+                            [lastname] => Naves
+                            [companyname] => Sítio Lagoa da Serra
+                            [invoicenum] => 
+                            [date] => 2018-03-06
+                            [duedate] => 2018-03-06
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 32.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 32.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielo
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [amount] => 3297
+    [order_number] => s651
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2018 10:56:41
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 4451
+            [userid] => 94
+            [firstname] => Dulce
+            [lastname] => Naves
+            [companyname] => Sítio Lagoa da Serra
+            [invoicenum] => 
+            [date] => 2018-03-06
+            [duedate] => 2018-03-06
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 32.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 32.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielo
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [amount] => 3297
+    [order_number] => s651
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2018 10:56:41
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 4451
+    [userid] => 94
+    [firstname] => Dulce
+    [lastname] => Naves
+    [companyname] => Sítio Lagoa da Serra
+    [invoicenum] => 
+    [date] => 2018-03-06
+    [duedate] => 2018-03-06
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [amount] => 3297
+    [order_number] => s651
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2018 10:56:41
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 4451
+    [invoicenum] => 
+    [userid] => 94
+    [date] => 2018-03-06
+    [duedate] => 2018-03-06
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [balance] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6888
+                            [type] => Hosting
+                            [relid] => 651
+                            [description] => TIH - Master  - sitiolagoadaserra.com.br (06/03/2018 - 05/04/2018)
+                            [amount] => 32.97
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [amount] => 3297
+    [order_number] => s651
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2018 10:56:41
+INICIO_______________________________________________________________LOG:Checando -> 651 ==  651
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [amount] => 3297
+    [order_number] => s651
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2018 10:56:41
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [amount] => 3297
+    [order_number] => s651
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2018 10:57:41
+INICIO_______________________________________________________________LOG:BEGIN:::06/03/2018 10:41<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [amount] => 3297
+    [order_number] => s651
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2018 10:57:41
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4451
+                            [userid] => 94
+                            [firstname] => Dulce
+                            [lastname] => Naves
+                            [companyname] => Sítio Lagoa da Serra
+                            [invoicenum] => 
+                            [date] => 2018-03-06
+                            [duedate] => 2018-03-06
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 32.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 32.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielo
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [amount] => 3297
+    [order_number] => s651
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2018 10:57:41
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 4451
+            [userid] => 94
+            [firstname] => Dulce
+            [lastname] => Naves
+            [companyname] => Sítio Lagoa da Serra
+            [invoicenum] => 
+            [date] => 2018-03-06
+            [duedate] => 2018-03-06
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 32.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 32.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielo
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [amount] => 3297
+    [order_number] => s651
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2018 10:57:41
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 4451
+    [userid] => 94
+    [firstname] => Dulce
+    [lastname] => Naves
+    [companyname] => Sítio Lagoa da Serra
+    [invoicenum] => 
+    [date] => 2018-03-06
+    [duedate] => 2018-03-06
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [amount] => 3297
+    [order_number] => s651
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2018 10:57:41
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 4451
+    [invoicenum] => 
+    [userid] => 94
+    [date] => 2018-03-06
+    [duedate] => 2018-03-06
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [balance] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6888
+                            [type] => Hosting
+                            [relid] => 651
+                            [description] => TIH - Master  - sitiolagoadaserra.com.br (06/03/2018 - 05/04/2018)
+                            [amount] => 32.97
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [amount] => 3297
+    [order_number] => s651
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2018 10:57:41
+INICIO_______________________________________________________________LOG:Checando -> 651 ==  651
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [amount] => 3297
+    [order_number] => s651
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/03/2018 10:57:41
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c4179daff824473290659eeb6d1594b7
+    [amount] => 3297
+    [order_number] => s651
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

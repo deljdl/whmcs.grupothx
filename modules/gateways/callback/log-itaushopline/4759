@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4759
+    [id] => 4759
+    [1] => 206
+    [userid] => 206
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-05-28
+    [date] => 2018-05-28
+    [4] => 2017-05-18
+    [duedate] => 2017-05-18
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 55.00
+    [subtotal] => 55.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 55.00
+    [total] => 55.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 206
+    [id] => 206
+    [uuid] => c0fdece6-a769-48be-a91e-75b8bf1e7b07
+    [firstname] => Edison 
+    [lastname] => da Silva Leite
+    [fullname] => Edison  da Silva Leite
+    [companyname] => Jetcon
+    [email] => edison-leite@outlook.com
+    [address1] => Rua Olivina
+    [address2] => Cond. Arujá 5
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07428-190
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 947339569
+    [password] => $2y$10$LRAFuafB/Lx2xXCg6h5p8OtOmN3sz3AGOcsc.7HAEVQ2yQpbSqXja
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11947339569
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/05/2018 09:06<br>IP Address: 177.148.226.12<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947339569
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 521.192.979-91
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947339569
+    [customfields3] => 521.192.979-91
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

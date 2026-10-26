@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3334
+    [id] => 3334
+    [1] => 273
+    [userid] => 273
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-05-15
+    [date] => 2017-05-15
+    [4] => 2017-05-17
+    [duedate] => 2017-05-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 50.00
+    [subtotal] => 50.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 50.00
+    [total] => 50.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 273
+    [id] => 273
+    [uuid] => 3133265b-7131-41a5-8754-cdd67653c934
+    [firstname] => Marcelo
+    [lastname] => Sampaio
+    [fullname] => Marcelo Sampaio
+    [companyname] => Sampaios Empreendimentos Imobiliários, Participações e Corretora de Seguros LTDA EPP
+    [email] => marcelosampaio74@hotmail.com
+    [address1] => Rua Domingos de Moraes, 814 - Edif. Itú - Sala 23
+    [address2] => Vila Mariana
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04010-100
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1150841270 - 11982829888
+    [password] => $2y$10$kIB5cudl0u3YxmnOW.Bvoe/S0ksjyoVz2BnFHEUk/tzZf36sI895.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.115084127011982829888
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 15/05/2017 13:22<br>IP Address: 189.78.77.66<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982829888
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 01.054.004/0001-15
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982829888
+    [customfields3] => 01.054.004/0001-15
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

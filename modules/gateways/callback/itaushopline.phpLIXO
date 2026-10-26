@@ -1,0 +1,308 @@
+<?php
+require("../../../init.php");
+require_once($_SERVER['DOCUMENT_ROOT'].'/thx/tarifasTHX.php');
+$whmcs->load_function('gateway');
+$whmcs->load_function('client');
+setlocale( LC_ALL, "pt_BR" );
+    date_default_timezone_set('America/Sao_Paulo');
+
+
+if(!isset($_SESSION['uid']))
+{
+    header('Location: https://grupothx.com/thx/clientarea.php?action=invoices');
+}
+
+
+function moeda($valor){
+    //$valor = str_replace('.',',',$valor);
+    return number_format($valor, 2, ',', '');
+}
+function limitaCaracteres($str,$max,$sufixo='')
+{
+    if(strlen($str) > $max)
+        $str=substr($str, 0, $max).$sufixo;
+    return $str;
+}
+function logItauShopLine($titulo,$dados, $idlog)
+{
+    $quebra = chr(13).chr(10);
+    $dados = $titulo.$quebra.'<pre>'.print_r($dados,1).'</pre>'.$quebra;
+
+    $abre = fopen('log-itaushopline/'.$idlog, 'a');
+    $escreve = fwrite($abre, $quebra.$dados);
+    fclose($abre);
+}
+function erroItauShopline($erro)
+{
+    return '
+    <div class="row" style="text-align:center">
+        <h2>Desculpe</h2>
+        <h1 style="font-size:95px; color:#BF0003"><i class="fa fa-thumbs-down" aria-hidden="true"></i></h1>
+        <h2>Houve um erro ao gerar seu pagamento.</h2><br /><small style="color:#FFF">'.$erro.'</small>
+    </div>';
+}
+function cpfCnpj($num)
+{
+    $retorno = array('tipo' => false, 'numero' => false);
+    $numeros = preg_replace("/[^0-9]/", "", $num);
+
+    $retorno['numero'] = $numeros;
+    $digitos = strlen($numeros);
+    if($digitos != 11 & $digitos != 14)
+    {
+        return false;
+    }
+    if($digitos == 11)
+    {
+        $retorno['tipo'] = '01';
+    }
+    else
+    {
+        $retorno['tipo'] = '02';
+    }
+
+    return $retorno;
+}
+
+
+$result = select_query("tblinvoices","",array("id"=>(int)$invoiceid));
+
+$data = mysql_fetch_array($result);
+logItauShopLine('Dados Invoice',$data, $invoiceid);
+$clientsdetails = getClientsDetails($userid);
+logItauShopLine('Dados Cliente',$clientsdetails, $invoiceid);
+
+$status = $data['status'];
+
+ $strretorno = '';
+
+if($status == 'Paid')
+{
+    $strretorno = '
+    <div class="row" style="text-align:center">
+        <h2>Obrigado</h2>
+        <h1 style="font-size:95px; color:#BF0003"><i class="fa fa-thumbs-up" aria-hidden="true"></i></h1>
+        <h2>Esta cobrança já foi paga.</h2>
+    </div>';
+}
+else
+{
+
+    $valorTotal = $data["total"];
+    $cpfCnpj = $clientsdetails['customfields3'];
+    /* VENCIMENTO */
+        $data_venc = date('dmY',strtotime($data['duedate']));
+        $diferenca = strtotime(date('Y-m-d')) - strtotime($data['duedate']);
+        $dias_atrasados = (int)floor( $diferenca / (60 * 60 * 24));
+
+        $avisoMulta = $avisoJuros = '';
+
+        if($dias_atrasados > 0)
+        {
+            $data_venc = date('dmY');
+            if($dias_atrasados >= LIMITE_ATRAZO)
+            {
+
+                $multa = ($data["total"] * MULTA_ATRAZO_THX) - $data["total"];
+                $multa = round($multa, 2);
+                $valorTotal+=$multa;
+
+                $avisoMulta .= 'Multa por atraso no pagamento R$ '.moeda($multa*100/100);
+
+                $juros  = (($data["total"] + $multa) * JUROS_POR_DIA) * $dias_atrasados;
+                $juros = round($juros, 2);
+                $valorTotal+=$juros;
+
+                $avisoJuros.= 'Juros por '.$dias_atrasados.' dias de atraso R$ '.moeda($juros*100/100);
+            }
+        }
+    /* VENCIMENTO  */
+
+
+	$erros = '';
+
+    $cpfCnpj = cpfCnpj($clientsdetails['customfields3']);
+
+    if(! $cpfCnpj)
+    {
+    	$erros.='<br />Seu <strong>CPF</strong> ou <strong>CNPJ</strong> não está cadastrado corretamente no sistema.';
+    }
+    if($clientsdetails['firstname'] == '')
+    {
+    	$erros.='<br />Seu <strong>Nome</strong> não está cadastrado corretamente no sistema.';
+    }
+    if($clientsdetails['lastname'] == '')
+    {
+    	$erros.='<br />Seu <strong>Nome</strong> não está cadastrado corretamente no sistema.';
+    }
+    if($clientsdetails['address1'] == '')
+    {
+    	$erros.='<br />Seu <strong>Endereço</strong> não está cadastrado corretamente no sistema.';
+    }
+    if($clientsdetails['address2'] == '')
+    {
+    	$erros.='<br />Seu <strong>Bairro</strong> não está cadastrado corretamente no sistema.';
+    }
+    if($clientsdetails['postcode'] == '')
+    {
+    	$erros.='<br />Seu <strong>Cep</strong> não está cadastrado corretamente no sistema.';
+    }
+    if($clientsdetails['city'] == '')
+    {
+    	$erros.='<br />Sua <strong>Cidade</strong> não está cadastrado corretamente no sistema.';
+    }
+    if($clientsdetails['state'] == '')
+    {
+    	$erros.='<br />Seu <strong>Estado/UF</strong> não está cadastrado corretamente no sistema.';
+    }
+
+    if($erros == '')
+	{
+
+
+		$codEmp ='J0194961710001810000024294';
+		$pedido = rand(10,99).$invoiceid;
+		$valor = moeda($valorTotal);
+		$observacao = 3; // 40 posicoes ou 3 para mostrar as outras observaçoes
+		$chave='6jathar762No5858';
+		if($cpfCnpj['tipo'] == '01') // CPF
+		{
+			$nomeSacado = tiracento($clientsdetails['firstname'].' '.$clientsdetails['lastname']);
+		}
+		else
+		{
+			$nomeSacado = tiracento($clientsdetails['companyname']);
+		}
+		$codigoInscricao = $cpfCnpj['tipo']; //CFP ou CNPJ
+		$numeroInscricao = $cpfCnpj['numero'];
+		$enderecoSacado = tiracento($clientsdetails['address1']);
+		$bairroSacado = tiracento($clientsdetails['address2']);
+		$cepSacado = tiracento($clientsdetails['postcode']);
+		$cidadeSacado = tiracento($clientsdetails['city']);
+		$estadoSacado = tiracento($clientsdetails['state']);
+		$dataVencimento = $data_venc;
+		$urlRetorna ="?i={$invoiceid}&fi={$pedido}"; //60 posicoes
+		$obsAd1 = tiracento($avisoMulta); //60
+		$obsAd2 = tiracento($avisoJuros); //60
+		$obsAd3 = 'Em caso de duvidas ligue (11)46550330'; //60
+
+         //die($pedido);
+
+         require_once('itaucripto.class.php');
+         $cripto = new Itaucripto;
+         $dadosShopLine=$cripto->geraDados($codEmp,$pedido,$valor,$observacao,$chave,$nomeSacado,$codigoInscricao,$numeroInscricao,$enderecoSacado,$bairroSacado,$cepSacado,$cidadeSacado,$estadoSacado,$dataVencimento,$urlRetorna,$obsAd1,$obsAd2,$obsAd3);
+
+
+         logItauShopLine('Order',$order, $invoiceid);
+
+    	$strretorno ='
+        <form action="https://shopline.itau.com.br/shopline/shopline.aspx" method="post" name="formShopLine" id="formShopLine">
+             <input type="hidden" name="DC" value="'.$dadosShopLine.'">
+        </form>
+        <div class="row" style="text-align:center">
+            <h1 style="font-size:95px; color:#BF0003"><i class="fa fa-spinner fa-spin fa fa-fw"></i></h1>
+            <h2>Redirecionando para o ambiente Seguro</h2>
+            <script>setTimeout(function(){ document.getElementById(\'formShopLine\').submit()}, 3000);</script>
+            <img src="itaushopline.jpg" class="img-responsive" style="margin:5px auto;" />
+        </div>';
+    }
+    else
+    {
+        $strretorno = '
+        <div class="row" style="text-align:center">
+            <h2>Desculpe</h2>
+            <h1 style="font-size:95px; color:#BF0003"><i class="fa fa-thumbs-down" aria-hidden="true"></i></h1>
+            <h2>Houve um erro ao gerar seu pagamento.</h2><br /><br />
+            <div class="alert alert-danger">'.$erros.'</div><br /><br />
+            <h3><a href="javascript:openLigue(\'chat\')">Clique aqui para <strong>Solicitar</strong> a <strong>Correção</strong> seus dados.</a></h3>
+            <h4>Infelizmente todos os dados acima agora são obrigatórios para a geração de seu BOLETO REGISTRADO.</h4>
+            <br /><br /><h4>Ligue (11) 4655-0330 ou <a href="javascript:openLigue(\'chat\')">Clique Aqui</a> para obter ajuda agora mesmo.</h4>
+        </div>';
+    }
+}
+
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GRUPO THX - Pagamento com Boleto</title>
+    <!-- Bootstrap -->
+    <link href="<?=HTTP_WHMCS?>/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?=HTTP_WHMCS?>/assets/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Styling -->
+    <link href="<?=HTTP_WHMCS?>templates/six-THX/css/overrides.css" rel="stylesheet">
+    <link href="<?=HTTP_WHMCS?>templates/six-THX/css/styles.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="<?=HTTP_WHMCS?>/assets/js/jquery.min.js"></script>
+    <!-- Custom Styling -->
+    <link rel="stylesheet" href="<?=HTTP_WHMCS?>templates/six-THX/css/custom.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        @media print {.noPrint {
+            display:none;
+          }}
+    </style>
+</head>
+<body>
+    <section id="header">
+        <div class="container">
+            <a href="/index.php"><img src="<?=HTTP_WHMCS?>templates/six-THX/img/logo.png" alt="GRUPO THX" /></a>
+        </div>
+    </section>
+    <section id="main-menu">
+        <nav id="nav" class="navbar navbar-default navbar-main" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Menu</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="javascript:openLigue('chat')"><i class="fa fa-question-circle" aria-hidden="true"></i> Ajuda</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </nav>
+    </section>
+    <section id="main-body" class="container">
+        <div class="row">
+            <div class="col-xs-12 main-content">
+                <div class="row" style="text-align:center">
+                    <h2>Pagamento com Itaú Shopline</h2>
+                    <hr />
+                </div>
+                <?=$strretorno?>
+            </div>
+                </div>
+        <div class="clearfix"></div>
+    </section>
+    <section id="footer">
+        <p>Copyright &copy; 2016 TiHospedagem - Uma empresa do <a href="http://grupothx.com.br" target="_blank">Grupo THX</a></p>
+    </section>
+    <script src="<?=HTTP_WHMCS?>/assets/js/bootstrap.min.js"></script>
+    <script src="<?=HTTP_WHMCS?>/assets/js/jquery-ui.min.js"></script>
+    <script src="//grupothx.com.br/atendimento-online/apiTHX/scriptAtendimentoOnlineTodosOsSitesJs.php"></script>
+    <? logoffSecurity(); ?>
+</body>
+</html>
+
+
+

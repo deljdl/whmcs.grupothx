@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5166
+    [id] => 5166
+    [1] => 261
+    [userid] => 261
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-03
+    [date] => 2018-09-03
+    [4] => 2018-09-10
+    [duedate] => 2018-09-10
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 200.00
+    [subtotal] => 200.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 200.00
+    [total] => 200.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 261
+    [id] => 261
+    [uuid] => 2cecef10-4ebb-4f93-9345-ace74cc16a77
+    [firstname] => Lui 
+    [lastname] => Spolador
+    [fullname] => Lui  Spolador
+    [companyname] => BR&amp;SP Comércio e Serviços Ltda
+    [email] => lui@brspcomercio.com.br
+    [address1] => Rua Lacedemônia, 881
+    [address2] => Jardim Brasil (Zona Sul)
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04634-020
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 2365-2765 11 97996-1906
+    [password] => $2y$10$HlVhau/3YPfYjO8Bz2wSR.EyAPYb2bJqBCYyYgv.rQr5oY4LHrQc.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.112365276511979961906
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 03/09/2018 09:34<br>IP Address: 177.139.150.171<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995470136
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 19.860.197/0001-67
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995470136
+    [customfields3] => 19.860.197/0001-67
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

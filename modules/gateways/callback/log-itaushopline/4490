@@ -1,0 +1,120 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4490
+    [id] => 4490
+    [1] => 131
+    [userid] => 131
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-03-16
+    [date] => 2018-03-16
+    [4] => 2018-03-23
+    [duedate] => 2018-03-23
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 39.96
+    [subtotal] => 39.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 39.96
+    [total] => 39.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 131
+    [id] => 131
+    [uuid] => 530131f8-a5f0-4cc5-886b-d26ffb28bf2d
+    [firstname] => DEBORA
+    [lastname] => GAYDUTSCHENKO
+    [fullname] => DEBORA GAYDUTSCHENKO
+    [companyname] => Unidade de Vivencia e Terapia
+    [email] => uvt@uvt.com.br
+    [address1] => Avenida Afonso Mariano Fagundes.238
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04054-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 5589-4526 / 5071-7121
+    [password] => $2y$10$PELBbtOk0bvYahiNtIX/JuEhXVBmYp/cwfWelCwyYmXy/aNRV1pp2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.115589452650717121
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 03/04/2018 13:44<br>IP Address: 200.158.58.190<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 119958782190
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 317.614.128-92
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 119958782190
+    [customfields3] => 317.614.128-92
+    [customfields4] => 
+)
+</pre>

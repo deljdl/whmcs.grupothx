@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4619
+    [id] => 4619
+    [1] => 107
+    [userid] => 107
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-04-20
+    [date] => 2018-04-20
+    [4] => 2018-04-27
+    [duedate] => 2018-04-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.70
+    [subtotal] => 89.70
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.70
+    [total] => 89.70
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 107
+    [id] => 107
+    [uuid] => 142cf5c2-c2d3-4347-9391-db75c80cfaef
+    [firstname] => Eduardo
+    [lastname] => Zanoli
+    [fullname] => Eduardo Zanoli
+    [companyname] => H2E - Engenharia
+    [email] => financeiro@ferza.com.br
+    [address1] => ESTRADA ARUJA ITAQUA , 777
+    [address2] => LIMOEIRO
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07405-500
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 114654-1144 117808-7056 
+    [password] => fad95b8bc3c3c995777354e47ea6cfdd:(U(D(
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11465411441178087056
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 1
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/04/2018 10:00<br>IP Address: 177.189.29.16<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 17353325852
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 17353325852
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

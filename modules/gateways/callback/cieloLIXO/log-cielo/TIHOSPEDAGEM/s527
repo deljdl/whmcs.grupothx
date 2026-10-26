@@ -1,0 +1,623 @@
+
+
+13/07/2017 9:27:08
+INICIO_______________________________________________________________LOG:BEGIN:::13/07/2017 9:08<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s527
+    [amount] => 2997
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 250b0dfc55264d21b31581fc0cc6823f
+    [created_date] => 13/07/2017 09:08:25
+    [customer_name] => Carlos Pangardi
+    [customer_phone] => 1143796224
+    [customer_identity] => 09073495873
+    [customer_email] => stectelecom@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626HC45HBOTB
+    [recurrent_payment_id] => 00000000-0000-0000-0000-000000000000
+    [start_date] => 13/07/2017 09:08:25
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Negada
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/07/2017 9:27:08
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 3502
+                            [userid] => 275
+                            [firstname] => Carlos
+                            [lastname] => Alberto Pangardi
+                            [companyname] => 
+                            [invoicenum] => 
+                            [date] => 2017-06-26
+                            [duedate] => 2017-07-03
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 29.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 29.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => deposito_ou_transferencia
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s527
+    [amount] => 2997
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 250b0dfc55264d21b31581fc0cc6823f
+    [created_date] => 13/07/2017 09:08:25
+    [customer_name] => Carlos Pangardi
+    [customer_phone] => 1143796224
+    [customer_identity] => 09073495873
+    [customer_email] => stectelecom@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626HC45HBOTB
+    [recurrent_payment_id] => 00000000-0000-0000-0000-000000000000
+    [start_date] => 13/07/2017 09:08:25
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Negada
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/07/2017 9:27:08
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 3502
+            [userid] => 275
+            [firstname] => Carlos
+            [lastname] => Alberto Pangardi
+            [companyname] => 
+            [invoicenum] => 
+            [date] => 2017-06-26
+            [duedate] => 2017-07-03
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 29.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 29.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => deposito_ou_transferencia
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s527
+    [amount] => 2997
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 250b0dfc55264d21b31581fc0cc6823f
+    [created_date] => 13/07/2017 09:08:25
+    [customer_name] => Carlos Pangardi
+    [customer_phone] => 1143796224
+    [customer_identity] => 09073495873
+    [customer_email] => stectelecom@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626HC45HBOTB
+    [recurrent_payment_id] => 00000000-0000-0000-0000-000000000000
+    [start_date] => 13/07/2017 09:08:25
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Negada
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/07/2017 9:27:08
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 3502
+    [userid] => 275
+    [firstname] => Carlos
+    [lastname] => Alberto Pangardi
+    [companyname] => 
+    [invoicenum] => 
+    [date] => 2017-06-26
+    [duedate] => 2017-07-03
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 29.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 29.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s527
+    [amount] => 2997
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 250b0dfc55264d21b31581fc0cc6823f
+    [created_date] => 13/07/2017 09:08:25
+    [customer_name] => Carlos Pangardi
+    [customer_phone] => 1143796224
+    [customer_identity] => 09073495873
+    [customer_email] => stectelecom@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626HC45HBOTB
+    [recurrent_payment_id] => 00000000-0000-0000-0000-000000000000
+    [start_date] => 13/07/2017 09:08:25
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Negada
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/07/2017 9:27:08
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 3502
+    [invoicenum] => 
+    [userid] => 275
+    [date] => 2017-06-26
+    [duedate] => 2017-07-03
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 29.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 29.97
+    [balance] => 29.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 5288
+                            [type] => Hosting
+                            [relid] => 527
+                            [description] => TIH - Master  - stecsolucoes.com.br (03/07/2017 - 02/08/2017)
+                            [amount] => 29.97
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s527
+    [amount] => 2997
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 250b0dfc55264d21b31581fc0cc6823f
+    [created_date] => 13/07/2017 09:08:25
+    [customer_name] => Carlos Pangardi
+    [customer_phone] => 1143796224
+    [customer_identity] => 09073495873
+    [customer_email] => stectelecom@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626HC45HBOTB
+    [recurrent_payment_id] => 00000000-0000-0000-0000-000000000000
+    [start_date] => 13/07/2017 09:08:25
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Negada
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/07/2017 9:27:08
+INICIO_______________________________________________________________LOG:Checando -> 527 ==  527
+
+POST:
+<pre>Array
+(
+    [order_number] => s527
+    [amount] => 2997
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 250b0dfc55264d21b31581fc0cc6823f
+    [created_date] => 13/07/2017 09:08:25
+    [customer_name] => Carlos Pangardi
+    [customer_phone] => 1143796224
+    [customer_identity] => 09073495873
+    [customer_email] => stectelecom@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626HC45HBOTB
+    [recurrent_payment_id] => 00000000-0000-0000-0000-000000000000
+    [start_date] => 13/07/2017 09:08:25
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Negada
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/07/2017 9:28:08
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [order_number] => s527
+    [amount] => 2997
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 250b0dfc55264d21b31581fc0cc6823f
+    [created_date] => 13/07/2017 09:08:25
+    [customer_name] => Carlos Pangardi
+    [customer_phone] => 1143796224
+    [customer_identity] => 09073495873
+    [customer_email] => stectelecom@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626HC45HBOTB
+    [recurrent_payment_id] => 00000000-0000-0000-0000-000000000000
+    [start_date] => 13/07/2017 09:08:25
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Negada
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/07/2017 9:04:18
+INICIO_______________________________________________________________LOG:BEGIN:::13/07/2017 9:18<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 250b0dfc55264d21b31581fc0cc6823f
+    [amount] => 2997
+    [order_number] => s527
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/07/2017 9:04:18
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 3502
+                            [userid] => 275
+                            [firstname] => Carlos
+                            [lastname] => Alberto Pangardi
+                            [companyname] => 
+                            [invoicenum] => 
+                            [date] => 2017-06-26
+                            [duedate] => 2017-07-03
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 29.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 29.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => deposito_ou_transferencia
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 250b0dfc55264d21b31581fc0cc6823f
+    [amount] => 2997
+    [order_number] => s527
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/07/2017 9:04:18
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 3502
+            [userid] => 275
+            [firstname] => Carlos
+            [lastname] => Alberto Pangardi
+            [companyname] => 
+            [invoicenum] => 
+            [date] => 2017-06-26
+            [duedate] => 2017-07-03
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 29.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 29.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => deposito_ou_transferencia
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 250b0dfc55264d21b31581fc0cc6823f
+    [amount] => 2997
+    [order_number] => s527
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/07/2017 9:04:18
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 3502
+    [userid] => 275
+    [firstname] => Carlos
+    [lastname] => Alberto Pangardi
+    [companyname] => 
+    [invoicenum] => 
+    [date] => 2017-06-26
+    [duedate] => 2017-07-03
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 29.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 29.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 250b0dfc55264d21b31581fc0cc6823f
+    [amount] => 2997
+    [order_number] => s527
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/07/2017 9:04:18
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 3502
+    [invoicenum] => 
+    [userid] => 275
+    [date] => 2017-06-26
+    [duedate] => 2017-07-03
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 29.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 29.97
+    [balance] => 29.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 5288
+                            [type] => Hosting
+                            [relid] => 527
+                            [description] => TIH - Master  - stecsolucoes.com.br (03/07/2017 - 02/08/2017)
+                            [amount] => 29.97
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 250b0dfc55264d21b31581fc0cc6823f
+    [amount] => 2997
+    [order_number] => s527
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/07/2017 9:04:18
+INICIO_______________________________________________________________LOG:Checando -> 527 ==  527
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 250b0dfc55264d21b31581fc0cc6823f
+    [amount] => 2997
+    [order_number] => s527
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/07/2017 9:05:18
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 250b0dfc55264d21b31581fc0cc6823f
+    [amount] => 2997
+    [order_number] => s527
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

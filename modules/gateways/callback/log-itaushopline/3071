@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3071
+    [id] => 3071
+    [1] => 256
+    [userid] => 256
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-09
+    [date] => 2017-03-09
+    [4] => 2017-03-16
+    [duedate] => 2017-03-16
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 50.00
+    [subtotal] => 50.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 50.00
+    [total] => 50.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 256
+    [id] => 256
+    [uuid] => e404bd80-9d71-44ae-8ad3-779aafc6ff31
+    [firstname] => Andre
+    [lastname] => Hernandes Nogueira
+    [fullname] => Andre Hernandes Nogueira
+    [companyname] => Marcenaria Noprazzo
+    [email] => marcenarianoprazzo@hotmail.com
+    [address1] => Rua José Faustino da Silva (A C Residencial), 370
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-825
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146522946, 11987744606
+    [password] => $2y$10$JTd2kfkFHazfRlYSwYz.Su2WWqADH5g4w1nj0wtMIXCmbxg.Ntr2C
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114652294611987744606
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 23/03/2017 10:33<br>IP Address: 186.214.103.208<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11987744606
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 26426605832
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11987744606
+    [customfields3] => 26426605832
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

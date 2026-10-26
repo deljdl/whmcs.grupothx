@@ -1,0 +1,237 @@
+
+Dados Dominio
+<pre>Array
+(
+    [id] => 57
+    [userid] => 83
+    [orderid] => 339
+    [regtype] => Register
+    [domainname] => espacoprint.com.br
+    [registrar] => email
+    [regperiod] => 1
+    [firstpaymentamount] => 45.00
+    [recurringamount] => 55.00
+    [paymentmethod] => boleto_itau_sem_registro
+    [paymentmethodname] => Boleto Itaú
+    [regdate] => 2008-08-22
+    [expirydate] => 2017-08-22
+    [nextduedate] => 2017-08-22
+    [status] => Active
+    [subscriptionid] => 
+    [promoid] => 0
+    [dnsmanagement] => 0
+    [emailforwarding] => 0
+    [idprotection] => 0
+    [donotrenew] => 0
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 83
+    [id] => 83
+    [uuid] => 79fe7fad-fbf2-49f1-aad0-ce871920ed29
+    [firstname] => Michel
+    [lastname] => Costa
+    [fullname] => Michel Costa
+    [companyname] => MICHEL COSTA ME
+    [email] => drmichelcosta@hotmail.com
+    [address1] => Rua Leopoldo Couto de Magalhães Junior, 396
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 30784569, 36242001
+    [password] => d3e1795ad751bb44c70a0813a85dbc95:S)PFs
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3078456936242001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 354.16
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/03/2017 23:16<br>IP Address: 191.32.170.214<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995016683
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 08.279.944/0001-51
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995016683
+    [customfields3] => 08.279.944/0001-51
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => d57
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Manutencao de Dominio - espacoprint.com.br
+                            [Description] => Manutencao de Dominio - espacoprint.com.br
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Annual
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 08279944000151
+            [FullName] => Michel Costa
+            [Email] => drmichelcosta@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => d57
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Manutencao de Dominio - espacoprint.com.br
+                            [description] => Manutencao de Dominio - espacoprint.com.br
+                            [unitPrice] => 5500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => Annual
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 08279944000151
+            [fullName] => Michel Costa
+            [email] => drmichelcosta@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/30d23252-551b-481d-908f-1327b2ad24c5
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

@@ -1,0 +1,369 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4822
+    [id] => 4822
+    [1] => 316
+    [userid] => 316
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-06-11
+    [date] => 2018-06-11
+    [4] => 2018-06-17
+    [duedate] => 2018-06-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 316
+    [id] => 316
+    [uuid] => 07a6953b-6b83-4edb-b3e7-875b48a8a654
+    [firstname] => Daniela
+    [lastname] => Trindade
+    [fullname] => Daniela Trindade
+    [companyname] => EDIFICIO ROSSI MAIS CONVIVA 
+    [email] => daniela@trindadesindicapro.com.br
+    [address1] => Rua Augusto Muniz, 255
+    [address2] => Cardoso
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 30626-380
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => $2y$10$P146Kf89RAeUjD6jYRZyF.lsN2vP7lraDetwB67VOf2H..bf.uFuu
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/06/2018 09:03<br>IP Address: 177.182.156.206<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23.367.572/0001-09
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 23.367.572/0001-09
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4822
+    [id] => 4822
+    [1] => 316
+    [userid] => 316
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-06-11
+    [date] => 2018-06-11
+    [4] => 2018-06-17
+    [duedate] => 2018-06-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 316
+    [id] => 316
+    [uuid] => 07a6953b-6b83-4edb-b3e7-875b48a8a654
+    [firstname] => Daniela
+    [lastname] => Trindade
+    [fullname] => Daniela Trindade
+    [companyname] => EDIFICIO ROSSI MAIS CONVIVA 
+    [email] => daniela@trindadesindicapro.com.br
+    [address1] => Rua Augusto Muniz, 255
+    [address2] => Cardoso
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 30626-380
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => $2y$10$P146Kf89RAeUjD6jYRZyF.lsN2vP7lraDetwB67VOf2H..bf.uFuu
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/06/2018 09:06<br>IP Address: 177.182.156.206<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23.367.572/0001-09
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 23.367.572/0001-09
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4822
+    [id] => 4822
+    [1] => 316
+    [userid] => 316
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-06-11
+    [date] => 2018-06-11
+    [4] => 2018-06-17
+    [duedate] => 2018-06-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 316
+    [id] => 316
+    [uuid] => 07a6953b-6b83-4edb-b3e7-875b48a8a654
+    [firstname] => Daniela
+    [lastname] => Trindade
+    [fullname] => Daniela Trindade
+    [companyname] => EDIFICIO ROSSI MAIS CONVIVA 
+    [email] => daniela@trindadesindicapro.com.br
+    [address1] => Rua Augusto Muniz, 255
+    [address2] => Cardoso
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 30626-380
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => $2y$10$P146Kf89RAeUjD6jYRZyF.lsN2vP7lraDetwB67VOf2H..bf.uFuu
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/06/2018 09:07<br>IP Address: 168.227.12.88<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23.367.572/0001-09
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 23.367.572/0001-09
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

@@ -1,0 +1,1127 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 6304
+    [id] => 6304
+    [1] => 330
+    [userid] => 330
+    [2] => 
+    [invoicenum] => 
+    [3] => 2019-07-01
+    [date] => 2019-07-01
+    [4] => 2019-07-07
+    [duedate] => 2019-07-07
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 30.00
+    [subtotal] => 30.00
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 30.00
+    [total] => 30.00
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => cielo
+    [paymentmethod] => cielo
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 330
+    [id] => 330
+    [uuid] => f11326e7-a136-41da-a774-a2d0e29e8bac
+    [firstname] => Gilson
+    [lastname] => Carlos de Souza Barbosa
+    [fullname] => Gilson Carlos de Souza Barbosa
+    [companyname] => Gilson Barbosa
+    [email] => gilson3112@gmail.com
+    [address1] => Rua Bahia (Arujazinho I, II e III), 375
+    [address2] => Caputera
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07435-600
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146551001
+    [password] => $2y$10$WYac1rPsPCd4ah57zrgeQu8/mx0ksKwYaUqYRIvyracOOLTDGCcQy
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 330
+                    [uuid] => f11326e7-a136-41da-a774-a2d0e29e8bac
+                    [firstname] => Gilson
+                    [lastname] => Carlos de Souza Barbosa
+                    [companyname] => Gilson Barbosa
+                    [email] => gilson3112@gmail.com
+                    [address1] => Rua Bahia (Arujazinho I, II e III), 375
+                    [address2] => Caputera
+                    [city] => Arujá
+                    [state] => SP
+                    [postcode] => 07435-600
+                    [country] => BR
+                    [phonenumber] => +55.11 4655-1001
+                    [password] => $2y$10$WYac1rPsPCd4ah57zrgeQu8/mx0ksKwYaUqYRIvyracOOLTDGCcQy
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2018-11-06
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => lBaN3ZHct2BlhbSG57PZyYgsyM0=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-07-07 19:32:01
+                    [ip] => 187.119.226.173
+                    [host] => ip-187-119-226-173.user.vivozap.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 1
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2019-03-07 12:53:57
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 330
+                    [uuid] => f11326e7-a136-41da-a774-a2d0e29e8bac
+                    [firstname] => Gilson
+                    [lastname] => Carlos de Souza Barbosa
+                    [companyname] => Gilson Barbosa
+                    [email] => gilson3112@gmail.com
+                    [address1] => Rua Bahia (Arujazinho I, II e III), 375
+                    [address2] => Caputera
+                    [city] => Arujá
+                    [state] => SP
+                    [postcode] => 07435-600
+                    [country] => BR
+                    [phonenumber] => +55.11 4655-1001
+                    [password] => $2y$10$WYac1rPsPCd4ah57zrgeQu8/mx0ksKwYaUqYRIvyracOOLTDGCcQy
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2018-11-06
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => lBaN3ZHct2BlhbSG57PZyYgsyM0=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-07-07 19:32:01
+                    [ip] => 187.119.226.173
+                    [host] => ip-187-119-226-173.user.vivozap.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 1
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2019-03-07 12:53:57
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146551001
+    [telephoneNumber] => +55.1146551001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 1
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 
+    [lastlogin] => Date: 07/07/2019 19:32<br>IP Address: 187.119.226.173<br>Host: ip-187-119-226-173.user.vivozap.com.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11946551001
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05185837837
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11946551001
+    [customfields3] => 05185837837
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 6304
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - meusanuncios.net (07/07/2019 - 06/08/2019)
+                            [Description] => TIH - Master  - meusanuncios.net (07/07/2019 - 06/08/2019)
+                            [UnitPrice] => 3000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Gilson Carlos de Souza Barbosa
+            [Email] => gilson3112@gmail.com
+            [Identity] => 05185837837
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 6304
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Master  - meusanuncios.net (07/07/2019 - 06/08/2019)
+                            [description] => TIH - Master  - meusanuncios.net (07/07/2019 - 06/08/2019)
+                            [unitPrice] => 3000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 05185837837
+            [fullName] => Gilson Carlos de Souza Barbosa
+            [email] => gilson3112@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/32b10f91-d646-4178-a414-7f62b15e1eac
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 6304
+    [id] => 6304
+    [1] => 330
+    [userid] => 330
+    [2] => 
+    [invoicenum] => 
+    [3] => 2019-07-01
+    [date] => 2019-07-01
+    [4] => 2019-07-07
+    [duedate] => 2019-07-07
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 30.00
+    [subtotal] => 30.00
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 30.00
+    [total] => 30.00
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => cielo
+    [paymentmethod] => cielo
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 330
+    [id] => 330
+    [uuid] => f11326e7-a136-41da-a774-a2d0e29e8bac
+    [firstname] => Gilson
+    [lastname] => Carlos de Souza Barbosa
+    [fullname] => Gilson Carlos de Souza Barbosa
+    [companyname] => Gilson Barbosa
+    [email] => gilson3112@gmail.com
+    [address1] => Rua Bahia (Arujazinho I, II e III), 375
+    [address2] => Caputera
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07435-600
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146551001
+    [password] => $2y$10$WYac1rPsPCd4ah57zrgeQu8/mx0ksKwYaUqYRIvyracOOLTDGCcQy
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 330
+                    [uuid] => f11326e7-a136-41da-a774-a2d0e29e8bac
+                    [firstname] => Gilson
+                    [lastname] => Carlos de Souza Barbosa
+                    [companyname] => Gilson Barbosa
+                    [email] => gilson3112@gmail.com
+                    [address1] => Rua Bahia (Arujazinho I, II e III), 375
+                    [address2] => Caputera
+                    [city] => Arujá
+                    [state] => SP
+                    [postcode] => 07435-600
+                    [country] => BR
+                    [phonenumber] => +55.11 4655-1001
+                    [password] => $2y$10$WYac1rPsPCd4ah57zrgeQu8/mx0ksKwYaUqYRIvyracOOLTDGCcQy
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2018-11-06
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => lBaN3ZHct2BlhbSG57PZyYgsyM0=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-07-07 19:33:44
+                    [ip] => 187.119.226.173
+                    [host] => ip-187-119-226-173.user.vivozap.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 1
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2019-03-07 12:53:57
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 330
+                    [uuid] => f11326e7-a136-41da-a774-a2d0e29e8bac
+                    [firstname] => Gilson
+                    [lastname] => Carlos de Souza Barbosa
+                    [companyname] => Gilson Barbosa
+                    [email] => gilson3112@gmail.com
+                    [address1] => Rua Bahia (Arujazinho I, II e III), 375
+                    [address2] => Caputera
+                    [city] => Arujá
+                    [state] => SP
+                    [postcode] => 07435-600
+                    [country] => BR
+                    [phonenumber] => +55.11 4655-1001
+                    [password] => $2y$10$WYac1rPsPCd4ah57zrgeQu8/mx0ksKwYaUqYRIvyracOOLTDGCcQy
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2018-11-06
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => lBaN3ZHct2BlhbSG57PZyYgsyM0=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-07-07 19:33:44
+                    [ip] => 187.119.226.173
+                    [host] => ip-187-119-226-173.user.vivozap.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 1
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2019-03-07 12:53:57
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146551001
+    [telephoneNumber] => +55.1146551001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 1
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 
+    [lastlogin] => Date: 07/07/2019 19:33<br>IP Address: 187.119.226.173<br>Host: ip-187-119-226-173.user.vivozap.com.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11946551001
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05185837837
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11946551001
+    [customfields3] => 05185837837
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 6304
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - meusanuncios.net (07/07/2019 - 06/08/2019)
+                            [Description] => TIH - Master  - meusanuncios.net (07/07/2019 - 06/08/2019)
+                            [UnitPrice] => 3000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Gilson Carlos de Souza Barbosa
+            [Email] => gilson3112@gmail.com
+            [Identity] => 05185837837
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 6304
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Master  - meusanuncios.net (07/07/2019 - 06/08/2019)
+                            [description] => TIH - Master  - meusanuncios.net (07/07/2019 - 06/08/2019)
+                            [unitPrice] => 3000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 05185837837
+            [fullName] => Gilson Carlos de Souza Barbosa
+            [email] => gilson3112@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/759551bc-8392-494b-a2a9-5c07d7ce6eb8
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+07/07/2019 19:11:38
+INICIO_______________________________________________________________LOG:BEGIN:::07/07/2019 19:38<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 6304
+    [amount] => 3000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 5b9e93694d5845f49837b2d1866910c2
+    [created_date] => 07/07/2019 19:38:07
+    [customer_name] => Gilson Barbosa
+    [customer_phone] => 11946551001
+    [customer_identity] => 05185837837
+    [customer_email] => gilson3112@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 379968*****4716
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628BDHRTEDTB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/07/2019 19:12:38
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->6304 | Result->success | ValorPago ->30.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 6304
+    [amount] => 3000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 5b9e93694d5845f49837b2d1866910c2
+    [created_date] => 07/07/2019 19:38:07
+    [customer_name] => Gilson Barbosa
+    [customer_phone] => 11946551001
+    [customer_identity] => 05185837837
+    [customer_email] => gilson3112@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 379968*****4716
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628BDHRTEDTB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/07/2019 19:35:44
+INICIO_______________________________________________________________LOG:BEGIN:::07/07/2019 19:44<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5b9e93694d5845f49837b2d1866910c2
+    [amount] => 3000
+    [order_number] => 6304
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/07/2019 19:35:44
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5b9e93694d5845f49837b2d1866910c2
+    [amount] => 3000
+    [order_number] => 6304
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

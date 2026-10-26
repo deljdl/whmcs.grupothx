@@ -1,0 +1,234 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4565
+    [id] => 4565
+    [1] => 260
+    [userid] => 260
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-04-09
+    [date] => 2018-04-09
+    [4] => 2018-04-14
+    [duedate] => 2018-04-14
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 40.00
+    [subtotal] => 40.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 40.00
+    [total] => 40.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 260
+    [id] => 260
+    [uuid] => 0e11ec5f-a484-4fcf-8e2f-216e6055c683
+    [firstname] => Sérgio
+    [lastname] => da Silva Cardoso
+    [fullname] => Sérgio da Silva Cardoso
+    [companyname] => Moleca Calçados
+    [email] => contato@sejaumafranqueada.com.br
+    [address1] => Estrada de São Bento, 1710
+    [address2] => Vila Ferlópolis
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08597-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 01146443301 11986947921
+    [password] => $2y$10$v04o.Nos/jzhQJhY/fGxMuVbLsntyRWbG89jg5ku2e.zX9XS5PTdq
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114644330111986947921
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => cielo
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 11/04/2018 18:27<br>IP Address: 177.97.151.181<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986947921
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 16022119812
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11986947921
+    [customfields3] => 16022119812
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4565
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - sejaumafranqueada.com.br (14/04/2018 - 13/05/2018)
+                            [Description] => TIH - Especial - sejaumafranqueada.com.br (14/04/2018 - 13/05/2018)
+                            [UnitPrice] => 4000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Sérgio da Silva Cardoso
+            [Email] => contato@sejaumafranqueada.com.br
+            [Identity] => 16022119812
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4565
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Especial - sejaumafranqueada.com.br (14/04/2018 - 13/05/2018)
+                            [description] => TIH - Especial - sejaumafranqueada.com.br (14/04/2018 - 13/05/2018)
+                            [unitPrice] => 4000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 16022119812
+            [fullName] => Sérgio da Silva Cardoso
+            [email] => contato@sejaumafranqueada.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/2eeb3ab7-a241-4b5d-9fca-e9e809877501
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

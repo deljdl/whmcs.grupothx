@@ -1,0 +1,320 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2340
+    [id] => 2340
+    [1] => 205
+    [userid] => 205
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-08-25
+    [date] => 2016-08-25
+    [4] => 2016-08-29
+    [duedate] => 2016-08-29
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 300.00
+    [subtotal] => 300.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 300.00
+    [total] => 300.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 205
+    [id] => 205
+    [uuid] => b8175516-db5c-4acb-84e0-390d21065687
+    [firstname] => Júlio
+    [lastname] => Silva
+    [fullname] => Júlio Silva
+    [companyname] => Sebo só o Pó
+    [email] => sabbatum22@gmail.com
+    [address1] => Rua Wilma Vinhas Santos, 145
+    [address2] => Jardim Portugal
+    [city] => São José dos Campos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 12232-170
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1233071158
+    [password] => 05b74b7bb95282c78f769977428921de:sX#C!
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1233071158
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 26/08/2016 14:54<br>IP Address: 191.205.114.143<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 10962541826
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 10962541826
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2340
+    [SoftDescriptor] => 2340
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Integração Fastgadol - sebosoopo.com.br - 6 Horas @ 50.00/Hora
+                            [Description] => Desenvolvimento Por Hora - Integração Fastgadol - sebosoopo.com.br - 6 Horas @ 50.00/Hora
+                            [UnitPrice] => 30000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Júlio Silva
+            [Email] => sabbatum22@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2340
+    [softDescriptor] => 2340
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Integração Fastgadol - sebosoopo.com.br - 6 Horas @ 50.00/Hora
+                            [description] => Desenvolvimento Por Hora - Integração Fastgadol - sebosoopo.com.br - 6 Horas @ 50.00/Hora
+                            [unitPrice] => 30000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Júlio Silva
+            [email] => sabbatum22@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/b3fcec13-9b08-49f7-b32d-8579f018e654
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+26/08/2016 15:51:02
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2340
+    [amount] => 30000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 8d31a2a3bf2a456e9b0d556a26a23b15
+    [created_date] => 26/08/2016 17:02:47
+    [customer_name] => Ana Silva
+    [customer_phone] => 1239172648
+    [customer_identity] => 09847884846
+    [customer_email] => sebosoopo@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 541187******7933
+    [payment_installments] => 6
+    [payment_status] => 2
+    [tid] => 107607776200000001FA
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/08/2016 15:55:02
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->205 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2340
+    [amount] => 30000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 8d31a2a3bf2a456e9b0d556a26a23b15
+    [created_date] => 26/08/2016 17:02:47
+    [customer_name] => Ana Silva
+    [customer_phone] => 1239172648
+    [customer_identity] => 09847884846
+    [customer_email] => sebosoopo@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 541187******7933
+    [payment_installments] => 6
+    [payment_status] => 2
+    [tid] => 107607776200000001FA
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/08/2016 15:48:03
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 8d31a2a3bf2a456e9b0d556a26a23b15
+    [amount] => 30000
+    [order_number] => 2340
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/08/2016 15:48:03
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 8d31a2a3bf2a456e9b0d556a26a23b15
+    [amount] => 30000
+    [order_number] => 2340
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

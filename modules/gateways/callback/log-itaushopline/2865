@@ -1,0 +1,240 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2865
+    [id] => 2865
+    [1] => 76
+    [userid] => 76
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-16
+    [date] => 2017-01-16
+    [4] => 2017-01-22
+    [duedate] => 2017-01-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 39.96
+    [subtotal] => 39.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 39.96
+    [total] => 39.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 76
+    [id] => 76
+    [uuid] => 90cebe5c-038c-492e-8392-7e45354dfb90
+    [firstname] => Rodrigo
+    [lastname] => da Silva Anzaloni
+    [fullname] => Rodrigo da Silva Anzaloni
+    [companyname] => Arley e Rodrigo Advogados
+    [email] => rodrigoanzaloni@aasp.org.br
+    [address1] => Rua Frei Caneca, 239, conj 12
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1126424850, 11996477345, 1123664854
+    [password] => c98f2a19faa0430d6bec73d513b7af0a:ZI!gq
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1126424850119964773451123664854
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 16/01/2017 09:09<br>IP Address: 191.193.37.151<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11996477345
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 162.958.738-98.
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11996477345
+    [customfields3] => 162.958.738-98.
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2865
+    [id] => 2865
+    [1] => 76
+    [userid] => 76
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-16
+    [date] => 2017-01-16
+    [4] => 2017-01-22
+    [duedate] => 2017-01-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 39.96
+    [subtotal] => 39.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 39.96
+    [total] => 39.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 76
+    [id] => 76
+    [uuid] => 90cebe5c-038c-492e-8392-7e45354dfb90
+    [firstname] => Rodrigo
+    [lastname] => da Silva Anzaloni
+    [fullname] => Rodrigo da Silva Anzaloni
+    [companyname] => Arley e Rodrigo Advogados
+    [email] => rodrigoanzaloni@aasp.org.br
+    [address1] => Rua Frei Caneca, 239, conj 12
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1126424850, 11996477345, 1123664854
+    [password] => c98f2a19faa0430d6bec73d513b7af0a:ZI!gq
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1126424850119964773451123664854
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 16/01/2017 09:10<br>IP Address: 191.193.37.151<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11996477345
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 162.958.738-98.
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11996477345
+    [customfields3] => 162.958.738-98.
+    [customfields4] => 
+)
+</pre>

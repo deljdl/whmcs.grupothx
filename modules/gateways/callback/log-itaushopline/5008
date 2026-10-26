@@ -1,0 +1,369 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5008
+    [id] => 5008
+    [1] => 186
+    [userid] => 186
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-27
+    [date] => 2018-07-27
+    [4] => 2018-08-03
+    [duedate] => 2018-08-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 186
+    [id] => 186
+    [uuid] => a5d1995d-ddfc-4c7f-90d4-8f0f5bc305cd
+    [firstname] => Christiane
+    [lastname] => Sperandéo
+    [fullname] => Christiane Sperandéo
+    [companyname] => LIGHT CRIAÇÃO E COMUNICAÇÃO LTDA
+    [email] => christiane.sperandeo@lightad.com.br
+    [address1] => Rua Paulistânia 551
+    [address2] => Sumarezinho
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05440-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 113816-1933
+    [password] => 3c65aea275d18a04eb0f004ab515fcfa:RmIlr
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1138161933
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 30/07/2018 17:14<br>IP Address: 189.102.101.156<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11987300363
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00340324000179
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11987300363
+    [customfields3] => 00340324000179
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5008
+    [id] => 5008
+    [1] => 186
+    [userid] => 186
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-27
+    [date] => 2018-07-27
+    [4] => 2018-08-03
+    [duedate] => 2018-08-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 186
+    [id] => 186
+    [uuid] => a5d1995d-ddfc-4c7f-90d4-8f0f5bc305cd
+    [firstname] => Christiane
+    [lastname] => Sperandéo
+    [fullname] => Christiane Sperandéo
+    [companyname] => LIGHT CRIAÇÃO E COMUNICAÇÃO LTDA
+    [email] => christiane.sperandeo@lightad.com.br
+    [address1] => Rua Paulistânia 551
+    [address2] => Sumarezinho
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05440-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 113816-1933
+    [password] => 3c65aea275d18a04eb0f004ab515fcfa:RmIlr
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1138161933
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 30/07/2018 17:14<br>IP Address: 189.102.101.156<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11987300363
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00340324000179
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11987300363
+    [customfields3] => 00340324000179
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5008
+    [id] => 5008
+    [1] => 186
+    [userid] => 186
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-27
+    [date] => 2018-07-27
+    [4] => 2018-08-03
+    [duedate] => 2018-08-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 186
+    [id] => 186
+    [uuid] => a5d1995d-ddfc-4c7f-90d4-8f0f5bc305cd
+    [firstname] => Christiane
+    [lastname] => Sperandéo
+    [fullname] => Christiane Sperandéo
+    [companyname] => LIGHT CRIAÇÃO E COMUNICAÇÃO LTDA
+    [email] => christiane.sperandeo@lightad.com.br
+    [address1] => Rua Paulistânia 551
+    [address2] => Sumarezinho
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05440-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 113816-1933
+    [password] => 3c65aea275d18a04eb0f004ab515fcfa:RmIlr
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1138161933
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 30/07/2018 17:16<br>IP Address: 189.102.101.156<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11987300363
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00340324000179
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11987300363
+    [customfields3] => 00340324000179
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

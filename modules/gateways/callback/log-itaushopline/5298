@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5298
+    [id] => 5298
+    [1] => 205
+    [userid] => 205
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-10-08
+    [date] => 2018-10-08
+    [4] => 2018-10-13
+    [duedate] => 2018-10-13
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.99
+    [subtotal] => 59.99
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.99
+    [total] => 59.99
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 205
+    [id] => 205
+    [uuid] => b8175516-db5c-4acb-84e0-390d21065687
+    [firstname] => Júlio
+    [lastname] => Silva
+    [fullname] => Júlio Silva
+    [companyname] => Sebo só o Pó
+    [email] => sabbatum22@gmail.com
+    [address1] => Rua Wilma Vinhas Santos, 145
+    [address2] => Jardim Portugal
+    [city] => São José dos Campos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 12232-170
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 12-39172648
+    [password] => $2y$10$F6yw5Ifc7DrjvD/WIDnqBeYlHRtHKBYTHa310pTJe6o89l3V5BtVa
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1239172648
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/10/2018 21:52<br>IP Address: 201.92.33.112<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 12991101006
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.257.991/0001-58
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 12991101006
+    [customfields3] => 18.257.991/0001-58
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

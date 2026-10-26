@@ -1,0 +1,246 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3393
+    [id] => 3393
+    [1] => 151
+    [userid] => 151
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-05-29
+    [date] => 2017-05-29
+    [4] => 2017-06-05
+    [duedate] => 2017-06-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 151
+    [id] => 151
+    [uuid] => 9bbd6d9d-9528-406e-bd18-0b0f0e2df4b5
+    [firstname] => Dirceu
+    [lastname] => Alves de Brito Neto
+    [fullname] => Dirceu Alves de Brito Neto
+    [companyname] => Engesp Construções Ltda
+    [email] => dirceu.brito@betmix.com.br
+    [address1] => Rua de Aldebaram n.º 1550
+    [address2] => Cidade Verde
+    [city] => Betim
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 32649-420
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (31) 3532-1652
+    [password] => dd026f890914d1aca2fa7c42bdb8bc79:OHDTQ
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3135321652
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 16/06/2017 08:24<br>IP Address: 201.77.164.30<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 113191066743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 02.119.118/0002-40
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 113191066743
+    [customfields3] => 02.119.118/0002-40
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3393
+    [id] => 3393
+    [1] => 151
+    [userid] => 151
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-05-29
+    [date] => 2017-05-29
+    [4] => 2017-06-05
+    [duedate] => 2017-06-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 151
+    [id] => 151
+    [uuid] => 9bbd6d9d-9528-406e-bd18-0b0f0e2df4b5
+    [firstname] => Dirceu
+    [lastname] => Alves de Brito Neto
+    [fullname] => Dirceu Alves de Brito Neto
+    [companyname] => Engesp Construções Ltda
+    [email] => dirceu.brito@betmix.com.br
+    [address1] => Rua de Aldebaram n.º 1550
+    [address2] => Cidade Verde
+    [city] => Betim
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 32649-420
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (31) 3532-1652
+    [password] => dd026f890914d1aca2fa7c42bdb8bc79:OHDTQ
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3135321652
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 16/06/2017 08:24<br>IP Address: 201.77.164.30<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 113191066743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 02.119.118/0002-40
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 113191066743
+    [customfields3] => 02.119.118/0002-40
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

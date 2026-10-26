@@ -1,0 +1,243 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3101
+    [id] => 3101
+    [1] => 105
+    [userid] => 105
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-17
+    [date] => 2017-03-17
+    [4] => 2017-03-20
+    [duedate] => 2017-03-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.50
+    [subtotal] => 359.50
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.50
+    [total] => 359.50
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 105
+    [id] => 105
+    [uuid] => a3100871-294f-498c-9643-5c749cf124cd
+    [firstname] => Marcos
+    [lastname] => Holanda Rolim
+    [fullname] => Marcos Holanda Rolim
+    [companyname] => Coffe House Café e Festas Ltda - ME
+    [email] => mhr@isaeventos.com.br
+    [address1] => Rua Martiniano de Carvalho, 549 - Conj.44
+    [address2] => Paraíso
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01321-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 3284-1324 (11) 4113-3970 (11) 98466-5333 (11) 98578-5290
+    [password] => 22bbe39e8573bffac3b8552dc1288b12:vlPr(
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113284132411411339701198466533311985785290
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/03/2017 19:44<br>IP Address: 191.32.170.214<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11985785290
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11985785290
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3101
+    [id] => 3101
+    [1] => 105
+    [userid] => 105
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-17
+    [date] => 2017-03-17
+    [4] => 2017-03-20
+    [duedate] => 2017-03-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.50
+    [subtotal] => 359.50
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.50
+    [total] => 359.50
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 105
+    [id] => 105
+    [uuid] => a3100871-294f-498c-9643-5c749cf124cd
+    [firstname] => Marcos
+    [lastname] => Holanda Rolim
+    [fullname] => Marcos Holanda Rolim
+    [companyname] => Coffe House Café e Festas Ltda - ME
+    [email] => mhr@isaeventos.com.br
+    [address1] => Rua Martiniano de Carvalho, 549 - Conj.44
+    [address2] => Paraíso
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01321-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 3284-1324 (11) 4113-3970 (11) 98466-5333 (11) 98578-5290
+    [password] => 22bbe39e8573bffac3b8552dc1288b12:vlPr(
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113284132411411339701198466533311985785290
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/03/2017 19:47<br>IP Address: 191.32.170.214<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11985785290
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.776.544/0001-63
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11985785290
+    [customfields3] => 05.776.544/0001-63
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

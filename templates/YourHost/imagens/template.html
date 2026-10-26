@@ -1,0 +1,366 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="iso-8859-1">
+<title>Untitled Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+	function descricao()
+	{
+		$('#descricao').fadeIn();	
+	}
+	function descricaoOff()
+	{
+		$('#descricao').fadeOut();	
+	}
+	function trocaFoto(caminho)
+	{
+		
+		if($('#foto_destaque').attr('src') == caminho)
+		return false;
+		
+		
+	$('#foto_destaque').attr('src','5020.gif');
+	$( "#foto_destaque" ).fadeOut( "slow", function() {
+    $('#foto_destaque').attr('src',caminho);
+	$( "#foto_destaque" ).fadeIn( "slow");
+  });
+		
+		
+		
+		//$('#loading').fadeIn();
+		
+		
+	}
+</script>
+<style>
+*{
+	margin:0;
+	padding:0;
+}
+.tpl{
+	width:637px;
+	height:auto;
+	margin:0 auto;
+	display:table;
+	
+}
+.nome_template{
+	max-width:470px;
+	float:left;
+	border:solid 1px #bf0c0c;
+	height:30px;
+	background-color:#bf0c0c;
+	border-radius: 10px 10px 0 0;
+	-webkit-box-shadow: 12px 2px 20px 0px rgba(50, 50, 50, 1);
+	-moz-box-shadow:    12px 2px 20px 0px rgba(50, 50, 50, 1);
+	box-shadow:         12px 2px 20px 0px rgba(50, 50, 50, 1);
+	color:#FFF;
+	font-size:27px;
+	font-family:Myriad Pro;
+	padding:5px 5px;
+	margin: 0 0 0 10px;	
+}
+.engloba_template{
+	width:637px;
+	height:auto;
+	float:left;
+	border:solid #bf0c0c 4px;
+	border-radius:10px;
+	background-color:#f0e7e7;	
+}
+.miniaturas{
+	width:100px;
+	height:100%;
+	float:left;
+}
+.hvr-wobble-top{
+	width:64px;
+	height:70px;
+	float:left;
+	border:solid #bf0c0c 2px;
+	margin:10px 0px 0px 16px;
+	border-radius:5px;
+	cursor:pointer;	
+}
+
+
+/* Wobble Top */
+@-webkit-keyframes hvr-wobble-top {
+  16.65% {
+    -webkit-transform: skew(-12deg);
+    transform: skew(-12deg);
+  }
+
+  33.3% {
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+  }
+
+  49.95% {
+    -webkit-transform: skew(-6deg);
+    transform: skew(-6deg);
+  }
+
+  66.6% {
+    -webkit-transform: skew(4deg);
+    transform: skew(4deg);
+  }
+
+  83.25% {
+    -webkit-transform: skew(-2deg);
+    transform: skew(-2deg);
+  }
+
+  100% {
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
+}
+
+@keyframes hvr-wobble-top {
+  16.65% {
+    -webkit-transform: skew(-12deg);
+    transform: skew(-12deg);
+  }
+
+  33.3% {
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+  }
+
+  49.95% {
+    -webkit-transform: skew(-6deg);
+    transform: skew(-6deg);
+  }
+
+  66.6% {
+    -webkit-transform: skew(4deg);
+    transform: skew(4deg);
+  }
+
+  83.25% {
+    -webkit-transform: skew(-2deg);
+    transform: skew(-2deg);
+  }
+
+  100% {
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
+}
+
+.hvr-wobble-top {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+.hvr-wobble-top:hover, .hvr-wobble-top:focus, .hvr-wobble-top:active {
+  -webkit-animation-name: hvr-wobble-top;
+  animation-name: hvr-wobble-top;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+.hvr-wobble-top img{
+	border-radius:3px;
+
+}
+
+.foto-grande{
+	width:498px;
+	height:auto;
+	float:left;
+	border:solid #bf0c0c 4px;
+	margin:10px 0 0 17px;
+	position:relative;
+	display:table;
+	border-radius:10px 0 10px 0;
+	background-color:#FFF;
+}
+.foto-grande img{
+	display:table-cell;
+	border-radius:2px;
+	
+}
+.aba_descricao{
+	width:502px;
+	height:40px;
+	float:left;
+	margin:-35px 0 0 0;
+	position:absolute;
+}
+.aba_emsi{
+	width:100px;
+	height:20px;
+	float:right;
+	border:solid #bf0c0c 1px;
+	background-color:#bf0c0c;
+	border-radius: 10px 10px 0 0;
+	color:#FFF;
+	font-size:20px;
+	font-family:Myriad Pro;
+	padding:5px 5px;
+	cursor:pointer;
+	
+}
+.descricao_template{
+	width:98%;
+	float:left;
+	height:auto;
+	background-color:rgba(191, 12, 12, 1);
+	font-size:15px;
+	font-family:Myriad Pro;
+	padding:5px 5px;
+	color:#FFF;
+	display:none;	
+}
+#foto_destaque{
+	margin:0 auto;
+	display:table;	
+	
+}
+.botoes{
+	width:100%;
+	float:left;
+	height:50px;	
+}
+.preco{
+	max-width:470px;
+	float:left;
+	border:solid 1px #bf0c0c;
+	height:30px;
+	background-color:#bf0c0c;
+	border-radius:0 0 10px 10px;
+	-webkit-box-shadow: 12px 2px 20px 0px rgba(50, 50, 50, 1);
+	-moz-box-shadow:    12px 2px 20px 0px rgba(50, 50, 50, 1);
+	box-shadow:         12px 2px 20px 0px rgba(50, 50, 50, 1);
+	color:#FFF;
+	font-size:27px;
+	font-family:Myriad Pro;
+	padding:5px 5px;
+	margin: 0 0 0 117px;	
+}
+.comprar{
+	max-width:470px;
+	float:left;
+	border:solid 1px #000;
+	height:30px;
+	background-color:#000;
+	border-radius:0 0 10px 10px;
+	padding:5px 5px;
+	margin: 0 0 0 10px;	
+}
+.comprar a{
+	color:#FFF;
+	font-size:27px;
+	font-family:Myriad Pro;
+	text-decoration:none;
+
+}
+.carrinho{
+	max-width:470px;
+	float:left;
+	border:solid 1px #bf0c0c;
+	height:30px;
+	background-color:#bf0c0c;
+	border-radius:0 0 10px 10px;
+	color:#FFF;
+	font-size:27px;
+	font-family:Myriad Pro;
+	padding:5px 5px;
+	margin: 0 0 0 10px;	
+}
+.redessociais{
+	width:27%;
+	height:auto;
+	float:left;
+	color:#bf0c0c;
+	margin:0 0 0 15px;
+	font-family:Myriad Pro;
+		
+}
+</style>
+</head>
+
+<body>
+<div class="tpl">
+    <div class="nome_template">
+    	A Musement Park
+    </div>
+    <div class="engloba_template">
+        <div class="miniaturas">
+        	<div onmouseover="trocaFoto('capa1.png')" class="hvr-wobble-top">
+            	<img src="miniatura.jpg"/>
+            </div>
+            <div onmouseover="trocaFoto('capa2.png')" class="hvr-wobble-top">
+            	<img src="miniatura.jpg"/>
+            </div>
+            <div onmouseover="trocaFoto('capa3.png')" class="hvr-wobble-top">
+            	<img src="miniatura.jpg"/>
+            </div>
+            <div onmouseover="trocaFoto('capa4.png')" class="hvr-wobble-top">
+            	<img src="miniatura.jpg"/>
+            </div>
+            <div onmouseover="trocaFoto('capa5.png')" class="hvr-wobble-top">
+            	<img src="miniatura.jpg"/>
+            </div>
+            <div onmouseover="trocaFoto('capa6.png')" class="hvr-wobble-top">
+            	<img src="miniatura.jpg"/>
+            </div>
+        </div>
+        <div class="foto-grande">
+        	<div class="aba_descricao">
+            	<div onmouseover="descricao()" onMouseOut="descricaoOff()" class="aba_emsi">
+                	DESCRIÇÂO
+                </div>
+                <div id="descricao" class="descricao_template">
+                	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam...
+                </div>
+            </div>
+            <img id="foto_destaque" src="capa.png"/>
+        </div>
+        <div class="botoes">
+        	<div class="preco">
+    			R$ 169.99
+    		</div>
+            <div class="comprar">
+    			<a href="#">Comprar</a>
+    		</div>
+            <div class="carrinho">
+    			<a href="#"><img src="carrinho.png"/></a>
+    		</div>
+            <div class="redessociais">
+    			<table>
+                	<tr>
+                    	<td>
+                        	Compartilhe:
+                        </td>
+                        <td>
+                        	<a href="#"><img src="fb.png"/>
+                        </td>
+                        <td>
+                        	<a href="#"><img src="g+.png"/>
+                        </td>
+                        <td>
+                        	<a href="#"><img src="tt.png"/>
+                        </td>
+                    </tr>
+                </table></a>
+    		</div>
+        </div>
+        
+    </div>
+</div>
+</body>
+</html>

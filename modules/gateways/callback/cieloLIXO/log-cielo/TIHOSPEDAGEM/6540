@@ -1,0 +1,607 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 6540
+    [id] => 6540
+    [1] => 140
+    [userid] => 140
+    [2] => 
+    [invoicenum] => 
+    [3] => 2019-09-04
+    [date] => 2019-09-04
+    [4] => 2019-09-05
+    [duedate] => 2019-09-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 1799.00
+    [subtotal] => 1799.00
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 1799.00
+    [total] => 1799.00
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => cielo
+    [paymentmethod] => cielo
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 140
+    [id] => 140
+    [uuid] => 145ebe9a-86b6-434c-ae84-492b429ee795
+    [firstname] => Junior 
+    [lastname] => De jesus da Silva
+    [fullname] => Junior  De jesus da Silva
+    [companyname] => GRUPO THX
+    [email] => analitico01@gmail.com
+    [address1] => Elpidio ferreira Guimaraes
+    [address2] => center ville
+    [city] => aruja
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07401090
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11941985029
+    [password] => $2y$10$X/xNFFbYIl9MSk07OOV8J.kV/7yv7nQuGNAwqhrwYj0G/IZ.9ULMu
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 140
+                    [uuid] => 145ebe9a-86b6-434c-ae84-492b429ee795
+                    [firstname] => Junior 
+                    [lastname] => De jesus da Silva
+                    [companyname] => GRUPO THX
+                    [email] => analitico01@gmail.com
+                    [address1] => Elpidio ferreira Guimaraes
+                    [address2] => center ville
+                    [city] => aruja
+                    [state] => SP
+                    [postcode] => 07401090
+                    [country] => BR
+                    [phonenumber] => 11941985029
+                    [password] => $2y$10$X/xNFFbYIl9MSk07OOV8J.kV/7yv7nQuGNAwqhrwYj0G/IZ.9ULMu
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2015-03-30
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => 2RLD63kEabdU0rIBZpfEHI3BOMc=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => ™eL5Îw¸«π„?øÜÆ
+                    [startdate] => ™eL5Îw¸«π„?øÜÆ
+                    [expdate] => l:®“_¯p'¿Õ©vˇ
+                    [issuenumber] => ™eL5Îw¸«π„?øÜÆ
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-09-04 16:34:44
+                    [ip] => 45.236.201.26
+                    [host] => customer-201-236-45-26.luxfibra.net.br
+                    [status] => Inactive
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2019-09-04 16:24:03
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 140
+                    [uuid] => 145ebe9a-86b6-434c-ae84-492b429ee795
+                    [firstname] => Junior 
+                    [lastname] => De jesus da Silva
+                    [companyname] => GRUPO THX
+                    [email] => analitico01@gmail.com
+                    [address1] => Elpidio ferreira Guimaraes
+                    [address2] => center ville
+                    [city] => aruja
+                    [state] => SP
+                    [postcode] => 07401090
+                    [country] => BR
+                    [phonenumber] => 11941985029
+                    [password] => $2y$10$X/xNFFbYIl9MSk07OOV8J.kV/7yv7nQuGNAwqhrwYj0G/IZ.9ULMu
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2015-03-30
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => 2RLD63kEabdU0rIBZpfEHI3BOMc=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => ™eL5Îw¸«π„?øÜÆ
+                    [startdate] => ™eL5Îw¸«π„?øÜÆ
+                    [expdate] => l:®“_¯p'¿Õ©vˇ
+                    [issuenumber] => ™eL5Îw¸«π„?øÜÆ
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-09-04 16:34:44
+                    [ip] => 45.236.201.26
+                    [host] => customer-201-236-45-26.luxfibra.net.br
+                    [status] => Inactive
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2019-09-04 16:24:03
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11941985029
+    [telephoneNumber] => +55.11941985029
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 04/09/2019 16:34<br>IP Address: 45.236.201.26<br>Host: customer-201-236-45-26.luxfibra.net.br
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 941985029
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 941985029
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 6540
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Loja Virtual
+                            [Description] => Loja Virtual
+                            [UnitPrice] => 179900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Junior  De jesus da Silva
+            [Email] => analitico01@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 6540
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Loja Virtual
+                            [description] => Loja Virtual
+                            [unitPrice] => 179900
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [fullName] => Junior  De jesus da Silva
+            [email] => analitico01@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/cf29ea0e-5d77-4f9c-a886-9bf3c9581697
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+04/09/2019 16:28:37
+INICIO_______________________________________________________________LOG:BEGIN:::04/09/2019 16:37<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 6540
+    [amount] => 179900
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 4a84c77979384f2295ac885c690789f5
+    [created_date] => 04/09/2019 16:37:26
+    [customer_name] => Fabio trindade
+    [customer_phone] => 11941985523
+    [customer_identity] => 18541742822
+    [customer_email] => fabiotri@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 5
+    [payment_maskedcreditcard] => 636368******9523
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628D4P7V6RDB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+04/09/2019 16:28:37
+INICIO_______________________________________________________________LOG:Pagamento Ainda n√£o Aprovado Invoice  6540
+
+POST:
+<pre>Array
+(
+    [order_number] => 6540
+    [amount] => 179900
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 4a84c77979384f2295ac885c690789f5
+    [created_date] => 04/09/2019 16:37:26
+    [customer_name] => Fabio trindade
+    [customer_phone] => 11941985523
+    [customer_identity] => 18541742822
+    [customer_email] => fabiotri@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 5
+    [payment_maskedcreditcard] => 636368******9523
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777628D4P7V6RDB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+04/09/2019 16:42:44
+INICIO_______________________________________________________________LOG:BEGIN:::04/09/2019 16:44<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 4a84c77979384f2295ac885c690789f5
+    [amount] => 179900
+    [order_number] => 6540
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+04/09/2019 16:42:44
+INICIO_______________________________________________________________LOG:Pagamento Ainda n√£o Aprovado Invoice  6540
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 4a84c77979384f2295ac885c690789f5
+    [amount] => 179900
+    [order_number] => 6540
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

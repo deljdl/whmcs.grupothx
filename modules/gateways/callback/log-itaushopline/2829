@@ -1,0 +1,360 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2829
+    [id] => 2829
+    [1] => 215
+    [userid] => 215
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-06
+    [date] => 2017-01-06
+    [4] => 2017-01-13
+    [duedate] => 2017-01-13
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 215
+    [id] => 215
+    [uuid] => 3a27ba82-eefb-4467-8881-d4c3d567cab3
+    [firstname] => Denise
+    [lastname] => Mürgel
+    [fullname] => Denise Mürgel
+    [companyname] => FVS Marcucci de Carvalho ME
+    [email] => denise@sfe.com.br
+    [address1] => R. Irauna 224, Jd. Novo Mundo
+    [address2] => 
+    [city] => 
+    [fullstate] => 
+    [state] => 
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => $2y$10$Lz20WRZHfN2MN4LdfJ1yNup09mh9JP7fKYsZUT0.x0l5uN3GcbaA.
+    [statecode] => 
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/01/2017 12:59<br>IP Address: 177.188.240.223<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 22.9988.600/0001-23
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 22.9988.600/0001-23
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2829
+    [id] => 2829
+    [1] => 215
+    [userid] => 215
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-06
+    [date] => 2017-01-06
+    [4] => 2017-01-13
+    [duedate] => 2017-01-13
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 215
+    [id] => 215
+    [uuid] => 3a27ba82-eefb-4467-8881-d4c3d567cab3
+    [firstname] => Denise
+    [lastname] => Mürgel
+    [fullname] => Denise Mürgel
+    [companyname] => FVS Marcucci de Carvalho ME
+    [email] => denise@sfe.com.br
+    [address1] => R. Irauna 224, Jd. Novo Mundo
+    [address2] => 
+    [city] => 
+    [fullstate] => 
+    [state] => 
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => $2y$10$jOOzp/Eeo8A4u1Ylm.m06Of69OgHz693aBa/RxeaqU0CkHM3ZBye2
+    [statecode] => 
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/01/2017 14:22<br>IP Address: 189.121.34.144<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 22.9988.600/0001-23
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 22.9988.600/0001-23
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2829
+    [id] => 2829
+    [1] => 215
+    [userid] => 215
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-06
+    [date] => 2017-01-06
+    [4] => 2017-01-13
+    [duedate] => 2017-01-13
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 215
+    [id] => 215
+    [uuid] => 3a27ba82-eefb-4467-8881-d4c3d567cab3
+    [firstname] => Denise
+    [lastname] => Mürgel
+    [fullname] => Denise Mürgel
+    [companyname] => FVS Marcucci de Carvalho ME
+    [email] => denise@sfe.com.br
+    [address1] => R. Irauna 224, Jd. Novo Mundo
+    [address2] => 
+    [city] => 
+    [fullstate] => 
+    [state] => 
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => $2y$10$jOOzp/Eeo8A4u1Ylm.m06Of69OgHz693aBa/RxeaqU0CkHM3ZBye2
+    [statecode] => 
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/01/2017 14:22<br>IP Address: 189.121.34.144<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 22.9988.600/0001-23
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 22.9988.600/0001-23
+    [customfields4] => 
+)
+</pre>

@@ -1,0 +1,283 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2089
+    [id] => 2089
+    [1] => 210
+    [userid] => 210
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-06-20
+    [date] => 2016-06-20
+    [4] => 2016-06-20
+    [duedate] => 2016-06-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1.00
+    [subtotal] => 1.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1.00
+    [total] => 1.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 210
+    [id] => 210
+    [uuid] => c0f75ffa-1e39-417e-866b-3d74d1aac12f
+    [firstname] => Cielo
+    [lastname] => homologação
+    [fullname] => Cielo homologação
+    [companyname] => Cielo
+    [email] => cielo@grupothx.com.br
+    [address1] => 
+    [address2] => 
+    [city] => 
+    [fullstate] => 
+    [state] => 
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => $2y$10$jU1oXn28NG6ShvckgY5ktuYqlMZpxVKql1JeLAVPT6uBlW9UedIfu
+    [statecode] => 
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => cielo
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 21/06/2016 07:45<br>IP Address: 177.159.92.235<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 585858585858
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 585858585858
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2089
+    [SoftDescriptor] => 2089
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Homologação Cielo
+                            [Description] => Homologação Cielo
+                            [UnitPrice] => 100
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Cielo homologação
+            [Email] => cielo@grupothx.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [OrderNumber] => 2089
+    [SoftDescriptor] => 2089
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Homologação Cielo
+                            [Description] => Homologação Cielo
+                            [UnitPrice] => 100
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Cielo homologação
+            [Email] => cielo@grupothx.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+
+21/06/2016 11:51:05
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2089
+    [amount] => 100
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 11efc48a0f644e1f9d544ba31096290a
+    [created_date] => 21/06/2016 13:05:50
+    [customer_name] => Jardel Jacomini
+    [customer_phone] => 1146550330
+    [customer_identity] => 29466511858
+    [customer_email] => cielo@grupothx.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 453211******7289
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 210620161305510009
+    [test_transaction] => True
+)
+</pre>
+
+_______________________________________________________________END
+
+21/06/2016 11:15:11
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 11efc48a0f644e1f9d544ba31096290a
+    [amount] => 100
+    [order_number] => 2089
+    [payment_status] => 3
+    [test_transaction] => True
+)
+</pre>
+
+_______________________________________________________________END
+
+05/07/2016 13:56:20
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e0e1c92eda464da38e9197d2492eff5a
+    [amount] => 100
+    [order_number] => 2089
+    [payment_status] => 4
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

@@ -1,0 +1,246 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4901
+    [id] => 4901
+    [1] => 241
+    [userid] => 241
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-06-29
+    [date] => 2018-06-29
+    [4] => 2018-07-02
+    [duedate] => 2018-07-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 200.00
+    [subtotal] => 200.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 200.00
+    [total] => 200.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 241
+    [id] => 241
+    [uuid] => cc3f754b-088a-4f81-855d-09582f8dc355
+    [firstname] => Edson
+    [lastname] => Gimenes
+    [fullname] => Edson Gimenes
+    [companyname] => Selos Brasil
+    [email] => edsgim@outlook.com
+    [address1] => Rua Lucinda Fernandes Carlos, 421
+    [address2] => Parque Continental III
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07085-310
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1149663933 - 11962842502
+    [password] => $2y$10$N3du.4.tYRuXJNtaJGzZPOlneDZKJPIUOK95rlil03L5an9s86OAu
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114966393311962842502
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 29/06/2018 15:49<br>IP Address: 201.159.31.215<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11962842502
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29007144863
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11962842502
+    [customfields3] => 29007144863
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4901
+    [id] => 4901
+    [1] => 241
+    [userid] => 241
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-06-29
+    [date] => 2018-06-29
+    [4] => 2018-07-02
+    [duedate] => 2018-07-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 200.00
+    [subtotal] => 200.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 200.00
+    [total] => 200.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 241
+    [id] => 241
+    [uuid] => cc3f754b-088a-4f81-855d-09582f8dc355
+    [firstname] => Edson
+    [lastname] => Gimenes
+    [fullname] => Edson Gimenes
+    [companyname] => Selos Brasil
+    [email] => edsgim@outlook.com
+    [address1] => Rua Lucinda Fernandes Carlos, 421
+    [address2] => Parque Continental III
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07085-310
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1149663933 - 11962842502
+    [password] => $2y$10$N3du.4.tYRuXJNtaJGzZPOlneDZKJPIUOK95rlil03L5an9s86OAu
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114966393311962842502
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 29/06/2018 17:23<br>IP Address: 177.41.208.212<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11962842502
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29007144863
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11962842502
+    [customfields3] => 29007144863
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

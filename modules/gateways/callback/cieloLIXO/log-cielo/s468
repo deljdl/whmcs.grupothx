@@ -1,0 +1,429 @@
+
+
+08/10/2019 20:16:23
+INICIO_______________________________________________________________LOG:BEGIN:::08/10/2019 20:23<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 8e13928872b44c8c88c87fc0c92a894a
+    [amount] => 2997
+    [order_number] => s468
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/10/2019 20:18:23
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 2
+    [startnumber] => 0
+    [numreturned] => 2
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6428
+                            [userid] => 250
+                            [firstname] => Ana
+                            [lastname] => Carolina Nunes
+                            [companyname] => Engesafe
+                            [invoicenum] => 
+                            [date] => 2019-08-05
+                            [duedate] => 2019-09-02
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 55.00
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 55.00
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => deposito_ou_transferencia
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 6613
+                            [userid] => 250
+                            [firstname] => Ana
+                            [lastname] => Carolina Nunes
+                            [companyname] => Engesafe
+                            [invoicenum] => 
+                            [date] => 2019-10-05
+                            [duedate] => 2019-10-05
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 29.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 29.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => deposito_ou_transferencia
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 8e13928872b44c8c88c87fc0c92a894a
+    [amount] => 2997
+    [order_number] => s468
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/10/2019 20:18:23
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6428
+            [userid] => 250
+            [firstname] => Ana
+            [lastname] => Carolina Nunes
+            [companyname] => Engesafe
+            [invoicenum] => 
+            [date] => 2019-08-05
+            [duedate] => 2019-09-02
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 55.00
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 55.00
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => deposito_ou_transferencia
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+    [1] => Array
+        (
+            [id] => 6613
+            [userid] => 250
+            [firstname] => Ana
+            [lastname] => Carolina Nunes
+            [companyname] => Engesafe
+            [invoicenum] => 
+            [date] => 2019-10-05
+            [duedate] => 2019-10-05
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 29.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 29.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => deposito_ou_transferencia
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 8e13928872b44c8c88c87fc0c92a894a
+    [amount] => 2997
+    [order_number] => s468
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/10/2019 20:18:23
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6428
+    [userid] => 250
+    [firstname] => Ana
+    [lastname] => Carolina Nunes
+    [companyname] => Engesafe
+    [invoicenum] => 
+    [date] => 2019-08-05
+    [duedate] => 2019-09-02
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 55.00
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 55.00
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [paymethodid] => 
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 8e13928872b44c8c88c87fc0c92a894a
+    [amount] => 2997
+    [order_number] => s468
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/10/2019 20:26:23
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6428
+    [invoicenum] => 
+    [userid] => 250
+    [date] => 2019-08-05
+    [duedate] => 2019-09-02
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 55.00
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 55.00
+    [balance] => 55,00
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 10022
+                            [type] => Domain
+                            [relid] => 90
+                            [description] => Renovação de Domínio - engesafe.com.br - 1 Ano(s) (02/09/2019 - 01/09/2020)
+                            [amount] => 55.00
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 8e13928872b44c8c88c87fc0c92a894a
+    [amount] => 2997
+    [order_number] => s468
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/10/2019 20:26:23
+INICIO_______________________________________________________________LOG:Checando -> 90 ==  468
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 8e13928872b44c8c88c87fc0c92a894a
+    [amount] => 2997
+    [order_number] => s468
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/10/2019 20:26:23
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6613
+    [userid] => 250
+    [firstname] => Ana
+    [lastname] => Carolina Nunes
+    [companyname] => Engesafe
+    [invoicenum] => 
+    [date] => 2019-10-05
+    [duedate] => 2019-10-05
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 29.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 29.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [paymethodid] => 
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 8e13928872b44c8c88c87fc0c92a894a
+    [amount] => 2997
+    [order_number] => s468
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/10/2019 20:26:23
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6613
+    [invoicenum] => 
+    [userid] => 250
+    [date] => 2019-10-05
+    [duedate] => 2019-10-05
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 29.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 29.97
+    [balance] => 29,97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 10334
+                            [type] => Hosting
+                            [relid] => 468
+                            [description] => TIH - Master  - engesafe.com.br (05/10/2019 - 04/11/2019)
+                            [amount] => 29.97
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 8e13928872b44c8c88c87fc0c92a894a
+    [amount] => 2997
+    [order_number] => s468
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/10/2019 20:26:23
+INICIO_______________________________________________________________LOG:Checando -> 468 ==  468
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 8e13928872b44c8c88c87fc0c92a894a
+    [amount] => 2997
+    [order_number] => s468
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/10/2019 20:07:24
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->6613 | Result->success | ValorPago ->29.97 | Message->
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 8e13928872b44c8c88c87fc0c92a894a
+    [amount] => 2997
+    [order_number] => s468
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

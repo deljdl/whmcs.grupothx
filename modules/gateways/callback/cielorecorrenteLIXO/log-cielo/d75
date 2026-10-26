@@ -1,0 +1,475 @@
+
+Dados Dominio
+<pre>Array
+(
+    [id] => 75
+    [userid] => 241
+    [orderid] => 371
+    [regtype] => Register
+    [domainname] => selosbrasil.com
+    [registrar] => email
+    [regperiod] => 1
+    [firstpaymentamount] => 45.00
+    [recurringamount] => 55.00
+    [paymentmethod] => deposito_ou_transferencia
+    [paymentmethodname] => Depósito ou Transferência
+    [regdate] => 2016-11-03
+    [expirydate] => 2017-11-03
+    [nextduedate] => 2017-11-03
+    [status] => Active
+    [subscriptionid] => 
+    [promoid] => 0
+    [dnsmanagement] => 0
+    [emailforwarding] => 0
+    [idprotection] => 0
+    [donotrenew] => 0
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 241
+    [id] => 241
+    [uuid] => cc3f754b-088a-4f81-855d-09582f8dc355
+    [firstname] => Edson
+    [lastname] => Gimenes
+    [fullname] => Edson Gimenes
+    [companyname] => Selos Brasil
+    [email] => edsgim@outlook.com
+    [address1] => Rua Lucinda Fernandes Carlos, 421
+    [address2] => Parque Continental III
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07085-310
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1149663933 - 11962842502
+    [password] => $2y$10$4Ss9hYTafOhUjUHpCwlMZekHRT2sYp5N7wd/fERcQmn28Sf4I4rsu
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114966393311962842502
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => deposito_ou_transferencia
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 29.97
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/03/2017 16:02<br>IP Address: 177.159.88.233<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11962842502
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29007144863
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11962842502
+    [customfields3] => 29007144863
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => d75
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Manutencao de Dominio - selosbrasil.com
+                            [Description] => Manutencao de Dominio - selosbrasil.com
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Annual
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 29007144863
+            [FullName] => Edson Gimenes
+            [Email] => edsgim@outlook.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => d75
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Manutencao de Dominio - selosbrasil.com
+                            [description] => Manutencao de Dominio - selosbrasil.com
+                            [unitPrice] => 5500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => Annual
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 29007144863
+            [fullName] => Edson Gimenes
+            [email] => edsgim@outlook.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/0b0488ae-1343-4a38-adeb-191a747ec533
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Dominio
+<pre>Array
+(
+    [id] => 75
+    [userid] => 241
+    [orderid] => 371
+    [regtype] => Register
+    [domainname] => selosbrasil.com
+    [registrar] => email
+    [regperiod] => 1
+    [firstpaymentamount] => 45.00
+    [recurringamount] => 55.00
+    [paymentmethod] => deposito_ou_transferencia
+    [paymentmethodname] => Depósito ou Transferência
+    [regdate] => 2016-11-03
+    [expirydate] => 2017-11-03
+    [nextduedate] => 2017-11-03
+    [status] => Active
+    [subscriptionid] => 
+    [promoid] => 0
+    [dnsmanagement] => 0
+    [emailforwarding] => 0
+    [idprotection] => 0
+    [donotrenew] => 0
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 241
+    [id] => 241
+    [uuid] => cc3f754b-088a-4f81-855d-09582f8dc355
+    [firstname] => Edson
+    [lastname] => Gimenes
+    [fullname] => Edson Gimenes
+    [companyname] => Selos Brasil
+    [email] => edsgim@outlook.com
+    [address1] => Rua Lucinda Fernandes Carlos, 421
+    [address2] => Parque Continental III
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07085-310
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1149663933 - 11962842502
+    [password] => $2y$10$N3du.4.tYRuXJNtaJGzZPOlneDZKJPIUOK95rlil03L5an9s86OAu
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114966393311962842502
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 31/10/2017 11:36<br>IP Address: 179.178.184.101<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11962842502
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29007144863
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11962842502
+    [customfields3] => 29007144863
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => d75
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Manutencao de Dominio - selosbrasil.com
+                            [Description] => Manutencao de Dominio - selosbrasil.com
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Annual
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 29007144863
+            [FullName] => Edson Gimenes
+            [Email] => edsgim@outlook.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => d75
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Manutencao de Dominio - selosbrasil.com
+                            [description] => Manutencao de Dominio - selosbrasil.com
+                            [unitPrice] => 5500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => Annual
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 29007144863
+            [fullName] => Edson Gimenes
+            [email] => edsgim@outlook.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/84df9e79-5e16-49d2-a937-9aad82b8bba6
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

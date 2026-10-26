@@ -1,0 +1,372 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3021
+    [id] => 3021
+    [1] => 34
+    [userid] => 34
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-22
+    [date] => 2017-02-22
+    [4] => 2017-03-01
+    [duedate] => 2017-03-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.99
+    [subtotal] => 59.99
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.99
+    [total] => 59.99
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 34
+    [id] => 34
+    [uuid] => a04263a0-d5f1-4f4b-9be7-586e1fa49ce2
+    [firstname] => Alfredo
+    [lastname] => Alves Cavalcante
+    [fullname] => Alfredo Alves Cavalcante
+    [companyname] => 
+    [email] => airyklaw@hotmail.com
+    [address1] => Viaduto Jacareí, 100
+    [address2] => 6 Andar - Sala 620 - Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01319-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => aG/34J5kcLt6SN/j/Y/KIpfDyOwHrSJl7LU7
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => CPF: 011.330.587-88
+CNPJ da Eleição: 25.500.417/0001-44 - ELEICAO 2016 ALFREDO ALVES CAVALCANTE VEREADOR
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/02/2017 13:19<br>IP Address: 186.238.250.98<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 011.330.587-88
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 011.330.587-88
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3021
+    [id] => 3021
+    [1] => 34
+    [userid] => 34
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-22
+    [date] => 2017-02-22
+    [4] => 2017-03-01
+    [duedate] => 2017-03-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.99
+    [subtotal] => 59.99
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.99
+    [total] => 59.99
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 34
+    [id] => 34
+    [uuid] => a04263a0-d5f1-4f4b-9be7-586e1fa49ce2
+    [firstname] => Alfredo
+    [lastname] => Alves Cavalcante
+    [fullname] => Alfredo Alves Cavalcante
+    [companyname] => 
+    [email] => airyklaw@hotmail.com
+    [address1] => Viaduto Jacareí, 100
+    [address2] => 6 Andar - Sala 620 - Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01319-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => aG/34J5kcLt6SN/j/Y/KIpfDyOwHrSJl7LU7
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => CPF: 011.330.587-88
+CNPJ da Eleição: 25.500.417/0001-44 - ELEICAO 2016 ALFREDO ALVES CAVALCANTE VEREADOR
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/02/2017 14:54<br>IP Address: 189.56.111.186<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 011.330.587-88
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 011.330.587-88
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3021
+    [id] => 3021
+    [1] => 34
+    [userid] => 34
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-22
+    [date] => 2017-02-22
+    [4] => 2017-03-01
+    [duedate] => 2017-03-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.99
+    [subtotal] => 59.99
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.99
+    [total] => 59.99
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 34
+    [id] => 34
+    [uuid] => a04263a0-d5f1-4f4b-9be7-586e1fa49ce2
+    [firstname] => Alfredo
+    [lastname] => Alves Cavalcante
+    [fullname] => Alfredo Alves Cavalcante
+    [companyname] => 
+    [email] => airyklaw@hotmail.com
+    [address1] => Viaduto Jacareí, 100
+    [address2] => 6 Andar - Sala 620 - Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01319-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => aG/34J5kcLt6SN/j/Y/KIpfDyOwHrSJl7LU7
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => CPF: 011.330.587-88
+CNPJ da Eleição: 25.500.417/0001-44 - ELEICAO 2016 ALFREDO ALVES CAVALCANTE VEREADOR
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/02/2017 14:54<br>IP Address: 189.56.111.186<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 011.330.587-88
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 011.330.587-88
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

@@ -1,0 +1,272 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5175
+    [id] => 5175
+    [1] => 118
+    [userid] => 118
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-05
+    [date] => 2018-09-05
+    [4] => 2018-09-12
+    [duedate] => 2018-09-12
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 55.00
+    [subtotal] => 55.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 55.00
+    [total] => 55.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 118
+    [id] => 118
+    [uuid] => df9c8d76-65f7-43f3-a9aa-43ba043095da
+    [firstname] => Fátima 
+    [lastname] => Campos
+    [fullname] => Fátima  Campos
+    [companyname] => Angela Maria de Oliveira Cabeleireiros
+    [email] => contato@victoriasbeautyhair.com.br
+    [address1] => R. Édison, 310
+    [address2] => Campo Belo
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04618-031
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 5042.1944 | 5093.4602
+    [password] => 17d97b25da6c5c4213e42e175afa491b:m%r)G
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.115042194450934602
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/10/2018 15:31<br>IP Address: 168.227.12.101<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11979970056
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.737.280/0001-31
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11979970056
+    [customfields3] => 11.737.280/0001-31
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5175
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Renovacao de Dominio - victoriasbeautyhair.com.br - 1 Ano(s) (12/09/2018 - 11/09/2019)
+                            [Description] => Renovacao de Dominio - victoriasbeautyhair.com.br - 1 Ano(s) (12/09/2018 - 11/09/2019)
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 550
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 27 dias de atraso
+                            [Description] => Juros por 27 dias de atraso
+                            [UnitPrice] => 490
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Fátima  Campos
+            [Email] => contato@victoriasbeautyhair.com.br
+            [Identity] => 11737280000131
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5175
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Renovacao de Dominio - victoriasbeautyhair.com.br - 1 Ano(s) (12/09/2018 - 11/09/2019)
+                            [description] => Renovacao de Dominio - victoriasbeautyhair.com.br - 1 Ano(s) (12/09/2018 - 11/09/2019)
+                            [unitPrice] => 5500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 550
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [$id] => 6
+                            [name] => Juros por 27 dias de atraso
+                            [description] => Juros por 27 dias de atraso
+                            [unitPrice] => 490
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 7
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 11737280000131
+            [fullName] => Fátima  Campos
+            [email] => contato@victoriasbeautyhair.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/93f217ac-b682-4c16-8b7a-b37f8e7af61f
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

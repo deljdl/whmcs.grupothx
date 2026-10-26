@@ -1,0 +1,120 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4722
+    [id] => 4722
+    [1] => 82
+    [userid] => 82
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-05-16
+    [date] => 2018-05-16
+    [4] => 2018-05-16
+    [duedate] => 2018-05-16
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 249.00
+    [subtotal] => 249.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 249.00
+    [total] => 249.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 82
+    [id] => 82
+    [uuid] => ad5276da-364c-47e3-a7c0-02b7323e287c
+    [firstname] => Joao Paulo 
+    [lastname] => Perez Calbo
+    [fullname] => Joao Paulo  Perez Calbo
+    [companyname] => Franlita Borrachas Ltda Me
+    [email] => contato@franlitaborrachas.com.br
+    [address1] => Rua Rio rande do Norte 324
+    [address2] => Americanopolis
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04412-090              
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 20612157
+    [password] => dcf052f9d260a5110c658b947f5fa917:un(z)
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.20612157
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 16/05/2018 16:49<br>IP Address: 179.98.217.24<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 982550038
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 982550038
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>

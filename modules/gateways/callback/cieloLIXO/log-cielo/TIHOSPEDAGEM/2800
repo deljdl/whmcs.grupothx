@@ -1,0 +1,1657 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2800
+    [id] => 2800
+    [1] => 239
+    [userid] => 239
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-28
+    [date] => 2016-12-28
+    [4] => 2017-01-04
+    [duedate] => 2017-01-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 103.00
+    [subtotal] => 103.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 103.00
+    [total] => 103.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 239
+    [id] => 239
+    [uuid] => ae22ba0c-307f-4057-8405-fc6c6c80451f
+    [firstname] => Alcides
+    [lastname] => Dias dos Santos
+    [fullname] => Alcides Dias dos Santos
+    [companyname] => A D S CONSTRUCOES 
+    [email] => a.dias.santos1958@uol.com.br
+    [address1] => Rua Serra Acarai, 167
+    [address2] => Casa A
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08581-070
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11957673151
+    [password] => $2y$10$gDexAoc4bsTBthQD4aDfM.5GuiCMaArEJwuKjc88dBzyO4kPCfreC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11957673151
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:03<br>IP Address: 201.42.24.185<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957673151
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 151.651.403-34
+                )
+
+        )
+
+    [customfields2] => 11957673151
+    [customfields3] => 151.651.403-34
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2800
+    [SoftDescriptor] => 2800
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [Description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [UnitPrice] => 10300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002800
+            [FullName] => Alcides Dias dos Santos
+            [Email] => a.dias.santos1958@uol.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2800
+    [softDescriptor] => 2800
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [unitPrice] => 10300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002800
+            [fullName] => Alcides Dias dos Santos
+            [email] => a.dias.santos1958@uol.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/67f816b1-06f8-4e4a-8605-9fccd60845d6
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2800
+    [id] => 2800
+    [1] => 239
+    [userid] => 239
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-28
+    [date] => 2016-12-28
+    [4] => 2017-01-04
+    [duedate] => 2017-01-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 103.00
+    [subtotal] => 103.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 103.00
+    [total] => 103.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2800
+    [SoftDescriptor] => 2800
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [Description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [UnitPrice] => 10300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002800
+            [FullName] =>  
+            [Email] => 
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2800
+    [softDescriptor] => 2800
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [unitPrice] => 10300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002800
+            [fullName] =>  
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/93ddd3e6-1185-425a-a400-d5cd470d4bb1
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2800
+    [id] => 2800
+    [1] => 239
+    [userid] => 239
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-28
+    [date] => 2016-12-28
+    [4] => 2017-01-04
+    [duedate] => 2017-01-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 103.00
+    [subtotal] => 103.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 103.00
+    [total] => 103.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 239
+    [id] => 239
+    [uuid] => ae22ba0c-307f-4057-8405-fc6c6c80451f
+    [firstname] => Alcides
+    [lastname] => Dias dos Santos
+    [fullname] => Alcides Dias dos Santos
+    [companyname] => A D S CONSTRUCOES 
+    [email] => a.dias.santos1958@uol.com.br
+    [address1] => Rua Serra Acarai, 167
+    [address2] => Casa A
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08581-070
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11957673151
+    [password] => $2y$10$gDexAoc4bsTBthQD4aDfM.5GuiCMaArEJwuKjc88dBzyO4kPCfreC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11957673151
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:05<br>IP Address: 201.42.24.185<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957673151
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 151.651.403-34
+                )
+
+        )
+
+    [customfields2] => 11957673151
+    [customfields3] => 151.651.403-34
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2800
+    [SoftDescriptor] => 2800
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [Description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [UnitPrice] => 10300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002800
+            [FullName] => Alcides Dias dos Santos
+            [Email] => a.dias.santos1958@uol.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2800
+    [softDescriptor] => 2800
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [unitPrice] => 10300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002800
+            [fullName] => Alcides Dias dos Santos
+            [email] => a.dias.santos1958@uol.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/538bbc82-727a-4b48-9bd2-7e3be953734c
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2800
+    [id] => 2800
+    [1] => 239
+    [userid] => 239
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-28
+    [date] => 2016-12-28
+    [4] => 2017-01-04
+    [duedate] => 2017-01-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 103.00
+    [subtotal] => 103.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 103.00
+    [total] => 103.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2800
+    [SoftDescriptor] => 2800
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [Description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [UnitPrice] => 10300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002800
+            [FullName] =>  
+            [Email] => 
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2800
+    [softDescriptor] => 2800
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [unitPrice] => 10300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002800
+            [fullName] =>  
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/daefeb75-1fd6-4f75-bc8d-687a1ce90832
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2800
+    [id] => 2800
+    [1] => 239
+    [userid] => 239
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-28
+    [date] => 2016-12-28
+    [4] => 2017-01-04
+    [duedate] => 2017-01-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 103.00
+    [subtotal] => 103.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 103.00
+    [total] => 103.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2800
+    [SoftDescriptor] => 2800
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [Description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [UnitPrice] => 10300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002800
+            [FullName] =>  
+            [Email] => 
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2800
+    [softDescriptor] => 2800
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [unitPrice] => 10300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002800
+            [fullName] =>  
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/a16b8179-92e3-432f-a64a-7e5f6e0a29d8
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2800
+    [id] => 2800
+    [1] => 239
+    [userid] => 239
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-28
+    [date] => 2016-12-28
+    [4] => 2017-01-04
+    [duedate] => 2017-01-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 103.00
+    [subtotal] => 103.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 103.00
+    [total] => 103.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 239
+    [id] => 239
+    [uuid] => ae22ba0c-307f-4057-8405-fc6c6c80451f
+    [firstname] => Alcides
+    [lastname] => Dias dos Santos
+    [fullname] => Alcides Dias dos Santos
+    [companyname] => A D S CONSTRUCOES 
+    [email] => a.dias.santos1958@uol.com.br
+    [address1] => Rua Serra Acarai, 167
+    [address2] => Casa A
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08581-070
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11957673151
+    [password] => $2y$10$gDexAoc4bsTBthQD4aDfM.5GuiCMaArEJwuKjc88dBzyO4kPCfreC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11957673151
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:32<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957673151
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 151.651.403-34
+                )
+
+        )
+
+    [customfields2] => 11957673151
+    [customfields3] => 151.651.403-34
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2800
+    [SoftDescriptor] => 2800
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [Description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [UnitPrice] => 10300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002800
+            [FullName] => Alcides Dias dos Santos
+            [Email] => a.dias.santos1958@uol.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2800
+    [softDescriptor] => 2800
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [unitPrice] => 10300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002800
+            [fullName] => Alcides Dias dos Santos
+            [email] => a.dias.santos1958@uol.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/78e2d763-aa61-435e-b401-8794b1476cf1
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2800
+    [id] => 2800
+    [1] => 239
+    [userid] => 239
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-28
+    [date] => 2016-12-28
+    [4] => 2017-01-04
+    [duedate] => 2017-01-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 103.00
+    [subtotal] => 103.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 103.00
+    [total] => 103.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 239
+    [id] => 239
+    [uuid] => ae22ba0c-307f-4057-8405-fc6c6c80451f
+    [firstname] => Alcides
+    [lastname] => Dias dos Santos
+    [fullname] => Alcides Dias dos Santos
+    [companyname] => A D S CONSTRUCOES 
+    [email] => a.dias.santos1958@uol.com.br
+    [address1] => Rua Serra Acarai, 167
+    [address2] => Casa A
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08581-070
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11957673151
+    [password] => $2y$10$gDexAoc4bsTBthQD4aDfM.5GuiCMaArEJwuKjc88dBzyO4kPCfreC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11957673151
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:40<br>IP Address: 201.42.24.185<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957673151
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 151.651.403-34
+                )
+
+        )
+
+    [customfields2] => 11957673151
+    [customfields3] => 151.651.403-34
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2800
+    [SoftDescriptor] => 2800
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [Description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [UnitPrice] => 10300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002800
+            [FullName] => Alcides Dias dos Santos
+            [Email] => a.dias.santos1958@uol.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2800
+    [softDescriptor] => 2800
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [unitPrice] => 10300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002800
+            [fullName] => Alcides Dias dos Santos
+            [email] => a.dias.santos1958@uol.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/32c30a3e-bb9c-4ed6-8bf5-ec521c91a775
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2800
+    [id] => 2800
+    [1] => 239
+    [userid] => 239
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-28
+    [date] => 2016-12-28
+    [4] => 2017-01-04
+    [duedate] => 2017-01-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 103.00
+    [subtotal] => 103.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 103.00
+    [total] => 103.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 239
+    [id] => 239
+    [uuid] => ae22ba0c-307f-4057-8405-fc6c6c80451f
+    [firstname] => Alcides
+    [lastname] => Dias dos Santos
+    [fullname] => Alcides Dias dos Santos
+    [companyname] => A D S CONSTRUCOES 
+    [email] => a.dias.santos1958@uol.com.br
+    [address1] => Rua Serra Acarai, 167
+    [address2] => Casa A
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08581-070
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11957673151
+    [password] => $2y$10$gDexAoc4bsTBthQD4aDfM.5GuiCMaArEJwuKjc88dBzyO4kPCfreC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11957673151
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/01/2017 12:36<br>IP Address: 177.18.239.202<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957673151
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 151.651.403-34
+                )
+
+        )
+
+    [customfields2] => 11957673151
+    [customfields3] => 151.651.403-34
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2800
+    [SoftDescriptor] => 2800
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [Description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [UnitPrice] => 10300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 309
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 5 dias de atraso
+                            [Description] => Juros por 5 dias de atraso
+                            [UnitPrice] => 159
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002800
+            [FullName] => Alcides Dias dos Santos
+            [Email] => a.dias.santos1958@uol.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2800
+    [softDescriptor] => 2800
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme pro...
+                            [description] => Site Básico - dossantosconstrucoes.com Observações:: Criação do site Site A.D DOS SANTOS CONSTRUÇÕES ME - Conforme proposta 1089 Desconto de R$ 180.00 pago no ato. Registro de domínio - dossantosconstrucoes.com - 1 Ano(s) (24/10/2016 - 23/10/...
+                            [unitPrice] => 10300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 309
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 5 dias de atraso
+                            [description] => Juros por 5 dias de atraso
+                            [unitPrice] => 159
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002800
+            [fullName] => Alcides Dias dos Santos
+            [email] => a.dias.santos1958@uol.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/87e4c5e7-8f6b-477a-8f5c-3375a6450fd2
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

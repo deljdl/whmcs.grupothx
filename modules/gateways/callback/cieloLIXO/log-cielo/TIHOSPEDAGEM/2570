@@ -1,0 +1,460 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2570
+    [id] => 2570
+    [1] => 111
+    [userid] => 111
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-10-21
+    [date] => 2016-10-21
+    [4] => 2016-10-28
+    [duedate] => 2016-10-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 49.99
+    [subtotal] => 49.99
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 49.99
+    [total] => 49.99
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 111
+    [id] => 111
+    [uuid] => a0636f8f-a9da-4e92-8549-6e2fdec30ed2
+    [firstname] => Katya
+    [lastname] => Regina Faro
+    [fullname] => Katya Regina Faro
+    [companyname] => Blessed 
+    [email] => katyafaro@blessed.net.br
+    [address1] => Rua Maranhão, 569, 1 andar
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => 
+    [state] => 
+    [postcode] => 01240-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => tel: (11) 3337-5067 / (11) 3926-6592 / (11) 3926-6594
+    [password] => 2cmo12jVbwomW7q7BDF4g/pcz+r2BTgQHlZy
+    [statecode] => 
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113337506711392665921139266594
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/10/2016 06:22<br>IP Address: 189.100.56.82<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11987004141
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 255.263.868-64
+                )
+
+        )
+
+    [customfields2] => 11987004141
+    [customfields3] => 255.263.868-64
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2570
+    [SoftDescriptor] => 2570
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Premium - blessed.net.br (28/10/2016 - 27/11/2016)
+                            [Description] => TIH - Premium - blessed.net.br (28/10/2016 - 27/11/2016)
+                            [UnitPrice] => 4999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002570
+            [FullName] => Katya Regina Faro
+            [Email] => katyafaro@blessed.net.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2570
+    [softDescriptor] => 2570
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Premium - blessed.net.br (28/10/2016 - 27/11/2016)
+                            [description] => TIH - Premium - blessed.net.br (28/10/2016 - 27/11/2016)
+                            [unitPrice] => 4999
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002570
+            [fullName] => Katya Regina Faro
+            [email] => katyafaro@blessed.net.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/95eaf52f-2c60-4524-bba5-f7f4f0b435d1
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2570
+    [id] => 2570
+    [1] => 111
+    [userid] => 111
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-10-21
+    [date] => 2016-10-21
+    [4] => 2016-10-28
+    [duedate] => 2016-10-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 49.99
+    [subtotal] => 49.99
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 49.99
+    [total] => 49.99
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 111
+    [id] => 111
+    [uuid] => a0636f8f-a9da-4e92-8549-6e2fdec30ed2
+    [firstname] => Katya
+    [lastname] => Regina Faro
+    [fullname] => Katya Regina Faro
+    [companyname] => Blessed 
+    [email] => katyafaro@blessed.net.br
+    [address1] => Rua Maranhão, 569, 1 andar
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => 
+    [state] => 
+    [postcode] => 01240-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => tel: (11) 3337-5067 / (11) 3926-6592 / (11) 3926-6594
+    [password] => 2cmo12jVbwomW7q7BDF4g/pcz+r2BTgQHlZy
+    [statecode] => 
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113337506711392665921139266594
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/10/2016 06:23<br>IP Address: 189.100.56.82<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11987004141
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 255.263.868-64
+                )
+
+        )
+
+    [customfields2] => 11987004141
+    [customfields3] => 255.263.868-64
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2570
+    [SoftDescriptor] => 2570
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Premium - blessed.net.br (28/10/2016 - 27/11/2016)
+                            [Description] => TIH - Premium - blessed.net.br (28/10/2016 - 27/11/2016)
+                            [UnitPrice] => 4999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002570
+            [FullName] => Katya Regina Faro
+            [Email] => katyafaro@blessed.net.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2570
+    [softDescriptor] => 2570
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Premium - blessed.net.br (28/10/2016 - 27/11/2016)
+                            [description] => TIH - Premium - blessed.net.br (28/10/2016 - 27/11/2016)
+                            [unitPrice] => 4999
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002570
+            [fullName] => Katya Regina Faro
+            [email] => katyafaro@blessed.net.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/129f2aea-6c21-4ceb-9ee7-7104915c0bd5
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

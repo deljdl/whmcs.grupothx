@@ -1,0 +1,468 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2557
+    [id] => 2557
+    [1] => 237
+    [userid] => 237
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-10-17
+    [date] => 2016-10-17
+    [4] => 2016-10-17
+    [duedate] => 2016-10-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 995.00
+    [subtotal] => 995.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 995.00
+    [total] => 995.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 237
+    [id] => 237
+    [uuid] => c35e0d58-2d9d-4eae-8c88-4294f4604c0e
+    [firstname] => KARINE
+    [lastname] => ALVES DE LIMA
+    [fullname] => KARINE ALVES DE LIMA
+    [companyname] => Amalfis Uniformes Confecção de Roupas LTDA
+    [email] => amalfis@amalfis.com.br
+    [address1] => Avenida Prefeito Francisco Ribeiro Nogueira, 2570
+    [address2] => Mogi Moderno
+    [city] => Mogi das Cruzes
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08717-490
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 47275219
+    [password] => $2y$10$Ynm0QjEwHck0Rai1kZaX5eE3LCEXAC8rv9JkjbtJE8q2XbuBo3WeO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1147275219
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/10/2016 11:16<br>IP Address: 177.158.66.41<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947554984
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.744.716/0001-10
+                )
+
+        )
+
+    [customfields2] => 11947554984
+    [customfields3] => 11.744.716/0001-10
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2557
+    [SoftDescriptor] => 2557
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - amalfis.com.br
+Observações:: Criação do site profissional amalfis.com.br na modalidade SITE BÁSICO - Conf...
+                            [Description] => Site Básico - amalfis.com.br
+Observações:: Criação do site profissional amalfis.com.br na modalidade SITE BÁSICO - Conforme Proposta 1146
+                            [UnitPrice] => 99500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002557
+            [FullName] => KARINE ALVES DE LIMA
+            [Email] => amalfis@amalfis.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2557
+    [softDescriptor] => 2557
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - amalfis.com.br
+Observações:: Criação do site profissional amalfis.com.br na modalidade SITE BÁSICO - Conf...
+                            [description] => Site Básico - amalfis.com.br
+Observações:: Criação do site profissional amalfis.com.br na modalidade SITE BÁSICO - Conforme Proposta 1146
+                            [unitPrice] => 99500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002557
+            [fullName] => KARINE ALVES DE LIMA
+            [email] => amalfis@amalfis.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/4b47cad4-20ba-4477-ba7c-b4b83dc44516
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2557
+    [id] => 2557
+    [1] => 237
+    [userid] => 237
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-10-17
+    [date] => 2016-10-17
+    [4] => 2016-10-21
+    [duedate] => 2016-10-21
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 995.00
+    [subtotal] => 995.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 995.00
+    [total] => 995.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 237
+    [id] => 237
+    [uuid] => c35e0d58-2d9d-4eae-8c88-4294f4604c0e
+    [firstname] => KARINE
+    [lastname] => ALVES DE LIMA
+    [fullname] => KARINE ALVES DE LIMA
+    [companyname] => Amalfis Uniformes Confecção de Roupas LTDA
+    [email] => amalfis@amalfis.com.br
+    [address1] => Avenida Prefeito Francisco Ribeiro Nogueira, 2570
+    [address2] => Mogi Moderno
+    [city] => Mogi das Cruzes
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08717-490
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 47275219
+    [password] => $2y$10$Ynm0QjEwHck0Rai1kZaX5eE3LCEXAC8rv9JkjbtJE8q2XbuBo3WeO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1147275219
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 18/10/2016 13:18<br>IP Address: 177.99.101.81<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947554984
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.744.716/0001-10
+                )
+
+        )
+
+    [customfields2] => 11947554984
+    [customfields3] => 11.744.716/0001-10
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2557
+    [SoftDescriptor] => 2557
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - amalfis.com.br
+Observações:: Criação do site profissional amalfis.com.br na modalidade SITE BÁSICO - Conf...
+                            [Description] => Site Básico - amalfis.com.br
+Observações:: Criação do site profissional amalfis.com.br na modalidade SITE BÁSICO - Conforme Proposta 1146
+                            [UnitPrice] => 99500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002557
+            [FullName] => KARINE ALVES DE LIMA
+            [Email] => amalfis@amalfis.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2557
+    [softDescriptor] => 2557
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - amalfis.com.br
+Observações:: Criação do site profissional amalfis.com.br na modalidade SITE BÁSICO - Conf...
+                            [description] => Site Básico - amalfis.com.br
+Observações:: Criação do site profissional amalfis.com.br na modalidade SITE BÁSICO - Conforme Proposta 1146
+                            [unitPrice] => 99500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002557
+            [fullName] => KARINE ALVES DE LIMA
+            [email] => amalfis@amalfis.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/5353c8d6-5448-4aa4-ace2-e121626f848d
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

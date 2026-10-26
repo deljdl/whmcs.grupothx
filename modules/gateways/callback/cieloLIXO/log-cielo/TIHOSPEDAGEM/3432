@@ -1,0 +1,317 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3432
+    [id] => 3432
+    [1] => 281
+    [userid] => 281
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-06-07
+    [date] => 2017-06-07
+    [4] => 2017-06-07
+    [duedate] => 2017-06-07
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 50.00
+    [subtotal] => 50.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 50.00
+    [total] => 50.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 281
+    [id] => 281
+    [uuid] => ebf23556-fc6e-4ce5-87da-2471aa379ea3
+    [firstname] => Rodrigo 
+    [lastname] => Esposito Gorgonio dos Santos
+    [fullname] => Rodrigo  Esposito Gorgonio dos Santos
+    [companyname] => 
+    [email] => rodrigoesposito@icloud.com
+    [address1] => Rua Conchilia,224
+    [address2] => Vila Albertina Tremembé
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 02373-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 2952-2090 991274627
+    [password] => $2y$10$9TRS5smp12InRrwEVx./feu3yGXjzxsr7.14U.3r9tbjoWY69k/Fe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.29522090991274627
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/06/2017 10:18<br>IP Address: 189.120.194.167<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11991274627
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 22038098840
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11991274627
+    [customfields3] => 22038098840
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3432
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora -Criacao de arte
+                            [Description] => Desenvolvimento Por Hora -Criacao de arte
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Rodrigo  Esposito Gorgonio dos Santos
+            [Email] => rodrigoesposito@icloud.com
+            [Identity] => 22038098840
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3432
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora -Criacao de arte
+                            [description] => Desenvolvimento Por Hora -Criacao de arte
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 22038098840
+            [fullName] => Rodrigo  Esposito Gorgonio dos Santos
+            [email] => rodrigoesposito@icloud.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/3a518d95-7b93-470d-8368-a6fba2056ae6
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+08/06/2017 10:23:23
+INICIO_______________________________________________________________LOG:BEGIN:::08/06/2017 10:23<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3432
+    [amount] => 5000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 2e3841a377c8401cbe70de8af69138bc
+    [created_date] => 08/06/2017 10:23:21
+    [customer_name] => Rodrigo Santos
+    [customer_phone] => 11991274627
+    [customer_identity] => 22038098840
+    [customer_email] => rodrigoesposito@icloud.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 539083******7127
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626GBFLQ3IDB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/06/2017 10:23:23
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  3432
+
+POST:
+<pre>Array
+(
+    [order_number] => 3432
+    [amount] => 5000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 2e3841a377c8401cbe70de8af69138bc
+    [created_date] => 08/06/2017 10:23:21
+    [customer_name] => Rodrigo Santos
+    [customer_phone] => 11991274627
+    [customer_identity] => 22038098840
+    [customer_email] => rodrigoesposito@icloud.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 539083******7127
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626GBFLQ3IDB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/06/2017 10:20:26
+INICIO_______________________________________________________________LOG:BEGIN:::08/06/2017 10:26<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 2e3841a377c8401cbe70de8af69138bc
+    [amount] => 5000
+    [order_number] => 3432
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/06/2017 10:20:26
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  3432
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 2e3841a377c8401cbe70de8af69138bc
+    [amount] => 5000
+    [order_number] => 3432
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

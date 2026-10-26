@@ -1,0 +1,116 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 1997
+    [id] => 1997
+    [1] => 150
+    [userid] => 150
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-05-21
+    [date] => 2016-05-21
+    [4] => 2016-05-28
+    [duedate] => 2016-05-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 239.76
+    [subtotal] => 239.76
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 239.76
+    [total] => 239.76
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 150
+    [id] => 150
+    [uuid] => 2a9f7f41-e6d9-4dba-9e25-f9b12e601d6e
+    [firstname] => Almir
+    [lastname] => Julião Simões Neto
+    [fullname] => Almir Julião Simões Neto
+    [companyname] => La Quadrata Pizzeria LTDA - ME
+    [email] => laquadrata@grupothx.com.br
+    [address1] => Avenida do Contorno, 8412
+    [address2] => Santo Agostinho
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 30110-062
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (31) 3292-3136 (31) 7510-3049
+    [password] => 673707faf81aa2241af519dc8b79065f:RD!Uc
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.31329231363175103049
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 03/06/2016 06:41<br>IP Address: 177.182.101.43<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 113191066743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 22.368.611/0001-20
+                )
+
+        )
+
+    [customfields2] => 113191066743
+    [customfields3] => 22.368.611/0001-20
+)
+</pre>
+
+Order
+<pre></pre>

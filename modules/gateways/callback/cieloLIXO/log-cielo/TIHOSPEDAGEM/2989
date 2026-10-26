@@ -1,0 +1,798 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2989
+    [id] => 2989
+    [1] => 205
+    [userid] => 205
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-15
+    [date] => 2017-02-15
+    [4] => 2017-02-17
+    [duedate] => 2017-02-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 175.00
+    [subtotal] => 175.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 175.00
+    [total] => 175.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => Re Cotação #5
+    [notes] => Re Cotação #5
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 205
+    [id] => 205
+    [uuid] => b8175516-db5c-4acb-84e0-390d21065687
+    [firstname] => Júlio
+    [lastname] => Silva
+    [fullname] => Júlio Silva
+    [companyname] => Sebo só o Pó
+    [email] => sabbatum22@gmail.com
+    [address1] => Rua Wilma Vinhas Santos, 145
+    [address2] => Jardim Portugal
+    [city] => São José dos Campos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 12232-170
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 12-39172648
+    [password] => $2y$10$F6yw5Ifc7DrjvD/WIDnqBeYlHRtHKBYTHa310pTJe6o89l3V5BtVa
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1239172648
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 15/02/2017 18:00<br>IP Address: 186.214.107.228<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 12991101006
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.257.991/0001-58
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 12991101006
+    [customfields3] => 18.257.991/0001-58
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2989
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => 3.5 x Desenvolvimento - Desenvolvimento Por Hora @ 50.00
+                            [Description] => 3.5 x Desenvolvimento - Desenvolvimento Por Hora @ 50.00
+                            [UnitPrice] => 17500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 18257991000158
+            [FullName] => Júlio Silva
+            [Email] => sabbatum22@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2989
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => 3.5 x Desenvolvimento - Desenvolvimento Por Hora @ 50.00
+                            [description] => 3.5 x Desenvolvimento - Desenvolvimento Por Hora @ 50.00
+                            [unitPrice] => 17500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 18257991000158
+            [fullName] => Júlio Silva
+            [email] => sabbatum22@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/fb24b476-9a97-460e-a162-43b95a9255c7
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2989
+    [id] => 2989
+    [1] => 205
+    [userid] => 205
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-15
+    [date] => 2017-02-15
+    [4] => 2017-02-17
+    [duedate] => 2017-02-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 175.00
+    [subtotal] => 175.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 175.00
+    [total] => 175.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => Re Cotação #5
+    [notes] => Re Cotação #5
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 205
+    [id] => 205
+    [uuid] => b8175516-db5c-4acb-84e0-390d21065687
+    [firstname] => Júlio
+    [lastname] => Silva
+    [fullname] => Júlio Silva
+    [companyname] => Sebo só o Pó
+    [email] => sabbatum22@gmail.com
+    [address1] => Rua Wilma Vinhas Santos, 145
+    [address2] => Jardim Portugal
+    [city] => São José dos Campos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 12232-170
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 12-39172648
+    [password] => $2y$10$F6yw5Ifc7DrjvD/WIDnqBeYlHRtHKBYTHa310pTJe6o89l3V5BtVa
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1239172648
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 16/02/2017 10:05<br>IP Address: 201.1.37.50<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 12991101006
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.257.991/0001-58
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 12991101006
+    [customfields3] => 18.257.991/0001-58
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2989
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => 3.5 x Desenvolvimento - Desenvolvimento Por Hora @ 50.00
+                            [Description] => 3.5 x Desenvolvimento - Desenvolvimento Por Hora @ 50.00
+                            [UnitPrice] => 17500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 18257991000158
+            [FullName] => Júlio Silva
+            [Email] => sabbatum22@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2989
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => 3.5 x Desenvolvimento - Desenvolvimento Por Hora @ 50.00
+                            [description] => 3.5 x Desenvolvimento - Desenvolvimento Por Hora @ 50.00
+                            [unitPrice] => 17500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 18257991000158
+            [fullName] => Júlio Silva
+            [email] => sabbatum22@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/9fe9d1a0-9b83-4a86-b79b-094760bbd3d8
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+16/02/2017 10:50:09
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2989
+    [amount] => 17500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => ddf4bfdd741445bc98a23fce13c6268e
+    [created_date] => 16/02/2017 10:09:47
+    [customer_name] => Ana Silva
+    [customer_phone] => 1239172648
+    [customer_identity] => 18257991000158
+    [customer_email] => sebosoopo@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 498406******5849
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626D32OJJ6NB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+16/02/2017 10:51:09
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [order_number] => 2989
+    [amount] => 17500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => ddf4bfdd741445bc98a23fce13c6268e
+    [created_date] => 16/02/2017 10:09:47
+    [customer_name] => Ana Silva
+    [customer_phone] => 1239172648
+    [customer_identity] => 18257991000158
+    [customer_email] => sebosoopo@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 498406******5849
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626D32OJJ6NB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+16/02/2017 10:30:29
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => ddf4bfdd741445bc98a23fce13c6268e
+    [amount] => 17500
+    [order_number] => 2989
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+16/02/2017 10:31:29
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => ddf4bfdd741445bc98a23fce13c6268e
+    [amount] => 17500
+    [order_number] => 2989
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 2989
+    [id] => 2989
+    [1] => 205
+    [userid] => 205
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-15
+    [date] => 2017-02-15
+    [4] => 2017-02-22
+    [duedate] => 2017-02-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 175.00
+    [subtotal] => 175.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 175.00
+    [total] => 175.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => Re Cotação #5
+    [notes] => Re Cotação #5
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 205
+    [id] => 205
+    [uuid] => b8175516-db5c-4acb-84e0-390d21065687
+    [firstname] => Júlio
+    [lastname] => Silva
+    [fullname] => Júlio Silva
+    [companyname] => Sebo só o Pó
+    [email] => sabbatum22@gmail.com
+    [address1] => Rua Wilma Vinhas Santos, 145
+    [address2] => Jardim Portugal
+    [city] => São José dos Campos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 12232-170
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 12-39172648
+    [password] => $2y$10$F6yw5Ifc7DrjvD/WIDnqBeYlHRtHKBYTHa310pTJe6o89l3V5BtVa
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1239172648
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/02/2017 10:21<br>IP Address: 152.249.94.137<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 12991101006
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.257.991/0001-58
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 12991101006
+    [customfields3] => 18.257.991/0001-58
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2989
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => 3.5 x Desenvolvimento - Desenvolvimento Por Hora @ 50.00
+                            [Description] => 3.5 x Desenvolvimento - Desenvolvimento Por Hora @ 50.00
+                            [UnitPrice] => 17500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 18257991000158
+            [FullName] => Júlio Silva
+            [Email] => sabbatum22@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2989
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => 3.5 x Desenvolvimento - Desenvolvimento Por Hora @ 50.00
+                            [description] => 3.5 x Desenvolvimento - Desenvolvimento Por Hora @ 50.00
+                            [unitPrice] => 17500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 18257991000158
+            [fullName] => Júlio Silva
+            [email] => sabbatum22@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/134ce818-5053-439d-a8af-1870c68acc0b
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+22/02/2017 16:38:28
+INICIO_______________________________________________________________LOG:BEGIN:::22/02/2017 16:28<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 17655e0e6bd8477682f2b6e7047e61c3
+    [amount] => 17500
+    [order_number] => 2989
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+22/02/2017 16:40:28
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->2989 | Result->success | ValorPago ->175.00 | Message->
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 17655e0e6bd8477682f2b6e7047e61c3
+    [amount] => 17500
+    [order_number] => 2989
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

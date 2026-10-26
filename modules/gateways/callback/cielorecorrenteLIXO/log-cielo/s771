@@ -1,0 +1,371 @@
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 771
+    [clientid] => 372
+    [orderid] => 727
+    [pid] => 3
+    [regdate] => 2019-06-06
+    [name] => TIH - Master 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => santanasegurosgerais.com.br
+    [dedicatedip] => 
+    [serverid] => 8
+    [servername] => TiHospedagem.com
+    [serverip] => 198.1.103.252
+    [serverhostname] => tihospedagem.com
+    [suspensionreason] => 
+    [firstpaymentamount] => 32.97
+    [recurringamount] => 32.97
+    [paymentmethod] => deposito_ou_transferencia
+    [paymentmethodname] => Depósito ou Transferência
+    [billingcycle] => Monthly
+    [nextduedate] => 2019-08-06
+    [status] => Active
+    [username] => santanas
+    [password] => pW436h9zKi
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 2019-06-19
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 22
+    [disklimit] => 10000
+    [bwusage] => 38
+    [bwlimit] => 0
+    [lastupdate] => 2019-08-12 09:00:37
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 372
+    [id] => 372
+    [uuid] => 8b8f94d6-1777-41e8-8819-12e7044e235b
+    [firstname] => JOAQUIM 
+    [lastname] => TAVARES DE SANTANA
+    [fullname] => JOAQUIM  TAVARES DE SANTANA
+    [companyname] => Santana Seguros Gerais
+    [email] => santana@santanasegurosgerais.com.br
+    [address1] => Rua Oneyda Alvarenga, 89 Cj 72
+    [address2] => Vila da Saúde 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04146-020
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => $2y$10$ayKLY8DCsdOntXOvIafRxufjSH6Mpo7hURcXaLly2/mK5zUdHoT9y
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [telephoneNumber] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 1
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 
+    [lastlogin] => Date: 12/08/2019 11:10<br>IP Address: 179.174.38.169<br>Host: 179-174-38-169.user.vivozap.com.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 067.093.628-68
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 067.093.628-68
+    [customfields4] => 
+    [currency_code] => BRL
+    [client] => Array
+        (
+            [userid] => 372
+            [id] => 372
+            [uuid] => 8b8f94d6-1777-41e8-8819-12e7044e235b
+            [firstname] => JOAQUIM 
+            [lastname] => TAVARES DE SANTANA
+            [fullname] => JOAQUIM  TAVARES DE SANTANA
+            [companyname] => Santana Seguros Gerais
+            [email] => santana@santanasegurosgerais.com.br
+            [address1] => Rua Oneyda Alvarenga, 89 Cj 72
+            [address2] => Vila da Saúde 
+            [city] => São Paulo
+            [fullstate] => SP
+            [state] => SP
+            [postcode] => 04146-020
+            [countrycode] => BR
+            [country] => BR
+            [phonenumber] => 
+            [password] => $2y$10$ayKLY8DCsdOntXOvIafRxufjSH6Mpo7hURcXaLly2/mK5zUdHoT9y
+            [statecode] => SP
+            [countryname] => Brazil
+            [phonecc] => 55
+            [phonenumberformatted] => 
+            [telephoneNumber] => 
+            [billingcid] => 0
+            [notes] => 
+            [twofaenabled] => 
+            [currency] => 1
+            [defaultgateway] => 
+            [cctype] => 
+            [cclastfour] => 
+            [gatewayid] => 
+            [securityqid] => 0
+            [securityqans] => 
+            [groupid] => 0
+            [status] => Active
+            [credit] => 0.00
+            [taxexempt] => 
+            [latefeeoveride] => 
+            [overideduenotices] => 
+            [separateinvoices] => 
+            [disableautocc] => 
+            [emailoptout] => 1
+            [marketing_emails_opt_in] => 
+            [overrideautoclose] => 
+            [allowSingleSignOn] => 1
+            [language] => 
+            [isOptedInToMarketingEmails] => 
+            [lastlogin] => Date: 12/08/2019 11:10<br>IP Address: 179.174.38.169<br>Host: 179-174-38-169.user.vivozap.com.br
+            [customfields1] => on
+            [customfields] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 1
+                            [value] => on
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 2
+                            [value] => 
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 3
+                            [value] => 067.093.628-68
+                        )
+
+                    [3] => Array
+                        (
+                            [id] => 70
+                            [value] => 
+                        )
+
+                )
+
+            [customfields2] => 
+            [customfields3] => 067.093.628-68
+            [customfields4] => 
+            [currency_code] => BRL
+        )
+
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s771
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 06709362868
+            [FullName] => JOAQUIM  TAVARES DE SANTANA
+            [Email] => santana@santanasegurosgerais.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s771
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Master 
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [$id] => 6
+            [recurrentPayment] => stdClass Object
+                (
+                    [$id] => 7
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+            [numberOfPayments] => 0
+            [createdDate] => 0001-01-01T00:00:00
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 06709362868
+            [fullName] => JOAQUIM  TAVARES DE SANTANA
+            [email] => santana@santanasegurosgerais.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/741d6838-7d19-4800-bad5-3063e5deeb40
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

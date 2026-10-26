@@ -1,0 +1,279 @@
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 655
+    [clientid] => 303
+    [orderid] => 597
+    [pid] => 11
+    [regdate] => 2018-03-13
+    [name] => 
+    [translated_name] => TIH - Premium
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => playmoregames.com.br
+    [dedicatedip] => 
+    [serverid] => 8
+    [servername] => TiHospedagem.com
+    [serverip] => 198.1.103.252
+    [serverhostname] => tihospedagem.com
+    [firstpaymentamount] => 43.96
+    [recurringamount] => 43.96
+    [paymentmethod] => cielo
+    [paymentmethodname] => Cielo Cartões
+    [billingcycle] => Monthly
+    [nextduedate] => 2018-04-13
+    [status] => Active
+    [username] => playmore
+    [password] => 74d13UIivw
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 42
+    [disklimit] => 15000
+    [bwusage] => 190
+    [bwlimit] => 0
+    [lastupdate] => 2018-04-06 09:00:11
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 303
+    [id] => 303
+    [uuid] => 5860f80d-f287-4e58-9c9c-cfeaf1357183
+    [firstname] => Fernando 
+    [lastname] => Vilela Soares
+    [fullname] => Fernando  Vilela Soares
+    [companyname] => Play More Games
+    [email] => fernando_vilelas@hotmail.com
+    [address1] => Rua Catumbi 1213 ap 1004
+    [address2] => Catumbi
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03021-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11984820886
+    [password] => $2y$10$aDhPO3NDw6ssfiDMM7C5YOTiwRLvP9ctufZT7To.ZnbFD9bRfG5.6
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11984820886
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 06/04/2018 13:32<br>IP Address: 177.79.26.60<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11984820886
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29570545000115
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11984820886
+    [customfields3] => 29570545000115
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s655
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Premium
+                            [UnitPrice] => 4396
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 29570545000115
+            [FullName] => Fernando  Vilela Soares
+            [Email] => fernando_vilelas@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s655
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Premium
+                            [unitPrice] => 4396
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [$id] => 6
+            [recurrentPayment] => stdClass Object
+                (
+                    [$id] => 7
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 29570545000115
+            [fullName] => Fernando  Vilela Soares
+            [email] => fernando_vilelas@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/cd1b9dc3-1549-46b0-8328-4c62e28d1f43
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

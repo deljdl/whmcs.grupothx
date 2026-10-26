@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3185
+    [id] => 3185
+    [1] => 154
+    [userid] => 154
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-04-10
+    [date] => 2017-04-10
+    [4] => 2017-04-15
+    [duedate] => 2017-04-15
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.93
+    [subtotal] => 359.93
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.93
+    [total] => 359.93
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 154
+    [id] => 154
+    [uuid] => 66755828-5d78-4109-a6df-b5d30a581d7e
+    [firstname] => SOCIEDADE
+    [lastname] => PAULISTA DE INFECTOLOGIA
+    [fullname] => SOCIEDADE PAULISTA DE INFECTOLOGIA
+    [companyname] => SOCIEDADE PAULISTA DE INFECTOLOGIA
+    [email] => saopaulo@infectologia.org.br
+    [address1] => Rua Machado Bittencourt, 205 – conj. 21
+    [address2] => Vila Clementino
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04044-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 5083-1995
+    [password] => cc7dadcacc62a6fd869404f33fa53ede:omYEz
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.50831995
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 10/04/2017 10:19<br>IP Address: 191.193.231.206<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11988888919
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00.075.518/0001-94
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11988888919
+    [customfields3] => 00.075.518/0001-94
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

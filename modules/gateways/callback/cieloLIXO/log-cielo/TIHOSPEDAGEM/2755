@@ -1,0 +1,345 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2755
+    [id] => 2755
+    [1] => 238
+    [userid] => 238
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-12
+    [date] => 2016-12-12
+    [4] => 2016-12-19
+    [duedate] => 2016-12-19
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.97
+    [subtotal] => 59.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.97
+    [total] => 59.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 238
+    [id] => 238
+    [uuid] => f70ba1c3-27ff-447f-8e71-4adb54e0c7dc
+    [firstname] => Fabiana
+    [lastname] => Boaventura Avelar Nogueira
+    [fullname] => Fabiana Boaventura Avelar Nogueira
+    [companyname] => Bia Avelar Estética Facial e Corporal
+    [email] => fabi_avelar@hotmail.com
+    [address1] => Avenida Louraci Della Nina Tavares, 221
+    [address2] => Loteamento Mogilar
+    [city] => Mogi da Cruzes
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08773-650
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11996429521 - 11999070543
+    [password] => $2y$10$su5/z9AfZZDny35qywzKSObTEVh61j.hANKxhbcZkUkHy3jJDklfq
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1199642952111999070543
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/12/2016 16:31<br>IP Address: 177.143.61.249<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11996429521
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 77994345549
+                )
+
+        )
+
+    [customfields2] => 11996429521
+    [customfields3] => 77994345549
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2755
+    [SoftDescriptor] => 2755
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - biaavelarestetica.com.br (19/12/2016 - 18/01/2017)
+                            [Description] => TIH - Master - biaavelarestetica.com.br (19/12/2016 - 18/01/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - biaavelarestetica.com.br (19/12/2016 - 18/01/2017)
+Descrição do Serviço Solicitado: Criação e...
+                            [Description] => Desenvolvimento Por Hora - biaavelarestetica.com.br (19/12/2016 - 18/01/2017)
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página do
+Facebook -  Conforme Proposta 1148
+                            [UnitPrice] => 3000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002755
+            [FullName] => Fabiana Boaventura Avelar Nogueira
+            [Email] => fabi_avelar@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2755
+    [softDescriptor] => 2755
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - biaavelarestetica.com.br (19/12/2016 - 18/01/2017)
+                            [description] => TIH - Master - biaavelarestetica.com.br (19/12/2016 - 18/01/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - biaavelarestetica.com.br (19/12/2016 - 18/01/2017)
+Descrição do Serviço Solicitado: Criação e...
+                            [description] => Desenvolvimento Por Hora - biaavelarestetica.com.br (19/12/2016 - 18/01/2017)
+Descrição do Serviço Solicitado: Criação e Gerenciamento de Página do
+Facebook -  Conforme Proposta 1148
+                            [unitPrice] => 3000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002755
+            [fullName] => Fabiana Boaventura Avelar Nogueira
+            [email] => fabi_avelar@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/52d7b39a-60a3-49c5-a5cc-05533af8fe63
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+13/12/2016 16:10:35
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2755
+    [amount] => 5997
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => eddf0a4f87724a999f21d696c39be2b2
+    [created_date] => 13/12/2016 20:35:08
+    [customer_name] => Ricardo Nogueira
+    [customer_phone] => 11999070543
+    [customer_identity] => 25930277893
+    [customer_email] => ricardo.romero.br@outlook.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 422061******4405
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777625OO2FHK8TB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/12/2016 16:12:35
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->238 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2755
+    [amount] => 5997
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => eddf0a4f87724a999f21d696c39be2b2
+    [created_date] => 13/12/2016 20:35:08
+    [customer_name] => Ricardo Nogueira
+    [customer_phone] => 11999070543
+    [customer_identity] => 25930277893
+    [customer_email] => ricardo.romero.br@outlook.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 422061******4405
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777625OO2FHK8TB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/12/2016 16:49:40
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => eddf0a4f87724a999f21d696c39be2b2
+    [amount] => 5997
+    [order_number] => 2755
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/12/2016 16:49:40
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => eddf0a4f87724a999f21d696c39be2b2
+    [amount] => 5997
+    [order_number] => 2755
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

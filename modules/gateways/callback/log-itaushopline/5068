@@ -1,0 +1,738 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5068
+    [id] => 5068
+    [1] => 320
+    [userid] => 320
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-09
+    [date] => 2018-08-09
+    [4] => 2018-08-09
+    [duedate] => 2018-08-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 150.00
+    [subtotal] => 150.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 150.00
+    [total] => 150.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 320
+    [id] => 320
+    [uuid] => 51f24975-ab2d-4146-b4fb-f91ed35080ea
+    [firstname] => Lucas
+    [lastname] => Rossi Rodriguez
+    [fullname] => Lucas Rossi Rodriguez
+    [companyname] => ARTE DE ESTIMAÇÃO
+    [email] => lucasrossirodriguez@hotmail.com
+    [address1] => Rua Andulária (Jd Faz Rincão), 151
+    [address2] => Jd Fazenda Rincão
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07428-210
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146511273 11972114797
+    [password] => $2y$10$pteGCp8WMf/c/dkK9A9VmualQupVgCv9OO2IAVAfG1qtE2YiBDhJW
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114651127311972114797
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/08/2018 18:33<br>IP Address: 201.159.31.212<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11972114797
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 31.005.993/0001-18
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11972114797
+    [customfields3] => 31.005.993/0001-18
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5068
+    [id] => 5068
+    [1] => 320
+    [userid] => 320
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-09
+    [date] => 2018-08-09
+    [4] => 2018-08-09
+    [duedate] => 2018-08-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 150.00
+    [subtotal] => 150.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 150.00
+    [total] => 150.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 320
+    [id] => 320
+    [uuid] => 51f24975-ab2d-4146-b4fb-f91ed35080ea
+    [firstname] => Lucas
+    [lastname] => Rossi Rodriguez
+    [fullname] => Lucas Rossi Rodriguez
+    [companyname] => ARTE DE ESTIMAÇÃO
+    [email] => lucasrossirodriguez@hotmail.com
+    [address1] => Rua Andulária (Jd Faz Rincão), 151
+    [address2] => Jd Fazenda Rincão
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07428-210
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146511273 11972114797
+    [password] => $2y$10$pteGCp8WMf/c/dkK9A9VmualQupVgCv9OO2IAVAfG1qtE2YiBDhJW
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114651127311972114797
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/08/2018 18:33<br>IP Address: 40.107.217.67<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11972114797
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 31.005.993/0001-18
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11972114797
+    [customfields3] => 31.005.993/0001-18
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5068
+    [id] => 5068
+    [1] => 320
+    [userid] => 320
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-09
+    [date] => 2018-08-09
+    [4] => 2018-08-09
+    [duedate] => 2018-08-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 150.00
+    [subtotal] => 150.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 150.00
+    [total] => 150.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 320
+    [id] => 320
+    [uuid] => 51f24975-ab2d-4146-b4fb-f91ed35080ea
+    [firstname] => Lucas
+    [lastname] => Rossi Rodriguez
+    [fullname] => Lucas Rossi Rodriguez
+    [companyname] => ARTE DE ESTIMAÇÃO
+    [email] => lucasrossirodriguez@hotmail.com
+    [address1] => Rua Andulária (Jd Faz Rincão), 151
+    [address2] => Jd Fazenda Rincão
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07428-210
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146511273 11972114797
+    [password] => $2y$10$pteGCp8WMf/c/dkK9A9VmualQupVgCv9OO2IAVAfG1qtE2YiBDhJW
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114651127311972114797
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/08/2018 18:35<br>IP Address: 201.159.31.212<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11972114797
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 31.005.993/0001-18
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11972114797
+    [customfields3] => 31.005.993/0001-18
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5068
+    [id] => 5068
+    [1] => 320
+    [userid] => 320
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-09
+    [date] => 2018-08-09
+    [4] => 2018-08-09
+    [duedate] => 2018-08-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 150.00
+    [subtotal] => 150.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 150.00
+    [total] => 150.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 320
+    [id] => 320
+    [uuid] => 51f24975-ab2d-4146-b4fb-f91ed35080ea
+    [firstname] => Lucas
+    [lastname] => Rossi Rodriguez
+    [fullname] => Lucas Rossi Rodriguez
+    [companyname] => ARTE DE ESTIMAÇÃO
+    [email] => lucasrossirodriguez@hotmail.com
+    [address1] => Rua Andulária (Jd Faz Rincão), 151
+    [address2] => Jd Fazenda Rincão
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07428-210
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146511273 11972114797
+    [password] => $2y$10$pteGCp8WMf/c/dkK9A9VmualQupVgCv9OO2IAVAfG1qtE2YiBDhJW
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114651127311972114797
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/08/2018 18:35<br>IP Address: 201.159.31.212<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11972114797
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 31.005.993/0001-18
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11972114797
+    [customfields3] => 31.005.993/0001-18
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5068
+    [id] => 5068
+    [1] => 320
+    [userid] => 320
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-09
+    [date] => 2018-08-09
+    [4] => 2018-08-09
+    [duedate] => 2018-08-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 150.00
+    [subtotal] => 150.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 150.00
+    [total] => 150.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 320
+    [id] => 320
+    [uuid] => 51f24975-ab2d-4146-b4fb-f91ed35080ea
+    [firstname] => Lucas
+    [lastname] => Rossi Rodriguez
+    [fullname] => Lucas Rossi Rodriguez
+    [companyname] => ARTE DE ESTIMAÇÃO
+    [email] => lucasrossirodriguez@hotmail.com
+    [address1] => Rua Andulária (Jd Faz Rincão), 151
+    [address2] => Jd Fazenda Rincão
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07428-210
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146511273 11972114797
+    [password] => $2y$10$pteGCp8WMf/c/dkK9A9VmualQupVgCv9OO2IAVAfG1qtE2YiBDhJW
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114651127311972114797
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/08/2018 18:55<br>IP Address: 201.159.31.212<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11972114797
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 31.005.993/0001-18
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11972114797
+    [customfields3] => 31.005.993/0001-18
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5068
+    [id] => 5068
+    [1] => 320
+    [userid] => 320
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-09
+    [date] => 2018-08-09
+    [4] => 2018-08-09
+    [duedate] => 2018-08-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 150.00
+    [subtotal] => 150.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 150.00
+    [total] => 150.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 320
+    [id] => 320
+    [uuid] => 51f24975-ab2d-4146-b4fb-f91ed35080ea
+    [firstname] => Lucas
+    [lastname] => Rossi Rodriguez
+    [fullname] => Lucas Rossi Rodriguez
+    [companyname] => ARTE DE ESTIMAÇÃO
+    [email] => lucasrossirodriguez@hotmail.com
+    [address1] => Rua Andulária (Jd Faz Rincão), 151
+    [address2] => Jd Fazenda Rincão
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07428-210
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146511273 11972114797
+    [password] => $2y$10$pteGCp8WMf/c/dkK9A9VmualQupVgCv9OO2IAVAfG1qtE2YiBDhJW
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114651127311972114797
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/08/2018 18:55<br>IP Address: 201.159.31.212<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11972114797
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 31.005.993/0001-18
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11972114797
+    [customfields3] => 31.005.993/0001-18
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

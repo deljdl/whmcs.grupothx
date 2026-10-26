@@ -1,0 +1,369 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4183
+    [id] => 4183
+    [1] => 300
+    [userid] => 300
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-12-21
+    [date] => 2017-12-21
+    [4] => 2017-01-21
+    [duedate] => 2017-01-21
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 572.32
+    [subtotal] => 572.32
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 572.32
+    [total] => 572.32
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 300
+    [id] => 300
+    [uuid] => b21d3fd5-ba41-49fb-8b4c-35a43724d0fa
+    [firstname] => Flávia
+    [lastname] => Santos
+    [fullname] => Flávia Santos
+    [companyname] => BF IND.COM.EQUIP.P/COZ.IND LTDA EPP
+    [email] => licitacao@bfcozinhas.com.br
+    [address1] => Rua Coronel Emídio Piedade, 457
+    [address2] => Brás
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03018-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1126184301 11951509507
+    [password] => $2y$10$2Za4iatyHobygB2hNpcF0uxGiEDjtjWsHhxGHfKZkFwXL3tsB2Pbe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.112618430111951509507
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 26/01/2018 09:25<br>IP Address: 179.187.51.122<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11951509507
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 08730412000199
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11951509507
+    [customfields3] => 08730412000199
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4183
+    [id] => 4183
+    [1] => 300
+    [userid] => 300
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-12-21
+    [date] => 2017-12-21
+    [4] => 2018-01-26
+    [duedate] => 2018-01-26
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 572.32
+    [subtotal] => 572.32
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 572.32
+    [total] => 572.32
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 300
+    [id] => 300
+    [uuid] => b21d3fd5-ba41-49fb-8b4c-35a43724d0fa
+    [firstname] => Flávia
+    [lastname] => Santos
+    [fullname] => Flávia Santos
+    [companyname] => BF IND.COM.EQUIP.P/COZ.IND LTDA EPP
+    [email] => licitacao@bfcozinhas.com.br
+    [address1] => Rua Coronel Emídio Piedade, 457
+    [address2] => Brás
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03018-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 26925643 26184301 1126184301 11951509507
+    [password] => $2y$10$2Za4iatyHobygB2hNpcF0uxGiEDjtjWsHhxGHfKZkFwXL3tsB2Pbe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2692564326184301112618430111951509507
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 26/01/2018 16:01<br>IP Address: 177.32.193.121<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11951509507
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 08730412000199
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11951509507
+    [customfields3] => 08730412000199
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4183
+    [id] => 4183
+    [1] => 300
+    [userid] => 300
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-12-21
+    [date] => 2017-12-21
+    [4] => 2018-01-26
+    [duedate] => 2018-01-26
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 572.32
+    [subtotal] => 572.32
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 572.32
+    [total] => 572.32
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 300
+    [id] => 300
+    [uuid] => b21d3fd5-ba41-49fb-8b4c-35a43724d0fa
+    [firstname] => Flávia
+    [lastname] => Santos
+    [fullname] => Flávia Santos
+    [companyname] => BF IND.COM.EQUIP.P/COZ.IND LTDA EPP
+    [email] => licitacao@bfcozinhas.com.br
+    [address1] => Rua Coronel Emídio Piedade, 457
+    [address2] => Brás
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03018-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 26925643 26184301 1126184301 11951509507
+    [password] => $2y$10$2Za4iatyHobygB2hNpcF0uxGiEDjtjWsHhxGHfKZkFwXL3tsB2Pbe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2692564326184301112618430111951509507
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 26/01/2018 16:06<br>IP Address: 177.32.193.121<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11951509507
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 08730412000199
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11951509507
+    [customfields3] => 08730412000199
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

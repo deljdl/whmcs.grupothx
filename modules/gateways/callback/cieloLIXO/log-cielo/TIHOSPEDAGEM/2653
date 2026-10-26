@@ -1,0 +1,460 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2653
+    [id] => 2653
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-11
+    [date] => 2016-11-11
+    [4] => 2016-11-16
+    [duedate] => 2016-11-16
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 350.00
+    [subtotal] => 350.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 350.00
+    [total] => 350.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/11/2016 06:03<br>IP Address: 177.18.238.126<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2653
+    [SoftDescriptor] => 2653
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Cópia do site duplodeck.com - Conforme e-mail de 11 de novembro de 2016 14:12
+                            [Description] => Desenvolvimento Por Hora - Cópia do site duplodeck.com - Conforme e-mail de 11 de novembro de 2016 14:12
+                            [UnitPrice] => 35000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002653
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2653
+    [softDescriptor] => 2653
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Cópia do site duplodeck.com - Conforme e-mail de 11 de novembro de 2016 14:12
+                            [description] => Desenvolvimento Por Hora - Cópia do site duplodeck.com - Conforme e-mail de 11 de novembro de 2016 14:12
+                            [unitPrice] => 35000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002653
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/39b67f42-e4d1-4565-a3d4-47af73a4695e
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2653
+    [id] => 2653
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-11
+    [date] => 2016-11-11
+    [4] => 2016-11-16
+    [duedate] => 2016-11-16
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 350.00
+    [subtotal] => 350.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 350.00
+    [total] => 350.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 4648-8700
+    [password] => 0673d2cdde1410552fd5f5b342fd2652:#zYDZ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/11/2016 06:04<br>IP Address: 177.18.238.126<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2653
+    [SoftDescriptor] => 2653
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Cópia do site duplodeck.com - Conforme e-mail de 11 de novembro de 2016 14:12
+                            [Description] => Desenvolvimento Por Hora - Cópia do site duplodeck.com - Conforme e-mail de 11 de novembro de 2016 14:12
+                            [UnitPrice] => 35000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002653
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2653
+    [softDescriptor] => 2653
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Cópia do site duplodeck.com - Conforme e-mail de 11 de novembro de 2016 14:12
+                            [description] => Desenvolvimento Por Hora - Cópia do site duplodeck.com - Conforme e-mail de 11 de novembro de 2016 14:12
+                            [unitPrice] => 35000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002653
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/352523ad-09f5-4f8f-8472-71c483bbc771
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

@@ -1,0 +1,415 @@
+
+Dados Invoice
+<pre>Array
+(
+    [id] => 6584
+    [0] => 6584
+    [userid] => 153
+    [1] => 153
+    [invoicenum] => 
+    [2] => 
+    [date] => 2019-09-25
+    [3] => 2019-09-25
+    [duedate] => 2019-09-25
+    [4] => 2019-09-25
+    [datepaid] => 0000-00-00 00:00:00
+    [5] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [subtotal] => 1200.00
+    [7] => 1200.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 0.00
+    [total] => 1200.00
+    [11] => 1200.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => 0.00
+    [status] => Unpaid
+    [14] => Unpaid
+    [paymentmethod] => itaushopline
+    [15] => itaushopline
+    [paymethodid] => 
+    [16] => 
+    [notes] => 
+    [17] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 153
+    [id] => 153
+    [uuid] => 4c6fbe7c-ab48-45e9-b33d-2ceb69a7589f
+    [firstname] => ANDREA
+    [lastname] => DAS NEVES NERI DE SANTANA
+    [companyname] => Processo Unificado
+    [email] => edinhosantanacondeca@gmail.com
+    [address1] => Estrada Itaquera Guaianases, 2521
+    [address2] => Parada Quinze de Novembro
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08420-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1125531761
+    [tax_id] => 
+    [password] => $2y$10$9GoTrxFRFpoLp4yyqewPX.qnWgFWEzYg2D8ZCptJLTsIEKzzTYN1S
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                    [passwordResetKeyExpiryDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                    [2] => passwordResetKeyExpiryDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                    [2] => groupName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 153
+                    [uuid] => 4c6fbe7c-ab48-45e9-b33d-2ceb69a7589f
+                    [firstname] => ANDREA
+                    [lastname] => DAS NEVES NERI DE SANTANA
+                    [companyname] => Processo Unificado
+                    [email] => edinhosantanacondeca@gmail.com
+                    [address1] => Estrada Itaquera Guaianases, 2521
+                    [address2] => Parada Quinze de Novembro
+                    [city] => São Paulo
+                    [state] => SP
+                    [postcode] => 08420-000
+                    [country] => BR
+                    [phonenumber] => (11) 2553-1761
+                    [tax_id] => 
+                    [password] => $2y$10$9GoTrxFRFpoLp4yyqewPX.qnWgFWEzYg2D8ZCptJLTsIEKzzTYN1S
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2015-06-09
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => 3h3ikB58Oiiuv/moZ8+rJ5QVqd0=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-02 13:48:06
+                    [ip] => 186.220.198.180
+                    [host] => badcc6b4.virtua.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2017-05-15 16:29:06
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 153
+                    [uuid] => 4c6fbe7c-ab48-45e9-b33d-2ceb69a7589f
+                    [firstname] => ANDREA
+                    [lastname] => DAS NEVES NERI DE SANTANA
+                    [companyname] => Processo Unificado
+                    [email] => edinhosantanacondeca@gmail.com
+                    [address1] => Estrada Itaquera Guaianases, 2521
+                    [address2] => Parada Quinze de Novembro
+                    [city] => São Paulo
+                    [state] => SP
+                    [postcode] => 08420-000
+                    [country] => BR
+                    [phonenumber] => (11) 2553-1761
+                    [tax_id] => 
+                    [password] => $2y$10$9GoTrxFRFpoLp4yyqewPX.qnWgFWEzYg2D8ZCptJLTsIEKzzTYN1S
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2015-06-09
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => 3h3ikB58Oiiuv/moZ8+rJ5QVqd0=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-02 13:48:06
+                    [ip] => 186.220.198.180
+                    [host] => badcc6b4.virtua.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2017-05-15 16:29:06
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [fullname] => ANDREA DAS NEVES NERI DE SANTANA
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1125531761
+    [telephoneNumber] => +55.1125531761
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 02/10/2019 13:48<br>IP Address: 186.220.198.180<br>Host: badcc6b4.virtua.com.br
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 359.777.398-26
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 359.777.398-26
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

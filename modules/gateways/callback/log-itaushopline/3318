@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3318
+    [id] => 3318
+    [1] => 276
+    [userid] => 276
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-05-08
+    [date] => 2017-05-08
+    [4] => 2017-05-08
+    [duedate] => 2017-05-08
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 100.00
+    [subtotal] => 100.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 100.00
+    [total] => 100.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 276
+    [id] => 276
+    [uuid] => fc55d0e8-ce84-4b40-9520-dd9439f21a3a
+    [firstname] => Valdir
+    [lastname] => Azevedo de Santana
+    [fullname] => Valdir Azevedo de Santana
+    [companyname] => InvestTeam
+    [email] => valdirinvest@gmail.com
+    [address1] => Rua Bernadete Dias, 21 C
+    [address2] => Boca do Rio
+    [city] => Salvador
+    [fullstate] => BA
+    [state] => BA
+    [postcode] => 41710040
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 71988523479
+    [password] => $2y$10$jFOA1KkU7z8q9SsoK6WZr.aX6Fi/Vf3Ki6BJ7cz0N3hh8YJSdRQwe
+    [statecode] => BA
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.71988523479
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/05/2017 12:18<br>IP Address: 177.99.108.85<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 71988523479
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 94428000510
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 71988523479
+    [customfields3] => 94428000510
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

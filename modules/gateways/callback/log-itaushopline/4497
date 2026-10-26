@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4497
+    [id] => 4497
+    [1] => 307
+    [userid] => 307
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-03-19
+    [date] => 2018-03-19
+    [4] => 2018-03-26
+    [duedate] => 2018-03-26
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 307
+    [id] => 307
+    [uuid] => f7f22c1a-8979-423a-a502-e5082edf45da
+    [firstname] => Carina 
+    [lastname] => Mendes dos Santos
+    [fullname] => Carina  Mendes dos Santos
+    [companyname] => Carina Mendes Odonto
+    [email] => carinamds10@gmail.com
+    [address1] => Rua José Hemetério Andrade,558/303 Bloco 5
+    [address2] => Buritis
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 30493-180
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  3131410055
+    [password] => $2y$10$LBf2Wgg3U6pvB5Vh9.dLRecwGQLhlNG4llSRMUKOg9VTGBUjKaaRu
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3131410055
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/03/2018 14:34<br>IP Address: 177.182.106.245<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 31999191422
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05684954626
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 31999191422
+    [customfields3] => 05684954626
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

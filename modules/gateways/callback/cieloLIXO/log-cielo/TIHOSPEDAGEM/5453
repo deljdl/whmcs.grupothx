@@ -1,0 +1,1697 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5453
+    [id] => 5453
+    [1] => 259
+    [userid] => 259
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-11-14
+    [date] => 2018-11-14
+    [4] => 2018-11-21
+    [duedate] => 2018-11-21
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 29.97
+    [subtotal] => 29.97
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 29.97
+    [total] => 29.97
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => cielo
+    [paymentmethod] => cielo
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 259
+    [id] => 259
+    [uuid] => 80deab10-3cd6-44d4-b6a4-2f2b2ab5d2d5
+    [firstname] => Diego 
+    [lastname] => Rafael da Silva Santos
+    [fullname] => Diego  Rafael da Silva Santos
+    [companyname] => Topsecret Acompanhantes
+    [email] => topsecretacompanhantes@gmail.com
+    [address1] => Rua Newton Vieira Novaes, 91
+    [address2] => Bosque dos Eucaliptos
+    [city] => São José dos Campos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 12233-100
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 123916521812988034026
+    [password] => $2y$10$p6baLJNc44/PQlA6EAJTguBrLWjAXw1RQ2TKTCC0F5lsrpejOHukW
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 259
+                    [uuid] => 80deab10-3cd6-44d4-b6a4-2f2b2ab5d2d5
+                    [firstname] => Diego 
+                    [lastname] => Rafael da Silva Santos
+                    [companyname] => Topsecret Acompanhantes
+                    [email] => topsecretacompanhantes@gmail.com
+                    [address1] => Rua Newton Vieira Novaes, 91
+                    [address2] => Bosque dos Eucaliptos
+                    [city] => São José dos Campos
+                    [state] => SP
+                    [postcode] => 12233-100
+                    [country] => BR
+                    [phonenumber] => 1239165218 12988034026
+                    [password] => $2y$10$p6baLJNc44/PQlA6EAJTguBrLWjAXw1RQ2TKTCC0F5lsrpejOHukW
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2017-02-21
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => WSaS6M7NYZwJvD5fnj5V2UMV0ew=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2018-12-12 02:17:04
+                    [ip] => 179.223.40.76
+                    [host] => b3df284c.virtua.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2018-12-12 02:15:08
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 259
+                    [uuid] => 80deab10-3cd6-44d4-b6a4-2f2b2ab5d2d5
+                    [firstname] => Diego 
+                    [lastname] => Rafael da Silva Santos
+                    [companyname] => Topsecret Acompanhantes
+                    [email] => topsecretacompanhantes@gmail.com
+                    [address1] => Rua Newton Vieira Novaes, 91
+                    [address2] => Bosque dos Eucaliptos
+                    [city] => São José dos Campos
+                    [state] => SP
+                    [postcode] => 12233-100
+                    [country] => BR
+                    [phonenumber] => 1239165218 12988034026
+                    [password] => $2y$10$p6baLJNc44/PQlA6EAJTguBrLWjAXw1RQ2TKTCC0F5lsrpejOHukW
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2017-02-21
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => WSaS6M7NYZwJvD5fnj5V2UMV0ew=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2018-12-12 02:17:04
+                    [ip] => 179.223.40.76
+                    [host] => b3df284c.virtua.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2018-12-12 02:15:08
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.123916521812988034026
+    [telephoneNumber] => +55.123916521812988034026
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 12/12/2018 02:17<br>IP Address: 179.223.40.76<br>Host: b3df284c.virtua.com.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 12988034026
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 34434790811
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 12988034026
+    [customfields3] => 34434790811
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5453
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - acompanhantestopsecret.com.br (21/11/2018 - 20/12/2018)
+                            [Description] => TIH - Master  - acompanhantestopsecret.com.br (21/11/2018 - 20/12/2018)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 21 dias de atraso
+                            [Description] => Juros por 21 dias de atraso
+                            [UnitPrice] => 208
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Diego  Rafael da Silva Santos
+            [Email] => topsecretacompanhantes@gmail.com
+            [Identity] => 34434790811
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5453
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Master  - acompanhantestopsecret.com.br (21/11/2018 - 20/12/2018)
+                            [description] => TIH - Master  - acompanhantestopsecret.com.br (21/11/2018 - 20/12/2018)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [$id] => 6
+                            [name] => Juros por 21 dias de atraso
+                            [description] => Juros por 21 dias de atraso
+                            [unitPrice] => 208
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 7
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 34434790811
+            [fullName] => Diego  Rafael da Silva Santos
+            [email] => topsecretacompanhantes@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/012ef929-1d2b-43af-b488-bee421c2241d
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+12/12/2018 2:05:24
+INICIO_______________________________________________________________LOG:BEGIN:::12/12/2018 2:24<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 5453
+    [amount] => 3505
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 5fadc48dbf1b4865b5877aa7fb4b0c96
+    [created_date] => 12/12/2018 02:24:02
+    [customer_name] => Claudinei Firmiano
+    [customer_phone] => 12982284613
+    [customer_identity] => 26896039850
+    [customer_email] => cfirmiano77@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 498442******7399
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777627ITFDFAIJB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+12/12/2018 2:05:24
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  5453
+
+POST:
+<pre>Array
+(
+    [order_number] => 5453
+    [amount] => 3505
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 5fadc48dbf1b4865b5877aa7fb4b0c96
+    [created_date] => 12/12/2018 02:24:02
+    [customer_name] => Claudinei Firmiano
+    [customer_phone] => 12982284613
+    [customer_identity] => 26896039850
+    [customer_email] => cfirmiano77@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 498442******7399
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777627ITFDFAIJB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+12/12/2018 2:36:24
+INICIO_______________________________________________________________LOG:BEGIN:::12/12/2018 2:24<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5fadc48dbf1b4865b5877aa7fb4b0c96
+    [amount] => 3505
+    [order_number] => 5453
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+12/12/2018 2:36:24
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  5453
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5fadc48dbf1b4865b5877aa7fb4b0c96
+    [amount] => 3505
+    [order_number] => 5453
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 5453
+    [id] => 5453
+    [1] => 259
+    [userid] => 259
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-11-14
+    [date] => 2018-11-14
+    [4] => 2018-11-21
+    [duedate] => 2018-11-21
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 29.97
+    [subtotal] => 29.97
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 29.97
+    [total] => 29.97
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => cielo
+    [paymentmethod] => cielo
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 259
+    [id] => 259
+    [uuid] => 80deab10-3cd6-44d4-b6a4-2f2b2ab5d2d5
+    [firstname] => Diego 
+    [lastname] => Rafael da Silva Santos
+    [fullname] => Diego  Rafael da Silva Santos
+    [companyname] => Topsecret Acompanhantes
+    [email] => topsecretacompanhantes@gmail.com
+    [address1] => Rua Newton Vieira Novaes, 91
+    [address2] => Bosque dos Eucaliptos
+    [city] => São José dos Campos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 12233-100
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 123916521812988034026
+    [password] => $2y$10$N652JoLMS.1Cp27T1Rh9UeM97tFA8RGfqq2ckIU59tR8MuuqpgGn2
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 259
+                    [uuid] => 80deab10-3cd6-44d4-b6a4-2f2b2ab5d2d5
+                    [firstname] => Diego 
+                    [lastname] => Rafael da Silva Santos
+                    [companyname] => Topsecret Acompanhantes
+                    [email] => topsecretacompanhantes@gmail.com
+                    [address1] => Rua Newton Vieira Novaes, 91
+                    [address2] => Bosque dos Eucaliptos
+                    [city] => São José dos Campos
+                    [state] => SP
+                    [postcode] => 12233-100
+                    [country] => BR
+                    [phonenumber] => +55..123916521812988034026
+                    [password] => $2y$10$N652JoLMS.1Cp27T1Rh9UeM97tFA8RGfqq2ckIU59tR8MuuqpgGn2
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2017-02-21
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => WKwqEEJtQV4D74Oa2cpbworEvZI=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-03-08 01:00:57
+                    [ip] => 201.75.171.182
+                    [host] => c94babb6.virtua.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2019-03-08 00:58:05
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 259
+                    [uuid] => 80deab10-3cd6-44d4-b6a4-2f2b2ab5d2d5
+                    [firstname] => Diego 
+                    [lastname] => Rafael da Silva Santos
+                    [companyname] => Topsecret Acompanhantes
+                    [email] => topsecretacompanhantes@gmail.com
+                    [address1] => Rua Newton Vieira Novaes, 91
+                    [address2] => Bosque dos Eucaliptos
+                    [city] => São José dos Campos
+                    [state] => SP
+                    [postcode] => 12233-100
+                    [country] => BR
+                    [phonenumber] => +55..123916521812988034026
+                    [password] => $2y$10$N652JoLMS.1Cp27T1Rh9UeM97tFA8RGfqq2ckIU59tR8MuuqpgGn2
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2017-02-21
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => WKwqEEJtQV4D74Oa2cpbworEvZI=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-03-08 01:00:57
+                    [ip] => 201.75.171.182
+                    [host] => c94babb6.virtua.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2019-03-08 00:58:05
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.123916521812988034026
+    [telephoneNumber] => +55.123916521812988034026
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 08/03/2019 01:00<br>IP Address: 201.75.171.182<br>Host: c94babb6.virtua.com.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 12988034026
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 34434790811
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 12988034026
+    [customfields3] => 34434790811
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5453
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - acompanhantestopsecret.com.br (21/11/2018 - 20/12/2018)
+                            [Description] => TIH - Master  - acompanhantestopsecret.com.br (21/11/2018 - 20/12/2018)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 107 dias de atraso
+                            [Description] => Juros por 107 dias de atraso
+                            [UnitPrice] => 1058
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Diego  Rafael da Silva Santos
+            [Email] => topsecretacompanhantes@gmail.com
+            [Identity] => 34434790811
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5453
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Master  - acompanhantestopsecret.com.br (21/11/2018 - 20/12/2018)
+                            [description] => TIH - Master  - acompanhantestopsecret.com.br (21/11/2018 - 20/12/2018)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [$id] => 6
+                            [name] => Juros por 107 dias de atraso
+                            [description] => Juros por 107 dias de atraso
+                            [unitPrice] => 1058
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 7
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 34434790811
+            [fullName] => Diego  Rafael da Silva Santos
+            [email] => topsecretacompanhantes@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/b3598235-8f06-4737-8250-12899f93a494
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+08/03/2019 1:25:05
+INICIO_______________________________________________________________LOG:BEGIN:::08/03/2019 1:05<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 5453
+    [amount] => 4355
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 164932bcb00848f0a57949e5c7ef65f5
+    [created_date] => 08/03/2019 01:05:21
+    [customer_name] => Diego Santos
+    [customer_phone] => 12988034026
+    [customer_identity] => 34434790811
+    [customer_email] => topsecretacompanhantes@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 550209******0480
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776287SBC43JFB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/03/2019 1:27:05
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->5453 | Result->success | ValorPago ->29.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 5453
+    [amount] => 4355
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 164932bcb00848f0a57949e5c7ef65f5
+    [created_date] => 08/03/2019 01:05:21
+    [customer_name] => Diego Santos
+    [customer_phone] => 12988034026
+    [customer_identity] => 34434790811
+    [customer_email] => topsecretacompanhantes@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 550209******0480
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776287SBC43JFB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 5453
+    [id] => 5453
+    [1] => 259
+    [userid] => 259
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-11-14
+    [date] => 2018-11-14
+    [4] => 2018-11-21
+    [duedate] => 2018-11-21
+    [5] => 2019-03-08 01:05:26
+    [datepaid] => 2019-03-08 01:05:26
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 29.97
+    [subtotal] => 29.97
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 29.97
+    [total] => 29.97
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Paid
+    [status] => Paid
+    [15] => cielo
+    [paymentmethod] => cielo
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 259
+    [id] => 259
+    [uuid] => 80deab10-3cd6-44d4-b6a4-2f2b2ab5d2d5
+    [firstname] => Diego 
+    [lastname] => Rafael da Silva Santos
+    [fullname] => Diego  Rafael da Silva Santos
+    [companyname] => Topsecret Acompanhantes
+    [email] => topsecretacompanhantes@gmail.com
+    [address1] => Rua Newton Vieira Novaes, 91
+    [address2] => Bosque dos Eucaliptos
+    [city] => São José dos Campos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 12233-100
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 123916521812988034026
+    [password] => $2y$10$N652JoLMS.1Cp27T1Rh9UeM97tFA8RGfqq2ckIU59tR8MuuqpgGn2
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 259
+                    [uuid] => 80deab10-3cd6-44d4-b6a4-2f2b2ab5d2d5
+                    [firstname] => Diego 
+                    [lastname] => Rafael da Silva Santos
+                    [companyname] => Topsecret Acompanhantes
+                    [email] => topsecretacompanhantes@gmail.com
+                    [address1] => Rua Newton Vieira Novaes, 91
+                    [address2] => Bosque dos Eucaliptos
+                    [city] => São José dos Campos
+                    [state] => SP
+                    [postcode] => 12233-100
+                    [country] => BR
+                    [phonenumber] => +55..123916521812988034026
+                    [password] => $2y$10$N652JoLMS.1Cp27T1Rh9UeM97tFA8RGfqq2ckIU59tR8MuuqpgGn2
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2017-02-21
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => WKwqEEJtQV4D74Oa2cpbworEvZI=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-03-08 01:00:57
+                    [ip] => 201.75.171.182
+                    [host] => c94babb6.virtua.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2019-03-08 00:58:05
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 259
+                    [uuid] => 80deab10-3cd6-44d4-b6a4-2f2b2ab5d2d5
+                    [firstname] => Diego 
+                    [lastname] => Rafael da Silva Santos
+                    [companyname] => Topsecret Acompanhantes
+                    [email] => topsecretacompanhantes@gmail.com
+                    [address1] => Rua Newton Vieira Novaes, 91
+                    [address2] => Bosque dos Eucaliptos
+                    [city] => São José dos Campos
+                    [state] => SP
+                    [postcode] => 12233-100
+                    [country] => BR
+                    [phonenumber] => +55..123916521812988034026
+                    [password] => $2y$10$N652JoLMS.1Cp27T1Rh9UeM97tFA8RGfqq2ckIU59tR8MuuqpgGn2
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2017-02-21
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => WKwqEEJtQV4D74Oa2cpbworEvZI=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-03-08 01:00:57
+                    [ip] => 201.75.171.182
+                    [host] => c94babb6.virtua.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2019-03-08 00:58:05
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.123916521812988034026
+    [telephoneNumber] => +55.123916521812988034026
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 08/03/2019 01:00<br>IP Address: 201.75.171.182<br>Host: c94babb6.virtua.com.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 12988034026
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 34434790811
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 12988034026
+    [customfields3] => 34434790811
+    [customfields4] => 
+)
+</pre>
+
+
+08/03/2019 1:39:14
+INICIO_______________________________________________________________LOG:BEGIN:::08/03/2019 1:14<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 164932bcb00848f0a57949e5c7ef65f5
+    [amount] => 4355
+    [order_number] => 5453
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/03/2019 1:39:14
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 164932bcb00848f0a57949e5c7ef65f5
+    [amount] => 4355
+    [order_number] => 5453
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

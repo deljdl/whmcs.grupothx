@@ -1,0 +1,486 @@
+
+Dados Dominio
+<pre>Array
+(
+    [id] => 19
+    [userid] => 181
+    [orderid] => 253
+    [regtype] => Register
+    [domainname] => agbengenharia.com.br
+    [registrar] => email
+    [regperiod] => 1
+    [firstpaymentamount] => 45.00
+    [recurringamount] => 55.00
+    [paymentmethod] => deposito_ou_transferencia
+    [paymentmethodname] => Depósito ou Transferência
+    [regdate] => 2016-04-11
+    [expirydate] => 2017-04-11
+    [nextduedate] => 2017-04-11
+    [status] => Active
+    [subscriptionid] => 
+    [promoid] => 0
+    [dnsmanagement] => 0
+    [emailforwarding] => 0
+    [idprotection] => 0
+    [donotrenew] => 0
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 181
+    [id] => 181
+    [uuid] => 91dab6b7-6ae4-4eaf-a166-36d57296a104
+    [firstname] => Paulo
+    [lastname] => Henrique Benevides
+    [fullname] => Paulo Henrique Benevides
+    [companyname] => PH Benevides Prestação de Serviços
+    [email] => pauloh.benevides@gmail.com
+    [address1] => Rua Engenheiro Cesar Polilo, 486
+    [address2] => Vila Giordano
+    [city] => São Paulo 
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08012-150
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 2956-8225
+    [password] => f3a0dcd37f8b08c6315d7210d945d213:jtv#a
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1129568225
+    [billingcid] => 0
+    [notes] => Cliente não pagou dois meses e por isso fatura foi mesclada
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => deposito_ou_transferencia
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 29.97
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/04/2017 11:20<br>IP Address: 186.214.21.248<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995608169
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23.872.646/0001-64
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995608169
+    [customfields3] => 23.872.646/0001-64
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => d19
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Manutencao de Dominio - agbengenharia.com.br
+                            [Description] => Manutencao de Dominio - agbengenharia.com.br
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Annual
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 23872646000164
+            [FullName] => Paulo Henrique Benevides
+            [Email] => pauloh.benevides@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => d19
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Manutencao de Dominio - agbengenharia.com.br
+                            [description] => Manutencao de Dominio - agbengenharia.com.br
+                            [unitPrice] => 5500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => Annual
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 23872646000164
+            [fullName] => Paulo Henrique Benevides
+            [email] => pauloh.benevides@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/00fc3e32-ef68-4120-9b49-e328988cf3e0
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Dominio
+<pre>Array
+(
+    [id] => 19
+    [userid] => 241
+    [orderid] => 253
+    [regtype] => Register
+    [domainname] => agbengenharia.com.br
+    [registrar] => email
+    [regperiod] => 1
+    [firstpaymentamount] => 45.00
+    [recurringamount] => 55.00
+    [paymentmethod] => deposito_ou_transferencia
+    [paymentmethodname] => Depósito ou Transferência
+    [regdate] => 2016-04-11
+    [expirydate] => 2018-04-11
+    [nextduedate] => 2018-04-11
+    [status] => Expired
+    [subscriptionid] => 
+    [promoid] => 0
+    [dnsmanagement] => 0
+    [emailforwarding] => 0
+    [idprotection] => 0
+    [donotrenew] => 0
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 241
+    [id] => 241
+    [uuid] => cc3f754b-088a-4f81-855d-09582f8dc355
+    [firstname] => Edson
+    [lastname] => Gimenes
+    [fullname] => Edson Gimenes
+    [companyname] => Selos Brasil
+    [email] => edsgim@outlook.com
+    [address1] => Rua Lucinda Fernandes Carlos, 421
+    [address2] => Parque Continental III
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07085-310
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1149663933 - 11962842502
+    [password] => $2y$10$N3du.4.tYRuXJNtaJGzZPOlneDZKJPIUOK95rlil03L5an9s86OAu
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114966393311962842502
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 03/05/2018 10:01<br>IP Address: 177.157.129.218<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11962842502
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29007144863
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11962842502
+    [customfields3] => 29007144863
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => d19
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Manutencao de Dominio - agbengenharia.com.br
+                            [Description] => Manutencao de Dominio - agbengenharia.com.br
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Annual
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 29007144863
+            [FullName] => Edson Gimenes
+            [Email] => edsgim@outlook.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => d19
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Manutencao de Dominio - agbengenharia.com.br
+                            [description] => Manutencao de Dominio - agbengenharia.com.br
+                            [unitPrice] => 5500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [$id] => 6
+            [recurrentPayment] => stdClass Object
+                (
+                    [$id] => 7
+                    [endDate] => 
+                    [interval] => Annual
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 29007144863
+            [fullName] => Edson Gimenes
+            [email] => edsgim@outlook.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/7cb4d51d-cdb5-4ed6-b0c4-061daed78580
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

@@ -1,0 +1,232 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2779
+    [id] => 2779
+    [1] => 163
+    [userid] => 163
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-19
+    [date] => 2016-12-19
+    [4] => 2016-12-26
+    [duedate] => 2016-12-26
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 163
+    [id] => 163
+    [uuid] => a4ebe3d3-7f01-4cc7-95de-806196b434a8
+    [firstname] => KELLINY
+    [lastname] => DE MATOS
+    [fullname] => KELLINY DE MATOS
+    [companyname] => CATARINA EQUIPAMENTOS INDUSTRIAIS LTDA
+    [email] => vendas@catarinaequipamentos.com.br
+    [address1] => RUA GUINDOVAL, 488
+    [address2] => BONSUCESSO
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07176-170
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 2437-7638 - 11 98274-1052
+    [password] => 5b06fcc75a7fb495f61cc4b2d4e226f5:QvHxU
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.112437763811982741052
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/01/2017 05:40<br>IP Address: 177.159.92.178<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982741052
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 03.806.073/0001-63
+                )
+
+        )
+
+    [customfields2] => 11982741052
+    [customfields3] => 03.806.073/0001-63
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2779
+    [id] => 2779
+    [1] => 163
+    [userid] => 163
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-19
+    [date] => 2016-12-19
+    [4] => 2016-12-26
+    [duedate] => 2016-12-26
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 163
+    [id] => 163
+    [uuid] => a4ebe3d3-7f01-4cc7-95de-806196b434a8
+    [firstname] => KELLINY
+    [lastname] => DE MATOS
+    [fullname] => KELLINY DE MATOS
+    [companyname] => CATARINA EQUIPAMENTOS INDUSTRIAIS LTDA
+    [email] => vendas@catarinaequipamentos.com.br
+    [address1] => RUA GUINDOVAL, 488
+    [address2] => BONSUCESSO
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07176-170
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 2437-7638 - 11 98274-1052
+    [password] => 5b06fcc75a7fb495f61cc4b2d4e226f5:QvHxU
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.112437763811982741052
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/01/2017 05:40<br>IP Address: 177.159.92.178<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982741052
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 03.806.073/0001-63
+                )
+
+        )
+
+    [customfields2] => 11982741052
+    [customfields3] => 03.806.073/0001-63
+)
+</pre>
+
+Order
+<pre></pre>

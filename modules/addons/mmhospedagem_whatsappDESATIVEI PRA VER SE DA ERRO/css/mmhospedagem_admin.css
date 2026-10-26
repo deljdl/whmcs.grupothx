@@ -1,0 +1,46 @@
+/**************************************/
+/* CSS Desenvolvido pela MMHospedagem */
+/* Site: www.mmhospedagem.com.br ******/
+/**************************************/
+
+.MMHospedagem_Clear { clear: both;  }
+
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover { color: #FFF !important; border: 0 !important; border-radius: 0 !important; background-color: #005793 !important; }
+div.admin-tabs>.active, div.client-tabs>.active { padding: 0 !important; border: 0 !important; border-top: 0 !important; }
+
+.body_MMHospedagem { margin-top: -41px; background-color: #FFF; z-index: 5; position: relative; }
+.Header_MMHospedagem_Template { width: 100%; }
+.Header_MMHospedagem_Template .caixa { width: 100%; padding: 10px 0px; }
+.Header_MMHospedagem_Template .caixa .logo-mmhospedagem { background-image: url('../imagens/logo-mmhospedagem.png'); background-repeat: no-repeat; background-size: 100% 100%; width: 321px; height: 67px; margin: 20px; float: left; }
+.Header_MMHospedagem_Template .caixa span { float: left; font-family: 'Open Sans'; margin-top: 40px; font-size: 16px; margin-left: -10px; color: #999999; }
+
+.Header_MMHospedagem_Template .caixa .right { float: right; }
+
+
+.Menu_MMHospedagem { background-color: #176EB7; padding: 23px 0px; width: 100%; border-radius: 5px; overflow: hidden; }
+.Menu_MMHospedagem li { font-family: 'Open Sans'; font-size: 13px; color: #FFF; list-style: none; float: left; }
+.Menu_MMHospedagem li a { color: #FFF !important; padding: 22px !important; text-decoration: none !important; border: 0 !important; border-radius: 0 !important; margin-right: 0 !important; line-height: 0 !important; }
+.Menu_MMHospedagem li a:hover { background-color: #005793; }
+
+.Conteudo_MMHospedagem { padding: 20px 0px; }
+.Conteudo_MMHospedagem .titulo {  }
+.Conteudo_MMHospedagem .titulo li { font-family: 'Open Sans'; font-size: 19px; color: #686868; font-style: normal; text-transform: uppercase; list-style: none; }
+
+.Conteudo_MMHospedagem .titulo .grid-6 {
+    width: 100%;
+}
+.Conteudo_MMHospedagem .titulo .grid-6 .divisor {
+    border-bottom: 1px solid #DDDDDD;
+    clear: both;
+    display: block;
+    margin: 10px 0 0 0;
+    position: relative;
+    width: 100%;
+}
+.Conteudo_MMHospedagem .titulo .grid-6 .divisor-b span {
+    background-color: #176EB7 !important;
+}
+
+.Rodape_MMHospedagem { background-color: #333; width: 100%; text-align: center; border-radius: 5px; }
+.Rodape_MMHospedagem li { font-family: 'Open Sans'; font-size: 10px; color: #FFF; list-style: none; padding: 25px; }

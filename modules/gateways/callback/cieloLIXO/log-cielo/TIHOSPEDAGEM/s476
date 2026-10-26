@@ -1,0 +1,4145 @@
+
+
+31/07/2017 14:31:04
+INICIO_______________________________________________________________LOG:BEGIN:::31/07/2017 14:04<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => cb62a7e1baa9463193ad6acf5ae5bfea
+    [created_date] => 31/07/2017 14:04:27
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626HSTIVIIPB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 31/07/2017 14:04:27
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2017 14:31:04
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 3637
+                            [userid] => 255
+                            [firstname] => Mairo
+                            [lastname] => José Gomes
+                            [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+                            [invoicenum] => 
+                            [date] => 2017-07-31
+                            [duedate] => 2017-08-07
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 89.91
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 89.91
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => deposito_ou_transferencia
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => cb62a7e1baa9463193ad6acf5ae5bfea
+    [created_date] => 31/07/2017 14:04:27
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626HSTIVIIPB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 31/07/2017 14:04:27
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2017 14:31:04
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 3637
+            [userid] => 255
+            [firstname] => Mairo
+            [lastname] => José Gomes
+            [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+            [invoicenum] => 
+            [date] => 2017-07-31
+            [duedate] => 2017-08-07
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 89.91
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 89.91
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => deposito_ou_transferencia
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => cb62a7e1baa9463193ad6acf5ae5bfea
+    [created_date] => 31/07/2017 14:04:27
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626HSTIVIIPB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 31/07/2017 14:04:27
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2017 14:31:04
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 3637
+    [userid] => 255
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [invoicenum] => 
+    [date] => 2017-07-31
+    [duedate] => 2017-08-07
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 89.91
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 89.91
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => cb62a7e1baa9463193ad6acf5ae5bfea
+    [created_date] => 31/07/2017 14:04:27
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626HSTIVIIPB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 31/07/2017 14:04:27
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2017 14:31:04
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 3637
+    [invoicenum] => 
+    [userid] => 255
+    [date] => 2017-07-31
+    [duedate] => 2017-08-07
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 89.91
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 89.91
+    [balance] => 89.91
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 5494
+                            [type] => Hosting
+                            [relid] => 476
+                            [description] => TIH - Master  - yespromo.com.br (07/08/2017 - 06/11/2017)
+                            [amount] => 89.91
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => cb62a7e1baa9463193ad6acf5ae5bfea
+    [created_date] => 31/07/2017 14:04:27
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626HSTIVIIPB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 31/07/2017 14:04:27
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2017 14:32:04
+INICIO_______________________________________________________________LOG:Checando -> 476 ==  476
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => cb62a7e1baa9463193ad6acf5ae5bfea
+    [created_date] => 31/07/2017 14:04:27
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626HSTIVIIPB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 31/07/2017 14:04:27
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2017 14:34:04
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3637 | Result->success | ValorPago ->89.91 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => cb62a7e1baa9463193ad6acf5ae5bfea
+    [created_date] => 31/07/2017 14:04:27
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626HSTIVIIPB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 31/07/2017 14:04:27
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2017 14:16:14
+INICIO_______________________________________________________________LOG:BEGIN:::31/07/2017 14:14<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cb62a7e1baa9463193ad6acf5ae5bfea
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2017 14:16:14
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cb62a7e1baa9463193ad6acf5ae5bfea
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2017 14:16:14
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cb62a7e1baa9463193ad6acf5ae5bfea
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2017 14:16:14
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cb62a7e1baa9463193ad6acf5ae5bfea
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2017 14:16:14
+INICIO_______________________________________________________________LOG:BEGIN:::31/07/2017 14:14<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cb62a7e1baa9463193ad6acf5ae5bfea
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2017 14:16:14
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cb62a7e1baa9463193ad6acf5ae5bfea
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2017 14:16:14
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cb62a7e1baa9463193ad6acf5ae5bfea
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2017 14:16:14
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cb62a7e1baa9463193ad6acf5ae5bfea
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+01/11/2017 8:24:35
+INICIO_______________________________________________________________LOG:BEGIN:::01/11/2017 8:35<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 5aeeb60a305340f887a65d988d0e0d5c
+    [created_date] => 01/11/2017 08:35:23
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626KIP9QI43B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+01/11/2017 8:24:35
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 3987
+                            [userid] => 255
+                            [firstname] => Mairo
+                            [lastname] => José Gomes
+                            [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+                            [invoicenum] => 
+                            [date] => 2017-10-31
+                            [duedate] => 2017-11-07
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 89.91
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 89.91
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => deposito_ou_transferencia
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 5aeeb60a305340f887a65d988d0e0d5c
+    [created_date] => 01/11/2017 08:35:23
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626KIP9QI43B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+01/11/2017 8:24:35
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 3987
+            [userid] => 255
+            [firstname] => Mairo
+            [lastname] => José Gomes
+            [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+            [invoicenum] => 
+            [date] => 2017-10-31
+            [duedate] => 2017-11-07
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 89.91
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 89.91
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => deposito_ou_transferencia
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 5aeeb60a305340f887a65d988d0e0d5c
+    [created_date] => 01/11/2017 08:35:23
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626KIP9QI43B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+01/11/2017 8:24:35
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 3987
+    [userid] => 255
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [invoicenum] => 
+    [date] => 2017-10-31
+    [duedate] => 2017-11-07
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 89.91
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 89.91
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 5aeeb60a305340f887a65d988d0e0d5c
+    [created_date] => 01/11/2017 08:35:23
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626KIP9QI43B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+01/11/2017 8:24:35
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 3987
+    [invoicenum] => 
+    [userid] => 255
+    [date] => 2017-10-31
+    [duedate] => 2017-11-07
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 89.91
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 89.91
+    [balance] => 89.91
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6086
+                            [type] => Hosting
+                            [relid] => 476
+                            [description] => TIH - Master  - yespromo.com.br (07/11/2017 - 06/02/2018)
+                            [amount] => 89.91
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 5aeeb60a305340f887a65d988d0e0d5c
+    [created_date] => 01/11/2017 08:35:23
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626KIP9QI43B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+01/11/2017 8:24:35
+INICIO_______________________________________________________________LOG:Checando -> 476 ==  476
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 5aeeb60a305340f887a65d988d0e0d5c
+    [created_date] => 01/11/2017 08:35:23
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626KIP9QI43B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+01/11/2017 8:25:35
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3987 | Result->success | ValorPago ->89.91 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 5aeeb60a305340f887a65d988d0e0d5c
+    [created_date] => 01/11/2017 08:35:23
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626KIP9QI43B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2018 19:03:27
+INICIO_______________________________________________________________LOG:BEGIN:::31/01/2018 19:27<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 4b95382a382b4bdd98cd933c82918e43
+    [created_date] => 31/01/2018 19:27:02
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776279O1UA2FDB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2018 19:03:27
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4316
+                            [userid] => 255
+                            [firstname] => Mairo
+                            [lastname] => José Gomes
+                            [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+                            [invoicenum] => 
+                            [date] => 2018-01-31
+                            [duedate] => 2018-02-07
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 89.91
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 89.91
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => deposito_ou_transferencia
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 4b95382a382b4bdd98cd933c82918e43
+    [created_date] => 31/01/2018 19:27:02
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776279O1UA2FDB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2018 19:03:27
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 4316
+            [userid] => 255
+            [firstname] => Mairo
+            [lastname] => José Gomes
+            [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+            [invoicenum] => 
+            [date] => 2018-01-31
+            [duedate] => 2018-02-07
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 89.91
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 89.91
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => deposito_ou_transferencia
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 4b95382a382b4bdd98cd933c82918e43
+    [created_date] => 31/01/2018 19:27:02
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776279O1UA2FDB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2018 19:03:27
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 4316
+    [userid] => 255
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [invoicenum] => 
+    [date] => 2018-01-31
+    [duedate] => 2018-02-07
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 89.91
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 89.91
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 4b95382a382b4bdd98cd933c82918e43
+    [created_date] => 31/01/2018 19:27:02
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776279O1UA2FDB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2018 19:03:27
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 4316
+    [invoicenum] => 
+    [userid] => 255
+    [date] => 2018-01-31
+    [duedate] => 2018-02-07
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 89.91
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 89.91
+    [balance] => 89.91
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6667
+                            [type] => Hosting
+                            [relid] => 476
+                            [description] => TIH - Master  - yespromo.com.br (07/02/2018 - 06/05/2018)
+                            [amount] => 89.91
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 4b95382a382b4bdd98cd933c82918e43
+    [created_date] => 31/01/2018 19:27:02
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776279O1UA2FDB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2018 19:03:27
+INICIO_______________________________________________________________LOG:Checando -> 476 ==  476
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 4b95382a382b4bdd98cd933c82918e43
+    [created_date] => 31/01/2018 19:27:02
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776279O1UA2FDB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2018 19:04:27
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->4316 | Result->success | ValorPago ->89.91 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 4b95382a382b4bdd98cd933c82918e43
+    [created_date] => 31/01/2018 19:27:02
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776279O1UA2FDB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2018 18:26:15
+INICIO_______________________________________________________________LOG:BEGIN:::30/04/2018 18:15<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 3114d9ec42264489af313e33516cf9b1
+    [created_date] => 30/04/2018 18:15:25
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627CB63N6IPB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2018 18:26:15
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4652
+                            [userid] => 255
+                            [firstname] => Mairo
+                            [lastname] => José Gomes
+                            [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+                            [invoicenum] => 
+                            [date] => 2018-04-30
+                            [duedate] => 2018-05-07
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 89.91
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 89.91
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => deposito_ou_transferencia
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 3114d9ec42264489af313e33516cf9b1
+    [created_date] => 30/04/2018 18:15:25
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627CB63N6IPB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2018 18:26:15
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 4652
+            [userid] => 255
+            [firstname] => Mairo
+            [lastname] => José Gomes
+            [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+            [invoicenum] => 
+            [date] => 2018-04-30
+            [duedate] => 2018-05-07
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 89.91
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 89.91
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => deposito_ou_transferencia
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 3114d9ec42264489af313e33516cf9b1
+    [created_date] => 30/04/2018 18:15:25
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627CB63N6IPB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2018 18:26:15
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 4652
+    [userid] => 255
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [invoicenum] => 
+    [date] => 2018-04-30
+    [duedate] => 2018-05-07
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 89.91
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 89.91
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 3114d9ec42264489af313e33516cf9b1
+    [created_date] => 30/04/2018 18:15:25
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627CB63N6IPB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2018 18:26:15
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 4652
+    [invoicenum] => 
+    [userid] => 255
+    [date] => 2018-04-30
+    [duedate] => 2018-05-07
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 89.91
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 89.91
+    [balance] => 89.91
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 7252
+                            [type] => Hosting
+                            [relid] => 476
+                            [description] => TIH - Master  - yespromo.com.br (07/05/2018 - 06/08/2018)
+                            [amount] => 89.91
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 3114d9ec42264489af313e33516cf9b1
+    [created_date] => 30/04/2018 18:15:25
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627CB63N6IPB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2018 18:26:15
+INICIO_______________________________________________________________LOG:Checando -> 476 ==  476
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 3114d9ec42264489af313e33516cf9b1
+    [created_date] => 30/04/2018 18:15:25
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627CB63N6IPB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2018 18:28:15
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->4652 | Result->success | ValorPago ->89.91 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 3114d9ec42264489af313e33516cf9b1
+    [created_date] => 30/04/2018 18:15:25
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627CB63N6IPB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2018 18:53:25
+INICIO_______________________________________________________________LOG:BEGIN:::30/04/2018 18:25<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 3114d9ec42264489af313e33516cf9b1
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2018 18:53:25
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 3114d9ec42264489af313e33516cf9b1
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2018 18:53:25
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 3114d9ec42264489af313e33516cf9b1
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2018 18:53:25
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 3114d9ec42264489af313e33516cf9b1
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2018 18:22:15
+INICIO_______________________________________________________________LOG:BEGIN:::31/07/2018 18:15<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 98d88c3bbc204ee6b1d6d9905df45413
+    [created_date] => 31/07/2018 18:15:20
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627F0786KRBB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2018 18:22:15
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 5029
+                            [userid] => 255
+                            [firstname] => Mairo
+                            [lastname] => José Gomes
+                            [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+                            [invoicenum] => 
+                            [date] => 2018-07-31
+                            [duedate] => 2018-08-07
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 89.91
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 89.91
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => deposito_ou_transferencia
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 98d88c3bbc204ee6b1d6d9905df45413
+    [created_date] => 31/07/2018 18:15:20
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627F0786KRBB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2018 18:22:15
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 5029
+            [userid] => 255
+            [firstname] => Mairo
+            [lastname] => José Gomes
+            [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+            [invoicenum] => 
+            [date] => 2018-07-31
+            [duedate] => 2018-08-07
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 89.91
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 89.91
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => deposito_ou_transferencia
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 98d88c3bbc204ee6b1d6d9905df45413
+    [created_date] => 31/07/2018 18:15:20
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627F0786KRBB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2018 18:22:15
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 5029
+    [userid] => 255
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [invoicenum] => 
+    [date] => 2018-07-31
+    [duedate] => 2018-08-07
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 89.91
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 89.91
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 98d88c3bbc204ee6b1d6d9905df45413
+    [created_date] => 31/07/2018 18:15:20
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627F0786KRBB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2018 18:22:15
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 5029
+    [invoicenum] => 
+    [userid] => 255
+    [date] => 2018-07-31
+    [duedate] => 2018-08-07
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 89.91
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 89.91
+    [balance] => 89.91
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 7865
+                            [type] => Hosting
+                            [relid] => 476
+                            [description] => TIH - Master  - yespromo.com.br (07/08/2018 - 06/11/2018)
+                            [amount] => 89.91
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 98d88c3bbc204ee6b1d6d9905df45413
+    [created_date] => 31/07/2018 18:15:20
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627F0786KRBB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2018 18:22:15
+INICIO_______________________________________________________________LOG:Checando -> 476 ==  476
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 98d88c3bbc204ee6b1d6d9905df45413
+    [created_date] => 31/07/2018 18:15:20
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627F0786KRBB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2018 18:23:15
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->5029 | Result->success | ValorPago ->89.91 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 98d88c3bbc204ee6b1d6d9905df45413
+    [created_date] => 31/07/2018 18:15:20
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627F0786KRBB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2018 18:31:17
+INICIO_______________________________________________________________LOG:BEGIN:::31/07/2018 18:17<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 98d88c3bbc204ee6b1d6d9905df45413
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2018 18:31:17
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 98d88c3bbc204ee6b1d6d9905df45413
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2018 18:31:17
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 98d88c3bbc204ee6b1d6d9905df45413
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2018 18:31:17
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 98d88c3bbc204ee6b1d6d9905df45413
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2018 18:38:15
+INICIO_______________________________________________________________LOG:BEGIN:::31/10/2018 18:15<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 422cf163604e454ea5809cca81a465c9
+    [created_date] => 31/10/2018 18:15:37
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627HM6K77FDB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2018 18:38:15
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 5396
+                            [userid] => 255
+                            [firstname] => Mairo
+                            [lastname] => José Gomes
+                            [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+                            [invoicenum] => 
+                            [date] => 2018-10-31
+                            [duedate] => 2018-11-07
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 89.91
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 89.91
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => deposito_ou_transferencia
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 422cf163604e454ea5809cca81a465c9
+    [created_date] => 31/10/2018 18:15:37
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627HM6K77FDB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2018 18:38:15
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 5396
+            [userid] => 255
+            [firstname] => Mairo
+            [lastname] => José Gomes
+            [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+            [invoicenum] => 
+            [date] => 2018-10-31
+            [duedate] => 2018-11-07
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 89.91
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 89.91
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => deposito_ou_transferencia
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 422cf163604e454ea5809cca81a465c9
+    [created_date] => 31/10/2018 18:15:37
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627HM6K77FDB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2018 18:38:15
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 5396
+    [userid] => 255
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [invoicenum] => 
+    [date] => 2018-10-31
+    [duedate] => 2018-11-07
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 89.91
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 89.91
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 422cf163604e454ea5809cca81a465c9
+    [created_date] => 31/10/2018 18:15:37
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627HM6K77FDB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2018 18:38:15
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 5396
+    [invoicenum] => 
+    [userid] => 255
+    [date] => 2018-10-31
+    [duedate] => 2018-11-07
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 89.91
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 89.91
+    [balance] => 89.91
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 8421
+                            [type] => Hosting
+                            [relid] => 476
+                            [description] => TIH - Master  - yespromo.com.br (07/11/2018 - 06/02/2019)
+                            [amount] => 89.91
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 422cf163604e454ea5809cca81a465c9
+    [created_date] => 31/10/2018 18:15:37
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627HM6K77FDB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2018 18:38:15
+INICIO_______________________________________________________________LOG:Checando -> 476 ==  476
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 422cf163604e454ea5809cca81a465c9
+    [created_date] => 31/10/2018 18:15:37
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627HM6K77FDB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2018 18:38:15
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->5396 | Result->success | ValorPago ->89.91 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 422cf163604e454ea5809cca81a465c9
+    [created_date] => 31/10/2018 18:15:37
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627HM6K77FDB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2018 18:39:24
+INICIO_______________________________________________________________LOG:BEGIN:::31/10/2018 18:24<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 422cf163604e454ea5809cca81a465c9
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2018 18:39:24
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 422cf163604e454ea5809cca81a465c9
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2018 18:39:24
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 422cf163604e454ea5809cca81a465c9
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2018 18:39:24
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 422cf163604e454ea5809cca81a465c9
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2019 17:59:52
+INICIO_______________________________________________________________LOG:BEGIN:::31/01/2019 17:52<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 4c8aed53286c4bfc8d86616221ab819b
+    [created_date] => 31/01/2019 17:52:58
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776286RJOE619B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2019 17:59:52
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 5733
+                            [userid] => 255
+                            [firstname] => Mairo
+                            [lastname] => José Gomes
+                            [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+                            [invoicenum] => 
+                            [date] => 2019-01-31
+                            [duedate] => 2019-02-07
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 89.91
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 89.91
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => deposito_ou_transferencia
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 4c8aed53286c4bfc8d86616221ab819b
+    [created_date] => 31/01/2019 17:52:58
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776286RJOE619B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2019 17:59:52
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 5733
+            [userid] => 255
+            [firstname] => Mairo
+            [lastname] => José Gomes
+            [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+            [invoicenum] => 
+            [date] => 2019-01-31
+            [duedate] => 2019-02-07
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 89.91
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 89.91
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => deposito_ou_transferencia
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 4c8aed53286c4bfc8d86616221ab819b
+    [created_date] => 31/01/2019 17:52:58
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776286RJOE619B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2019 17:59:52
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 5733
+    [userid] => 255
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [invoicenum] => 
+    [date] => 2019-01-31
+    [duedate] => 2019-02-07
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 89.91
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 89.91
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 4c8aed53286c4bfc8d86616221ab819b
+    [created_date] => 31/01/2019 17:52:58
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776286RJOE619B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2019 17:59:52
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 5733
+    [invoicenum] => 
+    [userid] => 255
+    [date] => 2019-01-31
+    [duedate] => 2019-02-07
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 89.91
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 89.91
+    [balance] => 89.91
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 8936
+                            [type] => Hosting
+                            [relid] => 476
+                            [description] => TIH - Master  - yespromo.com.br (07/02/2019 - 06/05/2019)
+                            [amount] => 89.91
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 4c8aed53286c4bfc8d86616221ab819b
+    [created_date] => 31/01/2019 17:52:58
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776286RJOE619B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2019 17:59:52
+INICIO_______________________________________________________________LOG:Checando -> 476 ==  476
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 4c8aed53286c4bfc8d86616221ab819b
+    [created_date] => 31/01/2019 17:52:58
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776286RJOE619B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2019 17:00:53
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->5733 | Result->success | ValorPago ->89.91 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 4c8aed53286c4bfc8d86616221ab819b
+    [created_date] => 31/01/2019 17:52:58
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776286RJOE619B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2019 17:01:55
+INICIO_______________________________________________________________LOG:BEGIN:::31/01/2019 17:55<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 4c8aed53286c4bfc8d86616221ab819b
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2019 17:02:55
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 4c8aed53286c4bfc8d86616221ab819b
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2019 17:02:55
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 4c8aed53286c4bfc8d86616221ab819b
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2019 17:02:55
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 4c8aed53286c4bfc8d86616221ab819b
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2019 19:32:52
+INICIO_______________________________________________________________LOG:BEGIN:::31/01/2019 19:52<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => f6f945e3d6e64081932d559c6a764f1d
+    [created_date] => 31/01/2019 19:52:31
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776286RJOE619B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2019 19:32:52
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => f6f945e3d6e64081932d559c6a764f1d
+    [created_date] => 31/01/2019 19:52:31
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776286RJOE619B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2019 19:32:52
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => f6f945e3d6e64081932d559c6a764f1d
+    [created_date] => 31/01/2019 19:52:31
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776286RJOE619B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2019 19:32:52
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => f6f945e3d6e64081932d559c6a764f1d
+    [created_date] => 31/01/2019 19:52:31
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776286RJOE619B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2019 19:12:55
+INICIO_______________________________________________________________LOG:BEGIN:::31/01/2019 19:55<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => f6f945e3d6e64081932d559c6a764f1d
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2019 19:12:55
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => f6f945e3d6e64081932d559c6a764f1d
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2019 19:12:55
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => f6f945e3d6e64081932d559c6a764f1d
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/01/2019 19:12:55
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => f6f945e3d6e64081932d559c6a764f1d
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2019 18:06:27
+INICIO_______________________________________________________________LOG:BEGIN:::30/04/2019 18:27<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 164145ad82bc4d4695f79a9c1ea1fc8c
+    [created_date] => 30/04/2019 18:27:04
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776289DTULFJ3B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2019 18:06:27
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6096
+                            [userid] => 255
+                            [firstname] => Mairo
+                            [lastname] => José Gomes
+                            [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+                            [invoicenum] => 
+                            [date] => 2019-04-30
+                            [duedate] => 2019-05-07
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 89.91
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 89.91
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => deposito_ou_transferencia
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 164145ad82bc4d4695f79a9c1ea1fc8c
+    [created_date] => 30/04/2019 18:27:04
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776289DTULFJ3B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2019 18:06:27
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6096
+            [userid] => 255
+            [firstname] => Mairo
+            [lastname] => José Gomes
+            [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+            [invoicenum] => 
+            [date] => 2019-04-30
+            [duedate] => 2019-05-07
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 89.91
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 89.91
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => deposito_ou_transferencia
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 164145ad82bc4d4695f79a9c1ea1fc8c
+    [created_date] => 30/04/2019 18:27:04
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776289DTULFJ3B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2019 18:06:27
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6096
+    [userid] => 255
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [invoicenum] => 
+    [date] => 2019-04-30
+    [duedate] => 2019-05-07
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 89.91
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 89.91
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 164145ad82bc4d4695f79a9c1ea1fc8c
+    [created_date] => 30/04/2019 18:27:04
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776289DTULFJ3B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2019 18:07:27
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6096
+    [invoicenum] => 
+    [userid] => 255
+    [date] => 2019-04-30
+    [duedate] => 2019-05-07
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 89.91
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 89.91
+    [balance] => 89.91
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 9491
+                            [type] => Hosting
+                            [relid] => 476
+                            [description] => TIH - Master  - yespromo.com.br (07/05/2019 - 06/08/2019)
+                            [amount] => 89.91
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 164145ad82bc4d4695f79a9c1ea1fc8c
+    [created_date] => 30/04/2019 18:27:04
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776289DTULFJ3B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2019 18:07:27
+INICIO_______________________________________________________________LOG:Checando -> 476 ==  476
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 164145ad82bc4d4695f79a9c1ea1fc8c
+    [created_date] => 30/04/2019 18:27:04
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776289DTULFJ3B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2019 18:11:27
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->6096 | Result->success | ValorPago ->89.91 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => 164145ad82bc4d4695f79a9c1ea1fc8c
+    [created_date] => 30/04/2019 18:27:04
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776289DTULFJ3B
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2019 18:46:34
+INICIO_______________________________________________________________LOG:BEGIN:::30/04/2019 18:34<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 164145ad82bc4d4695f79a9c1ea1fc8c
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2019 18:46:34
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 164145ad82bc4d4695f79a9c1ea1fc8c
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2019 18:46:34
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 164145ad82bc4d4695f79a9c1ea1fc8c
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+30/04/2019 18:46:34
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 164145ad82bc4d4695f79a9c1ea1fc8c
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2019 18:50:11
+INICIO_______________________________________________________________LOG:BEGIN:::31/07/2019 18:11<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => e44edb6bed63454f8f575d255f4b9df5
+    [created_date] => 31/07/2019 18:11:49
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628C40DLJ5JB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2019 18:50:11
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6413
+                            [userid] => 255
+                            [firstname] => Mairo
+                            [lastname] => José Gomes
+                            [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+                            [invoicenum] => 
+                            [date] => 2019-07-31
+                            [duedate] => 2019-08-07
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 89.91
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 89.91
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => deposito_ou_transferencia
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => e44edb6bed63454f8f575d255f4b9df5
+    [created_date] => 31/07/2019 18:11:49
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628C40DLJ5JB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2019 18:50:11
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6413
+            [userid] => 255
+            [firstname] => Mairo
+            [lastname] => José Gomes
+            [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+            [invoicenum] => 
+            [date] => 2019-07-31
+            [duedate] => 2019-08-07
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 89.91
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 89.91
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => deposito_ou_transferencia
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => e44edb6bed63454f8f575d255f4b9df5
+    [created_date] => 31/07/2019 18:11:49
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628C40DLJ5JB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2019 18:50:11
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6413
+    [userid] => 255
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [invoicenum] => 
+    [date] => 2019-07-31
+    [duedate] => 2019-08-07
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 89.91
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 89.91
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => e44edb6bed63454f8f575d255f4b9df5
+    [created_date] => 31/07/2019 18:11:49
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628C40DLJ5JB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2019 18:50:11
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6413
+    [invoicenum] => 
+    [userid] => 255
+    [date] => 2019-07-31
+    [duedate] => 2019-08-07
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 89.91
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 89.91
+    [balance] => 89.91
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 10004
+                            [type] => Hosting
+                            [relid] => 476
+                            [description] => TIH - Master  - yespromo.com.br (07/08/2019 - 06/11/2019)
+                            [amount] => 89.91
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => e44edb6bed63454f8f575d255f4b9df5
+    [created_date] => 31/07/2019 18:11:49
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628C40DLJ5JB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2019 18:50:11
+INICIO_______________________________________________________________LOG:Checando -> 476 ==  476
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => e44edb6bed63454f8f575d255f4b9df5
+    [created_date] => 31/07/2019 18:11:49
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628C40DLJ5JB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2019 18:53:11
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->6413 | Result->success | ValorPago ->89.91 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => s476
+    [amount] => 8991
+    [checkout_cielo_order_number] => e44edb6bed63454f8f575d255f4b9df5
+    [created_date] => 31/07/2019 18:11:49
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******4634
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628C40DLJ5JB
+    [recurrent_payment_id] => 7eb92bf3-da35-4385-aaea-7d60b41ac8b2
+    [start_date] => 7/31/2017 2:04:27 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Trimestral
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2019 18:49:14
+INICIO_______________________________________________________________LOG:BEGIN:::31/07/2019 18:14<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e44edb6bed63454f8f575d255f4b9df5
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2019 18:49:14
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e44edb6bed63454f8f575d255f4b9df5
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2019 18:49:14
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e44edb6bed63454f8f575d255f4b9df5
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/07/2019 18:49:14
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e44edb6bed63454f8f575d255f4b9df5
+    [amount] => 8991
+    [order_number] => s476
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

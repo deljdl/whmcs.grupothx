@@ -1,0 +1,1852 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2129
+    [id] => 2129
+    [1] => 109
+    [userid] => 109
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-06-28
+    [date] => 2016-06-28
+    [4] => 2016-07-01
+    [duedate] => 2016-07-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 324.50
+    [subtotal] => 324.50
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 324.50
+    [total] => 324.50
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 109
+    [id] => 109
+    [uuid] => 79e07457-5a77-4880-93c3-104468b5dea6
+    [firstname] => Daniela
+    [lastname] => Trindade Reis
+    [fullname] => Daniela Trindade Reis
+    [companyname] => Klipps - Comunicação e Marketing
+    [email] => daniela@klipps.com.br
+    [address1] => 
+    [address2] => 
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => 6dfb858e32c3157220c3fee8a5045208:NJf!k
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => Cobrar segunda parcela borvultex !!!
+
+Notas 8%
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/06/2016 11:43<br>IP Address: 177.99.109.135<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 3191066743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 35.695.796-97
+                )
+
+        )
+
+    [customfields2] => 3191066743
+    [customfields3] => 35.695.796-97
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2129
+    [SoftDescriptor] => 2129
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [UnitPrice] => 32450
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Daniela Trindade Reis
+            [Email] => daniela@klipps.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [OrderNumber] => 2129
+    [SoftDescriptor] => 2129
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [UnitPrice] => 32450
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Daniela Trindade Reis
+            [Email] => daniela@klipps.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2129
+    [id] => 2129
+    [1] => 109
+    [userid] => 109
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-06-28
+    [date] => 2016-06-28
+    [4] => 2016-07-01
+    [duedate] => 2016-07-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 324.50
+    [subtotal] => 324.50
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 324.50
+    [total] => 324.50
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2129
+    [SoftDescriptor] => 2129
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [UnitPrice] => 32450
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] =>  
+            [Email] => 
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [OrderNumber] => 2129
+    [SoftDescriptor] => 2129
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [UnitPrice] => 32450
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] =>  
+            [Email] => 
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2129
+    [id] => 2129
+    [1] => 109
+    [userid] => 109
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-06-28
+    [date] => 2016-06-28
+    [4] => 2016-07-01
+    [duedate] => 2016-07-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 324.50
+    [subtotal] => 324.50
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 324.50
+    [total] => 324.50
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 109
+    [id] => 109
+    [uuid] => 79e07457-5a77-4880-93c3-104468b5dea6
+    [firstname] => Daniela
+    [lastname] => Trindade Reis
+    [fullname] => Daniela Trindade Reis
+    [companyname] => Klipps - Comunicação e Marketing
+    [email] => daniela@klipps.com.br
+    [address1] => 
+    [address2] => 
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => 6dfb858e32c3157220c3fee8a5045208:NJf!k
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => Cobrar segunda parcela borvultex !!!
+
+Notas 8%
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/06/2016 11:44<br>IP Address: 177.99.109.135<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 3191066743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 35.695.796-97
+                )
+
+        )
+
+    [customfields2] => 3191066743
+    [customfields3] => 35.695.796-97
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2129
+    [SoftDescriptor] => 2129
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [UnitPrice] => 32450
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Daniela Trindade Reis
+            [Email] => daniela@klipps.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [OrderNumber] => 2129
+    [SoftDescriptor] => 2129
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [UnitPrice] => 32450
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Daniela Trindade Reis
+            [Email] => daniela@klipps.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2129
+    [id] => 2129
+    [1] => 109
+    [userid] => 109
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-06-28
+    [date] => 2016-06-28
+    [4] => 2016-07-01
+    [duedate] => 2016-07-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 324.50
+    [subtotal] => 324.50
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 324.50
+    [total] => 324.50
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 109
+    [id] => 109
+    [uuid] => 79e07457-5a77-4880-93c3-104468b5dea6
+    [firstname] => Daniela
+    [lastname] => Trindade Reis
+    [fullname] => Daniela Trindade Reis
+    [companyname] => Klipps - Comunicação e Marketing
+    [email] => daniela@klipps.com.br
+    [address1] => 
+    [address2] => 
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => 6dfb858e32c3157220c3fee8a5045208:NJf!k
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => Cobrar segunda parcela borvultex !!!
+
+Notas 8%
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/06/2016 11:49<br>IP Address: 177.99.109.135<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 3191066743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 35.695.796-97
+                )
+
+        )
+
+    [customfields2] => 3191066743
+    [customfields3] => 35.695.796-97
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2129
+    [SoftDescriptor] => 2129
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [UnitPrice] => 32450
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Daniela Trindade Reis
+            [Email] => daniela@klipps.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [OrderNumber] => 2129
+    [SoftDescriptor] => 2129
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [UnitPrice] => 32450
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Daniela Trindade Reis
+            [Email] => daniela@klipps.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2129
+    [id] => 2129
+    [1] => 109
+    [userid] => 109
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-06-28
+    [date] => 2016-06-28
+    [4] => 2016-07-01
+    [duedate] => 2016-07-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 324.50
+    [subtotal] => 324.50
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 324.50
+    [total] => 324.50
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 109
+    [id] => 109
+    [uuid] => 79e07457-5a77-4880-93c3-104468b5dea6
+    [firstname] => Daniela
+    [lastname] => Trindade Reis
+    [fullname] => Daniela Trindade Reis
+    [companyname] => Klipps - Comunicação e Marketing
+    [email] => daniela@klipps.com.br
+    [address1] => 
+    [address2] => 
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => 6dfb858e32c3157220c3fee8a5045208:NJf!k
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => Cobrar segunda parcela borvultex !!!
+
+Notas 8%
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/06/2016 11:50<br>IP Address: 177.99.109.135<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 3191066743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 35.695.796-97
+                )
+
+        )
+
+    [customfields2] => 3191066743
+    [customfields3] => 35.695.796-97
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2129
+    [SoftDescriptor] => 2129
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [UnitPrice] => 32450
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Daniela Trindade Reis
+            [Email] => daniela@klipps.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Cart.Items[0].Name] => Array
+                (
+                    [0] => [Cart.Item.Name] deve conter no máximo 128 caracteres.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2129
+    [id] => 2129
+    [1] => 109
+    [userid] => 109
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-06-28
+    [date] => 2016-06-28
+    [4] => 2016-07-01
+    [duedate] => 2016-07-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 324.50
+    [subtotal] => 324.50
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 324.50
+    [total] => 324.50
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 109
+    [id] => 109
+    [uuid] => 79e07457-5a77-4880-93c3-104468b5dea6
+    [firstname] => Daniela
+    [lastname] => Trindade Reis
+    [fullname] => Daniela Trindade Reis
+    [companyname] => Klipps - Comunicação e Marketing
+    [email] => daniela@klipps.com.br
+    [address1] => 
+    [address2] => 
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => 6dfb858e32c3157220c3fee8a5045208:NJf!k
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => Cobrar segunda parcela borvultex !!!
+
+Notas 8%
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/06/2016 11:54<br>IP Address: 177.99.109.135<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 3191066743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 35.695.796-97
+                )
+
+        )
+
+    [customfields2] => 3191066743
+    [customfields3] => 35.695.796-97
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2129
+    [SoftDescriptor] => 2129
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem)....
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [UnitPrice] => 32450
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Daniela Trindade Reis
+            [Email] => daniela@klipps.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2129
+    [softDescriptor] => 2129
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem)....
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [unitPrice] => 32450
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Daniela Trindade Reis
+            [email] => daniela@klipps.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/e5babf5e-425b-4267-ba84-6ed6f6b213ac
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2129
+    [id] => 2129
+    [1] => 109
+    [userid] => 109
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-06-28
+    [date] => 2016-06-28
+    [4] => 2016-07-01
+    [duedate] => 2016-07-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 324.50
+    [subtotal] => 324.50
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 324.50
+    [total] => 324.50
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 109
+    [id] => 109
+    [uuid] => 79e07457-5a77-4880-93c3-104468b5dea6
+    [firstname] => Daniela
+    [lastname] => Trindade Reis
+    [fullname] => Daniela Trindade Reis
+    [companyname] => Klipps - Comunicação e Marketing
+    [email] => daniela@klipps.com.br
+    [address1] => 
+    [address2] => 
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => 6dfb858e32c3157220c3fee8a5045208:NJf!k
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => Cobrar segunda parcela borvultex !!!
+
+Notas 8%
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/06/2016 12:53<br>IP Address: 177.133.191.70<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 3191066743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 35.695.796-97
+                )
+
+        )
+
+    [customfields2] => 3191066743
+    [customfields3] => 35.695.796-97
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2129
+    [SoftDescriptor] => 2129
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem)....
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [UnitPrice] => 32450
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Daniela Trindade Reis
+            [Email] => daniela@klipps.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2129
+    [softDescriptor] => 2129
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem)....
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [unitPrice] => 32450
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Daniela Trindade Reis
+            [email] => daniela@klipps.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/b308e5c5-3468-45ad-9ffe-20e3d4994da9
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2129
+    [id] => 2129
+    [1] => 109
+    [userid] => 109
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-06-28
+    [date] => 2016-06-28
+    [4] => 2016-07-01
+    [duedate] => 2016-07-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 324.50
+    [subtotal] => 324.50
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 324.50
+    [total] => 324.50
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2129
+    [SoftDescriptor] => 2129
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem)....
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [UnitPrice] => 32450
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] =>  
+            [Email] => 
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2129
+    [softDescriptor] => 2129
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem)....
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [unitPrice] => 32450
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] =>  
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/82b0253a-7904-42a6-8c1c-153a504c7513
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2129
+    [id] => 2129
+    [1] => 109
+    [userid] => 109
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-06-28
+    [date] => 2016-06-28
+    [4] => 2016-07-01
+    [duedate] => 2016-07-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 324.50
+    [subtotal] => 324.50
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 324.50
+    [total] => 324.50
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 109
+    [id] => 109
+    [uuid] => 79e07457-5a77-4880-93c3-104468b5dea6
+    [firstname] => Daniela
+    [lastname] => Trindade Reis
+    [fullname] => Daniela Trindade Reis
+    [companyname] => Klipps - Comunicação e Marketing
+    [email] => daniela@klipps.com.br
+    [address1] => 
+    [address2] => 
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => 6dfb858e32c3157220c3fee8a5045208:NJf!k
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => Cobrar segunda parcela borvultex !!!
+
+Notas 8%
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 30/06/2016 10:05<br>IP Address: 177.182.101.43<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 3191066743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 35.695.796-97
+                )
+
+        )
+
+    [customfields2] => 3191066743
+    [customfields3] => 35.695.796-97
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2129
+    [SoftDescriptor] => 2129
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem)....
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [UnitPrice] => 32450
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Daniela Trindade Reis
+            [Email] => daniela@klipps.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2129
+    [softDescriptor] => 2129
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem)....
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem).  blocodapraia.com.br Parcela 1/2
+                            [unitPrice] => 32450
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Daniela Trindade Reis
+            [email] => daniela@klipps.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/9ad7079c-9a6b-4c02-b452-d542fa3a9ed6
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>

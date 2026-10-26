@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3314
+    [id] => 3314
+    [1] => 196
+    [userid] => 196
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-05-08
+    [date] => 2017-05-08
+    [4] => 2017-05-15
+    [duedate] => 2017-05-15
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.99
+    [subtotal] => 59.99
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.99
+    [total] => 59.99
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 196
+    [id] => 196
+    [uuid] => 7ed5944a-8d3c-411f-8c93-c4dbe87c75ca
+    [firstname] => Tomas
+    [lastname] => Cavalcanti de Araújo
+    [fullname] => Tomas Cavalcanti de Araújo
+    [companyname] => CADNET BRASIL - RECIFE
+    [email] => tomas@cadnetbrasil.com.br
+    [address1] => Rua Januario Barbosa 160 apto 1502
+    [address2] => Madalena 
+    [city] => Recife
+    [fullstate] => PE
+    [state] => PE
+    [postcode] => 50610-060
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (81) 3249-8920 (81) 99434-2663
+    [password] => $2y$10$E64.Bm.h6p8bS.a8jWqqruyLNf5203Nsv2iiwTfVSQpu.fWaPlfJS
+    [statecode] => PE
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.813249892081994342663
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 16/05/2017 14:18<br>IP Address: 179.154.228.143<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 81994342663
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 447.813.504-53
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 81994342663
+    [customfields3] => 447.813.504-53
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

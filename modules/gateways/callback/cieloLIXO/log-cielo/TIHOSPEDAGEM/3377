@@ -1,0 +1,371 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3377
+    [id] => 3377
+    [1] => 277
+    [userid] => 277
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-05-23
+    [date] => 2017-05-23
+    [4] => 2017-05-23
+    [duedate] => 2017-05-23
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 379.97
+    [subtotal] => 379.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 379.97
+    [total] => 379.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 277
+    [id] => 277
+    [uuid] => 652e8dd9-b7bb-422d-aa4a-e4b2fef7fb77
+    [firstname] => Marcus
+    [lastname] => Vinicius
+    [fullname] => Marcus Vinicius
+    [companyname] => Great MA Consultoria e Part LTDA
+    [email] => mvlss@hotmail.com
+    [address1] => Av. Laurinda Cardoso de Melo Freire
+    [address2] => Vila Oliveira
+    [city] => Mogi das Cruzes
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => ¨08780-028
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11982525436
+    [password] => $2y$10$Ye424mZWTsrQMUgDpEOMC.Ej7/U6XPIu.GAismrOiYXniiU2Wjo4.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11982525436
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 0
+    [language] => 
+    [lastlogin] => Date: 23/05/2017 20:55<br>IP Address: 177.143.86.194<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982525436
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15520594000139
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982525436
+    [customfields3] => 15520594000139
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3377
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora
+Descricao do Servico Solicitado: Criacao de Hotsite, conforme proposta 1209
+                            [Description] => Desenvolvimento Por Hora
+Descricao do Servico Solicitado: Criacao de Hotsite, conforme proposta 1209
+                            [UnitPrice] => 35000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - drfluxodecaixa.com.br (23/05/2017 - 22/06/2017)
+                            [Description] => TIH - Master  - drfluxodecaixa.com.br (23/05/2017 - 22/06/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Marcus Vinicius
+            [Email] => mvlss@hotmail.com
+            [Identity] => 15520594000139
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3377
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora
+Descricao do Servico Solicitado: Criacao de Hotsite, conforme proposta 1209
+                            [description] => Desenvolvimento Por Hora
+Descricao do Servico Solicitado: Criacao de Hotsite, conforme proposta 1209
+                            [unitPrice] => 35000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - Master  - drfluxodecaixa.com.br (23/05/2017 - 22/06/2017)
+                            [description] => TIH - Master  - drfluxodecaixa.com.br (23/05/2017 - 22/06/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 15520594000139
+            [fullName] => Marcus Vinicius
+            [email] => mvlss@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/ee9ded72-de65-4ee8-b3cf-6f6b2072a86b
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+23/05/2017 20:20:58
+INICIO_______________________________________________________________LOG:BEGIN:::23/05/2017 20:58<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3377
+    [amount] => 37997
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 023fda3eb76344d8accf56e24c07bca5
+    [created_date] => 23/05/2017 20:58:18
+    [customer_name] => Marcus Vinicius
+    [customer_phone] => 11982525436
+    [customer_identity] => 15520594000139
+    [customer_email] => mvlss@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 410425******9692
+    [payment_installments] => 4
+    [payment_status] => 2
+    [tid] => 10760777626FSIFMR4TB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+23/05/2017 20:22:58
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3377 | Result->success | ValorPago ->379.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 3377
+    [amount] => 37997
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 023fda3eb76344d8accf56e24c07bca5
+    [created_date] => 23/05/2017 20:58:18
+    [customer_name] => Marcus Vinicius
+    [customer_phone] => 11982525436
+    [customer_identity] => 15520594000139
+    [customer_email] => mvlss@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 410425******9692
+    [payment_installments] => 4
+    [payment_status] => 2
+    [tid] => 10760777626FSIFMR4TB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+23/05/2017 21:52:05
+INICIO_______________________________________________________________LOG:BEGIN:::23/05/2017 21:05<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 023fda3eb76344d8accf56e24c07bca5
+    [amount] => 37997
+    [order_number] => 3377
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+23/05/2017 21:52:05
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 023fda3eb76344d8accf56e24c07bca5
+    [amount] => 37997
+    [order_number] => 3377
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+23/05/2017 21:53:05
+INICIO_______________________________________________________________LOG:BEGIN:::23/05/2017 21:05<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 023fda3eb76344d8accf56e24c07bca5
+    [amount] => 37997
+    [order_number] => 3377
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+23/05/2017 21:53:05
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 023fda3eb76344d8accf56e24c07bca5
+    [amount] => 37997
+    [order_number] => 3377
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

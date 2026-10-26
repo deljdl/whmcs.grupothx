@@ -1,0 +1,269 @@
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 117
+    [clientid] => 101
+    [orderid] => 59
+    [pid] => 2
+    [regdate] => 2014-09-11
+    [name] => 
+    [translated_name] => TIH - PLUS
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => agapelocacao.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [firstpaymentamount] => 29.97
+    [recurringamount] => 89.91
+    [paymentmethod] => boleto_itau_sem_registro
+    [paymentmethodname] => Boleto Itaú
+    [billingcycle] => Quarterly
+    [nextduedate] => 2017-05-12
+    [status] => Suspended
+    [username] => agapelocacaocom
+    [password] => k77hy9Y5aH
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 2015-06-02
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 89
+    [disklimit] => 5000
+    [bwusage] => 29
+    [bwlimit] => 0
+    [lastupdate] => 2017-05-23 09:00:40
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 101
+    [id] => 101
+    [uuid] => 5632772a-c9f9-4959-9295-f67ed16e7b78
+    [firstname] => Fabio
+    [lastname] => Andrade Pinto
+    [fullname] => Fabio Andrade Pinto
+    [companyname] => Agape Comunicação
+    [email] => fabio.andrade@agapelocacao.com.br
+    [address1] => Rua Vilarinho, 180
+    [address2] => Tremembé
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 02376040
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1128924971
+    [password] => c7a64cd28ea13765048a60ce12bff0e3:Urr!v
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1128924971
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/05/2017 07:36<br>IP Address: 189.100.60.139<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947024443
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 21355812836
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947024443
+    [customfields3] => 21355812836
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s117
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - PLUS
+                            [UnitPrice] => 8991
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Quarterly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 21355812836
+            [FullName] => Fabio Andrade Pinto
+            [Email] => fabio.andrade@agapelocacao.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s117
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - PLUS
+                            [unitPrice] => 8991
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => Quarterly
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 21355812836
+            [fullName] => Fabio Andrade Pinto
+            [email] => fabio.andrade@agapelocacao.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/192e2fb5-250e-4f17-84f3-f069ce793e36
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

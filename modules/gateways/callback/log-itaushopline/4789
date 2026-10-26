@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4789
+    [id] => 4789
+    [1] => 295
+    [userid] => 295
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-06-02
+    [date] => 2018-06-02
+    [4] => 2018-06-09
+    [duedate] => 2018-06-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 295
+    [id] => 295
+    [uuid] => 1b03f454-bdfe-4bb3-89f8-c40bcbb92e5c
+    [firstname] => Alexandre
+    [lastname] => Medeiros de Assis
+    [fullname] => Alexandre Medeiros de Assis
+    [companyname] => APOYO IMOVEIS LTDA ME
+    [email] => alexandre@apoyoimoveis.com.br
+    [address1] => Avenida Nossa Senhora do Sabará
+    [address2] => Vila Emir
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04447-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1123692433
+    [password] => $2y$10$MEAdL8lHzVAUHj8X2XyylO55K8yLsDyqZvvdOrgpaWb6R3yjIOYOC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1123692433
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/06/2018 12:26<br>IP Address: 187.37.96.131<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11989577616
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.071.814/0001-33
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11989577616
+    [customfields3] => 11.071.814/0001-33
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

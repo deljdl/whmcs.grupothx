@@ -1,0 +1,450 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3054
+    [id] => 3054
+    [1] => 241
+    [userid] => 241
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-06
+    [date] => 2017-03-06
+    [4] => 2017-03-12
+    [duedate] => 2017-03-12
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 241
+    [id] => 241
+    [uuid] => cc3f754b-088a-4f81-855d-09582f8dc355
+    [firstname] => Edson
+    [lastname] => Gimenes
+    [fullname] => Edson Gimenes
+    [companyname] => Selos Brasil
+    [email] => edsgim@outlook.com
+    [address1] => Rua Lucinda Fernandes Carlos, 421
+    [address2] => Parque Continental III
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07085-310
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1149663933 - 11962842502
+    [password] => $2y$10$4Ss9hYTafOhUjUHpCwlMZekHRT2sYp5N7wd/fERcQmn28Sf4I4rsu
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114966393311962842502
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => deposito_ou_transferencia
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/03/2017 17:48<br>IP Address: 177.159.68.64<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11962842502
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29007144863
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11962842502
+    [customfields3] => 29007144863
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3054
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - agbengenharia.com.br (12/03/2017 - 11/04/2017)
+                            [Description] => TIH - Master - agbengenharia.com.br (12/03/2017 - 11/04/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 29007144863
+            [FullName] => Edson Gimenes
+            [Email] => edsgim@outlook.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 3054
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - agbengenharia.com.br (12/03/2017 - 11/04/2017)
+                            [description] => TIH - Master - agbengenharia.com.br (12/03/2017 - 11/04/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 29007144863
+            [fullName] => Edson Gimenes
+            [email] => edsgim@outlook.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/19622714-b262-483e-a2a0-6883016cc92b
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3054
+    [id] => 3054
+    [1] => 241
+    [userid] => 241
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-06
+    [date] => 2017-03-06
+    [4] => 2017-03-12
+    [duedate] => 2017-03-12
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 241
+    [id] => 241
+    [uuid] => cc3f754b-088a-4f81-855d-09582f8dc355
+    [firstname] => Edson
+    [lastname] => Gimenes
+    [fullname] => Edson Gimenes
+    [companyname] => Selos Brasil
+    [email] => edsgim@outlook.com
+    [address1] => Rua Lucinda Fernandes Carlos, 421
+    [address2] => Parque Continental III
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07085-310
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1149663933 - 11962842502
+    [password] => $2y$10$4Ss9hYTafOhUjUHpCwlMZekHRT2sYp5N7wd/fERcQmn28Sf4I4rsu
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114966393311962842502
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => deposito_ou_transferencia
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/03/2017 17:48<br>IP Address: 177.159.68.64<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11962842502
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29007144863
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11962842502
+    [customfields3] => 29007144863
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3054
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - agbengenharia.com.br (12/03/2017 - 11/04/2017)
+                            [Description] => TIH - Master - agbengenharia.com.br (12/03/2017 - 11/04/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 29007144863
+            [FullName] => Edson Gimenes
+            [Email] => edsgim@outlook.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 3054
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - agbengenharia.com.br (12/03/2017 - 11/04/2017)
+                            [description] => TIH - Master - agbengenharia.com.br (12/03/2017 - 11/04/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 29007144863
+            [fullName] => Edson Gimenes
+            [email] => edsgim@outlook.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/043ce494-d8fd-436b-b1c5-73c3f9e4c1d3
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

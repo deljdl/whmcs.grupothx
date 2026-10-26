@@ -1,0 +1,1038 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2608
+    [id] => 2608
+    [1] => 180
+    [userid] => 180
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-10-31
+    [date] => 2016-10-31
+    [4] => 2016-11-07
+    [duedate] => 2016-11-07
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 434.98
+    [subtotal] => 434.98
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 434.98
+    [total] => 434.98
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 180
+    [id] => 180
+    [uuid] => a670f420-2c4c-4023-a431-334e6274a396
+    [firstname] => Samuel
+    [lastname] => Nóbrega dos Anjos
+    [fullname] => Samuel Nóbrega dos Anjos
+    [companyname] => SAMUEL NOBREGA DOS ANJOS - ME - BRASIL NETWORK 
+    [email] => samuelnobrega10@gmail.com
+    [address1] => R Paracatu, 758
+    [address2] => Parque Imperial
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04302-022
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 5589-4930 / (11) 5589-4930
+    [password] => $2y$10$KE2dK3.7ZUgMy7AdcjDDfu3BDkkDole6z2tVbrdS3Mgw75rAbapt6
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11558949301155894930
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 16/11/2016 18:37<br>IP Address: 179.176.81.15<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986754279
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 09.329.980/0001-45
+                )
+
+        )
+
+    [customfields2] => 11986754279
+    [customfields3] => 09.329.980/0001-45
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2608
+    [SoftDescriptor] => 2608
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - piresembalagens.com.br (28/10/2016 - 27/10/2017)
+Domínio: piresembalagens.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - piresembalagens.com.br (28/10/2016 - 27/10/2017)
+Domínio: piresembalagens.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email de  25 de agosto de 2016 14:54 - Parcela 2/4
+                            [UnitPrice] => 12500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Confor...
+                            [Description] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Conforme e-mail de 11 de outubro de 2016 13:00 - Parcela 1/4
+                            [UnitPrice] => 20000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (05/11/2016 - 04/12/2016)
+Domínio: majotex.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (05/11/2016 - 04/12/2016)
+Domínio: majotex.com.br
+                            [UnitPrice] => 3000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => E-mail Marketing Master - santaeulalia.com.br (07/11/2016 - 06/12/2016)
+                            [Description] => E-mail Marketing Master - santaeulalia.com.br (07/11/2016 - 06/12/2016)
+                            [UnitPrice] => 1998
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [5] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 1305
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [6] => stdClass Object
+                        (
+                            [Name] => Juros por 9 dias de atraso
+                            [Description] => Juros por 9 dias de atraso
+                            [UnitPrice] => 1210
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002608
+            [FullName] => Samuel Nóbrega dos Anjos
+            [Email] => samuelnobrega10@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2608
+    [softDescriptor] => 2608
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - piresembalagens.com.br (28/10/2016 - 27/10/2017)
+Domínio: piresembalagens.com.br
+                            [description] => Gestor de Conteúdo Universal X-Painel® - piresembalagens.com.br (28/10/2016 - 27/10/2017)
+Domínio: piresembalagens.com.br
+                            [unitPrice] => 6000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email de  25 de agosto de 2016 14:54 - Parcela 2/4
+                            [unitPrice] => 12500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Confor...
+                            [description] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Conforme e-mail de 11 de outubro de 2016 13:00 - Parcela 1/4
+                            [unitPrice] => 20000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (05/11/2016 - 04/12/2016)
+Domínio: majotex.com.br
+                            [description] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (05/11/2016 - 04/12/2016)
+Domínio: majotex.com.br
+                            [unitPrice] => 3000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [name] => E-mail Marketing Master - santaeulalia.com.br (07/11/2016 - 06/12/2016)
+                            [description] => E-mail Marketing Master - santaeulalia.com.br (07/11/2016 - 06/12/2016)
+                            [unitPrice] => 1998
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [5] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 1305
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [6] => stdClass Object
+                        (
+                            [name] => Juros por 9 dias de atraso
+                            [description] => Juros por 9 dias de atraso
+                            [unitPrice] => 1210
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002608
+            [fullName] => Samuel Nóbrega dos Anjos
+            [email] => samuelnobrega10@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/23147aec-9165-4d90-8184-9208e5f9c03f
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2608
+    [id] => 2608
+    [1] => 180
+    [userid] => 180
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-10-31
+    [date] => 2016-10-31
+    [4] => 2016-11-07
+    [duedate] => 2016-11-07
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 434.98
+    [subtotal] => 434.98
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 434.98
+    [total] => 434.98
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 180
+    [id] => 180
+    [uuid] => a670f420-2c4c-4023-a431-334e6274a396
+    [firstname] => Samuel
+    [lastname] => Nóbrega dos Anjos
+    [fullname] => Samuel Nóbrega dos Anjos
+    [companyname] => SAMUEL NOBREGA DOS ANJOS - ME - BRASIL NETWORK 
+    [email] => samuelnobrega10@gmail.com
+    [address1] => R Paracatu, 758
+    [address2] => Parque Imperial
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04302-022
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 5589-4930 / (11) 5589-4930
+    [password] => $2y$10$KE2dK3.7ZUgMy7AdcjDDfu3BDkkDole6z2tVbrdS3Mgw75rAbapt6
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11558949301155894930
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 16/11/2016 18:39<br>IP Address: 179.176.81.15<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986754279
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 09.329.980/0001-45
+                )
+
+        )
+
+    [customfields2] => 11986754279
+    [customfields3] => 09.329.980/0001-45
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2608
+    [SoftDescriptor] => 2608
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - piresembalagens.com.br (28/10/2016 - 27/10/2017)
+Domínio: piresembalagens.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - piresembalagens.com.br (28/10/2016 - 27/10/2017)
+Domínio: piresembalagens.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email de  25 de agosto de 2016 14:54 - Parcela 2/4
+                            [UnitPrice] => 12500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Confor...
+                            [Description] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Conforme e-mail de 11 de outubro de 2016 13:00 - Parcela 1/4
+                            [UnitPrice] => 20000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (05/11/2016 - 04/12/2016)
+Domínio: majotex.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (05/11/2016 - 04/12/2016)
+Domínio: majotex.com.br
+                            [UnitPrice] => 3000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => E-mail Marketing Master - santaeulalia.com.br (07/11/2016 - 06/12/2016)
+                            [Description] => E-mail Marketing Master - santaeulalia.com.br (07/11/2016 - 06/12/2016)
+                            [UnitPrice] => 1998
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [5] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 1305
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [6] => stdClass Object
+                        (
+                            [Name] => Juros por 9 dias de atraso
+                            [Description] => Juros por 9 dias de atraso
+                            [UnitPrice] => 1210
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002608
+            [FullName] => Samuel Nóbrega dos Anjos
+            [Email] => samuelnobrega10@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2608
+    [softDescriptor] => 2608
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - piresembalagens.com.br (28/10/2016 - 27/10/2017)
+Domínio: piresembalagens.com.br
+                            [description] => Gestor de Conteúdo Universal X-Painel® - piresembalagens.com.br (28/10/2016 - 27/10/2017)
+Domínio: piresembalagens.com.br
+                            [unitPrice] => 6000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email de  25 de agosto de 2016 14:54 - Parcela 2/4
+                            [unitPrice] => 12500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Confor...
+                            [description] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Conforme e-mail de 11 de outubro de 2016 13:00 - Parcela 1/4
+                            [unitPrice] => 20000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (05/11/2016 - 04/12/2016)
+Domínio: majotex.com.br
+                            [description] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (05/11/2016 - 04/12/2016)
+Domínio: majotex.com.br
+                            [unitPrice] => 3000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [name] => E-mail Marketing Master - santaeulalia.com.br (07/11/2016 - 06/12/2016)
+                            [description] => E-mail Marketing Master - santaeulalia.com.br (07/11/2016 - 06/12/2016)
+                            [unitPrice] => 1998
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [5] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 1305
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [6] => stdClass Object
+                        (
+                            [name] => Juros por 9 dias de atraso
+                            [description] => Juros por 9 dias de atraso
+                            [unitPrice] => 1210
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002608
+            [fullName] => Samuel Nóbrega dos Anjos
+            [email] => samuelnobrega10@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/5833c809-99eb-421d-a656-ad2b11a367bf
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2608
+    [id] => 2608
+    [1] => 180
+    [userid] => 180
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-10-31
+    [date] => 2016-10-31
+    [4] => 2016-11-07
+    [duedate] => 2016-11-07
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 434.98
+    [subtotal] => 434.98
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 434.98
+    [total] => 434.98
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 180
+    [id] => 180
+    [uuid] => a670f420-2c4c-4023-a431-334e6274a396
+    [firstname] => Samuel
+    [lastname] => Nóbrega dos Anjos
+    [fullname] => Samuel Nóbrega dos Anjos
+    [companyname] => SAMUEL NOBREGA DOS ANJOS - ME - BRASIL NETWORK 
+    [email] => samuelnobrega10@gmail.com
+    [address1] => R Paracatu, 758
+    [address2] => Parque Imperial
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04302-022
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 5589-4930 / (11) 5589-4930
+    [password] => $2y$10$KE2dK3.7ZUgMy7AdcjDDfu3BDkkDole6z2tVbrdS3Mgw75rAbapt6
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11558949301155894930
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 16/11/2016 18:45<br>IP Address: 179.176.81.15<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986754279
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 09.329.980/0001-45
+                )
+
+        )
+
+    [customfields2] => 11986754279
+    [customfields3] => 09.329.980/0001-45
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2608
+    [SoftDescriptor] => 2608
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - piresembalagens.com.br (28/10/2016 - 27/10/2017)
+Domínio: piresembalagens.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - piresembalagens.com.br (28/10/2016 - 27/10/2017)
+Domínio: piresembalagens.com.br
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email de  25 de agosto de 2016 14:54 - Parcela 2/4
+                            [UnitPrice] => 12500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Confor...
+                            [Description] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Conforme e-mail de 11 de outubro de 2016 13:00 - Parcela 1/4
+                            [UnitPrice] => 20000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (05/11/2016 - 04/12/2016)
+Domínio: majotex.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (05/11/2016 - 04/12/2016)
+Domínio: majotex.com.br
+                            [UnitPrice] => 3000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => E-mail Marketing Master - santaeulalia.com.br (07/11/2016 - 06/12/2016)
+                            [Description] => E-mail Marketing Master - santaeulalia.com.br (07/11/2016 - 06/12/2016)
+                            [UnitPrice] => 1998
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [5] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 1305
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [6] => stdClass Object
+                        (
+                            [Name] => Juros por 9 dias de atraso
+                            [Description] => Juros por 9 dias de atraso
+                            [UnitPrice] => 1210
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002608
+            [FullName] => Samuel Nóbrega dos Anjos
+            [Email] => samuelnobrega10@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2608
+    [softDescriptor] => 2608
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - piresembalagens.com.br (28/10/2016 - 27/10/2017)
+Domínio: piresembalagens.com.br
+                            [description] => Gestor de Conteúdo Universal X-Painel® - piresembalagens.com.br (28/10/2016 - 27/10/2017)
+Domínio: piresembalagens.com.br
+                            [unitPrice] => 6000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email de  25 de agosto de 2016 14:54 - Parcela 2/4
+                            [unitPrice] => 12500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Confor...
+                            [description] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Conforme e-mail de 11 de outubro de 2016 13:00 - Parcela 1/4
+                            [unitPrice] => 20000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (05/11/2016 - 04/12/2016)
+Domínio: majotex.com.br
+                            [description] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (05/11/2016 - 04/12/2016)
+Domínio: majotex.com.br
+                            [unitPrice] => 3000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [name] => E-mail Marketing Master - santaeulalia.com.br (07/11/2016 - 06/12/2016)
+                            [description] => E-mail Marketing Master - santaeulalia.com.br (07/11/2016 - 06/12/2016)
+                            [unitPrice] => 1998
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [5] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 1305
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [6] => stdClass Object
+                        (
+                            [name] => Juros por 9 dias de atraso
+                            [description] => Juros por 9 dias de atraso
+                            [unitPrice] => 1210
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002608
+            [fullName] => Samuel Nóbrega dos Anjos
+            [email] => samuelnobrega10@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/6607f659-2757-47b1-883f-689840e968de
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

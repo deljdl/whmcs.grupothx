@@ -1,0 +1,113 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2712
+    [id] => 2712
+    [1] => 230
+    [userid] => 230
+    [2] => #1970
+    [invoicenum] => #1970
+    [3] => 2016-11-28
+    [date] => 2016-11-28
+    [4] => 2016-12-05
+    [duedate] => 2016-12-05
+    [5] => 2016-12-13 11:45:44
+    [datepaid] => 2016-12-13 11:45:44
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Paid
+    [status] => Paid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 230
+    [id] => 230
+    [uuid] => a50dbe51-c249-4c94-b16d-81bc8786c791
+    [firstname] => Elizabeth
+    [lastname] => Silveira
+    [fullname] => Elizabeth Silveira
+    [companyname] => Pesqueiro Paculândia - O Rei dos Pacus
+    [email] => beth.guararema@ig.com.br
+    [address1] => Estrada Antônio Bernardino
+    [address2] => 
+    [city] => Santa Iasabel
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08900-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11974251600
+    [password] => $2y$10$gkTc8vQy.eynUuHZ8tMtNOSnB.q55PlKewADWwctsmm1j1JClYvGe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11974251600
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 23/12/2016 05:46<br>IP Address: 187.22.235.30<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11974251600
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 09
+                )
+
+        )
+
+    [customfields2] => 11974251600
+    [customfields3] => 09
+)
+</pre>

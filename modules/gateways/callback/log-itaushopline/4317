@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4317
+    [id] => 4317
+    [1] => 270
+    [userid] => 270
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-01
+    [date] => 2018-02-01
+    [4] => 2018-02-08
+    [duedate] => 2018-02-08
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.99
+    [subtotal] => 59.99
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.99
+    [total] => 59.99
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 270
+    [id] => 270
+    [uuid] => 17d41b49-c35a-4f50-b999-7d25f4a022d6
+    [firstname] => Sandra
+    [lastname] => Maria de Figueiredo Sato
+    [fullname] => Sandra Maria de Figueiredo Sato
+    [companyname] => Convite à Leitura Web
+    [email] => sandramfsato@gmail.com
+    [address1] => Rua Jatoba, 120/ CP 73
+    [address2] => Alpes d&#039;ouro
+    [city] => Bom Jesus dos Perdões
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 12955-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 9 4119 2242 - 11 9 9912 6065
+    [password] => $2y$10$ZUguNdWJCy35HhiCtd669eCszlhOSnUdH.xUYn6zV.FjY5JVf2Bfm
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1194119224211999126065
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 01/02/2018 11:46<br>IP Address: 177.107.69.77<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11999126065
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 10738807885
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11999126065
+    [customfields3] => 10738807885
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

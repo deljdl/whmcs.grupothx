@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5021
+    [id] => 5021
+    [1] => 87
+    [userid] => 87
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-30
+    [date] => 2018-07-30
+    [4] => 2018-08-05
+    [duedate] => 2018-08-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.15
+    [subtotal] => 29.15
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.15
+    [total] => 29.15
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 87
+    [id] => 87
+    [uuid] => 5d8d6219-a620-429d-896e-c1bba6c6b833
+    [firstname] => Luiiz
+    [lastname] => Ricardo da Silva Publio
+    [fullname] => Luiiz Ricardo da Silva Publio
+    [companyname] => Novart Decor
+    [email] => contato@novartdecor.com.br
+    [address1] => RUA MIGUEL MATAS 111 
+    [address2] => JARDIM MARIA APARECIDA
+    [city] => GUARULHOS
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07134240
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  (11) 7894-9087 (11) 95980-0017
+    [password] => 9e892578a0fded9fb56cfa7a53c02605:pMSHH
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.117894908711959800017
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 30/07/2018 09:19<br>IP Address: 187.255.52.151<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18207276000100
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 18207276000100
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

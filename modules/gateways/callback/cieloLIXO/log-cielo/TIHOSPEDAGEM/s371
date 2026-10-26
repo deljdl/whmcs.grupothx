@@ -1,0 +1,525 @@
+
+
+27/04/2017 12:33:19
+INICIO_______________________________________________________________LOG:BEGIN:::27/04/2017 12:19<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s371
+    [amount] => 2997
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 97d5df7af79d4790938f8164b908b7cc
+    [created_date] => 27/04/2017 12:19:31
+    [customer_name] => Natalie Machado
+    [customer_phone] => 33991048052
+    [customer_identity] => 07513066655
+    [customer_email] => nattykammers@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 5
+    [payment_maskedcreditcard] => 506775******2306
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626F4ASO4V3B
+    [recurrent_payment_id] => 1bd58aac-ca26-469f-8407-6d4b628f48e0
+    [start_date] => 27/04/2017 12:19:31
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/04/2017 12:33:19
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 3217
+                            [userid] => 218
+                            [firstname] => Natalie 
+                            [lastname] => Machado
+                            [companyname] => 
+                            [invoicenum] => 
+                            [date] => 2017-04-17
+                            [duedate] => 2017-04-22
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 29.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 29.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielorecorrente
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s371
+    [amount] => 2997
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 97d5df7af79d4790938f8164b908b7cc
+    [created_date] => 27/04/2017 12:19:31
+    [customer_name] => Natalie Machado
+    [customer_phone] => 33991048052
+    [customer_identity] => 07513066655
+    [customer_email] => nattykammers@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 5
+    [payment_maskedcreditcard] => 506775******2306
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626F4ASO4V3B
+    [recurrent_payment_id] => 1bd58aac-ca26-469f-8407-6d4b628f48e0
+    [start_date] => 27/04/2017 12:19:31
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/04/2017 12:33:19
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 3217
+            [userid] => 218
+            [firstname] => Natalie 
+            [lastname] => Machado
+            [companyname] => 
+            [invoicenum] => 
+            [date] => 2017-04-17
+            [duedate] => 2017-04-22
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 29.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 29.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielorecorrente
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s371
+    [amount] => 2997
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 97d5df7af79d4790938f8164b908b7cc
+    [created_date] => 27/04/2017 12:19:31
+    [customer_name] => Natalie Machado
+    [customer_phone] => 33991048052
+    [customer_identity] => 07513066655
+    [customer_email] => nattykammers@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 5
+    [payment_maskedcreditcard] => 506775******2306
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626F4ASO4V3B
+    [recurrent_payment_id] => 1bd58aac-ca26-469f-8407-6d4b628f48e0
+    [start_date] => 27/04/2017 12:19:31
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/04/2017 12:33:19
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 3217
+    [userid] => 218
+    [firstname] => Natalie 
+    [lastname] => Machado
+    [companyname] => 
+    [invoicenum] => 
+    [date] => 2017-04-17
+    [duedate] => 2017-04-22
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 29.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 29.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s371
+    [amount] => 2997
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 97d5df7af79d4790938f8164b908b7cc
+    [created_date] => 27/04/2017 12:19:31
+    [customer_name] => Natalie Machado
+    [customer_phone] => 33991048052
+    [customer_identity] => 07513066655
+    [customer_email] => nattykammers@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 5
+    [payment_maskedcreditcard] => 506775******2306
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626F4ASO4V3B
+    [recurrent_payment_id] => 1bd58aac-ca26-469f-8407-6d4b628f48e0
+    [start_date] => 27/04/2017 12:19:31
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/04/2017 12:33:19
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 3217
+    [invoicenum] => 
+    [userid] => 218
+    [date] => 2017-04-17
+    [duedate] => 2017-04-22
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 29.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 29.97
+    [balance] => 29.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielorecorrente
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4852
+                            [type] => Hosting
+                            [relid] => 371
+                            [description] => TIH - Master  - nataliekammers.com (22/04/2017 - 21/05/2017)
+                            [amount] => 29.97
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s371
+    [amount] => 2997
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 97d5df7af79d4790938f8164b908b7cc
+    [created_date] => 27/04/2017 12:19:31
+    [customer_name] => Natalie Machado
+    [customer_phone] => 33991048052
+    [customer_identity] => 07513066655
+    [customer_email] => nattykammers@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 5
+    [payment_maskedcreditcard] => 506775******2306
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626F4ASO4V3B
+    [recurrent_payment_id] => 1bd58aac-ca26-469f-8407-6d4b628f48e0
+    [start_date] => 27/04/2017 12:19:31
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/04/2017 12:33:19
+INICIO_______________________________________________________________LOG:Checando -> 371 ==  371
+
+POST:
+<pre>Array
+(
+    [order_number] => s371
+    [amount] => 2997
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 97d5df7af79d4790938f8164b908b7cc
+    [created_date] => 27/04/2017 12:19:31
+    [customer_name] => Natalie Machado
+    [customer_phone] => 33991048052
+    [customer_identity] => 07513066655
+    [customer_email] => nattykammers@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 5
+    [payment_maskedcreditcard] => 506775******2306
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626F4ASO4V3B
+    [recurrent_payment_id] => 1bd58aac-ca26-469f-8407-6d4b628f48e0
+    [start_date] => 27/04/2017 12:19:31
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/04/2017 12:34:19
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3217 | Result->success | ValorPago ->29.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => s371
+    [amount] => 2997
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 97d5df7af79d4790938f8164b908b7cc
+    [created_date] => 27/04/2017 12:19:31
+    [customer_name] => Natalie Machado
+    [customer_phone] => 33991048052
+    [customer_identity] => 07513066655
+    [customer_email] => nattykammers@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 5
+    [payment_maskedcreditcard] => 506775******2306
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626F4ASO4V3B
+    [recurrent_payment_id] => 1bd58aac-ca26-469f-8407-6d4b628f48e0
+    [start_date] => 27/04/2017 12:19:31
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/04/2017 12:47:25
+INICIO_______________________________________________________________LOG:BEGIN:::27/04/2017 12:25<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 97d5df7af79d4790938f8164b908b7cc
+    [amount] => 2997
+    [order_number] => s371
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/04/2017 12:47:25
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 97d5df7af79d4790938f8164b908b7cc
+    [amount] => 2997
+    [order_number] => s371
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/04/2017 12:47:25
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 97d5df7af79d4790938f8164b908b7cc
+    [amount] => 2997
+    [order_number] => s371
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/04/2017 12:47:25
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 97d5df7af79d4790938f8164b908b7cc
+    [amount] => 2997
+    [order_number] => s371
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/04/2017 12:49:25
+INICIO_______________________________________________________________LOG:BEGIN:::27/04/2017 12:25<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 97d5df7af79d4790938f8164b908b7cc
+    [amount] => 2997
+    [order_number] => s371
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/04/2017 12:49:25
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 97d5df7af79d4790938f8164b908b7cc
+    [amount] => 2997
+    [order_number] => s371
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/04/2017 12:49:25
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 97d5df7af79d4790938f8164b908b7cc
+    [amount] => 2997
+    [order_number] => s371
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/04/2017 12:49:25
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 97d5df7af79d4790938f8164b908b7cc
+    [amount] => 2997
+    [order_number] => s371
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

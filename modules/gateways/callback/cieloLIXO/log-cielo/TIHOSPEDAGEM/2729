@@ -1,0 +1,357 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2729
+    [id] => 2729
+    [1] => 118
+    [userid] => 118
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-05
+    [date] => 2016-12-05
+    [4] => 2016-12-10
+    [duedate] => 2016-12-10
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 179.82
+    [subtotal] => 179.82
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 179.82
+    [total] => 179.82
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 118
+    [id] => 118
+    [uuid] => df9c8d76-65f7-43f3-a9aa-43ba043095da
+    [firstname] => Fátima 
+    [lastname] => Campos
+    [fullname] => Fátima  Campos
+    [companyname] => Angela Maria de Oliveira Cabeleireiros
+    [email] => contato@victoriasbeautyhair.com.br
+    [address1] => R. Édison, 310
+    [address2] => Campo Belo
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04618-031
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 5042.1944 | 5093.4602
+    [password] => 17d97b25da6c5c4213e42e175afa491b:m%r)G
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.115042194450934602
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/12/2016 10:47<br>IP Address: 191.251.181.22<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11979970056
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 011.737.280/0001-31
+                )
+
+        )
+
+    [customfields2] => 11979970056
+    [customfields3] => 011.737.280/0001-31
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2729
+    [SoftDescriptor] => 2729
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - victoriasbeautyhair.com.br (10/12/2016 - 09/06/2017)
+                            [Description] => TIH - Master - victoriasbeautyhair.com.br (10/12/2016 - 09/06/2017)
+                            [UnitPrice] => 17982
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 539
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 4 dias de atraso
+                            [Description] => Juros por 4 dias de atraso
+                            [UnitPrice] => 222
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002729
+            [FullName] => Fátima  Campos
+            [Email] => contato@victoriasbeautyhair.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2729
+    [softDescriptor] => 2729
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - victoriasbeautyhair.com.br (10/12/2016 - 09/06/2017)
+                            [description] => TIH - Master - victoriasbeautyhair.com.br (10/12/2016 - 09/06/2017)
+                            [unitPrice] => 17982
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 539
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 4 dias de atraso
+                            [description] => Juros por 4 dias de atraso
+                            [unitPrice] => 222
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002729
+            [fullName] => Fátima  Campos
+            [email] => contato@victoriasbeautyhair.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/9b2ced50-c6cc-4174-9d4a-2ee1578a8fc8
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+14/12/2016 10:09:58
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2729
+    [amount] => 18743
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => a9b1984aacc64a57a2f07c4a934dca29
+    [created_date] => 14/12/2016 14:58:07
+    [customer_name] => fatima campos
+    [customer_phone] => 11999357646
+    [customer_identity] => 01928012876
+    [customer_email] => contato@victoriasbeautyhair.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 536805******8589
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777625OP09F127B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+14/12/2016 10:11:58
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->118 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2729
+    [amount] => 18743
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => a9b1984aacc64a57a2f07c4a934dca29
+    [created_date] => 14/12/2016 14:58:07
+    [customer_name] => fatima campos
+    [customer_phone] => 11999357646
+    [customer_identity] => 01928012876
+    [customer_email] => contato@victoriasbeautyhair.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 536805******8589
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777625OP09F127B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+14/12/2016 11:53:00
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => a9b1984aacc64a57a2f07c4a934dca29
+    [amount] => 18743
+    [order_number] => 2729
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+14/12/2016 11:53:00
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => a9b1984aacc64a57a2f07c4a934dca29
+    [amount] => 18743
+    [order_number] => 2729
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

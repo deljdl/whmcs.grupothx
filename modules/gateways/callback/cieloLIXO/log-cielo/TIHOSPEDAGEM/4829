@@ -1,0 +1,267 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4829
+    [id] => 4829
+    [1] => 257
+    [userid] => 257
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-06-13
+    [date] => 2018-06-13
+    [4] => 2018-07-03
+    [duedate] => 2018-07-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 150.00
+    [subtotal] => 150.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 150.00
+    [total] => 150.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 257
+    [id] => 257
+    [uuid] => caa8eaac-27a3-4a3f-ae2c-9cbcb7ff77a4
+    [firstname] => Eduardo
+    [lastname] => Malfi
+    [fullname] => Eduardo Malfi
+    [companyname] => 
+    [email] => dumalfi@hotmail.com
+    [address1] => Rua Lacônia, 251
+    [address2] => Parque Capuava
+    [city] => Santo André
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09271-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 34585186
+    [password] => $2y$10$Z2hQz60sRKqEH6i9TY.NPOJiy49ARqzVkzpYgy/BH/9gTA1SeL1IO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1134585186
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 02/07/2018 23:30<br>IP Address: 99.248.28.169<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 33207523838
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 33207523838
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4829
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes Gira Post : E tambem precisa fazer 3 correcoes que percebi agora.  1- na data de retira...
+                            [Description] => Desenvolvimento Por Hora - Alteracoes Gira Post : E tambem precisa fazer 3 correcoes que percebi agora.  1- na data de retira ou entrega a data de retirada pode ser futura a data de entrega ( ret: 22/03/2018 -ent:20/02/2018)  2- colocar obrigatorieda...
+                            [UnitPrice] => 15000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Eduardo Malfi
+            [Email] => dumalfi@hotmail.com
+            [Identity] => 33207523838
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4829
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Desenvolvimento Por Hora - Alteracoes Gira Post : E tambem precisa fazer 3 correcoes que percebi agora.  1- na data de retira...
+                            [description] => Desenvolvimento Por Hora - Alteracoes Gira Post : E tambem precisa fazer 3 correcoes que percebi agora.  1- na data de retira ou entrega a data de retirada pode ser futura a data de entrega ( ret: 22/03/2018 -ent:20/02/2018)  2- colocar obrigatorieda...
+                            [unitPrice] => 15000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 33207523838
+            [fullName] => Eduardo Malfi
+            [email] => dumalfi@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/ecc5b288-f4de-417e-ab8c-04340a3f86fc
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+03/07/2018 0:46:11
+INICIO_______________________________________________________________LOG:BEGIN:::03/07/2018 0:11<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 3b93f548dc26492799344baf9bfd0919
+    [amount] => 15000
+    [order_number] => 4829
+    [payment_status] => 5
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+03/07/2018 0:46:11
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  4829
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 3b93f548dc26492799344baf9bfd0919
+    [amount] => 15000
+    [order_number] => 4829
+    [payment_status] => 5
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

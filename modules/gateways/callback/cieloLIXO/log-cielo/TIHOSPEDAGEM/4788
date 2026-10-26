@@ -1,0 +1,857 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4788
+    [id] => 4788
+    [1] => 287
+    [userid] => 287
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-06-02
+    [date] => 2018-06-02
+    [4] => 2018-06-02
+    [duedate] => 2018-06-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 375.00
+    [subtotal] => 375.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 375.00
+    [total] => 375.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 287
+    [id] => 287
+    [uuid] => 94e158d0-84b7-4924-90ce-45a9bd283a9a
+    [firstname] => Marcelo
+    [lastname] => Nascimento
+    [fullname] => Marcelo Nascimento
+    [companyname] => 
+    [email] => marceloconselheiro@gmail.com
+    [address1] => Rua Dr Jairo Franco, 15
+    [address2] => Itaquera
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08246-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 27743359 11 950595100
+    [password] => $2y$10$8jk.b5y568x6hsS3JOGNd.5PRN168IL8ychfIW0fUxGTWxJ.Se51W
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.112774335911950595100
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 02/06/2018 18:45<br>IP Address: 179.142.75.183<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11950595100
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 164209228-28
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11950595100
+    [customfields3] => 164209228-28
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4788
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes, Desenvolvimento e Suporte.Este modulo e cobrado por hora.Informe as horas necessarias ...
+                            [Description] => Desenvolvimento Por Hora - Alteracoes, Desenvolvimento e Suporte.Este modulo e cobrado por hora.Informe as horas necessarias ou apenas uma hora e , caso o tempo necessario para o desenvolvimento seja maior, enviaremos a quantidade de horas adicionais...
+                            [UnitPrice] => 37500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Marcelo Nascimento
+            [Email] => marceloconselheiro@gmail.com
+            [Identity] => 16420922828
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4788
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Desenvolvimento Por Hora - Alteracoes, Desenvolvimento e Suporte.Este modulo e cobrado por hora.Informe as horas necessarias ...
+                            [description] => Desenvolvimento Por Hora - Alteracoes, Desenvolvimento e Suporte.Este modulo e cobrado por hora.Informe as horas necessarias ou apenas uma hora e , caso o tempo necessario para o desenvolvimento seja maior, enviaremos a quantidade de horas adicionais...
+                            [unitPrice] => 37500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 16420922828
+            [fullName] => Marcelo Nascimento
+            [email] => marceloconselheiro@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/546bc092-138c-4572-b3f6-1f8e4a3c2b80
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4788
+    [id] => 4788
+    [1] => 287
+    [userid] => 287
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-06-02
+    [date] => 2018-06-02
+    [4] => 2018-06-02
+    [duedate] => 2018-06-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 375.00
+    [subtotal] => 375.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 375.00
+    [total] => 375.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 287
+    [id] => 287
+    [uuid] => 94e158d0-84b7-4924-90ce-45a9bd283a9a
+    [firstname] => Marcelo
+    [lastname] => Nascimento
+    [fullname] => Marcelo Nascimento
+    [companyname] => 
+    [email] => marceloconselheiro@gmail.com
+    [address1] => Rua Dr Jairo Franco, 15
+    [address2] => Itaquera
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08246-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 27743359 11 950595100
+    [password] => $2y$10$8jk.b5y568x6hsS3JOGNd.5PRN168IL8ychfIW0fUxGTWxJ.Se51W
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.112774335911950595100
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 02/06/2018 18:45<br>IP Address: 179.142.75.183<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11950595100
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 164209228-28
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11950595100
+    [customfields3] => 164209228-28
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4788
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes, Desenvolvimento e Suporte.Este modulo e cobrado por hora.Informe as horas necessarias ...
+                            [Description] => Desenvolvimento Por Hora - Alteracoes, Desenvolvimento e Suporte.Este modulo e cobrado por hora.Informe as horas necessarias ou apenas uma hora e , caso o tempo necessario para o desenvolvimento seja maior, enviaremos a quantidade de horas adicionais...
+                            [UnitPrice] => 37500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Marcelo Nascimento
+            [Email] => marceloconselheiro@gmail.com
+            [Identity] => 16420922828
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4788
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Desenvolvimento Por Hora - Alteracoes, Desenvolvimento e Suporte.Este modulo e cobrado por hora.Informe as horas necessarias ...
+                            [description] => Desenvolvimento Por Hora - Alteracoes, Desenvolvimento e Suporte.Este modulo e cobrado por hora.Informe as horas necessarias ou apenas uma hora e , caso o tempo necessario para o desenvolvimento seja maior, enviaremos a quantidade de horas adicionais...
+                            [unitPrice] => 37500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 16420922828
+            [fullName] => Marcelo Nascimento
+            [email] => marceloconselheiro@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/ed69e3eb-f844-42bb-9b75-7e17d50f84fe
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4788
+    [id] => 4788
+    [1] => 287
+    [userid] => 287
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-06-02
+    [date] => 2018-06-02
+    [4] => 2018-06-02
+    [duedate] => 2018-06-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 375.00
+    [subtotal] => 375.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 375.00
+    [total] => 375.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 287
+    [id] => 287
+    [uuid] => 94e158d0-84b7-4924-90ce-45a9bd283a9a
+    [firstname] => Marcelo
+    [lastname] => Nascimento
+    [fullname] => Marcelo Nascimento
+    [companyname] => 
+    [email] => marceloconselheiro@gmail.com
+    [address1] => Rua Dr Jairo Franco, 15
+    [address2] => Itaquera
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08246-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 27743359 11 950595100
+    [password] => $2y$10$8jk.b5y568x6hsS3JOGNd.5PRN168IL8ychfIW0fUxGTWxJ.Se51W
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.112774335911950595100
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 02/06/2018 18:48<br>IP Address: 179.142.75.183<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11950595100
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 164209228-28
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11950595100
+    [customfields3] => 164209228-28
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4788
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes, Desenvolvimento e Suporte.Este modulo e cobrado por hora.Informe as horas necessarias ...
+                            [Description] => Desenvolvimento Por Hora - Alteracoes, Desenvolvimento e Suporte.Este modulo e cobrado por hora.Informe as horas necessarias ou apenas uma hora e , caso o tempo necessario para o desenvolvimento seja maior, enviaremos a quantidade de horas adicionais...
+                            [UnitPrice] => 37500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Marcelo Nascimento
+            [Email] => marceloconselheiro@gmail.com
+            [Identity] => 16420922828
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4788
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Desenvolvimento Por Hora - Alteracoes, Desenvolvimento e Suporte.Este modulo e cobrado por hora.Informe as horas necessarias ...
+                            [description] => Desenvolvimento Por Hora - Alteracoes, Desenvolvimento e Suporte.Este modulo e cobrado por hora.Informe as horas necessarias ou apenas uma hora e , caso o tempo necessario para o desenvolvimento seja maior, enviaremos a quantidade de horas adicionais...
+                            [unitPrice] => 37500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 16420922828
+            [fullName] => Marcelo Nascimento
+            [email] => marceloconselheiro@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/6ca631ac-51ea-4369-9684-0d21f05be831
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+02/06/2018 18:11:51
+INICIO_______________________________________________________________LOG:BEGIN:::02/06/2018 18:51<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 4788
+    [amount] => 37500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 608ec121d9134dcb84f86e0b14e4be40
+    [created_date] => 02/06/2018 18:51:04
+    [customer_name] => Marcelo Nascimento
+    [customer_phone] => 11940135596
+    [customer_identity] => 16420922828
+    [customer_email] => marceloconselheiro@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 514945******7925
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627D933S5Q7B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/06/2018 18:11:51
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->4788 | Result->success | ValorPago ->375.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 4788
+    [amount] => 37500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 608ec121d9134dcb84f86e0b14e4be40
+    [created_date] => 02/06/2018 18:51:04
+    [customer_name] => Marcelo Nascimento
+    [customer_phone] => 11940135596
+    [customer_identity] => 16420922828
+    [customer_email] => marceloconselheiro@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 514945******7925
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627D933S5Q7B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/06/2018 18:20:59
+INICIO_______________________________________________________________LOG:BEGIN:::02/06/2018 18:59<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 608ec121d9134dcb84f86e0b14e4be40
+    [amount] => 37500
+    [order_number] => 4788
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/06/2018 18:20:59
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 608ec121d9134dcb84f86e0b14e4be40
+    [amount] => 37500
+    [order_number] => 4788
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/06/2018 18:21:59
+INICIO_______________________________________________________________LOG:BEGIN:::02/06/2018 18:59<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 608ec121d9134dcb84f86e0b14e4be40
+    [amount] => 37500
+    [order_number] => 4788
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/06/2018 18:21:59
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 608ec121d9134dcb84f86e0b14e4be40
+    [amount] => 37500
+    [order_number] => 4788
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/06/2018 18:22:59
+INICIO_______________________________________________________________LOG:BEGIN:::02/06/2018 18:59<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 608ec121d9134dcb84f86e0b14e4be40
+    [amount] => 37500
+    [order_number] => 4788
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/06/2018 18:22:59
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 608ec121d9134dcb84f86e0b14e4be40
+    [amount] => 37500
+    [order_number] => 4788
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

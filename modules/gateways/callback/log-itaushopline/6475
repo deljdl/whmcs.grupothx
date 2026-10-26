@@ -1,0 +1,407 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 6475
+    [id] => 6475
+    [1] => 216
+    [userid] => 216
+    [2] => 
+    [invoicenum] => 
+    [3] => 2019-08-19
+    [date] => 2019-08-19
+    [4] => 2019-08-25
+    [duedate] => 2019-08-25
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 29.97
+    [subtotal] => 29.97
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 29.97
+    [total] => 29.97
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => itaushopline
+    [paymentmethod] => itaushopline
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 216
+    [id] => 216
+    [uuid] => dca6a671-c6e9-4b2b-a19b-9d6f8483b11e
+    [firstname] => Anderson
+    [lastname] => Lourenço Mendes
+    [fullname] => Anderson Lourenço Mendes
+    [companyname] => Ideal Taxi
+    [email] => mendestax@yahoo.com.br
+    [address1] => Rua Salmorão
+    [address2] => Jardim Caiubi
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08588510
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1194714030911999551619
+    [password] => $2y$10$QDW5TALYTlO/iZ/p1VQFgOZQgpk7LUyvbKS9YIWU4rLRYFlJb.NAC
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 216
+                    [uuid] => dca6a671-c6e9-4b2b-a19b-9d6f8483b11e
+                    [firstname] => Anderson
+                    [lastname] => Lourenço Mendes
+                    [companyname] => Ideal Taxi
+                    [email] => mendestax@yahoo.com.br
+                    [address1] => Rua Salmorão
+                    [address2] => Jardim Caiubi
+                    [city] => Itaquaquecetuba
+                    [state] => SP
+                    [postcode] => 08588510
+                    [country] => BR
+                    [phonenumber] => 11947140309, 11999551619
+                    [password] => $2y$10$QDW5TALYTlO/iZ/p1VQFgOZQgpk7LUyvbKS9YIWU4rLRYFlJb.NAC
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 29.97
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2016-07-19
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => bJSvHLM6rqIwF8axOPSHY0WfpbY=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-08-26 13:05:45
+                    [ip] => 191.39.22.160
+                    [host] => 191.39.22.160
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 5b07d8519f6777d239c5c14cf1ecfef9
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2019-01-03 08:21:16
+                    [pwresetexpiry] => 2019-06-25 16:11:23
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 216
+                    [uuid] => dca6a671-c6e9-4b2b-a19b-9d6f8483b11e
+                    [firstname] => Anderson
+                    [lastname] => Lourenço Mendes
+                    [companyname] => Ideal Taxi
+                    [email] => mendestax@yahoo.com.br
+                    [address1] => Rua Salmorão
+                    [address2] => Jardim Caiubi
+                    [city] => Itaquaquecetuba
+                    [state] => SP
+                    [postcode] => 08588510
+                    [country] => BR
+                    [phonenumber] => 11947140309, 11999551619
+                    [password] => $2y$10$QDW5TALYTlO/iZ/p1VQFgOZQgpk7LUyvbKS9YIWU4rLRYFlJb.NAC
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 29.97
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2016-07-19
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => bJSvHLM6rqIwF8axOPSHY0WfpbY=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-08-26 13:05:45
+                    [ip] => 191.39.22.160
+                    [host] => 191.39.22.160
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 5b07d8519f6777d239c5c14cf1ecfef9
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2019-01-03 08:21:16
+                    [pwresetexpiry] => 2019-06-25 16:11:23
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1194714030911999551619
+    [telephoneNumber] => +55.1194714030911999551619
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 29.97
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 26/08/2019 13:05<br>IP Address: 191.39.22.160<br>Host: 191.39.22.160
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947140309
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 221.163.348-02
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947140309
+    [customfields3] => 221.163.348-02
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

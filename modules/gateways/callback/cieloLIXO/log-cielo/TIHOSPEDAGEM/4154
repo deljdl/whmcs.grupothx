@@ -1,0 +1,383 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4154
+    [id] => 4154
+    [1] => 124
+    [userid] => 124
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-12-18
+    [date] => 2017-12-18
+    [4] => 2017-12-23
+    [duedate] => 2017-12-23
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 124
+    [id] => 124
+    [uuid] => 5ad5e741-e539-4e1b-b759-c58015a5bfb7
+    [firstname] => Emi
+    [lastname] => Shimada
+    [fullname] => Emi Shimada
+    [companyname] => Foto Criação
+    [email] => emifotografa@gmail.com
+    [address1] => Rua salvador risoleu, 118
+    [address2] => jd peri peri
+    [city] => sao paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05536020
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 35014132
+    [password] => $2y$10$M9pOg5zmqDe0PqegplWm2eH5HhBqI7PowgFJM03lM7Us.6YrJnCEe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1135014132
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 02/01/2018 10:06<br>IP Address: 179.34.247.73<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11984821337
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11984821337
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4154
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - fotocriacao.com.br (23/12/2017 - 22/01/2018)
+                            [Description] => TIH - Master  - fotocriacao.com.br (23/12/2017 - 22/01/2018)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 10 dias de atraso
+                            [Description] => Juros por 10 dias de atraso
+                            [UnitPrice] => 99
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Emi Shimada
+            [Email] => emifotografa@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4154
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master  - fotocriacao.com.br (23/12/2017 - 22/01/2018)
+                            [description] => TIH - Master  - fotocriacao.com.br (23/12/2017 - 22/01/2018)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 10 dias de atraso
+                            [description] => Juros por 10 dias de atraso
+                            [unitPrice] => 99
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [fullName] => Emi Shimada
+            [email] => emifotografa@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/f439b0c3-2830-43dd-afc7-ed4dd2583320
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+02/01/2018 10:35:08
+INICIO_______________________________________________________________LOG:BEGIN:::02/01/2018 10:08<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 4154
+    [amount] => 3396
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 40e2a288d66940e3bbadefc69c24821d
+    [created_date] => 02/01/2018 10:08:32
+    [customer_name] => Emi Shimada
+    [customer_phone] => 11984821337
+    [customer_identity] => 55423094100
+    [customer_email] => emifotografa@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552236******1539
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776278SVAO1J7B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/01/2018 10:52:08
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->4154 | Result->success | ValorPago ->29.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 4154
+    [amount] => 3396
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 40e2a288d66940e3bbadefc69c24821d
+    [created_date] => 02/01/2018 10:08:32
+    [customer_name] => Emi Shimada
+    [customer_phone] => 11984821337
+    [customer_identity] => 55423094100
+    [customer_email] => emifotografa@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552236******1539
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776278SVAO1J7B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/01/2018 10:11:18
+INICIO_______________________________________________________________LOG:BEGIN:::02/01/2018 10:18<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 40e2a288d66940e3bbadefc69c24821d
+    [amount] => 3396
+    [order_number] => 4154
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/01/2018 10:11:18
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 40e2a288d66940e3bbadefc69c24821d
+    [amount] => 3396
+    [order_number] => 4154
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/01/2018 10:12:18
+INICIO_______________________________________________________________LOG:BEGIN:::02/01/2018 10:18<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 40e2a288d66940e3bbadefc69c24821d
+    [amount] => 3396
+    [order_number] => 4154
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/01/2018 10:12:18
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 40e2a288d66940e3bbadefc69c24821d
+    [amount] => 3396
+    [order_number] => 4154
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

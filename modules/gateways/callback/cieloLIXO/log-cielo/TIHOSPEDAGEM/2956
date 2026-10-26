@@ -1,0 +1,2034 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-07
+    [duedate] => 2017-02-07
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 10/02/2017 14:45<br>IP Address: 177.18.205.208<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.051.620/0001-73
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 05.051.620/0001-73
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2956
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [Description] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [UnitPrice] => 8991
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 270
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 3 dias de atraso
+                            [Description] => Juros por 3 dias de atraso
+                            [UnitPrice] => 83
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 05051620000173
+            [FullName] => Mairo José Gomes
+            [Email] => ti@yespromocoes.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2956
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [description] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [unitPrice] => 8991
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 270
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 3 dias de atraso
+                            [description] => Juros por 3 dias de atraso
+                            [unitPrice] => 83
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 05051620000173
+            [fullName] => Mairo José Gomes
+            [email] => ti@yespromocoes.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/9f928dc0-8491-42e7-9c27-157fa653a400
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-07
+    [duedate] => 2017-02-07
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 10/02/2017 15:48<br>IP Address: 186.230.37.145<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.051.620/0001-73
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 05.051.620/0001-73
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2956
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [Description] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [UnitPrice] => 8991
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 270
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 3 dias de atraso
+                            [Description] => Juros por 3 dias de atraso
+                            [UnitPrice] => 83
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 05051620000173
+            [FullName] => Mairo José Gomes
+            [Email] => ti@yespromocoes.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2956
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [description] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [unitPrice] => 8991
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 270
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 3 dias de atraso
+                            [description] => Juros por 3 dias de atraso
+                            [unitPrice] => 83
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 05051620000173
+            [fullName] => Mairo José Gomes
+            [email] => ti@yespromocoes.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/8470d248-514e-4333-ba17-6f73b64b7a74
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+10/02/2017 15:33:51
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2956
+    [amount] => 9344
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 796c7ffadddf43898d0c77eb1baf4254
+    [created_date] => 10/02/2017 15:51:30
+    [customer_name] => Mairo Gomes
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******0123
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626CTFSKJOTB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-07
+    [duedate] => 2017-02-07
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 10/02/2017 15:53<br>IP Address: 186.230.37.145<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.051.620/0001-73
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 05.051.620/0001-73
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2956
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [Description] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [UnitPrice] => 8991
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 270
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 3 dias de atraso
+                            [Description] => Juros por 3 dias de atraso
+                            [UnitPrice] => 83
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 05051620000173
+            [FullName] => Mairo José Gomes
+            [Email] => ti@yespromocoes.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2956
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [description] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [unitPrice] => 8991
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 270
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 3 dias de atraso
+                            [description] => Juros por 3 dias de atraso
+                            [unitPrice] => 83
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 05051620000173
+            [fullName] => Mairo José Gomes
+            [email] => ti@yespromocoes.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/91d59912-bc30-4910-9776-385b946be334
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+10/02/2017 15:28:54
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2956
+    [amount] => 9344
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => fec3c622ae164f8fa98af1ad8d370e7a
+    [created_date] => 10/02/2017 15:54:25
+    [customer_name] => YES LTDA
+    [customer_phone] => 1132931520
+    [customer_identity] => 05051620000173
+    [customer_email] => ti@yespromocoes.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 407505******0123
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626CTFSLQ97B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/02/2017 15:46:59
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 796c7ffadddf43898d0c77eb1baf4254
+    [amount] => 9344
+    [order_number] => 2956
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/02/2017 16:18:00
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => fec3c622ae164f8fa98af1ad8d370e7a
+    [amount] => 9344
+    [order_number] => 2956
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-07
+    [duedate] => 2017-02-07
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 10/02/2017 16:10<br>IP Address: 186.230.37.145<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.051.620/0001-73
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 05.051.620/0001-73
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2956
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [Description] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [UnitPrice] => 8991
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 270
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 3 dias de atraso
+                            [Description] => Juros por 3 dias de atraso
+                            [UnitPrice] => 83
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 05051620000173
+            [FullName] => Mairo José Gomes
+            [Email] => ti@yespromocoes.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2956
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [description] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [unitPrice] => 8991
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 270
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 3 dias de atraso
+                            [description] => Juros por 3 dias de atraso
+                            [unitPrice] => 83
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 05051620000173
+            [fullName] => Mairo José Gomes
+            [email] => ti@yespromocoes.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/bb7f08b2-6276-4345-9710-51f6a8ef6363
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-16
+    [duedate] => 2017-02-16
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 17:54<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.051.620/0001-73
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 05.051.620/0001-73
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2956
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [Description] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [UnitPrice] => 8991
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 05051620000173
+            [FullName] => Mairo José Gomes
+            [Email] => ti@yespromocoes.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2956
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [description] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [unitPrice] => 8991
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 05051620000173
+            [fullName] => Mairo José Gomes
+            [email] => ti@yespromocoes.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/d950c738-5f08-480d-922a-d720e140fbcb
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-16
+    [duedate] => 2017-02-16
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 18:21<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.051.620/0001-73
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 05.051.620/0001-73
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2956
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [Description] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [UnitPrice] => 8991
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 05051620000173
+            [FullName] => Mairo José Gomes
+            [Email] => ti@yespromocoes.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2956
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [description] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [unitPrice] => 8991
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 05051620000173
+            [fullName] => Mairo José Gomes
+            [email] => ti@yespromocoes.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/02e83d2e-4cb0-41c5-819b-e44d65eec825
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-16
+    [duedate] => 2017-02-16
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 18:25<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.051.620/0001-73
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 05.051.620/0001-73
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2956
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [Description] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [UnitPrice] => 8991
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 05051620000173
+            [FullName] => Mairo José Gomes
+            [Email] => ti@yespromocoes.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2956
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [description] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [unitPrice] => 8991
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 05051620000173
+            [fullName] => Mairo José Gomes
+            [email] => ti@yespromocoes.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/31c9c5ec-acde-49cc-8a33-688bb12671f2
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-16
+    [duedate] => 2017-02-16
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 18:29<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.051.620/0001-73
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 05.051.620/0001-73
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2956
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [Description] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [UnitPrice] => 8991
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 05051620000173
+            [FullName] => Mairo José Gomes
+            [Email] => ti@yespromocoes.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2956
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [description] => TIH - Master (07/02/2017 - 06/05/2017)
+                            [unitPrice] => 8991
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 05051620000173
+            [fullName] => Mairo José Gomes
+            [email] => ti@yespromocoes.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/0c54812f-f986-4b37-b6eb-93a00af8da1e
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

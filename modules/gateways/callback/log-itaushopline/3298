@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3298
+    [id] => 3298
+    [1] => 228
+    [userid] => 228
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-05-05
+    [date] => 2017-05-05
+    [4] => 2017-05-12
+    [duedate] => 2017-05-12
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 228
+    [id] => 228
+    [uuid] => 75e362d4-26d3-4b42-b2dd-4404be6fdea3
+    [firstname] => Ronaldo
+    [lastname] => Cesario Pereira Gorga
+    [fullname] => Ronaldo Cesario Pereira Gorga
+    [companyname] => ronaldogorga.com.br
+    [email] => ro_gorga@yahoo.com
+    [address1] => Rua Funchal, 411
+    [address2] => Vila Olímpia
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04551-060
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11963676968, 11 3841 9555
+    [password] => $2y$10$7Y0.oo94nBFhQ3m0rSrb0.H4UQf1SBQGu0JuNwHwXJNnnEgqLdcba
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.119636769681138419555
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/05/2017 09:03<br>IP Address: 179.78.87.88<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11963676968
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 22428564803
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11963676968
+    [customfields3] => 22428564803
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

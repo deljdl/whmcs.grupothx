@@ -1,0 +1,217 @@
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 301
+    [clientid] => 180
+    [orderid] => 228
+    [pid] => 36
+    [regdate] => 2016-04-07
+    [name] => 
+    [translated_name] => Gestor de Conteúdo Universal X-Painel®
+    [groupname] => Gestor de Conteúdo
+    [translated_groupname] => Gestor de Conteúdo
+    [domain] => escolavitoriaramos.com.br
+    [dedicatedip] => 
+    [serverid] => 0
+    [servername] => 
+    [serverip] => 
+    [serverhostname] => 
+    [firstpaymentamount] => 60.00
+    [recurringamount] => 60.00
+    [paymentmethod] => boleto_itau_sem_registro
+    [paymentmethodname] => Boleto Itaú
+    [billingcycle] => Annually
+    [nextduedate] => 2017-04-28
+    [status] => Active
+    [username] => escolavi
+    [password] => 0LaY84ou2r
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 0
+    [disklimit] => 0
+    [bwusage] => 0
+    [bwlimit] => 0
+    [lastupdate] => 0000-00-00 00:00:00
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4
+                            [name] => Domínio
+                            [translated_name] => Domínio
+                            [value] => escolavitoriaramos.com.br
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 5
+                            [name] => Id-X-Painel
+                            [translated_name] => Id-X-Painel
+                            [value] => 83
+                        )
+
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 180
+    [id] => 180
+    [uuid] => a670f420-2c4c-4023-a431-334e6274a396
+    [firstname] => Samuel
+    [lastname] => Nóbrega dos Anjos
+    [fullname] => Samuel Nóbrega dos Anjos
+    [companyname] => SAMUEL NOBREGA DOS ANJOS - ME - BRASIL NETWORK 
+    [email] => samuelnobrega10@gmail.com
+    [address1] => R Paracatu, 758
+    [address2] => Parque Imperial
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04302-022
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 5589-4930 / (11) 5589-4930
+    [password] => $2y$10$KE2dK3.7ZUgMy7AdcjDDfu3BDkkDole6z2tVbrdS3Mgw75rAbapt6
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11558949301155894930
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 1
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/02/2017 00:42<br>IP Address: 177.97.133.3<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986754279
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 09.329.980/0001-45
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 28
+                )
+
+        )
+
+    [customfields2] => 11986754279
+    [customfields3] => 09.329.980/0001-45
+    [customfields4] => 28
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => r434
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteudo
+                            [Description] => Gestor de Conteudo Universal X-Painel®
+                            [UnitPrice] => 6000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Annually
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 09.329.980/0001-45
+            [FullName] => Samuel Nóbrega dos Anjos
+            [Email] => samuelnobrega10@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>

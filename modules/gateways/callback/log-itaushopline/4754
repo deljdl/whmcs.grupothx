@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4754
+    [id] => 4754
+    [1] => 252
+    [userid] => 252
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-05-25
+    [date] => 2018-05-25
+    [4] => 2018-06-01
+    [duedate] => 2018-06-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 252
+    [id] => 252
+    [uuid] => 23c7d877-b26e-4a88-8801-cc5361a194e7
+    [firstname] => Gabriela
+    [lastname] => Veloso Galiano
+    [fullname] => Gabriela Veloso Galiano
+    [companyname] => Gabriela Veloso Galiano ME
+    [email] => veloso.gabii@gmail.com
+    [address1] => Av Capitão Arcilio Rizzi, 133
+    [address2] => Cesar de Souza
+    [city] => Mogi das Cruzes
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08820-130
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 2896-8189 947765364
+    [password] => $2y$10$vJvMOtSKca49OPeS9z5XjeaqIi4Ak6.yXFr2LRuS0hpCZn0Y.ggNi
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.28968189947765364
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/06/2018 10:57<br>IP Address: 187.2.243.132<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947765364
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 383.070.948-01
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947765364
+    [customfields3] => 383.070.948-01
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

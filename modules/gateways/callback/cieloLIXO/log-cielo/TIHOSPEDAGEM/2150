@@ -1,0 +1,549 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2150
+    [id] => 2150
+    [1] => 213
+    [userid] => 213
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-07-05
+    [date] => 2016-07-05
+    [4] => 2016-07-05
+    [duedate] => 2016-07-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 649.00
+    [subtotal] => 649.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 649.00
+    [total] => 649.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 213
+    [id] => 213
+    [uuid] => eec8d1e0-13de-49a3-9730-8d4406419ffd
+    [firstname] => Vinicius
+    [lastname] => Zabotto
+    [fullname] => Vinicius Zabotto
+    [companyname] => Pesqueiro Arujá
+    [email] => adm@pesqueiroaruja.com.br
+    [address1] => Rua Joaquim Floriano, 834
+    [address2] => Itaim bibi 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04534-003
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137066400 - 11995518923
+    [password] => $2y$10$uK0ZCgJE8j4SmFB3kjq2LObxhV.Rfzrov44LEJOBwWBlAEjCZCryC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113706640011995518923
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/07/2016 08:05<br>IP Address: 177.158.93.17<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995518923
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 25611904807
+                )
+
+        )
+
+    [customfields2] => 11995518923
+    [customfields3] => 25611904807
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2150
+    [SoftDescriptor] => 2150
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - pesqueiroaruja.com.br
+                            [Description] => Site Básico - pesqueiroaruja.com.br
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Vinicius Zabotto
+            [Email] => adm@pesqueiroaruja.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2150
+    [softDescriptor] => 2150
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - pesqueiroaruja.com.br
+                            [description] => Site Básico - pesqueiroaruja.com.br
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Vinicius Zabotto
+            [email] => adm@pesqueiroaruja.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/e9634fe9-56c5-49e4-b9f1-0192ea3eb4ad
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2150
+    [id] => 2150
+    [1] => 213
+    [userid] => 213
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-07-05
+    [date] => 2016-07-05
+    [4] => 2016-07-05
+    [duedate] => 2016-07-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 649.00
+    [subtotal] => 649.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 649.00
+    [total] => 649.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 213
+    [id] => 213
+    [uuid] => eec8d1e0-13de-49a3-9730-8d4406419ffd
+    [firstname] => Vinicius
+    [lastname] => Zabotto
+    [fullname] => Vinicius Zabotto
+    [companyname] => Pesqueiro Arujá
+    [email] => adm@pesqueiroaruja.com.br
+    [address1] => Rua Joaquim Floriano, 834
+    [address2] => Itaim bibi 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04534-003
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137066400 - 11995518923
+    [password] => $2y$10$uK0ZCgJE8j4SmFB3kjq2LObxhV.Rfzrov44LEJOBwWBlAEjCZCryC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113706640011995518923
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/07/2016 08:52<br>IP Address: 152.250.243.195<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995518923
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 25611904807
+                )
+
+        )
+
+    [customfields2] => 11995518923
+    [customfields3] => 25611904807
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2150
+    [SoftDescriptor] => 2150
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - pesqueiroaruja.com.br
+                            [Description] => Site Básico - pesqueiroaruja.com.br
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Vinicius Zabotto
+            [Email] => adm@pesqueiroaruja.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2150
+    [softDescriptor] => 2150
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - pesqueiroaruja.com.br
+                            [description] => Site Básico - pesqueiroaruja.com.br
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Vinicius Zabotto
+            [email] => adm@pesqueiroaruja.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/33d6f16d-bebc-4508-9589-d11e4d5340a1
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+05/07/2016 8:44:53
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2150
+    [amount] => 64900
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 02bd25d46e8742e29c64b3120f27e058
+    [created_date] => 05/07/2016 10:53:42
+    [customer_name] => Vinicius Zabotto
+    [customer_phone] => 11995518923
+    [customer_identity] => 25611904807
+    [customer_email] => adm@pesqueiroaruja.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 444054******5067
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776200000000CA
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+05/07/2016 8:45:53
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->213 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2150
+    [amount] => 64900
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 02bd25d46e8742e29c64b3120f27e058
+    [created_date] => 05/07/2016 10:53:42
+    [customer_name] => Vinicius Zabotto
+    [customer_phone] => 11995518923
+    [customer_identity] => 25611904807
+    [customer_email] => adm@pesqueiroaruja.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 444054******5067
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776200000000CA
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+05/07/2016 9:05:02
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 02bd25d46e8742e29c64b3120f27e058
+    [amount] => 64900
+    [order_number] => 2150
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+05/07/2016 9:05:02
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 02bd25d46e8742e29c64b3120f27e058
+    [amount] => 64900
+    [order_number] => 2150
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

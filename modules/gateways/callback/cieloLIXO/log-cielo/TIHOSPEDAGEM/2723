@@ -1,0 +1,627 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2723
+    [id] => 2723
+    [1] => 109
+    [userid] => 109
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-02
+    [date] => 2016-12-02
+    [4] => 2016-12-13
+    [duedate] => 2016-12-13
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 687.25
+    [subtotal] => 687.25
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 687.25
+    [total] => 687.25
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 109
+    [id] => 109
+    [uuid] => 79e07457-5a77-4880-93c3-104468b5dea6
+    [firstname] => Daniela
+    [lastname] => Trindade Reis
+    [fullname] => Daniela Trindade Reis
+    [companyname] => Klipps - Comunicação e Marketing
+    [email] => daniela@klipps.com.br
+    [address1] => 
+    [address2] => 
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => 6dfb858e32c3157220c3fee8a5045208:NJf!k
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => Cobrar segunda parcela borvultex !!!
+
+Notas 8%
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/12/2016 05:16<br>IP Address: 189.101.10.167<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 3191066743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 35.695.796-97
+                )
+
+        )
+
+    [customfields2] => 3191066743
+    [customfields3] => 35.695.796-97
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2723
+    [SoftDescriptor] => 2723
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - Léo Fagundes - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 2/4
+                            [UnitPrice] => 16225
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - República Verdes Mares - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 2/3
+                            [UnitPrice] => 30000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações do Site IPEVE enviadas pelo WeTransfer em 7/11/2016 - Parcela 2/2
+                            [Description] => Desenvolvimento Por Hora - Alterações do Site IPEVE enviadas pelo WeTransfer em 7/11/2016 - Parcela 2/2
+                            [UnitPrice] => 22500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002723
+            [FullName] => Daniela Trindade Reis
+            [Email] => daniela@klipps.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2723
+    [softDescriptor] => 2723
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - Léo Fagundes - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 2/4
+                            [unitPrice] => 16225
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - República Verdes Mares - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 2/3
+                            [unitPrice] => 30000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações do Site IPEVE enviadas pelo WeTransfer em 7/11/2016 - Parcela 2/2
+                            [description] => Desenvolvimento Por Hora - Alterações do Site IPEVE enviadas pelo WeTransfer em 7/11/2016 - Parcela 2/2
+                            [unitPrice] => 22500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002723
+            [fullName] => Daniela Trindade Reis
+            [email] => daniela@klipps.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/f74a77a4-bae5-4637-8dd7-933ce8b4fe34
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2723
+    [id] => 2723
+    [1] => 109
+    [userid] => 109
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-02
+    [date] => 2016-12-02
+    [4] => 2016-12-13
+    [duedate] => 2016-12-13
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 687.25
+    [subtotal] => 687.25
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 687.25
+    [total] => 687.25
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 109
+    [id] => 109
+    [uuid] => 79e07457-5a77-4880-93c3-104468b5dea6
+    [firstname] => Daniela
+    [lastname] => Trindade Reis
+    [fullname] => Daniela Trindade Reis
+    [companyname] => Klipps - Comunicação e Marketing
+    [email] => daniela@klipps.com.br
+    [address1] => 
+    [address2] => 
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => 6dfb858e32c3157220c3fee8a5045208:NJf!k
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => Cobrar segunda parcela borvultex !!!
+
+Notas 8%
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/12/2016 05:19<br>IP Address: 189.101.10.167<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 3191066743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 35.695.796-97
+                )
+
+        )
+
+    [customfields2] => 3191066743
+    [customfields3] => 35.695.796-97
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2723
+    [SoftDescriptor] => 2723
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - Léo Fagundes - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 2/4
+                            [UnitPrice] => 16225
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - República Verdes Mares - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 2/3
+                            [UnitPrice] => 30000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações do Site IPEVE enviadas pelo WeTransfer em 7/11/2016 - Parcela 2/2
+                            [Description] => Desenvolvimento Por Hora - Alterações do Site IPEVE enviadas pelo WeTransfer em 7/11/2016 - Parcela 2/2
+                            [UnitPrice] => 22500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002723
+            [FullName] => Daniela Trindade Reis
+            [Email] => daniela@klipps.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2723
+    [softDescriptor] => 2723
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - Léo Fagundes - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 2/4
+                            [unitPrice] => 16225
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado. (*Obrigatório a contratação da hospedagem) - República Verdes Mares - Conforme e-mail de 7 de novembro de 2016 14:26 - Parcela 2/3
+                            [unitPrice] => 30000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações do Site IPEVE enviadas pelo WeTransfer em 7/11/2016 - Parcela 2/2
+                            [description] => Desenvolvimento Por Hora - Alterações do Site IPEVE enviadas pelo WeTransfer em 7/11/2016 - Parcela 2/2
+                            [unitPrice] => 22500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002723
+            [fullName] => Daniela Trindade Reis
+            [email] => daniela@klipps.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/7cf4f80c-71ca-4ea1-9066-243efd792d9a
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+13/12/2016 5:45:21
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2723
+    [amount] => 68725
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => e83170af452c4a4d967e3c7bdbc6f7e0
+    [created_date] => 13/12/2016 09:21:43
+    [customer_name] => Daniela Reis
+    [customer_phone] => 31991066743
+    [customer_identity] => 03569579697
+    [customer_email] => daniela@klipps.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 515590******2029
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777625OO2FBPTDB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/12/2016 5:46:21
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->109 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2723
+    [amount] => 68725
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => e83170af452c4a4d967e3c7bdbc6f7e0
+    [created_date] => 13/12/2016 09:21:43
+    [customer_name] => Daniela Reis
+    [customer_phone] => 31991066743
+    [customer_identity] => 03569579697
+    [customer_email] => daniela@klipps.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 515590******2029
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777625OO2FBPTDB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/12/2016 5:53:31
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e83170af452c4a4d967e3c7bdbc6f7e0
+    [amount] => 68725
+    [order_number] => 2723
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+13/12/2016 5:53:31
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e83170af452c4a4d967e3c7bdbc6f7e0
+    [amount] => 68725
+    [order_number] => 2723
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

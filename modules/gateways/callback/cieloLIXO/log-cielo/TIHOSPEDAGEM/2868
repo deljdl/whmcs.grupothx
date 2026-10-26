@@ -1,0 +1,1070 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2868
+    [id] => 2868
+    [1] => 218
+    [userid] => 218
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-16
+    [date] => 2017-01-16
+    [4] => 2017-01-22
+    [duedate] => 2017-01-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 218
+    [id] => 218
+    [uuid] => b2370119-b405-4b57-97f6-6e6a2043e29a
+    [firstname] => Natalie 
+    [lastname] => Machado
+    [fullname] => Natalie  Machado
+    [companyname] => 
+    [email] => nattykammers@gmail.com
+    [address1] => Rua Maria Martins,35
+    [address2] => Centro
+    [city] => Minas Novas
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 08597120
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 33991048052
+    [password] => $2y$10$X.DdeRBYysQUqoamolRaFOBxUVtrLmpj3ysbWS6ca.PotRqo1jAh2
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.33991048052
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 23/01/2017 19:06<br>IP Address: 177.99.119.156<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 33991048052
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 33991048052
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2868
+    [SoftDescriptor] => 2868
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - nataliekammers.com (22/01/2017 - 21/02/2017)
+                            [Description] => TIH - Master - nataliekammers.com (22/01/2017 - 21/02/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002868
+            [FullName] => Natalie  Machado
+            [Email] => nattykammers@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2868
+    [softDescriptor] => 2868
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - nataliekammers.com (22/01/2017 - 21/02/2017)
+                            [description] => TIH - Master - nataliekammers.com (22/01/2017 - 21/02/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002868
+            [fullName] => Natalie  Machado
+            [email] => nattykammers@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/1bbe71bc-2dc8-42dc-9ac6-dab5ec933459
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2868
+    [id] => 2868
+    [1] => 218
+    [userid] => 218
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-16
+    [date] => 2017-01-16
+    [4] => 2017-01-22
+    [duedate] => 2017-01-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 218
+    [id] => 218
+    [uuid] => b2370119-b405-4b57-97f6-6e6a2043e29a
+    [firstname] => Natalie 
+    [lastname] => Machado
+    [fullname] => Natalie  Machado
+    [companyname] => 
+    [email] => nattykammers@gmail.com
+    [address1] => Rua Maria Martins,35
+    [address2] => Centro
+    [city] => Minas Novas
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 08597120
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 33991048052
+    [password] => $2y$10$X.DdeRBYysQUqoamolRaFOBxUVtrLmpj3ysbWS6ca.PotRqo1jAh2
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.33991048052
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 23/01/2017 19:07<br>IP Address: 177.99.119.156<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 33991048052
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 33991048052
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2868
+    [SoftDescriptor] => 2868
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - nataliekammers.com (22/01/2017 - 21/02/2017)
+                            [Description] => TIH - Master - nataliekammers.com (22/01/2017 - 21/02/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002868
+            [FullName] => Natalie  Machado
+            [Email] => nattykammers@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2868
+    [softDescriptor] => 2868
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - nataliekammers.com (22/01/2017 - 21/02/2017)
+                            [description] => TIH - Master - nataliekammers.com (22/01/2017 - 21/02/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002868
+            [fullName] => Natalie  Machado
+            [email] => nattykammers@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/edab77d0-a048-4a98-ba2b-0af065450fad
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2868
+    [id] => 2868
+    [1] => 218
+    [userid] => 218
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-16
+    [date] => 2017-01-16
+    [4] => 2017-01-22
+    [duedate] => 2017-01-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 218
+    [id] => 218
+    [uuid] => b2370119-b405-4b57-97f6-6e6a2043e29a
+    [firstname] => Natalie 
+    [lastname] => Machado
+    [fullname] => Natalie  Machado
+    [companyname] => 
+    [email] => nattykammers@gmail.com
+    [address1] => Rua Maria Martins,35
+    [address2] => Centro
+    [city] => Minas Novas
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 08597120
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 33991048052
+    [password] => $2y$10$X.DdeRBYysQUqoamolRaFOBxUVtrLmpj3ysbWS6ca.PotRqo1jAh2
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.33991048052
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 23/01/2017 19:13<br>IP Address: 177.99.119.156<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 33991048052
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 33991048052
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2868
+    [SoftDescriptor] => 2868
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - nataliekammers.com (22/01/2017 - 21/02/2017)
+                            [Description] => TIH - Master - nataliekammers.com (22/01/2017 - 21/02/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002868
+            [FullName] => Natalie  Machado
+            [Email] => nattykammers@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2868
+    [softDescriptor] => 2868
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - nataliekammers.com (22/01/2017 - 21/02/2017)
+                            [description] => TIH - Master - nataliekammers.com (22/01/2017 - 21/02/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002868
+            [fullName] => Natalie  Machado
+            [email] => nattykammers@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/ee8ef4d1-9df7-4b5d-9dcb-f0e6bd7e01e0
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2868
+    [id] => 2868
+    [1] => 218
+    [userid] => 218
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-16
+    [date] => 2017-01-16
+    [4] => 2017-01-22
+    [duedate] => 2017-01-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 218
+    [id] => 218
+    [uuid] => b2370119-b405-4b57-97f6-6e6a2043e29a
+    [firstname] => Natalie 
+    [lastname] => Machado
+    [fullname] => Natalie  Machado
+    [companyname] => 
+    [email] => nattykammers@gmail.com
+    [address1] => Rua Maria Martins,35
+    [address2] => Centro
+    [city] => Minas Novas
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 08597120
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 33991048052
+    [password] => $2y$10$X.DdeRBYysQUqoamolRaFOBxUVtrLmpj3ysbWS6ca.PotRqo1jAh2
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.33991048052
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 26/01/2017 14:04<br>IP Address: 201.9.244.72<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 33991048052
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 33991048052
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2868
+    [SoftDescriptor] => 2868
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - nataliekammers.com (22/01/2017 - 21/02/2017)
+                            [Description] => TIH - Master - nataliekammers.com (22/01/2017 - 21/02/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 90
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 4 dias de atraso
+                            [Description] => Juros por 4 dias de atraso
+                            [UnitPrice] => 37
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Discount] => stdClass Object
+        (
+            [Type] => 1
+            [Value] => 10
+            [Amount] => 10
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002868
+            [FullName] => Natalie  Machado
+            [Email] => nattykammers@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2868
+    [softDescriptor] => 2868
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - nataliekammers.com (22/01/2017 - 21/02/2017)
+                            [description] => TIH - Master - nataliekammers.com (22/01/2017 - 21/02/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 90
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 4 dias de atraso
+                            [description] => Juros por 4 dias de atraso
+                            [unitPrice] => 37
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002868
+            [fullName] => Natalie  Machado
+            [email] => nattykammers@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/81b1962a-b898-4798-a4de-0de847fcdca0
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+26/01/2017 14:24:11
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2868
+    [amount] => 3124
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => d8d096367e964358b95a22cf0763be05
+    [created_date] => 26/01/2017 14:11:19
+    [customer_name] => Natalie Machado
+    [customer_phone] => 33991048052
+    [customer_identity] => 07513066655
+    [customer_email] => nattykammers@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 5
+    [payment_maskedcreditcard] => 506775******2306
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626CFG1N362B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/01/2017 14:29:11
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->218 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2868
+    [amount] => 3124
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => d8d096367e964358b95a22cf0763be05
+    [created_date] => 26/01/2017 14:11:19
+    [customer_name] => Natalie Machado
+    [customer_phone] => 33991048052
+    [customer_identity] => 07513066655
+    [customer_email] => nattykammers@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 5
+    [payment_maskedcreditcard] => 506775******2306
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626CFG1N362B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/01/2017 14:37:20
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => d8d096367e964358b95a22cf0763be05
+    [amount] => 3124
+    [order_number] => 2868
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/01/2017 14:37:20
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => d8d096367e964358b95a22cf0763be05
+    [amount] => 3124
+    [order_number] => 2868
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

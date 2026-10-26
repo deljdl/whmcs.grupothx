@@ -1,0 +1,1606 @@
+
+Dados Invoice
+<pre>Array
+(
+    [id] => 6603
+    [0] => 6603
+    [userid] => 379
+    [1] => 379
+    [invoicenum] => 
+    [2] => 
+    [date] => 2019-10-03
+    [3] => 2019-10-03
+    [duedate] => 2019-10-04
+    [4] => 2019-10-04
+    [datepaid] => 0000-00-00 00:00:00
+    [5] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [subtotal] => 150.00
+    [7] => 150.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 0.00
+    [total] => 150.00
+    [11] => 150.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => 0.00
+    [status] => Unpaid
+    [14] => Unpaid
+    [paymentmethod] => cielo
+    [15] => cielo
+    [paymethodid] => 
+    [16] => 
+    [notes] => 
+    [17] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 379
+    [id] => 379
+    [uuid] => 0e102ebe-2c43-4311-86cd-1f7ca41690b4
+    [firstname] => Rodrigo
+    [lastname] => Galhardo Augusto
+    [companyname] => NUMES
+    [email] => rodrigo_galhardo@hotmail.com
+    [address1] => Rua Paulo Andrighetti, 1565
+    [address2] => Apto 34 A
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03022-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11993769352
+    [tax_id] => 
+    [password] => $2y$10$pUsGu0W7Hl1g8FWTs4ZSlO5hlMe7VF41brwsUV22t2lfGF/VyZ6WO
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                    [passwordResetKeyExpiryDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                    [2] => passwordResetKeyExpiryDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                    [2] => groupName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 379
+                    [uuid] => 0e102ebe-2c43-4311-86cd-1f7ca41690b4
+                    [firstname] => Rodrigo
+                    [lastname] => Galhardo Augusto
+                    [companyname] => NUMES
+                    [email] => rodrigo_galhardo@hotmail.com
+                    [address1] => Rua Paulo Andrighetti, 1565
+                    [address2] => Apto 34 A
+                    [city] => São Paulo
+                    [state] => SP
+                    [postcode] => 03022-000
+                    [country] => BR
+                    [phonenumber] => +55.11 99376-9352
+                    [tax_id] => 
+                    [password] => $2y$10$pUsGu0W7Hl1g8FWTs4ZSlO5hlMe7VF41brwsUV22t2lfGF/VyZ6WO
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2019-09-30
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => 1VNLNOzWXspG6gYUv9gl/ueCWqk=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-03 17:41:27
+                    [ip] => 187.22.184.159
+                    [host] => bb16b89f.virtua.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 1
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 379
+                    [uuid] => 0e102ebe-2c43-4311-86cd-1f7ca41690b4
+                    [firstname] => Rodrigo
+                    [lastname] => Galhardo Augusto
+                    [companyname] => NUMES
+                    [email] => rodrigo_galhardo@hotmail.com
+                    [address1] => Rua Paulo Andrighetti, 1565
+                    [address2] => Apto 34 A
+                    [city] => São Paulo
+                    [state] => SP
+                    [postcode] => 03022-000
+                    [country] => BR
+                    [phonenumber] => +55.11 99376-9352
+                    [tax_id] => 
+                    [password] => $2y$10$pUsGu0W7Hl1g8FWTs4ZSlO5hlMe7VF41brwsUV22t2lfGF/VyZ6WO
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2019-09-30
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => 1VNLNOzWXspG6gYUv9gl/ueCWqk=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-03 17:41:27
+                    [ip] => 187.22.184.159
+                    [host] => bb16b89f.virtua.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 1
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [fullname] => Rodrigo Galhardo Augusto
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11993769352
+    [telephoneNumber] => +55.11993769352
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 1
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 
+    [lastlogin] => Date: 03/10/2019 17:41<br>IP Address: 187.22.184.159<br>Host: bb16b89f.virtua.com.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 324.396.498-99
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 324.396.498-99
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 6603
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Logo Criacao - numes.com.br
+                            [Description] => Logo Criacao - numes.com.br
+                            [UnitPrice] => 15000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Rodrigo Galhardo Augusto
+            [Email] => rodrigo_galhardo@hotmail.com
+            [Identity] => 32439649899
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [id] => 6603
+    [0] => 6603
+    [userid] => 379
+    [1] => 379
+    [invoicenum] => 
+    [2] => 
+    [date] => 2019-10-03
+    [3] => 2019-10-03
+    [duedate] => 2019-10-04
+    [4] => 2019-10-04
+    [datepaid] => 0000-00-00 00:00:00
+    [5] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [subtotal] => 150.00
+    [7] => 150.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 0.00
+    [total] => 150.00
+    [11] => 150.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => 0.00
+    [status] => Unpaid
+    [14] => Unpaid
+    [paymentmethod] => cielo
+    [15] => cielo
+    [paymethodid] => 
+    [16] => 
+    [notes] => 
+    [17] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 379
+    [id] => 379
+    [uuid] => 0e102ebe-2c43-4311-86cd-1f7ca41690b4
+    [firstname] => Rodrigo
+    [lastname] => Galhardo Augusto
+    [companyname] => NUMES
+    [email] => rodrigo_galhardo@hotmail.com
+    [address1] => Rua Paulo Andrighetti, 1565
+    [address2] => Apto 34 A
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03022-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11993769352
+    [tax_id] => 
+    [password] => $2y$10$pUsGu0W7Hl1g8FWTs4ZSlO5hlMe7VF41brwsUV22t2lfGF/VyZ6WO
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                    [passwordResetKeyExpiryDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                    [2] => passwordResetKeyExpiryDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                    [2] => groupName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 379
+                    [uuid] => 0e102ebe-2c43-4311-86cd-1f7ca41690b4
+                    [firstname] => Rodrigo
+                    [lastname] => Galhardo Augusto
+                    [companyname] => NUMES
+                    [email] => rodrigo_galhardo@hotmail.com
+                    [address1] => Rua Paulo Andrighetti, 1565
+                    [address2] => Apto 34 A
+                    [city] => São Paulo
+                    [state] => SP
+                    [postcode] => 03022-000
+                    [country] => BR
+                    [phonenumber] => +55.11 99376-9352
+                    [tax_id] => 
+                    [password] => $2y$10$pUsGu0W7Hl1g8FWTs4ZSlO5hlMe7VF41brwsUV22t2lfGF/VyZ6WO
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2019-09-30
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => 1VNLNOzWXspG6gYUv9gl/ueCWqk=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-03 17:42:12
+                    [ip] => 187.22.184.159
+                    [host] => bb16b89f.virtua.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 1
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 379
+                    [uuid] => 0e102ebe-2c43-4311-86cd-1f7ca41690b4
+                    [firstname] => Rodrigo
+                    [lastname] => Galhardo Augusto
+                    [companyname] => NUMES
+                    [email] => rodrigo_galhardo@hotmail.com
+                    [address1] => Rua Paulo Andrighetti, 1565
+                    [address2] => Apto 34 A
+                    [city] => São Paulo
+                    [state] => SP
+                    [postcode] => 03022-000
+                    [country] => BR
+                    [phonenumber] => +55.11 99376-9352
+                    [tax_id] => 
+                    [password] => $2y$10$pUsGu0W7Hl1g8FWTs4ZSlO5hlMe7VF41brwsUV22t2lfGF/VyZ6WO
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2019-09-30
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => 1VNLNOzWXspG6gYUv9gl/ueCWqk=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-03 17:42:12
+                    [ip] => 187.22.184.159
+                    [host] => bb16b89f.virtua.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 1
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [fullname] => Rodrigo Galhardo Augusto
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11993769352
+    [telephoneNumber] => +55.11993769352
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 1
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 
+    [lastlogin] => Date: 03/10/2019 17:42<br>IP Address: 187.22.184.159<br>Host: bb16b89f.virtua.com.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 324.396.498-99
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 324.396.498-99
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 6603
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Logo Criacao - numes.com.br
+                            [Description] => Logo Criacao - numes.com.br
+                            [UnitPrice] => 15000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Rodrigo Galhardo Augusto
+            [Email] => rodrigo_galhardo@hotmail.com
+            [Identity] => 32439649899
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 6603
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Logo Criacao - numes.com.br
+                            [description] => Logo Criacao - numes.com.br
+                            [unitPrice] => 15000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 32439649899
+            [fullName] => Rodrigo Galhardo Augusto
+            [email] => rodrigo_galhardo@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/13a57fa1-fb2d-4d12-b335-aacb5a0a6a50
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [id] => 6603
+    [0] => 6603
+    [userid] => 379
+    [1] => 379
+    [invoicenum] => 
+    [2] => 
+    [date] => 2019-10-03
+    [3] => 2019-10-03
+    [duedate] => 2019-10-04
+    [4] => 2019-10-04
+    [datepaid] => 0000-00-00 00:00:00
+    [5] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [subtotal] => 150.00
+    [7] => 150.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 0.00
+    [total] => 150.00
+    [11] => 150.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => 0.00
+    [status] => Unpaid
+    [14] => Unpaid
+    [paymentmethod] => cielo
+    [15] => cielo
+    [paymethodid] => 
+    [16] => 
+    [notes] => 
+    [17] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 379
+    [id] => 379
+    [uuid] => 0e102ebe-2c43-4311-86cd-1f7ca41690b4
+    [firstname] => Rodrigo
+    [lastname] => Galhardo Augusto
+    [companyname] => NUMES
+    [email] => rodrigo_galhardo@hotmail.com
+    [address1] => Rua Paulo Andrighetti, 1565
+    [address2] => Apto 34 A
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03022-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11993769352
+    [tax_id] => 
+    [password] => $2y$10$pUsGu0W7Hl1g8FWTs4ZSlO5hlMe7VF41brwsUV22t2lfGF/VyZ6WO
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                    [passwordResetKeyExpiryDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                    [2] => passwordResetKeyExpiryDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                    [2] => groupName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 379
+                    [uuid] => 0e102ebe-2c43-4311-86cd-1f7ca41690b4
+                    [firstname] => Rodrigo
+                    [lastname] => Galhardo Augusto
+                    [companyname] => NUMES
+                    [email] => rodrigo_galhardo@hotmail.com
+                    [address1] => Rua Paulo Andrighetti, 1565
+                    [address2] => Apto 34 A
+                    [city] => São Paulo
+                    [state] => SP
+                    [postcode] => 03022-000
+                    [country] => BR
+                    [phonenumber] => +55.11 99376-9352
+                    [tax_id] => 
+                    [password] => $2y$10$pUsGu0W7Hl1g8FWTs4ZSlO5hlMe7VF41brwsUV22t2lfGF/VyZ6WO
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2019-09-30
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => 1VNLNOzWXspG6gYUv9gl/ueCWqk=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-03 17:45:07
+                    [ip] => 181.44.65.157
+                    [host] => cpe-181-44-65-157.telecentro-reversos.com.ar
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 1
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 379
+                    [uuid] => 0e102ebe-2c43-4311-86cd-1f7ca41690b4
+                    [firstname] => Rodrigo
+                    [lastname] => Galhardo Augusto
+                    [companyname] => NUMES
+                    [email] => rodrigo_galhardo@hotmail.com
+                    [address1] => Rua Paulo Andrighetti, 1565
+                    [address2] => Apto 34 A
+                    [city] => São Paulo
+                    [state] => SP
+                    [postcode] => 03022-000
+                    [country] => BR
+                    [phonenumber] => +55.11 99376-9352
+                    [tax_id] => 
+                    [password] => $2y$10$pUsGu0W7Hl1g8FWTs4ZSlO5hlMe7VF41brwsUV22t2lfGF/VyZ6WO
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2019-09-30
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => 1VNLNOzWXspG6gYUv9gl/ueCWqk=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-03 17:45:07
+                    [ip] => 181.44.65.157
+                    [host] => cpe-181-44-65-157.telecentro-reversos.com.ar
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 1
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [fullname] => Rodrigo Galhardo Augusto
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11993769352
+    [telephoneNumber] => +55.11993769352
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 1
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 
+    [lastlogin] => Date: 03/10/2019 17:45<br>IP Address: 181.44.65.157<br>Host: cpe-181-44-65-157.telecentro-reversos.com.ar
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 324.396.498-99
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 324.396.498-99
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 6603
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Logo Criacao - numes.com.br
+                            [Description] => Logo Criacao - numes.com.br
+                            [UnitPrice] => 15000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Rodrigo Galhardo Augusto
+            [Email] => rodrigo_galhardo@hotmail.com
+            [Identity] => 32439649899
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 6603
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Logo Criacao - numes.com.br
+                            [description] => Logo Criacao - numes.com.br
+                            [unitPrice] => 15000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 32439649899
+            [fullName] => Rodrigo Galhardo Augusto
+            [email] => rodrigo_galhardo@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/44489842-ac06-477c-b91f-4c7719c99847
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+03/10/2019 17:03:47
+INICIO_______________________________________________________________LOG:BEGIN:::03/10/2019 17:47<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 6603
+    [amount] => 15000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 8161b40aeaa84dbcb46aa7b957aa6ead
+    [created_date] => 03/10/2019 17:46:55
+    [customer_name] => Rodrigo Augusto
+    [customer_phone] => 11993769352
+    [customer_identity] => 32439649899
+    [customer_email] => rodrigo_galhardo@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 459080******8221
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628DUV4KL30D
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+03/10/2019 17:03:47
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->6603 | Result->success | ValorPago ->150.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 6603
+    [amount] => 15000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 8161b40aeaa84dbcb46aa7b957aa6ead
+    [created_date] => 03/10/2019 17:46:55
+    [customer_name] => Rodrigo Augusto
+    [customer_phone] => 11993769352
+    [customer_identity] => 32439649899
+    [customer_email] => rodrigo_galhardo@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 459080******8221
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628DUV4KL30D
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+03/10/2019 17:44:51
+INICIO_______________________________________________________________LOG:BEGIN:::03/10/2019 17:51<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 8161b40aeaa84dbcb46aa7b957aa6ead
+    [amount] => 15000
+    [order_number] => 6603
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+03/10/2019 17:44:51
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 8161b40aeaa84dbcb46aa7b957aa6ead
+    [amount] => 15000
+    [order_number] => 6603
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

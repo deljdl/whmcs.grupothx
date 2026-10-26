@@ -1,0 +1,108 @@
+/*/////////////////////////////////////////////////////////////////////////////////////////
+// Modulo desenvolvido pela MMHospedagem /////////////////////////////////////////////////
+// A venda e copia deste modulo sem nossa autorização e totalmente proibida! /////////////
+// Versão: 1.0.0 BETA ////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////*/
+
+.caixa-whatsapp-passos {
+	width: 369px;
+	float: left;
+	border: 1px solid #e6e8ec;
+	padding: 10px 10px 0px 10px;
+	margin-right: 10px;
+	border-radius: 5px;
+    overflow: hidden;
+}
+.caixa-whatsapp-passos .titulo {
+	background-color: #0C70DE;
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+}
+.caixa-whatsapp-passos .titulo li {
+	font-family: 'Open Sans';
+	font-size: 16px;
+	color: #FFF;
+	list-style: none;
+	text-transform: uppercase;
+	padding-left: 10px;
+}
+.caixa-whatsapp-passos .texto {
+	font-family: 'Open Sans';
+	font-size: 13px;
+	color: #999;
+	list-style: none;
+	padding: 20px 5px;
+	line-height: 21px;
+}
+.caixa-whatsapp-passos .imagem_passo_um {
+	width: 269px;
+	height: 177px;
+	background-image: url('../imagens/Passo1.png');
+	background-repeat: no-repeat;
+	margin: auto;
+}
+.caixa-whatsapp-passos .imagem_passo_um .numero_whatsapp {
+	font-family: 'Open Sans';
+    font-size: 10px;
+    margin: 3px 6px;
+    width: 111px;
+    padding-top: 142px;
+    text-align: center;
+    color: #999;
+}
+
+.caixa-whatsapp-passos .imagem_passo_dois {
+	width: 123px;
+	height: 177px;
+	background-image: url('../imagens/Passo2.png');
+	background-repeat: no-repeat;
+	margin: auto;
+}
+
+.caixa-whatsapp-passos .inputs {
+
+}
+
+.caixa-whatsapp-passos .inputs input[type=text] {
+	font-family: 'Open Sans';
+    font-style: normal;
+    text-decoration: none;
+    color: #999;
+    font-size: 22px;
+    text-align: center;
+    width: 50%;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid #e6e8ec;
+    padding: 9px;
+    margin-bottom: 10px;
+    float: left;
+    border-right: none;
+}
+.caixa-whatsapp-passos .inputs button {
+	background-color: #1FC063;
+    border: none;
+    width: 50%;
+    border-radius: 5px;
+    padding: 10px;
+    color: #FFF;
+    margin-bottom: 11px;
+}
+.caixa-whatsapp-passos .inputs button:hover {
+	background-color: #1BA756;
+}
+
+.radios-right {
+	border-radius: 0px 5px 5px 0px !important;
+    float: left;
+}
+.radios-left {
+	border-radius: 5px!important;
+    width: 100% !important;
+    color: #393d45 !important;
+    background-color: #fff !important;
+    border: 1px solid #dcdee2 !important;
+}
+.radios-left:hover {
+	background-color: #F6F7F8 !important;
+}

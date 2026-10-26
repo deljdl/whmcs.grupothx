@@ -1,0 +1,246 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3096
+    [id] => 3096
+    [1] => 239
+    [userid] => 239
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-17
+    [date] => 2017-03-17
+    [4] => 2017-03-24
+    [duedate] => 2017-03-24
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 239
+    [id] => 239
+    [uuid] => ae22ba0c-307f-4057-8405-fc6c6c80451f
+    [firstname] => Alcides
+    [lastname] => Dias dos Santos
+    [fullname] => Alcides Dias dos Santos
+    [companyname] => A D S CONSTRUCOES 
+    [email] => a.dias.santos1958@uol.com.br
+    [address1] => Rua Serra Acarai, 167
+    [address2] => Casa A
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08581-070
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11957673151
+    [password] => $2y$10$gDexAoc4bsTBthQD4aDfM.5GuiCMaArEJwuKjc88dBzyO4kPCfreC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11957673151
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/04/2017 07:50<br>IP Address: 201.26.189.66<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957673151
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 151.651.403-34
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11957673151
+    [customfields3] => 151.651.403-34
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3096
+    [id] => 3096
+    [1] => 239
+    [userid] => 239
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-03-17
+    [date] => 2017-03-17
+    [4] => 2017-03-24
+    [duedate] => 2017-03-24
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 239
+    [id] => 239
+    [uuid] => ae22ba0c-307f-4057-8405-fc6c6c80451f
+    [firstname] => Alcides
+    [lastname] => Dias dos Santos
+    [fullname] => Alcides Dias dos Santos
+    [companyname] => A D S CONSTRUCOES 
+    [email] => a.dias.santos1958@uol.com.br
+    [address1] => Rua Serra Acarai, 167
+    [address2] => Casa A
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08581-070
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11957673151
+    [password] => $2y$10$gDexAoc4bsTBthQD4aDfM.5GuiCMaArEJwuKjc88dBzyO4kPCfreC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11957673151
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 10/04/2017 08:47<br>IP Address: 187.10.201.127<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957673151
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 151.651.403-34
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11957673151
+    [customfields3] => 151.651.403-34
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

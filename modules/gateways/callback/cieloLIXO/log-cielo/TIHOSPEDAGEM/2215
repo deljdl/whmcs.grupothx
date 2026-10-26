@@ -1,0 +1,621 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2215
+    [id] => 2215
+    [1] => 4
+    [userid] => 4
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-07-25
+    [date] => 2016-07-25
+    [4] => 2016-08-01
+    [duedate] => 2016-08-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 384.64
+    [subtotal] => 384.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 384.64
+    [total] => 384.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 4
+    [id] => 4
+    [uuid] => e08aadfd-b411-45b2-96e9-772bf034877a
+    [firstname] => Marcio
+    [lastname] => Chagas
+    [fullname] => Marcio Chagas
+    [companyname] => Buffet AbcKids
+    [email] => contato@abckidsbuffet.com.br
+    [address1] => Av. 31 de Março, 2249
+    [address2] => Vila Flórida
+    [city] => São Bernardo do Campo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09660-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 3424-8710  (11) 4361-6328  (11) 3445-6700
+    [password] => 7e14413655b0af14a0d03c73d265263c:z(uMp
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113424871011436163281134456700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => boleto
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/08/2016 07:46<br>IP Address: 179.212.184.235<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11956551782
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 008.961.479/0001-34
+                )
+
+        )
+
+    [customfields2] => 11956551782
+    [customfields3] => 008.961.479/0001-34
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2215
+    [SoftDescriptor] => 2215
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - buffetabckids.com.br (01/08/2016 - 31/07/2017)
+                            [Description] => TIH - Master - buffetabckids.com.br (01/08/2016 - 31/07/2017)
+                            [UnitPrice] => 35964
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Serviços Esporádicos - Alteração do Submenu do Site
+                            [Description] => Serviços Esporádicos - Alteração do Submenu do Site
+                            [UnitPrice] => 2500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Marcio Chagas
+            [Email] => contato@abckidsbuffet.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2215
+    [softDescriptor] => 2215
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - buffetabckids.com.br (01/08/2016 - 31/07/2017)
+                            [description] => TIH - Master - buffetabckids.com.br (01/08/2016 - 31/07/2017)
+                            [unitPrice] => 35964
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Serviços Esporádicos - Alteração do Submenu do Site
+                            [description] => Serviços Esporádicos - Alteração do Submenu do Site
+                            [unitPrice] => 2500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Marcio Chagas
+            [email] => contato@abckidsbuffet.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/2b2ae269-e132-4e7c-a8c1-2ca6e0ae5969
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2215
+    [id] => 2215
+    [1] => 4
+    [userid] => 4
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-07-25
+    [date] => 2016-07-25
+    [4] => 2016-08-01
+    [duedate] => 2016-08-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 384.64
+    [subtotal] => 384.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 384.64
+    [total] => 384.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 4
+    [id] => 4
+    [uuid] => e08aadfd-b411-45b2-96e9-772bf034877a
+    [firstname] => Marcio
+    [lastname] => Chagas
+    [fullname] => Marcio Chagas
+    [companyname] => Buffet AbcKids
+    [email] => contato@abckidsbuffet.com.br
+    [address1] => Av. 31 de Março, 2249
+    [address2] => Vila Flórida
+    [city] => São Bernardo do Campo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09660-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 3424-8710  (11) 4361-6328  (11) 3445-6700
+    [password] => 7e14413655b0af14a0d03c73d265263c:z(uMp
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113424871011436163281134456700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => boleto
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 11/08/2016 09:10<br>IP Address: 179.212.184.235<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11956551782
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 008.961.479/0001-34
+                )
+
+        )
+
+    [customfields2] => 11956551782
+    [customfields3] => 008.961.479/0001-34
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2215
+    [SoftDescriptor] => 2215
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - buffetabckids.com.br (01/08/2016 - 31/08/2017)
+                            [Description] => TIH - Master - buffetabckids.com.br (01/08/2016 - 31/08/2017)
+                            [UnitPrice] => 35964
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Serviços Esporádicos - Alteração do Submenu do Site
+                            [Description] => Serviços Esporádicos - Alteração do Submenu do Site
+                            [UnitPrice] => 2500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Marcio Chagas
+            [Email] => contato@abckidsbuffet.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2215
+    [softDescriptor] => 2215
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - buffetabckids.com.br (01/08/2016 - 31/08/2017)
+                            [description] => TIH - Master - buffetabckids.com.br (01/08/2016 - 31/08/2017)
+                            [unitPrice] => 35964
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Serviços Esporádicos - Alteração do Submenu do Site
+                            [description] => Serviços Esporádicos - Alteração do Submenu do Site
+                            [unitPrice] => 2500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Marcio Chagas
+            [email] => contato@abckidsbuffet.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/3e547087-7f5d-4d8d-af3f-e5637f25dd0b
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+11/08/2016 9:26:17
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2215
+    [amount] => 38764
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 84f9ec7d2e034f9eab0febece93b6dfb
+    [created_date] => 11/08/2016 11:17:24
+    [customer_name] => Marcio Chagas
+    [customer_phone] => 11981276199
+    [customer_identity] => 08236235807
+    [customer_email] => marciooc@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 553645******5018
+    [payment_installments] => 6
+    [payment_status] => 2
+    [tid] => 107607776200000001CA
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+11/08/2016 9:44:17
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->4 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2215
+    [amount] => 38764
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 84f9ec7d2e034f9eab0febece93b6dfb
+    [created_date] => 11/08/2016 11:17:24
+    [customer_name] => Marcio Chagas
+    [customer_phone] => 11981276199
+    [customer_identity] => 08236235807
+    [customer_email] => marciooc@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 553645******5018
+    [payment_installments] => 6
+    [payment_status] => 2
+    [tid] => 107607776200000001CA
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+11/08/2016 9:22:22
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 84f9ec7d2e034f9eab0febece93b6dfb
+    [amount] => 38764
+    [order_number] => 2215
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+11/08/2016 9:22:22
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 84f9ec7d2e034f9eab0febece93b6dfb
+    [amount] => 38764
+    [order_number] => 2215
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

@@ -1,0 +1,257 @@
+
+POST
+<pre>Array
+(
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT02NTE0JmZpPTEwNjUxNGRk7gIb/+7WDBchRhq2Wxsz9jQNyc0=
+    [__VIEWSTATEGENERATOR] => 6DEF07A5
+    [__EVENTVALIDATION] => /wEWBgLRk93nAwLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BcKlDgdc8xFolrt1ZyXvSMnG7ftm
+    [DC] => X72H55B218G210R3Z142L60F100V111D52Q51Z150P138M242U37G52E231D146X255X82I150G78T81V86O110D73Y107C60E152D233L48C216A115N5B22K40A
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00106514
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 6514
+    [fi] => 106514
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 6514
+    [fi] => 106514
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT02NTE0JmZpPTEwNjUxNGRk7gIb/+7WDBchRhq2Wxsz9jQNyc0=
+    [__VIEWSTATEGENERATOR] => 6DEF07A5
+    [__EVENTVALIDATION] => /wEWBgLRk93nAwLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BcKlDgdc8xFolrt1ZyXvSMnG7ftm
+    [DC] => X72H55B218G210R3Z142L60F100V111D52Q51Z150P138M242U37G52E231D146X255X82I150G78T81V86O110D73Y107C60E152D233L48C216A115N5B22K40A
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00106514
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+    [jv_visits_count_heIAoGOw2S] => 3
+    [WHMCSeWdrAiYR38h0] => 17d476af025032d1c7bc7e42e23129af
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [CONTENT_LENGTH] => 555
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [CONTEXT_DOCUMENT_ROOT] => /home/tihosped/public_html
+    [CONTEXT_PREFIX] => 
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_COOKIE] => jv_visits_count_heIAoGOw2S=3; WHMCSeWdrAiYR38h0=17d476af025032d1c7bc7e42e23129af
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_ORIGIN] => https://shopline.itau.com.br
+    [HTTP_REFERER] => https://shopline.itau.com.br/shopline/Volta.aspx?codemp=J0194961710001810000024294&idloja=34902&npedido=00106514
+    [HTTP_SAVE_DATA] => on
+    [HTTP_SEC_FETCH_MODE] => navigate
+    [HTTP_SEC_FETCH_SITE] => cross-site
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Linux; Android 8.1.0; Moto G (5S) Plus) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Mobile Safari/537.36
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=6514&fi=106514
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 189.110.165.160
+    [REMOTE_PORT] => 48838
+    [REQUEST_METHOD] => POST
+    [REQUEST_SCHEME] => https
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=6514&fi=106514
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SCRIPT_URI] => https://tihospedagem.com.br/modules/gateways/callback/itauReT.php
+    [SCRIPT_URL] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.4.41 (cPanel) OpenSSL/1.0.2s mod_bwlimited/1.4
+    [SSL_TLS_SNI] => tihospedagem.com.br
+    [TZ] => America/Sao_Paulo
+    [UNIQUE_ID] => XW5efe2efXXADS6fdpCDpgAAANg
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME_FLOAT] => 1567514237.67
+    [REQUEST_TIME] => 1567514237
+    [argv] => Array
+        (
+            [0] => i=6514&fi=106514
+        )
+
+    [argc] => 1
+)
+</pre>
+
+POST
+<pre>Array
+(
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 6514
+    [fi] => 656514
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 6514
+    [fi] => 656514
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [CONTEXT_DOCUMENT_ROOT] => /home/thxcom/public_html
+    [CONTEXT_PREFIX] => 
+    [DOCUMENT_ROOT] => /home/thxcom/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_COOKIE] => WHMCSeWdrAiYR38h0=s922f1f1ogrd7768dmq5fd5500
+    [HTTP_HOST] => grupothx.com
+    [HTTP_REFERER] => https://shopline.itau.com.br/shopline/Volta.aspx?codemp=J0194961710001810000024294&idloja=34902&npedido=00656514
+    [HTTP_SAVE_DATA] => on
+    [HTTP_SEC_FETCH_MODE] => navigate
+    [HTTP_SEC_FETCH_SITE] => cross-site
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Linux; Android 8.1.0; Moto G (5S) Plus) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.73 Mobile Safari/537.36
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [PHP_INI_SCAN_DIR] => /opt/cpanel/ea-php70/root/etc:/opt/cpanel/ea-php70/root/etc/php.d:.
+    [QUERY_STRING] => i=6514&fi=656514
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 191.255.140.86
+    [REMOTE_PORT] => 41093
+    [REQUEST_METHOD] => GET
+    [REQUEST_SCHEME] => https
+    [REQUEST_URI] => /thx/modules/gateways/callback/itauReT.php?i=6514&fi=656514
+    [SCRIPT_FILENAME] => /home/thxcom/public_html/thx/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /thx/modules/gateways/callback/itauReT.php
+    [SCRIPT_URI] => https://grupothx.com/thx/modules/gateways/callback/itauReT.php
+    [SCRIPT_URL] => /thx/modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.241.54.109
+    [SERVER_ADMIN] => webmaster@grupothx.com
+    [SERVER_NAME] => grupothx.com
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache
+    [SSL_TLS_SNI] => grupothx.com
+    [TZ] => 
+    [UNIQUE_ID] => XYIvWbgDl1HeiBHWjZLR7QAAAA4
+    [PHP_SELF] => /thx/modules/gateways/callback/itauReT.php
+    [REQUEST_TIME_FLOAT] => 1568812889.2197
+    [REQUEST_TIME] => 1568812889
+    [argv] => Array
+        (
+            [0] => i=6514&fi=656514
+        )
+
+    [argc] => 1
+)
+</pre>
+
+POST
+<pre>Array
+(
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 6514
+    [fi] => 516514
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 6514
+    [fi] => 516514
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [CONTEXT_DOCUMENT_ROOT] => /home/thxcom/public_html
+    [CONTEXT_PREFIX] => 
+    [DOCUMENT_ROOT] => /home/thxcom/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_COOKIE] => WHMCSeWdrAiYR38h0=kcbdcgqmis9aih8jufdipb8cj6
+    [HTTP_HOST] => grupothx.com
+    [HTTP_REFERER] => https://shopline.itau.com.br/shopline/Volta.aspx?codemp=J0194961710001810000024294&idloja=34902&npedido=00516514
+    [HTTP_SAVE_DATA] => on
+    [HTTP_SEC_FETCH_MODE] => navigate
+    [HTTP_SEC_FETCH_SITE] => cross-site
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Linux; Android 8.1.0; Moto G (5S) Plus) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.73 Mobile Safari/537.36
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [PHP_INI_SCAN_DIR] => /opt/cpanel/ea-php70/root/etc:/opt/cpanel/ea-php70/root/etc/php.d:.
+    [QUERY_STRING] => i=6514&fi=516514
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 191.255.140.86
+    [REMOTE_PORT] => 41279
+    [REQUEST_METHOD] => GET
+    [REQUEST_SCHEME] => https
+    [REQUEST_URI] => /thx/modules/gateways/callback/itauReT.php?i=6514&fi=516514
+    [SCRIPT_FILENAME] => /home/thxcom/public_html/thx/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /thx/modules/gateways/callback/itauReT.php
+    [SCRIPT_URI] => https://grupothx.com/thx/modules/gateways/callback/itauReT.php
+    [SCRIPT_URL] => /thx/modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.241.54.109
+    [SERVER_ADMIN] => webmaster@grupothx.com
+    [SERVER_NAME] => grupothx.com
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache
+    [SSL_TLS_SNI] => grupothx.com
+    [TZ] => 
+    [UNIQUE_ID] => XYIxMnO33e6YfY63x@rxQwAAAMo
+    [PHP_SELF] => /thx/modules/gateways/callback/itauReT.php
+    [REQUEST_TIME_FLOAT] => 1568813362.2526
+    [REQUEST_TIME] => 1568813362
+    [argv] => Array
+        (
+            [0] => i=6514&fi=516514
+        )
+
+    [argc] => 1
+)
+</pre>

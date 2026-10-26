@@ -1,0 +1,262 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3811
+    [id] => 3811
+    [1] => 259
+    [userid] => 259
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-09-14
+    [date] => 2017-09-14
+    [4] => 2017-09-21
+    [duedate] => 2017-09-21
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 259
+    [id] => 259
+    [uuid] => 80deab10-3cd6-44d4-b6a4-2f2b2ab5d2d5
+    [firstname] => Diego 
+    [lastname] => Rafael da Silva Santos
+    [fullname] => Diego  Rafael da Silva Santos
+    [companyname] => Topsecret Acompanhantes
+    [email] => topsecretacompanhantes@gmail.com
+    [address1] => Rua Newton Vieira Novaes, 91
+    [address2] => Bosque dos Eucaliptos
+    [city] => São José dos Campos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 12233-100
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1239165218 12988034026
+    [password] => $2y$10$IgD8BL6bi6BdF5moX0FdQORDfhyo.LzxjUzFjhRDoDUJIjeXGKD7.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.123916521812988034026
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 02/10/2017 00:53<br>IP Address: 201.75.171.97<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 12988034026
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 34434790811
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 12988034026
+    [customfields3] => 34434790811
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3811
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - acompanhantestopsecret.com.br (21/09/2017 - 20/10/2017)
+                            [Description] => TIH - Master  - acompanhantestopsecret.com.br (21/09/2017 - 20/10/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 11 dias de atraso
+                            [Description] => Juros por 11 dias de atraso
+                            [UnitPrice] => 109
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Diego  Rafael da Silva Santos
+            [Email] => topsecretacompanhantes@gmail.com
+            [Identity] => 34434790811
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3811
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master  - acompanhantestopsecret.com.br (21/09/2017 - 20/10/2017)
+                            [description] => TIH - Master  - acompanhantestopsecret.com.br (21/09/2017 - 20/10/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 11 dias de atraso
+                            [description] => Juros por 11 dias de atraso
+                            [unitPrice] => 109
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 34434790811
+            [fullName] => Diego  Rafael da Silva Santos
+            [email] => topsecretacompanhantes@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/0e16c441-fc6c-4270-8cea-e0e9d1c4ec38
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

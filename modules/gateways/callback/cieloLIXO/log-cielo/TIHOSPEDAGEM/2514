@@ -1,0 +1,321 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2514
+    [id] => 2514
+    [1] => 235
+    [userid] => 235
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-10-06
+    [date] => 2016-10-06
+    [4] => 2016-10-06
+    [duedate] => 2016-10-06
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 45.00
+    [subtotal] => 45.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 45.00
+    [total] => 45.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 235
+    [id] => 235
+    [uuid] => 372342bd-79bb-4365-89e1-84f4d61f22ac
+    [firstname] => Cristiano 
+    [lastname] => Alves da Silva
+    [fullname] => Cristiano  Alves da Silva
+    [companyname] => CAS - Consultoria
+    [email] => silva.cristiano@hotmail.com
+    [address1] => Rua Manoel Pereira Sobrinho, 586
+    [address2] => 
+    [city] => Franco da Rocha
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07862-170
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1144447632
+    [password] => $2y$10$ozJBM7RbQRKE7SOD8JuEr.Kgb7KK7ix9OfMWfo0XWjYkccR7Rs1SK
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1144447632
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 06/10/2016 08:27<br>IP Address: 177.79.26.121<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11974858435
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 28328287870
+                )
+
+        )
+
+    [customfields2] => 11974858435
+    [customfields3] => 28328287870
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2514
+    [SoftDescriptor] => 2514
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Registro de domínio - casconsultoria-qualidade.com.br - 1 Ano(s) (06/10/2016 - 05/10/2017)
+                            [Description] => Registro de domínio - casconsultoria-qualidade.com.br - 1 Ano(s) (06/10/2016 - 05/10/2017)
+                            [UnitPrice] => 4500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002514
+            [FullName] => Cristiano  Alves da Silva
+            [Email] => silva.cristiano@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2514
+    [softDescriptor] => 2514
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Registro de domínio - casconsultoria-qualidade.com.br - 1 Ano(s) (06/10/2016 - 05/10/2017)
+                            [description] => Registro de domínio - casconsultoria-qualidade.com.br - 1 Ano(s) (06/10/2016 - 05/10/2017)
+                            [unitPrice] => 4500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002514
+            [fullName] => Cristiano  Alves da Silva
+            [email] => silva.cristiano@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/6f565544-b131-44ac-9208-f14f3b1e958f
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+06/10/2016 8:59:30
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2514
+    [amount] => 4500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => a182435b20c248d9a58853d623c7aba0
+    [created_date] => 06/10/2016 10:30:57
+    [customer_name] => Cristiano Silva
+    [customer_phone] => 1174858435
+    [customer_identity] => 28328287870
+    [customer_email] => silva.cristiano@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544731******9256
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777625MONBHTQNB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/10/2016 8:07:31
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->235 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2514
+    [amount] => 4500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => a182435b20c248d9a58853d623c7aba0
+    [created_date] => 06/10/2016 10:30:57
+    [customer_name] => Cristiano Silva
+    [customer_phone] => 1174858435
+    [customer_identity] => 28328287870
+    [customer_email] => silva.cristiano@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544731******9256
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777625MONBHTQNB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/10/2016 8:12:33
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => a182435b20c248d9a58853d623c7aba0
+    [amount] => 4500
+    [order_number] => 2514
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/10/2016 8:12:33
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => a182435b20c248d9a58853d623c7aba0
+    [amount] => 4500
+    [order_number] => 2514
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

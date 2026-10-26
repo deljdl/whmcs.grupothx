@@ -1,0 +1,1193 @@
+
+
+06/10/2019 22:40:41
+INICIO_______________________________________________________________LOG:BEGIN:::06/10/2019 22:41<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 49289fa3af90488c8102a45e055eb470
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/10/2019 22:40:41
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 3
+    [startnumber] => 0
+    [numreturned] => 3
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6398
+                            [userid] => 257
+                            [firstname] => Eduardo
+                            [lastname] => Malfi
+                            [companyname] => 
+                            [invoicenum] => 
+                            [date] => 2019-07-29
+                            [duedate] => 2019-08-05
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 59.99
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 59.99
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => deposito_ou_transferencia
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 6504
+                            [userid] => 257
+                            [firstname] => Eduardo
+                            [lastname] => Malfi
+                            [companyname] => 
+                            [invoicenum] => 
+                            [date] => 2019-08-29
+                            [duedate] => 2019-09-05
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 59.99
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 59.99
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => deposito_ou_transferencia
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 6615
+                            [userid] => 257
+                            [firstname] => Eduardo
+                            [lastname] => Malfi
+                            [companyname] => 
+                            [invoicenum] => 
+                            [date] => 2019-10-05
+                            [duedate] => 2019-10-05
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 59.99
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 59.99
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => deposito_ou_transferencia
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 49289fa3af90488c8102a45e055eb470
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/10/2019 22:40:41
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6398
+            [userid] => 257
+            [firstname] => Eduardo
+            [lastname] => Malfi
+            [companyname] => 
+            [invoicenum] => 
+            [date] => 2019-07-29
+            [duedate] => 2019-08-05
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 59.99
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 59.99
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => deposito_ou_transferencia
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+    [1] => Array
+        (
+            [id] => 6504
+            [userid] => 257
+            [firstname] => Eduardo
+            [lastname] => Malfi
+            [companyname] => 
+            [invoicenum] => 
+            [date] => 2019-08-29
+            [duedate] => 2019-09-05
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 59.99
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 59.99
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => deposito_ou_transferencia
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+    [2] => Array
+        (
+            [id] => 6615
+            [userid] => 257
+            [firstname] => Eduardo
+            [lastname] => Malfi
+            [companyname] => 
+            [invoicenum] => 
+            [date] => 2019-10-05
+            [duedate] => 2019-10-05
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 59.99
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 59.99
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => deposito_ou_transferencia
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 49289fa3af90488c8102a45e055eb470
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/10/2019 22:40:41
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6398
+    [userid] => 257
+    [firstname] => Eduardo
+    [lastname] => Malfi
+    [companyname] => 
+    [invoicenum] => 
+    [date] => 2019-07-29
+    [duedate] => 2019-08-05
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [paymethodid] => 
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 49289fa3af90488c8102a45e055eb470
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/10/2019 22:40:41
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6398
+    [invoicenum] => 
+    [userid] => 257
+    [date] => 2019-07-29
+    [duedate] => 2019-08-05
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 59.99
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 59.99
+    [balance] => 59,99
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 9982
+                            [type] => Hosting
+                            [relid] => 507
+                            [description] => TIH - Especial - girapost.com (05/08/2019 - 04/09/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 49289fa3af90488c8102a45e055eb470
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/10/2019 22:40:41
+INICIO_______________________________________________________________LOG:Checando -> 507 ==  507
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 49289fa3af90488c8102a45e055eb470
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/10/2019 22:40:41
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 49289fa3af90488c8102a45e055eb470
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 18:13:52
+INICIO_______________________________________________________________LOG:BEGIN:::10/10/2019 18:52<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 275e491b4b584b31a632199ce8fe45cf
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 18:13:52
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6615
+                            [userid] => 257
+                            [firstname] => Eduardo
+                            [lastname] => Malfi
+                            [companyname] => 
+                            [invoicenum] => 
+                            [date] => 2019-10-05
+                            [duedate] => 2019-10-05
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 179.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 179.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => deposito_ou_transferencia
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 275e491b4b584b31a632199ce8fe45cf
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 18:13:52
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6615
+            [userid] => 257
+            [firstname] => Eduardo
+            [lastname] => Malfi
+            [companyname] => 
+            [invoicenum] => 
+            [date] => 2019-10-05
+            [duedate] => 2019-10-05
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 179.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 179.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => deposito_ou_transferencia
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 275e491b4b584b31a632199ce8fe45cf
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 18:13:52
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6615
+    [userid] => 257
+    [firstname] => Eduardo
+    [lastname] => Malfi
+    [companyname] => 
+    [invoicenum] => 
+    [date] => 2019-10-05
+    [duedate] => 2019-10-05
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 179.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 179.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [paymethodid] => 
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 275e491b4b584b31a632199ce8fe45cf
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 18:13:52
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6615
+    [invoicenum] => 
+    [userid] => 257
+    [date] => 2019-10-05
+    [duedate] => 2019-10-05
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 179.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 179.97
+    [balance] => 179,97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 9982
+                            [type] => Hosting
+                            [relid] => 507
+                            [description] => TIH - Especial - girapost.com (05/08/2019 - 04/09/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 10158
+                            [type] => Hosting
+                            [relid] => 507
+                            [description] => TIH - Especial - girapost.com (05/09/2019 - 04/10/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 10338
+                            [type] => Hosting
+                            [relid] => 507
+                            [description] => TIH - Especial - girapost.com (05/10/2019 - 04/11/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 275e491b4b584b31a632199ce8fe45cf
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 18:13:52
+INICIO_______________________________________________________________LOG:Checando -> 507 ==  507
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 275e491b4b584b31a632199ce8fe45cf
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2019 18:13:52
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 275e491b4b584b31a632199ce8fe45cf
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+14/10/2019 20:35:22
+INICIO_______________________________________________________________LOG:BEGIN:::14/10/2019 20:22<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => d818078b3c7a42d9990f2d89e933343e
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+14/10/2019 20:35:22
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6615
+                            [userid] => 257
+                            [firstname] => Eduardo
+                            [lastname] => Malfi
+                            [companyname] => 
+                            [invoicenum] => 
+                            [date] => 2019-10-05
+                            [duedate] => 2019-10-05
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 179.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 179.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => deposito_ou_transferencia
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => d818078b3c7a42d9990f2d89e933343e
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+14/10/2019 20:35:22
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6615
+            [userid] => 257
+            [firstname] => Eduardo
+            [lastname] => Malfi
+            [companyname] => 
+            [invoicenum] => 
+            [date] => 2019-10-05
+            [duedate] => 2019-10-05
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 179.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 179.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => deposito_ou_transferencia
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => d818078b3c7a42d9990f2d89e933343e
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+14/10/2019 20:35:22
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6615
+    [userid] => 257
+    [firstname] => Eduardo
+    [lastname] => Malfi
+    [companyname] => 
+    [invoicenum] => 
+    [date] => 2019-10-05
+    [duedate] => 2019-10-05
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 179.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 179.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [paymethodid] => 
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => d818078b3c7a42d9990f2d89e933343e
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+14/10/2019 20:35:22
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6615
+    [invoicenum] => 
+    [userid] => 257
+    [date] => 2019-10-05
+    [duedate] => 2019-10-05
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 179.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 179.97
+    [balance] => 179,97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 9982
+                            [type] => Hosting
+                            [relid] => 507
+                            [description] => TIH - Especial - girapost.com (05/08/2019 - 04/09/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 10158
+                            [type] => Hosting
+                            [relid] => 507
+                            [description] => TIH - Especial - girapost.com (05/09/2019 - 04/10/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 10338
+                            [type] => Hosting
+                            [relid] => 507
+                            [description] => TIH - Especial - girapost.com (05/10/2019 - 04/11/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => d818078b3c7a42d9990f2d89e933343e
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+14/10/2019 20:35:22
+INICIO_______________________________________________________________LOG:Checando -> 507 ==  507
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => d818078b3c7a42d9990f2d89e933343e
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+14/10/2019 20:36:22
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => d818078b3c7a42d9990f2d89e933343e
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+18/10/2019 18:09:42
+INICIO_______________________________________________________________LOG:BEGIN:::18/10/2019 18:42<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1d9e028633b1412e945d3b62778ec9eb
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+18/10/2019 18:09:42
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6615
+                            [userid] => 257
+                            [firstname] => Eduardo
+                            [lastname] => Malfi
+                            [companyname] => 
+                            [invoicenum] => 
+                            [date] => 2019-10-05
+                            [duedate] => 2019-10-05
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 179.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 179.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => deposito_ou_transferencia
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1d9e028633b1412e945d3b62778ec9eb
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+18/10/2019 18:09:42
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6615
+            [userid] => 257
+            [firstname] => Eduardo
+            [lastname] => Malfi
+            [companyname] => 
+            [invoicenum] => 
+            [date] => 2019-10-05
+            [duedate] => 2019-10-05
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 179.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 179.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => deposito_ou_transferencia
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1d9e028633b1412e945d3b62778ec9eb
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+18/10/2019 18:09:42
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6615
+    [userid] => 257
+    [firstname] => Eduardo
+    [lastname] => Malfi
+    [companyname] => 
+    [invoicenum] => 
+    [date] => 2019-10-05
+    [duedate] => 2019-10-05
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 179.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 179.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [paymethodid] => 
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1d9e028633b1412e945d3b62778ec9eb
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+18/10/2019 18:09:42
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6615
+    [invoicenum] => 
+    [userid] => 257
+    [date] => 2019-10-05
+    [duedate] => 2019-10-05
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 179.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 179.97
+    [balance] => 179,97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 9982
+                            [type] => Hosting
+                            [relid] => 507
+                            [description] => TIH - Especial - girapost.com (05/08/2019 - 04/09/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 10158
+                            [type] => Hosting
+                            [relid] => 507
+                            [description] => TIH - Especial - girapost.com (05/09/2019 - 04/10/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 10338
+                            [type] => Hosting
+                            [relid] => 507
+                            [description] => TIH - Especial - girapost.com (05/10/2019 - 04/11/2019)
+                            [amount] => 59.99
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1d9e028633b1412e945d3b62778ec9eb
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+18/10/2019 18:09:42
+INICIO_______________________________________________________________LOG:Checando -> 507 ==  507
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1d9e028633b1412e945d3b62778ec9eb
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+18/10/2019 18:09:42
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1d9e028633b1412e945d3b62778ec9eb
+    [amount] => 5999
+    [order_number] => s507
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

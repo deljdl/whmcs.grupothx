@@ -1,0 +1,606 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5066
+    [id] => 5066
+    [1] => 321
+    [userid] => 321
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-08
+    [date] => 2018-08-08
+    [4] => 2018-08-08
+    [duedate] => 2018-08-08
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 43.96
+    [subtotal] => 43.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 43.96
+    [total] => 43.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 321
+    [id] => 321
+    [uuid] => 66d3889c-e82b-4847-b94d-58e5d1c7b31e
+    [firstname] => José
+    [lastname] => Adilson dos Santos
+    [fullname] => José Adilson dos Santos
+    [companyname] => JOSE ADILSON DOS SANTOS BALANCAS ME
+    [email] => primo.motores@gmail.com
+    [address1] => Estrada de Santa Isabel, 110
+    [address2] => Una 
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08586-260
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 985912743
+    [password] => $2y$10$TE6vHHg1D97k5EIcQBKuROjwYd3avC/gK9JatphvobLZ7Ea9h9NRe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11985912743
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/08/2018 09:08<br>IP Address: 191.254.49.221<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11985912743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 009.479.868/0001-90
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11985912743
+    [customfields3] => 009.479.868/0001-90
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5066
+    [id] => 5066
+    [1] => 321
+    [userid] => 321
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-08
+    [date] => 2018-08-08
+    [4] => 2018-08-08
+    [duedate] => 2018-08-08
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 43.96
+    [subtotal] => 43.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 43.96
+    [total] => 43.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 321
+    [id] => 321
+    [uuid] => 66d3889c-e82b-4847-b94d-58e5d1c7b31e
+    [firstname] => José
+    [lastname] => Adilson dos Santos
+    [fullname] => José Adilson dos Santos
+    [companyname] => JOSE ADILSON DOS SANTOS BALANCAS ME
+    [email] => primo.motores@gmail.com
+    [address1] => Estrada de Santa Isabel, 110
+    [address2] => Una 
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08586-260
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 985912743
+    [password] => $2y$10$TE6vHHg1D97k5EIcQBKuROjwYd3avC/gK9JatphvobLZ7Ea9h9NRe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11985912743
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/08/2018 09:17<br>IP Address: 168.227.12.159<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11985912743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 009.479.868/0001-90
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11985912743
+    [customfields3] => 009.479.868/0001-90
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5066
+    [id] => 5066
+    [1] => 321
+    [userid] => 321
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-08
+    [date] => 2018-08-08
+    [4] => 2018-08-08
+    [duedate] => 2018-08-08
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 43.96
+    [subtotal] => 43.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 43.96
+    [total] => 43.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 321
+    [id] => 321
+    [uuid] => 66d3889c-e82b-4847-b94d-58e5d1c7b31e
+    [firstname] => José
+    [lastname] => Adilson dos Santos
+    [fullname] => José Adilson dos Santos
+    [companyname] => JOSE ADILSON DOS SANTOS BALANCAS ME
+    [email] => primo.motores@gmail.com
+    [address1] => Estrada de Santa Isabel, 110
+    [address2] => Una 
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08586-260
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 985912743
+    [password] => $2y$10$TE6vHHg1D97k5EIcQBKuROjwYd3avC/gK9JatphvobLZ7Ea9h9NRe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11985912743
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/08/2018 09:17<br>IP Address: 168.227.12.159<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11985912743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 009.479.868/0001-90
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11985912743
+    [customfields3] => 009.479.868/0001-90
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5066
+    [id] => 5066
+    [1] => 321
+    [userid] => 321
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-08
+    [date] => 2018-08-08
+    [4] => 2018-08-08
+    [duedate] => 2018-08-08
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 43.96
+    [subtotal] => 43.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 43.96
+    [total] => 43.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 321
+    [id] => 321
+    [uuid] => 66d3889c-e82b-4847-b94d-58e5d1c7b31e
+    [firstname] => José
+    [lastname] => Adilson dos Santos
+    [fullname] => José Adilson dos Santos
+    [companyname] => JOSE ADILSON DOS SANTOS BALANCAS ME
+    [email] => primo.motores@gmail.com
+    [address1] => Estrada de Santa Isabel, 110
+    [address2] => Una 
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08586-260
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 985912743
+    [password] => $2y$10$TE6vHHg1D97k5EIcQBKuROjwYd3avC/gK9JatphvobLZ7Ea9h9NRe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11985912743
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/08/2018 09:18<br>IP Address: 168.227.12.159<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11985912743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 09.479.868/0001-90
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11985912743
+    [customfields3] => 09.479.868/0001-90
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5066
+    [id] => 5066
+    [1] => 321
+    [userid] => 321
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-08
+    [date] => 2018-08-08
+    [4] => 2018-08-08
+    [duedate] => 2018-08-08
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 43.96
+    [subtotal] => 43.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 43.96
+    [total] => 43.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 321
+    [id] => 321
+    [uuid] => 66d3889c-e82b-4847-b94d-58e5d1c7b31e
+    [firstname] => José
+    [lastname] => Adilson dos Santos
+    [fullname] => José Adilson dos Santos
+    [companyname] => JOSE ADILSON DOS SANTOS BALANCAS ME
+    [email] => primo.motores@gmail.com
+    [address1] => Estrada de Santa Isabel, 110
+    [address2] => Una 
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08586-260
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 985912743
+    [password] => $2y$10$TE6vHHg1D97k5EIcQBKuROjwYd3avC/gK9JatphvobLZ7Ea9h9NRe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11985912743
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/08/2018 09:18<br>IP Address: 191.254.49.221<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11985912743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 09.479.868/0001-90
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11985912743
+    [customfields3] => 09.479.868/0001-90
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

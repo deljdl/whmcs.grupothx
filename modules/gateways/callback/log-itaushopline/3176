@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3176
+    [id] => 3176
+    [1] => 269
+    [userid] => 269
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-04-05
+    [date] => 2017-04-05
+    [4] => 2017-04-05
+    [duedate] => 2017-04-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 80.00
+    [subtotal] => 80.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 80.00
+    [total] => 80.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 269
+    [id] => 269
+    [uuid] => ea29701d-245a-405e-b4ef-1efaecb76037
+    [firstname] => Kaio 
+    [lastname] => Quinan
+    [fullname] => Kaio  Quinan
+    [companyname] => Global Business Pro Soluções
+    [email] => kaio@gbpsolucoes.com.br
+    [address1] => Rua aroazez 71 apt 101
+    [address2] => Barra da Tijuca
+    [city] => Rio de Janeiro
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 22775-050
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 21-98355-9166
+    [password] => $2y$10$k4lCTJ1JkQvVOR3WgjYNhOWYozQAgAM08MUYEXm7h/jF.D0PTENZm
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.21983559166
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/04/2017 17:17<br>IP Address: 177.18.236.95<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 21983559166
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 823.199.101-82
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 21983559166
+    [customfields3] => 823.199.101-82
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

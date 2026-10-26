@@ -1,0 +1,125 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4996
+    [id] => 4996
+    [1] => 313
+    [userid] => 313
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-23
+    [date] => 2018-07-23
+    [4] => 2018-07-28
+    [duedate] => 2018-07-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 65.94
+    [subtotal] => 65.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 65.94
+    [total] => 65.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 313
+    [id] => 313
+    [uuid] => d7f5c524-17a5-4ce6-b61d-02bbf605009c
+    [firstname] => Gabriel
+    [lastname] => Cajano Pitassi
+    [fullname] => Gabriel Cajano Pitassi
+    [companyname] => Pitassi Consultoria em Gestão Empresarial Ltda
+    [email] => gabrielpitassi@pitassiadvogados.com.br
+    [address1] => Av. Portugal, 397 – Conj. 1.502
+    [address2] => Vila Bastos
+    [city] => Santo André
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09040-901
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 4437-1234
+    [password] => $2y$10$HZMgG71X2MMgb5gvXGWYM.UnGkUF3biYK.awX8lwsMXrLu4D6XBmm
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1144371234
+    [billingcid] => 0
+    [notes] => Dados Pessoa Física:
+Gabriel Cajano Pitassi
+CPF.: 313.862.038-82
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 02/08/2018 10:52<br>IP Address: 201.27.55.83<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 10.709.317/0001-55
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 10.709.317/0001-55
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

@@ -1,0 +1,323 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2637
+    [id] => 2637
+    [1] => 109
+    [userid] => 109
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-07
+    [date] => 2016-11-07
+    [4] => 2016-11-09
+    [duedate] => 2016-11-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 225.00
+    [subtotal] => 225.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 225.00
+    [total] => 225.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 109
+    [id] => 109
+    [uuid] => 79e07457-5a77-4880-93c3-104468b5dea6
+    [firstname] => Daniela
+    [lastname] => Trindade Reis
+    [fullname] => Daniela Trindade Reis
+    [companyname] => Klipps - Comunicação e Marketing
+    [email] => daniela@klipps.com.br
+    [address1] => 
+    [address2] => 
+    [city] => Belo Horizonte
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => 6dfb858e32c3157220c3fee8a5045208:NJf!k
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => Cobrar segunda parcela borvultex !!!
+
+Notas 8%
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 07/11/2016 16:30<br>IP Address: 189.101.10.167<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 3191066743
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 35.695.796-97
+                )
+
+        )
+
+    [customfields2] => 3191066743
+    [customfields3] => 35.695.796-97
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2637
+    [SoftDescriptor] => 2637
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações do Site IPEVE enviadas pelo WeTransfer em 7/11/2016 - Parcela 1/2
+                            [Description] => Desenvolvimento Por Hora - Alterações do Site IPEVE enviadas pelo WeTransfer em 7/11/2016 - Parcela 1/2
+                            [UnitPrice] => 22500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002637
+            [FullName] => Daniela Trindade Reis
+            [Email] => daniela@klipps.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2637
+    [softDescriptor] => 2637
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações do Site IPEVE enviadas pelo WeTransfer em 7/11/2016 - Parcela 1/2
+                            [description] => Desenvolvimento Por Hora - Alterações do Site IPEVE enviadas pelo WeTransfer em 7/11/2016 - Parcela 1/2
+                            [unitPrice] => 22500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002637
+            [fullName] => Daniela Trindade Reis
+            [email] => daniela@klipps.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/165066b0-d62d-4f7d-9a45-6a3af410ec76
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+07/11/2016 16:04:34
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2637
+    [amount] => 22500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 91da76c1937348f095cc399c97bedecd
+    [created_date] => 07/11/2016 20:34:01
+    [customer_name] => Daniela Reis
+    [customer_phone] => 31991066743
+    [customer_identity] => 03569579697
+    [customer_email] => daniela@klipps.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 515590******2029
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777625NMH9NH7LB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/11/2016 16:05:34
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->109 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2637
+    [amount] => 22500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 91da76c1937348f095cc399c97bedecd
+    [created_date] => 07/11/2016 20:34:01
+    [customer_name] => Daniela Reis
+    [customer_phone] => 31991066743
+    [customer_identity] => 03569579697
+    [customer_email] => daniela@klipps.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 515590******2029
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777625NMH9NH7LB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/11/2016 16:47:42
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 91da76c1937348f095cc399c97bedecd
+    [amount] => 22500
+    [order_number] => 2637
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/11/2016 16:47:42
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 91da76c1937348f095cc399c97bedecd
+    [amount] => 22500
+    [order_number] => 2637
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

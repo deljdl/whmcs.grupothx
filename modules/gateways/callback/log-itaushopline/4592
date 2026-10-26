@@ -1,0 +1,246 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4592
+    [id] => 4592
+    [1] => 288
+    [userid] => 288
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-04-16
+    [date] => 2018-04-16
+    [4] => 2018-04-22
+    [duedate] => 2018-04-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 288
+    [id] => 288
+    [uuid] => fbfa1657-0e5a-4627-9199-1bc3ee56ca4e
+    [firstname] => Ivair
+    [lastname] => Blauth
+    [fullname] => Ivair Blauth
+    [companyname] => Impacto Doors Industria e Comercio Eireli - ME
+    [email] => financeiro@impactodoors.com.br
+    [address1] => Rua Severa 477
+    [address2] => Vila Maria Baixa
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 02111-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 011-3542-1987
+    [password] => $2y$10$J/M0c7rnUQNOj9Xr1kW4w.D2Cdqmx/uI2Zj2/gMHVK2UQ.7/39gQK
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1135421987
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 16/04/2018 14:42<br>IP Address: 179.208.250.14<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11952330665
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 26.560.345/0001-93
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11952330665
+    [customfields3] => 26.560.345/0001-93
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4592
+    [id] => 4592
+    [1] => 288
+    [userid] => 288
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-04-16
+    [date] => 2018-04-16
+    [4] => 2018-04-22
+    [duedate] => 2018-04-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 288
+    [id] => 288
+    [uuid] => fbfa1657-0e5a-4627-9199-1bc3ee56ca4e
+    [firstname] => Ivair
+    [lastname] => Blauth
+    [fullname] => Ivair Blauth
+    [companyname] => Impacto Doors Industria e Comercio Eireli - ME
+    [email] => financeiro@impactodoors.com.br
+    [address1] => Rua Severa 477
+    [address2] => Vila Maria Baixa
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 02111-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 011-3542-1987
+    [password] => $2y$10$J/M0c7rnUQNOj9Xr1kW4w.D2Cdqmx/uI2Zj2/gMHVK2UQ.7/39gQK
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1135421987
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 16/04/2018 14:47<br>IP Address: 179.208.250.14<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11952330665
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 26.560.345/0001-93
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11952330665
+    [customfields3] => 26.560.345/0001-93
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

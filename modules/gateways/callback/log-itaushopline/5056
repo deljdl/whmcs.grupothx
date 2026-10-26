@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5056
+    [id] => 5056
+    [1] => 266
+    [userid] => 266
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-08
+    [date] => 2018-08-08
+    [4] => 2018-08-15
+    [duedate] => 2018-08-15
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 266
+    [id] => 266
+    [uuid] => 0323ac38-24e3-4a90-8382-865d4336ae1e
+    [firstname] => Aarão
+    [lastname] => Régis
+    [fullname] => Aarão Régis
+    [companyname] => ARTSMUSIC
+    [email] => aaraoregis@hotmail.com
+    [address1] => Rua Carl Willian Cooper, 81
+    [address2] => Vila Amorim
+    [city] => Suzano
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08610070
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1154880830 11954880830
+    [password] => $2y$10$Hvvi82T6D8Vtft59k1vEjOrbm5UGLmslbu10ekA9tAr.FT0iiCdSC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.115488083011954880830
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/08/2018 16:12<br>IP Address: 187.10.211.8<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11954880830
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 33501514859
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11954880830
+    [customfields3] => 33501514859
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

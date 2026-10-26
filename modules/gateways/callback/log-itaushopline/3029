@@ -1,0 +1,246 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3029
+    [id] => 3029
+    [1] => 254
+    [userid] => 254
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-24
+    [date] => 2017-02-24
+    [4] => 2017-03-03
+    [duedate] => 2017-03-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 499.66
+    [subtotal] => 499.66
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 499.66
+    [total] => 499.66
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 254
+    [id] => 254
+    [uuid] => 1f0cc7fa-bb42-439f-acc7-0d54f7ccdadb
+    [firstname] => Everton
+    [lastname] => Fagner Rodrigues Simões
+    [fullname] => Everton Fagner Rodrigues Simões
+    [companyname] => Hennfort
+    [email] => vendas2@ferplastembalagens.com.br
+    [address1] => Rodovia Mogidutra, Km 38/39
+    [address2] => Taboão
+    [city] => Mogi das Cruzes
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08770-490
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11988626695
+    [password] => $2y$10$I0bw8rQfRwUUmx9O.rlSjOKw7oXYTjz3YTunD4pDFSDx2OWUFrMUC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11988626695
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/03/2017 07:14<br>IP Address: 177.157.135.91<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11988626695
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 13.636.898/0001-30
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11988626695
+    [customfields3] => 13.636.898/0001-30
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3029
+    [id] => 3029
+    [1] => 254
+    [userid] => 254
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-24
+    [date] => 2017-02-24
+    [4] => 2017-03-03
+    [duedate] => 2017-03-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 499.66
+    [subtotal] => 499.66
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 499.66
+    [total] => 499.66
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 254
+    [id] => 254
+    [uuid] => 1f0cc7fa-bb42-439f-acc7-0d54f7ccdadb
+    [firstname] => Everton
+    [lastname] => Fagner Rodrigues Simões
+    [fullname] => Everton Fagner Rodrigues Simões
+    [companyname] => Hennfort
+    [email] => vendas2@ferplastembalagens.com.br
+    [address1] => Rodovia Mogidutra, Km 38/39
+    [address2] => Taboão
+    [city] => Mogi das Cruzes
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08770-490
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11988626695
+    [password] => $2y$10$I0bw8rQfRwUUmx9O.rlSjOKw7oXYTjz3YTunD4pDFSDx2OWUFrMUC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11988626695
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 30/03/2017 11:27<br>IP Address: 191.251.157.21<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11988626695
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 13.636.898/0001-30
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11988626695
+    [customfields3] => 13.636.898/0001-30
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

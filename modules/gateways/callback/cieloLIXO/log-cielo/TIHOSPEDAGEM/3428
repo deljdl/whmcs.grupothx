@@ -1,0 +1,665 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3428
+    [id] => 3428
+    [1] => 276
+    [userid] => 276
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-06-05
+    [date] => 2017-06-05
+    [4] => 2017-06-05
+    [duedate] => 2017-06-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 50.00
+    [subtotal] => 50.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 50.00
+    [total] => 50.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 276
+    [id] => 276
+    [uuid] => fc55d0e8-ce84-4b40-9520-dd9439f21a3a
+    [firstname] => Valdir
+    [lastname] => Azevedo de Santana
+    [fullname] => Valdir Azevedo de Santana
+    [companyname] => InvestTeam
+    [email] => valdirinvest@gmail.com
+    [address1] => Rua Bernadete Dias, 21 C
+    [address2] => Boca do Rio
+    [city] => Salvador
+    [fullstate] => BA
+    [state] => BA
+    [postcode] => 41710040
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 71988523479
+    [password] => $2y$10$4Klqz0JMK94o2GKAeTjiHeBJ.LEOob7shp0Jxa8fm5uslY1dX/6Ai
+    [statecode] => BA
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.71988523479
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/06/2017 18:04<br>IP Address: 200.229.220.63<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 71988523479
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 94428000510
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 71988523479
+    [customfields3] => 94428000510
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3428
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => PositiveSSL - investteam.us (05/06/2017 - 04/06/2018)
+                            [Description] => PositiveSSL - investteam.us (05/06/2017 - 04/06/2018)
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Valdir Azevedo de Santana
+            [Email] => valdirinvest@gmail.com
+            [Identity] => 94428000510
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3428
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => PositiveSSL - investteam.us (05/06/2017 - 04/06/2018)
+                            [description] => PositiveSSL - investteam.us (05/06/2017 - 04/06/2018)
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 94428000510
+            [fullName] => Valdir Azevedo de Santana
+            [email] => valdirinvest@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/8c904281-c4f7-4e93-a4d3-d76b89945a51
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+05/06/2017 18:07:06
+INICIO_______________________________________________________________LOG:BEGIN:::05/06/2017 18:06<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3428
+    [amount] => 5000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => f49719c365414070a57b17bb8464b984
+    [created_date] => 05/06/2017 18:06:05
+    [customer_name] => Valdir Santana
+    [customer_phone] => 71988523479
+    [customer_identity] => 94428000510
+    [customer_email] => valdirinvest@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 516292******0662
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626G8M5R24BB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+05/06/2017 18:07:06
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  3428
+
+POST:
+<pre>Array
+(
+    [order_number] => 3428
+    [amount] => 5000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => f49719c365414070a57b17bb8464b984
+    [created_date] => 05/06/2017 18:06:05
+    [customer_name] => Valdir Santana
+    [customer_phone] => 71988523479
+    [customer_identity] => 94428000510
+    [customer_email] => valdirinvest@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 516292******0662
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626G8M5R24BB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+05/06/2017 18:31:15
+INICIO_______________________________________________________________LOG:BEGIN:::05/06/2017 18:15<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => f49719c365414070a57b17bb8464b984
+    [amount] => 5000
+    [order_number] => 3428
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+05/06/2017 18:31:15
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  3428
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => f49719c365414070a57b17bb8464b984
+    [amount] => 5000
+    [order_number] => 3428
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 3428
+    [id] => 3428
+    [1] => 276
+    [userid] => 276
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-06-05
+    [date] => 2017-06-05
+    [4] => 2017-06-05
+    [duedate] => 2017-06-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 50.00
+    [subtotal] => 50.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 50.00
+    [total] => 50.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 276
+    [id] => 276
+    [uuid] => fc55d0e8-ce84-4b40-9520-dd9439f21a3a
+    [firstname] => Valdir
+    [lastname] => Azevedo de Santana
+    [fullname] => Valdir Azevedo de Santana
+    [companyname] => InvestTeam
+    [email] => valdirinvest@gmail.com
+    [address1] => Rua Bernadete Dias, 21 C
+    [address2] => Boca do Rio
+    [city] => Salvador
+    [fullstate] => BA
+    [state] => BA
+    [postcode] => 41710040
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 71988523479
+    [password] => $2y$10$4Klqz0JMK94o2GKAeTjiHeBJ.LEOob7shp0Jxa8fm5uslY1dX/6Ai
+    [statecode] => BA
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.71988523479
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 06/06/2017 09:51<br>IP Address: 187.114.170.187<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 71988523479
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 94428000510
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 71988523479
+    [customfields3] => 94428000510
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3428
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => PositiveSSL - investteam.us (05/06/2017 - 04/06/2018)
+                            [Description] => PositiveSSL - investteam.us (05/06/2017 - 04/06/2018)
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Valdir Azevedo de Santana
+            [Email] => valdirinvest@gmail.com
+            [Identity] => 94428000510
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3428
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => PositiveSSL - investteam.us (05/06/2017 - 04/06/2018)
+                            [description] => PositiveSSL - investteam.us (05/06/2017 - 04/06/2018)
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 94428000510
+            [fullName] => Valdir Azevedo de Santana
+            [email] => valdirinvest@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/3bb22160-e46c-407d-b9c3-11d373017d68
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+06/06/2017 9:33:55
+INICIO_______________________________________________________________LOG:BEGIN:::06/06/2017 9:55<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3428
+    [amount] => 5000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 89e0284ef1d14d139c71d115d9aacb47
+    [created_date] => 06/06/2017 09:55:30
+    [customer_name] => Valdir Santana
+    [customer_phone] => 71988523479
+    [customer_identity] => 94428000510
+    [customer_email] => valdirinvest@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 516292******0662
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626G9K032FTB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/06/2017 9:36:55
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3428 | Result->success | ValorPago ->50.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 3428
+    [amount] => 5000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 89e0284ef1d14d139c71d115d9aacb47
+    [created_date] => 06/06/2017 09:55:30
+    [customer_name] => Valdir Santana
+    [customer_phone] => 71988523479
+    [customer_identity] => 94428000510
+    [customer_email] => valdirinvest@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 516292******0662
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626G9K032FTB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/06/2017 10:26:05
+INICIO_______________________________________________________________LOG:BEGIN:::06/06/2017 10:05<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 89e0284ef1d14d139c71d115d9aacb47
+    [amount] => 5000
+    [order_number] => 3428
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/06/2017 10:26:05
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 89e0284ef1d14d139c71d115d9aacb47
+    [amount] => 5000
+    [order_number] => 3428
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/06/2017 10:28:05
+INICIO_______________________________________________________________LOG:BEGIN:::06/06/2017 10:05<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 89e0284ef1d14d139c71d115d9aacb47
+    [amount] => 5000
+    [order_number] => 3428
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/06/2017 10:28:05
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 89e0284ef1d14d139c71d115d9aacb47
+    [amount] => 5000
+    [order_number] => 3428
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+	<head>	
+		<title>Facebook Like</title>
+		
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	</head>
+	<body>
+    <div id="fb-root"></div>
+	<script type="text/javascript">
+	        window.fbAsyncInit = function() {
+            FB.Event.subscribe('edge.create',
+                function (response) {
+                window.location.replace("http://www.youlikehits.com/fbliked.php?step=points&id=78736&cid=6e1c964268fb56c6167aa3454a3e22a2");
+                }
+            );
+			
+			FB.Event.subscribe('edge.remove',
+                function (response) {
+                window.location.replace("http://www.youlikehits.com/fbliked.php?step=skip&id=78736&cid=6e1c964268fb56c6167aa3454a3e22a2");
+                }
+            );
+        };
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));	
+        
+        $(document).ready(function(){
+            $('#box_like').html('<fb:like href="https://www.facebook.com/tihospedagem" send="false" width="450" show_faces="false"></fb:like>');
+        });
+    </script>
+		
+	<div id="box_like"></div>
+	</body>
+</html>

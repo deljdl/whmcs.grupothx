@@ -1,0 +1,1212 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4077
+    [id] => 4077
+    [1] => 246
+    [userid] => 246
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-11-21
+    [date] => 2017-11-21
+    [4] => 2017-11-28
+    [duedate] => 2017-11-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 246
+    [id] => 246
+    [uuid] => a41c4962-5c2a-4cce-8e7a-af9d99f8aca5
+    [firstname] => Danilo
+    [lastname] => de Almeida Silami
+    [fullname] => Danilo de Almeida Silami
+    [companyname] => Associação de Ex Alunos e Moradores da República Verdes Mares
+    [email] => carnavalverdesmares@gmail.com
+    [address1] =>  Praça Juvenal Santos – 34
+    [address2] => Pilar
+    [city] => Ouro Preto
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 35412-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (31) 3551-1264
+    [password] => $2y$10$Pg/pqtAV6cEWlgfTkE17We.fP7GSgI8RETVB0btCMcZPnAf2SRB9K
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3135511264
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 12/12/2017 14:09<br>IP Address: 177.99.119.101<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4077
+    [id] => 4077
+    [1] => 246
+    [userid] => 246
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-11-21
+    [date] => 2017-11-21
+    [4] => 2017-11-28
+    [duedate] => 2017-11-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 246
+    [id] => 246
+    [uuid] => a41c4962-5c2a-4cce-8e7a-af9d99f8aca5
+    [firstname] => Danilo
+    [lastname] => de Almeida Silami
+    [fullname] => Danilo de Almeida Silami
+    [companyname] => Associação de Ex Alunos e Moradores da República Verdes Mares
+    [email] => carnavalverdesmares@gmail.com
+    [address1] =>  Praça Juvenal Santos – 34
+    [address2] => Pilar
+    [city] => Ouro Preto
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 35412-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (31) 3551-1264
+    [password] => $2y$10$Pg/pqtAV6cEWlgfTkE17We.fP7GSgI8RETVB0btCMcZPnAf2SRB9K
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3135511264
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 12/12/2017 14:09<br>IP Address: 177.99.119.101<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4077
+    [id] => 4077
+    [1] => 246
+    [userid] => 246
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-11-21
+    [date] => 2017-11-21
+    [4] => 2017-11-28
+    [duedate] => 2017-11-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 246
+    [id] => 246
+    [uuid] => a41c4962-5c2a-4cce-8e7a-af9d99f8aca5
+    [firstname] => Danilo
+    [lastname] => de Almeida Silami
+    [fullname] => Danilo de Almeida Silami
+    [companyname] => Associação de Ex Alunos e Moradores da República Verdes Mares
+    [email] => carnavalverdesmares@gmail.com
+    [address1] =>  Praça Juvenal Santos – 34
+    [address2] => Pilar
+    [city] => Ouro Preto
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 35412-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (31) 3551-1264
+    [password] => $2y$10$Pg/pqtAV6cEWlgfTkE17We.fP7GSgI8RETVB0btCMcZPnAf2SRB9K
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3135511264
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 12/12/2017 14:11<br>IP Address: 177.99.119.101<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4077
+    [id] => 4077
+    [1] => 246
+    [userid] => 246
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-11-21
+    [date] => 2017-11-21
+    [4] => 2017-11-28
+    [duedate] => 2017-11-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 246
+    [id] => 246
+    [uuid] => a41c4962-5c2a-4cce-8e7a-af9d99f8aca5
+    [firstname] => Danilo
+    [lastname] => de Almeida Silami
+    [fullname] => Danilo de Almeida Silami
+    [companyname] => Associação de Ex Alunos e Moradores da República Verdes Mares
+    [email] => carnavalverdesmares@gmail.com
+    [address1] =>  Praça Juvenal Santos – 34
+    [address2] => Pilar
+    [city] => Ouro Preto
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 35412-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (31) 3551-1264
+    [password] => $2y$10$Pg/pqtAV6cEWlgfTkE17We.fP7GSgI8RETVB0btCMcZPnAf2SRB9K
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3135511264
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 12/12/2017 14:11<br>IP Address: 177.99.119.101<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4077
+    [id] => 4077
+    [1] => 246
+    [userid] => 246
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-11-21
+    [date] => 2017-11-21
+    [4] => 2017-11-28
+    [duedate] => 2017-11-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 246
+    [id] => 246
+    [uuid] => a41c4962-5c2a-4cce-8e7a-af9d99f8aca5
+    [firstname] => Danilo
+    [lastname] => de Almeida Silami
+    [fullname] => Danilo de Almeida Silami
+    [companyname] => Associação de Ex Alunos e Moradores da República Verdes Mares
+    [email] => carnavalverdesmares@gmail.com
+    [address1] =>  Praça Juvenal Santos – 34
+    [address2] => Pilar
+    [city] => Ouro Preto
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 35412-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (31) 3551-1264
+    [password] => $2y$10$Pg/pqtAV6cEWlgfTkE17We.fP7GSgI8RETVB0btCMcZPnAf2SRB9K
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3135511264
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 12/12/2017 14:15<br>IP Address: 177.99.119.101<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4077
+    [id] => 4077
+    [1] => 246
+    [userid] => 246
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-11-21
+    [date] => 2017-11-21
+    [4] => 2017-11-28
+    [duedate] => 2017-11-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 246
+    [id] => 246
+    [uuid] => a41c4962-5c2a-4cce-8e7a-af9d99f8aca5
+    [firstname] => Danilo
+    [lastname] => de Almeida Silami
+    [fullname] => Danilo de Almeida Silami
+    [companyname] => Associação de Ex Alunos e Moradores da República Verdes Mares
+    [email] => carnavalverdesmares@gmail.com
+    [address1] =>  Praça Juvenal Santos – 34
+    [address2] => Pilar
+    [city] => Ouro Preto
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 35412-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (31) 3551-1264
+    [password] => $2y$10$IejjJ/9VVtooKG4Kn88uGebXAbTzngwNPD6PhmAR4B8vVRNNTXl1C
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3135511264
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 12/12/2017 19:19<br>IP Address: 170.239.220.188<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4077
+    [id] => 4077
+    [1] => 246
+    [userid] => 246
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-11-21
+    [date] => 2017-11-21
+    [4] => 2017-11-28
+    [duedate] => 2017-11-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 246
+    [id] => 246
+    [uuid] => a41c4962-5c2a-4cce-8e7a-af9d99f8aca5
+    [firstname] => Danilo
+    [lastname] => de Almeida Silami
+    [fullname] => Danilo de Almeida Silami
+    [companyname] => Associação de Ex Alunos e Moradores da República Verdes Mares
+    [email] => carnavalverdesmares@gmail.com
+    [address1] =>  Praça Juvenal Santos – 34
+    [address2] => Pilar
+    [city] => Ouro Preto
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 35412-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (31) 3551-1264
+    [password] => $2y$10$IejjJ/9VVtooKG4Kn88uGebXAbTzngwNPD6PhmAR4B8vVRNNTXl1C
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3135511264
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 12/12/2017 19:22<br>IP Address: 170.239.220.188<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11969018000112
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 11969018000112
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4077
+    [id] => 4077
+    [1] => 246
+    [userid] => 246
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-11-21
+    [date] => 2017-11-21
+    [4] => 2017-11-28
+    [duedate] => 2017-11-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 246
+    [id] => 246
+    [uuid] => a41c4962-5c2a-4cce-8e7a-af9d99f8aca5
+    [firstname] => Danilo
+    [lastname] => de Almeida Silami
+    [fullname] => Danilo de Almeida Silami
+    [companyname] => Associação de Ex Alunos e Moradores da República Verdes Mares
+    [email] => carnavalverdesmares@gmail.com
+    [address1] =>  Praça Juvenal Santos – 34
+    [address2] => Pilar
+    [city] => Ouro Preto
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 35412-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (31) 3551-1264
+    [password] => $2y$10$IejjJ/9VVtooKG4Kn88uGebXAbTzngwNPD6PhmAR4B8vVRNNTXl1C
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3135511264
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 12/12/2017 19:26<br>IP Address: 170.239.220.188<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11969018000112
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 11969018000112
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4077
+    [id] => 4077
+    [1] => 246
+    [userid] => 246
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-11-21
+    [date] => 2017-11-21
+    [4] => 2017-11-28
+    [duedate] => 2017-11-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 246
+    [id] => 246
+    [uuid] => a41c4962-5c2a-4cce-8e7a-af9d99f8aca5
+    [firstname] => Danilo
+    [lastname] => de Almeida Silami
+    [fullname] => Danilo de Almeida Silami
+    [companyname] => Associação de Ex Alunos e Moradores da República Verdes Mares
+    [email] => carnavalverdesmares@gmail.com
+    [address1] =>  Praça Juvenal Santos – 34
+    [address2] => Pilar
+    [city] => Ouro Preto
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 35412-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (31) 3551-1264
+    [password] => $2y$10$IejjJ/9VVtooKG4Kn88uGebXAbTzngwNPD6PhmAR4B8vVRNNTXl1C
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3135511264
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 12/12/2017 19:27<br>IP Address: 170.239.220.188<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11969018000112
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 11969018000112
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4077
+    [id] => 4077
+    [1] => 246
+    [userid] => 246
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-11-21
+    [date] => 2017-11-21
+    [4] => 2017-11-28
+    [duedate] => 2017-11-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 246
+    [id] => 246
+    [uuid] => a41c4962-5c2a-4cce-8e7a-af9d99f8aca5
+    [firstname] => Danilo
+    [lastname] => de Almeida Silami
+    [fullname] => Danilo de Almeida Silami
+    [companyname] => Associação de Ex Alunos e Moradores da República Verdes Mares
+    [email] => carnavalverdesmares@gmail.com
+    [address1] =>  Praça Juvenal Santos – 34
+    [address2] => Pilar
+    [city] => Ouro Preto
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 35412-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (31) 3551-1264
+    [password] => $2y$10$IejjJ/9VVtooKG4Kn88uGebXAbTzngwNPD6PhmAR4B8vVRNNTXl1C
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3135511264
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 12/12/2017 19:50<br>IP Address: 191.5.88.228<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11969018000112
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 11969018000112
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

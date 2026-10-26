@@ -1,0 +1,412 @@
+
+Dados Invoice
+<pre>Array
+(
+    [id] => 6695
+    [0] => 6695
+    [userid] => 378
+    [1] => 378
+    [invoicenum] => 
+    [2] => 
+    [date] => 2019-10-22
+    [3] => 2019-10-22
+    [duedate] => 2019-10-23
+    [4] => 2019-10-23
+    [datepaid] => 0000-00-00 00:00:00
+    [5] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [subtotal] => 19.98
+    [7] => 19.98
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 0.00
+    [total] => 19.98
+    [11] => 19.98
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => 0.00
+    [status] => Unpaid
+    [14] => Unpaid
+    [paymentmethod] => mercadopago
+    [15] => mercadopago
+    [paymethodid] => 
+    [16] => 
+    [notes] => 
+    [17] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 378
+    [id] => 378
+    [uuid] => 38a1c046-4919-42d3-880a-2ad7967aef15
+    [firstname] => Primeiro Nome
+    [lastname] => Sobrenome	
+    [companyname] => Nome da Empresa
+    [email] => deljdl@hotmail.com
+    [address1] => Endereço 1
+    [address2] => Endereço 2
+    [city] => Cidade
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07417160
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146550330
+    [tax_id] => 
+    [password] => $2y$10$hk6a.A0lmQwduhbShdN8GuvxNCXWAA2kTP48sOvALsEaSz2XSvUI.
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                    [passwordResetKeyExpiryDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                    [2] => passwordResetKeyExpiryDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                    [2] => groupName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 378
+                    [uuid] => 38a1c046-4919-42d3-880a-2ad7967aef15
+                    [firstname] => Primeiro Nome
+                    [lastname] => Sobrenome	
+                    [companyname] => Nome da Empresa
+                    [email] => deljdl@hotmail.com
+                    [address1] => Endereço 1
+                    [address2] => Endereço 2
+                    [city] => Cidade
+                    [state] => SP
+                    [postcode] => 07417160
+                    [country] => BR
+                    [phonenumber] => +55.11 4655-0330
+                    [tax_id] => 
+                    [password] => $2y$10$hk6a.A0lmQwduhbShdN8GuvxNCXWAA2kTP48sOvALsEaSz2XSvUI.
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2019-09-20
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => DJfOBEo4KhPA8FwVnP8KI99BRTI=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-22 12:56:13
+                    [ip] => 187.22.184.159
+                    [host] => bb16b89f.virtua.com.br
+                    [status] => Inactive
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 1
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2019-10-09 23:16:27
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 378
+                    [uuid] => 38a1c046-4919-42d3-880a-2ad7967aef15
+                    [firstname] => Primeiro Nome
+                    [lastname] => Sobrenome	
+                    [companyname] => Nome da Empresa
+                    [email] => deljdl@hotmail.com
+                    [address1] => Endereço 1
+                    [address2] => Endereço 2
+                    [city] => Cidade
+                    [state] => SP
+                    [postcode] => 07417160
+                    [country] => BR
+                    [phonenumber] => +55.11 4655-0330
+                    [tax_id] => 
+                    [password] => $2y$10$hk6a.A0lmQwduhbShdN8GuvxNCXWAA2kTP48sOvALsEaSz2XSvUI.
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2019-09-20
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => DJfOBEo4KhPA8FwVnP8KI99BRTI=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-22 12:56:13
+                    [ip] => 187.22.184.159
+                    [host] => bb16b89f.virtua.com.br
+                    [status] => Inactive
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 1
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2019-10-09 23:16:27
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [fullname] => Primeiro Nome Sobrenome	
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146550330
+    [telephoneNumber] => +55.1146550330
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 1
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 
+    [lastlogin] => Date: 22/10/2019 12:56<br>IP Address: 187.22.184.159<br>Host: bb16b89f.virtua.com.br
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11985691184
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29466511858
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11985691184
+    [customfields3] => 29466511858
+    [customfields4] => 
+)
+</pre>

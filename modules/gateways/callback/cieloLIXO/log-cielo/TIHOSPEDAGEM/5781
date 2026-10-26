@@ -1,0 +1,647 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5781
+    [id] => 5781
+    [1] => 193
+    [userid] => 193
+    [2] => 
+    [invoicenum] => 
+    [3] => 2019-02-13
+    [date] => 2019-02-13
+    [4] => 2019-02-20
+    [duedate] => 2019-02-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 65.99
+    [subtotal] => 65.99
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 65.99
+    [total] => 65.99
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => cielo
+    [paymentmethod] => cielo
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 193
+    [id] => 193
+    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+    [firstname] => Victor 
+    [lastname] => Valentino Araujo dos Santos
+    [fullname] => Victor  Valentino Araujo dos Santos
+    [companyname] => NewTech Consultoria em Tecnologia
+    [email] => victor.araujo@ntc.com.vc
+    [address1] => Rua Casa Grande, 186
+    [address2] => Jardim Silvestre
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-440
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146488700
+    [password] => $2y$10$FuEboA8bWKiSqVtdZqb6QeM5LrWBDg5kq3sski/E7sQ5Og0NSQXgC
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 193
+                    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+                    [firstname] => Victor 
+                    [lastname] => Valentino Araujo dos Santos
+                    [companyname] => NewTech Consultoria em Tecnologia
+                    [email] => victor.araujo@ntc.com.vc
+                    [address1] => Rua Casa Grande, 186
+                    [address2] => Jardim Silvestre
+                    [city] => Itaquaquecetuba
+                    [state] => SP
+                    [postcode] => 08584-440
+                    [country] => BR
+                    [phonenumber] =>  (11) 4648-8700
+                    [password] => $2y$10$FuEboA8bWKiSqVtdZqb6QeM5LrWBDg5kq3sski/E7sQ5Og0NSQXgC
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2016-03-07
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => rP9nyfheaB+ImMKB8QZhU9sbblA=
+                    [groupid] => 1
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-03-19 09:04:25
+                    [ip] => 138.94.20.45
+                    [host] => 138.94.20.45
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2018-10-22 19:19:44
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 193
+                    [uuid] => 0ab902dd-4d96-4621-8be1-8dda7772f01b
+                    [firstname] => Victor 
+                    [lastname] => Valentino Araujo dos Santos
+                    [companyname] => NewTech Consultoria em Tecnologia
+                    [email] => victor.araujo@ntc.com.vc
+                    [address1] => Rua Casa Grande, 186
+                    [address2] => Jardim Silvestre
+                    [city] => Itaquaquecetuba
+                    [state] => SP
+                    [postcode] => 08584-440
+                    [country] => BR
+                    [phonenumber] =>  (11) 4648-8700
+                    [password] => $2y$10$FuEboA8bWKiSqVtdZqb6QeM5LrWBDg5kq3sski/E7sQ5Og0NSQXgC
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2016-03-07
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => rP9nyfheaB+ImMKB8QZhU9sbblA=
+                    [groupid] => 1
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-03-19 09:04:25
+                    [ip] => 138.94.20.45
+                    [host] => 138.94.20.45
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2018-10-22 19:19:44
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146488700
+    [telephoneNumber] => +55.1146488700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 1
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 19/03/2019 09:04<br>IP Address: 138.94.20.45<br>Host: 138.94.20.45
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947244983
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 18.674.038/0001-05
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 20
+                )
+
+        )
+
+    [customfields2] => 11947244983
+    [customfields3] => 18.674.038/0001-05
+    [customfields4] => 20
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5781
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - regianeboppre.com.br (20/02/2019 - 19/03/2019)
+                            [Description] => TIH - Especial - regianeboppre.com.br (20/02/2019 - 19/03/2019)
+                            [UnitPrice] => 6599
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 660
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 27 dias de atraso
+                            [Description] => Juros por 27 dias de atraso
+                            [UnitPrice] => 588
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Victor  Valentino Araujo dos Santos
+            [Email] => victor.araujo@ntc.com.vc
+            [Identity] => 18674038000105
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5781
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Especial - regianeboppre.com.br (20/02/2019 - 19/03/2019)
+                            [description] => TIH - Especial - regianeboppre.com.br (20/02/2019 - 19/03/2019)
+                            [unitPrice] => 6599
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 660
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [$id] => 6
+                            [name] => Juros por 27 dias de atraso
+                            [description] => Juros por 27 dias de atraso
+                            [unitPrice] => 588
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 7
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 18674038000105
+            [fullName] => Victor  Valentino Araujo dos Santos
+            [email] => victor.araujo@ntc.com.vc
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/c81970e8-70e7-4ac5-a9e8-bb0cae19f72a
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+19/03/2019 9:39:05
+INICIO_______________________________________________________________LOG:BEGIN:::19/03/2019 9:05<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 5781
+    [amount] => 7847
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 6b99c53309b74d5280c9b34506ccecac
+    [created_date] => 19/03/2019 09:05:35
+    [customer_name] => Victor Santos
+    [customer_phone] => 11947244983
+    [customer_identity] => 18674038000105
+    [customer_email] => victor.araujo@ntc.com.vc
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552693******1209
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 1076077762886KV5GF5B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+19/03/2019 9:42:05
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->5781 | Result->success | ValorPago ->65.99 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 5781
+    [amount] => 7847
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 6b99c53309b74d5280c9b34506ccecac
+    [created_date] => 19/03/2019 09:05:35
+    [customer_name] => Victor Santos
+    [customer_phone] => 11947244983
+    [customer_identity] => 18674038000105
+    [customer_email] => victor.araujo@ntc.com.vc
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552693******1209
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 1076077762886KV5GF5B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+19/03/2019 9:52:14
+INICIO_______________________________________________________________LOG:BEGIN:::19/03/2019 9:14<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 6b99c53309b74d5280c9b34506ccecac
+    [amount] => 7847
+    [order_number] => 5781
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+19/03/2019 9:52:14
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 6b99c53309b74d5280c9b34506ccecac
+    [amount] => 7847
+    [order_number] => 5781
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

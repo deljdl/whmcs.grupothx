@@ -1,0 +1,1722 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5198
+    [id] => 5198
+    [1] => 213
+    [userid] => 213
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-13
+    [date] => 2018-09-13
+    [4] => 2018-09-20
+    [duedate] => 2018-09-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 340.00
+    [subtotal] => 340.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 340.00
+    [total] => 340.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 213
+    [id] => 213
+    [uuid] => eec8d1e0-13de-49a3-9730-8d4406419ffd
+    [firstname] => Vinicius
+    [lastname] => Zabotto
+    [fullname] => Vinicius Zabotto
+    [companyname] => MARCO ANTONO CURSINI ME
+    [email] => adm@pesqueiroaruja.com.br
+    [address1] => Estradas das Canjicas, 980
+    [address2] => Peinha
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07432-575
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137066400 - 11995518923
+    [password] => $2y$10$h8m6XIYI8TR3KGXiqk1pceRR2qVa2GBQNzhXkoVtY5mMx4EwQmON2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113706640011995518923
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/09/2018 09:06<br>IP Address: 152.250.243.195<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995518923
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.759.063/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995518923
+    [customfields3] => 11.759.063/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5198
+    [id] => 5198
+    [1] => 213
+    [userid] => 213
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-13
+    [date] => 2018-09-13
+    [4] => 2018-09-20
+    [duedate] => 2018-09-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 340.00
+    [subtotal] => 340.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 340.00
+    [total] => 340.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 213
+    [id] => 213
+    [uuid] => eec8d1e0-13de-49a3-9730-8d4406419ffd
+    [firstname] => Vinicius
+    [lastname] => Zabotto
+    [fullname] => Vinicius Zabotto
+    [companyname] => MARCO ANTONO CURSINI ME
+    [email] => adm@pesqueiroaruja.com.br
+    [address1] => Estradas das Canjicas, 980
+    [address2] => Peinha
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07432-575
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137066400 - 11995518923
+    [password] => $2y$10$h8m6XIYI8TR3KGXiqk1pceRR2qVa2GBQNzhXkoVtY5mMx4EwQmON2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113706640011995518923
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/09/2018 09:06<br>IP Address: 152.250.243.195<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995518923
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.759.063/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995518923
+    [customfields3] => 11.759.063/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5198
+    [id] => 5198
+    [1] => 213
+    [userid] => 213
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-13
+    [date] => 2018-09-13
+    [4] => 2018-09-20
+    [duedate] => 2018-09-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 340.00
+    [subtotal] => 340.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 340.00
+    [total] => 340.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 213
+    [id] => 213
+    [uuid] => eec8d1e0-13de-49a3-9730-8d4406419ffd
+    [firstname] => Vinicius
+    [lastname] => Zabotto
+    [fullname] => Vinicius Zabotto
+    [companyname] => MARCO ANTONO CURSINI ME
+    [email] => adm@pesqueiroaruja.com.br
+    [address1] => Estradas das Canjicas, 980
+    [address2] => Peinha
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07432-575
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137066400 - 11995518923
+    [password] => $2y$10$h8m6XIYI8TR3KGXiqk1pceRR2qVa2GBQNzhXkoVtY5mMx4EwQmON2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113706640011995518923
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/09/2018 09:07<br>IP Address: 152.250.243.195<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995518923
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.759.063/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995518923
+    [customfields3] => 11.759.063/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5198
+    [id] => 5198
+    [1] => 213
+    [userid] => 213
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-13
+    [date] => 2018-09-13
+    [4] => 2018-09-20
+    [duedate] => 2018-09-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 340.00
+    [subtotal] => 340.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 340.00
+    [total] => 340.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 213
+    [id] => 213
+    [uuid] => eec8d1e0-13de-49a3-9730-8d4406419ffd
+    [firstname] => Vinicius
+    [lastname] => Zabotto
+    [fullname] => Vinicius Zabotto
+    [companyname] => MARCO ANTONO CURSINI ME
+    [email] => adm@pesqueiroaruja.com.br
+    [address1] => Estradas das Canjicas, 980
+    [address2] => Peinha
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07432-575
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137066400 - 11995518923
+    [password] => $2y$10$h8m6XIYI8TR3KGXiqk1pceRR2qVa2GBQNzhXkoVtY5mMx4EwQmON2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113706640011995518923
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/09/2018 09:07<br>IP Address: 152.250.243.195<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995518923
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.759.063/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995518923
+    [customfields3] => 11.759.063/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5198
+    [id] => 5198
+    [1] => 213
+    [userid] => 213
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-13
+    [date] => 2018-09-13
+    [4] => 2018-09-20
+    [duedate] => 2018-09-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 340.00
+    [subtotal] => 340.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 340.00
+    [total] => 340.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 213
+    [id] => 213
+    [uuid] => eec8d1e0-13de-49a3-9730-8d4406419ffd
+    [firstname] => Vinicius
+    [lastname] => Zabotto
+    [fullname] => Vinicius Zabotto
+    [companyname] => MARCO ANTONO CURSINI ME
+    [email] => adm@pesqueiroaruja.com.br
+    [address1] => Estradas das Canjicas, 980
+    [address2] => Peinha
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07432-575
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137066400 - 11995518923
+    [password] => $2y$10$h8m6XIYI8TR3KGXiqk1pceRR2qVa2GBQNzhXkoVtY5mMx4EwQmON2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113706640011995518923
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/09/2018 09:08<br>IP Address: 152.250.243.195<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995518923
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.759.063/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995518923
+    [customfields3] => 11.759.063/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5198
+    [id] => 5198
+    [1] => 213
+    [userid] => 213
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-13
+    [date] => 2018-09-13
+    [4] => 2018-09-20
+    [duedate] => 2018-09-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 340.00
+    [subtotal] => 340.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 340.00
+    [total] => 340.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 213
+    [id] => 213
+    [uuid] => eec8d1e0-13de-49a3-9730-8d4406419ffd
+    [firstname] => Vinicius
+    [lastname] => Zabotto
+    [fullname] => Vinicius Zabotto
+    [companyname] => MARCO ANTONO CURSINI ME
+    [email] => adm@pesqueiroaruja.com.br
+    [address1] => Estradas das Canjicas, 980
+    [address2] => Peinha
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07432-575
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137066400 - 11995518923
+    [password] => $2y$10$h8m6XIYI8TR3KGXiqk1pceRR2qVa2GBQNzhXkoVtY5mMx4EwQmON2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113706640011995518923
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/09/2018 09:08<br>IP Address: 152.250.243.195<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995518923
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.759.063/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995518923
+    [customfields3] => 11.759.063/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5198
+    [id] => 5198
+    [1] => 213
+    [userid] => 213
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-13
+    [date] => 2018-09-13
+    [4] => 2018-09-20
+    [duedate] => 2018-09-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 340.00
+    [subtotal] => 340.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 340.00
+    [total] => 340.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 213
+    [id] => 213
+    [uuid] => eec8d1e0-13de-49a3-9730-8d4406419ffd
+    [firstname] => Vinicius
+    [lastname] => Zabotto
+    [fullname] => Vinicius Zabotto
+    [companyname] => MARCO ANTONO CURSINI ME
+    [email] => adm@pesqueiroaruja.com.br
+    [address1] => Estradas das Canjicas, 980
+    [address2] => Peinha
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07432-575
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137066400 - 11995518923
+    [password] => $2y$10$h8m6XIYI8TR3KGXiqk1pceRR2qVa2GBQNzhXkoVtY5mMx4EwQmON2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113706640011995518923
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/09/2018 09:11<br>IP Address: 152.250.243.195<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995518923
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.759.063/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995518923
+    [customfields3] => 11.759.063/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5198
+    [id] => 5198
+    [1] => 213
+    [userid] => 213
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-13
+    [date] => 2018-09-13
+    [4] => 2018-09-20
+    [duedate] => 2018-09-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 340.00
+    [subtotal] => 340.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 340.00
+    [total] => 340.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 213
+    [id] => 213
+    [uuid] => eec8d1e0-13de-49a3-9730-8d4406419ffd
+    [firstname] => Vinicius
+    [lastname] => Zabotto
+    [fullname] => Vinicius Zabotto
+    [companyname] => MARCO ANTONO CURSINI ME
+    [email] => adm@pesqueiroaruja.com.br
+    [address1] => Estradas das Canjicas, 980
+    [address2] => Peinha
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07432-575
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137066400 - 11995518923
+    [password] => $2y$10$h8m6XIYI8TR3KGXiqk1pceRR2qVa2GBQNzhXkoVtY5mMx4EwQmON2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113706640011995518923
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/09/2018 09:18<br>IP Address: 168.227.12.171<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995518923
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.759.063/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995518923
+    [customfields3] => 11.759.063/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5198
+    [id] => 5198
+    [1] => 213
+    [userid] => 213
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-13
+    [date] => 2018-09-13
+    [4] => 2018-09-20
+    [duedate] => 2018-09-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 340.00
+    [subtotal] => 340.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 340.00
+    [total] => 340.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 213
+    [id] => 213
+    [uuid] => eec8d1e0-13de-49a3-9730-8d4406419ffd
+    [firstname] => Vinicius
+    [lastname] => Zabotto
+    [fullname] => Vinicius Zabotto
+    [companyname] => MARCO ANTONO CURSINI ME
+    [email] => adm@pesqueiroaruja.com.br
+    [address1] => Estradas das Canjicas, 980
+    [address2] => Peinha
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07432-575
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137066400 - 11995518923
+    [password] => $2y$10$h8m6XIYI8TR3KGXiqk1pceRR2qVa2GBQNzhXkoVtY5mMx4EwQmON2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113706640011995518923
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/09/2018 09:21<br>IP Address: 168.227.12.171<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995518923
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.759.063/0001-42
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995518923
+    [customfields3] => 11.759.063/0001-42
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5198
+    [id] => 5198
+    [1] => 213
+    [userid] => 213
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-13
+    [date] => 2018-09-13
+    [4] => 2018-09-20
+    [duedate] => 2018-09-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 340.00
+    [subtotal] => 340.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 340.00
+    [total] => 340.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 213
+    [id] => 213
+    [uuid] => eec8d1e0-13de-49a3-9730-8d4406419ffd
+    [firstname] => Vinicius
+    [lastname] => Zabotto
+    [fullname] => Vinicius Zabotto
+    [companyname] => MARCO ANTONO CURSINI ME
+    [email] => adm@pesqueiroaruja.com.br
+    [address1] => Estradas das Canjicas, 980
+    [address2] => Peinha
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07432-575
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137066400 - 11995518923
+    [password] => $2y$10$h8m6XIYI8TR3KGXiqk1pceRR2qVa2GBQNzhXkoVtY5mMx4EwQmON2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113706640011995518923
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/09/2018 08:56<br>IP Address: 152.250.243.195<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995518923
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.759.063/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995518923
+    [customfields3] => 11.759.063/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5198
+    [id] => 5198
+    [1] => 213
+    [userid] => 213
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-13
+    [date] => 2018-09-13
+    [4] => 2018-09-20
+    [duedate] => 2018-09-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 340.00
+    [subtotal] => 340.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 340.00
+    [total] => 340.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 213
+    [id] => 213
+    [uuid] => eec8d1e0-13de-49a3-9730-8d4406419ffd
+    [firstname] => Vinicius
+    [lastname] => Zabotto
+    [fullname] => Vinicius Zabotto
+    [companyname] => MARCO ANTONO CURSINI ME
+    [email] => adm@pesqueiroaruja.com.br
+    [address1] => Estradas das Canjicas, 980
+    [address2] => Peinha
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07432-575
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137066400 - 11995518923
+    [password] => $2y$10$h8m6XIYI8TR3KGXiqk1pceRR2qVa2GBQNzhXkoVtY5mMx4EwQmON2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113706640011995518923
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/09/2018 09:10<br>IP Address: 152.250.243.195<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995518923
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.759.063/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995518923
+    [customfields3] => 11.759.063/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5198
+    [id] => 5198
+    [1] => 213
+    [userid] => 213
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-13
+    [date] => 2018-09-13
+    [4] => 2018-09-20
+    [duedate] => 2018-09-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 340.00
+    [subtotal] => 340.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 340.00
+    [total] => 340.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 213
+    [id] => 213
+    [uuid] => eec8d1e0-13de-49a3-9730-8d4406419ffd
+    [firstname] => Vinicius
+    [lastname] => Zabotto
+    [fullname] => Vinicius Zabotto
+    [companyname] => MARCO ANTONO CURSINI ME
+    [email] => adm@pesqueiroaruja.com.br
+    [address1] => Estradas das Canjicas, 980
+    [address2] => Peinha
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07432-575
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137066400 - 11995518923
+    [password] => $2y$10$h8m6XIYI8TR3KGXiqk1pceRR2qVa2GBQNzhXkoVtY5mMx4EwQmON2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113706640011995518923
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/09/2018 09:11<br>IP Address: 152.250.243.195<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995518923
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.759.063/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995518923
+    [customfields3] => 11.759.063/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5198
+    [id] => 5198
+    [1] => 213
+    [userid] => 213
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-13
+    [date] => 2018-09-13
+    [4] => 2018-09-20
+    [duedate] => 2018-09-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 340.00
+    [subtotal] => 340.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 340.00
+    [total] => 340.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 213
+    [id] => 213
+    [uuid] => eec8d1e0-13de-49a3-9730-8d4406419ffd
+    [firstname] => Vinicius
+    [lastname] => Zabotto
+    [fullname] => Vinicius Zabotto
+    [companyname] => MARCO ANTONO CURSINI ME
+    [email] => adm@pesqueiroaruja.com.br
+    [address1] => Estradas das Canjicas, 980
+    [address2] => Peinha
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07432-575
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137066400 - 11995518923
+    [password] => $2y$10$h8m6XIYI8TR3KGXiqk1pceRR2qVa2GBQNzhXkoVtY5mMx4EwQmON2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113706640011995518923
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/09/2018 09:24<br>IP Address: 152.250.243.195<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995518923
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.759.063/0001-43
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995518923
+    [customfields3] => 11.759.063/0001-43
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5198
+    [id] => 5198
+    [1] => 213
+    [userid] => 213
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-13
+    [date] => 2018-09-13
+    [4] => 2018-09-20
+    [duedate] => 2018-09-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 340.00
+    [subtotal] => 340.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 340.00
+    [total] => 340.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 213
+    [id] => 213
+    [uuid] => eec8d1e0-13de-49a3-9730-8d4406419ffd
+    [firstname] => Vinicius
+    [lastname] => Zabotto
+    [fullname] => Vinicius Zabotto
+    [companyname] => MARCO ANTONO CURSINI ME
+    [email] => adm@pesqueiroaruja.com.br
+    [address1] => Estradas das Canjicas, 980
+    [address2] => Peinha
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07432-575
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1137066400 - 11995518923
+    [password] => $2y$10$h8m6XIYI8TR3KGXiqk1pceRR2qVa2GBQNzhXkoVtY5mMx4EwQmON2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113706640011995518923
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/09/2018 09:29<br>IP Address: 168.227.12.116<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995518923
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.759.063/0001-42
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11995518923
+    [customfields3] => 11.759.063/0001-42
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

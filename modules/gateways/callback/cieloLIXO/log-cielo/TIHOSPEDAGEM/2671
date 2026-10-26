@@ -1,0 +1,460 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2671
+    [id] => 2671
+    [1] => 239
+    [userid] => 239
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-17
+    [date] => 2016-11-17
+    [4] => 2016-11-29
+    [duedate] => 2016-11-29
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 239
+    [id] => 239
+    [uuid] => ae22ba0c-307f-4057-8405-fc6c6c80451f
+    [firstname] => Alcides
+    [lastname] => Dias dos Santos
+    [fullname] => Alcides Dias dos Santos
+    [companyname] => A D S CONSTRUCOES 
+    [email] => a.dias.santos1958@uol.com.br
+    [address1] => Rua Serra Acarai, 167
+    [address2] => Casa A
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08581-070
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11957673151
+    [password] => $2y$10$gDexAoc4bsTBthQD4aDfM.5GuiCMaArEJwuKjc88dBzyO4kPCfreC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11957673151
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 29/11/2016 08:23<br>IP Address: 201.1.71.150<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957673151
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 151.651.403-34
+                )
+
+        )
+
+    [customfields2] => 11957673151
+    [customfields3] => 151.651.403-34
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2671
+    [SoftDescriptor] => 2671
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - addossantosconstrucoes.com (24/11/2016 - 23/12/2016)
+                            [Description] => TIH - Master - addossantosconstrucoes.com (24/11/2016 - 23/12/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002671
+            [FullName] => Alcides Dias dos Santos
+            [Email] => a.dias.santos1958@uol.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2671
+    [softDescriptor] => 2671
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - addossantosconstrucoes.com (24/11/2016 - 23/12/2016)
+                            [description] => TIH - Master - addossantosconstrucoes.com (24/11/2016 - 23/12/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002671
+            [fullName] => Alcides Dias dos Santos
+            [email] => a.dias.santos1958@uol.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/52e29192-1d12-424d-a7b6-0cf909cdadcf
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2671
+    [id] => 2671
+    [1] => 239
+    [userid] => 239
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-17
+    [date] => 2016-11-17
+    [4] => 2016-11-29
+    [duedate] => 2016-11-29
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 239
+    [id] => 239
+    [uuid] => ae22ba0c-307f-4057-8405-fc6c6c80451f
+    [firstname] => Alcides
+    [lastname] => Dias dos Santos
+    [fullname] => Alcides Dias dos Santos
+    [companyname] => A D S CONSTRUCOES 
+    [email] => a.dias.santos1958@uol.com.br
+    [address1] => Rua Serra Acarai, 167
+    [address2] => Casa A
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08581-070
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11957673151
+    [password] => $2y$10$gDexAoc4bsTBthQD4aDfM.5GuiCMaArEJwuKjc88dBzyO4kPCfreC
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11957673151
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 29/11/2016 08:57<br>IP Address: 201.1.71.150<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957673151
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 151.651.403-34
+                )
+
+        )
+
+    [customfields2] => 11957673151
+    [customfields3] => 151.651.403-34
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2671
+    [SoftDescriptor] => 2671
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - addossantosconstrucoes.com (24/11/2016 - 23/12/2016)
+                            [Description] => TIH - Master - addossantosconstrucoes.com (24/11/2016 - 23/12/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002671
+            [FullName] => Alcides Dias dos Santos
+            [Email] => a.dias.santos1958@uol.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2671
+    [softDescriptor] => 2671
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - addossantosconstrucoes.com (24/11/2016 - 23/12/2016)
+                            [description] => TIH - Master - addossantosconstrucoes.com (24/11/2016 - 23/12/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002671
+            [fullName] => Alcides Dias dos Santos
+            [email] => a.dias.santos1958@uol.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/7e61a295-ad04-4cc8-bccd-15cb8770f3ac
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

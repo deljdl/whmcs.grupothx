@@ -1,0 +1,325 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5001
+    [id] => 5001
+    [1] => 4
+    [userid] => 4
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-25
+    [date] => 2018-07-25
+    [4] => 2018-08-01
+    [duedate] => 2018-08-01
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 359.64
+    [subtotal] => 359.64
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 359.64
+    [total] => 359.64
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 4
+    [id] => 4
+    [uuid] => e08aadfd-b411-45b2-96e9-772bf034877a
+    [firstname] => Marcio
+    [lastname] => Chagas
+    [fullname] => Marcio Chagas
+    [companyname] => Buffet AbcKids
+    [email] => contato@abckidsbuffet.com.br
+    [address1] => Av. 31 de Março, 2249
+    [address2] => Vila Flórida
+    [city] => São Bernardo do Campo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09660-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 3424-8710  (11) 4361-6328  (11) 3445-6700
+    [password] => 7e14413655b0af14a0d03c73d265263c:z(uMp
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113424871011436163281134456700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 359.64
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/07/2018 09:46<br>IP Address: 191.182.29.189<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11956551782
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 08.961.479/0001-34
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11956551782
+    [customfields3] => 08.961.479/0001-34
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5001
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - buffetabckids.com.br (01/08/2018 - 31/07/2019)
+                            [Description] => TIH - Master  - buffetabckids.com.br (01/08/2018 - 31/07/2019)
+                            [UnitPrice] => 35964
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Marcio Chagas
+            [Email] => contato@abckidsbuffet.com.br
+            [Identity] => 08961479000134
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5001
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Master  - buffetabckids.com.br (01/08/2018 - 31/07/2019)
+                            [description] => TIH - Master  - buffetabckids.com.br (01/08/2018 - 31/07/2019)
+                            [unitPrice] => 35964
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 08961479000134
+            [fullName] => Marcio Chagas
+            [email] => contato@abckidsbuffet.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/f4e2c5c2-761d-46ce-9ece-e8ea8e27d977
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+25/07/2018 9:53:48
+INICIO_______________________________________________________________LOG:BEGIN:::25/07/2018 9:48<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 5001
+    [amount] => 35964
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 60b08142963b4a6092729bd442173613
+    [created_date] => 25/07/2018 09:48:50
+    [customer_name] => Marcio Chagas
+    [customer_phone] => 11981276199
+    [customer_identity] => 08961479000134
+    [customer_email] => contato@abckidsbuffet.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 553645******5018
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627EQJSB6T7B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/07/2018 9:54:48
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->5001 | Result->success | ValorPago ->359.64 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 5001
+    [amount] => 35964
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 60b08142963b4a6092729bd442173613
+    [created_date] => 25/07/2018 09:48:50
+    [customer_name] => Marcio Chagas
+    [customer_phone] => 11981276199
+    [customer_identity] => 08961479000134
+    [customer_email] => contato@abckidsbuffet.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 553645******5018
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627EQJSB6T7B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/07/2018 9:20:56
+INICIO_______________________________________________________________LOG:BEGIN:::25/07/2018 9:56<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 60b08142963b4a6092729bd442173613
+    [amount] => 35964
+    [order_number] => 5001
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+25/07/2018 9:20:56
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 60b08142963b4a6092729bd442173613
+    [amount] => 35964
+    [order_number] => 5001
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

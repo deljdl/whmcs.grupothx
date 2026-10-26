@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5175
+    [id] => 5175
+    [1] => 118
+    [userid] => 118
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-05
+    [date] => 2018-09-05
+    [4] => 2018-09-12
+    [duedate] => 2018-09-12
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 55.00
+    [subtotal] => 55.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 55.00
+    [total] => 55.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 118
+    [id] => 118
+    [uuid] => df9c8d76-65f7-43f3-a9aa-43ba043095da
+    [firstname] => Fátima 
+    [lastname] => Campos
+    [fullname] => Fátima  Campos
+    [companyname] => Angela Maria de Oliveira Cabeleireiros
+    [email] => contato@victoriasbeautyhair.com.br
+    [address1] => R. Édison, 310
+    [address2] => Campo Belo
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04618-031
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 5042.1944 | 5093.4602
+    [password] => 17d97b25da6c5c4213e42e175afa491b:m%r)G
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.115042194450934602
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/10/2018 15:19<br>IP Address: 179.208.177.3<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11979970056
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.737.280/0001-31
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11979970056
+    [customfields3] => 11.737.280/0001-31
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

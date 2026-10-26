@@ -1,0 +1,646 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4411
+    [id] => 4411
+    [1] => 94
+    [userid] => 94
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-23
+    [date] => 2018-02-23
+    [4] => 2018-02-23
+    [duedate] => 2018-02-23
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 781.97
+    [subtotal] => 781.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 781.97
+    [total] => 781.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 94
+    [id] => 94
+    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+    [firstname] => Dulce
+    [lastname] => Naves
+    [fullname] => Dulce Naves
+    [companyname] => Sítio Lagoa da Serra
+    [email] => lagoadaserra1@hotmail.com
+    [address1] => Estrada das Maciéis, 112
+    [address2] => Embu Mirim
+    [city] => Itapecerica da Serra
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4666 - 2408
+    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146662408
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 23/02/2018 14:43<br>IP Address: 177.99.116.33<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4411
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express - sitiolagoadaserra.com.br
+Prazo de entrega: Prazo de entrega 10 dias
+                            [Description] => Site Express - sitiolagoadaserra.com.br
+Prazo de entrega: Prazo de entrega 10 dias
+                            [UnitPrice] => 74900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - sitiolagoadaserra.com.br (23/02/2018 - 22/03/2018)
+                            [Description] => TIH - Master  - sitiolagoadaserra.com.br (23/02/2018 - 22/03/2018)
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Dulce Naves
+            [Email] => lagoadaserra1@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4411
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Site Express - sitiolagoadaserra.com.br
+Prazo de entrega: Prazo de entrega 10 dias
+                            [description] => Site Express - sitiolagoadaserra.com.br
+Prazo de entrega: Prazo de entrega 10 dias
+                            [unitPrice] => 74900
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => TIH - Master  - sitiolagoadaserra.com.br (23/02/2018 - 22/03/2018)
+                            [description] => TIH - Master  - sitiolagoadaserra.com.br (23/02/2018 - 22/03/2018)
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 6
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 7
+            [fullName] => Dulce Naves
+            [email] => lagoadaserra1@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 8
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 9
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/f6ea1754-e256-42ca-8f26-8f99c42191f6
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4411
+    [id] => 4411
+    [1] => 94
+    [userid] => 94
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-23
+    [date] => 2018-02-23
+    [4] => 2018-02-27
+    [duedate] => 2018-02-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 749.00
+    [subtotal] => 749.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 749.00
+    [total] => 749.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 94
+    [id] => 94
+    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+    [firstname] => Dulce
+    [lastname] => Naves
+    [fullname] => Dulce Naves
+    [companyname] => Sítio Lagoa da Serra
+    [email] => lagoadaserra1@hotmail.com
+    [address1] => Estrada das Maciéis, 112
+    [address2] => Embu Mirim
+    [city] => Itapecerica da Serra
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4666 - 2408
+    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146662408
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/02/2018 12:10<br>IP Address: 187.71.186.23<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4411
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express - sitiolagoadaserra.com.br
+Prazo de entrega: Prazo de entrega 10 dias
+                            [Description] => Site Express - sitiolagoadaserra.com.br
+Prazo de entrega: Prazo de entrega 10 dias
+                            [UnitPrice] => 74900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Dulce Naves
+            [Email] => lagoadaserra1@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4411
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Site Express - sitiolagoadaserra.com.br
+Prazo de entrega: Prazo de entrega 10 dias
+                            [description] => Site Express - sitiolagoadaserra.com.br
+Prazo de entrega: Prazo de entrega 10 dias
+                            [unitPrice] => 74900
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [fullName] => Dulce Naves
+            [email] => lagoadaserra1@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/2f5e8019-8e7e-46b6-952a-a0da1326fcc2
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+27/02/2018 12:42:13
+INICIO_______________________________________________________________LOG:BEGIN:::27/02/2018 12:13<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 4411
+    [amount] => 74900
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => e2c638b3ab1249b5b0d2d2f131dca080
+    [created_date] => 27/02/2018 12:13:40
+    [customer_name] => Dulce Naves
+    [customer_phone] => 1146662408
+    [customer_identity] => 04498161840
+    [customer_email] => lagoadaserra1@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 526863******2132
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627AH8CLDQKB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/02/2018 12:43:13
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->4411 | Result->success | ValorPago ->749.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 4411
+    [amount] => 74900
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => e2c638b3ab1249b5b0d2d2f131dca080
+    [created_date] => 27/02/2018 12:13:40
+    [customer_name] => Dulce Naves
+    [customer_phone] => 1146662408
+    [customer_identity] => 04498161840
+    [customer_email] => lagoadaserra1@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 526863******2132
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627AH8CLDQKB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/02/2018 12:31:21
+INICIO_______________________________________________________________LOG:BEGIN:::27/02/2018 12:21<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e2c638b3ab1249b5b0d2d2f131dca080
+    [amount] => 74900
+    [order_number] => 4411
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/02/2018 12:31:21
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e2c638b3ab1249b5b0d2d2f131dca080
+    [amount] => 74900
+    [order_number] => 4411
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/02/2018 12:32:21
+INICIO_______________________________________________________________LOG:BEGIN:::27/02/2018 12:21<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e2c638b3ab1249b5b0d2d2f131dca080
+    [amount] => 74900
+    [order_number] => 4411
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/02/2018 12:32:21
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e2c638b3ab1249b5b0d2d2f131dca080
+    [amount] => 74900
+    [order_number] => 4411
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/02/2018 12:32:21
+INICIO_______________________________________________________________LOG:BEGIN:::27/02/2018 12:21<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e2c638b3ab1249b5b0d2d2f131dca080
+    [amount] => 74900
+    [order_number] => 4411
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+27/02/2018 12:32:21
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => e2c638b3ab1249b5b0d2d2f131dca080
+    [amount] => 74900
+    [order_number] => 4411
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

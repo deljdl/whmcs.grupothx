@@ -1,0 +1,492 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4927
+    [id] => 4927
+    [1] => 309
+    [userid] => 309
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-06
+    [date] => 2018-07-06
+    [4] => 2018-07-13
+    [duedate] => 2018-07-13
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 309
+    [id] => 309
+    [uuid] => 55e30fb2-ca5f-486e-b743-f017370ff4a2
+    [firstname] => RAFAEL
+    [lastname] => NUNES DOS PASSOS
+    [fullname] => RAFAEL NUNES DOS PASSOS
+    [companyname] => RVR ACO INOX EIRELI
+    [email] => rafaelnunesdospassos@gmail.com
+    [address1] => R Bocaina de Minas, 46
+    [address2] => Vila Nova Bonsucesso
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07176-230
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1195410-5539
+    [password] => $2y$10$hJnuC.xge3Sxye9m.kUc0.crD6KwwlrHP6DetDDWbkjNmVYFA4NDm
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11954105539
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 11/07/2018 14:25<br>IP Address: 177.206.74.98<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 21.689.887/0001-47
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 21.689.887/0001-47
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4927
+    [id] => 4927
+    [1] => 309
+    [userid] => 309
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-06
+    [date] => 2018-07-06
+    [4] => 2018-07-13
+    [duedate] => 2018-07-13
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 309
+    [id] => 309
+    [uuid] => 55e30fb2-ca5f-486e-b743-f017370ff4a2
+    [firstname] => RAFAEL
+    [lastname] => NUNES DOS PASSOS
+    [fullname] => RAFAEL NUNES DOS PASSOS
+    [companyname] => RVR ACO INOX EIRELI
+    [email] => rafaelnunesdospassos@gmail.com
+    [address1] => R Bocaina de Minas, 46
+    [address2] => Vila Nova Bonsucesso
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07176-230
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1195410-5539
+    [password] => $2y$10$hJnuC.xge3Sxye9m.kUc0.crD6KwwlrHP6DetDDWbkjNmVYFA4NDm
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11954105539
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 11/07/2018 14:25<br>IP Address: 177.206.74.98<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 21.689.887/0001-47
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 21.689.887/0001-47
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4927
+    [id] => 4927
+    [1] => 309
+    [userid] => 309
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-06
+    [date] => 2018-07-06
+    [4] => 2018-07-13
+    [duedate] => 2018-07-13
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 309
+    [id] => 309
+    [uuid] => 55e30fb2-ca5f-486e-b743-f017370ff4a2
+    [firstname] => RAFAEL
+    [lastname] => NUNES DOS PASSOS
+    [fullname] => RAFAEL NUNES DOS PASSOS
+    [companyname] => RVR ACO INOX EIRELI
+    [email] => rafaelnunesdospassos@gmail.com
+    [address1] => R Bocaina de Minas, 46
+    [address2] => Vila Nova Bonsucesso
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07176-230
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1195410-5539
+    [password] => $2y$10$hJnuC.xge3Sxye9m.kUc0.crD6KwwlrHP6DetDDWbkjNmVYFA4NDm
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11954105539
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 11/07/2018 14:27<br>IP Address: 177.206.74.98<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 21.689.887/0001-47
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 21.689.887/0001-47
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4927
+    [id] => 4927
+    [1] => 309
+    [userid] => 309
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-06
+    [date] => 2018-07-06
+    [4] => 2018-07-13
+    [duedate] => 2018-07-13
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 309
+    [id] => 309
+    [uuid] => 55e30fb2-ca5f-486e-b743-f017370ff4a2
+    [firstname] => RAFAEL
+    [lastname] => NUNES DOS PASSOS
+    [fullname] => RAFAEL NUNES DOS PASSOS
+    [companyname] => RVR ACO INOX EIRELI
+    [email] => rafaelnunesdospassos@gmail.com
+    [address1] => R Bocaina de Minas, 46
+    [address2] => Vila Nova Bonsucesso
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07176-230
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1195410-5539
+    [password] => $2y$10$hJnuC.xge3Sxye9m.kUc0.crD6KwwlrHP6DetDDWbkjNmVYFA4NDm
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11954105539
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 11/07/2018 14:27<br>IP Address: 177.206.74.98<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 21.689.887/0001-47
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 21.689.887/0001-47
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

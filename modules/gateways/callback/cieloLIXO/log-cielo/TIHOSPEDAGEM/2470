@@ -1,0 +1,321 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2470
+    [id] => 2470
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-26
+    [date] => 2016-09-26
+    [4] => 2016-10-03
+    [duedate] => 2016-10-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 283.00
+    [subtotal] => 283.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 283.00
+    [total] => 283.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 03/10/2016 19:35<br>IP Address: 177.100.235.77<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2470
+    [SoftDescriptor] => 2470
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Dinâmico - Site com até 7 páginas dinâmicas. Conforme Proposta 1082 - Parcela 3/3
+                            [Description] => Site Dinâmico - Site com até 7 páginas dinâmicas. Conforme Proposta 1082 - Parcela 3/3
+                            [UnitPrice] => 28300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => João Gomes
+            [Email] => mrscursos@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2470
+    [softDescriptor] => 2470
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Dinâmico - Site com até 7 páginas dinâmicas. Conforme Proposta 1082 - Parcela 3/3
+                            [description] => Site Dinâmico - Site com até 7 páginas dinâmicas. Conforme Proposta 1082 - Parcela 3/3
+                            [unitPrice] => 28300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => João Gomes
+            [email] => mrscursos@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/0e513f25-7a42-482d-8c8e-bd2150d869ed
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+03/10/2016 19:36:38
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2470
+    [amount] => 28300
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => b4a6e08880024df5863377b24a562586
+    [created_date] => 03/10/2016 21:38:33
+    [customer_name] => João Gomes
+    [customer_phone] => 2227731825
+    [customer_identity] => 73390054715
+    [customer_email] => mrscursos@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 459384******3643
+    [payment_installments] => 2
+    [payment_status] => 2
+    [tid] => 10760777625MLTTV4NPB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+03/10/2016 19:37:38
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->182 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2470
+    [amount] => 28300
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => b4a6e08880024df5863377b24a562586
+    [created_date] => 03/10/2016 21:38:33
+    [customer_name] => João Gomes
+    [customer_phone] => 2227731825
+    [customer_identity] => 73390054715
+    [customer_email] => mrscursos@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 459384******3643
+    [payment_installments] => 2
+    [payment_status] => 2
+    [tid] => 10760777625MLTTV4NPB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+03/10/2016 19:00:43
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => b4a6e08880024df5863377b24a562586
+    [amount] => 28300
+    [order_number] => 2470
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+03/10/2016 19:00:43
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => b4a6e08880024df5863377b24a562586
+    [amount] => 28300
+    [order_number] => 2470
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

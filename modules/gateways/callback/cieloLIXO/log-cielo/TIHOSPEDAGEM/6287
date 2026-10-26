@@ -1,0 +1,647 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 6287
+    [id] => 6287
+    [1] => 335
+    [userid] => 335
+    [2] => 
+    [invoicenum] => 
+    [3] => 2019-06-26
+    [date] => 2019-06-26
+    [4] => 2019-07-03
+    [duedate] => 2019-07-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 32.97
+    [subtotal] => 32.97
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 32.97
+    [total] => 32.97
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => cielo
+    [paymentmethod] => cielo
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 335
+    [id] => 335
+    [uuid] => 8a7651b6-90dc-4136-8f55-b387277efd3e
+    [firstname] => WASHINGTON
+    [lastname] => LUIZ DOS SANTOS VARJAO
+    [fullname] => WASHINGTON LUIZ DOS SANTOS VARJAO
+    [companyname] => PEGASO SEGURANÇA PATRIMONIAL LTDA
+    [email] => pegasoseguranca@gmail.com
+    [address1] => Rua CASEMIRO DE ABREU, 587
+    [address2] => MONTE PASCOAL
+    [city] => Guanambi
+    [fullstate] => BA
+    [state] => BA
+    [postcode] => 46430-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 7799498255
+    [password] => $2y$10$UZQDqF8rEDN7EPaFkez6FOOPLWnNgJujsQ7IIL2Q8dQLQZ8V/JhY6
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 335
+                    [uuid] => 8a7651b6-90dc-4136-8f55-b387277efd3e
+                    [firstname] => WASHINGTON
+                    [lastname] => LUIZ DOS SANTOS VARJAO
+                    [companyname] => PEGASO SEGURANÇA PATRIMONIAL LTDA
+                    [email] => pegasoseguranca@gmail.com
+                    [address1] => Rua CASEMIRO DE ABREU, 587
+                    [address2] => MONTE PASCOAL
+                    [city] => Guanambi
+                    [state] => BA
+                    [postcode] => 46430-000
+                    [country] => BR
+                    [phonenumber] => +55.77 9949-8255
+                    [password] => $2y$10$UZQDqF8rEDN7EPaFkez6FOOPLWnNgJujsQ7IIL2Q8dQLQZ8V/JhY6
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2018-12-27
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => Jtm5i3TDa6XM7vrbokr4RKunmWI=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-07-12 18:40:34
+                    [ip] => 177.38.180.153
+                    [host] => 177-38-180-153.micks.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 1
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 335
+                    [uuid] => 8a7651b6-90dc-4136-8f55-b387277efd3e
+                    [firstname] => WASHINGTON
+                    [lastname] => LUIZ DOS SANTOS VARJAO
+                    [companyname] => PEGASO SEGURANÇA PATRIMONIAL LTDA
+                    [email] => pegasoseguranca@gmail.com
+                    [address1] => Rua CASEMIRO DE ABREU, 587
+                    [address2] => MONTE PASCOAL
+                    [city] => Guanambi
+                    [state] => BA
+                    [postcode] => 46430-000
+                    [country] => BR
+                    [phonenumber] => +55.77 9949-8255
+                    [password] => $2y$10$UZQDqF8rEDN7EPaFkez6FOOPLWnNgJujsQ7IIL2Q8dQLQZ8V/JhY6
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2018-12-27
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => Jtm5i3TDa6XM7vrbokr4RKunmWI=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-07-12 18:40:34
+                    [ip] => 177.38.180.153
+                    [host] => 177-38-180-153.micks.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 1
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => BA
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.7799498255
+    [telephoneNumber] => +55.7799498255
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 1
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 
+    [lastlogin] => Date: 12/07/2019 18:40<br>IP Address: 177.38.180.153<br>Host: 177-38-180-153.micks.com.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 77 9949-8255
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 17245961000169
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 77 9949-8255
+    [customfields3] => 17245961000169
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 6287
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - pegasoseguranca.com.br (03/07/2019 - 02/08/2019)
+                            [Description] => TIH - Master  - pegasoseguranca.com.br (03/07/2019 - 02/08/2019)
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 330
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 9 dias de atraso
+                            [Description] => Juros por 9 dias de atraso
+                            [UnitPrice] => 98
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => WASHINGTON LUIZ DOS SANTOS VARJAO
+            [Email] => pegasoseguranca@gmail.com
+            [Identity] => 17245961000169
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 6287
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Master  - pegasoseguranca.com.br (03/07/2019 - 02/08/2019)
+                            [description] => TIH - Master  - pegasoseguranca.com.br (03/07/2019 - 02/08/2019)
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 330
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [$id] => 6
+                            [name] => Juros por 9 dias de atraso
+                            [description] => Juros por 9 dias de atraso
+                            [unitPrice] => 98
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 7
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 17245961000169
+            [fullName] => WASHINGTON LUIZ DOS SANTOS VARJAO
+            [email] => pegasoseguranca@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/510a928c-a2e2-43a4-bafd-9537f372d8ac
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+12/07/2019 18:19:46
+INICIO_______________________________________________________________LOG:BEGIN:::12/07/2019 18:46<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 6287
+    [amount] => 3725
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 29c1195af9c24bd0a544fcfbf5ebe8ce
+    [created_date] => 12/07/2019 18:46:16
+    [customer_name] => WASHINGTON VARJAO
+    [customer_phone] => 7734523651
+    [customer_identity] => 17245961000169
+    [customer_email] => pegasoseguranca@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 498453******0598
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628BI7KL0G3B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+12/07/2019 18:29:46
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->6287 | Result->success | ValorPago ->32.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 6287
+    [amount] => 3725
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 29c1195af9c24bd0a544fcfbf5ebe8ce
+    [created_date] => 12/07/2019 18:46:16
+    [customer_name] => WASHINGTON VARJAO
+    [customer_phone] => 7734523651
+    [customer_identity] => 17245961000169
+    [customer_email] => pegasoseguranca@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 498453******0598
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628BI7KL0G3B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+12/07/2019 18:52:54
+INICIO_______________________________________________________________LOG:BEGIN:::12/07/2019 18:54<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 29c1195af9c24bd0a544fcfbf5ebe8ce
+    [amount] => 3725
+    [order_number] => 6287
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+12/07/2019 18:52:54
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 29c1195af9c24bd0a544fcfbf5ebe8ce
+    [amount] => 3725
+    [order_number] => 6287
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

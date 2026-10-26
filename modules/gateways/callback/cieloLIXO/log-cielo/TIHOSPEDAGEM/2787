@@ -1,0 +1,357 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2787
+    [id] => 2787
+    [1] => 165
+    [userid] => 165
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-23
+    [date] => 2016-12-23
+    [4] => 2016-12-30
+    [duedate] => 2016-12-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 165
+    [id] => 165
+    [uuid] => 575e1976-d192-4ced-ad07-8f7be5dbe1c3
+    [firstname] => Alessandro 
+    [lastname] => de Oliveira Souza
+    [fullname] => Alessandro  de Oliveira Souza
+    [companyname] => Vestibulandos da Cidadania
+    [email] => ale_souza2002@yahoo.com.br
+    [address1] => Rua Vergueiro, 7165, Apto: 63
+    [address2] => Alto do Ipiranga
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04273-100
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 9.9722-0455
+    [password] => 63240861db40ffe36643336299a962cd:Dvl!(
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11997220455
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 03/01/2017 07:03<br>IP Address: 189.120.174.40<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11997220455
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 289.908.738-00
+                )
+
+        )
+
+    [customfields2] => 11997220455
+    [customfields3] => 289.908.738-00
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2787
+    [SoftDescriptor] => 2787
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - vestibulandosdacidadania.org (30/12/2016 - 29/03/2017)
+                            [Description] => TIH - Master - vestibulandosdacidadania.org (30/12/2016 - 29/03/2017)
+                            [UnitPrice] => 8991
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 270
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 4 dias de atraso
+                            [Description] => Juros por 4 dias de atraso
+                            [UnitPrice] => 111
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002787
+            [FullName] => Alessandro  de Oliveira Souza
+            [Email] => ale_souza2002@yahoo.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2787
+    [softDescriptor] => 2787
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - vestibulandosdacidadania.org (30/12/2016 - 29/03/2017)
+                            [description] => TIH - Master - vestibulandosdacidadania.org (30/12/2016 - 29/03/2017)
+                            [unitPrice] => 8991
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 270
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 4 dias de atraso
+                            [description] => Juros por 4 dias de atraso
+                            [unitPrice] => 111
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002787
+            [fullName] => Alessandro  de Oliveira Souza
+            [email] => ale_souza2002@yahoo.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/c122d7ba-6e20-48c6-b1b6-2e2fc17f7960
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+03/01/2017 7:32:11
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2787
+    [amount] => 9372
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => b049f779dd6b41d4920bc08d58d45e91
+    [created_date] => 03/01/2017 11:11:30
+    [customer_name] => Alessandro Souza
+    [customer_phone] => 11997220455
+    [customer_identity] => 28990873800
+    [customer_email] => ale_souza2002@yahoo.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 546479******6596
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626BQ36M37TB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+03/01/2017 7:34:11
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->165 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2787
+    [amount] => 9372
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => b049f779dd6b41d4920bc08d58d45e91
+    [created_date] => 03/01/2017 11:11:30
+    [customer_name] => Alessandro Souza
+    [customer_phone] => 11997220455
+    [customer_identity] => 28990873800
+    [customer_email] => ale_souza2002@yahoo.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 546479******6596
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626BQ36M37TB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+03/01/2017 7:48:29
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => b049f779dd6b41d4920bc08d58d45e91
+    [amount] => 9372
+    [order_number] => 2787
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+03/01/2017 7:48:29
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => b049f779dd6b41d4920bc08d58d45e91
+    [amount] => 9372
+    [order_number] => 2787
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

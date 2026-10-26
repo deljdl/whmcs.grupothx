@@ -1,0 +1,1212 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2937
+    [id] => 2937
+    [1] => 97
+    [userid] => 97
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-02
+    [date] => 2017-02-02
+    [4] => 2017-02-09
+    [duedate] => 2017-02-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 54.94
+    [subtotal] => 54.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 54.94
+    [total] => 54.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 97
+    [id] => 97
+    [uuid] => 8d80d384-4ed4-4d22-bcc4-78573c159fa6
+    [firstname] => MARCIO
+    [lastname] => CESAR VASCONCELOS CRUZ
+    [fullname] => MARCIO CESAR VASCONCELOS CRUZ
+    [companyname] => Graf &amp; Cores
+    [email] => marcio.grafcorescomercial@hotmail.com
+    [address1] => Rua Votuporanga, 32
+    [address2] => Jd Nosssa Senhora D&#039;ajuda
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 0857-6520
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4732-4262  /MARCIO 11 94748-2876  ID35*18*5050
+    [password] => ae2b5630ff09589b02f31e0eccb02648:!!Fh#
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11473242621194748287635185050
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 21/03/2017 11:48<br>IP Address: 177.206.23.239<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2937
+    [id] => 2937
+    [1] => 97
+    [userid] => 97
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-02
+    [date] => 2017-02-02
+    [4] => 2017-02-09
+    [duedate] => 2017-02-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 54.94
+    [subtotal] => 54.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 54.94
+    [total] => 54.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 97
+    [id] => 97
+    [uuid] => 8d80d384-4ed4-4d22-bcc4-78573c159fa6
+    [firstname] => MARCIO
+    [lastname] => CESAR VASCONCELOS CRUZ
+    [fullname] => MARCIO CESAR VASCONCELOS CRUZ
+    [companyname] => Graf &amp; Cores
+    [email] => marcio.grafcorescomercial@hotmail.com
+    [address1] => Rua Votuporanga, 32
+    [address2] => Jd Nosssa Senhora D&#039;ajuda
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 0857-6520
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4732-4262  /MARCIO 11 94748-2876  ID35*18*5050
+    [password] => ae2b5630ff09589b02f31e0eccb02648:!!Fh#
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11473242621194748287635185050
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 21/03/2017 16:26<br>IP Address: 191.255.117.195<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2937
+    [id] => 2937
+    [1] => 97
+    [userid] => 97
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-02
+    [date] => 2017-02-02
+    [4] => 2017-02-09
+    [duedate] => 2017-02-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 54.94
+    [subtotal] => 54.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 54.94
+    [total] => 54.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 97
+    [id] => 97
+    [uuid] => 8d80d384-4ed4-4d22-bcc4-78573c159fa6
+    [firstname] => MARCIO
+    [lastname] => CESAR VASCONCELOS CRUZ
+    [fullname] => MARCIO CESAR VASCONCELOS CRUZ
+    [companyname] => Graf &amp; Cores
+    [email] => marcio.grafcorescomercial@hotmail.com
+    [address1] => Rua Votuporanga, 32
+    [address2] => Jd Nosssa Senhora D&#039;ajuda
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 0857-6520
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4732-4262  /MARCIO 11 94748-2876  ID35*18*5050
+    [password] => ae2b5630ff09589b02f31e0eccb02648:!!Fh#
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11473242621194748287635185050
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 21/03/2017 16:27<br>IP Address: 191.255.117.195<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2937
+    [id] => 2937
+    [1] => 97
+    [userid] => 97
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-02
+    [date] => 2017-02-02
+    [4] => 2017-02-09
+    [duedate] => 2017-02-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 54.94
+    [subtotal] => 54.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 54.94
+    [total] => 54.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 97
+    [id] => 97
+    [uuid] => 8d80d384-4ed4-4d22-bcc4-78573c159fa6
+    [firstname] => MARCIO
+    [lastname] => CESAR VASCONCELOS CRUZ
+    [fullname] => MARCIO CESAR VASCONCELOS CRUZ
+    [companyname] => Graf &amp; Cores
+    [email] => marcio.grafcorescomercial@hotmail.com
+    [address1] => Rua Votuporanga, 32
+    [address2] => Jd Nosssa Senhora D&#039;ajuda
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 0857-6520
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4732-4262  /MARCIO 11 94748-2876  ID35*18*5050
+    [password] => ae2b5630ff09589b02f31e0eccb02648:!!Fh#
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11473242621194748287635185050
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 21/03/2017 16:27<br>IP Address: 191.255.117.195<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2937
+    [id] => 2937
+    [1] => 97
+    [userid] => 97
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-02
+    [date] => 2017-02-02
+    [4] => 2017-02-09
+    [duedate] => 2017-02-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 54.94
+    [subtotal] => 54.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 54.94
+    [total] => 54.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 97
+    [id] => 97
+    [uuid] => 8d80d384-4ed4-4d22-bcc4-78573c159fa6
+    [firstname] => MARCIO
+    [lastname] => CESAR VASCONCELOS CRUZ
+    [fullname] => MARCIO CESAR VASCONCELOS CRUZ
+    [companyname] => Graf &amp; Cores
+    [email] => marcio.grafcorescomercial@hotmail.com
+    [address1] => Rua Votuporanga, 32
+    [address2] => Jd Nosssa Senhora D&#039;ajuda
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 0857-6520
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4732-4262  /MARCIO 11 94748-2876  ID35*18*5050
+    [password] => ae2b5630ff09589b02f31e0eccb02648:!!Fh#
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11473242621194748287635185050
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/03/2017 09:18<br>IP Address: 191.255.117.195<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2937
+    [id] => 2937
+    [1] => 97
+    [userid] => 97
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-02
+    [date] => 2017-02-02
+    [4] => 2017-02-09
+    [duedate] => 2017-02-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 54.94
+    [subtotal] => 54.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 54.94
+    [total] => 54.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 97
+    [id] => 97
+    [uuid] => 8d80d384-4ed4-4d22-bcc4-78573c159fa6
+    [firstname] => MARCIO
+    [lastname] => CESAR VASCONCELOS CRUZ
+    [fullname] => MARCIO CESAR VASCONCELOS CRUZ
+    [companyname] => Graf &amp; Cores
+    [email] => marcio.grafcorescomercial@hotmail.com
+    [address1] => Rua Votuporanga, 32
+    [address2] => Jd Nosssa Senhora D&#039;ajuda
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 0857-6520
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4732-4262  /MARCIO 11 94748-2876  ID35*18*5050
+    [password] => ae2b5630ff09589b02f31e0eccb02648:!!Fh#
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11473242621194748287635185050
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/03/2017 09:24<br>IP Address: 191.255.117.195<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2937
+    [id] => 2937
+    [1] => 97
+    [userid] => 97
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-02
+    [date] => 2017-02-02
+    [4] => 2017-02-09
+    [duedate] => 2017-02-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 54.94
+    [subtotal] => 54.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 54.94
+    [total] => 54.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 97
+    [id] => 97
+    [uuid] => 8d80d384-4ed4-4d22-bcc4-78573c159fa6
+    [firstname] => MARCIO
+    [lastname] => CESAR VASCONCELOS CRUZ
+    [fullname] => MARCIO CESAR VASCONCELOS CRUZ
+    [companyname] => Graf &amp; Cores
+    [email] => marcio.grafcorescomercial@hotmail.com
+    [address1] => Rua Votuporanga, 32
+    [address2] => Jd Nosssa Senhora D&#039;ajuda
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 0857-6520
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4732-4262  /MARCIO 11 94748-2876  ID35*18*5050
+    [password] => ae2b5630ff09589b02f31e0eccb02648:!!Fh#
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11473242621194748287635185050
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/03/2017 09:34<br>IP Address: 177.206.23.239<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 19073879000120
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 19073879000120
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2937
+    [id] => 2937
+    [1] => 97
+    [userid] => 97
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-02
+    [date] => 2017-02-02
+    [4] => 2017-02-09
+    [duedate] => 2017-02-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 54.94
+    [subtotal] => 54.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 54.94
+    [total] => 54.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 97
+    [id] => 97
+    [uuid] => 8d80d384-4ed4-4d22-bcc4-78573c159fa6
+    [firstname] => MARCIO
+    [lastname] => CESAR VASCONCELOS CRUZ
+    [fullname] => MARCIO CESAR VASCONCELOS CRUZ
+    [companyname] => Graf &amp; Cores
+    [email] => marcio.grafcorescomercial@hotmail.com
+    [address1] => Rua Votuporanga, 32
+    [address2] => Jd Nosssa Senhora D&#039;ajuda
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 0857-6520
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4732-4262  /MARCIO 11 94748-2876  ID35*18*5050
+    [password] => ae2b5630ff09589b02f31e0eccb02648:!!Fh#
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11473242621194748287635185050
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/03/2017 16:31<br>IP Address: 191.255.117.195<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 19073879000120
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 19073879000120
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2937
+    [id] => 2937
+    [1] => 97
+    [userid] => 97
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-02
+    [date] => 2017-02-02
+    [4] => 2017-02-09
+    [duedate] => 2017-02-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 54.94
+    [subtotal] => 54.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 54.94
+    [total] => 54.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 97
+    [id] => 97
+    [uuid] => 8d80d384-4ed4-4d22-bcc4-78573c159fa6
+    [firstname] => MARCIO
+    [lastname] => CESAR VASCONCELOS CRUZ
+    [fullname] => MARCIO CESAR VASCONCELOS CRUZ
+    [companyname] => Graf &amp; Cores
+    [email] => marcio.grafcorescomercial@hotmail.com
+    [address1] => Rua Votuporanga, 32
+    [address2] => Jd Nosssa Senhora D&#039;ajuda
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 0857-6520
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4732-4262  /MARCIO 11 94748-2876  ID35*18*5050
+    [password] => ae2b5630ff09589b02f31e0eccb02648:!!Fh#
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11473242621194748287635185050
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/03/2017 16:32<br>IP Address: 191.255.117.195<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 19073879000120
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 19073879000120
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2937
+    [id] => 2937
+    [1] => 97
+    [userid] => 97
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-02
+    [date] => 2017-02-02
+    [4] => 2017-02-09
+    [duedate] => 2017-02-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 54.94
+    [subtotal] => 54.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 54.94
+    [total] => 54.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 97
+    [id] => 97
+    [uuid] => 8d80d384-4ed4-4d22-bcc4-78573c159fa6
+    [firstname] => MARCIO
+    [lastname] => CESAR VASCONCELOS CRUZ
+    [fullname] => MARCIO CESAR VASCONCELOS CRUZ
+    [companyname] => Graf &amp; Cores
+    [email] => marcio.grafcorescomercial@hotmail.com
+    [address1] => Rua Votuporanga, 32
+    [address2] => Jd Nosssa Senhora D&#039;ajuda
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 0857-6520
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4732-4262  /MARCIO 11 94748-2876  ID35*18*5050
+    [password] => ae2b5630ff09589b02f31e0eccb02648:!!Fh#
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11473242621194748287635185050
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/03/2017 15:40<br>IP Address: 191.255.117.195<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 19073879000120
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 19073879000120
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

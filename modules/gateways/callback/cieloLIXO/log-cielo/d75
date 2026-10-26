@@ -1,0 +1,626 @@
+
+
+31/10/2019 17:45:51
+INICIO_______________________________________________________________LOG:BEGIN:::31/10/2019 17:51<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => d75
+    [amount] => 5500
+    [checkout_cielo_order_number] => 5820b7525cdf4ee18212d9df43e886d1
+    [created_date] => 31/10/2019 17:51:45
+    [customer_name] => Edson Gimenes
+    [customer_phone] => 1149663933
+    [customer_identity] => 29007144863
+    [customer_email] => edsgim@outlook.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 490172******5328
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628EP15H84AB
+    [recurrent_payment_id] => 1212b848-8a6d-407c-9aff-1d818532cbdd
+    [start_date] => 10/31/2017 11:38:41 AM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Anual
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2019 17:45:51
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6642
+                            [userid] => 241
+                            [firstname] => Edson
+                            [lastname] => Gimenes
+                            [companyname] => Selos Brasil
+                            [invoicenum] => 
+                            [date] => 2019-10-05
+                            [duedate] => 2019-11-03
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 55.00
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 55.00
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => gofasgerencianetboleto
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => d75
+    [amount] => 5500
+    [checkout_cielo_order_number] => 5820b7525cdf4ee18212d9df43e886d1
+    [created_date] => 31/10/2019 17:51:45
+    [customer_name] => Edson Gimenes
+    [customer_phone] => 1149663933
+    [customer_identity] => 29007144863
+    [customer_email] => edsgim@outlook.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 490172******5328
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628EP15H84AB
+    [recurrent_payment_id] => 1212b848-8a6d-407c-9aff-1d818532cbdd
+    [start_date] => 10/31/2017 11:38:41 AM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Anual
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2019 17:45:51
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6642
+            [userid] => 241
+            [firstname] => Edson
+            [lastname] => Gimenes
+            [companyname] => Selos Brasil
+            [invoicenum] => 
+            [date] => 2019-10-05
+            [duedate] => 2019-11-03
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 55.00
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 55.00
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => gofasgerencianetboleto
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => d75
+    [amount] => 5500
+    [checkout_cielo_order_number] => 5820b7525cdf4ee18212d9df43e886d1
+    [created_date] => 31/10/2019 17:51:45
+    [customer_name] => Edson Gimenes
+    [customer_phone] => 1149663933
+    [customer_identity] => 29007144863
+    [customer_email] => edsgim@outlook.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 490172******5328
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628EP15H84AB
+    [recurrent_payment_id] => 1212b848-8a6d-407c-9aff-1d818532cbdd
+    [start_date] => 10/31/2017 11:38:41 AM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Anual
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2019 17:45:51
+INICIO_______________________________________________________________LOG:Checando -> 75 ==  75
+
+POST:
+<pre>Array
+(
+    [order_number] => d75
+    [amount] => 5500
+    [checkout_cielo_order_number] => 5820b7525cdf4ee18212d9df43e886d1
+    [created_date] => 31/10/2019 17:51:45
+    [customer_name] => Edson Gimenes
+    [customer_phone] => 1149663933
+    [customer_identity] => 29007144863
+    [customer_email] => edsgim@outlook.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 490172******5328
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628EP15H84AB
+    [recurrent_payment_id] => 1212b848-8a6d-407c-9aff-1d818532cbdd
+    [start_date] => 10/31/2017 11:38:41 AM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Anual
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2019 17:45:51
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6642
+    [invoicenum] => 
+    [userid] => 241
+    [date] => 2019-10-05
+    [duedate] => 2019-11-03
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 55.00
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 55.00
+    [balance] => 55,00
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => gofasgerencianetboleto
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 10367
+                            [type] => Domain
+                            [relid] => 75
+                            [description] => Renovação de Domínio - selosbrasil.com - 1 Ano(s) (03/11/2019 - 02/11/2020)
+                            [amount] => 55.00
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => d75
+    [amount] => 5500
+    [checkout_cielo_order_number] => 5820b7525cdf4ee18212d9df43e886d1
+    [created_date] => 31/10/2019 17:51:45
+    [customer_name] => Edson Gimenes
+    [customer_phone] => 1149663933
+    [customer_identity] => 29007144863
+    [customer_email] => edsgim@outlook.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 490172******5328
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628EP15H84AB
+    [recurrent_payment_id] => 1212b848-8a6d-407c-9aff-1d818532cbdd
+    [start_date] => 10/31/2017 11:38:41 AM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Anual
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2019 17:46:51
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->6642 | Result->success | ValorPago ->55.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => d75
+    [amount] => 5500
+    [checkout_cielo_order_number] => 5820b7525cdf4ee18212d9df43e886d1
+    [created_date] => 31/10/2019 17:51:45
+    [customer_name] => Edson Gimenes
+    [customer_phone] => 1149663933
+    [customer_identity] => 29007144863
+    [customer_email] => edsgim@outlook.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 490172******5328
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777628EP15H84AB
+    [recurrent_payment_id] => 1212b848-8a6d-407c-9aff-1d818532cbdd
+    [start_date] => 10/31/2017 11:38:41 AM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Anual
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2019 18:10:02
+INICIO_______________________________________________________________LOG:BEGIN:::31/10/2019 18:02<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5820b7525cdf4ee18212d9df43e886d1
+    [amount] => 5500
+    [order_number] => d75
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2019 18:10:02
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5820b7525cdf4ee18212d9df43e886d1
+    [amount] => 5500
+    [order_number] => d75
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2019 18:10:02
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5820b7525cdf4ee18212d9df43e886d1
+    [amount] => 5500
+    [order_number] => d75
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2019 18:10:02
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5820b7525cdf4ee18212d9df43e886d1
+    [amount] => 5500
+    [order_number] => d75
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2019 20:47:52
+INICIO_______________________________________________________________LOG:BEGIN:::31/10/2019 20:52<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5820b7525cdf4ee18212d9df43e886d1
+    [amount] => 5500
+    [order_number] => d75
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2019 20:47:52
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6642
+                            [userid] => 241
+                            [firstname] => Edson
+                            [lastname] => Gimenes
+                            [companyname] => Selos Brasil
+                            [invoicenum] => 
+                            [date] => 2019-10-05
+                            [duedate] => 2019-11-03
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 55.00
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 55.00
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => cielo
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5820b7525cdf4ee18212d9df43e886d1
+    [amount] => 5500
+    [order_number] => d75
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2019 20:47:52
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6642
+            [userid] => 241
+            [firstname] => Edson
+            [lastname] => Gimenes
+            [companyname] => Selos Brasil
+            [invoicenum] => 
+            [date] => 2019-10-05
+            [duedate] => 2019-11-03
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 55.00
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 55.00
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => cielo
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5820b7525cdf4ee18212d9df43e886d1
+    [amount] => 5500
+    [order_number] => d75
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2019 20:47:52
+INICIO_______________________________________________________________LOG:Checando -> 75 ==  75
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5820b7525cdf4ee18212d9df43e886d1
+    [amount] => 5500
+    [order_number] => d75
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2019 20:47:52
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6642
+    [invoicenum] => 
+    [userid] => 241
+    [date] => 2019-10-05
+    [duedate] => 2019-11-03
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 55.00
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 55.00
+    [balance] => 0,00
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => cielo
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 10367
+                            [type] => Domain
+                            [relid] => 75
+                            [description] => Renovação de Domínio - selosbrasil.com - 1 Ano(s) (03/11/2019 - 02/11/2020)
+                            [amount] => 55.00
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => Array
+        (
+            [transaction] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 5345
+                            [userid] => 241
+                            [currency] => 0
+                            [gateway] => cielo
+                            [date] => 2019-10-31 17:51:45
+                            [description] => Invoice Payment
+                            [amountin] => 55.00
+                            [fees] => 0.00
+                            [amountout] => 0.00
+                            [rate] => 1.00000
+                            [transid] => 
+                            [invoiceid] => 6642
+                            [refundid] => 0
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5820b7525cdf4ee18212d9df43e886d1
+    [amount] => 5500
+    [order_number] => d75
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+31/10/2019 20:48:52
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->6642 | Result->success | ValorPago ->55.00 | Message->
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 5820b7525cdf4ee18212d9df43e886d1
+    [amount] => 5500
+    [order_number] => d75
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

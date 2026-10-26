@@ -1,0 +1,835 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2420
+    [id] => 2420
+    [1] => 189
+    [userid] => 189
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-15
+    [date] => 2016-09-15
+    [4] => 2016-09-22
+    [duedate] => 2016-09-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 39.96
+    [subtotal] => 39.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 39.96
+    [total] => 39.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 189
+    [id] => 189
+    [uuid] => c487ecad-c434-49a2-aa48-9f90abe30bfc
+    [firstname] => Fernanda
+    [lastname] => Mutton Pereira
+    [fullname] => Fernanda Mutton Pereira
+    [companyname] => 
+    [email] => femutton@hotmail.com
+    [address1] => rua manoel da nobrega, 582
+    [address2] => centro
+    [city] => diadema
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09910-720
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1140564576
+    [password] => $2y$10$M8RyZyqht2Hg0OwqiLWMQe1OjgKC3URUAhibErfbBTDP8x22Yub7K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1140564576
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 03/10/2016 23:36<br>IP Address: 179.212.15.153<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2420
+    [SoftDescriptor] => 2420
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Premium - stopandreadthis.com (22/09/2016 - 21/10/2016)
+                            [Description] => TIH - Premium - stopandreadthis.com (22/09/2016 - 21/10/2016)
+                            [UnitPrice] => 3996
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Fernanda Mutton Pereira
+            [Email] => femutton@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2420
+    [softDescriptor] => 2420
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Premium - stopandreadthis.com (22/09/2016 - 21/10/2016)
+                            [description] => TIH - Premium - stopandreadthis.com (22/09/2016 - 21/10/2016)
+                            [unitPrice] => 3996
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Fernanda Mutton Pereira
+            [email] => femutton@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/788057c8-2ff0-4299-83d3-8101baf8a207
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2420
+    [id] => 2420
+    [1] => 189
+    [userid] => 189
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-15
+    [date] => 2016-09-15
+    [4] => 2016-09-22
+    [duedate] => 2016-09-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 39.96
+    [subtotal] => 39.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 39.96
+    [total] => 39.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 189
+    [id] => 189
+    [uuid] => c487ecad-c434-49a2-aa48-9f90abe30bfc
+    [firstname] => Fernanda
+    [lastname] => Mutton Pereira
+    [fullname] => Fernanda Mutton Pereira
+    [companyname] => 
+    [email] => femutton@hotmail.com
+    [address1] => rua manoel da nobrega, 582
+    [address2] => centro
+    [city] => diadema
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09910-720
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1140564576
+    [password] => $2y$10$M8RyZyqht2Hg0OwqiLWMQe1OjgKC3URUAhibErfbBTDP8x22Yub7K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1140564576
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 03/10/2016 23:36<br>IP Address: 179.212.15.153<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2420
+    [SoftDescriptor] => 2420
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Premium - stopandreadthis.com (22/09/2016 - 21/10/2016)
+                            [Description] => TIH - Premium - stopandreadthis.com (22/09/2016 - 21/10/2016)
+                            [UnitPrice] => 3996
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Fernanda Mutton Pereira
+            [Email] => femutton@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2420
+    [softDescriptor] => 2420
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Premium - stopandreadthis.com (22/09/2016 - 21/10/2016)
+                            [description] => TIH - Premium - stopandreadthis.com (22/09/2016 - 21/10/2016)
+                            [unitPrice] => 3996
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Fernanda Mutton Pereira
+            [email] => femutton@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/92429d2f-72d2-42e4-9b20-eacc65f012f8
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2420
+    [id] => 2420
+    [1] => 189
+    [userid] => 189
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-15
+    [date] => 2016-09-15
+    [4] => 2016-09-22
+    [duedate] => 2016-09-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 39.96
+    [subtotal] => 39.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 39.96
+    [total] => 39.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 189
+    [id] => 189
+    [uuid] => c487ecad-c434-49a2-aa48-9f90abe30bfc
+    [firstname] => Fernanda
+    [lastname] => Mutton Pereira
+    [fullname] => Fernanda Mutton Pereira
+    [companyname] => 
+    [email] => femutton@hotmail.com
+    [address1] => rua manoel da nobrega, 582
+    [address2] => centro
+    [city] => diadema
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09910-720
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1140564576
+    [password] => $2y$10$M8RyZyqht2Hg0OwqiLWMQe1OjgKC3URUAhibErfbBTDP8x22Yub7K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1140564576
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 10/10/2016 13:37<br>IP Address: 179.212.15.153<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2420
+    [SoftDescriptor] => 2420
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Premium - stopandreadthis.com (22/09/2016 - 21/10/2016)
+                            [Description] => TIH - Premium - stopandreadthis.com (22/09/2016 - 21/10/2016)
+                            [UnitPrice] => 3996
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002420
+            [FullName] => Fernanda Mutton Pereira
+            [Email] => femutton@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2420
+    [softDescriptor] => 2420
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Premium - stopandreadthis.com (22/09/2016 - 21/10/2016)
+                            [description] => TIH - Premium - stopandreadthis.com (22/09/2016 - 21/10/2016)
+                            [unitPrice] => 3996
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002420
+            [fullName] => Fernanda Mutton Pereira
+            [email] => femutton@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/798fff23-923e-4f4c-80b6-ba931d5aed61
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+10/10/2016 13:38:38
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2420
+    [amount] => 4296
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 49fcb5217c8f4fc2b1218693e0a6c956
+    [created_date] => 10/10/2016 15:38:35
+    [customer_name] => Fernanda Pereira
+    [customer_phone] => 11996671880
+    [customer_identity] => 40447989820
+    [customer_email] => femutton@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 406669******1541
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777625MSEJ2R6PB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2016 13:53:38
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->189 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2420
+    [amount] => 4296
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 49fcb5217c8f4fc2b1218693e0a6c956
+    [created_date] => 10/10/2016 15:38:35
+    [customer_name] => Fernanda Pereira
+    [customer_phone] => 11996671880
+    [customer_identity] => 40447989820
+    [customer_email] => femutton@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 406669******1541
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777625MSEJ2R6PB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2016 13:06:43
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 49fcb5217c8f4fc2b1218693e0a6c956
+    [amount] => 4296
+    [order_number] => 2420
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/10/2016 13:06:43
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 49fcb5217c8f4fc2b1218693e0a6c956
+    [amount] => 4296
+    [order_number] => 2420
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

@@ -1,0 +1,909 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3179
+    [id] => 3179
+    [1] => 260
+    [userid] => 260
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-04-07
+    [date] => 2017-04-07
+    [4] => 2017-04-14
+    [duedate] => 2017-04-14
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 40.00
+    [subtotal] => 40.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 40.00
+    [total] => 40.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 260
+    [id] => 260
+    [uuid] => 0e11ec5f-a484-4fcf-8e2f-216e6055c683
+    [firstname] => Sérgio
+    [lastname] => da Silva Cardoso
+    [fullname] => Sérgio da Silva Cardoso
+    [companyname] => Moleca Calçados
+    [email] => ercm@rodiziosercm.com.br
+    [address1] => Estrada de São Bento, 1710
+    [address2] => Vila Ferlópolis
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08597-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 01146443301 11986947921
+    [password] => $2y$10$LsrHmFzl7ZQoArn9WP7n9eDNdoeRW.4XFLnK49/676m/b.w6xC7S2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114644330111986947921
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 18/04/2017 12:48<br>IP Address: 191.32.215.133<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986947921
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 16022119812
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11986947921
+    [customfields3] => 16022119812
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3179
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - molecacalcados.com.br (14/04/2017 - 13/05/2017)
+                            [Description] => TIH - Especial - molecacalcados.com.br (14/04/2017 - 13/05/2017)
+                            [UnitPrice] => 4000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 120
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 4 dias de atraso
+                            [Description] => Juros por 4 dias de atraso
+                            [UnitPrice] => 49
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Sérgio da Silva Cardoso
+            [Email] => ercm@rodiziosercm.com.br
+            [Identity] => 16022119812
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3179
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Especial - molecacalcados.com.br (14/04/2017 - 13/05/2017)
+                            [description] => TIH - Especial - molecacalcados.com.br (14/04/2017 - 13/05/2017)
+                            [unitPrice] => 4000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 120
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 4 dias de atraso
+                            [description] => Juros por 4 dias de atraso
+                            [unitPrice] => 49
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 16022119812
+            [fullName] => Sérgio da Silva Cardoso
+            [email] => ercm@rodiziosercm.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/64c24760-ffb0-4b24-86ba-c167d0874413
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3179
+    [id] => 3179
+    [1] => 260
+    [userid] => 260
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-04-07
+    [date] => 2017-04-07
+    [4] => 2017-04-14
+    [duedate] => 2017-04-14
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 40.00
+    [subtotal] => 40.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 40.00
+    [total] => 40.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 260
+    [id] => 260
+    [uuid] => 0e11ec5f-a484-4fcf-8e2f-216e6055c683
+    [firstname] => Sérgio
+    [lastname] => da Silva Cardoso
+    [fullname] => Sérgio da Silva Cardoso
+    [companyname] => Moleca Calçados
+    [email] => ercm@rodiziosercm.com.br
+    [address1] => Estrada de São Bento, 1710
+    [address2] => Vila Ferlópolis
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08597-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 01146443301 11986947921
+    [password] => $2y$10$LsrHmFzl7ZQoArn9WP7n9eDNdoeRW.4XFLnK49/676m/b.w6xC7S2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114644330111986947921
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 18/04/2017 12:48<br>IP Address: 191.32.215.133<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986947921
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 16022119812
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11986947921
+    [customfields3] => 16022119812
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3179
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - molecacalcados.com.br (14/04/2017 - 13/05/2017)
+                            [Description] => TIH - Especial - molecacalcados.com.br (14/04/2017 - 13/05/2017)
+                            [UnitPrice] => 4000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 120
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 4 dias de atraso
+                            [Description] => Juros por 4 dias de atraso
+                            [UnitPrice] => 49
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Sérgio da Silva Cardoso
+            [Email] => ercm@rodiziosercm.com.br
+            [Identity] => 16022119812
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3179
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Especial - molecacalcados.com.br (14/04/2017 - 13/05/2017)
+                            [description] => TIH - Especial - molecacalcados.com.br (14/04/2017 - 13/05/2017)
+                            [unitPrice] => 4000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 120
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 4 dias de atraso
+                            [description] => Juros por 4 dias de atraso
+                            [unitPrice] => 49
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 16022119812
+            [fullName] => Sérgio da Silva Cardoso
+            [email] => ercm@rodiziosercm.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/b0b21cf9-a971-4549-89d8-44ea8861f2f5
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3179
+    [id] => 3179
+    [1] => 260
+    [userid] => 260
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-04-07
+    [date] => 2017-04-07
+    [4] => 2017-04-14
+    [duedate] => 2017-04-14
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 40.00
+    [subtotal] => 40.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 40.00
+    [total] => 40.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 260
+    [id] => 260
+    [uuid] => 0e11ec5f-a484-4fcf-8e2f-216e6055c683
+    [firstname] => Sérgio
+    [lastname] => da Silva Cardoso
+    [fullname] => Sérgio da Silva Cardoso
+    [companyname] => Moleca Calçados
+    [email] => ercm@rodiziosercm.com.br
+    [address1] => Estrada de São Bento, 1710
+    [address2] => Vila Ferlópolis
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08597-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 01146443301 11986947921
+    [password] => $2y$10$LsrHmFzl7ZQoArn9WP7n9eDNdoeRW.4XFLnK49/676m/b.w6xC7S2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114644330111986947921
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 18/04/2017 13:08<br>IP Address: 187.75.101.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986947921
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 16022119812
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11986947921
+    [customfields3] => 16022119812
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3179
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - molecacalcados.com.br (14/04/2017 - 13/05/2017)
+                            [Description] => TIH - Especial - molecacalcados.com.br (14/04/2017 - 13/05/2017)
+                            [UnitPrice] => 4000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 120
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 4 dias de atraso
+                            [Description] => Juros por 4 dias de atraso
+                            [UnitPrice] => 49
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Sérgio da Silva Cardoso
+            [Email] => ercm@rodiziosercm.com.br
+            [Identity] => 16022119812
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3179
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Especial - molecacalcados.com.br (14/04/2017 - 13/05/2017)
+                            [description] => TIH - Especial - molecacalcados.com.br (14/04/2017 - 13/05/2017)
+                            [unitPrice] => 4000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 120
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 4 dias de atraso
+                            [description] => Juros por 4 dias de atraso
+                            [unitPrice] => 49
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 16022119812
+            [fullName] => Sérgio da Silva Cardoso
+            [email] => ercm@rodiziosercm.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/23acec43-422b-49c5-86ed-346e0e3bff32
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+18/04/2017 13:26:10
+INICIO_______________________________________________________________LOG:BEGIN:::18/04/2017 13:10<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3179
+    [amount] => 4169
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 89ecefc80d8f4b3894af4e1bc3800724
+    [created_date] => 18/04/2017 13:10:24
+    [customer_name] => Sérgio Cardoso
+    [customer_phone] => 11986947921
+    [customer_identity] => 16022119812
+    [customer_email] => ercm@rodiziosercm.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 542820******2939
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626ERU9FOLRB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+18/04/2017 13:51:10
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3179 | Result->success | ValorPago ->40.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 3179
+    [amount] => 4169
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 89ecefc80d8f4b3894af4e1bc3800724
+    [created_date] => 18/04/2017 13:10:24
+    [customer_name] => Sérgio Cardoso
+    [customer_phone] => 11986947921
+    [customer_identity] => 16022119812
+    [customer_email] => ercm@rodiziosercm.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 542820******2939
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626ERU9FOLRB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+18/04/2017 13:56:15
+INICIO_______________________________________________________________LOG:BEGIN:::18/04/2017 13:15<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 89ecefc80d8f4b3894af4e1bc3800724
+    [amount] => 4169
+    [order_number] => 3179
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+18/04/2017 13:56:15
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 89ecefc80d8f4b3894af4e1bc3800724
+    [amount] => 4169
+    [order_number] => 3179
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+18/04/2017 13:58:15
+INICIO_______________________________________________________________LOG:BEGIN:::18/04/2017 13:15<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 89ecefc80d8f4b3894af4e1bc3800724
+    [amount] => 4169
+    [order_number] => 3179
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+18/04/2017 13:58:15
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 89ecefc80d8f4b3894af4e1bc3800724
+    [amount] => 4169
+    [order_number] => 3179
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

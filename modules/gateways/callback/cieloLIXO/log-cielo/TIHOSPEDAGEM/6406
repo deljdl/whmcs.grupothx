@@ -1,0 +1,583 @@
+
+Dados Invoice
+<pre>Array
+(
+    [id] => 6406
+    [0] => 6406
+    [userid] => 105
+    [1] => 105
+    [invoicenum] => 
+    [2] => 
+    [date] => 2019-07-30
+    [3] => 2019-07-30
+    [duedate] => 2019-09-18
+    [4] => 2019-09-18
+    [datepaid] => 0000-00-00 00:00:00
+    [5] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [subtotal] => 105.00
+    [7] => 105.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 0.00
+    [total] => 105.00
+    [11] => 105.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => 0.00
+    [status] => Unpaid
+    [14] => Unpaid
+    [paymentmethod] => cielo
+    [15] => cielo
+    [paymethodid] => 
+    [16] => 
+    [notes] => 
+    [17] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 105
+    [id] => 105
+    [uuid] => a3100871-294f-498c-9643-5c749cf124cd
+    [firstname] => Marcos
+    [lastname] => Holanda Rolim
+    [companyname] => Coffe House Café e Festas Ltda - ME
+    [email] => mhr@isaeventos.com.br
+    [address1] => Rua Martiniano de Carvalho, 549 - Conj.44
+    [address2] => Paraíso
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01321-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 113284132411411339701198466533311985785290
+    [tax_id] => 
+    [password] => 22bbe39e8573bffac3b8552dc1288b12:vlPr(
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                    [passwordResetKeyExpiryDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                    [2] => passwordResetKeyExpiryDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                    [2] => groupName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 105
+                    [uuid] => a3100871-294f-498c-9643-5c749cf124cd
+                    [firstname] => Marcos
+                    [lastname] => Holanda Rolim
+                    [companyname] => Coffe House Café e Festas Ltda - ME
+                    [email] => mhr@isaeventos.com.br
+                    [address1] => Rua Martiniano de Carvalho, 549 - Conj.44
+                    [address2] => Paraíso
+                    [city] => São Paulo
+                    [state] => SP
+                    [postcode] => 01321-001
+                    [country] => BR
+                    [phonenumber] => (11) 3284-1324 (11) 4113-3970 (11) 98466-5333 (11) 98578-5290
+                    [tax_id] => 
+                    [password] => 22bbe39e8573bffac3b8552dc1288b12:vlPr(
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2014-10-01
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => BGygA9hTC2VPbe26oEzd4QIV8JA=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-09-24 19:37:56
+                    [ip] => 179.153.226.19
+                    [host] => b399e213.virtua.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 105
+                    [uuid] => a3100871-294f-498c-9643-5c749cf124cd
+                    [firstname] => Marcos
+                    [lastname] => Holanda Rolim
+                    [companyname] => Coffe House Café e Festas Ltda - ME
+                    [email] => mhr@isaeventos.com.br
+                    [address1] => Rua Martiniano de Carvalho, 549 - Conj.44
+                    [address2] => Paraíso
+                    [city] => São Paulo
+                    [state] => SP
+                    [postcode] => 01321-001
+                    [country] => BR
+                    [phonenumber] => (11) 3284-1324 (11) 4113-3970 (11) 98466-5333 (11) 98578-5290
+                    [tax_id] => 
+                    [password] => 22bbe39e8573bffac3b8552dc1288b12:vlPr(
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2014-10-01
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => BGygA9hTC2VPbe26oEzd4QIV8JA=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-09-24 19:37:56
+                    [ip] => 179.153.226.19
+                    [host] => b399e213.virtua.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [fullname] => Marcos Holanda Rolim
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113284132411411339701198466533311985785290
+    [telephoneNumber] => +55.113284132411411339701198466533311985785290
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 24/09/2019 19:37<br>IP Address: 179.153.226.19<br>Host: b399e213.virtua.com.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11985785290
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.776.544/0001-63
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11985785290
+    [customfields3] => 05.776.544/0001-63
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 6406
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes Site IsaEventos.com.br inclusao de evento solicitado pelo suporte do google - 0.5 Horas...
+                            [Description] => Desenvolvimento Por Hora - Alteracoes Site IsaEventos.com.br inclusao de evento solicitado pelo suporte do google - 0.5 Horas @ 100.00/Hora
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Renovacao de Dominio - coffeebreakdelivery.com - 1 Ano(s) (29/08/2019 - 28/08/2020)
+                            [Description] => Renovacao de Dominio - coffeebreakdelivery.com - 1 Ano(s) (29/08/2019 - 28/08/2020)
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 1050
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Juros por 6 dias de atraso
+                            [Description] => Juros por 6 dias de atraso
+                            [UnitPrice] => 208
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Marcos Holanda Rolim
+            [Email] => mhr@isaeventos.com.br
+            [Identity] => 05776544000163
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 6406
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Desenvolvimento Por Hora - Alteracoes Site IsaEventos.com.br inclusao de evento solicitado pelo suporte do google - 0.5 Horas...
+                            [description] => Desenvolvimento Por Hora - Alteracoes Site IsaEventos.com.br inclusao de evento solicitado pelo suporte do google - 0.5 Horas @ 100.00/Hora
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Renovacao de Dominio - coffeebreakdelivery.com - 1 Ano(s) (29/08/2019 - 28/08/2020)
+                            [description] => Renovacao de Dominio - coffeebreakdelivery.com - 1 Ano(s) (29/08/2019 - 28/08/2020)
+                            [unitPrice] => 5500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [$id] => 6
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 1050
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [$id] => 7
+                            [name] => Juros por 6 dias de atraso
+                            [description] => Juros por 6 dias de atraso
+                            [unitPrice] => 208
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 8
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 9
+            [identity] => 05776544000163
+            [fullName] => Marcos Holanda Rolim
+            [email] => mhr@isaeventos.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 10
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 11
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/ec89d086-4318-4018-83f8-eb968b8227ac
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

@@ -1,0 +1,229 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2230
+    [id] => 2230
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-07-28
+    [date] => 2016-07-28
+    [4] => 2016-08-03
+    [duedate] => 2016-08-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 283.00
+    [subtotal] => 283.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 283.00
+    [total] => 283.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@hotmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/07/2016 17:50<br>IP Address: 177.100.233.251<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2230
+    [SoftDescriptor] => 2230
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Dinâmico - Site com até 7 páginas dinâmicas. Conforme Proposta 1082 - Parcela 1/3
+                            [Description] => Site Dinâmico - Site com até 7 páginas dinâmicas. Conforme Proposta 1082 - Parcela 1/3
+                            [UnitPrice] => 28300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => João Gomes
+            [Email] => mrscursos@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2230
+    [softDescriptor] => 2230
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Dinâmico - Site com até 7 páginas dinâmicas. Conforme Proposta 1082 - Parcela 1/3
+                            [description] => Site Dinâmico - Site com até 7 páginas dinâmicas. Conforme Proposta 1082 - Parcela 1/3
+                            [unitPrice] => 28300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => João Gomes
+            [email] => mrscursos@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/23d87c72-0eb7-4396-9782-e67c34b3bf72
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>

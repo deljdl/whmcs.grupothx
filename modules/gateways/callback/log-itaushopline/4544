@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4544
+    [id] => 4544
+    [1] => 311
+    [userid] => 311
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-04-02
+    [date] => 2018-04-02
+    [4] => 2018-04-02
+    [duedate] => 2018-04-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 749.00
+    [subtotal] => 749.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 749.00
+    [total] => 749.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 311
+    [id] => 311
+    [uuid] => 1ecee16e-7041-4200-b481-bcb1590cca92
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [fullname] => IGOR DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA EIRELI 
+    [email] => contatoasantos@hotmail.com
+    [address1] => Rua Washington Luiz Pereira de Souza, 101- sala 05
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-515
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 37541200 11944401200
+    [password] => $2y$10$kKjJ4Pl1R449BI48usHzF.NKVYXoxLqM6eHHuEgmwFJzqExLHkG5S
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113754120011944401200
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 03/04/2018 12:46<br>IP Address: 177.99.108.79<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11944401200
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23945373000130
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11944401200
+    [customfields3] => 23945373000130
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

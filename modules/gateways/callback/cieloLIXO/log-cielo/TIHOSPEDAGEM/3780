@@ -1,0 +1,357 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3780
+    [id] => 3780
+    [1] => 290
+    [userid] => 290
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-09-06
+    [date] => 2017-09-06
+    [4] => 2017-09-06
+    [duedate] => 2017-09-06
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 749.00
+    [subtotal] => 749.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 749.00
+    [total] => 749.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 290
+    [id] => 290
+    [uuid] => d339bb1e-7c53-4f67-9394-6d4922e95788
+    [firstname] => Camila
+    [lastname] => Esposito Gorgonio de Carvalho 
+    [fullname] => Camila Esposito Gorgonio de Carvalho 
+    [companyname] => GULOSITA ATELIE DE DOCES 
+    [email] => agulosita@hotmail.com
+    [address1] => Rua Conchilia, 224
+    [address2] => Vila Albertina
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 02373-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1129836500 11997368316
+    [password] => $2y$10$6rYxUm4TF.Ig0k56yK8VUe/6A7.SDhLF2sRnWcj4zf5jc3vlTU0Lq
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.112983650011997368316
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 06/09/2017 15:58<br>IP Address: 189.110.25.233<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11997368316
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 16514524000130
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11997368316
+    [customfields3] => 16514524000130
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3780
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Basico
+observacoes:: Conforme Proposta 1280-Criacao de Site Profissional e Hospedagem
+Prazo de entrega: 15 dias
+                            [Description] => Site Basico
+observacoes:: Conforme Proposta 1280-Criacao de Site Profissional e Hospedagem
+Prazo de entrega: 15 dias
+                            [UnitPrice] => 74900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Camila Esposito Gorgonio de Carvalho 
+            [Email] => agulosita@hotmail.com
+            [Identity] => 16514524000130
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3780
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Basico
+observacoes:: Conforme Proposta 1280-Criacao de Site Profissional e Hospedagem
+Prazo de entrega: 15 dias
+                            [description] => Site Basico
+observacoes:: Conforme Proposta 1280-Criacao de Site Profissional e Hospedagem
+Prazo de entrega: 15 dias
+                            [unitPrice] => 74900
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 16514524000130
+            [fullName] => Camila Esposito Gorgonio de Carvalho 
+            [email] => agulosita@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/7980cdef-aaf2-435e-bcf4-4accdf4ff1e0
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+06/09/2017 16:53:04
+INICIO_______________________________________________________________LOG:BEGIN:::06/09/2017 16:04<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3780
+    [amount] => 74900
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 50ede74187c347d992b9298dc1cd1911
+    [created_date] => 06/09/2017 16:04:50
+    [customer_name] => Camila Carvalho
+    [customer_phone] => 11997368316
+    [customer_identity] => 16514524000130
+    [customer_email] => agulosita@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552128******1464
+    [payment_installments] => 4
+    [payment_status] => 2
+    [tid] => 10760777626IVEGQ45TB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/09/2017 16:54:04
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3780 | Result->success | ValorPago ->749.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 3780
+    [amount] => 74900
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 50ede74187c347d992b9298dc1cd1911
+    [created_date] => 06/09/2017 16:04:50
+    [customer_name] => Camila Carvalho
+    [customer_phone] => 11997368316
+    [customer_identity] => 16514524000130
+    [customer_email] => agulosita@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552128******1464
+    [payment_installments] => 4
+    [payment_status] => 2
+    [tid] => 10760777626IVEGQ45TB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/09/2017 16:51:10
+INICIO_______________________________________________________________LOG:BEGIN:::06/09/2017 16:10<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 50ede74187c347d992b9298dc1cd1911
+    [amount] => 74900
+    [order_number] => 3780
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/09/2017 16:51:10
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 50ede74187c347d992b9298dc1cd1911
+    [amount] => 74900
+    [order_number] => 3780
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/09/2017 16:52:10
+INICIO_______________________________________________________________LOG:BEGIN:::06/09/2017 16:10<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 50ede74187c347d992b9298dc1cd1911
+    [amount] => 74900
+    [order_number] => 3780
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+06/09/2017 16:52:10
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 50ede74187c347d992b9298dc1cd1911
+    [amount] => 74900
+    [order_number] => 3780
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

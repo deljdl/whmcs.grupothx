@@ -1,0 +1,1727 @@
+
+
+10/06/2018 14:44:09
+INICIO_______________________________________________________________LOG:BEGIN:::10/06/2018 14:09<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [created_date] => 10/06/2018 14:09:35
+    [customer_name] => Juliaany Lima
+    [customer_phone] => 1143796224
+    [customer_identity] => 48532587879
+    [customer_email] => FINANCEIRO@WINETECNOLOGIA.COM.BR
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777627DGI9AQMTB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/06/2018 14:44:09
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4820
+                            [userid] => 177
+                            [firstname] => Fabio
+                            [lastname] => Roberto Alves de Lima
+                            [companyname] => Revenda 
+                            [invoicenum] => 
+                            [date] => 2018-06-08
+                            [duedate] => 2018-06-15
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 108.90
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 108.90
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => boleto_itau_sem_registro
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [created_date] => 10/06/2018 14:09:35
+    [customer_name] => Juliaany Lima
+    [customer_phone] => 1143796224
+    [customer_identity] => 48532587879
+    [customer_email] => FINANCEIRO@WINETECNOLOGIA.COM.BR
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777627DGI9AQMTB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/06/2018 14:44:09
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 4820
+            [userid] => 177
+            [firstname] => Fabio
+            [lastname] => Roberto Alves de Lima
+            [companyname] => Revenda 
+            [invoicenum] => 
+            [date] => 2018-06-08
+            [duedate] => 2018-06-15
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 108.90
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 108.90
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => boleto_itau_sem_registro
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [created_date] => 10/06/2018 14:09:35
+    [customer_name] => Juliaany Lima
+    [customer_phone] => 1143796224
+    [customer_identity] => 48532587879
+    [customer_email] => FINANCEIRO@WINETECNOLOGIA.COM.BR
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777627DGI9AQMTB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/06/2018 14:44:09
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 4820
+    [userid] => 177
+    [firstname] => Fabio
+    [lastname] => Roberto Alves de Lima
+    [companyname] => Revenda 
+    [invoicenum] => 
+    [date] => 2018-06-08
+    [duedate] => 2018-06-15
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 108.90
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 108.90
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => boleto_itau_sem_registro
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [created_date] => 10/06/2018 14:09:35
+    [customer_name] => Juliaany Lima
+    [customer_phone] => 1143796224
+    [customer_identity] => 48532587879
+    [customer_email] => FINANCEIRO@WINETECNOLOGIA.COM.BR
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777627DGI9AQMTB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/06/2018 14:44:09
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 4820
+    [invoicenum] => 
+    [userid] => 177
+    [date] => 2018-06-08
+    [duedate] => 2018-06-15
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 108.90
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 108.90
+    [balance] => 108.90
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => boleto_itau_sem_registro
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 7539
+                            [type] => Hosting
+                            [relid] => 258
+                            [description] => TIH Professional - winetecnologia.com.br (15/06/2018 - 14/07/2018)
+                            [amount] => 108.90
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [created_date] => 10/06/2018 14:09:35
+    [customer_name] => Juliaany Lima
+    [customer_phone] => 1143796224
+    [customer_identity] => 48532587879
+    [customer_email] => FINANCEIRO@WINETECNOLOGIA.COM.BR
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777627DGI9AQMTB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/06/2018 14:44:09
+INICIO_______________________________________________________________LOG:Checando -> 258 ==  258
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [created_date] => 10/06/2018 14:09:35
+    [customer_name] => Juliaany Lima
+    [customer_phone] => 1143796224
+    [customer_identity] => 48532587879
+    [customer_email] => FINANCEIRO@WINETECNOLOGIA.COM.BR
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777627DGI9AQMTB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/06/2018 14:45:09
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [created_date] => 10/06/2018 14:09:35
+    [customer_name] => Juliaany Lima
+    [customer_phone] => 1143796224
+    [customer_identity] => 48532587879
+    [customer_email] => FINANCEIRO@WINETECNOLOGIA.COM.BR
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777627DGI9AQMTB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/06/2018 14:43:13
+INICIO_______________________________________________________________LOG:BEGIN:::10/06/2018 14:13<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/06/2018 14:43:13
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4820
+                            [userid] => 177
+                            [firstname] => Fabio
+                            [lastname] => Roberto Alves de Lima
+                            [companyname] => Revenda 
+                            [invoicenum] => 
+                            [date] => 2018-06-08
+                            [duedate] => 2018-06-15
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 108.90
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 108.90
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => itaushopline
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/06/2018 14:43:13
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 4820
+            [userid] => 177
+            [firstname] => Fabio
+            [lastname] => Roberto Alves de Lima
+            [companyname] => Revenda 
+            [invoicenum] => 
+            [date] => 2018-06-08
+            [duedate] => 2018-06-15
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 108.90
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 108.90
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => itaushopline
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/06/2018 14:43:13
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 4820
+    [userid] => 177
+    [firstname] => Fabio
+    [lastname] => Roberto Alves de Lima
+    [companyname] => Revenda 
+    [invoicenum] => 
+    [date] => 2018-06-08
+    [duedate] => 2018-06-15
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 108.90
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 108.90
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => itaushopline
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/06/2018 14:43:13
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 4820
+    [invoicenum] => 
+    [userid] => 177
+    [date] => 2018-06-08
+    [duedate] => 2018-06-15
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 108.90
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 108.90
+    [balance] => 108.90
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => itaushopline
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 7539
+                            [type] => Hosting
+                            [relid] => 258
+                            [description] => TIH Professional - winetecnologia.com.br (15/06/2018 - 14/07/2018)
+                            [amount] => 108.90
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/06/2018 14:43:13
+INICIO_______________________________________________________________LOG:Checando -> 258 ==  258
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/06/2018 14:43:13
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/06/2018 14:44:13
+INICIO_______________________________________________________________LOG:BEGIN:::10/06/2018 14:13<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/06/2018 14:44:13
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4820
+                            [userid] => 177
+                            [firstname] => Fabio
+                            [lastname] => Roberto Alves de Lima
+                            [companyname] => Revenda 
+                            [invoicenum] => 
+                            [date] => 2018-06-08
+                            [duedate] => 2018-06-15
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 108.90
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 108.90
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => itaushopline
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/06/2018 14:44:13
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 4820
+            [userid] => 177
+            [firstname] => Fabio
+            [lastname] => Roberto Alves de Lima
+            [companyname] => Revenda 
+            [invoicenum] => 
+            [date] => 2018-06-08
+            [duedate] => 2018-06-15
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 108.90
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 108.90
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => itaushopline
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/06/2018 14:44:13
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 4820
+    [userid] => 177
+    [firstname] => Fabio
+    [lastname] => Roberto Alves de Lima
+    [companyname] => Revenda 
+    [invoicenum] => 
+    [date] => 2018-06-08
+    [duedate] => 2018-06-15
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 108.90
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 108.90
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => itaushopline
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/06/2018 14:44:13
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 4820
+    [invoicenum] => 
+    [userid] => 177
+    [date] => 2018-06-08
+    [duedate] => 2018-06-15
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 108.90
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 108.90
+    [balance] => 108.90
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => itaushopline
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 7539
+                            [type] => Hosting
+                            [relid] => 258
+                            [description] => TIH Professional - winetecnologia.com.br (15/06/2018 - 14/07/2018)
+                            [amount] => 108.90
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/06/2018 14:44:13
+INICIO_______________________________________________________________LOG:Checando -> 258 ==  258
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+10/06/2018 14:44:13
+INICIO_______________________________________________________________LOG:Cliente avisado que pagamento não foi aprovado
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 67ac983337ca432da056fb3d8102a8f6
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+17/07/2018 12:24:08
+INICIO_______________________________________________________________LOG:BEGIN:::17/07/2018 12:08<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 637bd3727fb44411a0accf320c6bdd09
+    [created_date] => 17/07/2018 12:08:15
+    [customer_name] => JULIANNY LIMA
+    [customer_phone] => 1124569029
+    [customer_identity] => 48532587879
+    [customer_email] => fabioradl@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627EJ4LDEK9B
+    [recurrent_payment_id] => 5e7277a8-0810-4088-bd20-28687857f985
+    [start_date] => 17/07/2018 12:08:15
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+17/07/2018 12:24:08
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4939
+                            [userid] => 177
+                            [firstname] => Fabio
+                            [lastname] => Roberto Alves de Lima
+                            [companyname] => Revenda 
+                            [invoicenum] => 
+                            [date] => 2018-07-09
+                            [duedate] => 2018-07-15
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 108.90
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 108.90
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => itaushopline
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 637bd3727fb44411a0accf320c6bdd09
+    [created_date] => 17/07/2018 12:08:15
+    [customer_name] => JULIANNY LIMA
+    [customer_phone] => 1124569029
+    [customer_identity] => 48532587879
+    [customer_email] => fabioradl@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627EJ4LDEK9B
+    [recurrent_payment_id] => 5e7277a8-0810-4088-bd20-28687857f985
+    [start_date] => 17/07/2018 12:08:15
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+17/07/2018 12:24:08
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 4939
+            [userid] => 177
+            [firstname] => Fabio
+            [lastname] => Roberto Alves de Lima
+            [companyname] => Revenda 
+            [invoicenum] => 
+            [date] => 2018-07-09
+            [duedate] => 2018-07-15
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 108.90
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 108.90
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => itaushopline
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 637bd3727fb44411a0accf320c6bdd09
+    [created_date] => 17/07/2018 12:08:15
+    [customer_name] => JULIANNY LIMA
+    [customer_phone] => 1124569029
+    [customer_identity] => 48532587879
+    [customer_email] => fabioradl@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627EJ4LDEK9B
+    [recurrent_payment_id] => 5e7277a8-0810-4088-bd20-28687857f985
+    [start_date] => 17/07/2018 12:08:15
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+17/07/2018 12:24:08
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 4939
+    [userid] => 177
+    [firstname] => Fabio
+    [lastname] => Roberto Alves de Lima
+    [companyname] => Revenda 
+    [invoicenum] => 
+    [date] => 2018-07-09
+    [duedate] => 2018-07-15
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 108.90
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 108.90
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => itaushopline
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 637bd3727fb44411a0accf320c6bdd09
+    [created_date] => 17/07/2018 12:08:15
+    [customer_name] => JULIANNY LIMA
+    [customer_phone] => 1124569029
+    [customer_identity] => 48532587879
+    [customer_email] => fabioradl@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627EJ4LDEK9B
+    [recurrent_payment_id] => 5e7277a8-0810-4088-bd20-28687857f985
+    [start_date] => 17/07/2018 12:08:15
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+17/07/2018 12:24:08
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 4939
+    [invoicenum] => 
+    [userid] => 177
+    [date] => 2018-07-09
+    [duedate] => 2018-07-15
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 108.90
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 108.90
+    [balance] => 108.90
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => itaushopline
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 7721
+                            [type] => Hosting
+                            [relid] => 258
+                            [description] => TIH Professional - winetecnologia.com.br (15/07/2018 - 14/08/2018)
+                            [amount] => 108.90
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 637bd3727fb44411a0accf320c6bdd09
+    [created_date] => 17/07/2018 12:08:15
+    [customer_name] => JULIANNY LIMA
+    [customer_phone] => 1124569029
+    [customer_identity] => 48532587879
+    [customer_email] => fabioradl@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627EJ4LDEK9B
+    [recurrent_payment_id] => 5e7277a8-0810-4088-bd20-28687857f985
+    [start_date] => 17/07/2018 12:08:15
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+17/07/2018 12:24:08
+INICIO_______________________________________________________________LOG:Checando -> 258 ==  258
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 637bd3727fb44411a0accf320c6bdd09
+    [created_date] => 17/07/2018 12:08:15
+    [customer_name] => JULIANNY LIMA
+    [customer_phone] => 1124569029
+    [customer_identity] => 48532587879
+    [customer_email] => fabioradl@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627EJ4LDEK9B
+    [recurrent_payment_id] => 5e7277a8-0810-4088-bd20-28687857f985
+    [start_date] => 17/07/2018 12:08:15
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+17/07/2018 12:25:08
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->4939 | Result->success | ValorPago ->108.90 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 637bd3727fb44411a0accf320c6bdd09
+    [created_date] => 17/07/2018 12:08:15
+    [customer_name] => JULIANNY LIMA
+    [customer_phone] => 1124569029
+    [customer_identity] => 48532587879
+    [customer_email] => fabioradl@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627EJ4LDEK9B
+    [recurrent_payment_id] => 5e7277a8-0810-4088-bd20-28687857f985
+    [start_date] => 17/07/2018 12:08:15
+    [end_date] => 01/01/0001 00:00:00
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+17/07/2018 12:24:16
+INICIO_______________________________________________________________LOG:BEGIN:::17/07/2018 12:16<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 637bd3727fb44411a0accf320c6bdd09
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+17/07/2018 12:24:16
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 637bd3727fb44411a0accf320c6bdd09
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+17/07/2018 12:24:16
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 637bd3727fb44411a0accf320c6bdd09
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+17/07/2018 12:24:16
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 637bd3727fb44411a0accf320c6bdd09
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/08/2018 17:36:44
+INICIO_______________________________________________________________LOG:BEGIN:::21/08/2018 17:44<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [checkout_cielo_order_number] => 830807ce002a435380ce091d26000f84
+    [created_date] => 21/08/2018 17:44:34
+    [customer_name] => JULIANNY LIMA
+    [customer_phone] => 1124569029
+    [customer_identity] => 48532587879
+    [customer_email] => fabioradl@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627FJR4RODRB
+    [recurrent_payment_id] => 5e7277a8-0810-4088-bd20-28687857f985
+    [start_date] => 7/17/2018 12:08:15 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/08/2018 17:37:44
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 5065
+                            [userid] => 177
+                            [firstname] => Fabio
+                            [lastname] => Roberto Alves de Lima
+                            [companyname] => Revenda 
+                            [invoicenum] => 
+                            [date] => 2018-08-08
+                            [duedate] => 2018-08-15
+                            [datepaid] => 0000-00-00 00:00:00
+                            [subtotal] => 108.90
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 108.90
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => itaushopline
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [checkout_cielo_order_number] => 830807ce002a435380ce091d26000f84
+    [created_date] => 21/08/2018 17:44:34
+    [customer_name] => JULIANNY LIMA
+    [customer_phone] => 1124569029
+    [customer_identity] => 48532587879
+    [customer_email] => fabioradl@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627FJR4RODRB
+    [recurrent_payment_id] => 5e7277a8-0810-4088-bd20-28687857f985
+    [start_date] => 7/17/2018 12:08:15 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/08/2018 17:37:44
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 5065
+            [userid] => 177
+            [firstname] => Fabio
+            [lastname] => Roberto Alves de Lima
+            [companyname] => Revenda 
+            [invoicenum] => 
+            [date] => 2018-08-08
+            [duedate] => 2018-08-15
+            [datepaid] => 0000-00-00 00:00:00
+            [subtotal] => 108.90
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 108.90
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => itaushopline
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [checkout_cielo_order_number] => 830807ce002a435380ce091d26000f84
+    [created_date] => 21/08/2018 17:44:34
+    [customer_name] => JULIANNY LIMA
+    [customer_phone] => 1124569029
+    [customer_identity] => 48532587879
+    [customer_email] => fabioradl@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627FJR4RODRB
+    [recurrent_payment_id] => 5e7277a8-0810-4088-bd20-28687857f985
+    [start_date] => 7/17/2018 12:08:15 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/08/2018 17:37:44
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 5065
+    [userid] => 177
+    [firstname] => Fabio
+    [lastname] => Roberto Alves de Lima
+    [companyname] => Revenda 
+    [invoicenum] => 
+    [date] => 2018-08-08
+    [duedate] => 2018-08-15
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 108.90
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 108.90
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => itaushopline
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [checkout_cielo_order_number] => 830807ce002a435380ce091d26000f84
+    [created_date] => 21/08/2018 17:44:34
+    [customer_name] => JULIANNY LIMA
+    [customer_phone] => 1124569029
+    [customer_identity] => 48532587879
+    [customer_email] => fabioradl@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627FJR4RODRB
+    [recurrent_payment_id] => 5e7277a8-0810-4088-bd20-28687857f985
+    [start_date] => 7/17/2018 12:08:15 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/08/2018 17:37:44
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 5065
+    [invoicenum] => 
+    [userid] => 177
+    [date] => 2018-08-08
+    [duedate] => 2018-08-15
+    [datepaid] => 0000-00-00 00:00:00
+    [subtotal] => 108.90
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 108.90
+    [balance] => 108.90
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => itaushopline
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 7905
+                            [type] => Hosting
+                            [relid] => 258
+                            [description] => TIH Professional - winetecnologia.com.br (15/08/2018 - 14/09/2018)
+                            [amount] => 108.90
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [checkout_cielo_order_number] => 830807ce002a435380ce091d26000f84
+    [created_date] => 21/08/2018 17:44:34
+    [customer_name] => JULIANNY LIMA
+    [customer_phone] => 1124569029
+    [customer_identity] => 48532587879
+    [customer_email] => fabioradl@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627FJR4RODRB
+    [recurrent_payment_id] => 5e7277a8-0810-4088-bd20-28687857f985
+    [start_date] => 7/17/2018 12:08:15 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/08/2018 17:37:44
+INICIO_______________________________________________________________LOG:Checando -> 258 ==  258
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [checkout_cielo_order_number] => 830807ce002a435380ce091d26000f84
+    [created_date] => 21/08/2018 17:44:34
+    [customer_name] => JULIANNY LIMA
+    [customer_phone] => 1124569029
+    [customer_identity] => 48532587879
+    [customer_email] => fabioradl@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627FJR4RODRB
+    [recurrent_payment_id] => 5e7277a8-0810-4088-bd20-28687857f985
+    [start_date] => 7/17/2018 12:08:15 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/08/2018 17:38:44
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->5065 | Result->success | ValorPago ->108.90 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => s258
+    [amount] => 10890
+    [checkout_cielo_order_number] => 830807ce002a435380ce091d26000f84
+    [created_date] => 21/08/2018 17:44:34
+    [customer_name] => JULIANNY LIMA
+    [customer_phone] => 1124569029
+    [customer_identity] => 48532587879
+    [customer_email] => fabioradl@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 554612******8271
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627FJR4RODRB
+    [recurrent_payment_id] => 5e7277a8-0810-4088-bd20-28687857f985
+    [start_date] => 7/17/2018 12:08:15 PM
+    [end_date] => 1/1/0001 12:00:00 AM
+    [recurrent_status] => Ativa
+    [interval] => Mensal
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/08/2018 17:19:47
+INICIO_______________________________________________________________LOG:BEGIN:::21/08/2018 17:47<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 830807ce002a435380ce091d26000f84
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/08/2018 17:19:47
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 830807ce002a435380ce091d26000f84
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/08/2018 17:19:47
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 830807ce002a435380ce091d26000f84
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/08/2018 17:19:47
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 830807ce002a435380ce091d26000f84
+    [amount] => 10890
+    [order_number] => s258
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

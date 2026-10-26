@@ -1,0 +1,458 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2220
+    [id] => 2220
+    [1] => 202
+    [userid] => 202
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-07-26
+    [date] => 2016-07-26
+    [4] => 2016-08-02
+    [duedate] => 2016-08-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 202
+    [id] => 202
+    [uuid] => 3da0dc40-0e02-41f7-95a2-3cd2ea29841f
+    [firstname] => Marcelo
+    [lastname] => Pereira
+    [fullname] => Marcelo Pereira
+    [companyname] => SOS Familia 24 horas
+    [email] => familia24horas.socorro@hotmail.com
+    [address1] => Estrada Municipal Guararema
+    [address2] => Morro Grande
+    [city] => Santa Isabel
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07500-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => 1271147b0b4e748de74e532ce1de9dcf:!AtcB
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 26/07/2016 07:39<br>IP Address: 177.206.77.30<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 24.332.248/0001-18
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 24.332.248/0001-18
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2220
+    [SoftDescriptor] => 2220
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - guinchosocorro.com.br (02/08/2016 - 01/11/2016)
+                            [Description] => TIH - Master - guinchosocorro.com.br (02/08/2016 - 01/11/2016)
+                            [UnitPrice] => 8991
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Marcelo Pereira
+            [Email] => familia24horas.socorro@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2220
+    [softDescriptor] => 2220
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - guinchosocorro.com.br (02/08/2016 - 01/11/2016)
+                            [description] => TIH - Master - guinchosocorro.com.br (02/08/2016 - 01/11/2016)
+                            [unitPrice] => 8991
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Marcelo Pereira
+            [email] => familia24horas.socorro@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/f505a3bb-df50-4703-bb41-2dbe7e0689d3
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2220
+    [id] => 2220
+    [1] => 202
+    [userid] => 202
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-07-26
+    [date] => 2016-07-26
+    [4] => 2016-08-10
+    [duedate] => 2016-08-10
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 202
+    [id] => 202
+    [uuid] => 3da0dc40-0e02-41f7-95a2-3cd2ea29841f
+    [firstname] => Marcelo
+    [lastname] => Pereira
+    [fullname] => Marcelo Pereira
+    [companyname] => SOS Familia 24 horas
+    [email] => familia24horas.socorro@hotmail.com
+    [address1] => Estrada Municipal Guararema
+    [address2] => Morro Grande
+    [city] => Santa Isabel
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07500-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 
+    [password] => 1271147b0b4e748de74e532ce1de9dcf:!AtcB
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => 
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 26/07/2016 07:40<br>IP Address: 177.206.77.30<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 24.332.248/0001-18
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 24.332.248/0001-18
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2220
+    [SoftDescriptor] => 2220
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - guinchosocorro.com.br (02/08/2016 - 01/11/2016)
+                            [Description] => TIH - Master - guinchosocorro.com.br (02/08/2016 - 01/11/2016)
+                            [UnitPrice] => 8991
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Marcelo Pereira
+            [Email] => familia24horas.socorro@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2220
+    [softDescriptor] => 2220
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - guinchosocorro.com.br (02/08/2016 - 01/11/2016)
+                            [description] => TIH - Master - guinchosocorro.com.br (02/08/2016 - 01/11/2016)
+                            [unitPrice] => 8991
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Marcelo Pereira
+            [email] => familia24horas.socorro@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/5ece19eb-c2d8-437e-ab20-f262844454c4
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>

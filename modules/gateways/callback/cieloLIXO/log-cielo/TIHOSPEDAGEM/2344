@@ -1,0 +1,338 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2344
+    [id] => 2344
+    [1] => 230
+    [userid] => 230
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-08-26
+    [date] => 2016-08-26
+    [4] => 2016-08-26
+    [duedate] => 2016-08-26
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 678.97
+    [subtotal] => 678.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 678.97
+    [total] => 678.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 230
+    [id] => 230
+    [uuid] => a50dbe51-c249-4c94-b16d-81bc8786c791
+    [firstname] => Elizabeth
+    [lastname] => Silveira
+    [fullname] => Elizabeth Silveira
+    [companyname] => Paculândia-O Rei dos Pacus
+    [email] => beth.guararema@ig.com.br
+    [address1] => Estrada Antônio Bernardino
+    [address2] => 
+    [city] => Santa Iasabel
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08900-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11974251600
+    [password] => $2y$10$gkTc8vQy.eynUuHZ8tMtNOSnB.q55PlKewADWwctsmm1j1JClYvGe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11974251600
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 26/08/2016 13:10<br>IP Address: 177.159.82.166<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11974251600
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 09
+                )
+
+        )
+
+    [customfields2] => 11974251600
+    [customfields3] => 09
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2344
+    [SoftDescriptor] => 2344
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - paculandia.com.br (26/08/2016 - 25/09/2016)
+                            [Description] => TIH - Master - paculandia.com.br (26/08/2016 - 25/09/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Site Básico - paculandia.com.br
+                            [Description] => Site Básico - paculandia.com.br
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Elizabeth Silveira
+            [Email] => beth.guararema@ig.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2344
+    [softDescriptor] => 2344
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - paculandia.com.br (26/08/2016 - 25/09/2016)
+                            [description] => TIH - Master - paculandia.com.br (26/08/2016 - 25/09/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Site Básico - paculandia.com.br
+                            [description] => Site Básico - paculandia.com.br
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Elizabeth Silveira
+            [email] => beth.guararema@ig.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/9892605e-5eef-44f1-b17f-b557f3d1812a
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+26/08/2016 13:28:14
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2344
+    [amount] => 67897
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => bd655178a3e84adf85e9df64b9cee5b1
+    [created_date] => 26/08/2016 15:14:25
+    [customer_name] => Elizabeth Silveira
+    [customer_phone] => 1146939287
+    [customer_identity] => 70173559891
+    [customer_email] => beth.guararema@ig.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 406655******7201
+    [payment_installments] => 3
+    [payment_status] => 2
+    [tid] => 107607776200000001EA
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/08/2016 13:29:14
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->230 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2344
+    [amount] => 67897
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => bd655178a3e84adf85e9df64b9cee5b1
+    [created_date] => 26/08/2016 15:14:25
+    [customer_name] => Elizabeth Silveira
+    [customer_phone] => 1146939287
+    [customer_identity] => 70173559891
+    [customer_email] => beth.guararema@ig.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 406655******7201
+    [payment_installments] => 3
+    [payment_status] => 2
+    [tid] => 107607776200000001EA
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/08/2016 13:08:23
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => bd655178a3e84adf85e9df64b9cee5b1
+    [amount] => 67897
+    [order_number] => 2344
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+26/08/2016 13:08:23
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => bd655178a3e84adf85e9df64b9cee5b1
+    [amount] => 67897
+    [order_number] => 2344
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

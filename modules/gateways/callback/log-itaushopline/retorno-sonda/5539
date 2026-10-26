@@ -1,0 +1,97 @@
+
+POST
+<pre>Array
+(
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT01NTM5JmZpPTQxNTUzOWRkSYVpMmBUAC/twQEl7cwfUMl62mI=
+    [__EVENTVALIDATION] => /wEWBgKfvavrCQLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BcruU9o+Tx0S3p0C6WuykOK/w/cv
+    [DC] => W72Z55G218Z210Z3G142Z60P100Z111X52C51F150M138P242U37C52J231W146K255W82C150R78K81H86E110U73D107T60T157B232N51O216T113D8J22Y40W
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00415539
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 5539
+    [fi] => 415539
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 5539
+    [fi] => 415539
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT01NTM5JmZpPTQxNTUzOWRkSYVpMmBUAC/twQEl7cwfUMl62mI=
+    [__EVENTVALIDATION] => /wEWBgKfvavrCQLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BcruU9o+Tx0S3p0C6WuykOK/w/cv
+    [DC] => W72Z55G218Z210Z3G142Z60P100Z111X52C51F150M138P242U37C52J231W146K255W82C150R78K81H86E110U73D107T60T157B232N51O216T113D8J22Y40W
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00415539
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+    [WHMCSeWdrAiYR38h0] => eb309770a9e722f01cda875daf8ca8fe
+    [jv_utm_heIAoGOw2S] => 
+    [jv_callback_ping_response_heIAoGOw2S] => {"ok":true}
+    [jv_enter_ts_heIAoGOw2S] => 1544446625668
+    [jv_pages_count_heIAoGOw2S] => 1
+    [jv_visits_count_heIAoGOw2S] => 15
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [CONTENT_LENGTH] => 529
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [CONTEXT_DOCUMENT_ROOT] => /home/tihosped/public_html
+    [CONTEXT_PREFIX] => 
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [HTTP_CONNECTION] => Keep-Alive
+    [HTTP_COOKIE] => WHMCSeWdrAiYR38h0=eb309770a9e722f01cda875daf8ca8fe; jv_utm_heIAoGOw2S=; jv_callback_ping_response_heIAoGOw2S=%7B%22ok%22%3Atrue%7D; jv_enter_ts_heIAoGOw2S=1544446625668; jv_pages_count_heIAoGOw2S=1; jv_visits_count_heIAoGOw2S=15
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_REFERER] => https://shopline.itau.com.br/shopline/Volta.aspx?codemp=J0194961710001810000024294&idloja=34902&npedido=00415539
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=5539&fi=415539
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 201.6.133.77
+    [REMOTE_PORT] => 3711
+    [REQUEST_METHOD] => POST
+    [REQUEST_SCHEME] => https
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=5539&fi=415539
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SCRIPT_URI] => https://tihospedagem.com.br/modules/gateways/callback/itauReT.php
+    [SCRIPT_URL] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.4.37 (cPanel) OpenSSL/1.0.2p mod_bwlimited/1.4
+    [SSL_TLS_SNI] => tihospedagem.com.br
+    [TZ] => America/Sao_Paulo
+    [UNIQUE_ID] => XA5iw7YH8Fx2Q1J28Bkw0wAAANM
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME_FLOAT] => 1544446659.53
+    [REQUEST_TIME] => 1544446659
+    [argv] => Array
+        (
+            [0] => i=5539&fi=415539
+        )
+
+    [argc] => 1
+)
+</pre>

@@ -1,0 +1,609 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5405
+    [id] => 5405
+    [1] => 277
+    [userid] => 277
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-11-01
+    [date] => 2018-11-01
+    [4] => 2018-11-02
+    [duedate] => 2018-11-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [7] => 299.00
+    [subtotal] => 299.00
+    [8] => 0.00
+    [credit] => 0.00
+    [9] => 0.00
+    [tax] => 0.00
+    [10] => 0.00
+    [tax2] => 0.00
+    [11] => 299.00
+    [total] => 299.00
+    [12] => 0.00
+    [taxrate] => 0.00
+    [13] => 0.00
+    [taxrate2] => 0.00
+    [14] => Unpaid
+    [status] => Unpaid
+    [15] => cielo
+    [paymentmethod] => cielo
+    [16] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 277
+    [id] => 277
+    [uuid] => 652e8dd9-b7bb-422d-aa4a-e4b2fef7fb77
+    [firstname] => Marcus
+    [lastname] => Vinicius
+    [fullname] => Marcus Vinicius
+    [companyname] => Great MA Consultoria e Part LTDA
+    [email] => mvlss@hotmail.com
+    [address1] => Av. Laurinda Cardoso de Melo Freire
+    [address2] => Vila Oliveira
+    [city] => Mogi das Cruzes
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => ¨08780-028
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11982525436
+    [password] => $2y$10$Ye424mZWTsrQMUgDpEOMC.Ej7/U6XPIu.GAismrOiYXniiU2Wjo4.
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 277
+                    [uuid] => 652e8dd9-b7bb-422d-aa4a-e4b2fef7fb77
+                    [firstname] => Marcus
+                    [lastname] => Vinicius
+                    [companyname] => Great MA Consultoria e Part LTDA
+                    [email] => mvlss@hotmail.com
+                    [address1] => Av. Laurinda Cardoso de Melo Freire
+                    [address2] => Vila Oliveira
+                    [city] => Mogi das Cruzes
+                    [state] => SP
+                    [postcode] => ¨08780-028
+                    [country] => BR
+                    [phonenumber] => 11982525436
+                    [password] => $2y$10$Ye424mZWTsrQMUgDpEOMC.Ej7/U6XPIu.GAismrOiYXniiU2Wjo4.
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2017-05-23
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => rVUuyE5GuOTcgb/nIV0Ek4CXiPM=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2018-11-01 10:02:52
+                    [ip] => 200.146.241.173
+                    [host] => 200-146-241-173.xf-static.ctbcnetsuper.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 0
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 277
+                    [uuid] => 652e8dd9-b7bb-422d-aa4a-e4b2fef7fb77
+                    [firstname] => Marcus
+                    [lastname] => Vinicius
+                    [companyname] => Great MA Consultoria e Part LTDA
+                    [email] => mvlss@hotmail.com
+                    [address1] => Av. Laurinda Cardoso de Melo Freire
+                    [address2] => Vila Oliveira
+                    [city] => Mogi das Cruzes
+                    [state] => SP
+                    [postcode] => ¨08780-028
+                    [country] => BR
+                    [phonenumber] => 11982525436
+                    [password] => $2y$10$Ye424mZWTsrQMUgDpEOMC.Ej7/U6XPIu.GAismrOiYXniiU2Wjo4.
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2017-05-23
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => rVUuyE5GuOTcgb/nIV0Ek4CXiPM=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => 
+                    [startdate] => 
+                    [expdate] => 
+                    [issuenumber] => 
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2018-11-01 10:02:52
+                    [ip] => 200.146.241.173
+                    [host] => 200-146-241-173.xf-static.ctbcnetsuper.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 0
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 0000-00-00 00:00:00
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11982525436
+    [telephoneNumber] => +55.11982525436
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 0
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 01/11/2018 10:02<br>IP Address: 200.146.241.173<br>Host: 200-146-241-173.xf-static.ctbcnetsuper.com.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982525436
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15520594000139
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982525436
+    [customfields3] => 15520594000139
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5405
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express one Page - Site com ate 1 pagina.obrigatoria a contratacao da hospedagemNenhuma alteracao podera ser feita na es...
+                            [Description] => Site Express one Page - Site com ate 1 pagina.obrigatoria a contratacao da hospedagemNenhuma alteracao podera ser feita na estrutura do tema escolhido.os elementos utilizados deverao estar presentes no tema escolhido.Qualquer alteracao de estrutura, ...
+                            [UnitPrice] => 29900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Marcus Vinicius
+            [Email] => mvlss@hotmail.com
+            [Identity] => 15520594000139
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5405
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Site Express one Page - Site com ate 1 pagina.obrigatoria a contratacao da hospedagemNenhuma alteracao podera ser feita na es...
+                            [description] => Site Express one Page - Site com ate 1 pagina.obrigatoria a contratacao da hospedagemNenhuma alteracao podera ser feita na estrutura do tema escolhido.os elementos utilizados deverao estar presentes no tema escolhido.Qualquer alteracao de estrutura, ...
+                            [unitPrice] => 29900
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 15520594000139
+            [fullName] => Marcus Vinicius
+            [email] => mvlss@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/36c9a4d0-545a-4159-aacc-684c5c9e9d3a
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+01/11/2018 10:49:10
+INICIO_______________________________________________________________LOG:BEGIN:::01/11/2018 10:10<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 5405
+    [amount] => 29900
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => c9d080abbb444f82a470c6f1ac3a03c8
+    [created_date] => 01/11/2018 10:10:47
+    [customer_name] => Maria Lellis
+    [customer_phone] => 1137723081
+    [customer_identity] => 06423079897
+    [customer_email] => mvlss@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 490172******1130
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627HN4G6OMRB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+01/11/2018 10:50:10
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->5405 | Result->success | ValorPago ->299.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 5405
+    [amount] => 29900
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => c9d080abbb444f82a470c6f1ac3a03c8
+    [created_date] => 01/11/2018 10:10:47
+    [customer_name] => Maria Lellis
+    [customer_phone] => 1137723081
+    [customer_identity] => 06423079897
+    [customer_email] => mvlss@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 490172******1130
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627HN4G6OMRB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+01/11/2018 10:57:14
+INICIO_______________________________________________________________LOG:BEGIN:::01/11/2018 10:14<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c9d080abbb444f82a470c6f1ac3a03c8
+    [amount] => 29900
+    [order_number] => 5405
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+01/11/2018 10:57:14
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => c9d080abbb444f82a470c6f1ac3a03c8
+    [amount] => 29900
+    [order_number] => 5405
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

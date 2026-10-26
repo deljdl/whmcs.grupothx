@@ -1,0 +1,267 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2108
+    [id] => 2108
+    [1] => 211
+    [userid] => 211
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-06-21
+    [date] => 2016-06-21
+    [4] => 2016-06-21
+    [duedate] => 2016-06-21
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1.00
+    [subtotal] => 1.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1.00
+    [total] => 1.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 211
+    [id] => 211
+    [uuid] => 6caa3b43-7791-4475-a68c-a6c478cb9b03
+    [firstname] => ANA LUCIA 
+    [lastname] => CAVALCANTE
+    [fullname] => ANA LUCIA  CAVALCANTE
+    [companyname] => I.C.P.A CEPERA LTDA
+    [email] => contasareceber@cepera.com.br
+    [address1] => RUA bENEDITO MIGUEL MOURA
+    [address2] => JUDITH PARQUE
+    [city] => ARUJA
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146537411
+    [password] => $2y$10$NU/cYrdkKioDJPjZP3Wde.pOdY0F7gWLt6ad4JAr0IXlqhwIKkOdG
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146537411
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 21/06/2016 15:52<br>IP Address: 186.231.99.237<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 98238-0696
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 98238-0696
+    [customfields3] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2108
+    [SoftDescriptor] => 2108
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Homologação Cielo
+                            [Description] => Homologação Cielo
+                            [UnitPrice] => 100
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => ANA LUCIA  CAVALCANTE
+            [Email] => contasareceber@cepera.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [OrderNumber] => 2108
+    [SoftDescriptor] => 2108
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Homologação Cielo
+                            [Description] => Homologação Cielo
+                            [UnitPrice] => 100
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => ANA LUCIA  CAVALCANTE
+            [Email] => contasareceber@cepera.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+
+21/06/2016 18:51:34
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2108
+    [amount] => 100
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 0bc76e49833a4141ba5a336194e7806d
+    [created_date] => 21/06/2016 20:34:39
+    [customer_name] => ANA CAVALCANTE
+    [customer_phone] => 1146534339
+    [customer_identity] => 32514853850
+    [customer_email] => contasareceber@cepera.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 4
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 548724******1534
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 107607776200000000AA
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/06/2016 18:56:40
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 0bc76e49833a4141ba5a336194e7806d
+    [amount] => 100
+    [order_number] => 2108
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

@@ -1,0 +1,860 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2146
+    [id] => 2146
+    [1] => 116
+    [userid] => 116
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-07-04
+    [date] => 2016-07-04
+    [4] => 2016-07-08
+    [duedate] => 2016-07-08
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 250.00
+    [subtotal] => 250.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 250.00
+    [total] => 250.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 116
+    [id] => 116
+    [uuid] => 0f6640d3-cae0-4c96-9e72-19b5820b4793
+    [firstname] => Cristiano
+    [lastname] => Aparecido da Rocha Januario
+    [fullname] => Cristiano Aparecido da Rocha Januario
+    [companyname] => CADNET BRASIL
+    [email] => cristianorocha@cadnetbrasil.com.br
+    [address1] => Avenida Brigadeiro Luis Antonio, 2367
+    [address2] => Cj. 414, Jardim Paulista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  95990-9938
+    [password] => b294ad24fe6162870b37bac9a7aca676:%nR!#
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.959909938
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 450.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/07/2016 08:43<br>IP Address: 177.206.76.112<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11959909938
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 30224522841
+                )
+
+        )
+
+    [customfields2] => 11959909938
+    [customfields3] => 30224522841
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2146
+    [SoftDescriptor] => 2146
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - *Criação de 5 imagens para o banner Rotativo da entrada do Site de acordo com os temas que irei ...
+                            [Description] => Desenvolvimento Por Hora - *Criação de 5 imagens para o banner Rotativo da entrada do Site de acordo com os temas que irei lhe fornecer *Criação de 1 Imagem para área central do site * Criação de 5 imagens para o topo das páginas “ Quem Somos”, “Como Funciona”, “Arquitetos”, etc...de acordo com o tema de cada página * Restruturação da página Arquitetos com inclusão de conteúdo que iremos disponibilizar: Imagens, texto, exemplos, Vídeo *Reestruturação da página de contato de forma a mostrar onde estamos no brasil e os devidos contatos. ( acho legal aquele mapa que aparece na página inicial da OLX, mas deixo a seu critério)
+                            [UnitPrice] => 25000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Cristiano Aparecido da Rocha Januario
+            [Email] => cristianorocha@cadnetbrasil.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Cart.Items[0].Description] => Array
+                (
+                    [0] => [Cart.Item.Description] deve conter no máximo 256 caracteres.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2146
+    [id] => 2146
+    [1] => 116
+    [userid] => 116
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-07-04
+    [date] => 2016-07-04
+    [4] => 2016-07-08
+    [duedate] => 2016-07-08
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 250.00
+    [subtotal] => 250.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 250.00
+    [total] => 250.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2146
+    [SoftDescriptor] => 2146
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - *Criação de 5 imagens para o banner Rotativo da entrada do Site de acordo com os temas que irei ...
+                            [Description] => Desenvolvimento Por Hora - *Criação de 5 imagens para o banner Rotativo da entrada do Site de acordo com os temas que irei ...
+                            [UnitPrice] => 25000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] =>  
+            [Email] => 
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2146
+    [softDescriptor] => 2146
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - *Criação de 5 imagens para o banner Rotativo da entrada do Site de acordo com os temas que irei ...
+                            [description] => Desenvolvimento Por Hora - *Criação de 5 imagens para o banner Rotativo da entrada do Site de acordo com os temas que irei ...
+                            [unitPrice] => 25000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] =>  
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/14615a09-3ea1-42fd-9c6b-7069c12b9123
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2146
+    [id] => 2146
+    [1] => 116
+    [userid] => 116
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-07-04
+    [date] => 2016-07-04
+    [4] => 2016-07-08
+    [duedate] => 2016-07-08
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 250.00
+    [subtotal] => 250.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 250.00
+    [total] => 250.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 116
+    [id] => 116
+    [uuid] => 0f6640d3-cae0-4c96-9e72-19b5820b4793
+    [firstname] => Cristiano
+    [lastname] => Aparecido da Rocha Januario
+    [fullname] => Cristiano Aparecido da Rocha Januario
+    [companyname] => CADNET BRASIL
+    [email] => cristianorocha@cadnetbrasil.com.br
+    [address1] => Avenida Brigadeiro Luis Antonio, 2367
+    [address2] => Cj. 414, Jardim Paulista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  95990-9938
+    [password] => b294ad24fe6162870b37bac9a7aca676:%nR!#
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.959909938
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 450.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/07/2016 08:46<br>IP Address: 177.206.76.112<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11959909938
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 30224522841
+                )
+
+        )
+
+    [customfields2] => 11959909938
+    [customfields3] => 30224522841
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2146
+    [SoftDescriptor] => 2146
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - *Criação de 5 imagens para o banner Rotativo da entrada do Site de acordo com os temas que irei ...
+                            [Description] => Desenvolvimento Por Hora - *Criação de 5 imagens para o banner Rotativo da entrada do Site de acordo com os temas que irei ...
+                            [UnitPrice] => 25000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Cristiano Aparecido da Rocha Januario
+            [Email] => cristianorocha@cadnetbrasil.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2146
+    [softDescriptor] => 2146
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - *Criação de 5 imagens para o banner Rotativo da entrada do Site de acordo com os temas que irei ...
+                            [description] => Desenvolvimento Por Hora - *Criação de 5 imagens para o banner Rotativo da entrada do Site de acordo com os temas que irei ...
+                            [unitPrice] => 25000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Cristiano Aparecido da Rocha Januario
+            [email] => cristianorocha@cadnetbrasil.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/9d2c17a7-5a18-491b-96ae-da7ad69052db
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2146
+    [id] => 2146
+    [1] => 116
+    [userid] => 116
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-07-04
+    [date] => 2016-07-04
+    [4] => 2016-07-08
+    [duedate] => 2016-07-08
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 250.00
+    [subtotal] => 250.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 250.00
+    [total] => 250.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => deposito_ou_transferencia
+    [paymentmethod] => deposito_ou_transferencia
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 116
+    [id] => 116
+    [uuid] => 0f6640d3-cae0-4c96-9e72-19b5820b4793
+    [firstname] => Cristiano
+    [lastname] => Aparecido da Rocha Januario
+    [fullname] => Cristiano Aparecido da Rocha Januario
+    [companyname] => CADNET BRASIL
+    [email] => cristianorocha@cadnetbrasil.com.br
+    [address1] => Avenida Brigadeiro Luis Antonio, 2367
+    [address2] => Cj. 414, Jardim Paulista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  95990-9938
+    [password] => b294ad24fe6162870b37bac9a7aca676:%nR!#
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.959909938
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 450.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/07/2016 08:46<br>IP Address: 177.206.76.112<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11959909938
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 30224522841
+                )
+
+        )
+
+    [customfields2] => 11959909938
+    [customfields3] => 30224522841
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2146
+    [SoftDescriptor] => 2146
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - *Criação de 5 imagens para o banner Rotativo da entrada do Site de acordo com os temas que irei ...
+                            [Description] => Desenvolvimento Por Hora - *Criação de 5 imagens para o banner Rotativo da entrada do Site de acordo com os temas que irei lhe fornecer *Criação de 1 Imagem para área central do site * Criação de 5 imagens para o topo das páginas “ Quem Som...
+                            [UnitPrice] => 25000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Cristiano Aparecido da Rocha Januario
+            [Email] => cristianorocha@cadnetbrasil.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2146
+    [softDescriptor] => 2146
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - *Criação de 5 imagens para o banner Rotativo da entrada do Site de acordo com os temas que irei ...
+                            [description] => Desenvolvimento Por Hora - *Criação de 5 imagens para o banner Rotativo da entrada do Site de acordo com os temas que irei lhe fornecer *Criação de 1 Imagem para área central do site * Criação de 5 imagens para o topo das páginas “ Quem Som...
+                            [unitPrice] => 25000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Cristiano Aparecido da Rocha Januario
+            [email] => cristianorocha@cadnetbrasil.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/100c5b8a-f249-4c61-b183-cbb432e38e35
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>

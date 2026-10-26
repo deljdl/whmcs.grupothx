@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5309
+    [id] => 5309
+    [1] => 116
+    [userid] => 116
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-10-09
+    [date] => 2018-10-09
+    [4] => 2018-10-09
+    [duedate] => 2018-10-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 116
+    [id] => 116
+    [uuid] => 0f6640d3-cae0-4c96-9e72-19b5820b4793
+    [firstname] => Cristiano
+    [lastname] => Aparecido da Rocha Januario
+    [fullname] => Cristiano Aparecido da Rocha Januario
+    [companyname] => CADNET BRASIL
+    [email] => cristianorocha@cadnetbrasil.com.br
+    [address1] => Rua Parapuã, 426
+    [address2] => Freguesia do Ó
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 02831000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] =>  95990-9938
+    [password] => $2y$10$u4yzkr7DL.RyzFf1ewmNq.Y5AVq/iu6XKT6PJ0Ofv/U49IFOs.Yzq
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.959909938
+    [billingcid] => 115
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/10/2018 14:30<br>IP Address: 201.6.130.91<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11959909938
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 30224522841
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11959909938
+    [customfields3] => 30224522841
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

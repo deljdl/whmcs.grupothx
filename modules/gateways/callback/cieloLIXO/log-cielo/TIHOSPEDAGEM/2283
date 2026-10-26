@@ -1,0 +1,338 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2283
+    [id] => 2283
+    [1] => 206
+    [userid] => 206
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-08-11
+    [date] => 2016-08-11
+    [4] => 2016-08-18
+    [duedate] => 2016-08-18
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.94
+    [subtotal] => 59.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.94
+    [total] => 59.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 206
+    [id] => 206
+    [uuid] => c0fdece6-a769-48be-a91e-75b8bf1e7b07
+    [firstname] => Edison 
+    [lastname] => da Silva Leite
+    [fullname] => Edison  da Silva Leite
+    [companyname] => Jetcon
+    [email] => 8764@hotmail.com
+    [address1] => Rua Olivina
+    [address2] => Cond. Arujá 5
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07428-190
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 947339569
+    [password] => 21cc25c4d626726aef6ff23da0347b0a:Nf#gQ
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11947339569
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 11/08/2016 08:26<br>IP Address: 107.167.108.170<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947339569
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 521.192.979-91
+                )
+
+        )
+
+    [customfields2] => 11947339569
+    [customfields3] => 521.192.979-91
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2283
+    [SoftDescriptor] => 2283
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - cromosmetais.com.br (18/08/2016 - 17/09/2016)
+                            [Description] => TIH - Master - cromosmetais.com.br (18/08/2016 - 17/09/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Master - jetcon.net.br (18/08/2016 - 17/09/2016)
+                            [Description] => TIH - Master - jetcon.net.br (18/08/2016 - 17/09/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Edison  da Silva Leite
+            [Email] => 8764@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2283
+    [softDescriptor] => 2283
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - cromosmetais.com.br (18/08/2016 - 17/09/2016)
+                            [description] => TIH - Master - cromosmetais.com.br (18/08/2016 - 17/09/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - Master - jetcon.net.br (18/08/2016 - 17/09/2016)
+                            [description] => TIH - Master - jetcon.net.br (18/08/2016 - 17/09/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Edison  da Silva Leite
+            [email] => 8764@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/9cd13a7b-d0a9-40d3-9307-7d0d457a17f4
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+11/08/2016 8:49:29
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2283
+    [amount] => 5994
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => d1a8fbf97e934a48ad65349689fbfb07
+    [created_date] => 11/08/2016 10:29:47
+    [customer_name] => Edison Leite
+    [customer_phone] => 11947339569
+    [customer_identity] => 52119297991
+    [customer_email] => 8764@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 415275******8117
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776200000001BA
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+11/08/2016 8:54:29
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->206 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2283
+    [amount] => 5994
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => d1a8fbf97e934a48ad65349689fbfb07
+    [created_date] => 11/08/2016 10:29:47
+    [customer_name] => Edison Leite
+    [customer_phone] => 11947339569
+    [customer_identity] => 52119297991
+    [customer_email] => 8764@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 415275******8117
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 107607776200000001BA
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+11/08/2016 8:59:31
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => d1a8fbf97e934a48ad65349689fbfb07
+    [amount] => 5994
+    [order_number] => 2283
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+11/08/2016 8:59:31
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => d1a8fbf97e934a48ad65349689fbfb07
+    [amount] => 5994
+    [order_number] => 2283
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

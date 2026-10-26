@@ -1,0 +1,360 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2255
+    [id] => 2255
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-08-04
+    [date] => 2016-08-04
+    [4] => 2016-08-12
+    [duedate] => 2016-08-12
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 500.00
+    [subtotal] => 500.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 500.00
+    [total] => 500.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@hotmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/08/2016 09:53<br>IP Address: 177.100.233.251<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2255
+    [SoftDescriptor] => 2255
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - 2 cópias do site cursodedetetivegratis.com.br - Conforme Proposta 1112
+                            [Description] => Desenvolvimento Por Hora - 2 cópias do site cursodedetetivegratis.com.br - Conforme Proposta 1112
+                            [UnitPrice] => 50000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => João Gomes
+            [Email] => mrscursos@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2255
+    [softDescriptor] => 2255
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - 2 cópias do site cursodedetetivegratis.com.br - Conforme Proposta 1112
+                            [description] => Desenvolvimento Por Hora - 2 cópias do site cursodedetetivegratis.com.br - Conforme Proposta 1112
+                            [unitPrice] => 50000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => João Gomes
+            [email] => mrscursos@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/c64d8797-42a4-4be6-977c-10ab9db4fe29
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+05/08/2016 9:01:57
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2255
+    [amount] => 50000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => b1ba4f6704004220aefd337bc8425874
+    [created_date] => 05/08/2016 11:56:58
+    [customer_name] => João Gomes
+    [customer_phone] => 2227731825
+    [customer_identity] => 73390054715
+    [customer_email] => mrscursos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544731******2754
+    [payment_installments] => 4
+    [payment_status] => 2
+    [tid] => 107607776200000001AA
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+05/08/2016 9:04:57
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->182 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2255
+    [amount] => 50000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => b1ba4f6704004220aefd337bc8425874
+    [created_date] => 05/08/2016 11:56:58
+    [customer_name] => João Gomes
+    [customer_phone] => 2227731825
+    [customer_identity] => 73390054715
+    [customer_email] => mrscursos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544731******2754
+    [payment_installments] => 4
+    [payment_status] => 2
+    [tid] => 107607776200000001AA
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+05/08/2016 10:35:02
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => b1ba4f6704004220aefd337bc8425874
+    [amount] => 50000
+    [order_number] => 2255
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+05/08/2016 10:35:02
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => b1ba4f6704004220aefd337bc8425874
+    [amount] => 50000
+    [order_number] => 2255
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 2255
+    [id] => 2255
+    [1] => 182
+    [userid] => 182
+    [2] => #1592
+    [invoicenum] => #1592
+    [3] => 2016-08-04
+    [date] => 2016-08-04
+    [4] => 2016-08-12
+    [duedate] => 2016-08-12
+    [5] => 2016-08-05 09:57:01
+    [datepaid] => 2016-08-05 09:57:01
+    [6] => 500.00
+    [subtotal] => 500.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 500.00
+    [total] => 500.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Paid
+    [status] => Paid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>

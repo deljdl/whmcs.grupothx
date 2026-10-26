@@ -1,0 +1,1599 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-07
+    [duedate] => 2017-02-07
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES TRADE SERVICOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 07/02/2017 13:19<br>IP Address: 177.97.133.3<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.420.149/0001-46
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 11.420.149/0001-46
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-07
+    [duedate] => 2017-02-07
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES TRADE SERVICOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/02/2017 17:34<br>IP Address: 186.230.37.145<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.420.149/0001-46
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 11.420.149/0001-46
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-07
+    [duedate] => 2017-02-07
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES TRADE SERVICOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/02/2017 17:34<br>IP Address: 186.230.37.145<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.420.149/0001-46
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 11.420.149/0001-46
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-07
+    [duedate] => 2017-02-07
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES TRADE SERVICOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/02/2017 17:56<br>IP Address: 186.230.37.145<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.420.149/0001-46
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 11.420.149/0001-46
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-07
+    [duedate] => 2017-02-07
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 10/02/2017 14:44<br>IP Address: 177.18.205.208<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.051.620/0001-73
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 05.051.620/0001-73
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-15
+    [duedate] => 2017-02-15
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 10/02/2017 16:47<br>IP Address: 177.18.205.208<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.051.620/0001-73
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 05.051.620/0001-73
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-16
+    [duedate] => 2017-02-16
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 12:31<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.051.620/0001-73
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 05.051.620/0001-73
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-16
+    [duedate] => 2017-02-16
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 17:38<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.051.620/0001-73
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 05.051.620/0001-73
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-16
+    [duedate] => 2017-02-16
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 17:41<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.051.620/0001-73
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 05.051.620/0001-73
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-16
+    [duedate] => 2017-02-16
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 17:41<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.051.620/0001-73
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 05.051.620/0001-73
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-16
+    [duedate] => 2017-02-16
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 17:41<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.051.620/0001-73
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 05.051.620/0001-73
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-16
+    [duedate] => 2017-02-16
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 17:42<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.051.620/0001-73
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 05.051.620/0001-73
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2956
+    [id] => 2956
+    [1] => 255
+    [userid] => 255
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-07
+    [date] => 2017-02-07
+    [4] => 2017-02-16
+    [duedate] => 2017-02-16
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 18:10<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.051.620/0001-73
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 05.051.620/0001-73
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

@@ -1,0 +1,355 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3650
+    [id] => 3650
+    [1] => 155
+    [userid] => 155
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-08-02
+    [date] => 2017-08-02
+    [4] => 2017-08-15
+    [duedate] => 2017-08-15
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1499.00
+    [subtotal] => 1499.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1499.00
+    [total] => 1499.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 155
+    [id] => 155
+    [uuid] => 2f210ff0-cfea-4422-b614-ce83bc4dd2a0
+    [firstname] => Otávio
+    [lastname] => Cansanção de Azevedo
+    [fullname] => Otávio Cansanção de Azevedo
+    [companyname] => Cirurgia da Obesidade
+    [email] => secretaria@cirurgiaonline.med.br
+    [address1] => R. Borges Lagoa, 1083 cj 63
+    [address2] => Vila Clementina
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04039-002
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 50846611
+    [password] => a2eefa37b6efb0982a73883aa4e7acc4:mSYAt
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1150846611
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/08/2017 16:42<br>IP Address: 179.209.76.225<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 033.470.428-67
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 033.470.428-67
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3650
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Dinamico Responsivo - cirurgiaonline.med.br
+observacoes:: Conforme Proposta  1147-Reformulacao do Site cirurgiaonline.me...
+                            [Description] => Site Dinamico Responsivo - cirurgiaonline.med.br
+observacoes:: Conforme Proposta  1147-Reformulacao do Site cirurgiaonline.med.br mantendo o conteudo e Deixando Gerenciavel. 
+Prazo de entrega: 15 dias
+                            [UnitPrice] => 149900
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Otávio Cansanção de Azevedo
+            [Email] => secretaria@cirurgiaonline.med.br
+            [Identity] => 03347042867
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3650
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Dinamico Responsivo - cirurgiaonline.med.br
+observacoes:: Conforme Proposta  1147-Reformulacao do Site cirurgiaonline.me...
+                            [description] => Site Dinamico Responsivo - cirurgiaonline.med.br
+observacoes:: Conforme Proposta  1147-Reformulacao do Site cirurgiaonline.med.br mantendo o conteudo e Deixando Gerenciavel. 
+Prazo de entrega: 15 dias
+                            [unitPrice] => 149900
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 03347042867
+            [fullName] => Otávio Cansanção de Azevedo
+            [email] => secretaria@cirurgiaonline.med.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/154f8a61-a1f3-42b3-a111-7fd5a922cc25
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+08/08/2017 16:38:47
+INICIO_______________________________________________________________LOG:BEGIN:::08/08/2017 16:47<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3650
+    [amount] => 149900
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 598fba8d4176467094282d28f5c41f2a
+    [created_date] => 08/08/2017 16:47:35
+    [customer_name] => jOAO aZEVEDO
+    [customer_phone] => 11989862040
+    [customer_identity] => 00335924468
+    [customer_email] => jazevedo@unifesp.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544839******6242
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626I4CH2OT1B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/08/2017 16:38:47
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3650 | Result->success | ValorPago ->1499.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 3650
+    [amount] => 149900
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 598fba8d4176467094282d28f5c41f2a
+    [created_date] => 08/08/2017 16:47:35
+    [customer_name] => jOAO aZEVEDO
+    [customer_phone] => 11989862040
+    [customer_identity] => 00335924468
+    [customer_email] => jazevedo@unifesp.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544839******6242
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626I4CH2OT1B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/08/2017 17:14:12
+INICIO_______________________________________________________________LOG:BEGIN:::08/08/2017 17:12<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 598fba8d4176467094282d28f5c41f2a
+    [amount] => 149900
+    [order_number] => 3650
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/08/2017 17:14:12
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 598fba8d4176467094282d28f5c41f2a
+    [amount] => 149900
+    [order_number] => 3650
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/08/2017 17:15:12
+INICIO_______________________________________________________________LOG:BEGIN:::08/08/2017 17:12<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 598fba8d4176467094282d28f5c41f2a
+    [amount] => 149900
+    [order_number] => 3650
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/08/2017 17:15:12
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 598fba8d4176467094282d28f5c41f2a
+    [amount] => 149900
+    [order_number] => 3650
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

@@ -1,0 +1,603 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4023
+    [id] => 4023
+    [1] => 294
+    [userid] => 294
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-11-08
+    [date] => 2017-11-08
+    [4] => 2017-11-08
+    [duedate] => 2017-11-08
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 980.00
+    [subtotal] => 980.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 980.00
+    [total] => 980.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 294
+    [id] => 294
+    [uuid] => 9ec7f6f3-c163-45ce-93b4-51a44c87b563
+    [firstname] => Gabriel 
+    [lastname] => Matheus de Oliveira
+    [fullname] => Gabriel  Matheus de Oliveira
+    [companyname] => ACESSOCLICK
+    [email] => gabrielmatheus0029@gmail.com
+    [address1] => Rua Miragem, 188
+    [address2] => Vila Regente Feijó
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03346-020
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1142328785
+    [password] => $2y$10$NXMH7j/.GqeqSFy86tUPcu5.isXbiYNmJd0aoT12rSNK5loriGII2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1142328785
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/11/2017 15:11<br>IP Address: 187.74.241.124<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11966336470
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 47249514865
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11966336470
+    [customfields3] => 47249514865
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4023
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express
+observacoes:: Conforme Proposta 1294-Criacao de site com Sistema de Busca
+Valor do site e de R$ 749.00.
+A dife...
+                            [Description] => Site Express
+observacoes:: Conforme Proposta 1294-Criacao de site com Sistema de Busca
+Valor do site e de R$ 749.00.
+A diferenca de R$ 171.00 sera aplicada posteriormente na hospedagem contratada.
+Prazo de entrega: 15 dias
+                            [UnitPrice] => 98000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Gabriel  Matheus de Oliveira
+            [Email] => gabrielmatheus0029@gmail.com
+            [Identity] => 47249514865
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4023
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Express
+observacoes:: Conforme Proposta 1294-Criacao de site com Sistema de Busca
+Valor do site e de R$ 749.00.
+A dife...
+                            [description] => Site Express
+observacoes:: Conforme Proposta 1294-Criacao de site com Sistema de Busca
+Valor do site e de R$ 749.00.
+A diferenca de R$ 171.00 sera aplicada posteriormente na hospedagem contratada.
+Prazo de entrega: 15 dias
+                            [unitPrice] => 98000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 47249514865
+            [fullName] => Gabriel  Matheus de Oliveira
+            [email] => gabrielmatheus0029@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/b562cb11-ee49-4d67-b0ce-f5b0c9a7601e
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4023
+    [id] => 4023
+    [1] => 294
+    [userid] => 294
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-11-08
+    [date] => 2017-11-08
+    [4] => 2017-11-08
+    [duedate] => 2017-11-08
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 980.00
+    [subtotal] => 980.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 980.00
+    [total] => 980.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 294
+    [id] => 294
+    [uuid] => 9ec7f6f3-c163-45ce-93b4-51a44c87b563
+    [firstname] => Gabriel 
+    [lastname] => Matheus de Oliveira
+    [fullname] => Gabriel  Matheus de Oliveira
+    [companyname] => ACESSOCLICK
+    [email] => gabrielmatheus0029@gmail.com
+    [address1] => Rua Miragem, 188
+    [address2] => Vila Regente Feijó
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03346-020
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1142328785
+    [password] => $2y$10$NXMH7j/.GqeqSFy86tUPcu5.isXbiYNmJd0aoT12rSNK5loriGII2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1142328785
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/11/2017 15:24<br>IP Address: 152.249.85.68<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11966336470
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 47249514865
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11966336470
+    [customfields3] => 47249514865
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4023
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express
+observacoes:: Conforme Proposta 1294-Criacao de site com Sistema de Busca
+Valor do site e de R$ 749.00.
+A dife...
+                            [Description] => Site Express
+observacoes:: Conforme Proposta 1294-Criacao de site com Sistema de Busca
+Valor do site e de R$ 749.00.
+A diferenca de R$ 171.00 sera aplicada posteriormente na hospedagem contratada.
+Prazo de entrega: 15 dias
+                            [UnitPrice] => 98000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Gabriel  Matheus de Oliveira
+            [Email] => gabrielmatheus0029@gmail.com
+            [Identity] => 47249514865
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4023
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Express
+observacoes:: Conforme Proposta 1294-Criacao de site com Sistema de Busca
+Valor do site e de R$ 749.00.
+A dife...
+                            [description] => Site Express
+observacoes:: Conforme Proposta 1294-Criacao de site com Sistema de Busca
+Valor do site e de R$ 749.00.
+A diferenca de R$ 171.00 sera aplicada posteriormente na hospedagem contratada.
+Prazo de entrega: 15 dias
+                            [unitPrice] => 98000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 47249514865
+            [fullName] => Gabriel  Matheus de Oliveira
+            [email] => gabrielmatheus0029@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/4ab1540c-f0b6-44e2-99ed-ec096a130e7d
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+08/11/2017 15:21:43
+INICIO_______________________________________________________________LOG:BEGIN:::08/11/2017 15:43<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 4023
+    [amount] => 98000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 90a39b37632147b185e895b386da5a82
+    [created_date] => 08/11/2017 15:43:19
+    [customer_name] => Gabriel Oliveira
+    [customer_phone] => 11944039691
+    [customer_identity] => 47249514865
+    [customer_email] => gabrielmatheus0029@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 412177******9120
+    [payment_installments] => 6
+    [payment_status] => 2
+    [tid] => 10760777626KQ85TK6PB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/11/2017 15:22:43
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->4023 | Result->success | ValorPago ->980.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 4023
+    [amount] => 98000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 90a39b37632147b185e895b386da5a82
+    [created_date] => 08/11/2017 15:43:19
+    [customer_name] => Gabriel Oliveira
+    [customer_phone] => 11944039691
+    [customer_identity] => 47249514865
+    [customer_email] => gabrielmatheus0029@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 412177******9120
+    [payment_installments] => 6
+    [payment_status] => 2
+    [tid] => 10760777626KQ85TK6PB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/11/2017 15:52:52
+INICIO_______________________________________________________________LOG:BEGIN:::08/11/2017 15:52<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 90a39b37632147b185e895b386da5a82
+    [amount] => 98000
+    [order_number] => 4023
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/11/2017 15:52:52
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 90a39b37632147b185e895b386da5a82
+    [amount] => 98000
+    [order_number] => 4023
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/11/2017 15:53:52
+INICIO_______________________________________________________________LOG:BEGIN:::08/11/2017 15:52<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 90a39b37632147b185e895b386da5a82
+    [amount] => 98000
+    [order_number] => 4023
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/11/2017 15:53:52
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 90a39b37632147b185e895b386da5a82
+    [amount] => 98000
+    [order_number] => 4023
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

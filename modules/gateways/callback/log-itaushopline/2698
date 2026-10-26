@@ -1,0 +1,4621 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 19/12/2016 05:00<br>IP Address: 177.133.191.238<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/12/2016 05:40<br>IP Address: 177.97.130.235<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/12/2016 05:40<br>IP Address: 177.97.130.235<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/12/2016 05:40<br>IP Address: 177.97.130.235<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/12/2016 05:40<br>IP Address: 177.97.130.235<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/12/2016 05:40<br>IP Address: 177.97.130.235<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/12/2016 05:40<br>IP Address: 177.97.130.235<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/12/2016 05:40<br>IP Address: 177.97.130.235<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/12/2016 05:40<br>IP Address: 177.97.130.235<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/12/2016 05:40<br>IP Address: 177.97.130.235<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/12/2016 05:40<br>IP Address: 177.97.130.235<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/12/2016 05:40<br>IP Address: 177.97.130.235<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/12/2016 05:40<br>IP Address: 177.97.130.235<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:01<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:02<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:15<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:17<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:19<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:25<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2698
+    [id] => 2698
+    [1] => 244
+    [userid] => 244
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-27
+    [date] => 2016-11-27
+    [4] => 2016-11-30
+    [duedate] => 2016-11-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 753.97
+    [subtotal] => 753.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 753.97
+    [total] => 753.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 244
+    [id] => 244
+    [uuid] => 33154ee0-5196-4e42-a66b-a07aa4f2161b
+    [firstname] => Raquel
+    [lastname] => de Figueiredo Fonseca
+    [fullname] => Raquel de Figueiredo Fonseca
+    [companyname] => Villa Vitta
+    [email] => villa.vitta@bol.com.br
+    [address1] => Rua Coronel Cardoso de Siqueira, 1256
+    [address2] => Vila Oliveira
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08790-900
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4799-7146 - 11995581734
+    [password] => $2y$10$BAQdHyid.HXcFfqEEnpAjONvLvbPtVcb.3A63rjOFzzt3XzPHnN.K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114799714611995581734
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/12/2016 08:27<br>IP Address: 179.176.82.168<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995581734
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15656315878
+                )
+
+        )
+
+    [customfields2] => 11995581734
+    [customfields3] => 15656315878
+)
+</pre>
+
+Order
+<pre></pre>

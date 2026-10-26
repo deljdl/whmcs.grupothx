@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4992
+    [id] => 4992
+    [1] => 71
+    [userid] => 71
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-23
+    [date] => 2018-07-23
+    [4] => 2018-07-28
+    [duedate] => 2018-07-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 100.00
+    [subtotal] => 100.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 100.00
+    [total] => 100.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 71
+    [id] => 71
+    [uuid] => 8666447d-e739-4458-ae6d-926c2de24687
+    [firstname] => Renato
+    [lastname] => Morandi
+    [fullname] => Renato Morandi
+    [companyname] => APOIO FORROS E DIVISORIAS LTDA
+    [email] => renato@apoioforros.com.br
+    [address1] => Rua Dr. Ulpiano da Costa Manso, 38
+    [address2] => Jardim Peri-Peri
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05538-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1177171582
+    [password] => $2y$10$iUOpqmaXu/JvOH7num8qye7Nn69JsQKRqjs8SgZBYhLqeGEmpwuA2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1177171582
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 23/07/2018 09:33<br>IP Address: 187.37.22.113<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 1177171582
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 07.457709000160
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 1177171582
+    [customfields3] => 07.457709000160
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

@@ -1,0 +1,586 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2054
+    [id] => 2054
+    [1] => 174
+    [userid] => 174
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-06-10
+    [date] => 2016-06-10
+    [4] => 2016-06-17
+    [duedate] => 2016-06-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 299.95
+    [subtotal] => 299.95
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 299.95
+    [total] => 299.95
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 174
+    [id] => 174
+    [uuid] => b99e64de-9fa5-4b53-be67-3c6eb74f7a33
+    [firstname] => Luana
+    [lastname] => Nogueira de Sousa
+    [fullname] => Luana Nogueira de Sousa
+    [companyname] => LUANA NOGUEIRA DE SOUSA - ME
+    [email] => inkart.tattoo@hotmail.com
+    [address1] => Av.marechal castelo branco 361
+    [address2] => jd Rincão
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-445
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => Fone 4655-0574 Cel 97959-1256
+    [password] => 5fe27750383d8cf9e91283c28999415a:cpqPj
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.46550574979591256
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 06/01/2016 07:14<br>IP Address: 179.148.237.92<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11979591256
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 22.084.687/0001-23
+                )
+
+        )
+
+    [customfields2] => 11979591256
+    [customfields3] => 22.084.687/0001-23
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2054
+    [SoftDescriptor] => 2054
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - inkarttattoo.com.br (17/02/2016 - 16/03/2016)
+                            [Description] => TIH - Especial - inkarttattoo.com.br (17/02/2016 - 16/03/2016)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - inkarttattoo.com.br (17/03/2016 - 16/04/2016)
+                            [Description] => TIH - Especial - inkarttattoo.com.br (17/03/2016 - 16/04/2016)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - inkarttattoo.com.br (17/04/2016 - 16/05/2016)
+                            [Description] => TIH - Especial - inkarttattoo.com.br (17/04/2016 - 16/05/2016)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - inkarttattoo.com.br (17/05/2016 - 16/06/2016)
+                            [Description] => TIH - Especial - inkarttattoo.com.br (17/05/2016 - 16/06/2016)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - inkarttattoo.com.br (17/06/2016 - 16/07/2016)
+                            [Description] => TIH - Especial - inkarttattoo.com.br (17/06/2016 - 16/07/2016)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Luana Nogueira de Sousa
+            [Email] => inkart.tattoo@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [OrderNumber] => 2054
+    [SoftDescriptor] => 2054
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - inkarttattoo.com.br (17/02/2016 - 16/03/2016)
+                            [Description] => TIH - Especial - inkarttattoo.com.br (17/02/2016 - 16/03/2016)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - inkarttattoo.com.br (17/03/2016 - 16/04/2016)
+                            [Description] => TIH - Especial - inkarttattoo.com.br (17/03/2016 - 16/04/2016)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - inkarttattoo.com.br (17/04/2016 - 16/05/2016)
+                            [Description] => TIH - Especial - inkarttattoo.com.br (17/04/2016 - 16/05/2016)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - inkarttattoo.com.br (17/05/2016 - 16/06/2016)
+                            [Description] => TIH - Especial - inkarttattoo.com.br (17/05/2016 - 16/06/2016)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - inkarttattoo.com.br (17/06/2016 - 16/07/2016)
+                            [Description] => TIH - Especial - inkarttattoo.com.br (17/06/2016 - 16/07/2016)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Luana Nogueira de Sousa
+            [Email] => inkart.tattoo@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2054
+    [id] => 2054
+    [1] => 174
+    [userid] => 174
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-06-10
+    [date] => 2016-06-10
+    [4] => 2016-06-17
+    [duedate] => 2016-06-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 299.95
+    [subtotal] => 299.95
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 299.95
+    [total] => 299.95
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 174
+    [id] => 174
+    [uuid] => b99e64de-9fa5-4b53-be67-3c6eb74f7a33
+    [firstname] => Luana
+    [lastname] => Nogueira de Sousa
+    [fullname] => Luana Nogueira de Sousa
+    [companyname] => LUANA NOGUEIRA DE SOUSA - ME
+    [email] => inkart.tattoo@hotmail.com
+    [address1] => Av.marechal castelo branco 361
+    [address2] => jd Rincão
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-445
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => Fone 4655-0574 Cel 97959-1256
+    [password] => 5fe27750383d8cf9e91283c28999415a:cpqPj
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.46550574979591256
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/06/2016 17:44<br>IP Address: 177.41.217.12<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11979591256
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 22.084.687/0001-23
+                )
+
+        )
+
+    [customfields2] => 11979591256
+    [customfields3] => 22.084.687/0001-23
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2054
+    [SoftDescriptor] => 2054
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - inkarttattoo.com.br (17/02/2016 - 16/03/2016)
+                            [Description] => TIH - Especial - inkarttattoo.com.br (17/02/2016 - 16/03/2016)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - inkarttattoo.com.br (17/03/2016 - 16/04/2016)
+                            [Description] => TIH - Especial - inkarttattoo.com.br (17/03/2016 - 16/04/2016)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - inkarttattoo.com.br (17/04/2016 - 16/05/2016)
+                            [Description] => TIH - Especial - inkarttattoo.com.br (17/04/2016 - 16/05/2016)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - inkarttattoo.com.br (17/05/2016 - 16/06/2016)
+                            [Description] => TIH - Especial - inkarttattoo.com.br (17/05/2016 - 16/06/2016)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - inkarttattoo.com.br (17/06/2016 - 16/07/2016)
+                            [Description] => TIH - Especial - inkarttattoo.com.br (17/06/2016 - 16/07/2016)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Luana Nogueira de Sousa
+            [Email] => inkart.tattoo@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [OrderNumber] => 2054
+    [SoftDescriptor] => 2054
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - inkarttattoo.com.br (17/02/2016 - 16/03/2016)
+                            [Description] => TIH - Especial - inkarttattoo.com.br (17/02/2016 - 16/03/2016)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - inkarttattoo.com.br (17/03/2016 - 16/04/2016)
+                            [Description] => TIH - Especial - inkarttattoo.com.br (17/03/2016 - 16/04/2016)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - inkarttattoo.com.br (17/04/2016 - 16/05/2016)
+                            [Description] => TIH - Especial - inkarttattoo.com.br (17/04/2016 - 16/05/2016)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - inkarttattoo.com.br (17/05/2016 - 16/06/2016)
+                            [Description] => TIH - Especial - inkarttattoo.com.br (17/05/2016 - 16/06/2016)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - inkarttattoo.com.br (17/06/2016 - 16/07/2016)
+                            [Description] => TIH - Especial - inkarttattoo.com.br (17/06/2016 - 16/07/2016)
+                            [UnitPrice] => 5999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Luana Nogueira de Sousa
+            [Email] => inkart.tattoo@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>

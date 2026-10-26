@@ -1,0 +1,495 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2821
+    [id] => 2821
+    [1] => 168
+    [userid] => 168
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-02
+    [date] => 2017-01-02
+    [4] => 2017-12-13
+    [duedate] => 2017-12-13
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1123.92
+    [subtotal] => 1123.92
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1123.92
+    [total] => 1123.92
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 168
+    [id] => 168
+    [uuid] => f9207e3a-c445-4f31-b275-0caa0feb99ab
+    [firstname] => Eduardo
+    [lastname] => Silva de Oliveira
+    [fullname] => Eduardo Silva de Oliveira
+    [companyname] => AZPLAN ENGENHARIA LTDA - ME
+    [email] => eduardo.oliveira01@gmail.com
+    [address1] => R RIO DAS PEDRAS, 104
+    [address2] => JARDIM ALPES DE ITAQU
+    [city] => ITAQUAQUECETUBA
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08588-620
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 972950054
+    [password] => 58aae0e914047e353b62a694157dd315:G#N%Z
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.972950054
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 02/01/2017 14:50<br>IP Address: 186.214.97.47<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11972950054
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 22.465.731/0001-45
+                )
+
+        )
+
+    [customfields2] => 11972950054
+    [customfields3] => 22.465.731/0001-45
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2821
+    [SoftDescriptor] => 2821
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - azplan.com.br (13/01/2017 - 12/01/2018)
+                            [Description] => TIH - Master - azplan.com.br (13/01/2017 - 12/01/2018)
+                            [UnitPrice] => 35964
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Master - srempreiteiro.com.br (13/01/2017 - 12/01/2018)
+                            [Description] => TIH - Master - srempreiteiro.com.br (13/01/2017 - 12/01/2018)
+                            [UnitPrice] => 35964
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => TIH - Master - srpintor.com.br (13/01/2017 - 12/01/2018)
+                            [Description] => TIH - Master - srpintor.com.br (13/01/2017 - 12/01/2018)
+                            [UnitPrice] => 35964
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Renovação de Domínio - srpintor.com.br - 1 Ano(s) (13/12/2017 - 12/12/2018)
+                            [Description] => Renovação de Domínio - srpintor.com.br - 1 Ano(s) (13/12/2017 - 12/12/2018)
+                            [UnitPrice] => 4500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002821
+            [FullName] => Eduardo Silva de Oliveira
+            [Email] => eduardo.oliveira01@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2821
+    [softDescriptor] => 2821
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - azplan.com.br (13/01/2017 - 12/01/2018)
+                            [description] => TIH - Master - azplan.com.br (13/01/2017 - 12/01/2018)
+                            [unitPrice] => 35964
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - Master - srempreiteiro.com.br (13/01/2017 - 12/01/2018)
+                            [description] => TIH - Master - srempreiteiro.com.br (13/01/2017 - 12/01/2018)
+                            [unitPrice] => 35964
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => TIH - Master - srpintor.com.br (13/01/2017 - 12/01/2018)
+                            [description] => TIH - Master - srpintor.com.br (13/01/2017 - 12/01/2018)
+                            [unitPrice] => 35964
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Renovação de Domínio - srpintor.com.br - 1 Ano(s) (13/12/2017 - 12/12/2018)
+                            [description] => Renovação de Domínio - srpintor.com.br - 1 Ano(s) (13/12/2017 - 12/12/2018)
+                            [unitPrice] => 4500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002821
+            [fullName] => Eduardo Silva de Oliveira
+            [email] => eduardo.oliveira01@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/088078a0-26de-4441-bf70-4aee4d25aaf6
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2821
+    [id] => 2821
+    [1] => 168
+    [userid] => 168
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-02
+    [date] => 2017-01-02
+    [4] => 2017-12-13
+    [duedate] => 2017-12-13
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1123.92
+    [subtotal] => 1123.92
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1123.92
+    [total] => 1123.92
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2821
+    [SoftDescriptor] => 2821
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - azplan.com.br (13/01/2017 - 12/01/2018)
+                            [Description] => TIH - Master - azplan.com.br (13/01/2017 - 12/01/2018)
+                            [UnitPrice] => 35964
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Master - srempreiteiro.com.br (13/01/2017 - 12/01/2018)
+                            [Description] => TIH - Master - srempreiteiro.com.br (13/01/2017 - 12/01/2018)
+                            [UnitPrice] => 35964
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => TIH - Master - srpintor.com.br (13/01/2017 - 12/01/2018)
+                            [Description] => TIH - Master - srpintor.com.br (13/01/2017 - 12/01/2018)
+                            [UnitPrice] => 35964
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Renovação de Domínio - srpintor.com.br - 1 Ano(s) (13/12/2017 - 12/12/2018)
+                            [Description] => Renovação de Domínio - srpintor.com.br - 1 Ano(s) (13/12/2017 - 12/12/2018)
+                            [UnitPrice] => 4500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002821
+            [FullName] =>  
+            [Email] => 
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2821
+    [softDescriptor] => 2821
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - azplan.com.br (13/01/2017 - 12/01/2018)
+                            [description] => TIH - Master - azplan.com.br (13/01/2017 - 12/01/2018)
+                            [unitPrice] => 35964
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - Master - srempreiteiro.com.br (13/01/2017 - 12/01/2018)
+                            [description] => TIH - Master - srempreiteiro.com.br (13/01/2017 - 12/01/2018)
+                            [unitPrice] => 35964
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => TIH - Master - srpintor.com.br (13/01/2017 - 12/01/2018)
+                            [description] => TIH - Master - srpintor.com.br (13/01/2017 - 12/01/2018)
+                            [unitPrice] => 35964
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Renovação de Domínio - srpintor.com.br - 1 Ano(s) (13/12/2017 - 12/12/2018)
+                            [description] => Renovação de Domínio - srpintor.com.br - 1 Ano(s) (13/12/2017 - 12/12/2018)
+                            [unitPrice] => 4500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002821
+            [fullName] =>  
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/cd477684-5e42-4779-b95e-9577fc7ba8f9
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

@@ -1,0 +1,2808 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5132
+    [id] => 5132
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-27
+    [date] => 2018-08-27
+    [4] => 2018-08-29
+    [duedate] => 2018-08-29
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 195.00
+    [subtotal] => 195.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 195.00
+    [total] => 195.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/08/2018 16:10<br>IP Address: 192.223.68.89<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 9170813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 9170813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5132
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [Description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [UnitPrice] => 19500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => José Calheiros de souza
+            [Email] => turbomecturbinas@hotmail.com
+            [Identity] => 00773503404
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5132
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [unitPrice] => 19500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 00773503404
+            [fullName] => José Calheiros de souza
+            [email] => turbomecturbinas@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/332869fa-0348-4bd8-95e1-64fdc57b3483
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5132
+    [id] => 5132
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-27
+    [date] => 2018-08-27
+    [4] => 2018-08-29
+    [duedate] => 2018-08-29
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 195.00
+    [subtotal] => 195.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 195.00
+    [total] => 195.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/08/2018 16:13<br>IP Address: 192.223.68.89<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 9170813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 9170813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5132
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [Description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [UnitPrice] => 19500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => José Calheiros de souza
+            [Email] => turbomecturbinas@hotmail.com
+            [Identity] => 00773503404
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5132
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [unitPrice] => 19500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 00773503404
+            [fullName] => José Calheiros de souza
+            [email] => turbomecturbinas@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/39b589f5-835f-49c9-8ac0-e97548fa6852
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5132
+    [id] => 5132
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-27
+    [date] => 2018-08-27
+    [4] => 2018-08-29
+    [duedate] => 2018-08-29
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 195.00
+    [subtotal] => 195.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 195.00
+    [total] => 195.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/08/2018 16:13<br>IP Address: 192.223.68.89<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 9170813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 9170813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5132
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [Description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [UnitPrice] => 19500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => José Calheiros de souza
+            [Email] => turbomecturbinas@hotmail.com
+            [Identity] => 00773503404
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5132
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [unitPrice] => 19500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 00773503404
+            [fullName] => José Calheiros de souza
+            [email] => turbomecturbinas@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/d1c5c9c2-fd2a-4abe-892f-7df0969af55c
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5132
+    [id] => 5132
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-27
+    [date] => 2018-08-27
+    [4] => 2018-08-29
+    [duedate] => 2018-08-29
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 195.00
+    [subtotal] => 195.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 195.00
+    [total] => 195.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/08/2018 16:19<br>IP Address: 186.2.74.207<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 9170813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 9170813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5132
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [Description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [UnitPrice] => 19500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => José Calheiros de souza
+            [Email] => turbomecturbinas@hotmail.com
+            [Identity] => 00773503404
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5132
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [unitPrice] => 19500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 00773503404
+            [fullName] => José Calheiros de souza
+            [email] => turbomecturbinas@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/aa3113f1-83f2-4d76-928d-df703dd13e06
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5132
+    [id] => 5132
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-27
+    [date] => 2018-08-27
+    [4] => 2018-08-29
+    [duedate] => 2018-08-29
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 195.00
+    [subtotal] => 195.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 195.00
+    [total] => 195.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/08/2018 16:19<br>IP Address: 186.2.74.207<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 9170813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 9170813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5132
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [Description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [UnitPrice] => 19500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => José Calheiros de souza
+            [Email] => turbomecturbinas@hotmail.com
+            [Identity] => 00773503404
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5132
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [unitPrice] => 19500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 00773503404
+            [fullName] => José Calheiros de souza
+            [email] => turbomecturbinas@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/5a742656-eca4-4ae0-983d-bff9dec00a15
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5132
+    [id] => 5132
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-27
+    [date] => 2018-08-27
+    [4] => 2018-08-29
+    [duedate] => 2018-08-29
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 195.00
+    [subtotal] => 195.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 195.00
+    [total] => 195.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/08/2018 21:10<br>IP Address: 192.223.68.89<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 9170813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 9170813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5132
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [Description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [UnitPrice] => 19500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => José Calheiros de souza
+            [Email] => turbomecturbinas@hotmail.com
+            [Identity] => 00773503404
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5132
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [unitPrice] => 19500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 00773503404
+            [fullName] => José Calheiros de souza
+            [email] => turbomecturbinas@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/e93544da-eb7b-40d2-a75e-9707c6df51f5
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5132
+    [id] => 5132
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-27
+    [date] => 2018-08-27
+    [4] => 2018-08-29
+    [duedate] => 2018-08-29
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 195.00
+    [subtotal] => 195.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 195.00
+    [total] => 195.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/08/2018 21:10<br>IP Address: 192.223.68.89<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 9170813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 9170813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5132
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [Description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [UnitPrice] => 19500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => José Calheiros de souza
+            [Email] => turbomecturbinas@hotmail.com
+            [Identity] => 00773503404
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5132
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [unitPrice] => 19500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 00773503404
+            [fullName] => José Calheiros de souza
+            [email] => turbomecturbinas@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/ce02345e-29a6-4e2c-b7ac-04ae5f1fef52
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5132
+    [id] => 5132
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-27
+    [date] => 2018-08-27
+    [4] => 2018-08-29
+    [duedate] => 2018-08-29
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 195.00
+    [subtotal] => 195.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 195.00
+    [total] => 195.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/08/2018 21:21<br>IP Address: 192.223.68.89<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 9170813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 9170813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5132
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [Description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [UnitPrice] => 19500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => José Calheiros de souza
+            [Email] => turbomecturbinas@hotmail.com
+            [Identity] => 00773503404
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5132
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [unitPrice] => 19500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 00773503404
+            [fullName] => José Calheiros de souza
+            [email] => turbomecturbinas@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/a56fd41d-16d4-4d33-93dd-d3a9529afbae
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5132
+    [id] => 5132
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-27
+    [date] => 2018-08-27
+    [4] => 2018-08-29
+    [duedate] => 2018-08-29
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 195.00
+    [subtotal] => 195.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 195.00
+    [total] => 195.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/08/2018 21:21<br>IP Address: 192.223.68.89<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 9170813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 9170813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5132
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [Description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [UnitPrice] => 19500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => José Calheiros de souza
+            [Email] => turbomecturbinas@hotmail.com
+            [Identity] => 00773503404
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5132
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [unitPrice] => 19500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 00773503404
+            [fullName] => José Calheiros de souza
+            [email] => turbomecturbinas@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/8e0c561e-44e6-4af8-a7cc-565d7e0b7885
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5132
+    [id] => 5132
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-27
+    [date] => 2018-08-27
+    [4] => 2018-08-29
+    [duedate] => 2018-08-29
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 195.00
+    [subtotal] => 195.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 195.00
+    [total] => 195.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/08/2018 21:22<br>IP Address: 192.223.68.89<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 9170813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 9170813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5132
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [Description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [UnitPrice] => 19500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => José Calheiros de souza
+            [Email] => turbomecturbinas@hotmail.com
+            [Identity] => 00773503404
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5132
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [unitPrice] => 19500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 00773503404
+            [fullName] => José Calheiros de souza
+            [email] => turbomecturbinas@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/79fa616b-e207-4a9d-8a13-f7fa4728039c
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5132
+    [id] => 5132
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-27
+    [date] => 2018-08-27
+    [4] => 2018-08-29
+    [duedate] => 2018-08-29
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 195.00
+    [subtotal] => 195.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 195.00
+    [total] => 195.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/08/2018 21:24<br>IP Address: 192.223.68.89<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 9170813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 9170813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5132
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [Description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [UnitPrice] => 19500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => José Calheiros de souza
+            [Email] => turbomecturbinas@hotmail.com
+            [Identity] => 00773503404
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5132
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [unitPrice] => 19500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 00773503404
+            [fullName] => José Calheiros de souza
+            [email] => turbomecturbinas@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/b7c72e68-5f84-47cc-9ce5-1e0b46e3b975
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5132
+    [id] => 5132
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-27
+    [date] => 2018-08-27
+    [4] => 2018-08-29
+    [duedate] => 2018-08-29
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 195.00
+    [subtotal] => 195.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 195.00
+    [total] => 195.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/08/2018 21:24<br>IP Address: 192.223.68.89<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 9170813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 9170813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5132
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [Description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [UnitPrice] => 19500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => José Calheiros de souza
+            [Email] => turbomecturbinas@hotmail.com
+            [Identity] => 00773503404
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5132
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [description] => Desenvolvimento Por Hora - Alteracoes Adicionais, as artes para as redes sociais e o cartao
+                            [unitPrice] => 19500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 00773503404
+            [fullName] => José Calheiros de souza
+            [email] => turbomecturbinas@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/68200766-527e-42cc-9c33-c2bae24816ad
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

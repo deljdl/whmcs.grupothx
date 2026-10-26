@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="iso-8859-1">
+	<title>Erro : Seja Bem Vindo &agrave; TiHospedagem</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://tihospedagem.com.br/imagens/favicon.ico" />
+	<script type="text/javascript">
+		var progressXpainel=0;
+	</script>
+	<style type="text/css">*{
+		padding:0;
+		margin:0;
+		font-family:Arial, Helvetica, sans-serif;
+	}
+	.container{
+		width:954px;
+		height:521px;
+		margin:105px auto 0 auto;
+		background-image:url('http://xpainel.com/imagens/suspensao.jpg');
+		background-repeat:no-repeat;
+		background-position:left, bottom;
+		background-size:contain;
+		display:block;
+		min-height:313px;
+		display: table;
+	}
+	.contato{
+		width:500px;
+		hedth:auto;
+		float:right;
+	}
+	.contato h1{
+		color:#313984;
+		font-size:20px;
+	}
+	.contato h1 span{color:#BF0101; font-size:20px;}
+	.contato h2{
+		color:#85D662;
+		font-size:15px;
+	}
+	.contato h3{
+		color:#006634;
+		font-size:14px;
+	}
+	a{
+		text-decoration:none;
+		color:#FF96B4;
+		font-size:12px;
+	}
+	a:hover{
+		text-decoration:underline;
+		color:#FDD100;
+	}
+	span{
+		color:#666;
+		font-size:12px;
+	}
+	strong{
+		color:#333;
+	}
+	@-webkit-keyframes animate-stripes {
+  to {
+    background-position: 0 0;
+  }
+
+  from {
+    background-position: 44px 0;
+  }
+}
+
+.atendimento_ativo{
+	position:fixed; 
+	bottom:-800px; 
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 0px 8px rgba(82, 168, 236, 0.6);
+	border-radius: 3px 3px 3px 3px;
+	left:10px;
+	 cursor:pointer;
+	 border-bottom-left-radius:100px;
+	border-top-right-radius:100px;
+	-webkit-animation:atendimento_ativo 10s; /* Chrome, Safari, Opera */
+	animation:atendimento_ativo 10s;
+	animation-fill-mode:forwards;
+	-webkit-animation-fill-mode:forwards;
+	transition: box-shadow 5s ease;
+     -webkit-transition: box-shadow 5s ease;
+     -o-transition:box-shadow 5s ease;
+     -moz-transition: box-shadow 5s ease; 
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes atendimento_ativo
+{
+
+100% {left:10px; bottom:198px;}
+}
+
+/* Standard syntax */
+@keyframes atendimento_ativo
+{
+
+100% {left:10px; bottom:198px;}
+}
+
+.atendimento_ativo:hover{
+	box-shadow: 0px 1px 3px #F00, 0px 0px 8px #F00;
+	 
+
+}
+
+.logo_tih{
+	max-width:350px;
+	float:left;
+}
+
+
+
+	@-webkit-keyframes pendura {
+		from {
+			-webkit-transform: rotate(0deg);
+		}
+		to {
+			-webkit-transform: rotate(95deg);
+		}
+	}
+	
+	
+
+
+
+
+	@-moz-keyframes pendura {
+		from {
+			-moz-transform: rotate(0deg);
+		}
+		to {
+			-moz-transform: rotate(95deg);
+		}
+	}
+	
+	
+
+
+
+.pendura {
+	margin-left:150px;
+	-webkit-transform: rotate(0deg);
+	-webkit-transform-origin: 0px 0px;
+
+	-moz-transform: rotate(0deg);
+	-moz-transform-origin: 10px 10px;
+
+	-o-transform: rotate(0deg);
+	-o-transform-origin: 10px 10px;
+
+	-webkit-animation: pendura 2s alternate ease infinite;
+	-moz-animation: pendura 2s alternate ease infinite;
+	-o-animation: pendura 2s alternate ease infinite;
+
+}
+
+.pendura:hover {-webkit-animation-play-state:paused;}
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+<div class="container">
+<img class="logo_tih" src="http://tihospedagem.com.br/imagens/logo.png" />
+<img class="pendura" src="http://tihospedagem.com.br/imagens/grupothx.png" />
+<div class="contato"><br />
+
+<h1>Ops !!! <br />
+Desculpe . Encontramos um problema.</h1>
+<br />
+<span style="font-size:18px"> </span>
+<br /><br /><span >Caso tenha alguma d&uacute;vida, n&atilde;o hesite em solicitar suporte.<br /> Estamos &aacute; sua disposi&ccedil;&atilde;o.
+<br /><br />Seja muito bem vindo ao <strong>GRUPO THX</strong>.<br /></span>
+<br /><span style="font-size:18px">Fazemos de tudo para que sua "estadia" seja perfeita !</span></div>
+</div>
+
+
+<img id="atendimento_ativo" class="atendimento_ativo" title="Receba Suporte Agora Mesmo" alt="suporte tiwebdesign" onClick="window.open('//xpainel.com/chat/client.php?locale=pt-br&xpainel_acount=39','chat','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=640, height=480');" src="http://xpainel.com/imagens/atendimentoonline.jpg" /> 
+</body>
+</html>

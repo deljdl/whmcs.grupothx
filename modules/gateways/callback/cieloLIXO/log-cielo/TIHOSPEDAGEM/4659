@@ -1,0 +1,427 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4659
+    [id] => 4659
+    [1] => 304
+    [userid] => 304
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-05-02
+    [date] => 2018-05-02
+    [4] => 2018-05-09
+    [duedate] => 2018-05-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 59.94
+    [subtotal] => 59.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 59.94
+    [total] => 59.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 304
+    [id] => 304
+    [uuid] => f6023c14-2e44-42e5-82c3-51c7d1e057d7
+    [firstname] => Vivian
+    [lastname] => Milene Santos
+    [fullname] => Vivian Milene Santos
+    [companyname] => Tânia Decorações
+    [email] => vivian_pekena@hotmail.com
+    [address1] => Rua Isabel de Góis, 08 Bloco 05 Apto 82
+    [address2] => Jardim Botucatu
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04173-150
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11959196887
+    [password] => $2y$10$vX1bvr8nK9B7YXj4t7GpWOvAdZ1Hp7XSlhcKNSj35wolsQfk32c3q
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11959196887
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 21/05/2018 11:21<br>IP Address: 191.39.11.223<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11959196887
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 04002799832
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11959196887
+    [customfields3] => 04002799832
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4659
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - PLUS - taniadecoracoes.com (09/05/2018 - 08/08/2018)
+                            [Description] => TIH - PLUS - taniadecoracoes.com (09/05/2018 - 08/08/2018)
+                            [UnitPrice] => 5994
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 599
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 12 dias de atraso
+                            [Description] => Juros por 12 dias de atraso
+                            [UnitPrice] => 237
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Vivian Milene Santos
+            [Email] => vivian_pekena@hotmail.com
+            [Identity] => 04002799832
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4659
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - PLUS - taniadecoracoes.com (09/05/2018 - 08/08/2018)
+                            [description] => TIH - PLUS - taniadecoracoes.com (09/05/2018 - 08/08/2018)
+                            [unitPrice] => 5994
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 599
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [$id] => 6
+                            [name] => Juros por 12 dias de atraso
+                            [description] => Juros por 12 dias de atraso
+                            [unitPrice] => 237
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 7
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 04002799832
+            [fullName] => Vivian Milene Santos
+            [email] => vivian_pekena@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/7c47e2c3-4f83-4233-ab89-c87071a72f20
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+21/05/2018 11:11:30
+INICIO_______________________________________________________________LOG:BEGIN:::21/05/2018 11:30<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 4659
+    [amount] => 6830
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 67266b2fbe1943d6b2955e3c5a476c85
+    [created_date] => 21/05/2018 11:30:09
+    [customer_name] => Vivian Santos
+    [customer_phone] => 11959196887
+    [customer_identity] => 04002799832
+    [customer_email] => vivian_pekena@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 539091******4208
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627CUQ66VU3B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/05/2018 11:14:30
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->4659 | Result->success | ValorPago ->59.94 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 4659
+    [amount] => 6830
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 67266b2fbe1943d6b2955e3c5a476c85
+    [created_date] => 21/05/2018 11:30:09
+    [customer_name] => Vivian Santos
+    [customer_phone] => 11959196887
+    [customer_identity] => 04002799832
+    [customer_email] => vivian_pekena@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 539091******4208
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627CUQ66VU3B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/05/2018 11:19:36
+INICIO_______________________________________________________________LOG:BEGIN:::21/05/2018 11:36<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 67266b2fbe1943d6b2955e3c5a476c85
+    [amount] => 6830
+    [order_number] => 4659
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/05/2018 11:19:36
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 67266b2fbe1943d6b2955e3c5a476c85
+    [amount] => 6830
+    [order_number] => 4659
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/05/2018 11:20:36
+INICIO_______________________________________________________________LOG:BEGIN:::21/05/2018 11:36<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 67266b2fbe1943d6b2955e3c5a476c85
+    [amount] => 6830
+    [order_number] => 4659
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/05/2018 11:20:36
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 67266b2fbe1943d6b2955e3c5a476c85
+    [amount] => 6830
+    [order_number] => 4659
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/05/2018 11:25:36
+INICIO_______________________________________________________________LOG:BEGIN:::21/05/2018 11:36<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 67266b2fbe1943d6b2955e3c5a476c85
+    [amount] => 6830
+    [order_number] => 4659
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/05/2018 11:25:36
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 67266b2fbe1943d6b2955e3c5a476c85
+    [amount] => 6830
+    [order_number] => 4659
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

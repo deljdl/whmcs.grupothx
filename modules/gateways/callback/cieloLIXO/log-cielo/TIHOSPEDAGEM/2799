@@ -1,0 +1,2310 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2799
+    [id] => 2799
+    [1] => 180
+    [userid] => 180
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-28
+    [date] => 2016-12-28
+    [4] => 2016-12-28
+    [duedate] => 2016-12-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1614.99
+    [subtotal] => 1614.99
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1614.99
+    [total] => 1614.99
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 180
+    [id] => 180
+    [uuid] => a670f420-2c4c-4023-a431-334e6274a396
+    [firstname] => Samuel
+    [lastname] => Nóbrega dos Anjos
+    [fullname] => Samuel Nóbrega dos Anjos
+    [companyname] => SAMUEL NOBREGA DOS ANJOS - ME - BRASIL NETWORK 
+    [email] => samuelnobrega10@gmail.com
+    [address1] => R Paracatu, 758
+    [address2] => Parque Imperial
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04302-022
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 5589-4930 / (11) 5589-4930
+    [password] => $2y$10$KE2dK3.7ZUgMy7AdcjDDfu3BDkkDole6z2tVbrdS3Mgw75rAbapt6
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11558949301155894930
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 03/01/2017 13:52<br>IP Address: 201.83.145.98<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986754279
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 09.329.980/0001-45
+                )
+
+        )
+
+    [customfields2] => 11986754279
+    [customfields3] => 09.329.980/0001-45
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2799
+    [SoftDescriptor] => 2799
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Migração do spartacus.mus.br
+                            [Description] => Desenvolvimento Por Hora - Migração do spartacus.mus.br
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Migração do site obomdegarfo.com.br
+                            [Description] => Desenvolvimento Por Hora - Migração do site obomdegarfo.com.br
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Migração do site artespuma.com.br
+                            [Description] => Desenvolvimento Por Hora - Migração do site artespuma.com.br
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Migração do site cianex.com.br
+                            [Description] => Desenvolvimento Por Hora - Migração do site cianex.com.br
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Criação do formulário no site www.digitaltermica.com.br
+                            [Description] => Desenvolvimento Por Hora - Criação do formulário no site www.digitaltermica.com.br
+                            [UnitPrice] => 12500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [5] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email de  25 de agosto de 2016 14:54 - Parcela 4/4
+                            [UnitPrice] => 12500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [6] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (28/12/2016 - 27/01/2017)
+Domínio: majotex.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (28/12/2016 - 27/01/2017)
+Domínio: majotex.com.br
+                            [UnitPrice] => 3000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [7] => stdClass Object
+                        (
+                            [Name] => Atendimento OnLine Plus - piresembalagens.com.br (28/12/2016 - 27/01/2017)
+                            [Description] => Atendimento OnLine Plus - piresembalagens.com.br (28/12/2016 - 27/01/2017)
+                            [UnitPrice] => 999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [8] => stdClass Object
+                        (
+                            [Name] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Confor...
+                            [Description] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Conforme e-mail de 11 de outubro de 2016 13:00 - Parcela 3/4
+                            [UnitPrice] => 20000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [9] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado - Móveis Santa Eulália  - Conforme e-mail de ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado - Móveis Santa Eulália  - Conforme e-mail de 	17 de novembro de 2016 16:04 - Parcela 2/4
+                            [UnitPrice] => 12500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [10] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações no site Ecoservice Para Raios
+                            [Description] => Desenvolvimento Por Hora - Alterações no site Ecoservice Para Raios
+                            [UnitPrice] => 10000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [11] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações SM Radiadores
+                            [Description] => Desenvolvimento Por Hora - Alterações SM Radiadores
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [12] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações Kutner Seguros
+                            [Description] => Desenvolvimento Por Hora - Alterações Kutner Seguros
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [13] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações Casa do Óleo Inajar de Souza - 3.5 Horas @ 50.00/Hora
+                            [Description] => Desenvolvimento Por Hora - Alterações Casa do Óleo Inajar de Souza - 3.5 Horas @ 50.00/Hora
+                            [UnitPrice] => 17500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [14] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações, Multiplick Air - 5.5 Horas @ 50.00/Hora
+                            [Description] => Desenvolvimento Por Hora - Alterações, Multiplick Air - 5.5 Horas @ 50.00/Hora
+                            [UnitPrice] => 27500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [15] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações adicionais no site piresembalagens.com.br - Conforme email de 12 de dezembro de 2016 ...
+                            [Description] => Desenvolvimento Por Hora - Alterações adicionais no site piresembalagens.com.br - Conforme email de 12 de dezembro de 2016 14:57 - 1 Horas @ 50.00/Hora
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [16] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações - insetbomrj.com.br - Conforme e-mail de 8 de dezembro de 2016 10:498 de dezembro de ...
+                            [Description] => Desenvolvimento Por Hora - Alterações - insetbomrj.com.br - Conforme e-mail de 8 de dezembro de 2016 10:498 de dezembro de 2016 10:49
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [17] => stdClass Object
+                        (
+                            [Name] => Criação e disparo de email Marketing Santa Eulalia - Conforme e-mail de 8 de dezembro de 2016 10:57
+                            [Description] => Criação e disparo de email Marketing Santa Eulalia - Conforme e-mail de 8 de dezembro de 2016 10:57
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [18] => stdClass Object
+                        (
+                            [Name] => Desconto Tabela Agência - 21,5 Horas - R$ 537,50 (Válido apenas até o fechamento)
+                            [Description] => Desconto Tabela Agência - 21,5 Horas - R$ 537,50 (Válido apenas até o fechamento)
+                            [UnitPrice] => 000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [19] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 4845
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [20] => stdClass Object
+                        (
+                            [Name] => Juros por 6 dias de atraso
+                            [Description] => Juros por 6 dias de atraso
+                            [UnitPrice] => 2994
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002799
+            [FullName] => Samuel Nóbrega dos Anjos
+            [Email] => samuelnobrega10@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2799
+    [softDescriptor] => 2799
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Migração do spartacus.mus.br
+                            [description] => Desenvolvimento Por Hora - Migração do spartacus.mus.br
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Migração do site obomdegarfo.com.br
+                            [description] => Desenvolvimento Por Hora - Migração do site obomdegarfo.com.br
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Migração do site artespuma.com.br
+                            [description] => Desenvolvimento Por Hora - Migração do site artespuma.com.br
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Migração do site cianex.com.br
+                            [description] => Desenvolvimento Por Hora - Migração do site cianex.com.br
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Criação do formulário no site www.digitaltermica.com.br
+                            [description] => Desenvolvimento Por Hora - Criação do formulário no site www.digitaltermica.com.br
+                            [unitPrice] => 12500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [5] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email de  25 de agosto de 2016 14:54 - Parcela 4/4
+                            [unitPrice] => 12500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [6] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (28/12/2016 - 27/01/2017)
+Domínio: majotex.com.br
+                            [description] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (28/12/2016 - 27/01/2017)
+Domínio: majotex.com.br
+                            [unitPrice] => 3000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [7] => stdClass Object
+                        (
+                            [name] => Atendimento OnLine Plus - piresembalagens.com.br (28/12/2016 - 27/01/2017)
+                            [description] => Atendimento OnLine Plus - piresembalagens.com.br (28/12/2016 - 27/01/2017)
+                            [unitPrice] => 999
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [8] => stdClass Object
+                        (
+                            [name] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Confor...
+                            [description] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Conforme e-mail de 11 de outubro de 2016 13:00 - Parcela 3/4
+                            [unitPrice] => 20000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [9] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado - Móveis Santa Eulália  - Conforme e-mail de ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado - Móveis Santa Eulália  - Conforme e-mail de 	17 de novembro de 2016 16:04 - Parcela 2/4
+                            [unitPrice] => 12500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [10] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações no site Ecoservice Para Raios
+                            [description] => Desenvolvimento Por Hora - Alterações no site Ecoservice Para Raios
+                            [unitPrice] => 10000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [11] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações SM Radiadores
+                            [description] => Desenvolvimento Por Hora - Alterações SM Radiadores
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [12] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações Kutner Seguros
+                            [description] => Desenvolvimento Por Hora - Alterações Kutner Seguros
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [13] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações Casa do Óleo Inajar de Souza - 3.5 Horas @ 50.00/Hora
+                            [description] => Desenvolvimento Por Hora - Alterações Casa do Óleo Inajar de Souza - 3.5 Horas @ 50.00/Hora
+                            [unitPrice] => 17500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [14] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações, Multiplick Air - 5.5 Horas @ 50.00/Hora
+                            [description] => Desenvolvimento Por Hora - Alterações, Multiplick Air - 5.5 Horas @ 50.00/Hora
+                            [unitPrice] => 27500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [15] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações adicionais no site piresembalagens.com.br - Conforme email de 12 de dezembro de 2016 ...
+                            [description] => Desenvolvimento Por Hora - Alterações adicionais no site piresembalagens.com.br - Conforme email de 12 de dezembro de 2016 14:57 - 1 Horas @ 50.00/Hora
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [16] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações - insetbomrj.com.br - Conforme e-mail de 8 de dezembro de 2016 10:498 de dezembro de ...
+                            [description] => Desenvolvimento Por Hora - Alterações - insetbomrj.com.br - Conforme e-mail de 8 de dezembro de 2016 10:498 de dezembro de 2016 10:49
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [17] => stdClass Object
+                        (
+                            [name] => Criação e disparo de email Marketing Santa Eulalia - Conforme e-mail de 8 de dezembro de 2016 10:57
+                            [description] => Criação e disparo de email Marketing Santa Eulalia - Conforme e-mail de 8 de dezembro de 2016 10:57
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [18] => stdClass Object
+                        (
+                            [name] => Desconto Tabela Agência - 21,5 Horas - R$ 537,50 (Válido apenas até o fechamento)
+                            [description] => Desconto Tabela Agência - 21,5 Horas - R$ 537,50 (Válido apenas até o fechamento)
+                            [unitPrice] => 0
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [19] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 4845
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [20] => stdClass Object
+                        (
+                            [name] => Juros por 6 dias de atraso
+                            [description] => Juros por 6 dias de atraso
+                            [unitPrice] => 2994
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002799
+            [fullName] => Samuel Nóbrega dos Anjos
+            [email] => samuelnobrega10@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/859be079-395b-4bf6-8481-7cd08e3deeb0
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2799
+    [id] => 2799
+    [1] => 180
+    [userid] => 180
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-28
+    [date] => 2016-12-28
+    [4] => 2016-12-28
+    [duedate] => 2016-12-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1614.99
+    [subtotal] => 1614.99
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1614.99
+    [total] => 1614.99
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2799
+    [SoftDescriptor] => 2799
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Migração do spartacus.mus.br
+                            [Description] => Desenvolvimento Por Hora - Migração do spartacus.mus.br
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Migração do site obomdegarfo.com.br
+                            [Description] => Desenvolvimento Por Hora - Migração do site obomdegarfo.com.br
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Migração do site artespuma.com.br
+                            [Description] => Desenvolvimento Por Hora - Migração do site artespuma.com.br
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Migração do site cianex.com.br
+                            [Description] => Desenvolvimento Por Hora - Migração do site cianex.com.br
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Criação do formulário no site www.digitaltermica.com.br
+                            [Description] => Desenvolvimento Por Hora - Criação do formulário no site www.digitaltermica.com.br
+                            [UnitPrice] => 12500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [5] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email de  25 de agosto de 2016 14:54 - Parcela 4/4
+                            [UnitPrice] => 12500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [6] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (28/12/2016 - 27/01/2017)
+Domínio: majotex.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (28/12/2016 - 27/01/2017)
+Domínio: majotex.com.br
+                            [UnitPrice] => 3000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [7] => stdClass Object
+                        (
+                            [Name] => Atendimento OnLine Plus - piresembalagens.com.br (28/12/2016 - 27/01/2017)
+                            [Description] => Atendimento OnLine Plus - piresembalagens.com.br (28/12/2016 - 27/01/2017)
+                            [UnitPrice] => 999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [8] => stdClass Object
+                        (
+                            [Name] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Confor...
+                            [Description] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Conforme e-mail de 11 de outubro de 2016 13:00 - Parcela 3/4
+                            [UnitPrice] => 20000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [9] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado - Móveis Santa Eulália  - Conforme e-mail de ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado - Móveis Santa Eulália  - Conforme e-mail de 	17 de novembro de 2016 16:04 - Parcela 2/4
+                            [UnitPrice] => 12500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [10] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações no site Ecoservice Para Raios
+                            [Description] => Desenvolvimento Por Hora - Alterações no site Ecoservice Para Raios
+                            [UnitPrice] => 10000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [11] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações SM Radiadores
+                            [Description] => Desenvolvimento Por Hora - Alterações SM Radiadores
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [12] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações Kutner Seguros
+                            [Description] => Desenvolvimento Por Hora - Alterações Kutner Seguros
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [13] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações Casa do Óleo Inajar de Souza - 3.5 Horas @ 50.00/Hora
+                            [Description] => Desenvolvimento Por Hora - Alterações Casa do Óleo Inajar de Souza - 3.5 Horas @ 50.00/Hora
+                            [UnitPrice] => 17500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [14] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações, Multiplick Air - 5.5 Horas @ 50.00/Hora
+                            [Description] => Desenvolvimento Por Hora - Alterações, Multiplick Air - 5.5 Horas @ 50.00/Hora
+                            [UnitPrice] => 27500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [15] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações adicionais no site piresembalagens.com.br - Conforme email de 12 de dezembro de 2016 ...
+                            [Description] => Desenvolvimento Por Hora - Alterações adicionais no site piresembalagens.com.br - Conforme email de 12 de dezembro de 2016 14:57 - 1 Horas @ 50.00/Hora
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [16] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações - insetbomrj.com.br - Conforme e-mail de 8 de dezembro de 2016 10:498 de dezembro de ...
+                            [Description] => Desenvolvimento Por Hora - Alterações - insetbomrj.com.br - Conforme e-mail de 8 de dezembro de 2016 10:498 de dezembro de 2016 10:49
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [17] => stdClass Object
+                        (
+                            [Name] => Criação e disparo de email Marketing Santa Eulalia - Conforme e-mail de 8 de dezembro de 2016 10:57
+                            [Description] => Criação e disparo de email Marketing Santa Eulalia - Conforme e-mail de 8 de dezembro de 2016 10:57
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [18] => stdClass Object
+                        (
+                            [Name] => Desconto Tabela Agência - 21,5 Horas - R$ 537,50 (Válido apenas até o fechamento)
+                            [Description] => Desconto Tabela Agência - 21,5 Horas - R$ 537,50 (Válido apenas até o fechamento)
+                            [UnitPrice] => 000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [19] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 4845
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [20] => stdClass Object
+                        (
+                            [Name] => Juros por 6 dias de atraso
+                            [Description] => Juros por 6 dias de atraso
+                            [UnitPrice] => 2994
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002799
+            [FullName] =>  
+            [Email] => 
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2799
+    [softDescriptor] => 2799
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Migração do spartacus.mus.br
+                            [description] => Desenvolvimento Por Hora - Migração do spartacus.mus.br
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Migração do site obomdegarfo.com.br
+                            [description] => Desenvolvimento Por Hora - Migração do site obomdegarfo.com.br
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Migração do site artespuma.com.br
+                            [description] => Desenvolvimento Por Hora - Migração do site artespuma.com.br
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Migração do site cianex.com.br
+                            [description] => Desenvolvimento Por Hora - Migração do site cianex.com.br
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Criação do formulário no site www.digitaltermica.com.br
+                            [description] => Desenvolvimento Por Hora - Criação do formulário no site www.digitaltermica.com.br
+                            [unitPrice] => 12500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [5] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email de  25 de agosto de 2016 14:54 - Parcela 4/4
+                            [unitPrice] => 12500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [6] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (28/12/2016 - 27/01/2017)
+Domínio: majotex.com.br
+                            [description] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (28/12/2016 - 27/01/2017)
+Domínio: majotex.com.br
+                            [unitPrice] => 3000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [7] => stdClass Object
+                        (
+                            [name] => Atendimento OnLine Plus - piresembalagens.com.br (28/12/2016 - 27/01/2017)
+                            [description] => Atendimento OnLine Plus - piresembalagens.com.br (28/12/2016 - 27/01/2017)
+                            [unitPrice] => 999
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [8] => stdClass Object
+                        (
+                            [name] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Confor...
+                            [description] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Conforme e-mail de 11 de outubro de 2016 13:00 - Parcela 3/4
+                            [unitPrice] => 20000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [9] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado - Móveis Santa Eulália  - Conforme e-mail de ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado - Móveis Santa Eulália  - Conforme e-mail de 	17 de novembro de 2016 16:04 - Parcela 2/4
+                            [unitPrice] => 12500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [10] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações no site Ecoservice Para Raios
+                            [description] => Desenvolvimento Por Hora - Alterações no site Ecoservice Para Raios
+                            [unitPrice] => 10000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [11] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações SM Radiadores
+                            [description] => Desenvolvimento Por Hora - Alterações SM Radiadores
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [12] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações Kutner Seguros
+                            [description] => Desenvolvimento Por Hora - Alterações Kutner Seguros
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [13] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações Casa do Óleo Inajar de Souza - 3.5 Horas @ 50.00/Hora
+                            [description] => Desenvolvimento Por Hora - Alterações Casa do Óleo Inajar de Souza - 3.5 Horas @ 50.00/Hora
+                            [unitPrice] => 17500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [14] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações, Multiplick Air - 5.5 Horas @ 50.00/Hora
+                            [description] => Desenvolvimento Por Hora - Alterações, Multiplick Air - 5.5 Horas @ 50.00/Hora
+                            [unitPrice] => 27500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [15] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações adicionais no site piresembalagens.com.br - Conforme email de 12 de dezembro de 2016 ...
+                            [description] => Desenvolvimento Por Hora - Alterações adicionais no site piresembalagens.com.br - Conforme email de 12 de dezembro de 2016 14:57 - 1 Horas @ 50.00/Hora
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [16] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações - insetbomrj.com.br - Conforme e-mail de 8 de dezembro de 2016 10:498 de dezembro de ...
+                            [description] => Desenvolvimento Por Hora - Alterações - insetbomrj.com.br - Conforme e-mail de 8 de dezembro de 2016 10:498 de dezembro de 2016 10:49
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [17] => stdClass Object
+                        (
+                            [name] => Criação e disparo de email Marketing Santa Eulalia - Conforme e-mail de 8 de dezembro de 2016 10:57
+                            [description] => Criação e disparo de email Marketing Santa Eulalia - Conforme e-mail de 8 de dezembro de 2016 10:57
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [18] => stdClass Object
+                        (
+                            [name] => Desconto Tabela Agência - 21,5 Horas - R$ 537,50 (Válido apenas até o fechamento)
+                            [description] => Desconto Tabela Agência - 21,5 Horas - R$ 537,50 (Válido apenas até o fechamento)
+                            [unitPrice] => 0
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [19] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 4845
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [20] => stdClass Object
+                        (
+                            [name] => Juros por 6 dias de atraso
+                            [description] => Juros por 6 dias de atraso
+                            [unitPrice] => 2994
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002799
+            [fullName] =>  
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/7356abea-0df1-4b3f-ae36-142490ea2dfc
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2799
+    [id] => 2799
+    [1] => 180
+    [userid] => 180
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-28
+    [date] => 2016-12-28
+    [4] => 2016-12-28
+    [duedate] => 2016-12-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1614.99
+    [subtotal] => 1614.99
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1614.99
+    [total] => 1614.99
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 180
+    [id] => 180
+    [uuid] => a670f420-2c4c-4023-a431-334e6274a396
+    [firstname] => Samuel
+    [lastname] => Nóbrega dos Anjos
+    [fullname] => Samuel Nóbrega dos Anjos
+    [companyname] => SAMUEL NOBREGA DOS ANJOS - ME - BRASIL NETWORK 
+    [email] => samuelnobrega10@gmail.com
+    [address1] => R Paracatu, 758
+    [address2] => Parque Imperial
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04302-022
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 5589-4930 / (11) 5589-4930
+    [password] => $2y$10$KE2dK3.7ZUgMy7AdcjDDfu3BDkkDole6z2tVbrdS3Mgw75rAbapt6
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11558949301155894930
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 10/01/2017 16:34<br>IP Address: 177.205.216.28<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986754279
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 09.329.980/0001-45
+                )
+
+        )
+
+    [customfields2] => 11986754279
+    [customfields3] => 09.329.980/0001-45
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2799
+    [SoftDescriptor] => 2799
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Migração do spartacus.mus.br
+                            [Description] => Desenvolvimento Por Hora - Migração do spartacus.mus.br
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Migração do site obomdegarfo.com.br
+                            [Description] => Desenvolvimento Por Hora - Migração do site obomdegarfo.com.br
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Migração do site artespuma.com.br
+                            [Description] => Desenvolvimento Por Hora - Migração do site artespuma.com.br
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Migração do site cianex.com.br
+                            [Description] => Desenvolvimento Por Hora - Migração do site cianex.com.br
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Criação do formulário no site www.digitaltermica.com.br
+                            [Description] => Desenvolvimento Por Hora - Criação do formulário no site www.digitaltermica.com.br
+                            [UnitPrice] => 12500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [5] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email de  25 de agosto de 2016 14:54 - Parcela 4/4
+                            [UnitPrice] => 12500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [6] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (28/12/2016 - 27/01/2017)
+Domínio: majotex.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (28/12/2016 - 27/01/2017)
+Domínio: majotex.com.br
+                            [UnitPrice] => 3000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [7] => stdClass Object
+                        (
+                            [Name] => Atendimento OnLine Plus - piresembalagens.com.br (28/12/2016 - 27/01/2017)
+                            [Description] => Atendimento OnLine Plus - piresembalagens.com.br (28/12/2016 - 27/01/2017)
+                            [UnitPrice] => 999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [8] => stdClass Object
+                        (
+                            [Name] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Confor...
+                            [Description] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Conforme e-mail de 11 de outubro de 2016 13:00 - Parcela 3/4
+                            [UnitPrice] => 20000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [9] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado - Móveis Santa Eulália  - Conforme e-mail de ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado - Móveis Santa Eulália  - Conforme e-mail de 	17 de novembro de 2016 16:04 - Parcela 2/4
+                            [UnitPrice] => 12500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [10] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações no site Ecoservice Para Raios
+                            [Description] => Desenvolvimento Por Hora - Alterações no site Ecoservice Para Raios
+                            [UnitPrice] => 10000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [11] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações SM Radiadores
+                            [Description] => Desenvolvimento Por Hora - Alterações SM Radiadores
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [12] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações Kutner Seguros
+                            [Description] => Desenvolvimento Por Hora - Alterações Kutner Seguros
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [13] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações Casa do Óleo Inajar de Souza - 3.5 Horas @ 50.00/Hora
+                            [Description] => Desenvolvimento Por Hora - Alterações Casa do Óleo Inajar de Souza - 3.5 Horas @ 50.00/Hora
+                            [UnitPrice] => 17500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [14] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações, Multiplick Air - 5.5 Horas @ 50.00/Hora
+                            [Description] => Desenvolvimento Por Hora - Alterações, Multiplick Air - 5.5 Horas @ 50.00/Hora
+                            [UnitPrice] => 27500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [15] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações adicionais no site piresembalagens.com.br - Conforme email de 12 de dezembro de 2016 ...
+                            [Description] => Desenvolvimento Por Hora - Alterações adicionais no site piresembalagens.com.br - Conforme email de 12 de dezembro de 2016 14:57 - 1 Horas @ 50.00/Hora
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [16] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações - insetbomrj.com.br - Conforme e-mail de 8 de dezembro de 2016 10:498 de dezembro de ...
+                            [Description] => Desenvolvimento Por Hora - Alterações - insetbomrj.com.br - Conforme e-mail de 8 de dezembro de 2016 10:498 de dezembro de 2016 10:49
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [17] => stdClass Object
+                        (
+                            [Name] => Criação e disparo de email Marketing Santa Eulalia - Conforme e-mail de 8 de dezembro de 2016 10:57
+                            [Description] => Criação e disparo de email Marketing Santa Eulalia - Conforme e-mail de 8 de dezembro de 2016 10:57
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [18] => stdClass Object
+                        (
+                            [Name] => Desconto Tabela Agência - 21,5 Horas - R$ 537,50 (Válido apenas até o fechamento)
+                            [Description] => Desconto Tabela Agência - 21,5 Horas - R$ 537,50 (Válido apenas até o fechamento)
+                            [UnitPrice] => 000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [19] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 4845
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [20] => stdClass Object
+                        (
+                            [Name] => Juros por 13 dias de atraso
+                            [Description] => Juros por 13 dias de atraso
+                            [UnitPrice] => 6487
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002799
+            [FullName] => Samuel Nóbrega dos Anjos
+            [Email] => samuelnobrega10@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2799
+    [softDescriptor] => 2799
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Migração do spartacus.mus.br
+                            [description] => Desenvolvimento Por Hora - Migração do spartacus.mus.br
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Migração do site obomdegarfo.com.br
+                            [description] => Desenvolvimento Por Hora - Migração do site obomdegarfo.com.br
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Migração do site artespuma.com.br
+                            [description] => Desenvolvimento Por Hora - Migração do site artespuma.com.br
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Migração do site cianex.com.br
+                            [description] => Desenvolvimento Por Hora - Migração do site cianex.com.br
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Criação do formulário no site www.digitaltermica.com.br
+                            [description] => Desenvolvimento Por Hora - Criação do formulário no site www.digitaltermica.com.br
+                            [unitPrice] => 12500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [5] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email de  25 de agosto de 2016 14:54 - Parcela 4/4
+                            [unitPrice] => 12500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [6] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (28/12/2016 - 27/01/2017)
+Domínio: majotex.com.br
+                            [description] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (28/12/2016 - 27/01/2017)
+Domínio: majotex.com.br
+                            [unitPrice] => 3000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [7] => stdClass Object
+                        (
+                            [name] => Atendimento OnLine Plus - piresembalagens.com.br (28/12/2016 - 27/01/2017)
+                            [description] => Atendimento OnLine Plus - piresembalagens.com.br (28/12/2016 - 27/01/2017)
+                            [unitPrice] => 999
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [8] => stdClass Object
+                        (
+                            [name] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Confor...
+                            [description] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Conforme e-mail de 11 de outubro de 2016 13:00 - Parcela 3/4
+                            [unitPrice] => 20000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [9] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado - Móveis Santa Eulália  - Conforme e-mail de ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado - Móveis Santa Eulália  - Conforme e-mail de 	17 de novembro de 2016 16:04 - Parcela 2/4
+                            [unitPrice] => 12500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [10] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações no site Ecoservice Para Raios
+                            [description] => Desenvolvimento Por Hora - Alterações no site Ecoservice Para Raios
+                            [unitPrice] => 10000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [11] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações SM Radiadores
+                            [description] => Desenvolvimento Por Hora - Alterações SM Radiadores
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [12] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações Kutner Seguros
+                            [description] => Desenvolvimento Por Hora - Alterações Kutner Seguros
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [13] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações Casa do Óleo Inajar de Souza - 3.5 Horas @ 50.00/Hora
+                            [description] => Desenvolvimento Por Hora - Alterações Casa do Óleo Inajar de Souza - 3.5 Horas @ 50.00/Hora
+                            [unitPrice] => 17500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [14] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações, Multiplick Air - 5.5 Horas @ 50.00/Hora
+                            [description] => Desenvolvimento Por Hora - Alterações, Multiplick Air - 5.5 Horas @ 50.00/Hora
+                            [unitPrice] => 27500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [15] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações adicionais no site piresembalagens.com.br - Conforme email de 12 de dezembro de 2016 ...
+                            [description] => Desenvolvimento Por Hora - Alterações adicionais no site piresembalagens.com.br - Conforme email de 12 de dezembro de 2016 14:57 - 1 Horas @ 50.00/Hora
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [16] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações - insetbomrj.com.br - Conforme e-mail de 8 de dezembro de 2016 10:498 de dezembro de ...
+                            [description] => Desenvolvimento Por Hora - Alterações - insetbomrj.com.br - Conforme e-mail de 8 de dezembro de 2016 10:498 de dezembro de 2016 10:49
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [17] => stdClass Object
+                        (
+                            [name] => Criação e disparo de email Marketing Santa Eulalia - Conforme e-mail de 8 de dezembro de 2016 10:57
+                            [description] => Criação e disparo de email Marketing Santa Eulalia - Conforme e-mail de 8 de dezembro de 2016 10:57
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [18] => stdClass Object
+                        (
+                            [name] => Desconto Tabela Agência - 21,5 Horas - R$ 537,50 (Válido apenas até o fechamento)
+                            [description] => Desconto Tabela Agência - 21,5 Horas - R$ 537,50 (Válido apenas até o fechamento)
+                            [unitPrice] => 0
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [19] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 4845
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [20] => stdClass Object
+                        (
+                            [name] => Juros por 13 dias de atraso
+                            [description] => Juros por 13 dias de atraso
+                            [unitPrice] => 6487
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002799
+            [fullName] => Samuel Nóbrega dos Anjos
+            [email] => samuelnobrega10@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/c7479de7-f357-47c9-877a-7c75a8e8268b
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2799
+    [id] => 2799
+    [1] => 180
+    [userid] => 180
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-28
+    [date] => 2016-12-28
+    [4] => 2016-12-28
+    [duedate] => 2016-12-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1614.99
+    [subtotal] => 1614.99
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1614.99
+    [total] => 1614.99
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 180
+    [id] => 180
+    [uuid] => a670f420-2c4c-4023-a431-334e6274a396
+    [firstname] => Samuel
+    [lastname] => Nóbrega dos Anjos
+    [fullname] => Samuel Nóbrega dos Anjos
+    [companyname] => SAMUEL NOBREGA DOS ANJOS - ME - BRASIL NETWORK 
+    [email] => samuelnobrega10@gmail.com
+    [address1] => R Paracatu, 758
+    [address2] => Parque Imperial
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 04302-022
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 5589-4930 / (11) 5589-4930
+    [password] => $2y$10$KE2dK3.7ZUgMy7AdcjDDfu3BDkkDole6z2tVbrdS3Mgw75rAbapt6
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11558949301155894930
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 1
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/01/2017 21:40<br>IP Address: 179.178.183.253<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986754279
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 09.329.980/0001-45
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 28
+                )
+
+        )
+
+    [customfields2] => 11986754279
+    [customfields3] => 09.329.980/0001-45
+    [customfields4] => 28
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2799
+    [SoftDescriptor] => 2799
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Migração do spartacus.mus.br
+                            [Description] => Desenvolvimento Por Hora - Migração do spartacus.mus.br
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Migração do site obomdegarfo.com.br
+                            [Description] => Desenvolvimento Por Hora - Migração do site obomdegarfo.com.br
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Migração do site artespuma.com.br
+                            [Description] => Desenvolvimento Por Hora - Migração do site artespuma.com.br
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Migração do site cianex.com.br
+                            [Description] => Desenvolvimento Por Hora - Migração do site cianex.com.br
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Criação do formulário no site www.digitaltermica.com.br
+                            [Description] => Desenvolvimento Por Hora - Criação do formulário no site www.digitaltermica.com.br
+                            [UnitPrice] => 12500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [5] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email de  25 de agosto de 2016 14:54 - Parcela 4/4
+                            [UnitPrice] => 12500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [6] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (28/12/2016 - 27/01/2017)
+Domínio: majotex.com.br
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (28/12/2016 - 27/01/2017)
+Domínio: majotex.com.br
+                            [UnitPrice] => 3000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [7] => stdClass Object
+                        (
+                            [Name] => Atendimento OnLine Plus - piresembalagens.com.br (28/12/2016 - 27/01/2017)
+                            [Description] => Atendimento OnLine Plus - piresembalagens.com.br (28/12/2016 - 27/01/2017)
+                            [UnitPrice] => 999
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [8] => stdClass Object
+                        (
+                            [Name] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Confor...
+                            [Description] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Conforme e-mail de 11 de outubro de 2016 13:00 - Parcela 3/4
+                            [UnitPrice] => 20000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [9] => stdClass Object
+                        (
+                            [Name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado - Móveis Santa Eulália  - Conforme e-mail de ...
+                            [Description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado - Móveis Santa Eulália  - Conforme e-mail de 	17 de novembro de 2016 16:04 - Parcela 2/4
+                            [UnitPrice] => 12500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [10] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações no site Ecoservice Para Raios
+                            [Description] => Desenvolvimento Por Hora - Alterações no site Ecoservice Para Raios
+                            [UnitPrice] => 10000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [11] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações SM Radiadores
+                            [Description] => Desenvolvimento Por Hora - Alterações SM Radiadores
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [12] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações Kutner Seguros
+                            [Description] => Desenvolvimento Por Hora - Alterações Kutner Seguros
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [13] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações Casa do Óleo Inajar de Souza - 3.5 Horas @ 50.00/Hora
+                            [Description] => Desenvolvimento Por Hora - Alterações Casa do Óleo Inajar de Souza - 3.5 Horas @ 50.00/Hora
+                            [UnitPrice] => 17500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [14] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações, Multiplick Air - 5.5 Horas @ 50.00/Hora
+                            [Description] => Desenvolvimento Por Hora - Alterações, Multiplick Air - 5.5 Horas @ 50.00/Hora
+                            [UnitPrice] => 27500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [15] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações adicionais no site piresembalagens.com.br - Conforme email de 12 de dezembro de 2016 ...
+                            [Description] => Desenvolvimento Por Hora - Alterações adicionais no site piresembalagens.com.br - Conforme email de 12 de dezembro de 2016 14:57 - 1 Horas @ 50.00/Hora
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [16] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações - insetbomrj.com.br - Conforme e-mail de 8 de dezembro de 2016 10:498 de dezembro de ...
+                            [Description] => Desenvolvimento Por Hora - Alterações - insetbomrj.com.br - Conforme e-mail de 8 de dezembro de 2016 10:498 de dezembro de 2016 10:49
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [17] => stdClass Object
+                        (
+                            [Name] => Criação e disparo de email Marketing Santa Eulalia - Conforme e-mail de 8 de dezembro de 2016 10:57
+                            [Description] => Criação e disparo de email Marketing Santa Eulalia - Conforme e-mail de 8 de dezembro de 2016 10:57
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [18] => stdClass Object
+                        (
+                            [Name] => Desconto Tabela Agência - 21,5 Horas - R$ 537,50 (Válido apenas até o fechamento)
+                            [Description] => Desconto Tabela Agência - 21,5 Horas - R$ 537,50 (Válido apenas até o fechamento)
+                            [UnitPrice] => 000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [19] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 4845
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [20] => stdClass Object
+                        (
+                            [Name] => Juros por 16 dias de atraso
+                            [Description] => Juros por 16 dias de atraso
+                            [UnitPrice] => 7985
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002799
+            [FullName] => Samuel Nóbrega dos Anjos
+            [Email] => samuelnobrega10@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2799
+    [softDescriptor] => 2799
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Migração do spartacus.mus.br
+                            [description] => Desenvolvimento Por Hora - Migração do spartacus.mus.br
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Migração do site obomdegarfo.com.br
+                            [description] => Desenvolvimento Por Hora - Migração do site obomdegarfo.com.br
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Migração do site artespuma.com.br
+                            [description] => Desenvolvimento Por Hora - Migração do site artespuma.com.br
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Migração do site cianex.com.br
+                            [description] => Desenvolvimento Por Hora - Migração do site cianex.com.br
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Criação do formulário no site www.digitaltermica.com.br
+                            [description] => Desenvolvimento Por Hora - Criação do formulário no site www.digitaltermica.com.br
+                            [unitPrice] => 12500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [5] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado.  casteggioconstrutora.com.br - Conforme email de  25 de agosto de 2016 14:54 - Parcela 4/4
+                            [unitPrice] => 12500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [6] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (28/12/2016 - 27/01/2017)
+Domínio: majotex.com.br
+                            [description] => Gestor de Conteúdo Universal X-Painel® - majotex.com.br (28/12/2016 - 27/01/2017)
+Domínio: majotex.com.br
+                            [unitPrice] => 3000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [7] => stdClass Object
+                        (
+                            [name] => Atendimento OnLine Plus - piresembalagens.com.br (28/12/2016 - 27/01/2017)
+                            [description] => Atendimento OnLine Plus - piresembalagens.com.br (28/12/2016 - 27/01/2017)
+                            [unitPrice] => 999
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [8] => stdClass Object
+                        (
+                            [name] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Confor...
+                            [description] => Loja Virtual - Layout simples com 1 forma de Pagamento (Um Gateway de escolha do cliente ou Boleto). - drpeel.com.br - Conforme e-mail de 11 de outubro de 2016 13:00 - Parcela 3/4
+                            [unitPrice] => 20000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [9] => stdClass Object
+                        (
+                            [name] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado - Móveis Santa Eulália  - Conforme e-mail de ...
+                            [description] => Site Básico - Site simples com até 4 páginas baseado em tema pré aprovado - Móveis Santa Eulália  - Conforme e-mail de 	17 de novembro de 2016 16:04 - Parcela 2/4
+                            [unitPrice] => 12500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [10] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações no site Ecoservice Para Raios
+                            [description] => Desenvolvimento Por Hora - Alterações no site Ecoservice Para Raios
+                            [unitPrice] => 10000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [11] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações SM Radiadores
+                            [description] => Desenvolvimento Por Hora - Alterações SM Radiadores
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [12] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações Kutner Seguros
+                            [description] => Desenvolvimento Por Hora - Alterações Kutner Seguros
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [13] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações Casa do Óleo Inajar de Souza - 3.5 Horas @ 50.00/Hora
+                            [description] => Desenvolvimento Por Hora - Alterações Casa do Óleo Inajar de Souza - 3.5 Horas @ 50.00/Hora
+                            [unitPrice] => 17500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [14] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações, Multiplick Air - 5.5 Horas @ 50.00/Hora
+                            [description] => Desenvolvimento Por Hora - Alterações, Multiplick Air - 5.5 Horas @ 50.00/Hora
+                            [unitPrice] => 27500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [15] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações adicionais no site piresembalagens.com.br - Conforme email de 12 de dezembro de 2016 ...
+                            [description] => Desenvolvimento Por Hora - Alterações adicionais no site piresembalagens.com.br - Conforme email de 12 de dezembro de 2016 14:57 - 1 Horas @ 50.00/Hora
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [16] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações - insetbomrj.com.br - Conforme e-mail de 8 de dezembro de 2016 10:498 de dezembro de ...
+                            [description] => Desenvolvimento Por Hora - Alterações - insetbomrj.com.br - Conforme e-mail de 8 de dezembro de 2016 10:498 de dezembro de 2016 10:49
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [17] => stdClass Object
+                        (
+                            [name] => Criação e disparo de email Marketing Santa Eulalia - Conforme e-mail de 8 de dezembro de 2016 10:57
+                            [description] => Criação e disparo de email Marketing Santa Eulalia - Conforme e-mail de 8 de dezembro de 2016 10:57
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [18] => stdClass Object
+                        (
+                            [name] => Desconto Tabela Agência - 21,5 Horas - R$ 537,50 (Válido apenas até o fechamento)
+                            [description] => Desconto Tabela Agência - 21,5 Horas - R$ 537,50 (Válido apenas até o fechamento)
+                            [unitPrice] => 0
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [19] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 4845
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [20] => stdClass Object
+                        (
+                            [name] => Juros por 16 dias de atraso
+                            [description] => Juros por 16 dias de atraso
+                            [unitPrice] => 7985
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002799
+            [fullName] => Samuel Nóbrega dos Anjos
+            [email] => samuelnobrega10@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/4fba04b1-bd50-4a56-b9ad-81f7d583fd6a
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

@@ -1,0 +1,246 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4978
+    [id] => 4978
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-18
+    [date] => 2018-07-18
+    [4] => 2018-07-19
+    [duedate] => 2018-07-19
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 250.00
+    [subtotal] => 250.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 250.00
+    [total] => 250.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/07/2018 13:10<br>IP Address: 132.255.95.199<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4978
+    [id] => 4978
+    [1] => 182
+    [userid] => 182
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-18
+    [date] => 2018-07-18
+    [4] => 2018-07-19
+    [duedate] => 2018-07-19
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 250.00
+    [subtotal] => 250.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 250.00
+    [total] => 250.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 182
+    [id] => 182
+    [uuid] => 7aa3365d-feb8-489e-99d8-f5d5ff576cc3
+    [firstname] => João
+    [lastname] => Gomes
+    [fullname] => João Gomes
+    [companyname] => 
+    [email] => mrscursos@gmail.com
+    [address1] => Rua Blumenau, 87
+    [address2] => Riviera Fluminense
+    [city] => Macaé
+    [fullstate] => RJ
+    [state] => RJ
+    [postcode] => 27935-290
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (22)2773-1825
+    [password] => 3ce8416e27f409250362d35d81e59aa3:ZgrL%
+    [statecode] => RJ
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.2227731825
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/07/2018 13:10<br>IP Address: 132.255.95.199<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 22981359070
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 81240660782
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 22981359070
+    [customfields3] => 81240660782
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

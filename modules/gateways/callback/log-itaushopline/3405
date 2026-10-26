@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3405
+    [id] => 3405
+    [1] => 267
+    [userid] => 267
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-05-31
+    [date] => 2017-05-31
+    [4] => 2017-06-07
+    [duedate] => 2017-06-07
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 267
+    [id] => 267
+    [uuid] => e13b7a80-7fc2-4e54-add6-527e423c9630
+    [firstname] => Célio
+    [lastname] => Ribeiro
+    [fullname] => Célio Ribeiro
+    [companyname] => CÉLIO RIBEIRO SANTA ISABEL ME
+    [email] => vendas@mixpisos.com.br
+    [address1] => Rua Dracena (Prq Maringá), 112
+    [address2] => Perová
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07429820
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4652-5599 11999794329
+    [password] => $2y$10$TKNoBl0kOIqIKhiM/rdVDOtxZsfHqawhzHFC0J3JBXzRLbdOrmgnm
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114652559911999794329
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/06/2017 09:51<br>IP Address: 187.75.253.67<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11999794329
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 03.801.907/0001-48
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11999794329
+    [customfields3] => 03.801.907/0001-48
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

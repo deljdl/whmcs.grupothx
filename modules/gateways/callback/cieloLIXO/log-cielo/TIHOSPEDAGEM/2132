@@ -1,0 +1,251 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2132
+    [id] => 2132
+    [1] => 113
+    [userid] => 113
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-06-30
+    [date] => 2016-06-30
+    [4] => 2016-07-06
+    [duedate] => 2016-07-06
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 100.00
+    [subtotal] => 100.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 100.00
+    [total] => 100.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 113
+    [id] => 113
+    [uuid] => dd004161-3755-47a0-9cb1-9f522cd0a5a3
+    [firstname] => Marcel
+    [lastname] => Piacentini Abrantes
+    [fullname] => Marcel Piacentini Abrantes
+    [companyname] => Canil K9 - Cão Educado
+    [email] => marcel@treinamentocanino.com.br
+    [address1] => Rodovia Prefeito Joaquim Simão, Km 70
+    [address2] => Condomínio Santa Isabel 
+    [city] => Santa Isabel
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07500000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 70075621 / ID: 966*17714 1199997 5657
+    [password] => 39861fd9289ea8e5564a6f0d90841cc8:E)BS#
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11700756219661771411999975657
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 30/06/2016 07:06<br>IP Address: 177.159.86.176<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947292551
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 19.675.540/0001-01
+                )
+
+        )
+
+    [customfields2] => 11947292551
+    [customfields3] => 19.675.540/0001-01
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2132
+    [SoftDescriptor] => 2132
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Gestor de Conteúdo Universal X-Painel® - treinamentocanino.com.br (06/07/2016 - 05/08/2016)
+Domínio: treinamentocanino.co...
+                            [Description] => Gestor de Conteúdo Universal X-Painel® - treinamentocanino.com.br (06/07/2016 - 05/08/2016)
+Domínio: treinamentocanino.com.br
+                            [UnitPrice] => 500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Manutenção Mensal e Gerenciamento - treinamentocanino.com.br (06/07/2016 - 05/08/2016)
+                            [Description] => Manutenção Mensal e Gerenciamento - treinamentocanino.com.br (06/07/2016 - 05/08/2016)
+                            [UnitPrice] => 9500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Marcel Piacentini Abrantes
+            [Email] => marcel@treinamentocanino.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2132
+    [softDescriptor] => 2132
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Gestor de Conteúdo Universal X-Painel® - treinamentocanino.com.br (06/07/2016 - 05/08/2016)
+Domínio: treinamentocanino.co...
+                            [description] => Gestor de Conteúdo Universal X-Painel® - treinamentocanino.com.br (06/07/2016 - 05/08/2016)
+Domínio: treinamentocanino.com.br
+                            [unitPrice] => 500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Manutenção Mensal e Gerenciamento - treinamentocanino.com.br (06/07/2016 - 05/08/2016)
+                            [description] => Manutenção Mensal e Gerenciamento - treinamentocanino.com.br (06/07/2016 - 05/08/2016)
+                            [unitPrice] => 9500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Marcel Piacentini Abrantes
+            [email] => marcel@treinamentocanino.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/72edb1de-dce3-4241-8c1a-8c7ec54e901d
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>

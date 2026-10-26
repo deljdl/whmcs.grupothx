@@ -1,0 +1,502 @@
+
+Dados Invoice
+<pre>Array
+(
+    [id] => 6598
+    [0] => 6598
+    [userid] => 77
+    [1] => 77
+    [invoicenum] => 
+    [2] => 
+    [date] => 2019-09-25
+    [3] => 2019-09-25
+    [duedate] => 2019-10-02
+    [4] => 2019-10-02
+    [datepaid] => 0000-00-00 00:00:00
+    [5] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [7] => 32.97
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 0.00
+    [total] => 32.97
+    [11] => 32.97
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => 0.00
+    [status] => Unpaid
+    [14] => Unpaid
+    [paymentmethod] => itaushopline
+    [15] => itaushopline
+    [paymethodid] => 
+    [16] => 
+    [notes] => 
+    [17] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 77
+    [id] => 77
+    [uuid] => 41cabbe1-486d-49ef-b76e-b6579b1bd405
+    [firstname] => Adriana
+    [lastname] => Fidencio da SIlva
+    [companyname] => Capricho Piscinas
+    [email] => henrique-smartins@hotmail.com
+    [address1] => Av. Celeste
+    [address2] => Centro
+    [city] => CARAPIBUIBA
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 06320-030
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1141644660
+    [tax_id] => 
+    [password] => $2y$10$LnIk4CBv6slsYLrwPf1dWe6oMr43vin8Z8JVQ.OgAHwiNNuQLFG5.
+    [model] => WHMCS\User\Client Object
+        (
+            [table:protected] => tblclients
+            [columnMap:protected] => Array
+                (
+                    [passwordHash] => password
+                    [twoFactorAuthModule] => authmodule
+                    [twoFactorAuthData] => authdata
+                    [currencyId] => currency
+                    [defaultPaymentGateway] => defaultgateway
+                    [overrideLateFee] => latefeeoveride
+                    [overrideOverdueNotices] => overideduenotices
+                    [disableAutomaticCreditCardProcessing] => disableautocc
+                    [billingContactId] => billingcid
+                    [securityQuestionId] => securityqid
+                    [securityQuestionAnswer] => securityqans
+                    [creditCardType] => cardtype
+                    [creditCardLastFourDigits] => cardlastfour
+                    [creditCardExpiryDate] => expdate
+                    [storedBankNameCrypt] => bankname
+                    [storedBankTypeCrypt] => banktype
+                    [storedBankCodeCrypt] => bankcode
+                    [storedBankAccountCrypt] => bankacct
+                    [paymentGatewayToken] => gatewayid
+                    [lastLoginDate] => lastlogin
+                    [lastLoginIp] => ip
+                    [lastLoginHostname] => host
+                    [passwordResetKey] => pwresetkey
+                    [passwordResetKeyRequestDate] => pwresetexpiry
+                    [passwordResetKeyExpiryDate] => pwresetexpiry
+                )
+
+            [timestamps] => 1
+            [dates:protected] => Array
+                (
+                    [0] => lastLoginDate
+                    [1] => passwordResetKeyRequestDate
+                    [2] => passwordResetKeyExpiryDate
+                )
+
+            [booleans:protected] => Array
+                (
+                    [0] => taxExempt
+                    [1] => overrideLateFee
+                    [2] => overrideOverdueNotices
+                    [3] => separateInvoices
+                    [4] => disableAutomaticCreditCardProcessing
+                    [5] => emailOptOut
+                    [6] => marketingEmailsOptIn
+                    [7] => overrideAutoClose
+                    [8] => emailVerified
+                )
+
+            [unique] => Array
+                (
+                    [0] => email
+                )
+
+            [appends:protected] => Array
+                (
+                    [0] => fullName
+                    [1] => countryName
+                    [2] => groupName
+                )
+
+            [fillable:protected] => Array
+                (
+                    [0] => lastlogin
+                    [1] => ip
+                    [2] => host
+                    [3] => pwresetkey
+                    [4] => pwresetexpiry
+                )
+
+            [hidden:protected] => Array
+                (
+                    [0] => password
+                    [1] => authdata
+                    [2] => securityqans
+                    [3] => cardnum
+                    [4] => startdate
+                    [5] => expdate
+                    [6] => issuenumber
+                    [7] => bankname
+                    [8] => banktype
+                    [9] => bankcode
+                    [10] => bankacct
+                    [11] => pwresetkey
+                    [12] => pwresetexpiry
+                )
+
+            [guardedForUpdate] => Array
+                (
+                )
+
+            [strings:protected] => Array
+                (
+                )
+
+            [ints:protected] => Array
+                (
+                )
+
+            [semanticVersions:protected] => Array
+                (
+                )
+
+            [commaSeparated:protected] => Array
+                (
+                )
+
+            [characterSeparated:protected] => Array
+                (
+                )
+
+            [rules:protected] => Array
+                (
+                )
+
+            [errors:protected] => 
+            [customValidationMessages:protected] => Array
+                (
+                )
+
+            [connection:protected] => 
+            [primaryKey:protected] => id
+            [perPage:protected] => 15
+            [incrementing] => 1
+            [attributes:protected] => Array
+                (
+                    [id] => 77
+                    [uuid] => 41cabbe1-486d-49ef-b76e-b6579b1bd405
+                    [firstname] => Adriana
+                    [lastname] => Fidencio da SIlva
+                    [companyname] => Capricho Piscinas
+                    [email] => henrique-smartins@hotmail.com
+                    [address1] => Av. Celeste
+                    [address2] => Centro
+                    [city] => CARAPIBUIBA
+                    [state] => SP
+                    [postcode] => 06320-030
+                    [country] => BR
+                    [phonenumber] => +55.11 4164-4660
+                    [tax_id] => 
+                    [password] => $2y$10$LnIk4CBv6slsYLrwPf1dWe6oMr43vin8Z8JVQ.OgAHwiNNuQLFG5.
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2014-07-21
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => DHyL77dOxwElKdC6DJEzNQFW/gU=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => èQFÁeEÜêá‹ƒæ·i
+                    [startdate] => èQFÁeEÜêá‹ƒæ·i
+                    [expdate] => ˜Ð|ÑLd·^=$RÂA
+                    [issuenumber] => èQFÁeEÜêá‹ƒæ·i
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-11 09:02:47
+                    [ip] => 187.122.124.59
+                    [host] => bb7a7c3b.virtua.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2017-06-16 20:59:24
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [original:protected] => Array
+                (
+                    [id] => 77
+                    [uuid] => 41cabbe1-486d-49ef-b76e-b6579b1bd405
+                    [firstname] => Adriana
+                    [lastname] => Fidencio da SIlva
+                    [companyname] => Capricho Piscinas
+                    [email] => henrique-smartins@hotmail.com
+                    [address1] => Av. Celeste
+                    [address2] => Centro
+                    [city] => CARAPIBUIBA
+                    [state] => SP
+                    [postcode] => 06320-030
+                    [country] => BR
+                    [phonenumber] => +55.11 4164-4660
+                    [tax_id] => 
+                    [password] => $2y$10$LnIk4CBv6slsYLrwPf1dWe6oMr43vin8Z8JVQ.OgAHwiNNuQLFG5.
+                    [authmodule] => 
+                    [authdata] => 
+                    [currency] => 1
+                    [defaultgateway] => 
+                    [credit] => 0.00
+                    [taxexempt] => 0
+                    [latefeeoveride] => 0
+                    [overideduenotices] => 0
+                    [separateinvoices] => 0
+                    [disableautocc] => 0
+                    [datecreated] => 2014-07-21
+                    [notes] => 
+                    [billingcid] => 0
+                    [securityqid] => 0
+                    [securityqans] => DHyL77dOxwElKdC6DJEzNQFW/gU=
+                    [groupid] => 0
+                    [cardtype] => 
+                    [cardlastfour] => 
+                    [cardnum] => èQFÁeEÜêá‹ƒæ·i
+                    [startdate] => èQFÁeEÜêá‹ƒæ·i
+                    [expdate] => ˜Ð|ÑLd·^=$RÂA
+                    [issuenumber] => èQFÁeEÜêá‹ƒæ·i
+                    [bankname] => 
+                    [banktype] => 
+                    [bankcode] => 
+                    [bankacct] => 
+                    [gatewayid] => 
+                    [lastlogin] => 2019-10-11 09:02:47
+                    [ip] => 187.122.124.59
+                    [host] => bb7a7c3b.virtua.com.br
+                    [status] => Active
+                    [language] => 
+                    [pwresetkey] => 
+                    [emailoptout] => 0
+                    [marketing_emails_opt_in] => 0
+                    [overrideautoclose] => 0
+                    [allow_sso] => 1
+                    [email_verified] => 0
+                    [created_at] => 0000-00-00 00:00:00
+                    [updated_at] => 2017-06-16 20:59:24
+                    [pwresetexpiry] => 0000-00-00 00:00:00
+                )
+
+            [relations:protected] => Array
+                (
+                )
+
+            [visible:protected] => Array
+                (
+                )
+
+            [guarded:protected] => Array
+                (
+                    [0] => *
+                )
+
+            [dateFormat:protected] => 
+            [casts:protected] => Array
+                (
+                )
+
+            [touches:protected] => Array
+                (
+                )
+
+            [observables:protected] => Array
+                (
+                )
+
+            [with:protected] => Array
+                (
+                )
+
+            [morphClass:protected] => 
+            [exists] => 1
+            [wasRecentlyCreated] => 
+        )
+
+    [fullname] => Adriana Fidencio da SIlva
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1141644660
+    [telephoneNumber] => +55.1141644660
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [gatewayid] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [marketing_emails_opt_in] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [isOptedInToMarketingEmails] => 1
+    [lastlogin] => Date: 11/10/2019 09:02<br>IP Address: 187.122.124.59<br>Host: bb7a7c3b.virtua.com.br
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 1198480215
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 22.988.974/0001-68
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 1198480215
+    [customfields3] => 22.988.974/0001-68
+    [customfields4] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [id] => 6598
+    [0] => 6598
+    [userid] => 77
+    [1] => 77
+    [invoicenum] => 
+    [2] => 
+    [date] => 2019-09-25
+    [3] => 2019-09-25
+    [duedate] => 2019-10-02
+    [4] => 2019-10-02
+    [datepaid] => 0000-00-00 00:00:00
+    [5] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [7] => 32.97
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 0.00
+    [total] => 32.97
+    [11] => 32.97
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => 0.00
+    [status] => Unpaid
+    [14] => Unpaid
+    [paymentmethod] => itaushopline
+    [15] => itaushopline
+    [paymethodid] => 
+    [16] => 
+    [notes] => 
+    [17] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [id] => 6598
+    [0] => 6598
+    [userid] => 77
+    [1] => 77
+    [invoicenum] => 
+    [2] => 
+    [date] => 2019-09-25
+    [3] => 2019-09-25
+    [duedate] => 2019-10-02
+    [4] => 2019-10-02
+    [datepaid] => 0000-00-00 00:00:00
+    [5] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [6] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [7] => 32.97
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 0.00
+    [total] => 32.97
+    [11] => 32.97
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => 0.00
+    [status] => Unpaid
+    [14] => Unpaid
+    [paymentmethod] => itaushopline
+    [15] => itaushopline
+    [paymethodid] => 
+    [16] => 
+    [notes] => 
+    [17] => 
+)
+</pre>
+
+Dados Cliente
+<pre></pre>

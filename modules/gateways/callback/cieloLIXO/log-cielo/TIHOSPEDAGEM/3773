@@ -1,0 +1,367 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3773
+    [id] => 3773
+    [1] => 260
+    [userid] => 260
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-09-04
+    [date] => 2017-09-04
+    [4] => 2017-09-04
+    [duedate] => 2017-09-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 105.00
+    [subtotal] => 105.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 105.00
+    [total] => 105.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 260
+    [id] => 260
+    [uuid] => 0e11ec5f-a484-4fcf-8e2f-216e6055c683
+    [firstname] => Sérgio
+    [lastname] => da Silva Cardoso
+    [fullname] => Sérgio da Silva Cardoso
+    [companyname] => Moleca Calçados
+    [email] => ercm@rodiziosercm.com.br
+    [address1] => Estrada de São Bento, 1710
+    [address2] => Vila Ferlópolis
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08597-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 01146443301 11986947921
+    [password] => $2y$10$LsrHmFzl7ZQoArn9WP7n9eDNdoeRW.4XFLnK49/676m/b.w6xC7S2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114644330111986947921
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 04/09/2017 16:57<br>IP Address: 177.139.69.170<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986947921
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 16022119812
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11986947921
+    [customfields3] => 16022119812
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3773
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Registro de dominio - sejaumafranqueada.com.br - 1 Ano(s) (04/09/2017 - 03/09/2018)
+                            [Description] => Registro de dominio - sejaumafranqueada.com.br - 1 Ano(s) (04/09/2017 - 03/09/2018)
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracao do dominio revendamolecacalcados.com.br para sejaumafranqueada.com.br
+                            [Description] => Desenvolvimento Por Hora - Alteracao do dominio revendamolecacalcados.com.br para sejaumafranqueada.com.br
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Sérgio da Silva Cardoso
+            [Email] => ercm@rodiziosercm.com.br
+            [Identity] => 16022119812
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3773
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Registro de dominio - sejaumafranqueada.com.br - 1 Ano(s) (04/09/2017 - 03/09/2018)
+                            [description] => Registro de dominio - sejaumafranqueada.com.br - 1 Ano(s) (04/09/2017 - 03/09/2018)
+                            [unitPrice] => 5500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alteracao do dominio revendamolecacalcados.com.br para sejaumafranqueada.com.br
+                            [description] => Desenvolvimento Por Hora - Alteracao do dominio revendamolecacalcados.com.br para sejaumafranqueada.com.br
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 16022119812
+            [fullName] => Sérgio da Silva Cardoso
+            [email] => ercm@rodiziosercm.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/a9772046-efc1-4c54-a6ad-8568163683e1
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+04/09/2017 17:16:00
+INICIO_______________________________________________________________LOG:BEGIN:::04/09/2017 17:00<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3773
+    [amount] => 10500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 7a8bd5a9dbdb4f9d942f8c5f59569f2f
+    [created_date] => 04/09/2017 17:00:14
+    [customer_name] => Sérgio Cardoso
+    [customer_phone] => 11986947921
+    [customer_identity] => 16022119812
+    [customer_email] => ercm@rodiziosercm.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 542820******3143
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626ITIOHJ7JB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+04/09/2017 17:21:00
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3773 | Result->success | ValorPago ->105.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 3773
+    [amount] => 10500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 7a8bd5a9dbdb4f9d942f8c5f59569f2f
+    [created_date] => 04/09/2017 17:00:14
+    [customer_name] => Sérgio Cardoso
+    [customer_phone] => 11986947921
+    [customer_identity] => 16022119812
+    [customer_email] => ercm@rodiziosercm.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 542820******3143
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626ITIOHJ7JB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+04/09/2017 17:59:09
+INICIO_______________________________________________________________LOG:BEGIN:::04/09/2017 17:09<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 7a8bd5a9dbdb4f9d942f8c5f59569f2f
+    [amount] => 10500
+    [order_number] => 3773
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+04/09/2017 17:59:09
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 7a8bd5a9dbdb4f9d942f8c5f59569f2f
+    [amount] => 10500
+    [order_number] => 3773
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+04/09/2017 17:00:10
+INICIO_______________________________________________________________LOG:BEGIN:::04/09/2017 17:10<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 7a8bd5a9dbdb4f9d942f8c5f59569f2f
+    [amount] => 10500
+    [order_number] => 3773
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+04/09/2017 17:00:10
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 7a8bd5a9dbdb4f9d942f8c5f59569f2f
+    [amount] => 10500
+    [order_number] => 3773
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

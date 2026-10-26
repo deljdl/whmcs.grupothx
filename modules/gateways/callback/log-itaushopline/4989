@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4989
+    [id] => 4989
+    [1] => 317
+    [userid] => 317
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-20
+    [date] => 2018-07-20
+    [4] => 2018-07-23
+    [duedate] => 2018-07-23
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 75.00
+    [subtotal] => 75.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 75.00
+    [total] => 75.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 317
+    [id] => 317
+    [uuid] => 6a58fe4c-42a0-4468-8db6-2ddfef2fc1f0
+    [firstname] => Igor
+    [lastname] => Borges de Sousa
+    [fullname] => Igor Borges de Sousa
+    [companyname] => Cronimet Brasil Ltda
+    [email] => financeiro2@cronimet.com.br
+    [address1] => Avenida Engenheiro Roberto Zuccolo, 255
+    [address2] => Vila Leopoldina
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05307-190
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 3839-4500
+    [password] => $2y$10$KzVCcCHT2iPvWK8AL3SumuzCjDGVEsuqYEzK85GENzYb8ByQyX.96
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1138394500
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/07/2018 10:04<br>IP Address: 186.225.122.162<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 03.374.355/0001-39
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 03.374.355/0001-39
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

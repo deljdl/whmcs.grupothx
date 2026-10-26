@@ -1,0 +1,261 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2996
+    [id] => 2996
+    [1] => 256
+    [userid] => 256
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-02-16
+    [date] => 2017-02-16
+    [4] => 2017-02-16
+    [duedate] => 2017-02-16
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 155.00
+    [subtotal] => 155.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 155.00
+    [total] => 155.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 256
+    [id] => 256
+    [uuid] => e404bd80-9d71-44ae-8ad3-779aafc6ff31
+    [firstname] => Andre
+    [lastname] => Hernandes Nogueira
+    [fullname] => Andre Hernandes Nogueira
+    [companyname] => Marcenaria Noprazzo
+    [email] => marcenarianoprazzo@hotmail.com
+    [address1] => Rua José Faustino da Silva (A C Residencial), 370
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-825
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146522946, 11987744606
+    [password] => $2y$10$JTd2kfkFHazfRlYSwYz.Su2WWqADH5g4w1nj0wtMIXCmbxg.Ntr2C
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114652294611987744606
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/02/2017 09:46<br>IP Address: 177.18.209.135<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11987744606
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 26426605832
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11987744606
+    [customfields3] => 26426605832
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2996
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Registro de dominio - marcenarianoprazzo.com.br - 1 Ano(s) (16/02/2017 - 15/02/2018)
+                            [Description] => Registro de dominio - marcenarianoprazzo.com.br - 1 Ano(s) (16/02/2017 - 15/02/2018)
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Vetorizacao de logo.
+                            [Description] => Vetorizacao de logo.
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Manutencao Mensal e Gerenciamento - marcenarianoprazzo.com (16/02/2017 - 15/03/2017)
+                            [Description] => Manutencao Mensal e Gerenciamento - marcenarianoprazzo.com (16/02/2017 - 15/03/2017)
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 26426605832
+            [FullName] => Andre Hernandes Nogueira
+            [Email] => marcenarianoprazzo@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2996
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Registro de dominio - marcenarianoprazzo.com.br - 1 Ano(s) (16/02/2017 - 15/02/2018)
+                            [description] => Registro de dominio - marcenarianoprazzo.com.br - 1 Ano(s) (16/02/2017 - 15/02/2018)
+                            [unitPrice] => 5500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Vetorizacao de logo.
+                            [description] => Vetorizacao de logo.
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Manutencao Mensal e Gerenciamento - marcenarianoprazzo.com (16/02/2017 - 15/03/2017)
+                            [description] => Manutencao Mensal e Gerenciamento - marcenarianoprazzo.com (16/02/2017 - 15/03/2017)
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 26426605832
+            [fullName] => Andre Hernandes Nogueira
+            [email] => marcenarianoprazzo@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/5ae921e8-5c70-4bff-a158-4567d9478cda
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

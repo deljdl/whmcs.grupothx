@@ -1,0 +1,369 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4374
+    [id] => 4374
+    [1] => 306
+    [userid] => 306
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-14
+    [date] => 2018-02-14
+    [4] => 2018-02-14
+    [duedate] => 2018-02-14
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 525.01
+    [subtotal] => 525.01
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 525.01
+    [total] => 525.01
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 306
+    [id] => 306
+    [uuid] => c1d000c3-e150-466f-bcfc-55f31476295f
+    [firstname] => Tarcio
+    [lastname] => Matos Hortegal
+    [fullname] => Tarcio Matos Hortegal
+    [companyname] => TH SOLAR
+    [email] => tharcimhortegal@gmail.com
+    [address1] => Conjunto São Pedro 11
+    [address2] => São Pedro 
+    [city] => Teresina
+    [fullstate] => PI
+    [state] => PI
+    [postcode] => 64018-370
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 86998677751
+    [password] => $2y$10$lJpamBP17fcBwi3R0jLizeWZoAtCXgiQUXOf1R8D/YoE7oknxTEhi
+    [statecode] => PI
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.86998677751
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/02/2018 13:51<br>IP Address: 189.40.107.226<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 86998677751
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29676255000150
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 86998677751
+    [customfields3] => 29676255000150
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4374
+    [id] => 4374
+    [1] => 306
+    [userid] => 306
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-14
+    [date] => 2018-02-14
+    [4] => 2018-02-14
+    [duedate] => 2018-02-14
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 525.01
+    [subtotal] => 525.01
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 525.01
+    [total] => 525.01
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 306
+    [id] => 306
+    [uuid] => c1d000c3-e150-466f-bcfc-55f31476295f
+    [firstname] => Tarcio
+    [lastname] => Matos Hortegal
+    [fullname] => Tarcio Matos Hortegal
+    [companyname] => TH SOLAR
+    [email] => tharcimhortegal@gmail.com
+    [address1] => Conjunto São Pedro 11
+    [address2] => São Pedro 
+    [city] => Teresina
+    [fullstate] => PI
+    [state] => PI
+    [postcode] => 64018-370
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 86998677751
+    [password] => $2y$10$lJpamBP17fcBwi3R0jLizeWZoAtCXgiQUXOf1R8D/YoE7oknxTEhi
+    [statecode] => PI
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.86998677751
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/02/2018 13:56<br>IP Address: 177.159.87.122<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 86998677751
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29676255000150
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 86998677751
+    [customfields3] => 29676255000150
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4374
+    [id] => 4374
+    [1] => 306
+    [userid] => 306
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-02-14
+    [date] => 2018-02-14
+    [4] => 2018-02-14
+    [duedate] => 2018-02-14
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 525.01
+    [subtotal] => 525.01
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 525.01
+    [total] => 525.01
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 306
+    [id] => 306
+    [uuid] => c1d000c3-e150-466f-bcfc-55f31476295f
+    [firstname] => Tarcio
+    [lastname] => Matos Hortegal
+    [fullname] => Tarcio Matos Hortegal
+    [companyname] => TH SOLAR
+    [email] => tharcimhortegal@gmail.com
+    [address1] => Conjunto São Pedro 11
+    [address2] => São Pedro 
+    [city] => Teresina
+    [fullstate] => PI
+    [state] => PI
+    [postcode] => 64018-370
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 86998677751
+    [password] => $2y$10$lJpamBP17fcBwi3R0jLizeWZoAtCXgiQUXOf1R8D/YoE7oknxTEhi
+    [statecode] => PI
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.86998677751
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 21/02/2018 09:18<br>IP Address: 189.40.104.229<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 86998677751
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29676255000150
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 86998677751
+    [customfields3] => 29676255000150
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

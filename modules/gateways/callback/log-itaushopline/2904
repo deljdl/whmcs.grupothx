@@ -1,0 +1,135 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2904
+    [id] => 2904
+    [1] => 249
+    [userid] => 249
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-25
+    [date] => 2017-01-25
+    [4] => 2017-10-30
+    [duedate] => 2017-10-30
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 175.00
+    [subtotal] => 175.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 175.00
+    [total] => 175.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 249
+    [id] => 249
+    [uuid] => 1b325f47-845c-491a-b483-53411e7161d4
+    [firstname] => Deilton
+    [lastname] => Silva Do Carmo
+    [fullname] => Deilton Silva Do Carmo
+    [companyname] => Deilton Silva Do Carmo - ME
+    [email] => deilton_divisorias@hotmail.com
+    [address1] => Rua Vereador Plínio Paschoal Ferrari,250
+    [address2] => Vila Monte Belo
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08577-550
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1146421602 11985691184
+    [password] => $2y$10$D857k1yqPSz1217/m0SRm.fV4EXp9LuhEJKgHQ6n4CrTqtvfjwmG2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114642160211985691184
+    [billingcid] => 0
+    [notes] => Nome: Deilton Silva Do Carmo
+
+RG: 25.105.332-5
+
+CPF: 172.205.305-44
+
+Nome Empresarial: Deilton Silva Do Carmo – ME
+
+CNPJ: 24.435.173/0001-09
+
+Endereço: Rua Vereador Plínio Paschoal Ferrari Nº 250 Cª 3 - Bairro Monte
+
+Belo - Cidade Itaquaquecetuba - UF SP
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 02/11/2017 10:34<br>IP Address: 45.6.31.141<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11985691184
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 24435173000109
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11985691184
+    [customfields3] => 24435173000109
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

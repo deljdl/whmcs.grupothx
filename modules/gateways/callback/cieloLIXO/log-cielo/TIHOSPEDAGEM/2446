@@ -1,0 +1,247 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2446
+    [id] => 2446
+    [1] => 83
+    [userid] => 83
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-09-19
+    [date] => 2016-09-19
+    [4] => 2016-09-20
+    [duedate] => 2016-09-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 45.00
+    [subtotal] => 45.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 45.00
+    [total] => 45.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 83
+    [id] => 83
+    [uuid] => 79fe7fad-fbf2-49f1-aad0-ce871920ed29
+    [firstname] => Michel
+    [lastname] => Costa
+    [fullname] => Michel Costa
+    [companyname] => MICHEL COSTA ME
+    [email] => drmichelcosta@hotmail.com
+    [address1] => Rua Leopoldo Couto de Magalhães Junior, 396
+    [address2] => 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 30784569, 36242001
+    [password] => d3e1795ad751bb44c70a0813a85dbc95:S)PFs
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3078456936242001
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => boleto
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 354.16
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 21/09/2016 18:39<br>IP Address: 177.18.212.234<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11995016683
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 008.279.944/0001-51
+                )
+
+        )
+
+    [customfields2] => 11995016683
+    [customfields3] => 008.279.944/0001-51
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2446
+    [SoftDescriptor] => 2446
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Renovação de Domínio - espacoprint.com.br - 1 Ano(s) (22/08/2016 - 21/08/2017)
+                            [Description] => Renovação de Domínio - espacoprint.com.br - 1 Ano(s) (22/08/2016 - 21/08/2017)
+                            [UnitPrice] => 4500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Michel Costa
+            [Email] => drmichelcosta@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2446
+    [softDescriptor] => 2446
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Renovação de Domínio - espacoprint.com.br - 1 Ano(s) (22/08/2016 - 21/08/2017)
+                            [description] => Renovação de Domínio - espacoprint.com.br - 1 Ano(s) (22/08/2016 - 21/08/2017)
+                            [unitPrice] => 4500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Michel Costa
+            [email] => drmichelcosta@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/9b4e6fbc-e02d-41ff-9b50-67236a7e8862
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>

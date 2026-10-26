@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4209
+    [id] => 4209
+    [1] => 164
+    [userid] => 164
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-01-02
+    [date] => 2018-01-02
+    [4] => 2018-01-09
+    [duedate] => 2018-01-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 80.00
+    [subtotal] => 80.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 80.00
+    [total] => 80.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 164
+    [id] => 164
+    [uuid] => c3ff7cb5-b545-4f46-8aba-9047b0fa545f
+    [firstname] => Vando 
+    [lastname] => Pereira
+    [fullname] => Vando  Pereira
+    [companyname] => EQUIP COMERCIO DE PEÇAS E SERVIÇOS LTDA
+    [email] => financeiro@equiptransmissoes.com.br
+    [address1] => ESTRADA DO PINHEIRINHO NOVO, 408
+    [address2] => JD CAIUBY
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08588-640
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 2652-2999 11 7897-1336
+    [password] => 7c449b0a4e4da826fad8f1e517ae881b:%ryYS
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11265229991178971336
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 16/01/2018 09:12<br>IP Address: 187.11.244.225<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 1178971336
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.560.486/0001-36
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 1178971336
+    [customfields3] => 05.560.486/0001-36
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

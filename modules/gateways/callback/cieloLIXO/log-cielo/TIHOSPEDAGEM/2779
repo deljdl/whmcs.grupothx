@@ -1,0 +1,266 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2779
+    [id] => 2779
+    [1] => 163
+    [userid] => 163
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-19
+    [date] => 2016-12-19
+    [4] => 2016-12-26
+    [duedate] => 2016-12-26
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 89.91
+    [subtotal] => 89.91
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 89.91
+    [total] => 89.91
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 163
+    [id] => 163
+    [uuid] => a4ebe3d3-7f01-4cc7-95de-806196b434a8
+    [firstname] => KELLINY
+    [lastname] => DE MATOS
+    [fullname] => KELLINY DE MATOS
+    [companyname] => CATARINA EQUIPAMENTOS INDUSTRIAIS LTDA
+    [email] => vendas@catarinaequipamentos.com.br
+    [address1] => RUA GUINDOVAL, 488
+    [address2] => BONSUCESSO
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07176-170
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 2437-7638 - 11 98274-1052
+    [password] => 5b06fcc75a7fb495f61cc4b2d4e226f5:QvHxU
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.112437763811982741052
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => f2bcredito
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/01/2017 05:40<br>IP Address: 177.159.92.178<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982741052
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 03.806.073/0001-63
+                )
+
+        )
+
+    [customfields2] => 11982741052
+    [customfields3] => 03.806.073/0001-63
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2779
+    [SoftDescriptor] => 2779
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master - catarinaequipamentos.com.br (26/12/2016 - 25/03/2017)
+                            [Description] => TIH - Master - catarinaequipamentos.com.br (26/12/2016 - 25/03/2017)
+                            [UnitPrice] => 8991
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 270
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 10 dias de atraso
+                            [Description] => Juros por 10 dias de atraso
+                            [UnitPrice] => 278
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002779
+            [FullName] => KELLINY DE MATOS
+            [Email] => vendas@catarinaequipamentos.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2779
+    [softDescriptor] => 2779
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master - catarinaequipamentos.com.br (26/12/2016 - 25/03/2017)
+                            [description] => TIH - Master - catarinaequipamentos.com.br (26/12/2016 - 25/03/2017)
+                            [unitPrice] => 8991
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 270
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 10 dias de atraso
+                            [description] => Juros por 10 dias de atraso
+                            [unitPrice] => 278
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002779
+            [fullName] => KELLINY DE MATOS
+            [email] => vendas@catarinaequipamentos.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/9f63cc95-d93f-4154-8608-c2bfed7f537f
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

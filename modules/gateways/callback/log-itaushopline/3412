@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3412
+    [id] => 3412
+    [1] => 153
+    [userid] => 153
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-06-02
+    [date] => 2017-06-02
+    [4] => 2017-06-09
+    [duedate] => 2017-06-09
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 174.93
+    [subtotal] => 174.93
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 174.93
+    [total] => 174.93
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 153
+    [id] => 153
+    [uuid] => 4c6fbe7c-ab48-45e9-b33d-2ceb69a7589f
+    [firstname] => ANDREA
+    [lastname] => DAS NEVES NERI DE SANTANA
+    [fullname] => ANDREA DAS NEVES NERI DE SANTANA
+    [companyname] => Processo Unificado
+    [email] => edinhosantanacondeca@gmail.com
+    [address1] => Estrada Itaquera Guaianases, 2521
+    [address2] => Parada Quinze de Novembro
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08420-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 2553-1761
+    [password] => $2y$10$9GoTrxFRFpoLp4yyqewPX.qnWgFWEzYg2D8ZCptJLTsIEKzzTYN1S
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1125531761
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 14/06/2017 10:06<br>IP Address: 201.6.229.167<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 359.777.398-26
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 359.777.398-26
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

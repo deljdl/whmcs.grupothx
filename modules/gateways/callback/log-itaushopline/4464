@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4464
+    [id] => 4464
+    [1] => 308
+    [userid] => 308
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-03-10
+    [date] => 2018-03-10
+    [4] => 2018-03-10
+    [duedate] => 2018-03-10
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 75.00
+    [subtotal] => 75.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 75.00
+    [total] => 75.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 308
+    [id] => 308
+    [uuid] => aadf81c9-cbd4-495b-9169-d57960d606b9
+    [firstname] => DANILO
+    [lastname] => MAURICIO DE SANTANA
+    [fullname] => DANILO MAURICIO DE SANTANA
+    [companyname] => Hulk Suplementos
+    [email] => hulksuplementos@hotmail.com.br
+    [address1] => Avenida Vital Brasil
+    [address2] => Vila Acoreana
+    [city] => Poá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08557-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 4639-0003
+    [password] => $2y$10$cMOIfw7vm1zDBg/7u4t1AORD.ihkW/x5MqtJXV07LY1Suj40b5x96
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146390003
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 10/03/2018 16:05<br>IP Address: 168.227.12.49<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982378619
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 20.758.980/0001-01
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982378619
+    [customfields3] => 20.758.980/0001-01
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

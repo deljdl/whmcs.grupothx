@@ -1,0 +1,1073 @@
+
+POST
+<pre>Array
+(
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTM4MzU4MWRk/JQEW7XIgmOFCKDLMHkx1tvUdpM=
+    [__EVENTVALIDATION] => /wEWBgLpndXZDwLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BSfpgnqI1K4V7AAqxj06BfBHwTyw
+    [DC] => U72R55O218S210M3J142F60T100O111W52A51R150A138H242Q37J52O231W146M255H82N150Z78M81P86Z110P73T107R60I154X225T53Y216Y122G0Q22V40Z
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00383581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 383581
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 383581
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTM4MzU4MWRk/JQEW7XIgmOFCKDLMHkx1tvUdpM=
+    [__EVENTVALIDATION] => /wEWBgLpndXZDwLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BSfpgnqI1K4V7AAqxj06BfBHwTyw
+    [DC] => U72R55O218S210M3J142F60T100O111W52A51R150A138H242Q37J52O231W146M255H82N150Z78M81P86Z110P73T107R60I154X225T53Y216Y122G0Q22V40Z
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00383581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+    [WHMCSeWdrAiYR38h0] => 55b6d3d76f05e715d804bafa69119afd
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [CONTENT_LENGTH] => 523
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, */*
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR
+    [HTTP_CACHE_CONTROL] => no-cache
+    [HTTP_CONNECTION] => Keep-Alive
+    [HTTP_COOKIE] => WHMCSeWdrAiYR38h0=55b6d3d76f05e715d804bafa69119afd
+    [HTTP_DNT] => 1
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_REFERER] => https://shopline.itau.com.br/shopline/Volta.aspx?codemp=J0194961710001810000024294&idloja=34902&npedido=00383581
+    [HTTP_USER_AGENT] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; Tablet PC 2.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=3581&fi=383581
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 191.180.88.158
+    [REMOTE_PORT] => 51954
+    [REQUEST_METHOD] => POST
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=3581&fi=383581
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SCRIPT_URI] => https://tihospedagem.com.br/modules/gateways/callback/itauReT.php
+    [SCRIPT_URL] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [SSL_TLS_SNI] => tihospedagem.com.br
+    [UNIQUE_ID] => WWysd6KQQaAAACEZMy4AAADz
+    [nokeepalive] => 1
+    [ssl_unclean_shutdown] => 1
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1500294263
+    [argv] => Array
+        (
+            [0] => i=3581&fi=383581
+        )
+
+    [argc] => 1
+)
+</pre>
+
+POST
+<pre>Array
+(
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTY1MzU4MWRk6sRZMVaTaGtXTp74akjylKFaJX0=
+    [__EVENTVALIDATION] => /wEWBgKSz4f6AwLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BS4Rylmo12cF+ZyVR+kXtON6X8Ko
+    [DC] => H72J55G218Y210Y3X142L60G100K111O52Q51Q150U138D242D37M52E231H146W255V82X150D78K81K86X110Z73O107I60I159L236E53P216K122W0D22D40R
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00653581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 653581
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 653581
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTY1MzU4MWRk6sRZMVaTaGtXTp74akjylKFaJX0=
+    [__EVENTVALIDATION] => /wEWBgKSz4f6AwLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BS4Rylmo12cF+ZyVR+kXtON6X8Ko
+    [DC] => H72J55G218Y210Y3X142L60G100K111O52Q51Q150U138D242D37M52E231H146W255V82X150D78K81K86X110Z73O107I60I159L236E53P216K122W0D22D40R
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00653581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+    [WHMCSeWdrAiYR38h0] => 164bad3b74227c90531f3beced8ad511
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [CONTENT_LENGTH] => 525
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, */*
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR
+    [HTTP_CACHE_CONTROL] => no-cache
+    [HTTP_CONNECTION] => Keep-Alive
+    [HTTP_COOKIE] => WHMCSeWdrAiYR38h0=164bad3b74227c90531f3beced8ad511
+    [HTTP_DNT] => 1
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_REFERER] => https://shopline.itau.com.br/shopline/Volta.aspx?codemp=J0194961710001810000024294&idloja=34902&npedido=00653581
+    [HTTP_USER_AGENT] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; Tablet PC 2.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=3581&fi=653581
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 191.180.88.158
+    [REMOTE_PORT] => 51999
+    [REQUEST_METHOD] => POST
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=3581&fi=653581
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SCRIPT_URI] => https://tihospedagem.com.br/modules/gateways/callback/itauReT.php
+    [SCRIPT_URL] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [SSL_TLS_SNI] => tihospedagem.com.br
+    [UNIQUE_ID] => WWys5qKQQaAAACEZNDgAAAD2
+    [nokeepalive] => 1
+    [ssl_unclean_shutdown] => 1
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1500294374
+    [argv] => Array
+        (
+            [0] => i=3581&fi=653581
+        )
+
+    [argc] => 1
+)
+</pre>
+
+POST
+<pre>Array
+(
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTk4MzU4MWRk9vJBp+rcHWc2JybWH2cVGMVSdf4=
+    [__EVENTVALIDATION] => /wEWBgKNquWrAQLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BTtj9rxMxslfz+CxRP4T6opD1xIC
+    [DC] => X72J55K218R210Q3R142L60G100I111T52V51I150L138J242F37S52E231C146R255M82G150Q78Y81I86G110L73K107K60V144O225W53A216L122Q0C22F40G
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00983581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 983581
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 983581
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTk4MzU4MWRk9vJBp+rcHWc2JybWH2cVGMVSdf4=
+    [__EVENTVALIDATION] => /wEWBgKNquWrAQLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BTtj9rxMxslfz+CxRP4T6opD1xIC
+    [DC] => X72J55K218R210Q3R142L60G100I111T52V51I150L138J242F37S52E231C146R255M82G150Q78Y81I86G110L73K107K60V144O225W53A216L122Q0C22F40G
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00983581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+    [WHMCSeWdrAiYR38h0] => 92897d38a6783f5aef1dee4a5f36a7c4
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [CONTENT_LENGTH] => 525
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, */*
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR
+    [HTTP_CACHE_CONTROL] => no-cache
+    [HTTP_CONNECTION] => Keep-Alive
+    [HTTP_COOKIE] => WHMCSeWdrAiYR38h0=92897d38a6783f5aef1dee4a5f36a7c4
+    [HTTP_DNT] => 1
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_REFERER] => https://shopline.itau.com.br/shopline/Volta.aspx?codemp=J0194961710001810000024294&idloja=34902&npedido=00983581
+    [HTTP_USER_AGENT] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; Tablet PC 2.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=3581&fi=983581
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 191.180.88.158
+    [REMOTE_PORT] => 52012
+    [REQUEST_METHOD] => POST
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=3581&fi=983581
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SCRIPT_URI] => https://tihospedagem.com.br/modules/gateways/callback/itauReT.php
+    [SCRIPT_URL] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [SSL_TLS_SNI] => tihospedagem.com.br
+    [UNIQUE_ID] => WWytLaKQQaAAACEZNOUAAAD0
+    [nokeepalive] => 1
+    [ssl_unclean_shutdown] => 1
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1500294445
+    [argv] => Array
+        (
+            [0] => i=3581&fi=983581
+        )
+
+    [argc] => 1
+)
+</pre>
+
+POST
+<pre>Array
+(
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTQ3MzU4MWRkOXz7mxx9rVFebhq2SNqVPBHrn2g=
+    [__EVENTVALIDATION] => /wEWBgLX8JaDCwLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BZVXXNY9W1b8uwFFdLkiUXBGHVEs
+    [DC] => C72Q55N218P210Q3Q142J60C100O111R52W51B150N138Q242Q37U52G231W146B255I82Q150B78L81R86G110K73K107B60L157C238Q53Q216L122E0N22A40G
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00473581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 473581
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 473581
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTQ3MzU4MWRkOXz7mxx9rVFebhq2SNqVPBHrn2g=
+    [__EVENTVALIDATION] => /wEWBgLX8JaDCwLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BZVXXNY9W1b8uwFFdLkiUXBGHVEs
+    [DC] => C72Q55N218P210Q3Q142J60C100O111R52W51B150N138Q242Q37U52G231W146B255I82Q150B78L81R86G110K73K107B60L157C238Q53Q216L122E0N22A40G
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00473581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+    [WHMCSeWdrAiYR38h0] => 6dbf89e7fdb0ca4d2a3b6dbee4a00708
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [CONTENT_LENGTH] => 521
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, */*
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR
+    [HTTP_CACHE_CONTROL] => no-cache
+    [HTTP_CONNECTION] => Keep-Alive
+    [HTTP_COOKIE] => WHMCSeWdrAiYR38h0=6dbf89e7fdb0ca4d2a3b6dbee4a00708
+    [HTTP_DNT] => 1
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_REFERER] => https://shopline.itau.com.br/shopline/Volta.aspx?codemp=J0194961710001810000024294&idloja=34902&npedido=00473581
+    [HTTP_USER_AGENT] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; Tablet PC 2.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=3581&fi=473581
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 191.180.88.158
+    [REMOTE_PORT] => 53073
+    [REQUEST_METHOD] => POST
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=3581&fi=473581
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SCRIPT_URI] => https://tihospedagem.com.br/modules/gateways/callback/itauReT.php
+    [SCRIPT_URL] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [SSL_TLS_SNI] => tihospedagem.com.br
+    [UNIQUE_ID] => WWy5YqKQQaAAAHkTD1EAAAAF
+    [nokeepalive] => 1
+    [ssl_unclean_shutdown] => 1
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1500297570
+    [argv] => Array
+        (
+            [0] => i=3581&fi=473581
+        )
+
+    [argc] => 1
+)
+</pre>
+
+POST
+<pre>Array
+(
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTQ3MzU4MWRkOXz7mxx9rVFebhq2SNqVPBHrn2g=
+    [__EVENTVALIDATION] => /wEWBgLX8JaDCwLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BZVXXNY9W1b8uwFFdLkiUXBGHVEs
+    [DC] => C72M55O218H210D3P142S60P100H111F52U51W150E138P242T37V52D231U146J255R82Q150I78S81U86Z110M73Z107G60D157L238I53Z216W122W0K22S40D
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00473581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 473581
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 473581
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTQ3MzU4MWRkOXz7mxx9rVFebhq2SNqVPBHrn2g=
+    [__EVENTVALIDATION] => /wEWBgLX8JaDCwLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BZVXXNY9W1b8uwFFdLkiUXBGHVEs
+    [DC] => C72M55O218H210D3P142S60P100H111F52U51W150E138P242T37V52D231U146J255R82Q150I78S81U86Z110M73Z107G60D157L238I53Z216W122W0K22S40D
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00473581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+    [WHMCSeWdrAiYR38h0] => 6dbf89e7fdb0ca4d2a3b6dbee4a00708
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [CONTENT_LENGTH] => 521
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, */*
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR
+    [HTTP_CACHE_CONTROL] => no-cache
+    [HTTP_CONNECTION] => Keep-Alive
+    [HTTP_COOKIE] => WHMCSeWdrAiYR38h0=6dbf89e7fdb0ca4d2a3b6dbee4a00708
+    [HTTP_DNT] => 1
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_REFERER] => https://shopline.itau.com.br/shopline/Volta.aspx?codemp=J0194961710001810000024294&idloja=34902&npedido=00473581
+    [HTTP_USER_AGENT] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; Tablet PC 2.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=3581&fi=473581
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 191.180.88.158
+    [REMOTE_PORT] => 53138
+    [REQUEST_METHOD] => POST
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=3581&fi=473581
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SCRIPT_URI] => https://tihospedagem.com.br/modules/gateways/callback/itauReT.php
+    [SCRIPT_URL] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [SSL_TLS_SNI] => tihospedagem.com.br
+    [UNIQUE_ID] => WWy5taKQQaAAAHkTD9AAAAAM
+    [nokeepalive] => 1
+    [ssl_unclean_shutdown] => 1
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1500297653
+    [argv] => Array
+        (
+            [0] => i=3581&fi=473581
+        )
+
+    [argc] => 1
+)
+</pre>
+
+POST
+<pre>Array
+(
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTk4MzU4MWRknt0MVwwEJX0izuP14gRTnVxUH0k=
+    [__EVENTVALIDATION] => /wEWBgL22fy0AgLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5Bc4lfrIhimcPG0SmsvzxlgBL4G5c
+    [DC] => V72M55W218F210R3C142U60P100I111W52L51S150W138O242Q37T52H231J146L255B82K150S78H81U86M110C73T107Y60R144Y225C53G216A122H0I22E40O
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00983581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 983581
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 983581
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTk4MzU4MWRknt0MVwwEJX0izuP14gRTnVxUH0k=
+    [__EVENTVALIDATION] => /wEWBgL22fy0AgLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5Bc4lfrIhimcPG0SmsvzxlgBL4G5c
+    [DC] => V72M55W218F210R3C142U60P100I111W52L51S150W138O242Q37T52H231J146L255B82K150S78H81U86M110C73T107Y60R144Y225C53G216A122H0I22E40O
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00983581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+    [WHMCSeWdrAiYR38h0] => 6dbf89e7fdb0ca4d2a3b6dbee4a00708
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [CONTENT_LENGTH] => 521
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, */*
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR
+    [HTTP_CACHE_CONTROL] => no-cache
+    [HTTP_CONNECTION] => Keep-Alive
+    [HTTP_COOKIE] => WHMCSeWdrAiYR38h0=6dbf89e7fdb0ca4d2a3b6dbee4a00708
+    [HTTP_DNT] => 1
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_REFERER] => https://shopline.itau.com.br/shopline/Volta.aspx?codemp=J0194961710001810000024294&idloja=34902&npedido=00983581
+    [HTTP_USER_AGENT] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; Tablet PC 2.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=3581&fi=983581
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 191.180.88.158
+    [REMOTE_PORT] => 53147
+    [REQUEST_METHOD] => POST
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=3581&fi=983581
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SCRIPT_URI] => https://tihospedagem.com.br/modules/gateways/callback/itauReT.php
+    [SCRIPT_URL] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [SSL_TLS_SNI] => tihospedagem.com.br
+    [UNIQUE_ID] => WWy5uqKQQaAAAHkTD@IAAAAA
+    [nokeepalive] => 1
+    [ssl_unclean_shutdown] => 1
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1500297658
+    [argv] => Array
+        (
+            [0] => i=3581&fi=983581
+        )
+
+    [argc] => 1
+)
+</pre>
+
+POST
+<pre>Array
+(
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTY4MzU4MWRkVnFpE6PXH9b5kr+aDAlfdmfGeJI=
+    [__EVENTVALIDATION] => /wEWBgK9o+jMDALc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BfzV+1SCkCgTttwovUr3TR/D+9ag
+    [DC] => G72K55J218D210R3O142V60B100Z111P52Y51C150D138V242U37K52V231Z146S255O82U150C78O81Q86A110F73D107T60O159I225Z53S216F122Y0N22A40W
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00683581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 683581
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 683581
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTY4MzU4MWRkVnFpE6PXH9b5kr+aDAlfdmfGeJI=
+    [__EVENTVALIDATION] => /wEWBgK9o+jMDALc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BfzV+1SCkCgTttwovUr3TR/D+9ag
+    [DC] => G72K55J218D210R3O142V60B100Z111P52Y51C150D138V242U37K52V231Z146S255O82U150C78O81Q86A110F73D107T60O159I225Z53S216F122Y0N22A40W
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00683581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+    [WHMCSeWdrAiYR38h0] => 879196c97b0f0bad61502ac1f9187da6
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [CONTENT_LENGTH] => 531
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, */*
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR
+    [HTTP_CACHE_CONTROL] => no-cache
+    [HTTP_CONNECTION] => Keep-Alive
+    [HTTP_COOKIE] => WHMCSeWdrAiYR38h0=879196c97b0f0bad61502ac1f9187da6
+    [HTTP_DNT] => 1
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_REFERER] => https://shopline.itau.com.br/shopline/Volta.aspx?codemp=J0194961710001810000024294&idloja=34902&npedido=00683581
+    [HTTP_USER_AGENT] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; Tablet PC 2.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=3581&fi=683581
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 191.180.88.158
+    [REMOTE_PORT] => 53211
+    [REQUEST_METHOD] => POST
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=3581&fi=683581
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SCRIPT_URI] => https://tihospedagem.com.br/modules/gateways/callback/itauReT.php
+    [SCRIPT_URL] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [SSL_TLS_SNI] => tihospedagem.com.br
+    [UNIQUE_ID] => WWy586KQQaAAAHkTEMQAAAAQ
+    [nokeepalive] => 1
+    [ssl_unclean_shutdown] => 1
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1500297716
+    [argv] => Array
+        (
+            [0] => i=3581&fi=683581
+        )
+
+    [argc] => 1
+)
+</pre>
+
+POST
+<pre>Array
+(
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTg4MzU4MWRkZZc5wrtkJcXwJjbLUY7+po08Cj0=
+    [__EVENTVALIDATION] => /wEWBgKGhOiYBQLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BcSShuYhXc5+WPBLIrpM5c8dLoVg
+    [DC] => Q72H55D218L210O3R142Q60B100N111S52E51Z150L138E242P37Q52W231X146R255V82H150Z78M81L86Q110G73W107V60B145W225R53R216W122K0O22C40X
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00883581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 883581
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 883581
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTg4MzU4MWRkZZc5wrtkJcXwJjbLUY7+po08Cj0=
+    [__EVENTVALIDATION] => /wEWBgKGhOiYBQLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BcSShuYhXc5+WPBLIrpM5c8dLoVg
+    [DC] => Q72H55D218L210O3R142Q60B100N111S52E51Z150L138E242P37Q52W231X146R255V82H150Z78M81L86Q110G73W107V60B145W225R53R216W122K0O22C40X
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00883581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+    [WHMCSeWdrAiYR38h0] => 26b7a2f4239f2c92d4ad380bfe9fe2f4
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [CONTENT_LENGTH] => 525
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, */*
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR
+    [HTTP_CACHE_CONTROL] => no-cache
+    [HTTP_CONNECTION] => Keep-Alive
+    [HTTP_COOKIE] => WHMCSeWdrAiYR38h0=26b7a2f4239f2c92d4ad380bfe9fe2f4
+    [HTTP_DNT] => 1
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_REFERER] => https://shopline.itau.com.br/shopline/Volta.aspx?codemp=J0194961710001810000024294&idloja=34902&npedido=00883581
+    [HTTP_USER_AGENT] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; Tablet PC 2.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=3581&fi=883581
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 191.180.88.158
+    [REMOTE_PORT] => 53267
+    [REQUEST_METHOD] => POST
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=3581&fi=883581
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SCRIPT_URI] => https://tihospedagem.com.br/modules/gateways/callback/itauReT.php
+    [SCRIPT_URL] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [SSL_TLS_SNI] => tihospedagem.com.br
+    [UNIQUE_ID] => WWy69qKQQaAAAHkTFEcAAAAK
+    [nokeepalive] => 1
+    [ssl_unclean_shutdown] => 1
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1500297974
+    [argv] => Array
+        (
+            [0] => i=3581&fi=883581
+        )
+
+    [argc] => 1
+)
+</pre>
+
+POST
+<pre>Array
+(
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTQxMzU4MWRkaqWKW9LREtWse8F5gIDbpf5mcA4=
+    [__EVENTVALIDATION] => /wEWBgKei6HYBwLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BSwAR5NymXlcWVJzo0C2WjI+UAtV
+    [DC] => J72C55Z218Y210A3X142O60J100N111J52M51V150M138U242Q37M52U231M146W255Z82Q150Z78J81Q86O110U73P107L60W157Y232B53O216I122J0W22D40X
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00413581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 413581
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 413581
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTQxMzU4MWRkaqWKW9LREtWse8F5gIDbpf5mcA4=
+    [__EVENTVALIDATION] => /wEWBgKei6HYBwLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BSwAR5NymXlcWVJzo0C2WjI+UAtV
+    [DC] => J72C55Z218Y210A3X142O60J100N111J52M51V150M138U242Q37M52U231M146W255Z82Q150Z78J81Q86O110U73P107L60W157Y232B53O216I122J0W22D40X
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00413581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+    [WHMCSeWdrAiYR38h0] => 32993bb45affd1aab531cdee40cf53c1
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [CONTENT_LENGTH] => 523
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, */*
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR
+    [HTTP_CACHE_CONTROL] => no-cache
+    [HTTP_CONNECTION] => Keep-Alive
+    [HTTP_COOKIE] => WHMCSeWdrAiYR38h0=32993bb45affd1aab531cdee40cf53c1
+    [HTTP_DNT] => 1
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_REFERER] => https://shopline.itau.com.br/shopline/Volta.aspx?codemp=J0194961710001810000024294&idloja=34902&npedido=00413581
+    [HTTP_USER_AGENT] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; Tablet PC 2.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=3581&fi=413581
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 191.180.88.158
+    [REMOTE_PORT] => 50215
+    [REQUEST_METHOD] => POST
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=3581&fi=413581
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SCRIPT_URI] => https://tihospedagem.com.br/modules/gateways/callback/itauReT.php
+    [SCRIPT_URL] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [SSL_TLS_SNI] => tihospedagem.com.br
+    [UNIQUE_ID] => WW5qwKKQQaAAAFAJZSYAAAAO
+    [nokeepalive] => 1
+    [ssl_unclean_shutdown] => 1
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1500408512
+    [argv] => Array
+        (
+            [0] => i=3581&fi=413581
+        )
+
+    [argc] => 1
+)
+</pre>
+
+POST
+<pre>Array
+(
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTQxMzU4MWRkaqWKW9LREtWse8F5gIDbpf5mcA4=
+    [__EVENTVALIDATION] => /wEWBgKei6HYBwLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BSwAR5NymXlcWVJzo0C2WjI+UAtV
+    [DC] => J72C55Z218Y210A3X142O60J100N111J52M51V150M138U242Q37M52U231M146W255Z82Q150Z78J81Q86O110U73P107L60W157Y232B53O216I122J0W22D40X
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00413581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 413581
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 413581
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTQxMzU4MWRkaqWKW9LREtWse8F5gIDbpf5mcA4=
+    [__EVENTVALIDATION] => /wEWBgKei6HYBwLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5BSwAR5NymXlcWVJzo0C2WjI+UAtV
+    [DC] => J72C55Z218Y210A3X142O60J100N111J52M51V150M138U242Q37M52U231M146W255Z82Q150Z78J81Q86O110U73P107L60W157Y232B53O216I122J0W22D40X
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00413581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+    [WHMCSeWdrAiYR38h0] => 32993bb45affd1aab531cdee40cf53c1
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [CONTENT_LENGTH] => 523
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, */*
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR
+    [HTTP_CACHE_CONTROL] => no-cache
+    [HTTP_CONNECTION] => Keep-Alive
+    [HTTP_COOKIE] => WHMCSeWdrAiYR38h0=32993bb45affd1aab531cdee40cf53c1
+    [HTTP_DNT] => 1
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_REFERER] => https://shopline.itau.com.br/shopline/Volta.aspx?codemp=J0194961710001810000024294&idloja=34902&npedido=00413581
+    [HTTP_USER_AGENT] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; Tablet PC 2.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=3581&fi=413581
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 191.180.88.158
+    [REMOTE_PORT] => 50278
+    [REQUEST_METHOD] => POST
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=3581&fi=413581
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SCRIPT_URI] => https://tihospedagem.com.br/modules/gateways/callback/itauReT.php
+    [SCRIPT_URL] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [SSL_TLS_SNI] => tihospedagem.com.br
+    [UNIQUE_ID] => WW5rB6KQQaAAAFAJZi4AAAAY
+    [nokeepalive] => 1
+    [ssl_unclean_shutdown] => 1
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1500408583
+    [argv] => Array
+        (
+            [0] => i=3581&fi=413581
+        )
+
+    [argc] => 1
+)
+</pre>
+
+POST
+<pre>Array
+(
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTk1MzU4MWRkWm11geXHKV9GYGH7fi6qs8Im+yY=
+    [__EVENTVALIDATION] => /wEWBgKQ1MFbAtzvnvAMAsaK6N4JAriP9L0LAv3OlpoHApvWg7kFV42q0QzTRdU45/enVKGHj3eQ3P4=
+    [DC] => E72I55M218H210C3I142H60J100J111H52O51J150I138U242C37A52V231H146A255J82U150S78C81I86L110E73N107S60Q144B236W53D216I122D0E22R40O
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00953581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 953581
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 953581
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTk1MzU4MWRkWm11geXHKV9GYGH7fi6qs8Im+yY=
+    [__EVENTVALIDATION] => /wEWBgKQ1MFbAtzvnvAMAsaK6N4JAriP9L0LAv3OlpoHApvWg7kFV42q0QzTRdU45/enVKGHj3eQ3P4=
+    [DC] => E72I55M218H210C3I142H60J100J111H52O51J150I138U242C37A52V231H146A255J82U150S78C81I86L110E73N107S60Q144B236W53D216I122D0E22R40O
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00953581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+    [WHMCSCalendarDisplayTypes] => eyJzZXJ2aWNlcyI6Im9uIiwiYWRkb25zIjoib24iLCJkb21haW5zIjoib24iLCJ0b2RvIjoib24ifQ==
+    [roundcube_cookies] => enabled
+    [__utma] => 94375683.1198511353.1485461447.1485461447.1485461447.1
+    [__utmz] => 94375683.1485461447.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not provided)
+    [WHMCSFD] => eyJjbGllbnRzaW52b2ljZXMiOnsic2VydmljZWlkIjoiIiwiYWRkb25pZCI6IiIsImRvbWFpbmlkIjoiIiwiY2xpZW50bmFtZSI6IiIsImludm9pY2VudW0iOiIiLCJsaW5laXRlbSI6IiIsInBheW1lbnRtZXRob2QiOiIiLCJpbnZvaWNlZGF0ZSI6IiIsImR1ZWRhdGUiOiIiLCJkYXRlcGFpZCI6IiIsInRvdGFsZnJvbXRvdGFsdG8iOiIiLCJzdGF0dXMiOiIiLCJ0b3RhbGZyb20iOiIiLCJ0b3RhbHRvIjoiIn0sImludm9pY2VzIjp7ImNsaWVudGlkIjoiIiwiaW52b2ljZW51bSI6IiIsInN0YXR1cyI6Ik92ZXJkdWUiLCJjbGllbnRuYW1lIjoiIiwiaW52b2ljZWRhdGUiOiIiLCJsaW5laXRlbSI6IiIsImR1ZWRhdGUiOiIiLCJwYXltZW50bWV0aG9kIjoiIiwiZGF0ZXBhaWQiOiIiLCJ0b3RhbGZyb20iOiIiLCJ0b3RhbHRvIjoiIn19
+    [WHMCSeWdrAiYR38h0] => 8d90d95a89d328ea3375f6b163e7a08d
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [CONTENT_LENGTH] => 525
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4
+    [HTTP_ALEXATOOLBAR_ALX_NS_PH] => AlexaToolbar/alx-4.0.1
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_COOKIE] => WHMCSCalendarDisplayTypes=eyJzZXJ2aWNlcyI6Im9uIiwiYWRkb25zIjoib24iLCJkb21haW5zIjoib24iLCJ0b2RvIjoib24ifQ%3D%3D; roundcube_cookies=enabled; __utma=94375683.1198511353.1485461447.1485461447.1485461447.1; __utmz=94375683.1485461447.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); WHMCSFD=eyJjbGllbnRzaW52b2ljZXMiOnsic2VydmljZWlkIjoiIiwiYWRkb25pZCI6IiIsImRvbWFpbmlkIjoiIiwiY2xpZW50bmFtZSI6IiIsImludm9pY2VudW0iOiIiLCJsaW5laXRlbSI6IiIsInBheW1lbnRtZXRob2QiOiIiLCJpbnZvaWNlZGF0ZSI6IiIsImR1ZWRhdGUiOiIiLCJkYXRlcGFpZCI6IiIsInRvdGFsZnJvbXRvdGFsdG8iOiIiLCJzdGF0dXMiOiIiLCJ0b3RhbGZyb20iOiIiLCJ0b3RhbHRvIjoiIn0sImludm9pY2VzIjp7ImNsaWVudGlkIjoiIiwiaW52b2ljZW51bSI6IiIsInN0YXR1cyI6Ik92ZXJkdWUiLCJjbGllbnRuYW1lIjoiIiwiaW52b2ljZWRhdGUiOiIiLCJsaW5laXRlbSI6IiIsImR1ZWRhdGUiOiIiLCJwYXltZW50bWV0aG9kIjoiIiwiZGF0ZXBhaWQiOiIiLCJ0b3RhbGZyb20iOiIiLCJ0b3RhbHRvIjoiIn19; WHMCSeWdrAiYR38h0=8d90d95a89d328ea3375f6b163e7a08d
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_ORIGIN] => https://shopline.itau.com.br
+    [HTTP_REFERER] => https://shopline.itau.com.br/shopline/Volta.aspx?codemp=J0194961710001810000024294&idloja=34902&npedido=00953581
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=3581&fi=953581
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 179.176.84.2
+    [REMOTE_PORT] => 63789
+    [REQUEST_METHOD] => POST
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=3581&fi=953581
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SCRIPT_URI] => https://tihospedagem.com.br/modules/gateways/callback/itauReT.php
+    [SCRIPT_URL] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [SSL_TLS_SNI] => tihospedagem.com.br
+    [UNIQUE_ID] => WW5rI6KQQaAAAFAJZpIAAAAZ
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1500408611
+    [argv] => Array
+        (
+            [0] => i=3581&fi=953581
+        )
+
+    [argc] => 1
+)
+</pre>
+
+POST
+<pre>Array
+(
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTIyMzU4MWRkwF7N2dXh+rgYbXzDAlsALSXpzR0=
+    [__EVENTVALIDATION] => /wEWBgLWk764BQLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5Bc1vhmLjOHQcgewMHDlqXZtoMLUQ
+    [DC] => E72X55A218A210I3H142N60L100J111G52P51P150Z138H242Z37H52O231X146M255H82Q150A78M81I86Q110V73Y107O60A155L235Q53A216N122M0F22N40O
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00223581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 223581
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 3581
+    [fi] => 223581
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT0zNTgxJmZpPTIyMzU4MWRkwF7N2dXh+rgYbXzDAlsALSXpzR0=
+    [__EVENTVALIDATION] => /wEWBgLWk764BQLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5Bc1vhmLjOHQcgewMHDlqXZtoMLUQ
+    [DC] => E72X55A218A210I3H142N60L100J111G52P51P150Z138H242Z37H52O231X146M255H82Q150A78M81I86Q110V73Y107O60A155L235Q53A216N122M0F22N40O
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00223581
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+    [WHMCSeWdrAiYR38h0] => f222b03d786785b2d75007e5e6840d78
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [CONTENT_LENGTH] => 523
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, */*
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => pt-BR
+    [HTTP_CACHE_CONTROL] => no-cache
+    [HTTP_CONNECTION] => Keep-Alive
+    [HTTP_COOKIE] => WHMCSeWdrAiYR38h0=f222b03d786785b2d75007e5e6840d78
+    [HTTP_DNT] => 1
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_REFERER] => https://shopline.itau.com.br/shopline/Volta.aspx?codemp=J0194961710001810000024294&idloja=34902&npedido=00223581
+    [HTTP_USER_AGENT] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; Tablet PC 2.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=3581&fi=223581
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 191.180.88.158
+    [REMOTE_PORT] => 50365
+    [REQUEST_METHOD] => POST
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=3581&fi=223581
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SCRIPT_URI] => https://tihospedagem.com.br/modules/gateways/callback/itauReT.php
+    [SCRIPT_URL] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.26 (Unix) mod_ssl/2.2.26 OpenSSL/1.0.1e-fips DAV/2 mod_auth_passthrough/2.1 mod_bwlimited/1.4
+    [SSL_TLS_SNI] => tihospedagem.com.br
+    [UNIQUE_ID] => WW5reaKQQaAAAA0fPOkAAADx
+    [nokeepalive] => 1
+    [ssl_unclean_shutdown] => 1
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME] => 1500408697
+    [argv] => Array
+        (
+            [0] => i=3581&fi=223581
+        )
+
+    [argc] => 1
+)
+</pre>

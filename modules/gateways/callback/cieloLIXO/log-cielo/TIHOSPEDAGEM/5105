@@ -1,0 +1,325 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5105
+    [id] => 5105
+    [1] => 250
+    [userid] => 250
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-20
+    [date] => 2018-08-20
+    [4] => 2018-09-02
+    [duedate] => 2018-09-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 55.00
+    [subtotal] => 55.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 55.00
+    [total] => 55.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 250
+    [id] => 250
+    [uuid] => 470b0c4f-7d32-41c5-9484-bd04c14cec10
+    [firstname] => Ana
+    [lastname] => Carolina Nunes
+    [fullname] => Ana Carolina Nunes
+    [companyname] => Engesafe
+    [email] => contato@engesafe.com.br
+    [address1] => Rua Valdemar Paiva e Almeida
+    [address2] => Cidade Nova São Miguel
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08042-360
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 95770-8074 
+    [password] => $2y$10$dOYPGucNx1Bjevi8t7FIMOWaBkwGvAQOaV/N3L2tbvKiVqnW2sK/S
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11957708074
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 21/08/2018 09:47<br>IP Address: 200.155.142.66<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11957708074
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 36008744897
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11957708074
+    [customfields3] => 36008744897
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5105
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Renovacao de Dominio - engesafe.com.br - 1 Ano(s) (02/09/2018 - 01/09/2019)
+                            [Description] => Renovacao de Dominio - engesafe.com.br - 1 Ano(s) (02/09/2018 - 01/09/2019)
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Ana Carolina Nunes
+            [Email] => contato@engesafe.com.br
+            [Identity] => 36008744897
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5105
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Renovacao de Dominio - engesafe.com.br - 1 Ano(s) (02/09/2018 - 01/09/2019)
+                            [description] => Renovacao de Dominio - engesafe.com.br - 1 Ano(s) (02/09/2018 - 01/09/2019)
+                            [unitPrice] => 5500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 36008744897
+            [fullName] => Ana Carolina Nunes
+            [email] => contato@engesafe.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/2dd787f2-ed5e-4466-8e46-56cd866bbd34
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+21/08/2018 9:56:49
+INICIO_______________________________________________________________LOG:BEGIN:::21/08/2018 9:49<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 5105
+    [amount] => 5500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => b34721108f094b7c975d0832c114a46f
+    [created_date] => 21/08/2018 09:49:53
+    [customer_name] => Ana Nunes
+    [customer_phone] => 11957708074
+    [customer_identity] => 36008744896
+    [customer_email] => contato@engesafe.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 516220******8032
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627FJR3MTR3B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/08/2018 9:58:49
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->5105 | Result->success | ValorPago ->55.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 5105
+    [amount] => 5500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => b34721108f094b7c975d0832c114a46f
+    [created_date] => 21/08/2018 09:49:53
+    [customer_name] => Ana Nunes
+    [customer_phone] => 11957708074
+    [customer_identity] => 36008744896
+    [customer_email] => contato@engesafe.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 516220******8032
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627FJR3MTR3B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/08/2018 9:24:56
+INICIO_______________________________________________________________LOG:BEGIN:::21/08/2018 9:56<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => b34721108f094b7c975d0832c114a46f
+    [amount] => 5500
+    [order_number] => 5105
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+21/08/2018 9:24:56
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => b34721108f094b7c975d0832c114a46f
+    [amount] => 5500
+    [order_number] => 5105
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

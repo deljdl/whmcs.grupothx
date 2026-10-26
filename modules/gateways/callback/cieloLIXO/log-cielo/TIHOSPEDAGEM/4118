@@ -1,0 +1,317 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4118
+    [id] => 4118
+    [1] => 297
+    [userid] => 297
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-12-05
+    [date] => 2017-12-05
+    [4] => 2017-12-05
+    [duedate] => 2017-12-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 600.00
+    [subtotal] => 600.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 600.00
+    [total] => 600.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 297
+    [id] => 297
+    [uuid] => 845e1465-adda-4291-8546-1a2ef9261b0f
+    [firstname] => Fernando
+    [lastname] => Farias
+    [fullname] => Fernando Farias
+    [companyname] => Fagons Gestão e Tecnologia
+    [email] => fernando@fagons.com.br
+    [address1] => Rua Dona Escolástica M. da Fonseca, 234
+    [address2] => Vila Matilde
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03513-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 011976636622
+    [password] => $2y$10$xXeJhvnhJ0R/B/c0uyUoquScGVbSIfKrieQ14s5f2q9zq.eQLGRiO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11976636622
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/12/2017 13:55<br>IP Address: 187.99.88.32<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11976636622
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 14.676.272/0001-10
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11976636622
+    [customfields3] => 14.676.272/0001-10
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4118
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes, Desenvolvimento e Suporte - Conforme Proposta 1301-Integracao Gateway Moip e API dos C...
+                            [Description] => Desenvolvimento Por Hora - Alteracoes, Desenvolvimento e Suporte - Conforme Proposta 1301-Integracao Gateway Moip e API dos Correios
+                            [UnitPrice] => 60000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Fernando Farias
+            [Email] => fernando@fagons.com.br
+            [Identity] => 14676272000110
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4118
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alteracoes, Desenvolvimento e Suporte - Conforme Proposta 1301-Integracao Gateway Moip e API dos C...
+                            [description] => Desenvolvimento Por Hora - Alteracoes, Desenvolvimento e Suporte - Conforme Proposta 1301-Integracao Gateway Moip e API dos Correios
+                            [unitPrice] => 60000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 14676272000110
+            [fullName] => Fernando Farias
+            [email] => fernando@fagons.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/b94d8b7d-1577-4469-8e4e-7ba60c0f0ddf
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+05/12/2017 14:17:00
+INICIO_______________________________________________________________LOG:BEGIN:::05/12/2017 14:00<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 4118
+    [amount] => 60000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => d9ce7b5deb90458494f84abb8402a9ca
+    [created_date] => 05/12/2017 14:00:14
+    [customer_name] => Fernando Farias
+    [customer_phone] => 11992771366
+    [customer_identity] => 14676272000110
+    [customer_email] => fernando@fagons.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 5
+    [payment_maskedcreditcard] => 509068******5747
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626LJD1OT8EB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+05/12/2017 14:17:00
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  4118
+
+POST:
+<pre>Array
+(
+    [order_number] => 4118
+    [amount] => 60000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => d9ce7b5deb90458494f84abb8402a9ca
+    [created_date] => 05/12/2017 14:00:14
+    [customer_name] => Fernando Farias
+    [customer_phone] => 11992771366
+    [customer_identity] => 14676272000110
+    [customer_email] => fernando@fagons.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 5
+    [payment_maskedcreditcard] => 509068******5747
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626LJD1OT8EB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+05/12/2017 14:30:13
+INICIO_______________________________________________________________LOG:BEGIN:::05/12/2017 14:13<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => d9ce7b5deb90458494f84abb8402a9ca
+    [amount] => 60000
+    [order_number] => 4118
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+05/12/2017 14:30:13
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  4118
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => d9ce7b5deb90458494f84abb8402a9ca
+    [amount] => 60000
+    [order_number] => 4118
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

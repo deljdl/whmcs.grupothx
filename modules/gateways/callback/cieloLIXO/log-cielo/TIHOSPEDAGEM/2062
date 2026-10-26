@@ -1,0 +1,283 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2062
+    [id] => 2062
+    [1] => 64
+    [userid] => 64
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-06-15
+    [date] => 2016-06-15
+    [4] => 2016-06-22
+    [duedate] => 2016-06-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 154.94
+    [subtotal] => 154.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 154.94
+    [total] => 154.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => boleto_itau_sem_registro
+    [paymentmethod] => boleto_itau_sem_registro
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 64
+    [id] => 64
+    [uuid] => 9047d600-7521-46ae-b2eb-521f6f1bdc93
+    [firstname] => Fernando
+    [lastname] => Vargas Hurtado
+    [fullname] => Fernando Vargas Hurtado
+    [companyname] => TERAPIA COGNITIVA
+    [email] => f_hurtado@ig.com.br
+    [address1] => Rua Brigadeiro Xavier de Britto 243
+    [address2] => rua osvaldo santini 92
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 02551-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11976319814
+    [password] => 78529f89497a7b4c44a3adccede28d79:)APrm
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11976319814
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 29/06/2016 07:05<br>IP Address: 177.159.86.176<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11976319814
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 15413712839
+                )
+
+        )
+
+    [customfields2] => 11976319814
+    [customfields3] => 15413712839
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2062
+    [SoftDescriptor] => 2062
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Manutenção de Domínio - terapiacognitiva.psc.br (22/06/2016 - 21/06/2017)
+                            [Description] => Manutenção de Domínio - terapiacognitiva.psc.br (22/06/2016 - 21/06/2017)
+                            [UnitPrice] => 4500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alterações, Desenvolvimento e Suporte - Criação da Página Tratamentos para o site terapiacogn...
+                            [Description] => Desenvolvimento Por Hora - Alterações, Desenvolvimento e Suporte - Criação da Página Tratamentos para o site terapiacognitiva.psc.br
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => TIH - Master - terapiacognitiva.psc.br (09/05/2016 - 08/06/2016)
+                            [Description] => TIH - Master - terapiacognitiva.psc.br (09/05/2016 - 08/06/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => TIH - Master - terapiacognitiva.psc.br (09/06/2016 - 08/07/2016)
+                            [Description] => TIH - Master - terapiacognitiva.psc.br (09/06/2016 - 08/07/2016)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 11111111111
+            [FullName] => Fernando Vargas Hurtado
+            [Email] => f_hurtado@ig.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2062
+    [softDescriptor] => 2062
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Manutenção de Domínio - terapiacognitiva.psc.br (22/06/2016 - 21/06/2017)
+                            [description] => Manutenção de Domínio - terapiacognitiva.psc.br (22/06/2016 - 21/06/2017)
+                            [unitPrice] => 4500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Alterações, Desenvolvimento e Suporte - Criação da Página Tratamentos para o site terapiacogn...
+                            [description] => Desenvolvimento Por Hora - Alterações, Desenvolvimento e Suporte - Criação da Página Tratamentos para o site terapiacognitiva.psc.br
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => TIH - Master - terapiacognitiva.psc.br (09/05/2016 - 08/06/2016)
+                            [description] => TIH - Master - terapiacognitiva.psc.br (09/05/2016 - 08/06/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => TIH - Master - terapiacognitiva.psc.br (09/06/2016 - 08/07/2016)
+                            [description] => TIH - Master - terapiacognitiva.psc.br (09/06/2016 - 08/07/2016)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 11111111111
+            [fullName] => Fernando Vargas Hurtado
+            [email] => f_hurtado@ig.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/a051b5e4-4c8d-49ca-94cc-b073e2c1428f
+            [profile] => CheckoutCielo
+            [version] => 2
+        )
+
+)
+</pre>

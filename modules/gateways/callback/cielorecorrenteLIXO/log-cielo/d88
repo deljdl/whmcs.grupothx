@@ -1,0 +1,1547 @@
+
+Dados Dominio
+<pre></pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 13
+    [id] => 13
+    [uuid] => 2a2492de-ed1a-4c0f-b699-d5940fe4c36a
+    [firstname] => Karina 
+    [lastname] => Rodrigues Lapezack Banhos
+    [fullname] => Karina  Rodrigues Lapezack Banhos
+    [companyname] => Karina Lapezack Interiores
+    [email] => karinalapezack@gmail.com
+    [address1] => Av Benedito Manuel dos santos
+    [address2] => Perova
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07428205
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 46526183
+    [password] => 5bebc39f74e8957ac5d609ad29239736:t)#TF
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.46526183
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 19:23<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => d88
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => 
+                            [Description] => 
+                            [UnitPrice] => 
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => 
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000000000
+            [FullName] => Karina  Rodrigues Lapezack Banhos
+            [Email] => karinalapezack@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Dados Dominio
+<pre></pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 13
+    [id] => 13
+    [uuid] => 2a2492de-ed1a-4c0f-b699-d5940fe4c36a
+    [firstname] => Karina 
+    [lastname] => Rodrigues Lapezack Banhos
+    [fullname] => Karina  Rodrigues Lapezack Banhos
+    [companyname] => Karina Lapezack Interiores
+    [email] => karinalapezack@gmail.com
+    [address1] => Av Benedito Manuel dos santos
+    [address2] => Perova
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07428205
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 46526183
+    [password] => 5bebc39f74e8957ac5d609ad29239736:t)#TF
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.46526183
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 22:57<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => d88
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => 
+                            [Description] => 
+                            [UnitPrice] => 
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => 
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000000000
+            [FullName] => Karina  Rodrigues Lapezack Banhos
+            [Email] => karinalapezack@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Dados Dominio
+<pre></pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 13
+    [id] => 13
+    [uuid] => 2a2492de-ed1a-4c0f-b699-d5940fe4c36a
+    [firstname] => Karina 
+    [lastname] => Rodrigues Lapezack Banhos
+    [fullname] => Karina  Rodrigues Lapezack Banhos
+    [companyname] => Karina Lapezack Interiores
+    [email] => karinalapezack@gmail.com
+    [address1] => Av Benedito Manuel dos santos
+    [address2] => Perova
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07428205
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 46526183
+    [password] => 5bebc39f74e8957ac5d609ad29239736:t)#TF
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.46526183
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 23:01<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => d88
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Manutencao de Dominio
+                            [Description] => Manutencao dominio 
+                            [UnitPrice] => 
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => 
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000000000
+            [FullName] => Karina  Rodrigues Lapezack Banhos
+            [Email] => karinalapezack@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Dados Dominio
+<pre></pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 13
+    [id] => 13
+    [uuid] => 2a2492de-ed1a-4c0f-b699-d5940fe4c36a
+    [firstname] => Karina 
+    [lastname] => Rodrigues Lapezack Banhos
+    [fullname] => Karina  Rodrigues Lapezack Banhos
+    [companyname] => Karina Lapezack Interiores
+    [email] => karinalapezack@gmail.com
+    [address1] => Av Benedito Manuel dos santos
+    [address2] => Perova
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07428205
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 46526183
+    [password] => 5bebc39f74e8957ac5d609ad29239736:t)#TF
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.46526183
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 23:03<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => d88
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Manutencao de Dominio
+                            [Description] => Manutencao dominio 
+                            [UnitPrice] => 
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => 
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000000000
+            [FullName] => Karina  Rodrigues Lapezack Banhos
+            [Email] => karinalapezack@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Cart.Items[0].UnitPrice] => Array
+                (
+                    [0] => [Cart.Item.UnitPrice] é obrigatório.
+                )
+
+            [orderViewModel.Payment.RecurrentPayment.Interval] => Array
+                (
+                    [0] => [RecurrentPayment.Interval] é requerido.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Dominio
+<pre></pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 13
+    [id] => 13
+    [uuid] => 2a2492de-ed1a-4c0f-b699-d5940fe4c36a
+    [firstname] => Karina 
+    [lastname] => Rodrigues Lapezack Banhos
+    [fullname] => Karina  Rodrigues Lapezack Banhos
+    [companyname] => Karina Lapezack Interiores
+    [email] => karinalapezack@gmail.com
+    [address1] => Av Benedito Manuel dos santos
+    [address2] => Perova
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07428205
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 46526183
+    [password] => 5bebc39f74e8957ac5d609ad29239736:t)#TF
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.46526183
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 23:06<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => d88
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Manutencao de Dominio
+                            [Description] => Manutencao dominio 
+                            [UnitPrice] => 
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Annual
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000000000
+            [FullName] => Karina  Rodrigues Lapezack Banhos
+            [Email] => karinalapezack@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Cart.Items[0].UnitPrice] => Array
+                (
+                    [0] => [Cart.Item.UnitPrice] é obrigatório.
+                )
+
+        )
+
+)
+</pre>
+
+Dados Dominio
+<pre></pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 13
+    [id] => 13
+    [uuid] => 2a2492de-ed1a-4c0f-b699-d5940fe4c36a
+    [firstname] => Karina 
+    [lastname] => Rodrigues Lapezack Banhos
+    [fullname] => Karina  Rodrigues Lapezack Banhos
+    [companyname] => Karina Lapezack Interiores
+    [email] => karinalapezack@gmail.com
+    [address1] => Av Benedito Manuel dos santos
+    [address2] => Perova
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07428205
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 46526183
+    [password] => 5bebc39f74e8957ac5d609ad29239736:t)#TF
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.46526183
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 23:07<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Dados Dominio
+<pre>Array
+(
+    [id] => 88
+    [userid] => 13
+    [orderid] => 405
+    [regtype] => Register
+    [domainname] => karinalapezackinteriores.com.br
+    [registrar] => email
+    [regperiod] => 1
+    [firstpaymentamount] => 55.00
+    [recurringamount] => 55.00
+    [paymentmethod] => deposito_ou_transferencia
+    [paymentmethodname] => Depósito ou Transferência
+    [regdate] => 2014-02-04
+    [expirydate] => 2017-02-04
+    [nextduedate] => 2017-02-04
+    [status] => Expired
+    [subscriptionid] => 
+    [promoid] => 0
+    [dnsmanagement] => 0
+    [emailforwarding] => 0
+    [idprotection] => 0
+    [donotrenew] => 0
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 13
+    [id] => 13
+    [uuid] => 2a2492de-ed1a-4c0f-b699-d5940fe4c36a
+    [firstname] => Karina 
+    [lastname] => Rodrigues Lapezack Banhos
+    [fullname] => Karina  Rodrigues Lapezack Banhos
+    [companyname] => Karina Lapezack Interiores
+    [email] => karinalapezack@gmail.com
+    [address1] => Av Benedito Manuel dos santos
+    [address2] => Perova
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07428205
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 46526183
+    [password] => 5bebc39f74e8957ac5d609ad29239736:t)#TF
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.46526183
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 23:18<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Dados Dominio
+<pre>Array
+(
+    [id] => 88
+    [userid] => 13
+    [orderid] => 405
+    [regtype] => Register
+    [domainname] => karinalapezackinteriores.com.br
+    [registrar] => email
+    [regperiod] => 1
+    [firstpaymentamount] => 55.00
+    [recurringamount] => 55.00
+    [paymentmethod] => deposito_ou_transferencia
+    [paymentmethodname] => Depósito ou Transferência
+    [regdate] => 2014-02-04
+    [expirydate] => 2017-02-04
+    [nextduedate] => 2017-02-04
+    [status] => Expired
+    [subscriptionid] => 
+    [promoid] => 0
+    [dnsmanagement] => 0
+    [emailforwarding] => 0
+    [idprotection] => 0
+    [donotrenew] => 0
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 13
+    [id] => 13
+    [uuid] => 2a2492de-ed1a-4c0f-b699-d5940fe4c36a
+    [firstname] => Karina 
+    [lastname] => Rodrigues Lapezack Banhos
+    [fullname] => Karina  Rodrigues Lapezack Banhos
+    [companyname] => Karina Lapezack Interiores
+    [email] => karinalapezack@gmail.com
+    [address1] => Av Benedito Manuel dos santos
+    [address2] => Perova
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07428205
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 46526183
+    [password] => 5bebc39f74e8957ac5d609ad29239736:t)#TF
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.46526183
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 23:18<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => d88
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Manutencao de Dominio -karinalapezackinteriores.com.br
+                            [Description] => Manutencao de Dominio -karinalapezackinteriores.com.br
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Annual
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000000000
+            [FullName] => Karina  Rodrigues Lapezack Banhos
+            [Email] => karinalapezack@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => d88
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Manutencao de Dominio -karinalapezackinteriores.com.br
+                            [description] => Manutencao de Dominio -karinalapezackinteriores.com.br
+                            [unitPrice] => 5500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => Annual
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000000000
+            [fullName] => Karina  Rodrigues Lapezack Banhos
+            [email] => karinalapezack@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/4fa98f21-1dc9-4ff5-9ce3-c7dde9ddc694
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Dominio
+<pre>Array
+(
+    [id] => 88
+    [userid] => 13
+    [orderid] => 405
+    [regtype] => Register
+    [domainname] => karinalapezackinteriores.com.br
+    [registrar] => email
+    [regperiod] => 1
+    [firstpaymentamount] => 55.00
+    [recurringamount] => 55.00
+    [paymentmethod] => deposito_ou_transferencia
+    [paymentmethodname] => Depósito ou Transferência
+    [regdate] => 2014-02-04
+    [expirydate] => 2017-02-04
+    [nextduedate] => 2017-02-04
+    [status] => Expired
+    [subscriptionid] => 
+    [promoid] => 0
+    [dnsmanagement] => 0
+    [emailforwarding] => 0
+    [idprotection] => 0
+    [donotrenew] => 0
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 13
+    [id] => 13
+    [uuid] => 2a2492de-ed1a-4c0f-b699-d5940fe4c36a
+    [firstname] => Karina 
+    [lastname] => Rodrigues Lapezack Banhos
+    [fullname] => Karina  Rodrigues Lapezack Banhos
+    [companyname] => Karina Lapezack Interiores
+    [email] => karinalapezack@gmail.com
+    [address1] => Av Benedito Manuel dos santos
+    [address2] => Perova
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07428205
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 46526183
+    [password] => 5bebc39f74e8957ac5d609ad29239736:t)#TF
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.46526183
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 23:19<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Dados Dominio
+<pre>Array
+(
+    [id] => 88
+    [userid] => 13
+    [orderid] => 405
+    [regtype] => Register
+    [domainname] => karinalapezackinteriores.com.br
+    [registrar] => email
+    [regperiod] => 1
+    [firstpaymentamount] => 55.00
+    [recurringamount] => 55.00
+    [paymentmethod] => deposito_ou_transferencia
+    [paymentmethodname] => Depósito ou Transferência
+    [regdate] => 2014-02-04
+    [expirydate] => 2017-02-04
+    [nextduedate] => 2017-02-04
+    [status] => Expired
+    [subscriptionid] => 
+    [promoid] => 0
+    [dnsmanagement] => 0
+    [emailforwarding] => 0
+    [idprotection] => 0
+    [donotrenew] => 0
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 13
+    [id] => 13
+    [uuid] => 2a2492de-ed1a-4c0f-b699-d5940fe4c36a
+    [firstname] => Karina 
+    [lastname] => Rodrigues Lapezack Banhos
+    [fullname] => Karina  Rodrigues Lapezack Banhos
+    [companyname] => Karina Lapezack Interiores
+    [email] => karinalapezack@gmail.com
+    [address1] => Av Benedito Manuel dos santos
+    [address2] => Perova
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07428205
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 46526183
+    [password] => 5bebc39f74e8957ac5d609ad29239736:t)#TF
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.46526183
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 23:20<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => d88
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Manutencao de Dominio - karinalapezackinteriores.com.br
+                            [Description] => Manutencao de Dominio - karinalapezackinteriores.com.br
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Annual
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000000000
+            [FullName] => Karina  Rodrigues Lapezack Banhos
+            [Email] => karinalapezack@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => d88
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Manutencao de Dominio - karinalapezackinteriores.com.br
+                            [description] => Manutencao de Dominio - karinalapezackinteriores.com.br
+                            [unitPrice] => 5500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => Annual
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000000000
+            [fullName] => Karina  Rodrigues Lapezack Banhos
+            [email] => karinalapezack@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/2a874e01-1d30-4f96-904a-592d3aca00e7
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

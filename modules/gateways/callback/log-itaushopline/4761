@@ -1,0 +1,246 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4761
+    [id] => 4761
+    [1] => 234
+    [userid] => 234
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-05-28
+    [date] => 2018-05-28
+    [4] => 2018-06-02
+    [duedate] => 2018-06-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 234
+    [id] => 234
+    [uuid] => cd16a081-26a2-4bdb-90b3-2e8aeff20b1d
+    [firstname] => Jefferson
+    [lastname] => Quintino Gomes
+    [fullname] => Jefferson Quintino Gomes
+    [companyname] => Global Demolidora Ltda
+    [email] => financeiro@globaldemolidora.com.br
+    [address1] => Rua Pedro Henry, 160
+    [address2] => Vila Olga
+    [city] => São Bernardo do Campo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09720-240
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 4109-6039 / 2374-6175
+    [password] => $2y$10$FEcbjPinG0AeHxopyONkue9PfhkcaanSb6NOJk9jHohJ5lNJilkqy
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114109603923746175
+    [billingcid] => 0
+    [notes] => jefferson@globaldemolidora.com
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 29/05/2018 09:28<br>IP Address: 189.54.146.253<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11971004117
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.144.013/0001-50
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11971004117
+    [customfields3] => 11.144.013/0001-50
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4761
+    [id] => 4761
+    [1] => 234
+    [userid] => 234
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-05-28
+    [date] => 2018-05-28
+    [4] => 2018-06-02
+    [duedate] => 2018-06-02
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 234
+    [id] => 234
+    [uuid] => cd16a081-26a2-4bdb-90b3-2e8aeff20b1d
+    [firstname] => Jefferson
+    [lastname] => Quintino Gomes
+    [fullname] => Jefferson Quintino Gomes
+    [companyname] => Global Demolidora Ltda
+    [email] => financeiro@globaldemolidora.com.br
+    [address1] => Rua Pedro Henry, 160
+    [address2] => Vila Olga
+    [city] => São Bernardo do Campo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09720-240
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 4109-6039 / 2374-6175
+    [password] => $2y$10$FEcbjPinG0AeHxopyONkue9PfhkcaanSb6NOJk9jHohJ5lNJilkqy
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114109603923746175
+    [billingcid] => 0
+    [notes] => jefferson@globaldemolidora.com
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 29/05/2018 09:31<br>IP Address: 189.54.146.253<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11971004117
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 11.144.013/0001-50
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11971004117
+    [customfields3] => 11.144.013/0001-50
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

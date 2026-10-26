@@ -1,0 +1,269 @@
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 44
+    [clientid] => 30
+    [orderid] => 0
+    [pid] => 11
+    [regdate] => 2014-03-12
+    [name] => 
+    [translated_name] => TIH - Premium
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => moveisqueiroz.com
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [firstpaymentamount] => 39.96
+    [recurringamount] => 39.96
+    [paymentmethod] => boleto_itau_sem_registro
+    [paymentmethodname] => Boleto Itaú
+    [billingcycle] => Monthly
+    [nextduedate] => 2017-09-15
+    [status] => Active
+    [username] => moveisqu
+    [password] => rERE4#$##hhg___
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => Imported using WHM Import Script - Payment Method, Pricing, Billing Cycle &amp; Next Due Date may be incorrect
+    [diskusage] => 2475
+    [disklimit] => 15000
+    [bwusage] => 273
+    [bwlimit] => 0
+    [lastupdate] => 2017-09-20 09:00:36
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 30
+    [id] => 30
+    [uuid] => 233398f1-5d88-412a-90b2-50debe2f81b6
+    [firstname] => Adelson
+    [lastname] => Alves de Queiroz
+    [fullname] => Adelson Alves de Queiroz
+    [companyname] => Móveis Queiroz Ltda - Me
+    [email] => adelsonaq@ig.com.br
+    [address1] => Rua Dom Manoel 	Nº: 	257
+    [address2] => Jardim Obelisco
+    [city] => Poá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08565200
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 4636-3116 / (11)4639-5336
+    [password] => ujgUsMcG0wrDsjYyc+x++FYNVMfZsdEmp4XF
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11463631161146395336
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/09/2017 09:20<br>IP Address: 168.227.12.162<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11947530003
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 09.531.444/0001-28
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11947530003
+    [customfields3] => 09.531.444/0001-28
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s44
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Premium
+                            [UnitPrice] => 3996
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Monthly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 09531444000128
+            [FullName] => Adelson Alves de Queiroz
+            [Email] => adelsonaq@ig.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => s44
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Hospedagem de Sites
+                            [description] => TIH - Premium
+                            [unitPrice] => 3996
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [recurrentPayment] => stdClass Object
+                (
+                    [endDate] => 
+                    [interval] => Monthly
+                )
+
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 09531444000128
+            [fullName] => Adelson Alves de Queiroz
+            [email] => adelsonaq@ig.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/2f97be7f-8b2a-4cb9-b8e8-20df0f2599a0
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

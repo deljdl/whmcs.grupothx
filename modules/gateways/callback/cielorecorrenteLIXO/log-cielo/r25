@@ -1,0 +1,201 @@
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 25
+    [clientid] => 13
+    [orderid] => 16
+    [pid] => 2
+    [regdate] => 2014-02-04
+    [name] => 
+    [translated_name] => TIH - PLUS
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => karinalapezackinteriores.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [firstpaymentamount] => 19.98
+    [recurringamount] => 59.94
+    [paymentmethod] => boleto_itau_sem_registro
+    [paymentmethodname] => Boleto Itaú
+    [billingcycle] => Quarterly
+    [nextduedate] => 2017-04-04
+    [status] => Active
+    [username] => karinala
+    [password] => 54lnhW27mV
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 126
+    [disklimit] => 5000
+    [bwusage] => 415
+    [bwlimit] => 0
+    [lastupdate] => 2017-02-09 09:00:22
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 13
+    [id] => 13
+    [uuid] => 2a2492de-ed1a-4c0f-b699-d5940fe4c36a
+    [firstname] => Karina 
+    [lastname] => Rodrigues Lapezack Banhos
+    [fullname] => Karina  Rodrigues Lapezack Banhos
+    [companyname] => Karina Lapezack Interiores
+    [email] => karinalapezack@gmail.com
+    [address1] => Av Benedito Manuel dos santos
+    [address2] => Perova
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07428205
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 46526183
+    [password] => 5bebc39f74e8957ac5d609ad29239736:t)#TF
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.46526183
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 09/02/2017 09:37<br>IP Address: 179.178.176.230<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => r25
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - PLUS
+                            [UnitPrice] => 5994
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Quarterly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000000025
+            [FullName] => Karina  Rodrigues Lapezack Banhos
+            [Email] => karinalapezack@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>

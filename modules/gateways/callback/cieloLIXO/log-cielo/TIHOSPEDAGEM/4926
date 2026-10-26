@@ -1,0 +1,1634 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4926
+    [id] => 4926
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-05
+    [date] => 2018-07-05
+    [4] => 2018-07-05
+    [duedate] => 2018-07-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1899.00
+    [subtotal] => 1899.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1899.00
+    [total] => 1899.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 07/07/2018 11:04<br>IP Address: 131.100.201.58<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 591 70813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 591 70813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4926
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express - turbomecturbinas.com
+observacoes:: Conforme Proposta 1357-Criacao de Site Express - TurbomecTurbinas - Tres Id...
+                            [Description] => Site Express - turbomecturbinas.com
+observacoes:: Conforme Proposta 1357-Criacao de Site Express - TurbomecTurbinas - Tres Idiomas
+
+Valor do registro do dominio desconto R$ 55.00
+Criacao do novo site profissional na modalidade SITE EXPRESS​:
+�...
+                            [UnitPrice] => 184400
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Registro de dominio - turbomecturbinas.com - 1 Ano(s) (05/07/2018 - 04/07/2019)
+                            [Description] => Registro de dominio - turbomecturbinas.com - 1 Ano(s) (05/07/2018 - 04/07/2019)
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => José Calheiros de souza
+            [Email] => turbomecturbinas@hotmail.com
+            [Identity] => 00773503404
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>Ocorreu um erro na aplicação.</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4926
+    [id] => 4926
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-05
+    [date] => 2018-07-05
+    [4] => 2018-07-05
+    [duedate] => 2018-07-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1899.00
+    [subtotal] => 1899.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1899.00
+    [total] => 1899.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 07/07/2018 11:04<br>IP Address: 131.100.201.58<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 591 70813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 591 70813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4926
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express - turbomecturbinas.com
+observacoes:: Conforme Proposta 1357-Criacao de Site Express - TurbomecTurbinas - Tres Id...
+                            [Description] => Site Express - turbomecturbinas.com
+observacoes:: Conforme Proposta 1357-Criacao de Site Express - TurbomecTurbinas - Tres Idiomas
+
+Valor do registro do dominio desconto R$ 55.00
+Criacao do novo site profissional na modalidade SITE EXPRESS​:
+�...
+                            [UnitPrice] => 184400
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Registro de dominio - turbomecturbinas.com - 1 Ano(s) (05/07/2018 - 04/07/2019)
+                            [Description] => Registro de dominio - turbomecturbinas.com - 1 Ano(s) (05/07/2018 - 04/07/2019)
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => José Calheiros de souza
+            [Email] => turbomecturbinas@hotmail.com
+            [Identity] => 00773503404
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>Ocorreu um erro na aplicação.</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4926
+    [id] => 4926
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-05
+    [date] => 2018-07-05
+    [4] => 2018-07-05
+    [duedate] => 2018-07-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1899.00
+    [subtotal] => 1899.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1899.00
+    [total] => 1899.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 07/07/2018 11:12<br>IP Address: 131.100.201.58<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 591 70813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 591 70813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4926
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express - turbomecturbinas.com
+observacoes:: Conforme Proposta 1357-Criacao de Site Express - TurbomecTurbinas - Tres Id...
+                            [Description] => Site Express - turbomecturbinas.com
+observacoes:: Conforme Proposta 1357-Criacao de Site Express - TurbomecTurbinas - Tres Idiomas
+
+Valor do registro do dominio desconto R$ 55.00
+Criacao do novo site profissional na modalidade SITE EXPRESS​:
+�...
+                            [UnitPrice] => 184400
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Registro de dominio - turbomecturbinas.com - 1 Ano(s) (05/07/2018 - 04/07/2019)
+                            [Description] => Registro de dominio - turbomecturbinas.com - 1 Ano(s) (05/07/2018 - 04/07/2019)
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => José Calheiros de souza
+            [Email] => turbomecturbinas@hotmail.com
+            [Identity] => 00773503404
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>Ocorreu um erro na aplicação.</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4926
+    [id] => 4926
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-05
+    [date] => 2018-07-05
+    [4] => 2018-07-05
+    [duedate] => 2018-07-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1899.00
+    [subtotal] => 1899.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1899.00
+    [total] => 1899.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 07/07/2018 11:12<br>IP Address: 131.100.201.58<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 591 70813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 591 70813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4926
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express - turbomecturbinas.com
+observacoes:: Conforme Proposta 1357-Criacao de Site Express - TurbomecTurbinas - Tres Id...
+                            [Description] => Site Express - turbomecturbinas.com
+observacoes:: Conforme Proposta 1357-Criacao de Site Express - TurbomecTurbinas - Tres Idiomas
+
+Valor do registro do dominio desconto R$ 55.00
+Criacao do novo site profissional na modalidade SITE EXPRESS​:
+�...
+                            [UnitPrice] => 184400
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Registro de dominio - turbomecturbinas.com - 1 Ano(s) (05/07/2018 - 04/07/2019)
+                            [Description] => Registro de dominio - turbomecturbinas.com - 1 Ano(s) (05/07/2018 - 04/07/2019)
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => José Calheiros de souza
+            [Email] => turbomecturbinas@hotmail.com
+            [Identity] => 00773503404
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>Ocorreu um erro na aplicação.</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4926
+    [id] => 4926
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-05
+    [date] => 2018-07-05
+    [4] => 2018-07-05
+    [duedate] => 2018-07-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1899.00
+    [subtotal] => 1899.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1899.00
+    [total] => 1899.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 07/07/2018 11:14<br>IP Address: 168.227.12.144<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 591 70813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 591 70813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4926
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express - turbomecturbinas.com
+observacoes:: Conforme Proposta 1357-Criacao de Site Express - TurbomecTurbinas - Tres Id...
+                            [Description] => Site Express - turbomecturbinas.com
+observacoes:: Conforme Proposta 1357-Criacao de Site Express - TurbomecTurbinas - Tres Idiomas
+
+Valor do registro do dominio desconto R$ 55.00
+Criacao do novo site profissional na modalidade SITE EXPRESS​:
+�...
+                            [UnitPrice] => 184400
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Registro de dominio - turbomecturbinas.com - 1 Ano(s) (05/07/2018 - 04/07/2019)
+                            [Description] => Registro de dominio - turbomecturbinas.com - 1 Ano(s) (05/07/2018 - 04/07/2019)
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => José Calheiros de souza
+            [Email] => turbomecturbinas@hotmail.com
+            [Identity] => 00773503404
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>Ocorreu um erro na aplicação.</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4926
+    [id] => 4926
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-05
+    [date] => 2018-07-05
+    [4] => 2018-07-05
+    [duedate] => 2018-07-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1899.00
+    [subtotal] => 1899.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1899.00
+    [total] => 1899.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 07/07/2018 11:15<br>IP Address: 168.227.12.144<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 9170813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 9170813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4926
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express - turbomecturbinas.com
+observacoes:: Conforme Proposta 1357-Criacao de Site Express - TurbomecTurbinas - Tres Id...
+                            [Description] => Site Express - turbomecturbinas.com
+observacoes:: Conforme Proposta 1357-Criacao de Site Express - TurbomecTurbinas - Tres Idiomas
+
+Valor do registro do dominio desconto R$ 55.00
+Criacao do novo site profissional na modalidade SITE EXPRESS​:
+�...
+                            [UnitPrice] => 184400
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Registro de dominio - turbomecturbinas.com - 1 Ano(s) (05/07/2018 - 04/07/2019)
+                            [Description] => Registro de dominio - turbomecturbinas.com - 1 Ano(s) (05/07/2018 - 04/07/2019)
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => José Calheiros de souza
+            [Email] => turbomecturbinas@hotmail.com
+            [Identity] => 00773503404
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>Ocorreu um erro na aplicação.</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4926
+    [id] => 4926
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-05
+    [date] => 2018-07-05
+    [4] => 2018-07-05
+    [duedate] => 2018-07-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1899.00
+    [subtotal] => 1899.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1899.00
+    [total] => 1899.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 07/07/2018 11:19<br>IP Address: 168.227.12.144<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 9170813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 9170813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4926
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express - turbomecturbinas.com
+observacoes:: Conforme Proposta 1357-Criacao de Site Express - TurbomecTurbinas - Tres I...
+                            [Description] => Site Express - turbomecturbinas.com
+observacoes:: Conforme Proposta 1357-Criacao de Site Express - TurbomecTurbinas - Tres Idiomas
+Prazo de entrega: 15 dias
+                            [UnitPrice] => 184400
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Registro de dominio - turbomecturbinas.com - 1 Ano(s) (05/07/2018 - 04/07/2019)
+                            [Description] => Registro de dominio - turbomecturbinas.com - 1 Ano(s) (05/07/2018 - 04/07/2019)
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => José Calheiros de souza
+            [Email] => turbomecturbinas@hotmail.com
+            [Identity] => 00773503404
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4926
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Site Express - turbomecturbinas.com
+observacoes:: Conforme Proposta 1357-Criacao de Site Express - TurbomecTurbinas - Tres I...
+                            [description] => Site Express - turbomecturbinas.com
+observacoes:: Conforme Proposta 1357-Criacao de Site Express - TurbomecTurbinas - Tres Idiomas
+Prazo de entrega: 15 dias
+                            [unitPrice] => 184400
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Registro de dominio - turbomecturbinas.com - 1 Ano(s) (05/07/2018 - 04/07/2019)
+                            [description] => Registro de dominio - turbomecturbinas.com - 1 Ano(s) (05/07/2018 - 04/07/2019)
+                            [unitPrice] => 5500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 6
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 7
+            [identity] => 00773503404
+            [fullName] => José Calheiros de souza
+            [email] => turbomecturbinas@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 8
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 9
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/861cd522-52c5-41d3-9d9f-83965d7edf4f
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4926
+    [id] => 4926
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-05
+    [date] => 2018-07-05
+    [4] => 2018-07-05
+    [duedate] => 2018-07-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 1899.00
+    [subtotal] => 1899.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 1899.00
+    [total] => 1899.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 07/07/2018 11:21<br>IP Address: 131.100.201.58<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 9170813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 9170813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4926
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Express - turbomecturbinas.com
+observacoes:: Conforme Proposta 1357-Criacao de Site Express - TurbomecTurbinas - Tres I...
+                            [Description] => Site Express - turbomecturbinas.com
+observacoes:: Conforme Proposta 1357-Criacao de Site Express - TurbomecTurbinas - Tres Idiomas
+Prazo de entrega: 15 dias
+                            [UnitPrice] => 184400
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Registro de dominio - turbomecturbinas.com - 1 Ano(s) (05/07/2018 - 04/07/2019)
+                            [Description] => Registro de dominio - turbomecturbinas.com - 1 Ano(s) (05/07/2018 - 04/07/2019)
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => José Calheiros de souza
+            [Email] => turbomecturbinas@hotmail.com
+            [Identity] => 00773503404
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4926
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Site Express - turbomecturbinas.com
+observacoes:: Conforme Proposta 1357-Criacao de Site Express - TurbomecTurbinas - Tres I...
+                            [description] => Site Express - turbomecturbinas.com
+observacoes:: Conforme Proposta 1357-Criacao de Site Express - TurbomecTurbinas - Tres Idiomas
+Prazo de entrega: 15 dias
+                            [unitPrice] => 184400
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Registro de dominio - turbomecturbinas.com - 1 Ano(s) (05/07/2018 - 04/07/2019)
+                            [description] => Registro de dominio - turbomecturbinas.com - 1 Ano(s) (05/07/2018 - 04/07/2019)
+                            [unitPrice] => 5500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 6
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 7
+            [identity] => 00773503404
+            [fullName] => José Calheiros de souza
+            [email] => turbomecturbinas@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 8
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 9
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/6dbc073e-47c8-46d9-aff1-2c970dfe323b
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4507
+    [id] => 4507
+    [1] => 283
+    [userid] => 283
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-03-21
+    [date] => 2018-03-21
+    [4] => 2018-03-28
+    [duedate] => 2018-03-28
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 283
+    [id] => 283
+    [uuid] => f16845c7-0570-436f-b7ec-6daff14671b4
+    [firstname] => Talles
+    [lastname] => Tatagiba Martins de Souza
+    [fullname] => Talles Tatagiba Martins de Souza
+    [companyname] => Instituto Elevar
+    [email] => talles@gmail.com
+    [address1] => Av. Nicolau Von Schilgen, 100
+    [address2] => Mata da Praia
+    [city] => Vitória
+    [fullstate] => ES
+    [state] => ES
+    [postcode] => 29065-130
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11974551875 
+    [password] => $2y$10$7J96jV3UIGZGk5qngKvDBeHpU8sf4t2Cp6UTr.Xtandxvfqfhtza2
+    [statecode] => ES
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11974551875
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 02/04/2018 08:31<br>IP Address: 173.56.38.245<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11974551875
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 12297475756
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11974551875
+    [customfields3] => 12297475756
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

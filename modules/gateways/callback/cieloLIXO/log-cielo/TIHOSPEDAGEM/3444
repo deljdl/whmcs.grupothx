@@ -1,0 +1,349 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3444
+    [id] => 3444
+    [1] => 260
+    [userid] => 260
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-06-08
+    [date] => 2017-06-08
+    [4] => 2017-06-08
+    [duedate] => 2017-06-08
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 150.00
+    [subtotal] => 150.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 150.00
+    [total] => 150.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 260
+    [id] => 260
+    [uuid] => 0e11ec5f-a484-4fcf-8e2f-216e6055c683
+    [firstname] => Sérgio
+    [lastname] => da Silva Cardoso
+    [fullname] => Sérgio da Silva Cardoso
+    [companyname] => Moleca Calçados
+    [email] => ercm@rodiziosercm.com.br
+    [address1] => Estrada de São Bento, 1710
+    [address2] => Vila Ferlópolis
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08597-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 01146443301 11986947921
+    [password] => $2y$10$LsrHmFzl7ZQoArn9WP7n9eDNdoeRW.4XFLnK49/676m/b.w6xC7S2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114644330111986947921
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 08/06/2017 15:13<br>IP Address: 187.34.214.88<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986947921
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 16022119812
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11986947921
+    [customfields3] => 16022119812
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3444
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Criacao do video para a loja
+                            [Description] => Desenvolvimento Por Hora - Criacao do video para a loja
+                            [UnitPrice] => 15000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Sérgio da Silva Cardoso
+            [Email] => ercm@rodiziosercm.com.br
+            [Identity] => 16022119812
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3444
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Criacao do video para a loja
+                            [description] => Desenvolvimento Por Hora - Criacao do video para a loja
+                            [unitPrice] => 15000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 16022119812
+            [fullName] => Sérgio da Silva Cardoso
+            [email] => ercm@rodiziosercm.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/5a6262ab-4621-48d9-baa1-9c334ea9bf94
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+08/06/2017 15:22:15
+INICIO_______________________________________________________________LOG:BEGIN:::08/06/2017 15:15<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3444
+    [amount] => 15000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => f31dca93e96448ba8c7da1079d0c4bc1
+    [created_date] => 08/06/2017 15:15:19
+    [customer_name] => Sérgio Cardoso
+    [customer_phone] => 11986947921
+    [customer_identity] => 16022119812
+    [customer_email] => ercm@rodiziosercm.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 542820******2939
+    [payment_installments] => 3
+    [payment_status] => 2
+    [tid] => 10760777626GBFM4N05B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/06/2017 15:23:15
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3444 | Result->success | ValorPago ->150.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 3444
+    [amount] => 15000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => f31dca93e96448ba8c7da1079d0c4bc1
+    [created_date] => 08/06/2017 15:15:19
+    [customer_name] => Sérgio Cardoso
+    [customer_phone] => 11986947921
+    [customer_identity] => 16022119812
+    [customer_email] => ercm@rodiziosercm.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 542820******2939
+    [payment_installments] => 3
+    [payment_status] => 2
+    [tid] => 10760777626GBFM4N05B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/06/2017 15:05:24
+INICIO_______________________________________________________________LOG:BEGIN:::08/06/2017 15:24<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => f31dca93e96448ba8c7da1079d0c4bc1
+    [amount] => 15000
+    [order_number] => 3444
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/06/2017 15:05:24
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => f31dca93e96448ba8c7da1079d0c4bc1
+    [amount] => 15000
+    [order_number] => 3444
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/06/2017 15:06:24
+INICIO_______________________________________________________________LOG:BEGIN:::08/06/2017 15:24<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => f31dca93e96448ba8c7da1079d0c4bc1
+    [amount] => 15000
+    [order_number] => 3444
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+08/06/2017 15:06:24
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => f31dca93e96448ba8c7da1079d0c4bc1
+    [amount] => 15000
+    [order_number] => 3444
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

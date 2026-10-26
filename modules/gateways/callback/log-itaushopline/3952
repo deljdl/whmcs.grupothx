@@ -1,0 +1,369 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3952
+    [id] => 3952
+    [1] => 152
+    [userid] => 152
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-10-20
+    [date] => 2017-10-20
+    [4] => 2017-10-27
+    [duedate] => 2017-10-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 152
+    [id] => 152
+    [uuid] => e6182bac-4e9e-429d-aad8-c859b0bff1b9
+    [firstname] => RICARDO
+    [lastname] => ELIAS ALGRANTI
+    [fullname] => RICARDO ELIAS ALGRANTI
+    [companyname] => BRASTELHA – TELHAS DE CONCRETO LTDA
+    [email] => financeiro@brastelha.com.br
+    [address1] => Estr. Pedro da Cunha Albuquerque Lopes, 1600 – (Antiga Estr. do Perobal)
+    [address2] => Jd. Patrícia
+    [city] => Itaquaquecetuba/SP.
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-584
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 4648-6068 – 4648-6530
+    [password] => 979c6d4a6549c648be0284ed70818561:#X#Xm
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114648606846486530
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/10/2017 11:23<br>IP Address: 152.249.186.252<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 10.388.382/0001-26
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 10.388.382/0001-26
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3952
+    [id] => 3952
+    [1] => 152
+    [userid] => 152
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-10-20
+    [date] => 2017-10-20
+    [4] => 2017-10-27
+    [duedate] => 2017-10-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 152
+    [id] => 152
+    [uuid] => e6182bac-4e9e-429d-aad8-c859b0bff1b9
+    [firstname] => RICARDO
+    [lastname] => ELIAS ALGRANTI
+    [fullname] => RICARDO ELIAS ALGRANTI
+    [companyname] => BRASTELHA – TELHAS DE CONCRETO LTDA
+    [email] => financeiro@brastelha.com.br
+    [address1] => Estr. Pedro da Cunha Albuquerque Lopes, 1600 – (Antiga Estr. do Perobal)
+    [address2] => Jd. Patrícia
+    [city] => Itaquaquecetuba/SP.
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-584
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 4648-6068 – 4648-6530
+    [password] => 979c6d4a6549c648be0284ed70818561:#X#Xm
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114648606846486530
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/10/2017 11:24<br>IP Address: 152.249.186.252<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 10.388.382/0001-26
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 10.388.382/0001-26
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3952
+    [id] => 3952
+    [1] => 152
+    [userid] => 152
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-10-20
+    [date] => 2017-10-20
+    [4] => 2017-10-27
+    [duedate] => 2017-10-27
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 152
+    [id] => 152
+    [uuid] => e6182bac-4e9e-429d-aad8-c859b0bff1b9
+    [firstname] => RICARDO
+    [lastname] => ELIAS ALGRANTI
+    [fullname] => RICARDO ELIAS ALGRANTI
+    [companyname] => BRASTELHA – TELHAS DE CONCRETO LTDA
+    [email] => financeiro@brastelha.com.br
+    [address1] => Estr. Pedro da Cunha Albuquerque Lopes, 1600 – (Antiga Estr. do Perobal)
+    [address2] => Jd. Patrícia
+    [city] => Itaquaquecetuba/SP.
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08584-584
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 4648-6068 – 4648-6530
+    [password] => 979c6d4a6549c648be0284ed70818561:#X#Xm
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114648606846486530
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/10/2017 08:49<br>IP Address: 177.95.101.117<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 10.388.382/0001-26
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 10.388.382/0001-26
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

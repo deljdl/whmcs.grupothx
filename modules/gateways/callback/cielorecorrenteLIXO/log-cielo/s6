@@ -1,0 +1,217 @@
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 6
+    [clientid] => 4
+    [orderid] => 0
+    [pid] => 3
+    [regdate] => 2013-08-01
+    [name] => 
+    [translated_name] => TIH - Master 
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => buffetabckids.com.br
+    [dedicatedip] => 
+    [serverid] => 1
+    [servername] => X-Painel
+    [serverip] => 162.144.68.95
+    [serverhostname] => xpainel.com
+    [firstpaymentamount] => 359.64
+    [recurringamount] => 359.64
+    [paymentmethod] => boleto_itau_sem_registro
+    [paymentmethodname] => Boleto Itaú
+    [billingcycle] => Annually
+    [nextduedate] => 2017-08-01
+    [status] => Active
+    [username] => abckids
+    [password] => r76&amp;¨%deAS247wdR&amp;¨@$&amp;WD
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 2015-09-10
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => Imported using WHM Import Script - Payment Method, Pricing, Billing Cycle &amp; Next Due Date may be incorrect
+    [diskusage] => 6097
+    [disklimit] => 10000
+    [bwusage] => 611
+    [bwlimit] => 0
+    [lastupdate] => 2017-08-04 09:00:23
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 4
+    [id] => 4
+    [uuid] => e08aadfd-b411-45b2-96e9-772bf034877a
+    [firstname] => Marcio
+    [lastname] => Chagas
+    [fullname] => Marcio Chagas
+    [companyname] => Buffet AbcKids
+    [email] => contato@abckidsbuffet.com.br
+    [address1] => Av. 31 de Março, 2249
+    [address2] => Vila Flórida
+    [city] => São Bernardo do Campo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09660-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 3424-8710  (11) 4361-6328  (11) 3445-6700
+    [password] => 7e14413655b0af14a0d03c73d265263c:z(uMp
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113424871011436163281134456700
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 05/08/2017 23:12<br>IP Address: 189.54.65.252<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11956551782
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 008.961.479/0001-34
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11956551782
+    [customfields3] => 008.961.479/0001-34
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => s6
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master 
+                            [UnitPrice] => 35964
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Annual
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 008961479000134
+            [FullName] => Marcio Chagas
+            [Email] => contato@abckidsbuffet.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [message] => The request is invalid.
+    [modelState] => stdClass Object
+        (
+            [orderViewModel.Customer.Identity] => Array
+                (
+                    [0] => [Customer.Identity] deve conter no mínimo 11 e no máximo 14 caracteres.
+                )
+
+        )
+
+)
+</pre>

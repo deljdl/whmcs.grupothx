@@ -1,0 +1,325 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5014
+    [id] => 5014
+    [1] => 260
+    [userid] => 260
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-30
+    [date] => 2018-07-30
+    [4] => 2018-08-04
+    [duedate] => 2018-08-04
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 55.00
+    [subtotal] => 55.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 55.00
+    [total] => 55.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 260
+    [id] => 260
+    [uuid] => 0e11ec5f-a484-4fcf-8e2f-216e6055c683
+    [firstname] => Sérgio
+    [lastname] => da Silva Cardoso
+    [fullname] => Sérgio da Silva Cardoso
+    [companyname] => Moleca Calçados
+    [email] => contato@sejaumafranqueada.com.br
+    [address1] => Estrada de São Bento, 1710
+    [address2] => Vila Ferlópolis
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08597-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 01146443301 11986947921
+    [password] => $2y$10$v04o.Nos/jzhQJhY/fGxMuVbLsntyRWbG89jg5ku2e.zX9XS5PTdq
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114644330111986947921
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => cielo
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 02/08/2018 15:59<br>IP Address: 177.95.248.6<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986947921
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 16022119812
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11986947921
+    [customfields3] => 16022119812
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5014
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Renovacao de Dominio - revendamolecacalcados.com.br - 1 Ano(s) (04/08/2018 - 03/08/2019)
+                            [Description] => Renovacao de Dominio - revendamolecacalcados.com.br - 1 Ano(s) (04/08/2018 - 03/08/2019)
+                            [UnitPrice] => 5500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Sérgio da Silva Cardoso
+            [Email] => contato@sejaumafranqueada.com.br
+            [Identity] => 16022119812
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5014
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Renovacao de Dominio - revendamolecacalcados.com.br - 1 Ano(s) (04/08/2018 - 03/08/2019)
+                            [description] => Renovacao de Dominio - revendamolecacalcados.com.br - 1 Ano(s) (04/08/2018 - 03/08/2019)
+                            [unitPrice] => 5500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 16022119812
+            [fullName] => Sérgio da Silva Cardoso
+            [email] => contato@sejaumafranqueada.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/78ae8d14-44f2-489c-bcb1-ac5c1641cacf
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+02/08/2018 16:45:01
+INICIO_______________________________________________________________LOG:BEGIN:::02/08/2018 16:01<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 5014
+    [amount] => 5500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 0404e2157e694670afb5513a332b5c33
+    [created_date] => 02/08/2018 16:01:42
+    [customer_name] => Sérgio Cardoso
+    [customer_phone] => 11986947921
+    [customer_identity] => 16022119812
+    [customer_email] => contato@sejaumafranqueada.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 542820******0710
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627F231250RB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/08/2018 16:47:01
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->5014 | Result->success | ValorPago ->55.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 5014
+    [amount] => 5500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 0404e2157e694670afb5513a332b5c33
+    [created_date] => 02/08/2018 16:01:42
+    [customer_name] => Sérgio Cardoso
+    [customer_phone] => 11986947921
+    [customer_identity] => 16022119812
+    [customer_email] => contato@sejaumafranqueada.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 542820******0710
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627F231250RB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/08/2018 16:22:06
+INICIO_______________________________________________________________LOG:BEGIN:::02/08/2018 16:06<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 0404e2157e694670afb5513a332b5c33
+    [amount] => 5500
+    [order_number] => 5014
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/08/2018 16:22:06
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 0404e2157e694670afb5513a332b5c33
+    [amount] => 5500
+    [order_number] => 5014
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

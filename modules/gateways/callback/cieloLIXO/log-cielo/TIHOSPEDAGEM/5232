@@ -1,0 +1,649 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5232
+    [id] => 5232
+    [1] => 259
+    [userid] => 259
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-19
+    [date] => 2018-09-19
+    [4] => 2018-09-20
+    [duedate] => 2018-09-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 75.00
+    [subtotal] => 75.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 75.00
+    [total] => 75.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 259
+    [id] => 259
+    [uuid] => 80deab10-3cd6-44d4-b6a4-2f2b2ab5d2d5
+    [firstname] => Diego 
+    [lastname] => Rafael da Silva Santos
+    [fullname] => Diego  Rafael da Silva Santos
+    [companyname] => Topsecret Acompanhantes
+    [email] => topsecretacompanhantes@gmail.com
+    [address1] => Rua Newton Vieira Novaes, 91
+    [address2] => Bosque dos Eucaliptos
+    [city] => São José dos Campos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 12233-100
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1239165218 12988034026
+    [password] => $2y$10$IgD8BL6bi6BdF5moX0FdQORDfhyo.LzxjUzFjhRDoDUJIjeXGKD7.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.123916521812988034026
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/09/2018 16:36<br>IP Address: 201.75.171.83<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 12988034026
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 34434790811
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 12988034026
+    [customfields3] => 34434790811
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5232
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes formato das fotos e programacao
+                            [Description] => Desenvolvimento Por Hora - Alteracoes formato das fotos e programacao
+                            [UnitPrice] => 7500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Diego  Rafael da Silva Santos
+            [Email] => topsecretacompanhantes@gmail.com
+            [Identity] => 34434790811
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5232
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Desenvolvimento Por Hora - Alteracoes formato das fotos e programacao
+                            [description] => Desenvolvimento Por Hora - Alteracoes formato das fotos e programacao
+                            [unitPrice] => 7500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 34434790811
+            [fullName] => Diego  Rafael da Silva Santos
+            [email] => topsecretacompanhantes@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/8a54d908-b363-4c18-ac67-cda2ef74de62
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+20/09/2018 16:51:38
+INICIO_______________________________________________________________LOG:BEGIN:::20/09/2018 16:38<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 5232
+    [amount] => 7500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => f81dadff0dc44bd7b9d8477078813d77
+    [created_date] => 20/09/2018 16:38:46
+    [customer_name] => Diego Santos
+    [customer_phone] => 12988034026
+    [customer_identity] => 34434790811
+    [customer_email] => topsecretacompanhantes@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 4
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544731******1162
+    [payment_installments] => 1
+    [payment_status] => 1
+    [tid] => 10760777627GFS5J7O5B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/09/2018 16:51:38
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  5232
+
+POST:
+<pre>Array
+(
+    [order_number] => 5232
+    [amount] => 7500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => f81dadff0dc44bd7b9d8477078813d77
+    [created_date] => 20/09/2018 16:38:46
+    [customer_name] => Diego Santos
+    [customer_phone] => 12988034026
+    [customer_identity] => 34434790811
+    [customer_email] => topsecretacompanhantes@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 4
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 544731******1162
+    [payment_installments] => 1
+    [payment_status] => 1
+    [tid] => 10760777627GFS5J7O5B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 5232
+    [id] => 5232
+    [1] => 259
+    [userid] => 259
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-19
+    [date] => 2018-09-19
+    [4] => 2018-09-20
+    [duedate] => 2018-09-20
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 75.00
+    [subtotal] => 75.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 75.00
+    [total] => 75.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 259
+    [id] => 259
+    [uuid] => 80deab10-3cd6-44d4-b6a4-2f2b2ab5d2d5
+    [firstname] => Diego 
+    [lastname] => Rafael da Silva Santos
+    [fullname] => Diego  Rafael da Silva Santos
+    [companyname] => Topsecret Acompanhantes
+    [email] => topsecretacompanhantes@gmail.com
+    [address1] => Rua Newton Vieira Novaes, 91
+    [address2] => Bosque dos Eucaliptos
+    [city] => São José dos Campos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 12233-100
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1239165218 12988034026
+    [password] => $2y$10$IgD8BL6bi6BdF5moX0FdQORDfhyo.LzxjUzFjhRDoDUJIjeXGKD7.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.123916521812988034026
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 20/09/2018 16:45<br>IP Address: 201.75.171.83<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 12988034026
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 34434790811
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 12988034026
+    [customfields3] => 34434790811
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5232
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Alteracoes formato das fotos e programacao
+                            [Description] => Desenvolvimento Por Hora - Alteracoes formato das fotos e programacao
+                            [UnitPrice] => 7500
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Diego  Rafael da Silva Santos
+            [Email] => topsecretacompanhantes@gmail.com
+            [Identity] => 34434790811
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5232
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => Desenvolvimento Por Hora - Alteracoes formato das fotos e programacao
+                            [description] => Desenvolvimento Por Hora - Alteracoes formato das fotos e programacao
+                            [unitPrice] => 7500
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 34434790811
+            [fullName] => Diego  Rafael da Silva Santos
+            [email] => topsecretacompanhantes@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/3cd9c44a-dbd7-4d73-ad79-c7692221a845
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+20/09/2018 16:24:47
+INICIO_______________________________________________________________LOG:BEGIN:::20/09/2018 16:47<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 5232
+    [amount] => 7500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => f2b2d90ca45840cea31301bfef8509cc
+    [created_date] => 20/09/2018 16:47:22
+    [customer_name] => Diego Santos
+    [customer_phone] => 12988034026
+    [customer_identity] => 34434790811
+    [customer_email] => topsecretacompanhantes@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 550209******0480
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627GFS5JKE9B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/09/2018 16:25:47
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->5232 | Result->success | ValorPago ->75.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 5232
+    [amount] => 7500
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => f2b2d90ca45840cea31301bfef8509cc
+    [created_date] => 20/09/2018 16:47:22
+    [customer_name] => Diego Santos
+    [customer_phone] => 12988034026
+    [customer_identity] => 34434790811
+    [customer_email] => topsecretacompanhantes@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 550209******0480
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627GFS5JKE9B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/09/2018 16:09:56
+INICIO_______________________________________________________________LOG:BEGIN:::20/09/2018 16:56<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => f2b2d90ca45840cea31301bfef8509cc
+    [amount] => 7500
+    [order_number] => 5232
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/09/2018 16:09:56
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => f2b2d90ca45840cea31301bfef8509cc
+    [amount] => 7500
+    [order_number] => 5232
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/09/2018 17:52:16
+INICIO_______________________________________________________________LOG:BEGIN:::20/09/2018 17:16<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => f81dadff0dc44bd7b9d8477078813d77
+    [amount] => 7500
+    [order_number] => 5232
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+20/09/2018 17:52:16
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  5232
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => f81dadff0dc44bd7b9d8477078813d77
+    [amount] => 7500
+    [order_number] => 5232
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

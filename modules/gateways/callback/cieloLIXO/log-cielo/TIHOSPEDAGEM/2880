@@ -1,0 +1,328 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2880
+    [id] => 2880
+    [1] => 238
+    [userid] => 238
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-01-17
+    [date] => 2017-01-17
+    [4] => 2017-01-18
+    [duedate] => 2017-01-18
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 50.00
+    [subtotal] => 50.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 50.00
+    [total] => 50.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 238
+    [id] => 238
+    [uuid] => f70ba1c3-27ff-447f-8e71-4adb54e0c7dc
+    [firstname] => Fabiana
+    [lastname] => Boaventura Avelar Nogueira
+    [fullname] => Fabiana Boaventura Avelar Nogueira
+    [companyname] => Bia Avelar Estética Facial e Corporal
+    [email] => fabi_avelar@hotmail.com
+    [address1] => Avenida Louraci Della Nina Tavares, 221
+    [address2] => Loteamento Mogilar
+    [city] => Mogi da Cruzes
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08773-650
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11996429521 - 11999070543
+    [password] => $2y$10$su5/z9AfZZDny35qywzKSObTEVh61j.hANKxhbcZkUkHy3jJDklfq
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1199642952111999070543
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 19/01/2017 15:12<br>IP Address: 200.142.128.16<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11996429521
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 77994345549
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11996429521
+    [customfields3] => 77994345549
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2880
+    [SoftDescriptor] => 2880
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Desenvolvimento Por Hora - Criação da aba PROMOÇÕES no site biaavelarestetica.com.br - 1 Horas @ 50.00/Hora
+                            [Description] => Desenvolvimento Por Hora - Criação da aba PROMOÇÕES no site biaavelarestetica.com.br - 1 Horas @ 50.00/Hora
+                            [UnitPrice] => 5000
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002880
+            [FullName] => Fabiana Boaventura Avelar Nogueira
+            [Email] => fabi_avelar@hotmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2880
+    [softDescriptor] => 2880
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Desenvolvimento Por Hora - Criação da aba PROMOÇÕES no site biaavelarestetica.com.br - 1 Horas @ 50.00/Hora
+                            [description] => Desenvolvimento Por Hora - Criação da aba PROMOÇÕES no site biaavelarestetica.com.br - 1 Horas @ 50.00/Hora
+                            [unitPrice] => 5000
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002880
+            [fullName] => Fabiana Boaventura Avelar Nogueira
+            [email] => fabi_avelar@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/aae85878-e070-46e0-81e2-029b5287feec
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+19/01/2017 15:42:14
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2880
+    [amount] => 5000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 1f151d25ac704ef184267c503c215ae9
+    [created_date] => 19/01/2017 15:14:40
+    [customer_name] => Ricardo Nogueira
+    [customer_phone] => 11999070543
+    [customer_identity] => 25930277893
+    [customer_email] => ricardo.romero.br@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 422061******4405
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626C8VBFL78B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+19/01/2017 15:43:14
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->238 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2880
+    [amount] => 5000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 1f151d25ac704ef184267c503c215ae9
+    [created_date] => 19/01/2017 15:14:40
+    [customer_name] => Ricardo Nogueira
+    [customer_phone] => 11999070543
+    [customer_identity] => 25930277893
+    [customer_email] => ricardo.romero.br@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 422061******4405
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626C8VBFL78B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+19/01/2017 15:00:21
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1f151d25ac704ef184267c503c215ae9
+    [amount] => 5000
+    [order_number] => 2880
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+19/01/2017 15:00:21
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1f151d25ac704ef184267c503c215ae9
+    [amount] => 5000
+    [order_number] => 2880
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

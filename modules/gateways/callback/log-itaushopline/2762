@@ -1,0 +1,452 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2762
+    [id] => 2762
+    [1] => 189
+    [userid] => 189
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-15
+    [date] => 2016-12-15
+    [4] => 2016-12-22
+    [duedate] => 2016-12-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 39.96
+    [subtotal] => 39.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 39.96
+    [total] => 39.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 189
+    [id] => 189
+    [uuid] => c487ecad-c434-49a2-aa48-9f90abe30bfc
+    [firstname] => Fernanda
+    [lastname] => Mutton Pereira
+    [fullname] => Fernanda Mutton Pereira
+    [companyname] => 
+    [email] => femutton@hotmail.com
+    [address1] => rua manoel da nobrega, 582
+    [address2] => centro
+    [city] => diadema
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09910-720
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1140564576
+    [password] => $2y$10$M8RyZyqht2Hg0OwqiLWMQe1OjgKC3URUAhibErfbBTDP8x22Yub7K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1140564576
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 11/01/2017 12:45<br>IP Address: 177.181.31.140<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2762
+    [id] => 2762
+    [1] => 189
+    [userid] => 189
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-15
+    [date] => 2016-12-15
+    [4] => 2016-12-22
+    [duedate] => 2016-12-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 39.96
+    [subtotal] => 39.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 39.96
+    [total] => 39.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 189
+    [id] => 189
+    [uuid] => c487ecad-c434-49a2-aa48-9f90abe30bfc
+    [firstname] => Fernanda
+    [lastname] => Mutton Pereira
+    [fullname] => Fernanda Mutton Pereira
+    [companyname] => 
+    [email] => femutton@hotmail.com
+    [address1] => rua manoel da nobrega, 582
+    [address2] => centro
+    [city] => diadema
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09910-720
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1140564576
+    [password] => $2y$10$M8RyZyqht2Hg0OwqiLWMQe1OjgKC3URUAhibErfbBTDP8x22Yub7K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1140564576
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 12/01/2017 14:16<br>IP Address: 177.157.130.185<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2762
+    [id] => 2762
+    [1] => 189
+    [userid] => 189
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-15
+    [date] => 2016-12-15
+    [4] => 2016-12-22
+    [duedate] => 2016-12-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 39.96
+    [subtotal] => 39.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 39.96
+    [total] => 39.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 189
+    [id] => 189
+    [uuid] => c487ecad-c434-49a2-aa48-9f90abe30bfc
+    [firstname] => Fernanda
+    [lastname] => Mutton Pereira
+    [fullname] => Fernanda Mutton Pereira
+    [companyname] => 
+    [email] => femutton@hotmail.com
+    [address1] => rua manoel da nobrega, 582
+    [address2] => centro
+    [city] => diadema
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09910-720
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1140564576
+    [password] => $2y$10$M8RyZyqht2Hg0OwqiLWMQe1OjgKC3URUAhibErfbBTDP8x22Yub7K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1140564576
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 12/01/2017 14:16<br>IP Address: 177.157.130.185<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2762
+    [id] => 2762
+    [1] => 189
+    [userid] => 189
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-12-15
+    [date] => 2016-12-15
+    [4] => 2016-12-22
+    [duedate] => 2016-12-22
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 39.96
+    [subtotal] => 39.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 39.96
+    [total] => 39.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 189
+    [id] => 189
+    [uuid] => c487ecad-c434-49a2-aa48-9f90abe30bfc
+    [firstname] => Fernanda
+    [lastname] => Mutton Pereira
+    [fullname] => Fernanda Mutton Pereira
+    [companyname] => 
+    [email] => femutton@hotmail.com
+    [address1] => rua manoel da nobrega, 582
+    [address2] => centro
+    [city] => diadema
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 09910-720
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1140564576
+    [password] => $2y$10$M8RyZyqht2Hg0OwqiLWMQe1OjgKC3URUAhibErfbBTDP8x22Yub7K
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1140564576
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 12/01/2017 14:16<br>IP Address: 177.157.130.185<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 
+)
+</pre>

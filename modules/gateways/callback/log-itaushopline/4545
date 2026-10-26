@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4545
+    [id] => 4545
+    [1] => 312
+    [userid] => 312
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-04-03
+    [date] => 2018-04-03
+    [4] => 2018-04-03
+    [duedate] => 2018-04-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 836.97
+    [subtotal] => 836.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 836.97
+    [total] => 836.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 312
+    [id] => 312
+    [uuid] => d91a351d-80d1-4634-adce-cceeecf68cb3
+    [firstname] => MILTON
+    [lastname] => TERTULIANO NASCIMENTO
+    [fullname] => MILTON TERTULIANO NASCIMENTO
+    [companyname] => BAZAR E PAPELARIA ISABELLY LTDA
+    [email] => BAZARISABELLY@GMAIL.COM
+    [address1] => AV LARA CAMPOS
+    [address2] => VILA PROGRESSO (ZONA LESTE) 
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08240-700
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 2613-9320
+    [password] => $2y$10$8oIS6qJL5O6MW9baOT4lge7RVxTYR5.917lpsqjkJmgAKdt51u7j6
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1126139320
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 03/04/2018 12:49<br>IP Address: 201.6.227.111<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 10.265.011/0001-57
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 10.265.011/0001-57
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

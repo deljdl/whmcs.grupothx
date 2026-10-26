@@ -1,0 +1,794 @@
+
+
+18/10/2019 10:37:18
+INICIO_______________________________________________________________
+
+LOG:<h1>Log Iniciada 18/10/2019 10:37: </h1>
+<br /><h2>Mercado Pago Envio de Status </h2><pre>Array
+(
+    [data_id] => 5337794149
+    [type] => payment
+)
+</pre><br /><h2>Mercado Pago Find_by_id </h2><pre>MercadoPago\Payment Object
+(
+    [id:protected] => 5337794149
+    [acquirer:protected] => 
+    [acquirer_reconciliation:protected] => Array
+        (
+        )
+
+    [site_id:protected] => 
+    [sponsor_id:protected] => 
+    [operation_type:protected] => regular_payment
+    [order_id:protected] => 
+    [order:protected] => stdClass Object
+        (
+            [id] => 1156290265
+            [type] => mercadopago
+        )
+
+    [binary_mode:protected] => 
+    [external_reference:protected] => 6632
+    [status:protected] => pending
+    [status_detail:protected] => pending_waiting_payment
+    [store_id:protected] => 
+    [taxes_amount:protected] => 0
+    [payment_type:protected] => 
+    [date_created:protected] => 2019-10-18T09:18:35.000-04:00
+    [last_modified:protected] => 
+    [live_mode:protected] => 1
+    [date_last_updated:protected] => 2019-10-18T09:18:35.000-04:00
+    [date_of_expiration:protected] => 2019-10-21T09:18:35.000-04:00
+    [deduction_schema:protected] => 
+    [date_approved:protected] => 
+    [money_release_date:protected] => 
+    [money_release_schema:protected] => 
+    [currency_id:protected] => BRL
+    [transaction_amount:protected] => 69,93
+    [transaction_amount_refunded:protected] => 0
+    [shipping_cost:protected] => 
+    [total_paid_amount:protected] => 
+    [finance_charge:protected] => 
+    [net_received_amount:protected] => 
+    [marketplace:protected] => 
+    [marketplace_fee:protected] => 
+    [reason:protected] => 
+    [payer:protected] => MercadoPago\Payer Object
+        (
+            [id:protected] => 377767592
+            [entity_type:protected] => 
+            [type:protected] => guest
+            [name:protected] => 
+            [surname:protected] => 
+            [first_name:protected] => 
+            [last_name:protected] => 
+            [email:protected] => 
+            [date_created:protected] => 
+            [phone:protected] => Array
+                (
+                )
+
+            [identification:protected] => Array
+                (
+                )
+
+            [address:protected] => 
+            [_last:protected] => 
+            [error:protected] => 
+            [_pagination_params:protected] => 
+            [_empty:protected] => 
+            [operator_id] => 
+        )
+
+    [collector:protected] => 
+    [collector_id:protected] => 165408372
+    [counter_currency:protected] => 
+    [payment_method_id:protected] => bolbradesco
+    [payment_type_id:protected] => ticket
+    [pos_id:protected] => 
+    [transaction_details:protected] => stdClass Object
+        (
+            [acquirer_reference] => 
+            [external_resource_url] => https://www.mercadopago.com/mlb/payments/ticket/helper?payment_id=5337794149&payment_method_reference_id=5137314471&caller_id=377767592&hash=8d38a249-092e-49e0-bfb6-f147aff3ac42
+            [financial_institution] => 
+            [installment_amount] => 0
+            [net_received_amount] => 0
+            [overpaid_amount] => 0
+            [payable_deferral_period] => 
+            [payment_method_reference_id] => 5137314471
+            [total_paid_amount] => 69,93
+            [verification_code] => 5137314471
+        )
+
+    [fee_details:protected] => Array
+        (
+        )
+
+    [differential_pricing_id:protected] => 
+    [application_fee:protected] => 
+    [authorization_code:protected] => 
+    [capture:protected] => 
+    [captured:protected] => 1
+    [card:protected] => MercadoPago\Card Object
+        (
+            [id:protected] => 
+            [customer_id:protected] => 
+            [expiration_month:protected] => 
+            [expiration_year:protected] => 
+            [first_six_digits:protected] => 
+            [last_four_digits:protected] => 
+            [payment_method:protected] => 
+            [security_code:protected] => 
+            [issuer:protected] => 
+            [cardholder:protected] => 
+            [date_created:protected] => 
+            [date_last_updated:protected] => 
+            [_last:protected] => 
+            [error:protected] => 
+            [_pagination_params:protected] => 
+            [_empty:protected] => 
+        )
+
+    [call_for_authorize_id:protected] => 
+    [statement_descriptor:protected] => 
+    [refunds:protected] => Array
+        (
+        )
+
+    [shipping_amount:protected] => 0
+    [additional_info:protected] => stdClass Object
+        (
+            [ip_address] => 186.220.199.62
+        )
+
+    [campaign_id:protected] => 
+    [coupon_amount:protected] => 0
+    [installments:protected] => 1
+    [token:protected] => 
+    [description:protected] => Pagamento do Pedido 6632
+    [notification_url:protected] => 
+    [issuer_id:protected] => 
+    [processing_mode:protected] => aggregator
+    [merchant_account_id:protected] => 
+    [merchant_number:protected] => 
+    [metadata:protected] => Array
+        (
+        )
+
+    [callback_url:protected] => 
+    [amount_refunded:protected] => 
+    [coupon_code:protected] => 
+    [barcode:protected] => stdClass Object
+        (
+            [content] => 23791804900000069933380260513731447100633330
+        )
+
+    [marketplace_owner:protected] => 
+    [_last:protected] => MercadoPago\Payment Object
+        (
+            [id:protected] => 5337794149
+            [acquirer:protected] => 
+            [acquirer_reconciliation:protected] => Array
+                (
+                )
+
+            [site_id:protected] => 
+            [sponsor_id:protected] => 
+            [operation_type:protected] => regular_payment
+            [order_id:protected] => 
+            [order:protected] => stdClass Object
+                (
+                    [id] => 1156290265
+                    [type] => mercadopago
+                )
+
+            [binary_mode:protected] => 
+            [external_reference:protected] => 6632
+            [status:protected] => pending
+            [status_detail:protected] => pending_waiting_payment
+            [store_id:protected] => 
+            [taxes_amount:protected] => 0
+            [payment_type:protected] => 
+            [date_created:protected] => 2019-10-18T09:18:35.000-04:00
+            [last_modified:protected] => 
+            [live_mode:protected] => 1
+            [date_last_updated:protected] => 2019-10-18T09:18:35.000-04:00
+            [date_of_expiration:protected] => 2019-10-21T09:18:35.000-04:00
+            [deduction_schema:protected] => 
+            [date_approved:protected] => 
+            [money_release_date:protected] => 
+            [money_release_schema:protected] => 
+            [currency_id:protected] => BRL
+            [transaction_amount:protected] => 69,93
+            [transaction_amount_refunded:protected] => 0
+            [shipping_cost:protected] => 
+            [total_paid_amount:protected] => 
+            [finance_charge:protected] => 
+            [net_received_amount:protected] => 
+            [marketplace:protected] => 
+            [marketplace_fee:protected] => 
+            [reason:protected] => 
+            [payer:protected] => MercadoPago\Payer Object
+                (
+                    [id:protected] => 377767592
+                    [entity_type:protected] => 
+                    [type:protected] => guest
+                    [name:protected] => 
+                    [surname:protected] => 
+                    [first_name:protected] => 
+                    [last_name:protected] => 
+                    [email:protected] => 
+                    [date_created:protected] => 
+                    [phone:protected] => Array
+                        (
+                        )
+
+                    [identification:protected] => Array
+                        (
+                        )
+
+                    [address:protected] => 
+                    [_last:protected] => 
+                    [error:protected] => 
+                    [_pagination_params:protected] => 
+                    [_empty:protected] => 
+                    [operator_id] => 
+                )
+
+            [collector:protected] => 
+            [collector_id:protected] => 165408372
+            [counter_currency:protected] => 
+            [payment_method_id:protected] => bolbradesco
+            [payment_type_id:protected] => ticket
+            [pos_id:protected] => 
+            [transaction_details:protected] => stdClass Object
+                (
+                    [acquirer_reference] => 
+                    [external_resource_url] => https://www.mercadopago.com/mlb/payments/ticket/helper?payment_id=5337794149&payment_method_reference_id=5137314471&caller_id=377767592&hash=8d38a249-092e-49e0-bfb6-f147aff3ac42
+                    [financial_institution] => 
+                    [installment_amount] => 0
+                    [net_received_amount] => 0
+                    [overpaid_amount] => 0
+                    [payable_deferral_period] => 
+                    [payment_method_reference_id] => 5137314471
+                    [total_paid_amount] => 69,93
+                    [verification_code] => 5137314471
+                )
+
+            [fee_details:protected] => Array
+                (
+                )
+
+            [differential_pricing_id:protected] => 
+            [application_fee:protected] => 
+            [authorization_code:protected] => 
+            [capture:protected] => 
+            [captured:protected] => 1
+            [card:protected] => MercadoPago\Card Object
+                (
+                    [id:protected] => 
+                    [customer_id:protected] => 
+                    [expiration_month:protected] => 
+                    [expiration_year:protected] => 
+                    [first_six_digits:protected] => 
+                    [last_four_digits:protected] => 
+                    [payment_method:protected] => 
+                    [security_code:protected] => 
+                    [issuer:protected] => 
+                    [cardholder:protected] => 
+                    [date_created:protected] => 
+                    [date_last_updated:protected] => 
+                    [_last:protected] => 
+                    [error:protected] => 
+                    [_pagination_params:protected] => 
+                    [_empty:protected] => 
+                )
+
+            [call_for_authorize_id:protected] => 
+            [statement_descriptor:protected] => 
+            [refunds:protected] => Array
+                (
+                )
+
+            [shipping_amount:protected] => 0
+            [additional_info:protected] => stdClass Object
+                (
+                    [ip_address] => 186.220.199.62
+                )
+
+            [campaign_id:protected] => 
+            [coupon_amount:protected] => 0
+            [installments:protected] => 1
+            [token:protected] => 
+            [description:protected] => Pagamento do Pedido 6632
+            [notification_url:protected] => 
+            [issuer_id:protected] => 
+            [processing_mode:protected] => aggregator
+            [merchant_account_id:protected] => 
+            [merchant_number:protected] => 
+            [metadata:protected] => Array
+                (
+                )
+
+            [callback_url:protected] => 
+            [amount_refunded:protected] => 
+            [coupon_code:protected] => 
+            [barcode:protected] => stdClass Object
+                (
+                    [content] => 23791804900000069933380260513731447100633330
+                )
+
+            [marketplace_owner:protected] => 
+            [_last:protected] => 
+            [error:protected] => 
+            [_pagination_params:protected] => 
+            [_empty:protected] => 
+            [corporation_id] => 
+            [integrator_id] => 
+            [platform_id] => 
+        )
+
+    [error:protected] => 
+    [_pagination_params:protected] => 
+    [_empty:protected] => 
+    [corporation_id] => 
+    [integrator_id] => 
+    [platform_id] => 
+)
+</pre><br /><h2>Id encontrado: 6632. Baixa Iniciada :) </h2><br /><h2>Notificação não é de approved, e sim de pending. Saindo ... </h2>
+
+GET:
+<pre>Array
+(
+    [data_id] => 5337794149
+    [type] => payment
+)
+</pre>
+
+_______________________________________________________________END
+
+
+19/10/2019 4:52:43
+INICIO_______________________________________________________________
+
+LOG:<h1>Log Iniciada 19/10/2019 4:38: </h1>
+<br /><h2>Mercado Pago Envio de Status </h2><pre>Array
+(
+    [data_id] => 5337794149
+    [type] => payment
+)
+</pre><br /><h2>Mercado Pago Find_by_id </h2><pre>MercadoPago\Payment Object
+(
+    [id:protected] => 5337794149
+    [acquirer:protected] => 
+    [acquirer_reconciliation:protected] => Array
+        (
+        )
+
+    [site_id:protected] => 
+    [sponsor_id:protected] => 
+    [operation_type:protected] => regular_payment
+    [order_id:protected] => 
+    [order:protected] => stdClass Object
+        (
+            [id] => 1156290265
+            [type] => mercadopago
+        )
+
+    [binary_mode:protected] => 
+    [external_reference:protected] => 6632
+    [status:protected] => approved
+    [status_detail:protected] => accredited
+    [store_id:protected] => 
+    [taxes_amount:protected] => 0
+    [payment_type:protected] => 
+    [date_created:protected] => 2019-10-18T09:18:35.000-04:00
+    [last_modified:protected] => 
+    [live_mode:protected] => 1
+    [date_last_updated:protected] => 2019-10-19T03:43:38.000-04:00
+    [date_of_expiration:protected] => 2019-10-21T09:18:35.000-04:00
+    [deduction_schema:protected] => 
+    [date_approved:protected] => 2019-10-19T03:43:38.000-04:00
+    [money_release_date:protected] => 2019-10-22T03:43:38.000-04:00
+    [money_release_schema:protected] => 
+    [currency_id:protected] => BRL
+    [transaction_amount:protected] => 69,93
+    [transaction_amount_refunded:protected] => 0
+    [shipping_cost:protected] => 
+    [total_paid_amount:protected] => 
+    [finance_charge:protected] => 
+    [net_received_amount:protected] => 
+    [marketplace:protected] => 
+    [marketplace_fee:protected] => 
+    [reason:protected] => 
+    [payer:protected] => MercadoPago\Payer Object
+        (
+            [id:protected] => 377767592
+            [entity_type:protected] => 
+            [type:protected] => guest
+            [name:protected] => 
+            [surname:protected] => 
+            [first_name:protected] => Andrea 
+            [last_name:protected] => Santana
+            [email:protected] => edinhosantanacondeca@gmail.com
+            [date_created:protected] => 
+            [phone:protected] => stdClass Object
+                (
+                    [area_code] => 
+                    [extension] => 
+                    [number] => 
+                )
+
+            [identification:protected] => stdClass Object
+                (
+                    [number] => 35977739826
+                    [type] => CPF
+                )
+
+            [address:protected] => 
+            [_last:protected] => 
+            [error:protected] => 
+            [_pagination_params:protected] => 
+            [_empty:protected] => 
+            [operator_id] => 
+        )
+
+    [collector:protected] => 
+    [collector_id:protected] => 165408372
+    [counter_currency:protected] => 
+    [payment_method_id:protected] => bolbradesco
+    [payment_type_id:protected] => ticket
+    [pos_id:protected] => 
+    [transaction_details:protected] => stdClass Object
+        (
+            [acquirer_reference] => 
+            [external_resource_url] => https://www.mercadopago.com/mlb/payments/ticket/helper?payment_id=5337794149&payment_method_reference_id=5137314471&caller_id=377767592&hash=8d38a249-092e-49e0-bfb6-f147aff3ac42
+            [financial_institution] => 
+            [installment_amount] => 0
+            [net_received_amount] => 66,44
+            [overpaid_amount] => 0
+            [payable_deferral_period] => 
+            [payment_method_reference_id] => 5137314471
+            [total_paid_amount] => 69,93
+            [verification_code] => 5137314471
+        )
+
+    [fee_details:protected] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [amount] => 3,49
+                    [fee_payer] => collector
+                    [type] => mercadopago_fee
+                )
+
+        )
+
+    [differential_pricing_id:protected] => 
+    [application_fee:protected] => 
+    [authorization_code:protected] => 
+    [capture:protected] => 
+    [captured:protected] => 1
+    [card:protected] => MercadoPago\Card Object
+        (
+            [id:protected] => 
+            [customer_id:protected] => 
+            [expiration_month:protected] => 
+            [expiration_year:protected] => 
+            [first_six_digits:protected] => 
+            [last_four_digits:protected] => 
+            [payment_method:protected] => 
+            [security_code:protected] => 
+            [issuer:protected] => 
+            [cardholder:protected] => 
+            [date_created:protected] => 
+            [date_last_updated:protected] => 
+            [_last:protected] => 
+            [error:protected] => 
+            [_pagination_params:protected] => 
+            [_empty:protected] => 
+        )
+
+    [call_for_authorize_id:protected] => 
+    [statement_descriptor:protected] => 
+    [refunds:protected] => Array
+        (
+        )
+
+    [shipping_amount:protected] => 0
+    [additional_info:protected] => stdClass Object
+        (
+            [ip_address] => 186.220.199.62
+        )
+
+    [campaign_id:protected] => 
+    [coupon_amount:protected] => 0
+    [installments:protected] => 1
+    [token:protected] => 
+    [description:protected] => Pagamento do Pedido 6632
+    [notification_url:protected] => 
+    [issuer_id:protected] => 
+    [processing_mode:protected] => aggregator
+    [merchant_account_id:protected] => 
+    [merchant_number:protected] => 
+    [metadata:protected] => Array
+        (
+        )
+
+    [callback_url:protected] => 
+    [amount_refunded:protected] => 
+    [coupon_code:protected] => 
+    [barcode:protected] => stdClass Object
+        (
+            [content] => 23791804900000069933380260513731447100633330
+        )
+
+    [marketplace_owner:protected] => 
+    [_last:protected] => MercadoPago\Payment Object
+        (
+            [id:protected] => 5337794149
+            [acquirer:protected] => 
+            [acquirer_reconciliation:protected] => Array
+                (
+                )
+
+            [site_id:protected] => 
+            [sponsor_id:protected] => 
+            [operation_type:protected] => regular_payment
+            [order_id:protected] => 
+            [order:protected] => stdClass Object
+                (
+                    [id] => 1156290265
+                    [type] => mercadopago
+                )
+
+            [binary_mode:protected] => 
+            [external_reference:protected] => 6632
+            [status:protected] => approved
+            [status_detail:protected] => accredited
+            [store_id:protected] => 
+            [taxes_amount:protected] => 0
+            [payment_type:protected] => 
+            [date_created:protected] => 2019-10-18T09:18:35.000-04:00
+            [last_modified:protected] => 
+            [live_mode:protected] => 1
+            [date_last_updated:protected] => 2019-10-19T03:43:38.000-04:00
+            [date_of_expiration:protected] => 2019-10-21T09:18:35.000-04:00
+            [deduction_schema:protected] => 
+            [date_approved:protected] => 2019-10-19T03:43:38.000-04:00
+            [money_release_date:protected] => 2019-10-22T03:43:38.000-04:00
+            [money_release_schema:protected] => 
+            [currency_id:protected] => BRL
+            [transaction_amount:protected] => 69,93
+            [transaction_amount_refunded:protected] => 0
+            [shipping_cost:protected] => 
+            [total_paid_amount:protected] => 
+            [finance_charge:protected] => 
+            [net_received_amount:protected] => 
+            [marketplace:protected] => 
+            [marketplace_fee:protected] => 
+            [reason:protected] => 
+            [payer:protected] => MercadoPago\Payer Object
+                (
+                    [id:protected] => 377767592
+                    [entity_type:protected] => 
+                    [type:protected] => guest
+                    [name:protected] => 
+                    [surname:protected] => 
+                    [first_name:protected] => Andrea 
+                    [last_name:protected] => Santana
+                    [email:protected] => edinhosantanacondeca@gmail.com
+                    [date_created:protected] => 
+                    [phone:protected] => stdClass Object
+                        (
+                            [area_code] => 
+                            [extension] => 
+                            [number] => 
+                        )
+
+                    [identification:protected] => stdClass Object
+                        (
+                            [number] => 35977739826
+                            [type] => CPF
+                        )
+
+                    [address:protected] => 
+                    [_last:protected] => 
+                    [error:protected] => 
+                    [_pagination_params:protected] => 
+                    [_empty:protected] => 
+                    [operator_id] => 
+                )
+
+            [collector:protected] => 
+            [collector_id:protected] => 165408372
+            [counter_currency:protected] => 
+            [payment_method_id:protected] => bolbradesco
+            [payment_type_id:protected] => ticket
+            [pos_id:protected] => 
+            [transaction_details:protected] => stdClass Object
+                (
+                    [acquirer_reference] => 
+                    [external_resource_url] => https://www.mercadopago.com/mlb/payments/ticket/helper?payment_id=5337794149&payment_method_reference_id=5137314471&caller_id=377767592&hash=8d38a249-092e-49e0-bfb6-f147aff3ac42
+                    [financial_institution] => 
+                    [installment_amount] => 0
+                    [net_received_amount] => 66,44
+                    [overpaid_amount] => 0
+                    [payable_deferral_period] => 
+                    [payment_method_reference_id] => 5137314471
+                    [total_paid_amount] => 69,93
+                    [verification_code] => 5137314471
+                )
+
+            [fee_details:protected] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [amount] => 3,49
+                            [fee_payer] => collector
+                            [type] => mercadopago_fee
+                        )
+
+                )
+
+            [differential_pricing_id:protected] => 
+            [application_fee:protected] => 
+            [authorization_code:protected] => 
+            [capture:protected] => 
+            [captured:protected] => 1
+            [card:protected] => MercadoPago\Card Object
+                (
+                    [id:protected] => 
+                    [customer_id:protected] => 
+                    [expiration_month:protected] => 
+                    [expiration_year:protected] => 
+                    [first_six_digits:protected] => 
+                    [last_four_digits:protected] => 
+                    [payment_method:protected] => 
+                    [security_code:protected] => 
+                    [issuer:protected] => 
+                    [cardholder:protected] => 
+                    [date_created:protected] => 
+                    [date_last_updated:protected] => 
+                    [_last:protected] => 
+                    [error:protected] => 
+                    [_pagination_params:protected] => 
+                    [_empty:protected] => 
+                )
+
+            [call_for_authorize_id:protected] => 
+            [statement_descriptor:protected] => 
+            [refunds:protected] => Array
+                (
+                )
+
+            [shipping_amount:protected] => 0
+            [additional_info:protected] => stdClass Object
+                (
+                    [ip_address] => 186.220.199.62
+                )
+
+            [campaign_id:protected] => 
+            [coupon_amount:protected] => 0
+            [installments:protected] => 1
+            [token:protected] => 
+            [description:protected] => Pagamento do Pedido 6632
+            [notification_url:protected] => 
+            [issuer_id:protected] => 
+            [processing_mode:protected] => aggregator
+            [merchant_account_id:protected] => 
+            [merchant_number:protected] => 
+            [metadata:protected] => Array
+                (
+                )
+
+            [callback_url:protected] => 
+            [amount_refunded:protected] => 
+            [coupon_code:protected] => 
+            [barcode:protected] => stdClass Object
+                (
+                    [content] => 23791804900000069933380260513731447100633330
+                )
+
+            [marketplace_owner:protected] => 
+            [_last:protected] => 
+            [error:protected] => 
+            [_pagination_params:protected] => 
+            [_empty:protected] => 
+            [corporation_id] => 
+            [integrator_id] => 
+            [platform_id] => 
+        )
+
+    [error:protected] => 
+    [_pagination_params:protected] => 
+    [_empty:protected] => 
+    [corporation_id] => 
+    [integrator_id] => 
+    [platform_id] => 
+)
+</pre><br /><h2>Id encontrado: 6632. Baixa Iniciada :) </h2><br /><h2>Dados da fatura</h2><pre>Array
+(
+    [result] => success
+    [invoiceid] => 6632
+    [invoicenum] => 
+    [userid] => 153
+    [date] => 2019-10-05
+    [duedate] => 2019-10-09
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 69.93
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 69,93
+    [balance] => 69,93
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => boleto_itau_sem_registro
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 10341
+                            [type] => Hosting
+                            [relid] => 243
+                            [description] => TIH - Master  - institutovidasp.org.br (09/10/2019 - 08/11/2019)
+                            [amount] => 29.97
+                            [taxed] => 0
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 10357
+                            [type] => Hosting
+                            [relid] => 192
+                            [description] => TIH - Premium - processounificado.com.br (09/10/2019 - 08/11/2019)
+                            [amount] => 39.96
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+</pre><br /><h2>Atualizando a forma de pagamento para mercadopago </h2><pre>Array
+(
+    [result] => success
+    [invoiceid] => 6632
+)
+</pre><br /><h2>Dando a devida baixa no valor de R$ 69,93</h2><pre>Array
+(
+    [result] => success
+)
+</pre><br /><h2>Baixa ok. | InvoiceId->6632</h2><pre>Array
+(
+    [result] => success
+)
+</pre><br /><h2>Dados setados na Baixa</h2><pre>Array
+(
+    [invoiceid] => 6632
+    [transid] => 5337794149
+    [amount] => 69.93
+    [fees] => 3.49
+    [date] => 2019-10-19 4:43:38
+    [noemail] => 
+)
+</pre>
+
+GET:
+<pre>Array
+(
+    [data_id] => 5337794149
+    [type] => payment
+)
+</pre>
+
+_______________________________________________________________END

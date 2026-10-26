@@ -1,0 +1,363 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5227
+    [id] => 5227
+    [1] => 311
+    [userid] => 311
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-09-18
+    [date] => 2018-09-18
+    [4] => 2018-09-25
+    [duedate] => 2018-09-25
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 32.97
+    [subtotal] => 32.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 32.97
+    [total] => 32.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 311
+    [id] => 311
+    [uuid] => 1ecee16e-7041-4200-b481-bcb1590cca92
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [fullname] => IGOR DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA LTDA 
+    [email] => contatoasantos@hotmail.com
+    [address1] => Rua Washington Luiz Pereira de Souza, 101- sala 05
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-515
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 37541200 11944401200
+    [password] => $2y$10$kKjJ4Pl1R449BI48usHzF.NKVYXoxLqM6eHHuEgmwFJzqExLHkG5S
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113754120011944401200
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 1
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 28/09/2018 10:14<br>IP Address: 177.18.215.130<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11944401200
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23945373000130
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11944401200
+    [customfields3] => 23945373000130
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5227
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - sohana.com.br (25/09/2018 - 24/10/2018)
+                            [Description] => TIH - Master  - sohana.com.br (25/09/2018 - 24/10/2018)
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 330
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 3 dias de atraso
+                            [Description] => Juros por 3 dias de atraso
+                            [UnitPrice] => 33
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => IGOR DE ASSIS FATICA
+            [Email] => contatoasantos@hotmail.com
+            [Identity] => 23945373000130
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5227
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Master  - sohana.com.br (25/09/2018 - 24/10/2018)
+                            [description] => TIH - Master  - sohana.com.br (25/09/2018 - 24/10/2018)
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 330
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [$id] => 6
+                            [name] => Juros por 3 dias de atraso
+                            [description] => Juros por 3 dias de atraso
+                            [unitPrice] => 33
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 7
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 23945373000130
+            [fullName] => IGOR DE ASSIS FATICA
+            [email] => contatoasantos@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/e017cc3e-f668-45d6-8d7a-301bc0b2e349
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+28/09/2018 10:33:29
+INICIO_______________________________________________________________LOG:BEGIN:::28/09/2018 10:29<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 5227
+    [amount] => 3660
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => fcca2ee8184045e0a4bea6183530b301
+    [created_date] => 28/09/2018 10:29:30
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627GNBC6OA5B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2018 10:35:29
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->5227 | Result->success | ValorPago ->32.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 5227
+    [amount] => 3660
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => fcca2ee8184045e0a4bea6183530b301
+    [created_date] => 28/09/2018 10:29:30
+    [customer_name] => IGOR FATICA
+    [customer_phone] => 11944401200
+    [customer_identity] => 23945373000130
+    [customer_email] => contatoasantos@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 3
+    [payment_maskedcreditcard] => 374761*****8458
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627GNBC6OA5B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2018 10:22:36
+INICIO_______________________________________________________________LOG:BEGIN:::28/09/2018 10:36<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => fcca2ee8184045e0a4bea6183530b301
+    [amount] => 3660
+    [order_number] => 5227
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+28/09/2018 10:22:36
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => fcca2ee8184045e0a4bea6183530b301
+    [amount] => 3660
+    [order_number] => 5227
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

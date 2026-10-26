@@ -1,0 +1,246 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5132
+    [id] => 5132
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-27
+    [date] => 2018-08-27
+    [4] => 2018-08-29
+    [duedate] => 2018-08-29
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 195.00
+    [subtotal] => 195.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 195.00
+    [total] => 195.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 27/08/2018 16:23<br>IP Address: 186.2.74.207<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 9170813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 9170813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5132
+    [id] => 5132
+    [1] => 318
+    [userid] => 318
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-27
+    [date] => 2018-08-27
+    [4] => 2018-08-29
+    [duedate] => 2018-08-29
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 195.00
+    [subtotal] => 195.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 195.00
+    [total] => 195.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 318
+    [id] => 318
+    [uuid] => 6b55e412-fd5b-4713-a035-4f3ad62c39d1
+    [firstname] => José
+    [lastname] => Calheiros de souza
+    [fullname] => José Calheiros de souza
+    [companyname] => Turbomec Turbinas
+    [email] => turbomecturbinas@hotmail.com
+    [address1] => Rua Cleide Monteiro, 123
+    [address2] => Tabuleiro do Martins
+    [city] => Maceió
+    [fullstate] => AL
+    [state] => AL
+    [postcode] => 57081-128
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => +591 70813232
+    [password] => $2y$10$c6eTcJVgQGj6SD.g6IzEieEXGb6Go6D8QcLfueyO036jVhTgVL7FO
+    [statecode] => AL
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.59170813232
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 03/09/2018 11:01<br>IP Address: 186.27.73.78<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 9170813232
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 00773503404
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 9170813232
+    [customfields3] => 00773503404
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

@@ -1,0 +1,253 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4608
+    [id] => 4608
+    [1] => 311
+    [userid] => 311
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-04-18
+    [date] => 2018-04-18
+    [4] => 2018-04-18
+    [duedate] => 2018-04-18
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 65.94
+    [subtotal] => 65.94
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 65.94
+    [total] => 65.94
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 311
+    [id] => 311
+    [uuid] => 1ecee16e-7041-4200-b481-bcb1590cca92
+    [firstname] => IGOR
+    [lastname] => DE ASSIS FATICA
+    [fullname] => IGOR DE ASSIS FATICA
+    [companyname] => SOHANA INCORPORADORA EIRELI 
+    [email] => contatoasantos@hotmail.com
+    [address1] => Rua Washington Luiz Pereira de Souza, 101- sala 05
+    [address2] => Centro
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07400-515
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 37541200 11944401200
+    [password] => $2y$10$kKjJ4Pl1R449BI48usHzF.NKVYXoxLqM6eHHuEgmwFJzqExLHkG5S
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113754120011944401200
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 18/04/2018 16:43<br>IP Address: 168.227.12.48<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11944401200
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 23945373000130
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11944401200
+    [customfields3] => 23945373000130
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4608
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - sohana.com.br (18/04/2018 - 17/05/2018)
+                            [Description] => TIH - Master  - sohana.com.br (18/04/2018 - 17/05/2018)
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - imoveisasantos.com.br (18/04/2018 - 17/05/2018)
+                            [Description] => TIH - Master  - imoveisasantos.com.br (18/04/2018 - 17/05/2018)
+                            [UnitPrice] => 3297
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => IGOR DE ASSIS FATICA
+            [Email] => contatoasantos@hotmail.com
+            [Identity] => 23945373000130
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4608
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Master  - sohana.com.br (18/04/2018 - 17/05/2018)
+                            [description] => TIH - Master  - sohana.com.br (18/04/2018 - 17/05/2018)
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => TIH - Master  - imoveisasantos.com.br (18/04/2018 - 17/05/2018)
+                            [description] => TIH - Master  - imoveisasantos.com.br (18/04/2018 - 17/05/2018)
+                            [unitPrice] => 3297
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 6
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 7
+            [identity] => 23945373000130
+            [fullName] => IGOR DE ASSIS FATICA
+            [email] => contatoasantos@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 8
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 9
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/be4e2df9-837f-4abd-b958-a80f9a3bdfbb
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

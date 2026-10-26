@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Suporte - GRUPO THX</title>
+    <!-- Bootstrap -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Styling -->
+    <link href="/templates/six-THX/css/overrides.css" rel="stylesheet">
+    <link href="/templates/six-THX/css/styles.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <!-- Custom Styling -->
+    <link rel="stylesheet" href="/templates/six-THX/css/custom.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <section id="header">
+        <div class="container">
+            <a href="/index.php"><img src="/templates/six-THX/img/logo.png" alt="GRUPO THX" /></a>
+        </div>
+    </section>
+    <section id="main-menu">
+        <nav id="nav" class="navbar navbar-default navbar-main" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Menu</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Manu 1</a></li>
+                        <li><a href="#">Manu 2</a></li>
+                        <li><a href="#">Manu 3</a></li>
+                        <li><a href="#">Manu 4</a></li>
+                        <li><a href="#">Manu 5</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </nav>
+    </section>
+    <section id="main-body" class="container">
+        <div class="row">
+            <div class="col-xs-12 main-content">
+                CONTEUDO
+            </div>
+                </div>
+        <div class="clearfix"></div>
+    </section>
+    <section id="footer">
+        <p>Copyright &copy; 2016 TiHospedagem - Uma empresa do <a href="http://grupothx.com.br" target="_blank">Grupo THX</a></p>
+    </section>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5086
+    [id] => 5086
+    [1] => 124
+    [userid] => 124
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-16
+    [date] => 2018-08-16
+    [4] => 2018-08-23
+    [duedate] => 2018-08-23
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 124
+    [id] => 124
+    [uuid] => 5ad5e741-e539-4e1b-b759-c58015a5bfb7
+    [firstname] => Emi
+    [lastname] => Shimada
+    [fullname] => Emi Shimada
+    [companyname] => Foto Criação
+    [email] => emifotografa@gmail.com
+    [address1] => Rua salvador risoleu, 118
+    [address2] => jd peri peri
+    [city] => sao paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05536020
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 35014132
+    [password] => $2y$10$M9pOg5zmqDe0PqegplWm2eH5HhBqI7PowgFJM03lM7Us.6YrJnCEe
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1135014132
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 23/08/2018 09:56<br>IP Address: 177.148.246.0<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11984821337
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11984821337
+    [customfields3] => 
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 5086
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - fotocriacao.com.br (23/08/2018 - 22/09/2018)
+                            [Description] => TIH - Master  - fotocriacao.com.br (23/08/2018 - 22/09/2018)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Emi Shimada
+            [Email] => emifotografa@gmail.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 5086
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Master  - fotocriacao.com.br (23/08/2018 - 22/09/2018)
+                            [description] => TIH - Master  - fotocriacao.com.br (23/08/2018 - 22/09/2018)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [fullName] => Emi Shimada
+            [email] => emifotografa@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/aae065f0-1615-4eab-8a53-51f3044562de
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+23/08/2018 9:48:57
+INICIO_______________________________________________________________LOG:BEGIN:::23/08/2018 9:57<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 5086
+    [amount] => 2997
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => a1aaf44faff24fce8fc222157830a89f
+    [created_date] => 23/08/2018 09:57:45
+    [customer_name] => Emi Shimada
+    [customer_phone] => 11984821337
+    [customer_identity] => 55423094100
+    [customer_email] => emifotografa@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552236******1539
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627FLMT7TBJB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+23/08/2018 9:52:57
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->5086 | Result->success | ValorPago ->29.97 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 5086
+    [amount] => 2997
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => a1aaf44faff24fce8fc222157830a89f
+    [created_date] => 23/08/2018 09:57:45
+    [customer_name] => Emi Shimada
+    [customer_phone] => 11984821337
+    [customer_identity] => 55423094100
+    [customer_email] => emifotografa@gmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 552236******1539
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627FLMT7TBJB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+23/08/2018 10:32:06
+INICIO_______________________________________________________________LOG:BEGIN:::23/08/2018 10:06<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => a1aaf44faff24fce8fc222157830a89f
+    [amount] => 2997
+    [order_number] => 5086
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+23/08/2018 10:32:06
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => a1aaf44faff24fce8fc222157830a89f
+    [amount] => 2997
+    [order_number] => 5086
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

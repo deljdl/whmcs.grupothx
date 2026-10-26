@@ -1,0 +1,97 @@
+
+POST
+<pre>Array
+(
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT01MjQ5JmZpPTM5NTI0OWRkfm1vcZEDU7w5zfUU6Qby3qKltA8=
+    [__EVENTVALIDATION] => /wEWBgLt89CMCwLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5Bcv/42Doj+sRBjxfLblUGJhFkI1F
+    [DC] => U72E55W218M210A3U142F60A100W111D52W51I150K138M242G37D52F231Q146E255E82V150O78J81I86Q110S73K107U60S154K224Y51U223F118R8Y22I40W
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00395249
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+)
+</pre>
+
+GET
+<pre>Array
+(
+    [i] => 5249
+    [fi] => 395249
+)
+</pre>
+
+REQUEST de dados
+<pre>Array
+(
+    [i] => 5249
+    [fi] => 395249
+    [__VIEWSTATE] => /wEPDwULLTE1MDM1MDg5NTgPZBYCAgMPFgIeBmFjdGlvbgVSaHR0cHM6Ly90aWhvc3BlZGFnZW0uY29tLmJyL21vZHVsZXMvZ2F0ZXdheXMvY2FsbGJhY2svaXRhdVJlVC5waHA/aT01MjQ5JmZpPTM5NTI0OWRkfm1vcZEDU7w5zfUU6Qby3qKltA8=
+    [__EVENTVALIDATION] => /wEWBgLt89CMCwLc757wDALGiujeCQK4j/S9CwL9zpaaBwKb1oO5Bcv/42Doj+sRBjxfLblUGJhFkI1F
+    [DC] => U72E55W218M210A3U142F60A100W111D52W51I150K138M242G37D52F231Q146E255E82V150O78J81I86Q110S73K107U60S154K224Y51U223F118R8Y22I40W
+    [codEmp] => J0194961710001810000024294
+    [pedido] => 00395249
+    [chave] => 6JATHAR762NO5858
+    [tipPag] => 02
+    [jv_enter_ts_heIAoGOw2S] => 1538417277662
+    [jv_visits_count_heIAoGOw2S] => 6
+    [jv_utm_heIAoGOw2S] => 
+    [jv_invitation_time_heIAoGOw2S] => 1538417298611
+    [jv_close_time_heIAoGOw2S] => 1538417648368
+    [WHMCSeWdrAiYR38h0] => 431e978ba134b893d63a1e98ab0115bc
+    [jv_pages_count_heIAoGOw2S] => 2
+    [jv_callback_ping_response_heIAoGOw2S] => {"ok":false}
+)
+</pre>
+
+SERVER
+<pre>Array
+(
+    [CONTENT_LENGTH] => 525
+    [CONTENT_TYPE] => application/x-www-form-urlencoded
+    [DOCUMENT_ROOT] => /home/tihosped/public_html
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [HTTPS] => on
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => en-US,en;q=0.9,pt;q=0.8,pt-BR;q=0.7
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_COOKIE] => jv_enter_ts_heIAoGOw2S=1538417277662; jv_visits_count_heIAoGOw2S=6; jv_utm_heIAoGOw2S=; jv_invitation_time_heIAoGOw2S=1538417298611; jv_close_time_heIAoGOw2S=1538417648368; WHMCSeWdrAiYR38h0=431e978ba134b893d63a1e98ab0115bc; jv_pages_count_heIAoGOw2S=2; jv_callback_ping_response_heIAoGOw2S=%7B%22ok%22%3Afalse%7D
+    [HTTP_HOST] => tihospedagem.com.br
+    [HTTP_ORIGIN] => https://shopline.itau.com.br
+    [HTTP_REFERER] => https://shopline.itau.com.br/shopline/Volta.aspx?codemp=J0194961710001810000024294&idloja=34902&npedido=00395249
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36
+    [HTTP_X_HTTPS] => 1
+    [PATH] => /bin:/usr/bin
+    [QUERY_STRING] => i=5249&fi=395249
+    [REDIRECT_STATUS] => 200
+    [REMOTE_ADDR] => 177.143.66.57
+    [REMOTE_PORT] => 55741
+    [REQUEST_METHOD] => POST
+    [REQUEST_URI] => /modules/gateways/callback/itauReT.php?i=5249&fi=395249
+    [SCRIPT_FILENAME] => /home/tihosped/public_html/modules/gateways/callback/itauReT.php
+    [SCRIPT_NAME] => /modules/gateways/callback/itauReT.php
+    [SCRIPT_URI] => https://tihospedagem.com.br/modules/gateways/callback/itauReT.php
+    [SCRIPT_URL] => /modules/gateways/callback/itauReT.php
+    [SERVER_ADDR] => 162.144.68.98
+    [SERVER_ADMIN] => webmaster@tihospedagem.com.br
+    [SERVER_NAME] => tihospedagem.com.br
+    [SERVER_PORT] => 443
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache/2.2.34 (Unix) mod_ssl/2.2.34 OpenSSL/1.0.1e-fips DAV/2 mod_bwlimited/1.4
+    [SSL_TLS_SNI] => tihospedagem.com.br
+    [TZ] => America/Sao_Paulo
+    [UNIQUE_ID] => W7JkCaKQQaAABAIES3YAAAD2
+    [PHP_SELF] => /modules/gateways/callback/itauReT.php
+    [REQUEST_TIME_FLOAT] => 1538417673.28
+    [REQUEST_TIME] => 1538417673
+    [argv] => Array
+        (
+            [0] => i=5249&fi=395249
+        )
+
+    [argc] => 1
+)
+</pre>

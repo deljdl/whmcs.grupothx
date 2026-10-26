@@ -1,0 +1,560 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3671
+    [id] => 3671
+    [1] => 243
+    [userid] => 243
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-08-07
+    [date] => 2017-08-07
+    [4] => 2017-11-18
+    [duedate] => 2017-11-18
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 119.88
+    [subtotal] => 119.88
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 119.88
+    [total] => 119.88
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 243
+    [id] => 243
+    [uuid] => 9160c458-8074-4956-9fdb-eba4fb3ed8ed
+    [firstname] => Adriane
+    [lastname] => Becker
+    [fullname] => Adriane Becker
+    [companyname] => adrianebecker.com.br
+    [email] => arquiteta.adrianebecker@gmail.com
+    [address1] => Avenida Internacional (Etn Pacaembú), 322
+    [address2] => São Bento
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07438-720
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11964291833
+    [password] => $2y$10$vel8Ymk/F8blHPLP5zwcn.i/QtHZfnaeqYGaepYHeny3rnjMIyHX6
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11964291833
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 07/08/2017 14:38<br>IP Address: 186.214.103.24<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11964291833
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 14299189850
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11964291833
+    [customfields3] => 14299189850
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3671
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - adrianebecker.com.br (18/08/2017 - 17/09/2017)
+                            [Description] => TIH - Master  - adrianebecker.com.br (18/08/2017 - 17/09/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - adrianebecker.com.br (18/09/2017 - 17/10/2017)
+                            [Description] => TIH - Master  - adrianebecker.com.br (18/09/2017 - 17/10/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - adrianebecker.com.br (18/10/2017 - 17/11/2017)
+                            [Description] => TIH - Master  - adrianebecker.com.br (18/10/2017 - 17/11/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - adrianebecker.com.br (18/11/2017 - 17/12/2017)
+                            [Description] => TIH - Master  - adrianebecker.com.br (18/11/2017 - 17/12/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Adriane Becker
+            [Email] => arquiteta.adrianebecker@gmail.com
+            [Identity] => 14299189850
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3671
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master  - adrianebecker.com.br (18/08/2017 - 17/09/2017)
+                            [description] => TIH - Master  - adrianebecker.com.br (18/08/2017 - 17/09/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - Master  - adrianebecker.com.br (18/09/2017 - 17/10/2017)
+                            [description] => TIH - Master  - adrianebecker.com.br (18/09/2017 - 17/10/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => TIH - Master  - adrianebecker.com.br (18/10/2017 - 17/11/2017)
+                            [description] => TIH - Master  - adrianebecker.com.br (18/10/2017 - 17/11/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => TIH - Master  - adrianebecker.com.br (18/11/2017 - 17/12/2017)
+                            [description] => TIH - Master  - adrianebecker.com.br (18/11/2017 - 17/12/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 14299189850
+            [fullName] => Adriane Becker
+            [email] => arquiteta.adrianebecker@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/004885e3-66ae-460e-8cd6-cfea73368a06
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3671
+    [id] => 3671
+    [1] => 243
+    [userid] => 243
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-08-07
+    [date] => 2017-08-07
+    [4] => 2017-11-18
+    [duedate] => 2017-11-18
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 119.88
+    [subtotal] => 119.88
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 119.88
+    [total] => 119.88
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 243
+    [id] => 243
+    [uuid] => 9160c458-8074-4956-9fdb-eba4fb3ed8ed
+    [firstname] => Adriane
+    [lastname] => Becker
+    [fullname] => Adriane Becker
+    [companyname] => adrianebecker.com.br
+    [email] => arquiteta.adrianebecker@gmail.com
+    [address1] => Avenida Internacional (Etn Pacaembú), 322
+    [address2] => São Bento
+    [city] => Arujá
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07438-720
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11964291833
+    [password] => $2y$10$vel8Ymk/F8blHPLP5zwcn.i/QtHZfnaeqYGaepYHeny3rnjMIyHX6
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11964291833
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/09/2017 11:22<br>IP Address: 177.159.89.160<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11964291833
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 14299189850
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11964291833
+    [customfields3] => 14299189850
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3671
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - adrianebecker.com.br (18/08/2017 - 17/09/2017)
+                            [Description] => TIH - Master  - adrianebecker.com.br (18/08/2017 - 17/09/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - adrianebecker.com.br (18/09/2017 - 17/10/2017)
+                            [Description] => TIH - Master  - adrianebecker.com.br (18/09/2017 - 17/10/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - adrianebecker.com.br (18/10/2017 - 17/11/2017)
+                            [Description] => TIH - Master  - adrianebecker.com.br (18/10/2017 - 17/11/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - adrianebecker.com.br (18/11/2017 - 17/12/2017)
+                            [Description] => TIH - Master  - adrianebecker.com.br (18/11/2017 - 17/12/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Adriane Becker
+            [Email] => arquiteta.adrianebecker@gmail.com
+            [Identity] => 14299189850
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3671
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master  - adrianebecker.com.br (18/08/2017 - 17/09/2017)
+                            [description] => TIH - Master  - adrianebecker.com.br (18/08/2017 - 17/09/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => TIH - Master  - adrianebecker.com.br (18/09/2017 - 17/10/2017)
+                            [description] => TIH - Master  - adrianebecker.com.br (18/09/2017 - 17/10/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => TIH - Master  - adrianebecker.com.br (18/10/2017 - 17/11/2017)
+                            [description] => TIH - Master  - adrianebecker.com.br (18/10/2017 - 17/11/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [name] => TIH - Master  - adrianebecker.com.br (18/11/2017 - 17/12/2017)
+                            [description] => TIH - Master  - adrianebecker.com.br (18/11/2017 - 17/12/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 14299189850
+            [fullName] => Adriane Becker
+            [email] => arquiteta.adrianebecker@gmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/436f3c87-b780-4850-8c15-f4a5bb0c092d
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>

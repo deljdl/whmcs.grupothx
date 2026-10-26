@@ -1,0 +1,661 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4560
+    [id] => 4560
+    [1] => 303
+    [userid] => 303
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-04-06
+    [date] => 2018-04-06
+    [4] => 2018-04-13
+    [duedate] => 2018-04-13
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 43.96
+    [subtotal] => 43.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 43.96
+    [total] => 43.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 303
+    [id] => 303
+    [uuid] => 5860f80d-f287-4e58-9c9c-cfeaf1357183
+    [firstname] => Fernando 
+    [lastname] => Vilela Soares
+    [fullname] => Fernando  Vilela Soares
+    [companyname] => Play More Games
+    [email] => fernando_vilelas@hotmail.com
+    [address1] => Rua Catumbi 1213 ap 1004
+    [address2] => Catumbi
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03021-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11984820886
+    [password] => $2y$10$aDhPO3NDw6ssfiDMM7C5YOTiwRLvP9ctufZT7To.ZnbFD9bRfG5.6
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11984820886
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 06/04/2018 13:36<br>IP Address: 177.79.102.23<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11984820886
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29570545000115
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11984820886
+    [customfields3] => 29570545000115
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4560
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Premium - playmoregames.com.br (13/04/2018 - 12/05/2018)
+                            [Description] => TIH - Premium - playmoregames.com.br (13/04/2018 - 12/05/2018)
+                            [UnitPrice] => 4396
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Fernando  Vilela Soares
+            [Email] => fernando_vilelas@hotmail.com
+            [Identity] => 29570545000115
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4560
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Premium - playmoregames.com.br (13/04/2018 - 12/05/2018)
+                            [description] => TIH - Premium - playmoregames.com.br (13/04/2018 - 12/05/2018)
+                            [unitPrice] => 4396
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 5
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 6
+            [identity] => 29570545000115
+            [fullName] => Fernando  Vilela Soares
+            [email] => fernando_vilelas@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 7
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 8
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/1eb910a5-5ecf-49ad-9067-7bccbd6427aa
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4560
+    [id] => 4560
+    [1] => 303
+    [userid] => 303
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-04-06
+    [date] => 2018-04-06
+    [4] => 2018-04-13
+    [duedate] => 2018-04-13
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 43.96
+    [subtotal] => 43.96
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 43.96
+    [total] => 43.96
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 303
+    [id] => 303
+    [uuid] => 5860f80d-f287-4e58-9c9c-cfeaf1357183
+    [firstname] => Fernando 
+    [lastname] => Vilela Soares
+    [fullname] => Fernando  Vilela Soares
+    [companyname] => Play More Games
+    [email] => fernando_vilelas@hotmail.com
+    [address1] => Rua Catumbi 1213 ap 1004
+    [address2] => Catumbi
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 03021-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11984820886
+    [password] => $2y$10$aDhPO3NDw6ssfiDMM7C5YOTiwRLvP9ctufZT7To.ZnbFD9bRfG5.6
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11984820886
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/04/2018 22:00<br>IP Address: 187.109.40.194<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11984820886
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29570545000115
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11984820886
+    [customfields3] => 29570545000115
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 4560
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Premium - playmoregames.com.br (13/04/2018 - 12/05/2018)
+                            [Description] => TIH - Premium - playmoregames.com.br (13/04/2018 - 12/05/2018)
+                            [UnitPrice] => 4396
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 440
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 4 dias de atraso
+                            [Description] => Juros por 4 dias de atraso
+                            [UnitPrice] => 58
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Fernando  Vilela Soares
+            [Email] => fernando_vilelas@hotmail.com
+            [Identity] => 29570545000115
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [$id] => 1
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 4560
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [$id] => 2
+            [discount] => stdClass Object
+                (
+                    [$id] => 3
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [$id] => 4
+                            [name] => TIH - Premium - playmoregames.com.br (13/04/2018 - 12/05/2018)
+                            [description] => TIH - Premium - playmoregames.com.br (13/04/2018 - 12/05/2018)
+                            [unitPrice] => 4396
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [$id] => 5
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 440
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [$id] => 6
+                            [name] => Juros por 4 dias de atraso
+                            [description] => Juros por 4 dias de atraso
+                            [unitPrice] => 58
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [$id] => 7
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [$id] => 8
+            [identity] => 29570545000115
+            [fullName] => Fernando  Vilela Soares
+            [email] => fernando_vilelas@hotmail.com
+        )
+
+    [options] => stdClass Object
+        (
+            [$id] => 9
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [$id] => 10
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/ba47eac9-c90a-4a49-a942-93672502a63f
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+17/04/2018 22:29:02
+INICIO_______________________________________________________________LOG:BEGIN:::17/04/2018 22:02<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 4560
+    [amount] => 4894
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => b0e09b88967941cf9292e00671fb6467
+    [created_date] => 17/04/2018 22:02:27
+    [customer_name] => Fernando Soares
+    [customer_phone] => 11984820886
+    [customer_identity] => 29570545000115
+    [customer_email] => fernando_vilelas@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 546056******0077
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627BV1C9L7HB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+17/04/2018 22:30:02
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->4560 | Result->success | ValorPago ->43.96 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 4560
+    [amount] => 4894
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => b0e09b88967941cf9292e00671fb6467
+    [created_date] => 17/04/2018 22:02:27
+    [customer_name] => Fernando Soares
+    [customer_phone] => 11984820886
+    [customer_identity] => 29570545000115
+    [customer_email] => fernando_vilelas@hotmail.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 546056******0077
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777627BV1C9L7HB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+17/04/2018 22:50:06
+INICIO_______________________________________________________________LOG:BEGIN:::17/04/2018 22:06<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => b0e09b88967941cf9292e00671fb6467
+    [amount] => 4894
+    [order_number] => 4560
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+17/04/2018 22:50:06
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => b0e09b88967941cf9292e00671fb6467
+    [amount] => 4894
+    [order_number] => 4560
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+17/04/2018 22:51:06
+INICIO_______________________________________________________________LOG:BEGIN:::17/04/2018 22:06<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => b0e09b88967941cf9292e00671fb6467
+    [amount] => 4894
+    [order_number] => 4560
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+17/04/2018 22:51:06
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => b0e09b88967941cf9292e00671fb6467
+    [amount] => 4894
+    [order_number] => 4560
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+17/04/2018 22:51:06
+INICIO_______________________________________________________________LOG:BEGIN:::17/04/2018 22:06<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => b0e09b88967941cf9292e00671fb6467
+    [amount] => 4894
+    [order_number] => 4560
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+17/04/2018 22:51:06
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => b0e09b88967941cf9292e00671fb6467
+    [amount] => 4894
+    [order_number] => 4560
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

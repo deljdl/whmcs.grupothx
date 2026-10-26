@@ -1,0 +1,349 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3897
+    [id] => 3897
+    [1] => 260
+    [userid] => 260
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-10-09
+    [date] => 2017-10-09
+    [4] => 2017-10-14
+    [duedate] => 2017-10-14
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 40.00
+    [subtotal] => 40.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 40.00
+    [total] => 40.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 260
+    [id] => 260
+    [uuid] => 0e11ec5f-a484-4fcf-8e2f-216e6055c683
+    [firstname] => Sérgio
+    [lastname] => da Silva Cardoso
+    [fullname] => Sérgio da Silva Cardoso
+    [companyname] => Moleca Calçados
+    [email] => contato@sejaumafranqueada.com.br
+    [address1] => Estrada de São Bento, 1710
+    [address2] => Vila Ferlópolis
+    [city] => Itaquaquecetuba
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08597-000
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 01146443301 11986947921
+    [password] => $2y$10$gap6l7OXKSVPeGaVguD7FOB3D1jY4zxB4X2SaNXYDiYxNG3n.XiS2
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114644330111986947921
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 11/10/2017 22:04<br>IP Address: 200.171.172.247<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11986947921
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 16022119812
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11986947921
+    [customfields3] => 16022119812
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3897
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Especial - sejaumafranqueada.com.br (14/10/2017 - 13/11/2017)
+                            [Description] => TIH - Especial - sejaumafranqueada.com.br (14/10/2017 - 13/11/2017)
+                            [UnitPrice] => 4000
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Sérgio da Silva Cardoso
+            [Email] => contato@sejaumafranqueada.com.br
+            [Identity] => 16022119812
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3897
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Especial - sejaumafranqueada.com.br (14/10/2017 - 13/11/2017)
+                            [description] => TIH - Especial - sejaumafranqueada.com.br (14/10/2017 - 13/11/2017)
+                            [unitPrice] => 4000
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 16022119812
+            [fullName] => Sérgio da Silva Cardoso
+            [email] => contato@sejaumafranqueada.com.br
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/a60a0cde-5e0c-45d6-86e6-d8758363d6fd
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+11/10/2017 22:34:07
+INICIO_______________________________________________________________LOG:BEGIN:::11/10/2017 22:07<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3897
+    [amount] => 4000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 1a838e5015f14f2997986e618c70a875
+    [created_date] => 11/10/2017 22:07:31
+    [customer_name] => Sérgio Cardoso
+    [customer_phone] => 11986947921
+    [customer_identity] => 16022119812
+    [customer_email] => contato@sejaumafranqueada.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 542820******3143
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626K03TMHQFB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+11/10/2017 22:36:07
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->3897 | Result->success | ValorPago ->40.00 | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 3897
+    [amount] => 4000
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 1a838e5015f14f2997986e618c70a875
+    [created_date] => 11/10/2017 22:07:31
+    [customer_name] => Sérgio Cardoso
+    [customer_phone] => 11986947921
+    [customer_identity] => 16022119812
+    [customer_email] => contato@sejaumafranqueada.com.br
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 2
+    [payment_maskedcreditcard] => 542820******3143
+    [payment_installments] => 1
+    [payment_status] => 2
+    [tid] => 10760777626K03TMHQFB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+11/10/2017 22:13:10
+INICIO_______________________________________________________________LOG:BEGIN:::11/10/2017 22:10<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1a838e5015f14f2997986e618c70a875
+    [amount] => 4000
+    [order_number] => 3897
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+11/10/2017 22:13:10
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1a838e5015f14f2997986e618c70a875
+    [amount] => 4000
+    [order_number] => 3897
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+11/10/2017 22:14:10
+INICIO_______________________________________________________________LOG:BEGIN:::11/10/2017 22:10<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1a838e5015f14f2997986e618c70a875
+    [amount] => 4000
+    [order_number] => 3897
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+11/10/2017 22:14:10
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 1a838e5015f14f2997986e618c70a875
+    [amount] => 4000
+    [order_number] => 3897
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

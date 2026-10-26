@@ -1,0 +1,120 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5019
+    [id] => 5019
+    [1] => 158
+    [userid] => 158
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-07-30
+    [date] => 2018-07-30
+    [4] => 2018-08-05
+    [duedate] => 2018-08-05
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 239.76
+    [subtotal] => 239.76
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 239.76
+    [total] => 239.76
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 158
+    [id] => 158
+    [uuid] => ea6900e4-daea-4e73-8f4a-9c0c3d7c5577
+    [firstname] => Leonardo 
+    [lastname] => Henrique Silva Fagundes
+    [fullname] => Leonardo  Henrique Silva Fagundes
+    [companyname] => Leonardo Fagundes Treinamento Esportivo
+    [email] => leohsf31@hotmail.com
+    [address1] => Avenida Cristiano Machado, n.1420, apto.303
+    [address2] => 
+    [city] => Cidade Nova
+    [fullstate] => MG
+    [state] => MG
+    [postcode] => 
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (31)3468-5020
+    [password] => a48c94e6906c2e25c590954b67d42fcc:)adE(
+    [statecode] => MG
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.3134685020
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/08/2018 19:25<br>IP Address: 170.79.106.174<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 060.545.806-55
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 060.545.806-55
+    [customfields4] => 
+)
+</pre>

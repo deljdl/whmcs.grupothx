@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5073
+    [id] => 5073
+    [1] => 238
+    [userid] => 238
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-08-13
+    [date] => 2018-08-13
+    [4] => 2018-08-19
+    [duedate] => 2018-08-19
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 238
+    [id] => 238
+    [uuid] => f70ba1c3-27ff-447f-8e71-4adb54e0c7dc
+    [firstname] => Fabiana
+    [lastname] => Boaventura Avelar Nogueira
+    [fullname] => Fabiana Boaventura Avelar Nogueira
+    [companyname] => Bia Avelar Estética Facial e Corporal
+    [email] => fabi_avelar@hotmail.com
+    [address1] => Avenida Louraci Della Nina Tavares, 221
+    [address2] => Loteamento Mogilar
+    [city] => Mogi da Cruzes
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 08773-650
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11996429521 - 11999070543
+    [password] => $2y$10$su5/z9AfZZDny35qywzKSObTEVh61j.hANKxhbcZkUkHy3jJDklfq
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1199642952111999070543
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/08/2018 13:06<br>IP Address: 177.143.106.20<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11996429521
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 77994345549
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11996429521
+    [customfields3] => 77994345549
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

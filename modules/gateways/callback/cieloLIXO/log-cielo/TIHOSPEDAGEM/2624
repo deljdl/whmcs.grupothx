@@ -1,0 +1,339 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 2624
+    [id] => 2624
+    [1] => 241
+    [userid] => 241
+    [2] => 
+    [invoicenum] => 
+    [3] => 2016-11-03
+    [date] => 2016-11-03
+    [4] => 2016-11-03
+    [duedate] => 2016-11-03
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 694.00
+    [subtotal] => 694.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 694.00
+    [total] => 694.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 241
+    [id] => 241
+    [uuid] => cc3f754b-088a-4f81-855d-09582f8dc355
+    [firstname] => Edson
+    [lastname] => Gimenes
+    [fullname] => Edson Gimenes
+    [companyname] => Selos Brasil
+    [email] => edsgim@outlook.com
+    [address1] => Rua Lucinda Fernandes Carlos, 421
+    [address2] => Parque Continental III
+    [city] => Guarulhos
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 07085-310
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1149663933 - 11962842502
+    [password] => $2y$10$CaFuSu4VOTTqoWOp6C8tfuAbIIV8Hs5m3bbb14jO3dCDI5MNg7BtK
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.114966393311962842502
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => cielo
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 03/11/2016 09:22<br>IP Address: 177.157.129.178<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11962842502
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 29007144863
+                )
+
+        )
+
+    [customfields2] => 11962842502
+    [customfields3] => 29007144863
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 2624
+    [SoftDescriptor] => 2624
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Site Básico - selosbrasil.com
+                            [Description] => Site Básico - selosbrasil.com
+                            [UnitPrice] => 64900
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Registro de domínio - selosbrasil.com - 1 Ano(s) (03/11/2016 - 02/11/2017)
+                            [Description] => Registro de domínio - selosbrasil.com - 1 Ano(s) (03/11/2016 - 02/11/2017)
+                            [UnitPrice] => 4500
+                            [Quantity] => 1
+                            [Type] => Digital
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [BoletoDiscount] => 0
+            [DebitDiscount] => 0
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 00000000002624
+            [FullName] => Edson Gimenes
+            [Email] => edsgim@outlook.com
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [orderNumber] => 2624
+    [softDescriptor] => 2624
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => Site Básico - selosbrasil.com
+                            [description] => Site Básico - selosbrasil.com
+                            [unitPrice] => 64900
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Registro de domínio - selosbrasil.com - 1 Ano(s) (03/11/2016 - 02/11/2017)
+                            [description] => Registro de domínio - selosbrasil.com - 1 Ano(s) (03/11/2016 - 02/11/2017)
+                            [unitPrice] => 4500
+                            [quantity] => 1
+                            [type] => Digital
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [payment] => stdClass Object
+        (
+            [boletoDiscount] => 0
+            [debitDiscount] => 0
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 00000000002624
+            [fullName] => Edson Gimenes
+            [email] => edsgim@outlook.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/3d972d5d-7c54-4be7-a303-9bdc0d87cb47
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+03/11/2016 9:03:25
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [order_number] => 2624
+    [amount] => 69400
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 3ec1da41c5334490a4b15197747bfa32
+    [created_date] => 03/11/2016 12:25:01
+    [customer_name] => Edson Gimenes
+    [customer_phone] => 1149663933
+    [customer_identity] => 29007144863
+    [customer_email] => edsgim@outlook.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 490172******5328
+    [payment_installments] => 6
+    [payment_status] => 2
+    [tid] => 10760777625NIQ1J9V1B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+03/11/2016 9:05:25
+INICIO_______________________________________________________________LOG:Baixa ok. | Userid->241 | Result->success | Message->
+
+POST:
+<pre>Array
+(
+    [order_number] => 2624
+    [amount] => 69400
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 3ec1da41c5334490a4b15197747bfa32
+    [created_date] => 03/11/2016 12:25:01
+    [customer_name] => Edson Gimenes
+    [customer_phone] => 1149663933
+    [customer_identity] => 29007144863
+    [customer_email] => edsgim@outlook.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 490172******5328
+    [payment_installments] => 6
+    [payment_status] => 2
+    [tid] => 10760777625NIQ1J9V1B
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+03/11/2016 9:55:32
+INICIO_______________________________________________________________LOG:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 3ec1da41c5334490a4b15197747bfa32
+    [amount] => 69400
+    [order_number] => 2624
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+03/11/2016 9:55:32
+INICIO_______________________________________________________________LOG:STATUS NÃO ALTERADO : userid->Paid
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 3ec1da41c5334490a4b15197747bfa32
+    [amount] => 69400
+    [order_number] => 2624
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

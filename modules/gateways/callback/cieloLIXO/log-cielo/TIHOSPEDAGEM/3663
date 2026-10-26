@@ -1,0 +1,877 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3663
+    [id] => 3663
+    [1] => 228
+    [userid] => 228
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-08-07
+    [date] => 2017-08-07
+    [4] => 2017-08-12
+    [duedate] => 2017-08-12
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 228
+    [id] => 228
+    [uuid] => 75e362d4-26d3-4b42-b2dd-4404be6fdea3
+    [firstname] => Ronaldo
+    [lastname] => Cesario Pereira Gorga
+    [fullname] => Ronaldo Cesario Pereira Gorga
+    [companyname] => ronaldogorga.com.br
+    [email] => ro_gorga@yahoo.com
+    [address1] => av. Brigadeiro Luis Antonio, 3421
+    [address2] => Jardim Paulista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01401-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11963676968
+    [password] => $2y$10$7Y0.oo94nBFhQ3m0rSrb0.H4UQf1SBQGu0JuNwHwXJNnnEgqLdcba
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11963676968
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/08/2017 09:51<br>IP Address: 186.214.22.25<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11963676968
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 22428564803
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11963676968
+    [customfields3] => 22428564803
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3663
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - ronaldogorga.com.br (12/08/2017 - 11/09/2017)
+                            [Description] => TIH - Master  - ronaldogorga.com.br (12/08/2017 - 11/09/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 10 dias de atraso
+                            [Description] => Juros por 10 dias de atraso
+                            [UnitPrice] => 99
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Ronaldo Cesario Pereira Gorga
+            [Email] => ro_gorga@yahoo.com
+            [Identity] => 22428564803
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3663
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master  - ronaldogorga.com.br (12/08/2017 - 11/09/2017)
+                            [description] => TIH - Master  - ronaldogorga.com.br (12/08/2017 - 11/09/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 10 dias de atraso
+                            [description] => Juros por 10 dias de atraso
+                            [unitPrice] => 99
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 22428564803
+            [fullName] => Ronaldo Cesario Pereira Gorga
+            [email] => ro_gorga@yahoo.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/ee3706ad-27e3-4699-86f0-73ac2ccad4a6
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 3663
+    [id] => 3663
+    [1] => 228
+    [userid] => 228
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-08-07
+    [date] => 2017-08-07
+    [4] => 2017-08-12
+    [duedate] => 2017-08-12
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 228
+    [id] => 228
+    [uuid] => 75e362d4-26d3-4b42-b2dd-4404be6fdea3
+    [firstname] => Ronaldo
+    [lastname] => Cesario Pereira Gorga
+    [fullname] => Ronaldo Cesario Pereira Gorga
+    [companyname] => ronaldogorga.com.br
+    [email] => ro_gorga@yahoo.com
+    [address1] => av. Brigadeiro Luis Antonio, 3421
+    [address2] => Jardim Paulista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01401-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11963676968
+    [password] => $2y$10$7Y0.oo94nBFhQ3m0rSrb0.H4UQf1SBQGu0JuNwHwXJNnnEgqLdcba
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11963676968
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/08/2017 09:56<br>IP Address: 201.54.224.173<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11963676968
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 22428564803
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11963676968
+    [customfields3] => 22428564803
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3663
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - ronaldogorga.com.br (12/08/2017 - 11/09/2017)
+                            [Description] => TIH - Master  - ronaldogorga.com.br (12/08/2017 - 11/09/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 10 dias de atraso
+                            [Description] => Juros por 10 dias de atraso
+                            [UnitPrice] => 99
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Ronaldo Cesario Pereira Gorga
+            [Email] => ro_gorga@yahoo.com
+            [Identity] => 22428564803
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3663
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master  - ronaldogorga.com.br (12/08/2017 - 11/09/2017)
+                            [description] => TIH - Master  - ronaldogorga.com.br (12/08/2017 - 11/09/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 10 dias de atraso
+                            [description] => Juros por 10 dias de atraso
+                            [unitPrice] => 99
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 22428564803
+            [fullName] => Ronaldo Cesario Pereira Gorga
+            [email] => ro_gorga@yahoo.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/a88e0e65-e998-4346-9774-a22b488356f9
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+22/08/2017 9:23:59
+INICIO_______________________________________________________________LOG:BEGIN:::22/08/2017 9:59<br />
+
+POST:
+<pre>Array
+(
+    [order_number] => 3663
+    [amount] => 3396
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 2bfb153ae70e45e7883f8ef71c77d855
+    [created_date] => 22/08/2017 09:59:21
+    [customer_name] => Ronaldo Gorga
+    [customer_phone] => 11963676968
+    [customer_identity] => 22428564803
+    [customer_email] => ro_gorga@yahoo.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 493101******4432
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626IHEH66BBB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+22/08/2017 9:23:59
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  3663
+
+POST:
+<pre>Array
+(
+    [order_number] => 3663
+    [amount] => 3396
+    [discount_amount] => 0
+    [checkout_cielo_order_number] => 2bfb153ae70e45e7883f8ef71c77d855
+    [created_date] => 22/08/2017 09:59:21
+    [customer_name] => Ronaldo Gorga
+    [customer_phone] => 11963676968
+    [customer_identity] => 22428564803
+    [customer_email] => ro_gorga@yahoo.com
+    [shipping_type] => 5
+    [shipping_price] => 0
+    [payment_method_type] => 1
+    [payment_method_brand] => 1
+    [payment_maskedcreditcard] => 493101******4432
+    [payment_installments] => 1
+    [payment_status] => 3
+    [tid] => 10760777626IHEH66BBB
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+Dados Invoice
+<pre>Array
+(
+    [0] => 3663
+    [id] => 3663
+    [1] => 228
+    [userid] => 228
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-08-07
+    [date] => 2017-08-07
+    [4] => 2017-08-12
+    [duedate] => 2017-08-12
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 29.97
+    [subtotal] => 29.97
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 29.97
+    [total] => 29.97
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => cielo
+    [paymentmethod] => cielo
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 228
+    [id] => 228
+    [uuid] => 75e362d4-26d3-4b42-b2dd-4404be6fdea3
+    [firstname] => Ronaldo
+    [lastname] => Cesario Pereira Gorga
+    [fullname] => Ronaldo Cesario Pereira Gorga
+    [companyname] => ronaldogorga.com.br
+    [email] => ro_gorga@yahoo.com
+    [address1] => av. Brigadeiro Luis Antonio, 3421
+    [address2] => Jardim Paulista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01401-001
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11963676968
+    [password] => $2y$10$7Y0.oo94nBFhQ3m0rSrb0.H4UQf1SBQGu0JuNwHwXJNnnEgqLdcba
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.11963676968
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 22/08/2017 10:20<br>IP Address: 186.214.22.25<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11963676968
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 22428564803
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11963676968
+    [customfields3] => 22428564803
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre>stdClass Object
+(
+    [OrderNumber] => 3663
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => TIH - Master  - ronaldogorga.com.br (12/08/2017 - 11/09/2017)
+                            [Description] => TIH - Master  - ronaldogorga.com.br (12/08/2017 - 11/09/2017)
+                            [UnitPrice] => 2997
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [Name] => Multa por atraso no pagamento
+                            [Description] => Multa por atraso no pagamento
+                            [UnitPrice] => 300
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [Name] => Juros por 10 dias de atraso
+                            [Description] => Juros por 10 dias de atraso
+                            [UnitPrice] => 99
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Customer] => stdClass Object
+        (
+            [FullName] => Ronaldo Cesario Pereira Gorga
+            [Email] => ro_gorga@yahoo.com
+            [Identity] => 22428564803
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Response Json
+<pre>stdClass Object
+(
+    [merchantId] => 67d6a642-5bba-49d7-a1cf-46c149087e27
+    [orderNumber] => 3663
+    [softDescriptor] => GrupoTHX
+    [cart] => stdClass Object
+        (
+            [discount] => stdClass Object
+                (
+                    [type] => Percent
+                    [value] => 0
+                    [isRequired] => 
+                )
+
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [name] => TIH - Master  - ronaldogorga.com.br (12/08/2017 - 11/09/2017)
+                            [description] => TIH - Master  - ronaldogorga.com.br (12/08/2017 - 11/09/2017)
+                            [unitPrice] => 2997
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [name] => Multa por atraso no pagamento
+                            [description] => Multa por atraso no pagamento
+                            [unitPrice] => 300
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [name] => Juros por 10 dias de atraso
+                            [description] => Juros por 10 dias de atraso
+                            [unitPrice] => 99
+                            [quantity] => 1
+                            [type] => Service
+                        )
+
+                )
+
+        )
+
+    [shipping] => stdClass Object
+        (
+            [type] => WithoutShipping
+        )
+
+    [customer] => stdClass Object
+        (
+            [identity] => 22428564803
+            [fullName] => Ronaldo Cesario Pereira Gorga
+            [email] => ro_gorga@yahoo.com
+        )
+
+    [options] => stdClass Object
+        (
+            [antifraudEnabled] => 
+        )
+
+    [settings] => stdClass Object
+        (
+            [checkoutUrl] => https://cieloecommerce.cielo.com.br/TransactionalVNext/Checkout/Index/11167ee9-39d6-4c5e-a898-620803889df9
+            [profile] => CheckoutCielo
+            [integrationType] => Api
+            [version] => 2
+        )
+
+)
+</pre>
+
+
+22/08/2017 10:08:30
+INICIO_______________________________________________________________LOG:BEGIN:::22/08/2017 10:30<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 2bfb153ae70e45e7883f8ef71c77d855
+    [amount] => 3396
+    [order_number] => 3663
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+22/08/2017 10:08:30
+INICIO_______________________________________________________________LOG:Pagamento Ainda não Aprovado Invoice  3663
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => 2bfb153ae70e45e7883f8ef71c77d855
+    [amount] => 3396
+    [order_number] => 3663
+    [payment_status] => 3
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

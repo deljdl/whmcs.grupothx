@@ -1,0 +1,246 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4058
+    [id] => 4058
+    [1] => 296
+    [userid] => 296
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-11-17
+    [date] => 2017-11-17
+    [4] => 2017-11-17
+    [duedate] => 2017-11-17
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 150.00
+    [subtotal] => 150.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 150.00
+    [total] => 150.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 296
+    [id] => 296
+    [uuid] => 84cba5cf-8ea2-461e-9963-55b4bb06b0a5
+    [firstname] => Leonard
+    [lastname] => Bernstein
+    [fullname] => Leonard Bernstein
+    [companyname] => Natal Hospital Center SA Antonio Linhares
+    [email] => leonard@nhc.com.br
+    [address1] => Av. Afonso Pena, 754
+    [address2] => Tirol
+    [city] => Natal
+    [fullstate] => RN
+    [state] => RN
+    [postcode] => 59020-100
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 84 4009-1040 84 99411-3500
+    [password] => $2y$10$AnBIsC5LM8aXxFmyY6FmyeCLZ34JuylVoUP9otSMn8kwQj90hsIi2
+    [statecode] => RN
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.844009104084994113500
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 17/11/2017 12:16<br>IP Address: 187.111.255.3<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 84994113500
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 02.109.397/0001-80
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 84994113500
+    [customfields3] => 02.109.397/0001-80
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4058
+    [id] => 4058
+    [1] => 296
+    [userid] => 296
+    [2] => 
+    [invoicenum] => 
+    [3] => 2017-11-17
+    [date] => 2017-11-17
+    [4] => 2017-11-24
+    [duedate] => 2017-11-24
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 150.00
+    [subtotal] => 150.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 150.00
+    [total] => 150.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 296
+    [id] => 296
+    [uuid] => 84cba5cf-8ea2-461e-9963-55b4bb06b0a5
+    [firstname] => Leonard
+    [lastname] => Bernstein
+    [fullname] => Leonard Bernstein
+    [companyname] => Natal Hospital Center SA Antonio Linhares
+    [email] => leonard@nhc.com.br
+    [address1] => Av. Afonso Pena, 754
+    [address2] => Tirol
+    [city] => Natal
+    [fullstate] => RN
+    [state] => RN
+    [postcode] => 59020-100
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 84 4009-1040 84 99411-3500
+    [password] => $2y$10$AnBIsC5LM8aXxFmyY6FmyeCLZ34JuylVoUP9otSMn8kwQj90hsIi2
+    [statecode] => RN
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.844009104084994113500
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 24/11/2017 11:16<br>IP Address: 187.111.255.3<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 84994113500
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 02.109.397/0001-80
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 84994113500
+    [customfields3] => 02.109.397/0001-80
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

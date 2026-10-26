@@ -1,0 +1,331 @@
+
+
+02/10/2019 19:53:01
+INICIO_______________________________________________________________LOG:BEGIN:::02/10/2019 19:01<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cfebf1af202447a292fda865959677f6
+    [amount] => 3297
+    [order_number] => s606
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 19:53:01
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 0
+    [startnumber] => 0
+    [numreturned] => 0
+    [invoices] => Array
+        (
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cfebf1af202447a292fda865959677f6
+    [amount] => 3297
+    [order_number] => s606
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 19:53:01
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cfebf1af202447a292fda865959677f6
+    [amount] => 3297
+    [order_number] => s606
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+02/10/2019 19:53:01
+INICIO_______________________________________________________________LOG:Invoice não paga não foi localizada. Verifique se a aplicação de crédito é devida:
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cfebf1af202447a292fda865959677f6
+    [amount] => 3297
+    [order_number] => s606
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/10/2019 10:22:31
+INICIO_______________________________________________________________LOG:BEGIN:::07/10/2019 10:31<br />
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cfebf1af202447a292fda865959677f6
+    [amount] => 3297
+    [order_number] => s606
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/10/2019 10:22:31
+INICIO_______________________________________________________________LOG:Invoices não pagas localizadas:Array
+(
+    [result] => success
+    [totalresults] => 1
+    [startnumber] => 0
+    [numreturned] => 1
+    [invoices] => Array
+        (
+            [invoice] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6631
+                            [userid] => 295
+                            [firstname] => Alexandre
+                            [lastname] => Medeiros de Assis
+                            [companyname] => APOYO IMOVEIS LTDA ME
+                            [invoicenum] => 
+                            [date] => 2019-10-05
+                            [duedate] => 2019-10-09
+                            [datepaid] => 0000-00-00 00:00:00
+                            [last_capture_attempt] => 0000-00-00 00:00:00
+                            [subtotal] => 32.97
+                            [credit] => 0.00
+                            [tax] => 0.00
+                            [tax2] => 0.00
+                            [total] => 32.97
+                            [taxrate] => 0.00
+                            [taxrate2] => 0.00
+                            [status] => Unpaid
+                            [paymentmethod] => deposito_ou_transferencia
+                            [paymethodid] => 
+                            [notes] => 
+                            [currencycode] => BRL
+                            [currencyprefix] => R$ 
+                            [currencysuffix] => 
+                        )
+
+                )
+
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cfebf1af202447a292fda865959677f6
+    [amount] => 3297
+    [order_number] => s606
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/10/2019 10:22:31
+INICIO_______________________________________________________________LOG:Invoices não pagas separadas:Array
+(
+    [0] => Array
+        (
+            [id] => 6631
+            [userid] => 295
+            [firstname] => Alexandre
+            [lastname] => Medeiros de Assis
+            [companyname] => APOYO IMOVEIS LTDA ME
+            [invoicenum] => 
+            [date] => 2019-10-05
+            [duedate] => 2019-10-09
+            [datepaid] => 0000-00-00 00:00:00
+            [last_capture_attempt] => 0000-00-00 00:00:00
+            [subtotal] => 32.97
+            [credit] => 0.00
+            [tax] => 0.00
+            [tax2] => 0.00
+            [total] => 32.97
+            [taxrate] => 0.00
+            [taxrate2] => 0.00
+            [status] => Unpaid
+            [paymentmethod] => deposito_ou_transferencia
+            [paymethodid] => 
+            [notes] => 
+            [currencycode] => BRL
+            [currencyprefix] => R$ 
+            [currencysuffix] => 
+        )
+
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cfebf1af202447a292fda865959677f6
+    [amount] => 3297
+    [order_number] => s606
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/10/2019 10:22:31
+INICIO_______________________________________________________________LOG:Invoice não paga localizada:Array
+(
+    [id] => 6631
+    [userid] => 295
+    [firstname] => Alexandre
+    [lastname] => Medeiros de Assis
+    [companyname] => APOYO IMOVEIS LTDA ME
+    [invoicenum] => 
+    [date] => 2019-10-05
+    [duedate] => 2019-10-09
+    [datepaid] => 0000-00-00 00:00:00
+    [last_capture_attempt] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [paymethodid] => 
+    [notes] => 
+    [currencycode] => BRL
+    [currencyprefix] => R$ 
+    [currencysuffix] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cfebf1af202447a292fda865959677f6
+    [amount] => 3297
+    [order_number] => s606
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/10/2019 10:22:31
+INICIO_______________________________________________________________LOG:Invoice dado:Array
+(
+    [result] => success
+    [invoiceid] => 6631
+    [invoicenum] => 
+    [userid] => 295
+    [date] => 2019-10-05
+    [duedate] => 2019-10-09
+    [datepaid] => 0000-00-00 00:00:00
+    [lastcaptureattempt] => 0000-00-00 00:00:00
+    [subtotal] => 32.97
+    [credit] => 0.00
+    [tax] => 0.00
+    [tax2] => 0.00
+    [total] => 32.97
+    [balance] => 32,97
+    [taxrate] => 0.00
+    [taxrate2] => 0.00
+    [status] => Unpaid
+    [paymentmethod] => deposito_ou_transferencia
+    [notes] => 
+    [ccgateway] => 
+    [items] => Array
+        (
+            [item] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 10326
+                            [type] => Hosting
+                            [relid] => 606
+                            [description] => TIH - Master  - apoyoconsultoria.com.br (09/10/2019 - 08/11/2019)
+                            [amount] => 32.97
+                            [taxed] => 0
+                        )
+
+                )
+
+        )
+
+    [transactions] => 
+)
+
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cfebf1af202447a292fda865959677f6
+    [amount] => 3297
+    [order_number] => s606
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/10/2019 10:22:31
+INICIO_______________________________________________________________LOG:Checando -> 606 ==  606
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cfebf1af202447a292fda865959677f6
+    [amount] => 3297
+    [order_number] => s606
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END
+
+07/10/2019 10:23:31
+INICIO_______________________________________________________________LOG:Baixa ok. | InvoiceId->6631 | Result->success | ValorPago ->32.97 | Message->
+
+POST:
+<pre>Array
+(
+    [checkout_cielo_order_number] => cfebf1af202447a292fda865959677f6
+    [amount] => 3297
+    [order_number] => s606
+    [payment_status] => 2
+    [test_transaction] => False
+)
+</pre>
+
+_______________________________________________________________END

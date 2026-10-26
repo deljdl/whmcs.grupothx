@@ -1,0 +1,123 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 5275
+    [id] => 5275
+    [1] => 106
+    [userid] => 106
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-10-01
+    [date] => 2018-10-01
+    [4] => 2018-10-06
+    [duedate] => 2018-10-06
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 60.00
+    [subtotal] => 60.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 60.00
+    [total] => 60.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 106
+    [id] => 106
+    [uuid] => 24b0f0ee-60ba-4e4f-9810-ae5edf55383d
+    [firstname] => Ana
+    [lastname] => Paula Pires
+    [fullname] => Ana Paula Pires
+    [companyname] => Morumbi Car Center
+    [email] => ana@morumbicarcenter.com.br
+    [address1] => Avenida Giovanni Gronchi, 2729
+    [address2] => Morumbi
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 05651-002
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => (11) 3772-0045 / Nextel 111*63473
+    [password] => 6177689f99f92f71aa4b13b37b0cb5f1:Q!wAP
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113772004511163473
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 01/10/2018 15:36<br>IP Address: 189.0.202.6<br>Host: 
+    [customfields1] => 
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => 
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 22099667870
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 
+    [customfields3] => 22099667870
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>

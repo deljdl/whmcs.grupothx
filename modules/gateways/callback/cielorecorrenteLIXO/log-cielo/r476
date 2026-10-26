@@ -1,0 +1,402 @@
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 476
+    [clientid] => 255
+    [orderid] => 419
+    [pid] => 3
+    [regdate] => 2017-02-07
+    [name] => 
+    [translated_name] => TIH - Master
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => yespromo.com.br
+    [dedicatedip] => 
+    [serverid] => 8
+    [servername] => TiHospedagem.com
+    [serverip] => 198.1.103.252
+    [serverhostname] => tihospedagem.com
+    [firstpaymentamount] => 89.91
+    [recurringamount] => 89.91
+    [paymentmethod] => deposito_ou_transferencia
+    [paymentmethodname] => Depósito ou Transferência
+    [billingcycle] => Quarterly
+    [nextduedate] => 2017-02-07
+    [status] => Pending
+    [username] => 
+    [password] => 
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 0
+    [disklimit] => 0
+    [bwusage] => 0
+    [bwlimit] => 0
+    [lastupdate] => 0000-00-00 00:00:00
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 17:57<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.051.620/0001-73
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 05.051.620/0001-73
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => r476
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master
+                            [UnitPrice] => 8991
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Quarterly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 05051620000173
+            [FullName] => Mairo José Gomes
+            [Email] => ti@yespromocoes.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>
+
+Dados Serviço
+<pre>Array
+(
+    [id] => 476
+    [clientid] => 255
+    [orderid] => 419
+    [pid] => 3
+    [regdate] => 2017-02-07
+    [name] => 
+    [translated_name] => TIH - Master
+    [groupname] => Hospedagem de Sites
+    [translated_groupname] => Hospedagem de Sites
+    [domain] => yespromo.com.br
+    [dedicatedip] => 
+    [serverid] => 8
+    [servername] => TiHospedagem.com
+    [serverip] => 198.1.103.252
+    [serverhostname] => tihospedagem.com
+    [firstpaymentamount] => 89.91
+    [recurringamount] => 89.91
+    [paymentmethod] => deposito_ou_transferencia
+    [paymentmethodname] => Depósito ou Transferência
+    [billingcycle] => Quarterly
+    [nextduedate] => 2017-02-07
+    [status] => Pending
+    [username] => 
+    [password] => 
+    [subscriptionid] => 
+    [promoid] => 0
+    [overideautosuspend] => 0
+    [overidesuspenduntil] => 0000-00-00
+    [ns1] => 
+    [ns2] => 
+    [assignedips] => 
+    [notes] => 
+    [diskusage] => 0
+    [disklimit] => 0
+    [bwusage] => 0
+    [bwlimit] => 0
+    [lastupdate] => 0000-00-00 00:00:00
+    [customfields] => Array
+        (
+            [customfield] => Array
+                (
+                )
+
+        )
+
+    [configoptions] => Array
+        (
+            [configoption] => Array
+                (
+                )
+
+        )
+
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [result] => success
+    [userid] => 255
+    [id] => 255
+    [uuid] => eea29849-ae72-4067-8892-03243b27df9f
+    [firstname] => Mairo
+    [lastname] => José Gomes
+    [fullname] => Mairo José Gomes
+    [companyname] => YES SERVIÇOS TERCEIRIZADOS LTDA
+    [email] => ti@yespromocoes.com.br
+    [address1] => Rua Maria José 395
+    [address2] => Bela Vista
+    [city] => São Paulo
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 01324-010
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 1132931520 11982410237
+    [password] => $2y$10$R6IaUWV5G6RY7H8yiS8l5.vc.mMhRQRrqTElf0CWhDlnEGvC0iApO
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.113293152011982410237
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Inactive
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 13/02/2017 18:30<br>IP Address: 177.18.209.33<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11982410237
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 05.051.620/0001-73
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11982410237
+    [customfields3] => 05.051.620/0001-73
+    [customfields4] => 
+    [currency_code] => BRL
+)
+</pre>
+
+Order Recorrente
+<pre>stdClass Object
+(
+    [OrderNumber] => r476
+    [SoftDescriptor] => GrupoTHX
+    [Cart] => stdClass Object
+        (
+            [Discount] => stdClass Object
+                (
+                    [Type] => Percent
+                    [Value] => 0
+                )
+
+            [Items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [Name] => Hospedagem de Sites
+                            [Description] => TIH - Master
+                            [UnitPrice] => 8991
+                            [Quantity] => 1
+                            [Type] => Service
+                        )
+
+                )
+
+        )
+
+    [Shipping] => stdClass Object
+        (
+            [Type] => WithoutShipping
+        )
+
+    [Payment] => stdClass Object
+        (
+            [RecurrentPayment] => stdClass Object
+                (
+                    [Interval] => Quarterly
+                    [EndDate] => 
+                )
+
+        )
+
+    [Customer] => stdClass Object
+        (
+            [Identity] => 05051620000173
+            [FullName] => Mairo José Gomes
+            [Email] => ti@yespromocoes.com.br
+        )
+
+    [Options] => stdClass Object
+        (
+            [AntifraudEnabled] => 
+        )
+
+)
+</pre>

@@ -1,0 +1,492 @@
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4627
+    [id] => 4627
+    [1] => 94
+    [userid] => 94
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-04-24
+    [date] => 2018-04-24
+    [4] => 2018-04-25
+    [duedate] => 2018-04-25
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 55.00
+    [subtotal] => 55.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 55.00
+    [total] => 55.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 94
+    [id] => 94
+    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+    [firstname] => Dulce
+    [lastname] => Naves
+    [fullname] => Dulce Naves
+    [companyname] => Sítio Lagoa da Serra
+    [email] => lagoadaserra1@hotmail.com
+    [address1] => Estrada das Maciéis, 112
+    [address2] => Embu Mirim
+    [city] => Itapecerica da Serra
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 06854120
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4666 - 2408
+    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146662408
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 25/04/2018 11:53<br>IP Address: 187.71.220.239<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11997320404
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 04498161840
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11997320404
+    [customfields3] => 04498161840
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4627
+    [id] => 4627
+    [1] => 94
+    [userid] => 94
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-04-24
+    [date] => 2018-04-24
+    [4] => 2018-04-25
+    [duedate] => 2018-04-25
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 55.00
+    [subtotal] => 55.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 55.00
+    [total] => 55.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 94
+    [id] => 94
+    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+    [firstname] => Dulce
+    [lastname] => Naves
+    [fullname] => Dulce Naves
+    [companyname] => Sítio Lagoa da Serra
+    [email] => lagoadaserra1@hotmail.com
+    [address1] => Estrada das Maciéis, 112
+    [address2] => Embu Mirim
+    [city] => Itapecerica da Serra
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 06854120
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4666 - 2408
+    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146662408
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 30/04/2018 11:30<br>IP Address: 187.27.61.251<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11997320404
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 04498161840
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11997320404
+    [customfields3] => 04498161840
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4627
+    [id] => 4627
+    [1] => 94
+    [userid] => 94
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-04-24
+    [date] => 2018-04-24
+    [4] => 2018-04-25
+    [duedate] => 2018-04-25
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 55.00
+    [subtotal] => 55.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 55.00
+    [total] => 55.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 94
+    [id] => 94
+    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+    [firstname] => Dulce
+    [lastname] => Naves
+    [fullname] => Dulce Naves
+    [companyname] => Sítio Lagoa da Serra
+    [email] => lagoadaserra1@hotmail.com
+    [address1] => Estrada das Maciéis, 112
+    [address2] => Embu Mirim
+    [city] => Itapecerica da Serra
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 06854120
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4666 - 2408
+    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146662408
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 30/04/2018 11:39<br>IP Address: 187.27.61.251<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11997320404
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 04498161840
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11997320404
+    [customfields3] => 04498161840
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
+
+Dados Invoice
+<pre>Array
+(
+    [0] => 4627
+    [id] => 4627
+    [1] => 94
+    [userid] => 94
+    [2] => 
+    [invoicenum] => 
+    [3] => 2018-04-24
+    [date] => 2018-04-24
+    [4] => 2018-04-25
+    [duedate] => 2018-04-25
+    [5] => 0000-00-00 00:00:00
+    [datepaid] => 0000-00-00 00:00:00
+    [6] => 55.00
+    [subtotal] => 55.00
+    [7] => 0.00
+    [credit] => 0.00
+    [8] => 0.00
+    [tax] => 0.00
+    [9] => 0.00
+    [tax2] => 0.00
+    [10] => 55.00
+    [total] => 55.00
+    [11] => 0.00
+    [taxrate] => 0.00
+    [12] => 0.00
+    [taxrate2] => 0.00
+    [13] => Unpaid
+    [status] => Unpaid
+    [14] => itaushopline
+    [paymentmethod] => itaushopline
+    [15] => 
+    [notes] => 
+)
+</pre>
+
+Dados Cliente
+<pre>Array
+(
+    [userid] => 94
+    [id] => 94
+    [uuid] => 49706370-932c-48af-b56f-afe148246d51
+    [firstname] => Dulce
+    [lastname] => Naves
+    [fullname] => Dulce Naves
+    [companyname] => Sítio Lagoa da Serra
+    [email] => lagoadaserra1@hotmail.com
+    [address1] => Estrada das Maciéis, 112
+    [address2] => Embu Mirim
+    [city] => Itapecerica da Serra
+    [fullstate] => SP
+    [state] => SP
+    [postcode] => 06854120
+    [countrycode] => BR
+    [country] => BR
+    [phonenumber] => 11 4666 - 2408
+    [password] => $2y$10$hoC8MxLmnN5YZ31VOgh7/OFvXNZBhIcQyZA7dTgbyu3Wql/eLyNm.
+    [statecode] => SP
+    [countryname] => Brazil
+    [phonecc] => 55
+    [phonenumberformatted] => +55.1146662408
+    [billingcid] => 0
+    [notes] => 
+    [twofaenabled] => 
+    [currency] => 1
+    [defaultgateway] => 
+    [cctype] => 
+    [cclastfour] => 
+    [securityqid] => 0
+    [securityqans] => 
+    [groupid] => 0
+    [status] => Active
+    [credit] => 0.00
+    [taxexempt] => 
+    [latefeeoveride] => 
+    [overideduenotices] => 
+    [separateinvoices] => 
+    [disableautocc] => 
+    [emailoptout] => 
+    [overrideautoclose] => 
+    [allowSingleSignOn] => 1
+    [language] => 
+    [lastlogin] => Date: 02/05/2018 09:51<br>IP Address: 179.243.201.221<br>Host: 
+    [customfields1] => on
+    [customfields] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 1
+                    [value] => on
+                )
+
+            [1] => Array
+                (
+                    [id] => 2
+                    [value] => 11997320404
+                )
+
+            [2] => Array
+                (
+                    [id] => 3
+                    [value] => 04498161840
+                )
+
+            [3] => Array
+                (
+                    [id] => 70
+                    [value] => 
+                )
+
+        )
+
+    [customfields2] => 11997320404
+    [customfields3] => 04498161840
+    [customfields4] => 
+)
+</pre>
+
+Order
+<pre></pre>
