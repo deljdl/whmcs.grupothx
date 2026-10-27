@@ -13,7 +13,8 @@
 require_once __DIR__ . '/../../../../init.php';
 require_once __DIR__ . '/../../../../includes/gatewayfunctions.php';
 require_once __DIR__ . '/../../../../includes/invoicefunctions.php';
-require_once($_SERVER['DOCUMENT_ROOT'].'/thx/tarifasTHX.php');
+require_once __DIR__ . '/../../../../tarifasTHX.php';
+
 // Require GN PHP SDK
 require_once __DIR__ . '/../sdk/efi_rest.php';
 use Gerencianet\Exception\GerencianetException;
@@ -37,7 +38,6 @@ if (!$params['type']) {
 // Recebe o GN token
 $token = $_REQUEST['notification'];
 
-require_once($_SERVER['DOCUMENT_ROOT'].'/thx/tarifasTHX.php');
 
 
 if ($token) {
