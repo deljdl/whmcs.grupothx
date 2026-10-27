@@ -24,3 +24,4 @@ modules/gateways/callback/mercadopago/vendor/mercadopago/
 /thx/cache/
 /vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache/Serializer/CSS/
 /vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache/Serializer/HTML/
+.htaccess
