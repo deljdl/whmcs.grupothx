@@ -77,40 +77,6 @@
             </div>
         {/if}
 
-        <div class="navbar navbar-light">
-            <div class="container mt-2 mb-2 d-flex justify-content-between align-items-center">
-                <a class="navbar-brand" href="{$WEB_ROOT}/index.php">
-                    {if $assetLogoPath}
-                        <img src="{$assetLogoPath}" alt="{$companyname}" class="logo-img">
-                    {else}
-                        {$companyname}
-                    {/if}
-                </a>
-
-                <form method="post" action="{routePath('knowledgebase-search')}" class="form-inline ml-auto d-none d-xl-block mr-2">
-                    <div class="input-group search d-none d-xl-flex">
-                        <div class="input-group-prepend">
-                            <button class="btn btn-default" type="submit">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                        <input class="form-control appended-form-control font-weight-light" type="text" name="search" placeholder="{lang key="searchOurKnowledgebase"}...">
-                    </div>
-                </form>
-
-                <ul class="navbar-nav toolbar">
-                    {if $loggedin}
-                    <li class="nav-item">
-                        <a class="btn nav-link cart-btn" href="{$WEB_ROOT}/cart.php?a=view">
-                            <i class="far fa-shopping-cart fa-fw"></i>
-                            <span id="cartItemCount" class="badge badge-dark badge-pill">{$cartitemcount}</span>
-                            <span class="sr-only">{lang key="carttitle"}</span>
-                        </a>
-                    </li>
-                    {/if}
-                </ul>
-            </div>
-        </div>
     </header>
 
     {include file="$template/includes/network-issues-notifications.tpl"}
