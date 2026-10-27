@@ -129,12 +129,7 @@ if ($token) {
 	$addtransvalues['paymentmethod']	= 'gofasgerencianetboleto';
 	$addtransvalues['transid']			= 'ggnb_'.$api_mode.'_'.'_notification-'.$charge_id.'['.$chargeStatus.']';
 	$addtransvalues['date']				= date('d/m/Y');
-	$notificationExists = WHMCS\Database\Capsule::table('tblaccounts')
-		->where('transid', $addtransvalues['transid'])
-		->exists();
-	if (!$notificationExists) {
-		$addtransresult = localAPI('addtransaction', $addtransvalues, $whmcsAdmin);
-	}
+	$addtransresult = localAPI('addtransaction', $addtransvalues, $whmcsAdmin);
 
 
 
@@ -191,12 +186,7 @@ if ($token) {
  		$addtransvalues['paymentmethod']	= 'gofasgerencianetboleto';
  		$addtransvalues['transid']			= 'ggnb_'.$api_mode.'_'.'_'.$tituloStatus.'-'.$charge_id.'['.$valorPagoOuIdentificado.':'.$paymentAmount.']';
  		$addtransvalues['date']				= date('d/m/Y');
-		$paymentTransactionExists = \WHMCS\Database\Capsule::table('tblaccounts')->where('transid', $addtransvalues['transid'])->exists();
-		if (!$paymentTransactionExists) {
-			$addtransresult = localAPI('addtransaction', $addtransvalues, $whmcsAdmin);
-		} else {
-			$addtransresult = array('result' => 'success', 'message' => 'Notificação repetida; transação já registrada.');
-		}
+		$addtransresult = localAPI('addtransaction', $addtransvalues, $whmcsAdmin);
 
 		// Debug
 		echo 'Add transaction: ', json_encode($addtransresult);
@@ -218,12 +208,7 @@ if ($token) {
  		$addtransvalues['paymentmethod']	= 'gofasgerencianetboleto';
  		$addtransvalues['transid']			= 'ggnb_'.$api_mode.'_unpaid-'.$charge_id.'';
  		$addtransvalues['date']				= date('d/m/Y');
-		$unpaidTransactionExists = \WHMCS\Database\Capsule::table('tblaccounts')->where('transid', $addtransvalues['transid'])->exists();
-		if (!$unpaidTransactionExists) {
-			$addtransresult = localAPI('addtransaction', $addtransvalues, $whmcsAdmin);
-		} else {
-			$addtransresult = array('result' => 'success', 'message' => 'Notificação repetida; transação já registrada.');
-		}
+		$addtransresult = localAPI('addtransaction', $addtransvalues, $whmcsAdmin);
 
 		// Debug
 		echo 'Resultado: ', json_encode($addtransresult);
