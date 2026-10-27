@@ -154,6 +154,8 @@ function getEmailsCpanel($hospedagem, $server)
 function diagnosticarAccessHashWHM($server)
 {
     $criptografado = (string) $server->accesshash;
+
+	die('BCT-> '.$criptografado);
     $resultado = localAPI('DecryptPassword', array(
         'password2' => $criptografado
     ), false);
