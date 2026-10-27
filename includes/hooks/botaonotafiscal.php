@@ -5,7 +5,7 @@ use WHMCS\Database\Capsule;
 add_hook('AdminAreaHeaderOutput', 1, function($vars)
 {
 
-    require_once(dirname(dirname(__DIR__)) . '/tarifasTHX.php');
+    
     // echo '<pre>';
     // var_dump($vars);
     // echo '</pre>';
@@ -27,13 +27,7 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
     $pathSavedPdfNota = false;
     if ($vars['filename'] == 'invoices' || $vars['filename'] == 'clientsinvoices' || (isset($vars['pageicon']) && $vars['pageicon'] == 'invoices'))
     {
-        #REQUIRE TARIFAS OBRIGATÓRIO PARA NÃO DAR ERRO NO CRON
-        if(empty($_SERVER['DOCUMENT_ROOT']))
-        {
-            $_SERVER['DOCUMENT_ROOT'] = '/home/thxcom/public_html';
-        }
-        require_once($_SERVER['DOCUMENT_ROOT'].'/tarifasTHX.php');
-
+        require_once(dirname(dirname(__DIR__)) . '/tarifasTHX.php');
 
         function urlAtual()
         {
@@ -48,7 +42,7 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
         {
             $idFaturaParaEnvio = $_GET['checarnota'];
             $arquivoName = md5(NOTAS_TOKEN.$idFaturaParaEnvio).'.pdf';
-            $pathSavedPdfNota = ROOT_WHMCS.'thx/notasfiscais/'.$arquivoName;
+            $pathSavedPdfNota = ROOT_WHMCS.'/thx/notasfiscais/'.$arquivoName;
 
             $blocoGerarNota = '
             <div class="col-md-12" style="margin-bottom:15px;">
