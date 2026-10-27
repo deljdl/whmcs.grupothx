@@ -119,8 +119,9 @@ function getNotaFiscal($idFatura, $class='btn-copy btn-nota', $style = 'display:
 
 function getAuthHeader($server)
 {
+	$accesshash = decryptPassword($server->accesshash);
     return array(
-        'Authorization: WHM '.$server->username.':'.$server->accesshash
+        'Authorization: WHM '.$server->username.':'.$accesshash
     );
 }
 
@@ -149,43 +150,19 @@ function getEmailsCpanel($hospedagem, $server)
     return executarRequisicaoCpanel($server, $params);
 }
 
-
-
-function diagnosticarAccessHashWHM($server)
+function decryptPassword($password)
 {
-    $criptografado = (string) $server->accesshash;
-
     $resultado = localAPI('DecryptPassword', array(
-        'password2' => $criptografado
+        'password2' => (string) $password
     ), false);
 
-	var_dump($resultado);
-	die('BCT');
-
-    $descriptografado = '';
     if (is_array($resultado) && isset($resultado['result']) && $resultado['result'] === 'success' && isset($resultado['password'])) {
-        $descriptografado = (string) $resultado['password'];
+        return (string) $resultado['password'];
     }
 
-    $mascarar = function ($valor) {
-        $valor = (string) $valor;
-        if ($valor === '') {
-            return '(vazio)';
-        }
-        if (strlen($valor) <= 8) {
-            return substr($valor, 0, 2) . '...' . substr($valor, -2);
-        }
-        return substr($valor, 0, 4) . '...' . substr($valor, -4);
-    };
-
-    return array(
-        'decrypt_api_result' => isset($resultado['result']) ? $resultado['result'] : 'sem resultado',
-        'decrypt_api_message' => isset($resultado['message']) ? $resultado['message'] : null,
-        'stored_accesshash' => $mascarar($criptografado),
-        'decrypted_accesshash' => $mascarar($descriptografado),
-        'decrypted_length' => strlen($descriptografado)
-    );
+    return $password;
 }
+
 
 function executarRequisicaoCpanel($server, $params)
 {
@@ -213,13 +190,6 @@ function executarRequisicaoCpanel($server, $params)
     }
 
     $resultado = array('params' => $params, 'retorno' => $decoded, 'raw' => $raw);
-
-    if (
-        isset($decoded['cpanelresult']['error']) &&
-        stripos($decoded['cpanelresult']['error'], 'Access denied') !== false
-    ) {
-        $resultado['diagnostico_accesshash'] = diagnosticarAccessHashWHM($server);
-    }
 
     return $resultado;
 }
