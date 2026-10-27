@@ -5,17 +5,20 @@ use WHMCS\Database\Capsule;
 add_hook('AdminAreaHeaderOutput', 1, function($vars)
 {
 
+    require_once(dirname(dirname(dirname(__DIR__))) . '/tarifasTHX.php');
+    die('carregou tarifasTHX');
+
     if (!empty($_GET['verificar_nota'])) {
         $idFaturaParaEnvio = $_GET['verificar_nota'];
         $arquivoName = md5(NOTAS_TOKEN . $idFaturaParaEnvio) . '.pdf';
         $pathSavedPdfNota = ROOT_WHMCS . 'thx/notasfiscais/' . $arquivoName;
-    
+
         header('Content-Type: application/json');
         echo json_encode(['existe' => file_exists($pathSavedPdfNota)]);
         exit;
     }
-    
-    
+
+
 
 
     $debugMail = '';
@@ -171,7 +174,7 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
 
             if($whatsapp)
             {
-                
+
                 $msgWhats = "
                 Olá *{$dadosCliente[0]->firstname}* 👋,
 
@@ -345,10 +348,10 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
                                                             Procurar PDF da Nota Fiscal:
                                                         </label>
 
-                                                        <input 
-                                                            type="file" 
-                                                            name="notafiscal" 
-                                                            required 
+                                                        <input
+                                                            type="file"
+                                                            name="notafiscal"
+                                                            required
                                                             class="form-control"
                                                         >
                                                     </div>
@@ -358,11 +361,11 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
                                                         Enviar Nova Nota Fiscal
                                                     </button>
 
-                                                    <input 
-                                                        type="hidden" 
-                                                        name="iddafatura" 
-                                                        id="iddafatura" 
-                                                        value="" 
+                                                    <input
+                                                        type="hidden"
+                                                        name="iddafatura"
+                                                        id="iddafatura"
+                                                        value=""
                                                         required
                                                     >
 
@@ -372,7 +375,7 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
                                         </div>
 
                                     </form>
-                  
+
                                     <div class="row" style="margin-top: 10px; padding:5px 20px" id="notajaenviada"></div>
                                 </div>
                                 <div class="modal-footer panel-footer">
