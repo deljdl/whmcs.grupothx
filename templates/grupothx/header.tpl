@@ -6,6 +6,24 @@
     <title>{if $kbarticle.title}{$kbarticle.title} - {/if}{$pagetitle} - {$companyname}</title>
     {include file="$template/includes/head.tpl"}
     {$headoutput}
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('p').forEach(function (element) {
+                if (/^Powered by\\s+WHMCompleteSolution/i.test(element.textContent.trim())) {
+                    element.remove();
+                }
+            });
+
+            document.querySelectorAll('.card-title').forEach(function (title) {
+                if (title.textContent.trim().toLowerCase() === 'últimas notícias') {
+                    var panel = title.closest('[menuitemname]') || title.closest('.card');
+                    if (panel) {
+                        panel.remove();
+                    }
+                }
+            });
+        });
+    </script>
     <style>
         .providerPreLinking + p { display: none !important; }
 
