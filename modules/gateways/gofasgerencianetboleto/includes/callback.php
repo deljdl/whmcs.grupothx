@@ -15,7 +15,7 @@ require_once __DIR__ . '/../../../../includes/gatewayfunctions.php';
 require_once __DIR__ . '/../../../../includes/invoicefunctions.php';
 require_once($_SERVER['DOCUMENT_ROOT'].'/thx/tarifasTHX.php');
 // Require GN PHP SDK
-require __DIR__ . '/../sdk/vendor/autoload.php';
+require_once __DIR__ . '/../sdk/efi_rest.php';
 use Gerencianet\Exception\GerencianetException;
 use Gerencianet\Gerencianet;
 
@@ -128,7 +128,12 @@ if ($token) {
 	$addtransvalues['paymentmethod']	= 'gofasgerencianetboleto';
 	$addtransvalues['transid']			= 'ggnb_'.$api_mode.'_'.'_notification-'.$charge_id.'['.$chargeStatus.']';
 	$addtransvalues['date']				= date('d/m/Y');
-	$addtransresult						= localAPI( 'addtransaction' , $addtransvalues, $whmcsAdmin );
+	$notificationExists = WHMCS\Database\Capsule::table('tblaccounts')
+		->where('transid', $addtransvalues['transid'])
+		->exists();
+	if (!$notificationExists) {
+		$addtransresult = localAPI('addtransaction', $addtransvalues, $whmcsAdmin);
+	}
 
 
 

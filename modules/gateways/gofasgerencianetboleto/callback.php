@@ -15,7 +15,7 @@ include __DIR__ . '/../../../includes/gatewayfunctions.php';
 include __DIR__ . '/../../../includes/invoicefunctions.php';
 
 // Require GN PHP SDK
-include __DIR__ . '/sdk/vendor/autoload.php';
+require_once __DIR__ . '/sdk/efi_rest.php';
 use Gerencianet\Exception\GerencianetException;
 use Gerencianet\Gerencianet;
 

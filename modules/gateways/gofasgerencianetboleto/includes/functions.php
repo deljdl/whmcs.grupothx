@@ -30,12 +30,20 @@ function ggnb_verifyInstall() {
 				$table->string('total');
 				$table->string('barcode');
 				$table->string('qrcode');
+				$table->text('qrcode_image')->nullable();
 				$table->string('status');
 				$table->string('api_mode');
     		});
 		}
 		catch (\Exception $e) {
     		$error = "Não foi possível criar a tabela do módulo no banco de dados: {$e->getMessage()}";
+		}
+	}
+	if (!$error && Capsule::schema()->hasTable('gofasgerencianetboleto') && !Capsule::schema()->hasColumn('gofasgerencianetboleto', 'qrcode_image')) {
+		try {
+			Capsule::schema()->table('gofasgerencianetboleto', function($table) { $table->text('qrcode_image')->nullable(); });
+		} catch (\Exception $e) {
+			$error = 'Não foi possível atualizar a tabela do módulo: ' . $e->getMessage();
 		}
 	}
 	if(!$error) {

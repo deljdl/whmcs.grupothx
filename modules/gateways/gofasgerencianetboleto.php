@@ -11,7 +11,7 @@
 
 if(!defined('WHMCS')) { die('Esse arquivo não pode ser acessado diretamente'); }
 use WHMCS\Database\Capsule;
-include __DIR__.'/gofasgerencianetboleto/sdk/vendor/autoload.php';
+require_once __DIR__.'/gofasgerencianetboleto/sdk/efi_rest.php';
 use Gerencianet\Exception\GerencianetException;
 use Gerencianet\Gerencianet;
 include __DIR__.'/gofasgerencianetboleto/includes/configuration.php';
