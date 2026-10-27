@@ -155,10 +155,12 @@ function diagnosticarAccessHashWHM($server)
 {
     $criptografado = (string) $server->accesshash;
 
-	die('BCT-> '.$criptografado);
     $resultado = localAPI('DecryptPassword', array(
         'password2' => $criptografado
     ), false);
+
+	var_dump($resultado);
+	die('BCT');
 
     $descriptografado = '';
     if (is_array($resultado) && isset($resultado['result']) && $resultado['result'] === 'success' && isset($resultado['password'])) {
