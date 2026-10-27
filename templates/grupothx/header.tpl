@@ -89,9 +89,14 @@
                         {$companyname}
                     {/if}
                 </a>
+                {if $loggedin}
+                    <ul class="navbar-nav flex-row">
+                        {include file="$template/includes/navbar.tpl" navbar=$primaryNavbar}
+                        {include file="$template/includes/navbar.tpl" navbar=$secondaryNavbar}
+                    </ul>
+                {/if}
             </div>
         </div>
-
     </header>
 
     {include file="$template/includes/network-issues-notifications.tpl"}
