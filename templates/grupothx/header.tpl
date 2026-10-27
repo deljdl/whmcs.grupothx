@@ -6,6 +6,9 @@
     <title>{if $kbarticle.title}{$kbarticle.title} - {/if}{$pagetitle} - {$companyname}</title>
     {include file="$template/includes/head.tpl"}
     {$headoutput}
+    <style>
+        .providerPreLinking + p { display: none !important; }
+    </style>
 </head>
 <body data-phone-cc-input="{$phoneNumberInputStyle}">
     {if $captcha}{$captcha->getMarkup()}{/if}
