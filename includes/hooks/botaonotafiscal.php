@@ -6,9 +6,9 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
 {
 
     
-    // echo '<pre>';
-    // var_dump($vars);
-    // echo '</pre>';
+    echo '<pre>';
+    var_dump($_GET);
+    echo '</pre>';
     echo $_SERVER['SCRIPT_FILENAME'];
     if (!empty($_GET['verificar_nota'])) {
         $idFaturaParaEnvio = $_GET['verificar_nota'];
