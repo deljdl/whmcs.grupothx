@@ -1,9 +1,4 @@
 <?php
-
-http_response_code(200);
-die('CALLBACK EXECUTOU');
-
-
 /**
  * Módulo Gerencinet Boleto para WHMCS
  * @author		Mauricio Gofas | gofas.net
