@@ -24,7 +24,7 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
 
     $debugMail = '';
     $pathSavedPdfNota = false;
-    if ($vars['filename'] == 'invoices' || $vars['filename'] == 'clientsinvoices')
+    if ($vars['filename'] == 'invoices' || $vars['filename'] == 'clientsinvoices' || (isset($vars['pageicon']) && $vars['pageicon'] == 'invoices'))
     {
         #REQUIRE TARIFAS OBRIGATÓRIO PARA NÃO DAR ERRO NO CRON
         if(empty($_SERVER['DOCUMENT_ROOT']))
