@@ -108,34 +108,7 @@
                         </a>
                     </li>
                     {/if}
-                    <li class="nav-item ml-2 d-xl-none">
-                        <button class="btn nav-link" type="button" data-toggle="collapse" data-target="#mainNavbar">
-                            <span class="fas fa-bars fa-fw"></span>
-                        </button>
-                    </li>
                 </ul>
-            </div>
-        </div>
-        <div class="navbar navbar-expand-xl main-navbar-wrapper">
-            <div class="container">
-                <div class="collapse navbar-collapse" id="mainNavbar">
-                    <form method="post" action="{routePath('knowledgebase-search')}" class="d-xl-none">
-                        <div class="input-group search w-100 mb-2">
-                            <div class="input-group-prepend">
-                                <button class="btn btn-default" type="submit">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
-                            <input class="form-control prepended-form-control" type="text" name="search" placeholder="{lang key="searchOurKnowledgebase"}...">
-                        </div>
-                    </form>
-                    <ul id="nav" class="navbar-nav mr-auto">
-                        {include file="$template/includes/navbar.tpl" navbar=$primaryNavbar}
-                    </ul>
-                    <ul class="navbar-nav ml-auto">
-                        {include file="$template/includes/navbar.tpl" navbar=$secondaryNavbar rightDrop=true}
-                    </ul>
-                </div>
             </div>
         </div>
     </header>
