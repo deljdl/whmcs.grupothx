@@ -49,7 +49,13 @@ function gofasgerencianetboleto_link( $params ) {
 		if ( $trans_id and !$error) {
 
 			$chargeExist_			= ggnb_detail_charge( $api, $trans_id, $debug_or_log );
-			$chargeExist			= $chargeExist_['result'];
+			if (!is_array($chargeExist_) || empty($chargeExist_['result']['data']['charge_id'])) {
+				// A cobrança antiga pode ter sido removida na Efí; nesse caso, permita gerar outra.
+				$trans_id = false;
+				$chargeExist = array('data' => array('charge_id' => 0, 'total' => 0, 'status' => 'canceled', 'payment' => array('banking_billet' => array('expire_at' => '1970-01-01'))));
+			} else {
+				$chargeExist = $chargeExist_['result'];
+			}
 			$chargeExistID			= (int)$chargeExist['data']['charge_id']; // ID da transação gerada pela fatura
 			$chargeExistTotal		= (int)$chargeExist['data']['total'];
 			$chargeExistStatus		= (string)$chargeExist['data']['status'];

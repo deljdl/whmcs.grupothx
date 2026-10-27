@@ -190,7 +190,12 @@ if ($token) {
  		$addtransvalues['paymentmethod']	= 'gofasgerencianetboleto';
  		$addtransvalues['transid']			= 'ggnb_'.$api_mode.'_'.'_'.$tituloStatus.'-'.$charge_id.'['.$valorPagoOuIdentificado.':'.$paymentAmount.']';
  		$addtransvalues['date']				= date('d/m/Y');
-		$addtransresult						= localAPI( 'addtransaction' , $addtransvalues, $whmcsAdmin );
+		$paymentTransactionExists = \WHMCS\Database\Capsule::table('tblaccounts')->where('transid', $addtransvalues['transid'])->exists();
+		if (!$paymentTransactionExists) {
+			$addtransresult = localAPI('addtransaction', $addtransvalues, $whmcsAdmin);
+		} else {
+			$addtransresult = array('result' => 'success', 'message' => 'Notificação repetida; transação já registrada.');
+		}
 
 		// Debug
 		echo 'Add transaction: ', json_encode($addtransresult);
@@ -212,7 +217,12 @@ if ($token) {
  		$addtransvalues['paymentmethod']	= 'gofasgerencianetboleto';
  		$addtransvalues['transid']			= 'ggnb_'.$api_mode.'_unpaid-'.$charge_id.'';
  		$addtransvalues['date']				= date('d/m/Y');
-		$addtransresult						= localAPI( 'addtransaction' , $addtransvalues, $whmcsAdmin );
+		$unpaidTransactionExists = \WHMCS\Database\Capsule::table('tblaccounts')->where('transid', $addtransvalues['transid'])->exists();
+		if (!$unpaidTransactionExists) {
+			$addtransresult = localAPI('addtransaction', $addtransvalues, $whmcsAdmin);
+		} else {
+			$addtransresult = array('result' => 'success', 'message' => 'Notificação repetida; transação já registrada.');
+		}
 
 		// Debug
 		echo 'Resultado: ', json_encode($addtransresult);
