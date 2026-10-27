@@ -6,7 +6,9 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
 {
 
     require_once(dirname(dirname(__DIR__)) . '/tarifasTHX.php');
+    echo '<pre>';
     var_dump($vars);
+    echo '</pre>';
     if (!empty($_GET['verificar_nota'])) {
         $idFaturaParaEnvio = $_GET['verificar_nota'];
         $arquivoName = md5(NOTAS_TOKEN . $idFaturaParaEnvio) . '.pdf';
