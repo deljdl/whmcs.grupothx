@@ -25,28 +25,5 @@ jobs:
           printf '%s\n' "${{ secrets.DEPLOY_KNOWN_HOSTS }}" >> ~/.ssh/known_hosts
           ssh -i ~/.ssh/deploy_key \
             -o BatchMode=yes \
-            "$DEPLOY_USER@$DEPLOY_HOST" 'bash -s' <<'REMOTE'
-          set -e
-          cd /home/thxcom/whmcs.grupothx.com.br
-
-          backup="$(mktemp)"
-          had_htaccess=0
-          if [ -f .htaccess ]; then
-            cp -p .htaccess "$backup"
-            had_htaccess=1
-          fi
-
-          restore_htaccess() {
-            status=$?
-            if [ "$had_htaccess" -eq 1 ]; then
-              cp -p "$backup" .htaccess || status=$?
-            else
-              rm -f .htaccess || status=$?
-            fi
-            rm -f "$backup" || status=$?
-            return "$status"
-          }
-          trap restore_htaccess EXIT
-
-          /home/thxcom/deploy-whmcs-staging.sh
-          REMOTE
+            "$DEPLOY_USER@$DEPLOY_HOST" \
+            '/home/thxcom/deploy-whmcs-staging.sh'
