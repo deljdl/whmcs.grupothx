@@ -53,8 +53,8 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
 			$quota = consultarQuotaWHM($server, $hospedagem['username']);
 
 			$emails = getEmailsCpanel($hospedagem, $server);
-
-			$totalEmails = count($emails['retorno']['result']['data']);
+            $listaEmails = $emails['retorno']['result']['data'] ?? [];
+			$totalEmails = is_countable($listaEmails) ? count($listaEmails) : 0;
 
 			$maxEmails = $quota['dados']['maxpop'];
 			$maxEmailsBotao = ($maxEmails == 'unlimited') ? '∞' : $maxEmails;
