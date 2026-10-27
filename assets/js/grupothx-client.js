@@ -1,1 +1,1 @@
-console.log('hook cliente ativo');
+console.log('grupothx-client.js runned');
