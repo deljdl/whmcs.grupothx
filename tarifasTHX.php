@@ -392,11 +392,22 @@ function alterarQuotaWHM($server, $usuarioCpanel, $gb)
         );
     }
 
+    $accessHash = (string)($server->accesshash ?? '');
+    $authPreview = $accessHash === ''
+        ? '(vazio)'
+        : substr($accessHash, 0, 6) . '...' . substr($accessHash, -4);
+
     return array(
         'success' => false,
-        'message' => isset($json['metadata']['reason'])
-            ? $json['metadata']['reason']
-            : $retorno
+        'message' => (isset($json['metadata']['reason']) ? $json['metadata']['reason'] : $retorno)
+            . "\\n\\n--- DEBUG TEMPORÁRIO consultarQuotaWHM ---"
+            . "\\nURL: " . $url
+            . "\\nUsuário WHM enviado: " . ($server->username ?? '(vazio)')
+            . "\\nHostname: " . ($server->hostname ?? '(vazio)')
+            . "\\nUsuário cPanel consultado: " . $usuarioCpanel
+            . "\\nAccess Hash: " . $authPreview
+            . "\\nTamanho do Access Hash: " . strlen($accessHash)
+            . "\\nSHA256 do Access Hash: " . ($accessHash === '' ? '(vazio)' : hash('sha256', $accessHash))
     );
 }
 
