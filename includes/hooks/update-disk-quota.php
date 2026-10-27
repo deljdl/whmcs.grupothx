@@ -4,17 +4,6 @@ use WHMCS\Database\Capsule;
 
 add_hook('AdminAreaHeaderOutput', 1, function($vars)
 {
-    if (!defined('ROOT_WHMCS')) {
-        return 'Constante ROOT_WHMCS não definida.';
-    }
-
-    $configTHX = ROOT_WHMCS . '/tarifasTHX.php';
-    if (!file_exists($configTHX)) {
-        return 'Arquivo de configuração não encontrado: ' . $configTHX;
-    }
-
-    require_once $configTHX;
-
     if ($vars['filename'] != 'clientsservices') {
         return;
     }
@@ -31,8 +20,7 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
         return;
     }
 
-    $resposta = localAPI('GetClientsProducts', array('serviceid' => $idServico), false);
-    $hospedagem = $resposta['products']['product'][0] ?? null;
+    $hospedagem = getDadosHospedagemById($idServico);
 
     $textoBotao = '<i class="fas fa-hdd"></i>';
     $titleBotao = 'Gerenciar Espaço em Disco';
