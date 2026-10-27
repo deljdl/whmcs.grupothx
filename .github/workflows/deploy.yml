@@ -4,7 +4,7 @@ name: Deploy WHMCS Staging
 on:
   push:
     branches:
-      - main
+      - upgrade-whmcs-9.1.0
 
 permissions:
   contents: read
