@@ -57,11 +57,11 @@ function linhaDigitavelParaCodigoBarras($linha)
         substr($linha, 4, 5) .      // Campo 1
         substr($linha, 10, 10) .    // Campo 2
         substr($linha, 21, 10);     // Campo 3
-}
+}echo 'in';
 function getBarCode($codigo, $imgStyle = 'display: block')
 {
     require_once ROOT_WHMCS . '/barcode/I2of5.php';
-
+	echo $codigo;
     $codigo = linhaDigitavelParaCodigoBarras($codigo);
 
     if (!$codigo) {
