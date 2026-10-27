@@ -6,16 +6,20 @@ use WHMCS\Database\Capsule;
 
 add_hook('AdminAreaHeaderOutput', 1, function($vars)
 {
+    
+    #Require arquivo de configuração tarifasTHX.php
+    if(!defined('ROOT_WHMCS'))
+    {
+        return 'Constante ROOT_WHMCS não definida.';
+    }
 
-    $configTHX = '../tarifasTHX.php';
-
+    $configTHX = ROOT_WHMCS . '/tarifasTHX.php';
     if(!file_exists($configTHX))
     {
         return 'Arquivo de configuração não encontrado: '.$configTHX;
     }
-
     require_once $configTHX;
-
+    ## Fim do require do arquivo de configuração tarifasTHX.php
 
     if($vars['filename'] != 'clientsservices')
     {
