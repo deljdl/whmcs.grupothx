@@ -10,7 +10,6 @@
  */
 
 
-
 // Require libraries needed for gateway module functions.
 require_once __DIR__ . '/../../../../init.php';
 require_once __DIR__ . '/../../../../includes/gatewayfunctions.php';
