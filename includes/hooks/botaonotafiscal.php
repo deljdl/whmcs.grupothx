@@ -6,7 +6,6 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
 {
 
     require_once(dirname(dirname(__DIR__)) . '/tarifasTHX.php');
-    die('carregou tarifasTHX');
 
     if (!empty($_GET['verificar_nota'])) {
         $idFaturaParaEnvio = $_GET['verificar_nota'];
