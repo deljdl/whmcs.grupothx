@@ -19,6 +19,8 @@
 /admin/disk-data-history/
 modules/gateways/callback/mercadopago/vendor/mercadopago/
 
+# Configuração local/gerada pelo servidor
+/.htaccess
 /php.ini
 /.user.ini
 /thx/cache/
