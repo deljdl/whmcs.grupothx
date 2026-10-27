@@ -1,0 +1,5 @@
+
+name: "Nexus THX"
+author: "Grupo THX"
+config:
+  parent: nexus
