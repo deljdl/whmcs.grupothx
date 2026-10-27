@@ -1,0 +1,3 @@
+/* CSS global da área do cliente Grupo THX */
+body { border: 3px solid red !important; }
+p:has(> a[href="https://www.whmcs.com/"]) { display: none !important; }
