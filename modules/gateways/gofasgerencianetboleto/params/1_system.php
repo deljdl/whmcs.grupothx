@@ -16,6 +16,8 @@ $companyName				= $params['companyname'];
 foreach( Capsule::table('tblconfiguration') -> where('setting', '=', 'ggnbwhmcsurl') -> get( array( 'value','created_at' ) ) as $ggnbwhmcsurl_ ) {
 	$ggnbwhmcsurl					= $ggnbwhmcsurl_->value;
 }
+
+
 $system_url       			= rtrim($ggnbwhmcsurl, '/');
 $returnUrl					= $system_url.'/modules/gateways/gofasgerencianetboleto/includes/callback.php';
 $langPayNow					= $params['langpaynow'];
