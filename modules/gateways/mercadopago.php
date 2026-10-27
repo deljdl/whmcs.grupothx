@@ -1,10 +1,4 @@
 <?php
-/*
-* Simple External URL gateway module for WHMCS
-* Free - GNU license
-* (c) 2011 - Nasos Liagos
-* www.valuehost.com.gr
-*/
 function mercadopago_config() {
 	$configarray = array(
 	"FriendlyName" => array("Type" => "System", "Value"=>"MercadoPago"),
@@ -19,4 +13,3 @@ function mercadopago_link($params) {
 	$code = '<a class="btn btn-success" style="font-size: 25px;" href ="'.$params['URL'].'?invoiceid='.$_GET['id'].'"><i class="fa fa-money" aria-hidden="true"></i> Pagar</a>';
 	return $code;
 }
-?> 
