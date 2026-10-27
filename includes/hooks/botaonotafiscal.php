@@ -318,6 +318,7 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
 
         $notaEnviada = !empty($_GET['notaEnviada']) ? $_GET['notaEnviada'] : 0;
         $output .= <<<HTML
+                    NOTANOTANOTA
                     <div class="modal whmcs-modal fade" id="modalNotas" role="dialog">
                         <div class="modal-dialog">
                             <div class="modal-content panel panel-primary">
