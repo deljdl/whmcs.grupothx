@@ -39,7 +39,7 @@ $quota = consultarQuotaWHM($server, $hospedagem['username']);
 
 if(!$quota['success'])
 {
-    die('Não foi possível consultar a conta.');
+    die('Não foi possível consultar a conta: ' . htmlspecialchars($quota['message'] ?? 'Motivo não informado', ENT_QUOTES, 'UTF-8'));
 }
 
 $dados = $quota['dados'];
