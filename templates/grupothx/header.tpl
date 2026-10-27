@@ -80,6 +80,18 @@
             </div>
         {/if}
 
+        <div class="navbar navbar-light">
+            <div class="container mt-2 mb-2 d-flex justify-content-between align-items-center">
+                <a class="navbar-brand" href="{$WEB_ROOT}/index.php">
+                    {if $assetLogoPath}
+                        <img src="{$assetLogoPath}" alt="{$companyname}" class="logo-img">
+                    {else}
+                        {$companyname}
+                    {/if}
+                </a>
+            </div>
+        </div>
+
     </header>
 
     {include file="$template/includes/network-issues-notifications.tpl"}
