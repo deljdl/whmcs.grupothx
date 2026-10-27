@@ -9,39 +9,44 @@
     <style>
         .providerPreLinking + p { display: none !important; }
 
-        @media (min-width: 768px) {
-            #header .navbar .navbar-nav.flex-row {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                align-items: center;
-                gap: .25rem;
-                max-width: 100%;
-                overflow: visible;
-            }
+        #header .navbar .container {
+            flex-wrap: wrap;
+        }
 
-            #header .navbar .navbar-nav.flex-row > li {
-                flex: 0 0 auto;
-                position: relative;
-            }
+        #header .navbar .navbar-nav.flex-row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: .25rem;
+            width: 100%;
+            max-width: 100%;
+            margin-top: .5rem;
+            overflow: visible;
+        }
 
-            #header .navbar .navbar-nav.flex-row > li > a {
-                display: flex;
-                align-items: center;
-                min-height: 44px;
-                padding: .65rem .85rem;
-                white-space: nowrap;
-                border-radius: .3rem;
-            }
+        #header .navbar .navbar-nav.flex-row > li {
+            flex: 0 0 auto;
+            position: relative;
+            max-width: 100%;
+        }
 
-            #header .navbar .navbar-nav.flex-row > li > a:hover,
-            #header .navbar .navbar-nav.flex-row > li > a:focus {
-                background: #f1f3f5;
-            }
+        #header .navbar .navbar-nav.flex-row > li > a {
+            display: flex;
+            align-items: center;
+            min-height: 44px;
+            padding: .65rem .75rem;
+            white-space: normal;
+            border-radius: .3rem;
+        }
 
-            #header .navbar .navbar-nav .dropdown-menu {
-                z-index: 1050;
-            }
+        #header .navbar .navbar-nav.flex-row > li > a:hover,
+        #header .navbar .navbar-nav.flex-row > li > a:focus {
+            background: #f1f3f5;
+        }
+
+        #header .navbar .navbar-nav .dropdown-menu {
+            z-index: 1050;
         }
     </style>
 </head>
