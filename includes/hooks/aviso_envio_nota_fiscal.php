@@ -172,8 +172,8 @@ word-break:break-all;
 ';
 
 
-        require_once ROOT_WHMCS . '/vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
-        $email = new PHPMailer();
+        $email = new \PHPMailer\PHPMailer\PHPMailer();
+        // $email = new PHPMailer(); // Remove this line as it's redundant
         $email->WordWrap = 50;               // set word wrap
         $email->Priority = 1;
         $email->IsHTML(true);
