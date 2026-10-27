@@ -4,13 +4,7 @@ use WHMCS\Database\Capsule;
 add_hook('AdminAreaHeaderOutput', 1, function($vars)
 {
 
-	$configTHX = '../tarifasTHX.php';
-	if(!file_exists($configTHX))
-	{
-		return 'Arquivo de configuração não encontrado: '.$configTHX;
-	}
-
-	require_once $configTHX;
+	require_once ROOT_WHMCS . '/tarifasTHX.php';
 
 
     if ($vars['filename'] != 'clientsservices') {
