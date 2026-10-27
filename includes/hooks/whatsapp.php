@@ -68,7 +68,7 @@ function sendCobranca($vars)
 				$whatsMessageType = "Sua fatura *#{$whatsInvoiceId}*, no valor de *R$ {$whatsValor}* e com vencimento *".$whatsVencimento."* está com o pagamento em atraso.";
 			}
 
-			$linkUrl = getUrlCurta(HTTP_WHMCS . '/' . criptX($whatsInvoiceId));
+			$linkUrl = getUrlCurta(HTTP_WHMCS . '/viewinvoice-thx/' . criptX($whatsInvoiceId));
 
 			$detalhes = '*'.$linkUrl.'*';
 			$mensagemHello = "Olá *{$whatsName}*! 👋";
