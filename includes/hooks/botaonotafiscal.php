@@ -5,11 +5,6 @@ use WHMCS\Database\Capsule;
 add_hook('AdminAreaHeaderOutput', 1, function($vars)
 {
 
-    
-    echo '<pre>';
-    var_dump($_GET);
-    echo '</pre>';
-    echo $_SERVER['SCRIPT_FILENAME'];
     if (!empty($_GET['verificar_nota'])) {
         $idFaturaParaEnvio = $_GET['verificar_nota'];
         $arquivoName = md5(NOTAS_TOKEN . $idFaturaParaEnvio) . '.pdf';
@@ -315,7 +310,6 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
 
         $notaEnviada = !empty($_GET['notaEnviada']) ? $_GET['notaEnviada'] : 0;
         $output .= <<<HTML
-                    NOTANOTANOTA
                     <div class="modal whmcs-modal fade" id="modalNotas" role="dialog">
                         <div class="modal-dialog">
                             <div class="modal-content panel panel-primary">
