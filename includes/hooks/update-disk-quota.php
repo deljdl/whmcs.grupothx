@@ -31,7 +31,8 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
         return;
     }
 
-    $hospedagem = getDadosHospedagemById($idServico);
+    $resposta = localAPI('GetClientsProducts', array('serviceid' => $idServico), false);
+    $hospedagem = $resposta['products']['product'][0] ?? null;
 
     $textoBotao = '<i class="fas fa-hdd"></i>';
     $titleBotao = 'Gerenciar Espaço em Disco';
