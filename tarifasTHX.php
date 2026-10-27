@@ -151,6 +151,38 @@ function getEmailsCpanel($hospedagem, $server)
 
 
 
+function diagnosticarAccessHashWHM($server)
+{
+    $criptografado = (string) $server->accesshash;
+    $resultado = localAPI('DecryptPassword', array(
+        'password2' => $criptografado
+    ), false);
+
+    $descriptografado = '';
+    if (is_array($resultado) && isset($resultado['result']) && $resultado['result'] === 'success' && isset($resultado['password'])) {
+        $descriptografado = (string) $resultado['password'];
+    }
+
+    $mascarar = function ($valor) {
+        $valor = (string) $valor;
+        if ($valor === '') {
+            return '(vazio)';
+        }
+        if (strlen($valor) <= 8) {
+            return substr($valor, 0, 2) . '...' . substr($valor, -2);
+        }
+        return substr($valor, 0, 4) . '...' . substr($valor, -4);
+    };
+
+    return array(
+        'decrypt_api_result' => isset($resultado['result']) ? $resultado['result'] : 'sem resultado',
+        'decrypt_api_message' => isset($resultado['message']) ? $resultado['message'] : null,
+        'stored_accesshash' => $mascarar($criptografado),
+        'decrypted_accesshash' => $mascarar($descriptografado),
+        'decrypted_length' => strlen($descriptografado)
+    );
+}
+
 function executarRequisicaoCpanel($server, $params)
 {
     $url = 'https://' . $server->hostname . ':2087/json-api/cpanel';
@@ -176,7 +208,16 @@ function executarRequisicaoCpanel($server, $params)
         return array('error_msg' => "Resposta inválida do servidor (Não é JSON)", 'raw' => $raw, 'params' => $params);
     }
 
-    return array('params' => $params, 'retorno' => $decoded, 'raw' => $raw);
+    $resultado = array('params' => $params, 'retorno' => $decoded, 'raw' => $raw);
+
+    if (
+        isset($decoded['cpanelresult']['error']) &&
+        stripos($decoded['cpanelresult']['error'], 'Access denied') !== false
+    ) {
+        $resultado['diagnostico_accesshash'] = diagnosticarAccessHashWHM($server);
+    }
+
+    return $resultado;
 }
 
 function executarRequisicaoWHM($server, $params)
