@@ -10,7 +10,7 @@ if (!defined("WHMCS")){
 }
 
 
-require_once ROOT_WHMCS . '/tarifasTHX.php';
+require_once ROOT_WHMCS . '/tarifasTHX.php'; die('BCT 2');
 
 add_hook('InvoiceCreationPreEmail', 1, function($vars) {
 
