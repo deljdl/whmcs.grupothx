@@ -141,7 +141,20 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
             $idFaturaParaEnvio = $_POST['iddafatura'];
             $arquivoName = md5(NOTAS_TOKEN.$idFaturaParaEnvio).'.pdf';
             $pathSavedPdfNota = ROOT_WHMCS.'/thx/notasfiscais/'.$arquivoName;
-            move_uploaded_file($_FILES['notafiscal']['tmp_name'], $pathSavedPdfNota);
+            $uploadOk = move_uploaded_file($_FILES['notafiscal']['tmp_name'], $pathSavedPdfNota);
+
+            if (!$uploadOk || !file_exists($pathSavedPdfNota)) {
+                die(
+                    'Falha ao salvar a nota fiscal.<br>' .
+                    'ROOT_WHMCS: ' . ROOT_WHMCS . '<br>' .
+                    'Caminho destino: ' . $pathSavedPdfNota . '<br>' .
+                    'Pasta existe: ' . (is_dir(dirname($pathSavedPdfNota)) ? 'sim' : 'não') . '<br>' .
+                    'Pasta gravável: ' . (is_writable(dirname($pathSavedPdfNota)) ? 'sim' : 'não') . '<br>' .
+                    'Erro do upload: ' . ($_FILES['notafiscal']['error'] ?? 'desconhecido')
+                );
+            }
+
+            error_log('[botaonotafiscal] Nota salva em: ' . $pathSavedPdfNota);
         }
 
         $linkNota = getUrlCurta(HTTP_WHMCS."notasfiscais/{$arquivoName}");
@@ -296,7 +309,8 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
             }
             $email->AddAttachment( $pathSavedPdfNota , 'Grupo THX - Nota Fiscal da Fatura '.$idFaturaParaEnvio.'.pdf' );
 
-            $email->Send();
+            $emailEnviado = $email->Send();
+            error_log('[botaonotafiscal] Anexo: ' . $pathSavedPdfNota . ' | existe: ' . (file_exists($pathSavedPdfNota) ? 'sim' : 'não') . ' | envio email: ' . ($emailEnviado ? 'sucesso' : 'falhou: ' . $email->ErrorInfo));
 
             alexa('Nota Fiscal da fatura '.$idFaturaParaEnvio.' enviada para '.$dadosCliente[0]->firstname);
 
