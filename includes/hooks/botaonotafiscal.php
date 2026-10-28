@@ -401,6 +401,7 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
         <a class="btn btn-primary" style="color: #FFFFFF;font-size: 15px;cursor:pointer;margin: 0 5px 0 0;" title="Enviar Nota Fiscal {$_GET['id']}" href="javascript:openModalNota({$_GET['id']})"><i class="fas fa-file-invoice" title="Reenviar Nota Fiscal {$_GET['id']}"></i> Enviar Nota</a>\
     </div>';
 
+    
     if (document.getElementById("tab1")) {
         $('#tab1').append(btnota);
     } else {
