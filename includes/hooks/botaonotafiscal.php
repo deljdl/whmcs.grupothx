@@ -157,7 +157,7 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
             error_log('[botaonotafiscal] Nota salva em: ' . $pathSavedPdfNota);
         }
 
-        $linkNota = getUrlCurta(HTTP_WHMCS."notasfiscais/{$arquivoName}");
+        $linkNota = getUrlCurta(HTTP_WHMCS."/notasfiscais/{$arquivoName}");
 
 
         if($pathSavedPdfNota)
