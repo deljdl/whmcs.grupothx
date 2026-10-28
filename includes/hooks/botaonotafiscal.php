@@ -184,28 +184,44 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
 
             $contatosCliente = Capsule::select("SELECT * FROM tblcontacts WHERE userid =  {$dadosCliente[0]->userid}");
 
-            if($whatsapp)
-            {
-
-                $msgWhats = "
-                Olá *{$dadosCliente[0]->firstname}* 👋,
+            $msgWhats = "
+            Olá *{$dadosCliente[0]->firstname}* 👋,
 
 Sua *Nota Fiscal* referente aos serviços da fatura *#{$idFaturaParaEnvio}*
 no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em seu email*.
 
 *Você também pode baixar sua nota fiscal clicando no link abaixo:*
 {$linkNota}";
+
+            if($whatsapp)
+            {
                 if(DEBUG_NOTAS)
                 {
                     enviaWhatsApp(WHATSAPP_ADMIN_JARDEL , $msgWhats);
-                    $debugMail.= "<br />Whatsapp enviado para: {$whatsapp} {$dadosCliente[0]->firstname}";
+                    $debugMail.= "<br />Whatsapp de teste enviado para: {$whatsapp} {$dadosCliente[0]->firstname}";
                 }
                 else
                 {
                     enviaWhatsApp($whatsapp , $msgWhats);
                     $debugMail.= "<br />Whatsapp enviado para: {$whatsapp} {$dadosCliente[0]->firstname}";
                 }
+            }
 
+            if(!DEBUG_NOTAS)
+            {
+                foreach($contatosCliente as $contato)
+                {
+                    if(!empty($contato->phonenumber))
+                    {
+                        $msgWhatsContato = str_replace(
+                            "Olá *{$dadosCliente[0]->firstname}*",
+                            "Olá *{$contato->firstname}*",
+                            $msgWhats
+                        );
+                        enviaWhatsApp($contato->phonenumber, $msgWhatsContato);
+                        $debugMail.= "<br />Whatsapp enviado para contato: {$contato->phonenumber} {$contato->firstname}";
+                    }
+                }
             }
 
 
