@@ -27,7 +27,6 @@ add_hook('ClientAreaFooterOutput', 1, function () {
 			var s=d.createElement(\'script\');
 			s.src=u + (u.indexOf(\'?\')>-1?\'&\':\'?\') + \'v=\' + Date.now();
 			s.async=true;
-			s.crossOrigin=\'anonymous\';
 			d.head.appendChild(s);
 		}
 		if(\'requestIdleCallback\' in w){ w.requestIdleCallback(load,{timeout:1500}); }
