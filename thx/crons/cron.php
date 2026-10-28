@@ -23,8 +23,8 @@ require_once $rootDirCrons . '/tarifasTHX.php';
 $crons = [
     'cron_dividas' => [
         'path' => $rootDirCrons . '/thx/crons/cron_dividas.php',
-        'dias' => [1, 3, 5],
-        'horas' => [10],
+        'dias' => [1, 2, 3, 4, 5],
+        'horas' => [9],
     ],
     'cron_monitora_pagamentos' => [
         'path' => $rootDirCrons . '/thx/crons/cron_monitora_pagamentos.php',
@@ -33,9 +33,14 @@ $crons = [
     ],
     'cron_resumo_diario' => [
         'path' => $rootDirCrons . '/thx/crons/cron-resumo-diario.php',
-        'dias' => [1, 2, 3, 4, 5, 6, 7],
-        'horas' => [23],
+        'dias' => [1, 2, 3, 4, 5],
+        'horas' => [11],
     ],
+    'quota-check.php' => [
+        'path' => $rootDirCrons . '/thx/crons/quota-check.php',
+        'dias' => [1, 3, 5],
+        'horas' => [9],
+    ]
 ];
 
 $agoraCronThx = new DateTimeImmutable();
