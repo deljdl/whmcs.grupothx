@@ -1,6 +1,6 @@
 <?php
 
-$rootDirCrons = dirname(dirname(dirname(dirname(__DIR__))));
+$rootDirCrons = __DIR__;
 die($rootDirCrons);
 
 
