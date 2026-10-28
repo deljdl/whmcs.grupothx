@@ -59,8 +59,9 @@ foreach ($crons as $arquivo => $agenda) {
         echo '<hr />';
         continue;
     }
-
-    foreach ($agenda['horas'] as $hora) {
+    $jaRodouNessaHora = false;
+    foreach ($agenda['horas'] as $hora)
+    {
         $agendada = $agoraCronThx->setTime($hora, 0);
 
         if ($agendada > $agoraCronThx) {
@@ -70,7 +71,7 @@ foreach ($crons as $arquivo => $agenda) {
 
         $controle = $controleDir . '/' . $arquivo . '-' . $agendada->format('Y-m-d-H') . '.ok';
 
-        if (file_exists($controle)) {
+        if (file_exists($controle) || $jaRodouNessaHora) {
             echo '<br />Cron já executado para esta hora: ' . $controle;
             continue;
         }
@@ -83,5 +84,7 @@ foreach ($crons as $arquivo => $agenda) {
         file_put_contents($controle, date('Y-m-d H:i:s'));
         echo '<br />Controle criado: ' . $controle;
         echo '<hr />';
+
+        $jaRodouNessaHora = true;
     }
 }
