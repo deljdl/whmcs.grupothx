@@ -906,18 +906,21 @@ function getEmailTemplate($name, $vars)
 	return $html;
 }
 
-function replaceVars($str,$variaveis)
+function replaceVars($str, $variaveis)
 {
-	logModuleCall('/tarifasTHX.php', __FUNCTION__ , $vars, $variaveis, $str);
-	if(isset($variaveis['mergefields']))
-	{
-		foreach ($variaveis['mergefields'] as $key => $valor)
-		{
-			$str = str_replace('{$'.$key.'}',$valor, $str);
-		}
+    logModuleCall('/tarifasTHX.php', __FUNCTION__, $variaveis, $variaveis, $str);
 
-		return $str;
-	}
+    if (isset($variaveis['mergefields'])) {
+        foreach ($variaveis['mergefields'] as $key => $valor) {
+            if (is_scalar($valor) || $valor === null) {
+                $str = str_replace('{$' . $key . '}', (string) $valor, $str);
+            }
+        }
+
+        return $str;
+    }
+
+    return $str;
 }
 ##fim hoohk whatsapp
 function soNumeros($str)

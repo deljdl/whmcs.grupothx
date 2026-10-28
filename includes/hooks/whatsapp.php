@@ -570,24 +570,23 @@ function sendMessageWhatsDomainRenewalConfirmation($vars)
     }
 
     $whatsNumber = $vars['mergefields']['client_custom_fields'][1];
-    $vars['mergefields']['client_first_name'] = trim($vars['mergefields']['client_first_name']);
 
-    $mensagemWhats = "
-   Olá *{$vars['mergefields']['client_first_name']}* ! 👋
+	$mensagemWhats = "
+	Olá *{$vars['mergefields']['client_first_name']}* ! 👋
 
-    O registro do domínio *{$vars['mergefields']['domain_name']}* foi renovado com sucesso para mais *{$vars['mergefields']['domain_reg_period']}*.
-    Próximo vencimento: *{$vars['mergefields']['domain_expiry_date']}*.";
+	O registro do domínio *{$vars['mergefields']['domain_name']}* foi renovado com sucesso para mais *{$vars['mergefields']['domain_reg_period']}*.
+	Próximo vencimento: *{$vars['mergefields']['domain_expiry_date']}*.";
 
-    $mensagemWhats = clearMsgToWhatsAppSend($mensagemWhats);
+	$mensagemWhats = clearMsgToWhatsAppSend($mensagemWhats);
 
-    $whatsEnvio = enviaWhatsApp($whatsNumber, $mensagemWhats);
+	$whatsEnvio = enviaWhatsApp($whatsNumber, $mensagemWhats);
 
-    logModuleCall('/includes/hooks/whatsapp.php', __FUNCTION__, $vars, '', $whatsEnvio);
+	logModuleCall('/includes/hooks/whatsapp.php', __FUNCTION__, $vars, '', $whatsEnvio);
 
-    criaTarefaKamban("Renovar o domínio {$vars['mergefields']['domain_name']}<br />Período: {$vars['mergefields']['domain_reg_period']}<br />Cliente:{$vars['mergefields']['client_first_name']}<br />Empresa:{$vars['mergefields']['client_company_name']}");
+    criaTarefaKamban("Renovar o domínio {$vars['mergefields']['domain_name']}<br />Período: {$vars['mergefields']['domain_reg_period']}<br />Cliente:{$dados['firstname']}<br />Empresa:{$vars['mergefields']['client_company_name']}");
 
     if (!empty($dados)) {
-        alexa("Renove o domínio {$vars['mergefields']['domain_name']}. Para {$dados['firstname']}, da empresa {$dados['companyname']}.");
+        alexa("Renove o domínio {$vars['mergefields']['domain_name']}. Para {$dados['firstname']}, da empresa {$vars['mergefields']['client_company_name']}.");
     }
 }
 
