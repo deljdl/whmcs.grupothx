@@ -68,11 +68,10 @@ function getBarCode($codigo, $imgStyle = 'display: block')
         return false;
     }
 
-    $cacheDir = $_SERVER['DOCUMENT_ROOT'] . '/thx/cache/barcodes';
-    $cacheUrl = rtrim(HTTP_WHMCS, '/') . '/cache/barcodes';
+    $cacheDir = $_SERVER['DOCUMENT_ROOT'] . '/thx/barcodes';
+    $cacheUrl = rtrim(HTTP_WHMCS, '/') . '/thx/barcodes';
 
-	echo 'L:'.__LINE__.' : '.$cacheDir.'<br />';
-	echo 'L:'.__LINE__.' : '.$cacheUrl.'<br />';
+
 
     if (!is_dir($cacheDir)) {
         mkdir($cacheDir, 0777, true);
@@ -87,6 +86,9 @@ function getBarCode($codigo, $imgStyle = 'display: block')
     } else {
         $status = 'cache';
     }
+
+		echo 'L:'.__LINE__.' : '.$cacheDir.'<br />';
+	echo 'L:'.__LINE__.' : '.$cacheUrl.'<br />';
 
     return sprintf(
 		'<img class="barcode" src="%s/%s" data-cache="%s" title="Código de barras" style="%s">',
