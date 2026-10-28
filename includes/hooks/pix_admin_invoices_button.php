@@ -107,7 +107,9 @@ jQuery(function($){
         $form.append($("<input/>", { type:"hidden", name:"conta", value:"nujuridica" }));
         $form.append($("<input/>", { type:"hidden", name:"valor", value:valorMysql }));
         $form.append($("<input/>", { type:"hidden", name:"descricao", value:descricao }));
-        $form.append($("<button/>", { type:"submit", class:"btn btn-default btn-xs", html:'<i class="ri-pix-fill"></i>', title:"Gerar PIX", style:"padding:2px 5px;white-space:nowrap" }));
+        var $pixButton = $("<button/>", { type:"submit", class:"btn btn-default btn-xs", title:"Gerar PIX", style:"padding:2px 5px;white-space:nowrap" });
+        $pixButton.append($("<i/>", { class:"ri-pix-fill" }));
+        $form.append($pixButton);
 
         var $acoes = $tr.children("td").last().find(".btn-group").first();
         if ($acoes.length) {
