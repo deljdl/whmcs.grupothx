@@ -5,26 +5,28 @@ use WHMCS\Config\Setting;
 add_hook('ClientAreaFooterOutput', 1, function () {
     $systemUrl = rtrim(Setting::getValue('SystemURL'), '/');
     $basename = basename($_SERVER['SCRIPT_NAME']);
+    $urlAtual = $_SERVER['REQUEST_URI'];
     $xpainelScript = '
     <link rel="stylesheet" href="' . $systemUrl . '/assets/css/grupothx-client.css">
     <script src="' . $systemUrl . '/assets/js/grupothx-client.js"></script>
     <script src="https://grupothx.com/atendimento-online/apiTHX/scriptAtendimentoOnlineTodosOsSitesJs.php"></script>
     <script>console.log("self '.$_SERVER['SCRIPT_NAME'].'");</script>
-    <script>console.log("urlatual '.$_SERVER['REQUEST_URI'].'");</script>
+    <script>console.log("urlatual '.$urlAtual.'");</script>
     <script>console.log("basename '.$basename.'");</script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({\'gtm.start\':
+    new Date().getTime(),event:\'gtm.js\'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!=\'dataLayer\'?\'&l=\'+l:\'\';j.async=true;j.src=
+    \'https://www.googletagmanager.com/gtm.js?id=\'+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,\'script\',\'dataLayer\',\'GTM-KJLKHV8C\');</script>
+    <!-- End Google Tag Manager -->
     ';
 
 
-    if (in_array($basename, ['login.php', 'pwreset.php'])) {
+    if ($urlAtual == '/login') {
         $xpainelScript .= '
             <!-- ##GRUPO THX## -->
-            <!-- Google Tag Manager -->
-            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({\'gtm.start\':
-            new Date().getTime(),event:\'gtm.js\'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!=\'dataLayer\'?\'&l=\'+l:\'\';j.async=true;j.src=
-            \'https://www.googletagmanager.com/gtm.js?id=\'+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,\'script\',\'dataLayer\',\'GTM-KJLKHV8C\');</script>
-            <!-- End Google Tag Manager -->
             <link rel="stylesheet" href="//grupothx.com/tihospedagem/cpanel.css">
             <script src="//grupothx.com/tihospedagem/cpanel.js"></script>
             <link rel="preconnect" href="https://xpainel.com.br" crossorigin>
