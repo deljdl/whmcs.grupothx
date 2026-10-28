@@ -87,9 +87,6 @@ function getBarCode($codigo, $imgStyle = 'display: block')
         $status = 'cache';
     }
 
-		echo 'L:'.__LINE__.' : '.$cacheDir.'<br />';
-	echo 'L:'.__LINE__.' : '.$cacheUrl.'<br />';
-
     return sprintf(
 		'<img class="barcode" src="%s/%s" data-cache="%s" title="Código de barras" style="%s">',
 		$cacheUrl,

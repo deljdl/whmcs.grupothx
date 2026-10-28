@@ -9,6 +9,7 @@
 *.log
 .DS_Store
 /thx/notasfiscais/*
+/thx/barcodes/*
 /logs-gateways/
 /qrcodes_pix/
 /info.php
