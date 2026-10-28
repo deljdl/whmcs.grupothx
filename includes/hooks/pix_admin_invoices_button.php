@@ -73,12 +73,12 @@ jQuery(function($){
     }
 
     $table.find("tbody tr").each(function(){
-      var $tr = $(this), id = $tr.find('input[name="selectedinvoices[]"]').val() || null;
+      var $tr = $(this), id = $tr.find("input[name=\"selectedinvoices[]\"]").val() || null;
       var delOnclick = $tr.find("td:last a[onclick*=doDelete]").attr("onclick") || "";
       var m = delOnclick.match(/doDelete\\(\'(\\d+)\'\\)/);
       if (m) id = m[1];
       if (!id) {
-        var href = $tr.find('a[href*="/invoice/"],a[href*="invoices.php?id="],a[href*="viewinvoice.php?id="]').attr("href") || "";
+        var href = $tr.find("a[href*=\"/invoice/\"],a[href*=\"invoices.php?id=\"],a[href*=\"viewinvoice.php?id=\"]").attr("href") || "";
         var m2 = href.match(/\\/invoice\\/(\\d+)/) || href.match(/[?&]id=(\\d+)/);
         if (m2) id = m2[1];
       }
@@ -104,7 +104,7 @@ jQuery(function($){
         var $form = $("<form/>", { method:"get", action:"'. $pixUrlEsc .'", target:"_blank", style:"display:inline" });
         $form.append($("<input/>", { type:"hidden", name:"id", value:idCustom }));
         $form.append($("<input/>", { type:"hidden", name:"generate", value:true }));
-        $form.append($("<input/>", { type:"hidden", name:"conta", value:'nujuridica' }));
+        $form.append($("<input/>", { type:"hidden", name:"conta", value:"nujuridica" }));
         $form.append($("<input/>", { type:"hidden", name:"valor", value:valorMysql }));
         $form.append($("<input/>", { type:"hidden", name:"descricao", value:descricao }));
         $form.append($("<button/>", { type:"submit", class:"btn btn-default btn-xs", text:"Gerar PIX" }));
