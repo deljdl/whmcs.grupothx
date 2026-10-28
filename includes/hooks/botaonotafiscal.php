@@ -62,8 +62,10 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
                 </div>
             </div>';
 
-            if(file_exists($pathSavedPdfNota) && empty($_GET['reenviar']))
+            if(file_exists($pathSavedPdfNota))
             {
+                if (empty($_GET['reenviar']))
+                {
                 die('
                 <div class="row" style="margin-top:15px;">
 
@@ -110,6 +112,7 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
                     '.$blocoGerarNota.'
 
                 </div>');
+                }
             }
             else
             {
