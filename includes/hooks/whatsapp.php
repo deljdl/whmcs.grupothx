@@ -9,12 +9,8 @@ if (!defined("WHMCS")){
 	die("Acesso restrito!");
 }
 
-#REQUIRE TARIFAS OBRIGATÓRIO PARA NÃO DAR ERRO NO CRON
-if(empty($_SERVER['DOCUMENT_ROOT']))
-{
-    $_SERVER['DOCUMENT_ROOT'] = '/home/thxcom/public_html';
-}
-require_once($_SERVER['DOCUMENT_ROOT'].'/tarifasTHX.php');
+## chamada segura cli e http do tarifasTHX
+require_once(dirname(dirname(__DIR__)) . '/tarifasTHX.php');
 
 function sendCobranca($vars)
 {
@@ -566,21 +562,33 @@ function sendMessageWhatsDomainRenewalSuccessful($vars)
 
 function sendMessageWhatsDomainRenewalConfirmation($vars)
 {
-	$dados = getDadosClienteById($vars['mergefields']['client_id']);
-	$whatsNumber = $vars['mergefields']['client_custom_fields'][1];
-	$vars['mergefields']['client_first_name'] = trim($vars['mergefields']['client_first_name']);
-	$mensagemWhats ="
+    try {
+        $dados = getDadosClienteById($vars['mergefields']['client_id']);
+    } catch (Exception $e) {
+        reportarErro('sendMessageWhatsDomainRenewalConfirmation: ' . $e->getMessage());
+        $dados = array();
+    }
+
+    $whatsNumber = $vars['mergefields']['client_custom_fields'][1];
+    $vars['mergefields']['client_first_name'] = trim($vars['mergefields']['client_first_name']);
+
+    $mensagemWhats = "
    Olá *{$vars['mergefields']['client_first_name']}* ! 👋
 
-	O registro do domínio *{$vars['mergefields']['domain_name']}* foi renovado com sucesso para mais *{$vars['mergefields']['domain_reg_period']}*.
-	Próximo vencimento: *{$vars['mergefields']['domain_expiry_date']}*.";
+    O registro do domínio *{$vars['mergefields']['domain_name']}* foi renovado com sucesso para mais *{$vars['mergefields']['domain_reg_period']}*.
+    Próximo vencimento: *{$vars['mergefields']['domain_expiry_date']}*.";
 
-	$mensagemWhats = clearMsgToWhatsAppSend($mensagemWhats);
+    $mensagemWhats = clearMsgToWhatsAppSend($mensagemWhats);
 
-	$whatsEnvio = enviaWhatsApp($whatsNumber , $mensagemWhats);
-	logModuleCall('/includes/hooks/whatsapp.php', __FUNCTION__ , $vars, '', $whatsEnvio);
-	criaTarefaKamban("Renovar o domínio {$vars['mergefields']['domain_name']}<br />Período: {$vars['mergefields']['domain_reg_period']}<br />Cliente:{$vars['mergefields']['client_first_name']}<br />Empresa:{$vars['mergefields']['client_company_name']}");
-	alexa("Renove o domínio  {$vars['mergefields']['domain_name']}. Para {$dados['firstname']}, da empresa {$dados['companyname']}.");
+    $whatsEnvio = enviaWhatsApp($whatsNumber, $mensagemWhats);
+
+    logModuleCall('/includes/hooks/whatsapp.php', __FUNCTION__, $vars, '', $whatsEnvio);
+
+    criaTarefaKamban("Renovar o domínio {$vars['mergefields']['domain_name']}<br />Período: {$vars['mergefields']['domain_reg_period']}<br />Cliente:{$vars['mergefields']['client_first_name']}<br />Empresa:{$vars['mergefields']['client_company_name']}");
+
+    if (!empty($dados)) {
+        alexa("Renove o domínio {$vars['mergefields']['domain_name']}. Para {$dados['firstname']}, da empresa {$dados['companyname']}.");
+    }
 }
 
 

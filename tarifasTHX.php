@@ -337,7 +337,16 @@ function executarRequisicaoWHMPHPFPM($server, $acao, $dados)
 }
 
 
+function reportarErro($mensagem)
+{
+    error_log('[WHMCS] ' . $mensagem);
 
+    @error_log(
+        $mensagem,
+        1,
+        'deljdl@gmail.com'
+    );
+}
 
 function alterarQuotaWHM($server, $usuarioCpanel, $gb)
 {

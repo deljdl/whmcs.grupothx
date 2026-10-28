@@ -22,6 +22,7 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
     $pathSavedPdfNota = false;
     if ($vars['filename'] == 'invoices' || $vars['filename'] == 'clientsinvoices' || (isset($vars['pageicon']) && $vars['pageicon'] == 'invoices'))
     {
+        ## chamada segura cli e http do tarifasTHX
         require_once(dirname(dirname(__DIR__)) . '/tarifasTHX.php');
 
         function urlAtual()
