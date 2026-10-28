@@ -52,11 +52,11 @@ $crons = [
     ],
 ];
 
-$agora = new DateTimeImmutable();
-$inicio = $agora->modify('-7 days')->setTime(0, 0);
+$agoraCronThx = new DateTimeImmutable();
+$inicioCronThx = $agoraCronThx->modify('-7 days')->setTime(0, 0);
 
 foreach ($crons as $arquivo => $agenda) {
-    for ($data = $inicio; $data <= $agora; $data = $data->modify('+1 day')) {
+    for ($data = $inicioCronThx; $data <= $agoraCronThx; $data = $data->modify('+1 day')) {
         if (!in_array((int) $data->format('N'), $agenda['dias'])) {
             continue;
         }
@@ -64,7 +64,7 @@ foreach ($crons as $arquivo => $agenda) {
         foreach ($agenda['horas'] as $hora) {
             $agendada = $data->setTime($hora, 0);
 
-            if ($agendada > $agora) {
+            if ($agendada > $agoraCronThx) {
                 continue;
             }
 
