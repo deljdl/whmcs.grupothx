@@ -1,7 +1,6 @@
 <?php
-header('Location: /thx/viewinvoice.php');
-
-
+header('Location: /thx/viewinvoice.php' . (!empty($_SERVER['QUERY_STRING']) ? '?' . $_SERVER['QUERY_STRING'] : ''), true, 301);
+exit;
 
 
 

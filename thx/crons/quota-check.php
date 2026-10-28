@@ -1,5 +1,4 @@
 <?
-require_once(dirname(__DIR__) . '/tarifasTHX.php');
 function listaHospedagemsComQuotaNoLImite()
 {
    $ch = curl_init();
