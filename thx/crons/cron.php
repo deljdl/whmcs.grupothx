@@ -55,6 +55,8 @@ $crons = [
 $agoraCronThx = new DateTimeImmutable();
 $inicioCronThx = $agoraCronThx->modify('-7 days')->setTime(0, 0);
 
+var_dump($agoraCronThx, $inicioCronThx);
+
 foreach ($crons as $arquivo => $agenda) {
     for ($data = $inicioCronThx; $data <= $agoraCronThx; $data = $data->modify('+1 day')) {
         if (!in_array((int) $data->format('N'), $agenda['dias'])) {
