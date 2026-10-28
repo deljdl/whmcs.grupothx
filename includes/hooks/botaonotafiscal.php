@@ -40,6 +40,10 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
             $arquivoName = md5(NOTAS_TOKEN.$idFaturaParaEnvio).'.pdf';
             $pathSavedPdfNota = ROOT_WHMCS.'/notasfiscais/'.$arquivoName;
 
+            if (!empty($_GET['reenviar']) && file_exists($pathSavedPdfNota)) {
+                // Reenvia o PDF já salvo, sem exigir novo upload.
+            }
+
             $blocoGerarNota = '
             <div class="col-md-12" style="margin-bottom:15px;">
                 <div style="padding:15px;border:1px solid #ddd;border-radius:8px;background:#f8f9fa;">
@@ -58,7 +62,7 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
                 </div>
             </div>';
 
-            if(file_exists($pathSavedPdfNota))
+            if(file_exists($pathSavedPdfNota) && empty($_GET['reenviar']))
             {
                 die('
                 <div class="row" style="margin-top:15px;">
