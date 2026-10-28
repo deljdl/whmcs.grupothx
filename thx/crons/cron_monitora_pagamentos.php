@@ -60,9 +60,9 @@ foreach($clientes as $cliente)
         <td '.$tableTdStyle.'>'.$cliente['cliente'].'</td>
         <td '.$tableTdStyle.'>R$ '.$cliente['fatura_total'].'</td>
         <td '.$tableTdStyle.'>'.strftime('%d/%m/%Y', strtotime($cliente['fatura_vencimento'])).'</td>
-        <td '.$tableTdStyle.'><a target="_blank" href="'.HTTP_WHMCS.'/clientssummary.php?userid='.$cliente['cliente_id'].'">CLIENTE</a></td>
-        <td '.$tableTdStyle.'><a target="_blank" href="'.HTTP_WHMCS.'/invoices.php?action=edit&id='.$cliente['fatura_id'].'">FATURA</a></td>
-        <td '.$tableTdStyle.'><a target="_blank" href="'.HTTP_WHMCS.'/clientsservices.php?userid='.$cliente['cliente_id'].'">PRODUTOS</a></td>
+        <td '.$tableTdStyle.'><a target="_blank" href="'.HTTP_WHMCS_ADMIN.'/clientssummary.php?userid='.$cliente['cliente_id'].'">CLIENTE</a></td>
+        <td '.$tableTdStyle.'><a target="_blank" href="'.HTTP_WHMCS_ADMIN.'/invoices.php?action=edit&id='.$cliente['fatura_id'].'">FATURA</a></td>
+        <td '.$tableTdStyle.'><a target="_blank" href="'.HTTP_WHMCS_ADMIN.'/clientsservices.php?userid='.$cliente['cliente_id'].'">PRODUTOS</a></td>
     </tr>';
 }
 
@@ -191,10 +191,10 @@ foreach($anomalias as $anomalia)
             : '0.00'
         ).'</td>
         <td '.$tableTdStyle.'>
-            <a target="_blank" href="'.HTTP_WHMCS.'/clientssummary.php?userid='.$anomalia['userid'].'">CLIENTE</a>
+            <a target="_blank" href="'.HTTP_WHMCS_ADMIN.'/clientssummary.php?userid='.$anomalia['userid'].'">CLIENTE</a>
         </td>
         <td '.$tableTdStyle.'>
-            <a target="_blank" href="'.HTTP_WHMCS.'/clientsservices.php?userid='.$anomalia['userid'].'">PRODUTOS</a>
+            <a target="_blank" href="'.HTTP_WHMCS_ADMIN.'/clientsservices.php?userid='.$anomalia['userid'].'">PRODUTOS</a>
         </td>
     </tr>';
 }
@@ -414,10 +414,10 @@ foreach($semPagamento as $servico)
         <td '.$tableTdStyle.'>'.$servico['domain'].'</td>
         <td '.$tableTdStyle.'>R$ '.$servico['amount'].'</td>
         <td '.$tableTdStyle.'>'.$servico['billingcycle'].'</td>
-        <td '.$tableTdStyle.'>'.strftime('%d/%m/%Y', strtotime($servico['nextduedate'])).'</td>
+        <td '.$tableTdStyle.'>'.date('d/m/Y', strtotime($servico['nextduedate'])).'</td>
         <td '.$tableTdStyle.'>'.(
             $servico['ultimo_pagamento']
-            ? strftime('%d/%m/%Y', strtotime($servico['ultimo_pagamento']))
+            ? date('d/m/Y', strtotime($servico['ultimo_pagamento']))
             : '<strong style="color:red">NUNCA</strong>'
         ).'</td>
         <td '.$tableTdStyle.'>R$ '.(
@@ -426,7 +426,7 @@ foreach($semPagamento as $servico)
             : '0.00'
         ).'</td>
         <td '.$tableTdStyle.'>
-            <a target="_blank" href="'.HTTP_WHMCS.'/admin/clientsservices.php?userid='.$servico['userid'].'">PRODUTOS</a>
+            <a target="_blank" href="'.HTTP_WHMCS_ADMIN.'/clientsservices.php?userid='.$servico['userid'].'">PRODUTOS</a>
         </td>
     </tr>';
 }
@@ -450,7 +450,7 @@ $html = '<!DOCTYPE html>
 <body>
 
 <p>
-    '.'Relatório de clientes inativos ou com faturas em aberto desde '.strftime('%d/%m/%Y', strtotime($dataLimite)).'
+    '.'Relatório de clientes inativos ou com faturas em aberto desde '.date('d/m/Y', strtotime($dataLimite)).'
     <br />
     <strong>
         Considere excluir o cliente ou a fatura.
