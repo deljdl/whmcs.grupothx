@@ -27,29 +27,38 @@
     <style>
         .providerPreLinking + p { display: none !important; }
 
-        #header .navbar .container {
-            flex-wrap: wrap;
-        }
-
-        #header .navbar .navbar-nav.flex-row {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+        #header .navbar .client-area-menu-toggle {
+            min-width: 44px;
+            min-height: 44px;
+            display: inline-flex;
             align-items: center;
-            gap: .25rem;
+            justify-content: center;
+            margin-left: auto;
+            font-size: 1.35rem;
+        }
+
+        #header .navbar #clientAreaNavigation {
+            flex-basis: 100%;
             width: 100%;
-            max-width: 100%;
             margin-top: .5rem;
-            overflow: visible;
         }
 
-        #header .navbar .navbar-nav.flex-row > li {
-            flex: 0 0 auto;
+        #header .navbar #clientAreaNavigation .navbar-nav {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: .5rem;
+            border: 1px solid #dee2e6;
+            border-radius: .35rem;
+            background: #fff;
+        }
+
+        #header .navbar #clientAreaNavigation .navbar-nav > li {
             position: relative;
-            max-width: 100%;
+            width: 100%;
         }
 
-        #header .navbar .navbar-nav.flex-row > li > a {
+        #header .navbar #clientAreaNavigation .navbar-nav > li > a {
             display: flex;
             align-items: center;
             min-height: 44px;
@@ -58,8 +67,8 @@
             border-radius: .3rem;
         }
 
-        #header .navbar .navbar-nav.flex-row > li > a:hover,
-        #header .navbar .navbar-nav.flex-row > li > a:focus {
+        #header .navbar #clientAreaNavigation .navbar-nav > li > a:hover,
+        #header .navbar #clientAreaNavigation .navbar-nav > li > a:focus {
             background: #f1f3f5;
         }
 
@@ -148,10 +157,23 @@
                     {/if}
                 </a>
                 {if $loggedin}
-                    <ul class="navbar-nav flex-row">
-                        {include file="$template/includes/navbar.tpl" navbar=$primaryNavbar}
-                        {include file="$template/includes/navbar.tpl" navbar=$secondaryNavbar}
-                    </ul>
+                    <button
+                        class="btn btn-outline-secondary client-area-menu-toggle"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#clientAreaNavigation"
+                        aria-controls="clientAreaNavigation"
+                        aria-expanded="false"
+                        aria-label="Abrir menu da área do usuário"
+                    >
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </button>
+                    <div class="collapse" id="clientAreaNavigation">
+                        <ul class="navbar-nav">
+                            {include file="$template/includes/navbar.tpl" navbar=$primaryNavbar}
+                            {include file="$template/includes/navbar.tpl" navbar=$secondaryNavbar}
+                        </ul>
+                    </div>
                 {/if}
             </div>
         </div>
