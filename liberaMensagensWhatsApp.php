@@ -87,7 +87,7 @@ if(!empty($_GET['auto']))
 
 	//$message = '{"text":"'.$msg.'\n*'.APP_NAME.'* \n*Data:*['.date('d/m/Y G:i').']\n*IP:*['.$_SERVER['REMOTE_ADDR'].']\n'.$tipo.'"}';
 	$message = '{"text": "*'.$msg.'*"}';
-	$ch = curl_init('https://hooks.slack.com/services/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');
+	$ch = curl_init(SLACK_WEBHOOK_URL); // Defina a URL nova em configuração privada, fora do repositório.
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $message);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
