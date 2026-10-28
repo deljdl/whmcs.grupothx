@@ -431,6 +431,7 @@ foreach($semPagamento as $servico)
     </tr>';
 }
 
+
 $tableSemPagamento .= '</table>';
 
 
