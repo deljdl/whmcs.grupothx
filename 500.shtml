@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Atualização em andamento</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: #f3f4f6;
+            color: #1f2937;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        main { max-width: 600px; }
+
+        .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 92px;
+            height: 92px;
+            margin: 0 auto 12px;
+            border-radius: 50%;
+            background: #087cff;
+            color: #fff;
+            font-size: 64px;
+            font-weight: bold;
+        }
+
+        h1 {
+            margin: 0 0 20px;
+            color: #087cff;
+            font-size: clamp(48px, 12vw, 88px);
+            font-weight: 400;
+        }
+
+        h2 {
+            margin: 0 0 12px;
+            font-size: clamp(20px, 5vw, 28px);
+            font-weight: 400;
+        }
+
+        p {
+            margin: 0;
+            color: #4b5563;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="icon">!</div>
+        <h1>Já voltamos!</h1>
+        <h2>Estamos atualizando nosso sistema</h2>
+        <p>
+            Estamos realizando uma atualização para melhorar
+            nossos serviços. Por favor, aguarde alguns instantes
+            e tente novamente.
+        </p>
+    </main>
+</body>
+</html>
