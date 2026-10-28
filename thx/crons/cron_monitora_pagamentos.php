@@ -1,6 +1,4 @@
 <?
-require_once('config.php');
-
 
 $hoje = date('Y-m-d');
 $dataLimite = date('Y-m-d', strtotime($hoje. ' - 3 months'));
@@ -490,9 +488,8 @@ $html = '<!DOCTYPE html>
 |--------------------------------------------------------------------------
 */
 
-require_once($_SERVER['DOCUMENT_ROOT'].'/thx/vendor/phpmailer/phpmailer/PHPMailerAutoload.php');
 
-$email = new PHPMailer();
+$email = new \PHPMailer\PHPMailer\PHPMailer();
 $email->WordWrap = 50;
 $email->Priority = 1;
 $email->IsHTML(true);
