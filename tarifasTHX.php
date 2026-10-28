@@ -63,13 +63,16 @@ function getBarCode($codigo, $imgStyle = 'display: block')
     require_once ROOT_WHMCS . '/barcode/I2of5.php';
 
     $codigo = linhaDigitavelParaCodigoBarras($codigo);
-	echo 'L:'.__LINE__.' : '.$codigo;
+
     if (!$codigo) {
         return false;
     }
 
     $cacheDir = $_SERVER['DOCUMENT_ROOT'] . '/thx/cache/barcodes';
     $cacheUrl = rtrim(HTTP_WHMCS, '/') . '/cache/barcodes';
+
+	echo 'L:'.__LINE__.' : '.$cacheDir.'<br />';
+	echo 'L:'.__LINE__.' : '.$cacheUrl.'<br />';
 
     if (!is_dir($cacheDir)) {
         mkdir($cacheDir, 0777, true);
