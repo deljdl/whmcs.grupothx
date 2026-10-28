@@ -36,7 +36,7 @@ $crons = [
         'dias' => [1, 2, 3, 4, 5],
         'horas' => [11],
     ],
-    'quota-check.php' => [
+    'quota-check' => [
         'path' => $rootDirCrons . '/thx/crons/quota-check.php',
         'dias' => [1, 3, 5],
         'horas' => [9],
@@ -44,6 +44,11 @@ $crons = [
 ];
 
 $agoraCronThx = new DateTimeImmutable();
+echo '<h3>Início da execução do cron THX</h3>';
+echo '<br />Dia atual: ' . $agoraCronThx->format('N');
+echo '<br />Hora atual: ' . $agoraCronThx->format('H:i:s');
+echo '<hr />';
+
 
 foreach ($crons as $arquivo => $agenda) {
     // Verifica se o dia atual está na lista de dias agendados para este cron
@@ -51,8 +56,6 @@ foreach ($crons as $arquivo => $agenda) {
     if (!in_array((int) $agoraCronThx->format('N'), $agenda['dias'])) {
         echo '<br />Dia atual não está na lista de dias agendados para este cron.';
         echo '<br />Dias agendados: ' . implode(', ', $agenda['dias']);
-        echo '<br />Dia atual: ' . $agoraCronThx->format('N');
-        echo '<br />Hora atual: ' . $agoraCronThx->format('H:i:s');
         echo '<hr />';
         continue;
     }
