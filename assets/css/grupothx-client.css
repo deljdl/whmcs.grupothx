@@ -7,3 +7,7 @@ header.header .topbar {
 header.header .topbar .btn, header.header .topbar a, header.header .topbar span {
     color: white !important;
 }
+
+.master-breadcrumb {
+    display: none;
+}
