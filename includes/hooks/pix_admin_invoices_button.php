@@ -3,7 +3,7 @@ if (!defined('WHMCS')) { die('No direct access'); }
 
 add_hook('AdminAreaHeaderOutput', 1, function($vars)
 {
-    if ($vars['filename'] !== 'invoices' && $vars['filename'] !== 'clientsinvoices') {
+    if ($vars['filename'] !== 'invoices' && $vars['filename'] !== 'clientsinvoices' && (!isset($vars['pageicon']) || $vars['pageicon'] !== 'invoices')) {
         return '';
     }
     if (!empty($_GET['id'])) {
@@ -21,9 +21,6 @@ jQuery(function($){
     var $table = $(".datatable");
     if (!$table.length || !$table.find("tbody tr").length) return;
 
-    if ($table.find("th.whmcs-pix-col").length === 0) {
-      $table.find("thead tr").first().append("<th class=\"whmcs-pix-col\" style=\"text-align:center\">PIX</th>");
-    }
 
     function isOverdueBR(vencimento) {
       if (!vencimento) return false;
@@ -76,13 +73,13 @@ jQuery(function($){
     }
 
     $table.find("tbody tr").each(function(){
-      var $tr = $(this), id = null;
+      var $tr = $(this), id = $tr.find("input[name=\"selectedinvoices[]\"]").val() || null;
       var delOnclick = $tr.find("td:last a[onclick*=doDelete]").attr("onclick") || "";
       var m = delOnclick.match(/doDelete\\(\'(\\d+)\'\\)/);
       if (m) id = m[1];
       if (!id) {
-        var href = $tr.find("a[href*=\\"invoices.php?id=\\"],a[href*=\\"viewinvoice.php?id=\\"]").attr("href") || "";
-        var m2 = href.match(/[?&]id=(\\d+)/);
+        var href = $tr.find("a[href*=\"/invoice/\"],a[href*=\"invoices.php?id=\"],a[href*=\"viewinvoice.php?id=\"]").attr("href") || "";
+        var m2 = href.match(/\\/invoice\\/(\\d+)/) || href.match(/[?&]id=(\\d+)/);
         if (m2) id = m2[1];
       }
       if (!id) {
@@ -100,34 +97,27 @@ jQuery(function($){
       var descricao = "Grupo THX Fatura "+id;
       var idCustom = "A"+id;
 
-      var $td = $("<td/>").css("text-align","center");
-      if (id) {
-        if(atrasada)
-        {
-          descricao+="<br />Multa por atraso R$ 3.45";
-          valorMysql = (parseFloat(valorMysql) + 3.45).toFixed(2);
-        }
+      if (id && atrasada) {
+        descricao += "<br />Multa por atraso R$ 3.45";
+        valorMysql = (parseFloat(valorMysql) + 3.45).toFixed(2);
+
         var $form = $("<form/>", { method:"get", action:"'. $pixUrlEsc .'", target:"_blank", style:"display:inline" });
         $form.append($("<input/>", { type:"hidden", name:"id", value:idCustom }));
         $form.append($("<input/>", { type:"hidden", name:"generate", value:true }));
-        $form.append($("<input/>", { type:"hidden", name:"conta", value:\'nujuridica\' }));
+        $form.append($("<input/>", { type:"hidden", name:"conta", value:"nujuridica" }));
         $form.append($("<input/>", { type:"hidden", name:"valor", value:valorMysql }));
-		    $form.append($("<input/>", { type:"hidden", name:"descricao", value:descricao }));
-        $form.append($("<button/>", { type:"submit", class:"btn btn-xs btn-warning", text:"Gerar PIX" }));
-        $td.append($form);
+        $form.append($("<input/>", { type:"hidden", name:"descricao", value:descricao }));
+        var $pixButton = $("<button/>", { type:"submit", class:"btn btn-default btn-xs hook-thx-buttons", title:"Gerar PIX", style:"padding:2px 5px;white-space:nowrap" });
+        $pixButton.append($("<i/>", { class:"ri-pix-fill" }));
+        $form.append($pixButton);
 
-      } else {
-
-		if(status == "")
-		{
-			$td = $("<th/>").css("text-align","center").text("PIX");
-		}
-		else
-		{
-    	    $td.html("&nbsp;");
-		}
+        var $acoes = $tr.children("td").last().find(".btn-group").first();
+        if ($acoes.length) {
+          $acoes.append($form);
+        } else {
+          $tr.children("td").last().append($form);
+        }
       }
-      $tr.children("td,th").last().before($td);
     });
   } catch(e) {
     if (window.console && console.warn) console.warn("PIX hook error:", e);
