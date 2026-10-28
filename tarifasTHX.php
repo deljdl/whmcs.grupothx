@@ -869,7 +869,7 @@ function getDadosClienteById($id)
 function getDadosHospedagemById($id)
 {
     $ret = localAPI('GetClientsProducts', ['serviceid' => $id], false);
-    logModuleCall('/tarifasTHX.php', __FUNCTION__, $ret, '', '');
+    logModuleCall('/tarifasTHX.php', __FUNCTION__, ['serviceid' => $id], $ret, '', []);
 
     if (empty($ret['products']['product'][0])) {
         throw new RuntimeException(
