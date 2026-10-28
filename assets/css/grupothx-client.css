@@ -2,5 +2,8 @@
 p:has(> a[href="https://www.whmcs.com/"]) { display: none !important; }
 header.header .topbar {
     background-color: #e13237;
-    color: white;
+}
+
+header.header .topbar .btn, header.header .topbar a, header.header .topbar span {
+    color: white !important;
 }
