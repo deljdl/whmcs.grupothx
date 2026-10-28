@@ -5,6 +5,8 @@ $dataLimite = date('Y-m-d', strtotime($hoje. ' - 3 months'));
 
 $mes = date('m');
 
+$pdo = new PDO("mysql:host=".THX_DB_HOST.";port=".THX_DB_PORT.";dbname=".THX_DB_NAME.";charset=utf8", THX_DB_USERNAME, THX_DB_PASSWORD);
+
 /*
 |--------------------------------------------------------------------------
 | CLIENTES COM FATURAS EM ABERTO
