@@ -73,7 +73,7 @@ foreach ($cronsCronThx as $arquivoCronThx => $agendaCronThx) {
         $controleCronThx = $controleDirCronThx . '/' . $arquivoCronThx . '-' . $agendadaCronThx->format('Y-m-d-H') . '.ok';
 
         if (file_exists($controleCronThx) || $jaRodouNessaHoraCronThx) {
-            echo '<br />Cron já executado ou já executado nesta chamada: ' . $controleCronThx;
+            echo '<br />Cron já executado ou já executado nesta chamada: ' . $arquivoCronThx;
             continue;
         }
 
@@ -83,9 +83,10 @@ foreach ($cronsCronThx as $arquivoCronThx => $agendaCronThx) {
 
         file_put_contents($controleCronThx, date('Y-m-d H:i:s'));
 
-        echo '<br />Controle criado: ' . $controleCronThx;
+        echo '<br />Controle criado: ' . $arquivoCronThx;
         echo '<hr />';
 
         $jaRodouNessaHoraCronThx = true;
     }
 }
+echo '<h3>Fim da execução do cron THX</h3>';
