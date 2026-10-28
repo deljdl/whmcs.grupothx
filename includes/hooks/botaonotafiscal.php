@@ -148,6 +148,9 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
             $idFaturaParaEnvio = $_POST['iddafatura'];
             $arquivoName = md5(NOTAS_TOKEN.$idFaturaParaEnvio).'.pdf';
             $pathSavedPdfNota = ROOT_WHMCS.'/thx/notasfiscais/'.$arquivoName;
+            if (!is_dir(dirname($pathSavedPdfNota))) {
+                mkdir(dirname($pathSavedPdfNota), 0755, true);
+            }
             $uploadOk = move_uploaded_file($_FILES['notafiscal']['tmp_name'], $pathSavedPdfNota);
 
             if (!$uploadOk || !file_exists($pathSavedPdfNota)) {
