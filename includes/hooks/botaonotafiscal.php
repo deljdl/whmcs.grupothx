@@ -305,7 +305,7 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
                 enviaLogTHXJdl($debugMail);
             }
 
-            die("<script>top.location='".HTTP_WHMCS_ADMIN."clientsinvoices.php?userid={$dadosCliente[0]->userid}&notaEnviada={$idFaturaParaEnvio}'</script>");
+            die("<script>top.location='".HTTP_WHMCS_ADMIN."/clientsinvoices.php?userid={$dadosCliente[0]->userid}&notaEnviada={$idFaturaParaEnvio}'</script>");
         }
 
         $notaEnviada = !empty($_GET['notaEnviada']) ? $_GET['notaEnviada'] : 0;
