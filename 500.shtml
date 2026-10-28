@@ -112,6 +112,9 @@
 
         }
 
+        .logo {
+           margin-bottom: 50px;
+        }
     </style>
 
 </head>
@@ -119,7 +122,7 @@
 <body>
 
     <main>
-        <img src="thx/images/logo-grupothx.png" alt="Grupo THX" />
+        <img class="logo" src="./thx/images/logo-grupothx.png" alt="Grupo THX" />
         <div class="icon">!</div>
 
         <h1>Já voltamos!</h1>
@@ -130,9 +133,9 @@
 
             Estamos realizando uma atualização para melhorar
 
-            nossos serviços. Por favor, aguarde alguns instantes
-
-            e tente novamente.
+            a sua experiência com nossos serviços.
+            <br />
+            Por favor, aguarde alguns instantes e tente novamente.
 
         </p>
 

@@ -13,16 +13,16 @@
     <meta property="og:title" content="Área do cliente Grupo THX">
     <meta property="og:description" content="Acesse seus produtos serviços e pagamentos.">
     <meta property="og:url" content="{$systemurl}{$smarty.server.REQUEST_URI}">
-    <meta property="og:image" content="{$systemurl}/thx/assets/images/ogimage.png">
+    <meta property="og:image" content="{$systemurl}thx/assets/images/ogimage.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
     <!-- Favicons-->
-    <link rel="shortcut icon" href="{$systemurl}/thx/assets/favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{$systemurl}thx/assets/favicon/favicon.ico" type="image/x-icon"/>
     <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="192x192" href="{$systemurl}/thx/assets/favicon/android-chrome-192x192.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="512x114" href="{$systemurl}/thx/assets/favicon/android-chrome-512x512.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="32x32" href="{$systemurl}/thx/assets/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="192x192" href="{$systemurl}thx/assets/favicon/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="512x114" href="{$systemurl}thx/assets/favicon/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="32x32" href="{$systemurl}thx/assets/favicon/favicon-32x32.png">
 
 
 
