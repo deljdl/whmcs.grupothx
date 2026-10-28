@@ -58,9 +58,9 @@ foreach($clientes as $cliente)
         <td '.$tableTdStyle.'>'.$cliente['cliente'].'</td>
         <td '.$tableTdStyle.'>R$ '.$cliente['fatura_total'].'</td>
         <td '.$tableTdStyle.'>'.strftime('%d/%m/%Y', strtotime($cliente['fatura_vencimento'])).'</td>
-        <td '.$tableTdStyle.'><a target="_blank" href="https://grupothx.com/thx/admin/clientssummary.php?userid='.$cliente['cliente_id'].'">CLIENTE</a></td>
-        <td '.$tableTdStyle.'><a target="_blank" href="https://grupothx.com/thx/admin/invoices.php?action=edit&id='.$cliente['fatura_id'].'">FATURA</a></td>
-        <td '.$tableTdStyle.'><a target="_blank" href="https://grupothx.com/thx/admin/clientsservices.php?userid='.$cliente['cliente_id'].'">PRODUTOS</a></td>
+        <td '.$tableTdStyle.'><a target="_blank" href="'.HTTP_WHMCS.'/clientssummary.php?userid='.$cliente['cliente_id'].'">CLIENTE</a></td>
+        <td '.$tableTdStyle.'><a target="_blank" href="'.HTTP_WHMCS.'/invoices.php?action=edit&id='.$cliente['fatura_id'].'">FATURA</a></td>
+        <td '.$tableTdStyle.'><a target="_blank" href="'.HTTP_WHMCS.'/clientsservices.php?userid='.$cliente['cliente_id'].'">PRODUTOS</a></td>
     </tr>';
 }
 
@@ -189,10 +189,10 @@ foreach($anomalias as $anomalia)
             : '0.00'
         ).'</td>
         <td '.$tableTdStyle.'>
-            <a target="_blank" href="https://grupothx.com/thx/admin/clientssummary.php?userid='.$anomalia['userid'].'">CLIENTE</a>
+            <a target="_blank" href="'.HTTP_WHMCS.'/clientssummary.php?userid='.$anomalia['userid'].'">CLIENTE</a>
         </td>
         <td '.$tableTdStyle.'>
-            <a target="_blank" href="https://grupothx.com/thx/admin/clientsservices.php?userid='.$anomalia['userid'].'">PRODUTOS</a>
+            <a target="_blank" href="'.HTTP_WHMCS.'/clientsservices.php?userid='.$anomalia['userid'].'">PRODUTOS</a>
         </td>
     </tr>';
 }
@@ -424,7 +424,7 @@ foreach($semPagamento as $servico)
             : '0.00'
         ).'</td>
         <td '.$tableTdStyle.'>
-            <a target="_blank" href="https://grupothx.com/thx/admin/clientsservices.php?userid='.$servico['userid'].'">PRODUTOS</a>
+            <a target="_blank" href="'.HTTP_WHMCS.'/admin/clientsservices.php?userid='.$servico['userid'].'">PRODUTOS</a>
         </td>
     </tr>';
 }
