@@ -1,11 +1,13 @@
 <?php
 
 add_hook('AdminAreaHeadOutput', 1, function () {
-    return '<script>console.log("HOOK ADMIN HEAD EXECUTADO");</script>';
+    return '<script>console.log("HOOK AdminAreaHeadOutput HEAD EXECUTADO");</script>';
 });
 
 add_hook('AdminAreaFooterOutput', 1, function () {
-    return '<div style="position:fixed;top:10px;right:10px;z-index:999999;background:red;color:white;padding:15px">
-        TESTE HOOK ADMIN
-    </div>';
+    return '<script>console.log("HOOK AdminAreaFooterOutput FOOTER EXECUTADO");</script>';
+});
+
+add_hook('AdminAreaPage', 1, function () {
+    return '<script>console.log("HOOK AdminAreaPage PAGE EXECUTADO");</script>';
 });
