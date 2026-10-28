@@ -40,7 +40,7 @@ if ($conn->connect_error) {
 $totais = array();
 
 
-$ultimo_dia_mes_3 = cal_days_in_month(CAL_GREGORIAN, date('m'), date('Y'));
+$ultimo_dia_mes_3 = date('t');
 
 $valorDoDia = $valorDoMes = 0;
 // Loop pelos últimos 90 dias
