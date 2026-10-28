@@ -8,7 +8,7 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
     if (!empty($_GET['verificar_nota'])) {
         $idFaturaParaEnvio = $_GET['verificar_nota'];
         $arquivoName = md5(NOTAS_TOKEN . $idFaturaParaEnvio) . '.pdf';
-        $pathSavedPdfNota = ROOT_WHMCS . '/notasfiscais/' . $arquivoName;
+        $pathSavedPdfNota = ROOT_WHMCS . '/thx/notasfiscais/' . $arquivoName;
 
         header('Content-Type: application/json');
         echo json_encode(['existe' => file_exists($pathSavedPdfNota)]);
@@ -38,7 +38,7 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
         {
             $idFaturaParaEnvio = $_GET['checarnota'];
             $arquivoName = md5(NOTAS_TOKEN.$idFaturaParaEnvio).'.pdf';
-            $pathSavedPdfNota = ROOT_WHMCS.'/notasfiscais/'.$arquivoName;
+            $pathSavedPdfNota = ROOT_WHMCS.'/thx/notasfiscais/'.$arquivoName;
 
             if (!empty($_GET['reenviar']) && file_exists($pathSavedPdfNota)) {
                 // Reenvia o PDF já salvo, sem exigir novo upload.
@@ -101,7 +101,7 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
                                 Visualizar a nota fiscal já enviada.
                             </p>
 
-                            <a class="btn btn-success" target="_blank" href="'.HTTP_WHMCS.'notasfiscais/'.$arquivoName.'">
+                            <a class="btn btn-success" target="_blank" href="'.rtrim(HTTP_WHMCS, '/').'/thx/notasfiscais/'.$arquivoName.'">
                                 <i class="fas fa-file-invoice" style="margin-right:5px;"></i>
                                 Abrir Nota Enviada
                             </a>
@@ -147,7 +147,7 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
         {
             $idFaturaParaEnvio = $_POST['iddafatura'];
             $arquivoName = md5(NOTAS_TOKEN.$idFaturaParaEnvio).'.pdf';
-            $pathSavedPdfNota = ROOT_WHMCS.'/notasfiscais/'.$arquivoName;
+            $pathSavedPdfNota = ROOT_WHMCS.'/thx/notasfiscais/'.$arquivoName;
             $uploadOk = move_uploaded_file($_FILES['notafiscal']['tmp_name'], $pathSavedPdfNota);
 
             if (!$uploadOk || !file_exists($pathSavedPdfNota)) {
@@ -164,7 +164,7 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
             error_log('[botaonotafiscal] Nota salva em: ' . $pathSavedPdfNota);
         }
 
-        $linkNota = getUrlCurta(HTTP_WHMCS."/notasfiscais/{$arquivoName}");
+        $linkNota = getUrlCurta(rtrim(HTTP_WHMCS, "/")."/thx/notasfiscais/{$arquivoName}");
 
 
         if($pathSavedPdfNota)
