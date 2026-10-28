@@ -329,7 +329,6 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
             die("<script>top.location='".HTTP_WHMCS_ADMIN."/clientsinvoices.php?userid={$dadosCliente[0]->userid}&notaEnviada={$idFaturaParaEnvio}'</script>");
         }
 
-        $urlEnvioNota = HTTP_WHMCS_ADMIN . 'clientsinvoices.php';
         $notaEnviada = !empty($_GET['notaEnviada']) ? $_GET['notaEnviada'] : 0;
         $output .= <<<HTML
                     <div class="modal whmcs-modal fade" id="modalNotas" role="dialog">
@@ -414,7 +413,7 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
 
                                 document.getElementById("sendnotafiscal").setAttribute("method", "POST");
                                 document.getElementById("sendnotafiscal").setAttribute("enctype", "multipart/form-data");
-                                document.getElementById("sendnotafiscal").setAttribute("action", "{$urlEnvioNota}");
+                                document.getElementById("sendnotafiscal").setAttribute("action", window.location.href);
 
 
                                 $("#iddafatura").val(id);
