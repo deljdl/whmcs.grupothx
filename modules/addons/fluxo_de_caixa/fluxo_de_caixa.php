@@ -55,7 +55,8 @@ function fluxo_de_caixa_upgrade($vars)
 function fluxo_de_caixa_output($vars)
 {
     ## chamada segura cli e http do tarifasTHX
-    require_once(dirname(dirname(dirname(dirname(__DIR__)))) . '/tarifasTHX.php');
+
+    require_once(dirname(dirname(dirname(__DIR__))) . '/tarifasTHX.php');
     $path ='https://grupothx.com/thx/admin/addonmodules.php?module=fluxo_de_caixa&tab=';
 
     echo '
