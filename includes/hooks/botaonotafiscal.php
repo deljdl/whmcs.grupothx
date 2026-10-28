@@ -405,41 +405,29 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
         $('#tab1').append(btnota);
     } else {
         notaEnviada = {$notaEnviada};
-        var rows = $('.datatable td').first().closest('tbody').children('tr');
 
-        $.each(rows, function(i, e) {
-            $(e).children('*').last().clone().html('').insertBefore($(e).children('*').last());
-        });
+        $('.datatable tbody tr').each(function() {
+            let idfatura = $(this).find('input[name="selectedinvoices[]"]').val();
 
-        rows.first().children('th').eq(-2).text('');
+            if (!idfatura) return;
 
-        $('.datatable tr').each(function() {
-            let id = $(this).find('td:last').find('a').attr('onclick');
-            let ida = String(id);
-            let idfatura = ida.replace("doDelete('", '').replace("');return false", '');
+            let button = $(this).children('td').last();
+            button.css('white-space', 'nowrap');
 
-            let button = $(this).find("td:eq(9)");
-            button.css('text-align', 'center');
+            let botao = $('<a class="btn btn-primary abrir-modal-nota" data-id="' + idfatura + '" style="color:#FFFFFF;font-size:10px;cursor:pointer;margin:2px;"><i class="fas fa-file-invoice"></i> Enviar Nota</a>');
 
-            // Carrega o botão inicialmente como azul
-            let botao = $('<a class="btn btn-primary abrir-modal-nota" data-id="' + idfatura + '" style="color: #FFFFFF;font-size: 10px;cursor:pointer;float: left;margin: 0 5px 0 0;" title="Enviar Nota Fiscal ' + idfatura + '"><i class="fas fa-file-invoice"></i> Enviar Nota</a>');
+            button.append(botao);
 
-            button.html(botao);
-
-            // Faz a verificação da nota em background (assíncrono)
             $.getJSON(window.location.href + '&verificar_nota=' + idfatura, function(response) {
                 if (response.existe) {
-                    botao.removeClass('btn-primary').addClass('btn-success'); // Apenas troca a cor do botão
+                    botao.removeClass('btn-primary').addClass('btn-success');
                 }
             });
         });
 
-        // Adiciona evento para abrir o modal ao clicar no botão
-        $(document).on("click", ".abrir-modal-nota", function() {
-            let idfatura = $(this).data("id");
-            openModalNota(idfatura);
+        $(document).on('click', '.abrir-modal-nota', function() {
+            openModalNota($(this).data('id'));
         });
-    }
 
     {$jsListInvoices}
 });
