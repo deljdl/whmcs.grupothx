@@ -122,7 +122,7 @@
 <body>
 
     <main>
-        <img class="logo" src="/thx/images/logo-grupothx.png" alt="Grupo THX" />
+        <img class="logo" src="/thx/assets/images/logo-grupothx.png" alt="Grupo THX" />
         <div class="icon">!</div>
 
         <h1>Já voltamos!</h1>
