@@ -10,8 +10,7 @@ $crons = [
 
 
 foreach ($crons as $key => $cron) {
-    echo '<br />' . $key . ' - ' . $cron;
-    //require_once($_SERVER['DOCUMENT_ROOT'] . $cron);
+    require_once($cron);
 }
 
 // require_once($_SERVER['DOCUMENT_ROOT'].'/thx/modules/addons/fluxo_de_caixa/modulos/cron_dividas.php');
