@@ -1,5 +1,9 @@
 <?php
 
+$rootDirCrons = dirname(dirname(dirname(dirname(__DIR__))));
+die($rootDirCrons);
+
+
 $baseDir = dirname(dirname(dirname(dirname(__DIR__))));
 
 require_once $baseDir . '/init.php';
