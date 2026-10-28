@@ -1,4 +1,9 @@
 <?php
+header('Location: /thx/viewinvoice.php');
+
+
+
+
 
 require_once($_SERVER['DOCUMENT_ROOT'].'/thx/viewinvoice.php');
 die();
