@@ -413,7 +413,7 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
 
                                 document.getElementById("sendnotafiscal").setAttribute("method", "POST");
                                 document.getElementById("sendnotafiscal").setAttribute("enctype", "multipart/form-data");
-                                document.getElementById("sendnotafiscal").setAttribute("action", window.location.href);
+                                document.getElementById("sendnotafiscal").setAttribute("action", "'.HTTP_WHMCS_ADMIN.'/clientsinvoices.php");
 
 
                                 $("#iddafatura").val(id);
