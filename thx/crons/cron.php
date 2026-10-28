@@ -46,7 +46,7 @@ $crons = [
         'horas' => [8, 12, 16],
     ],
     'cron_resumo_diario' => [
-        'path' => $rootDirCrons . '/thx/crons/cron_resumo_diario.php',
+        'path' => $rootDirCrons . '/thx/crons/cron-resumo-diario.php',
         'dias' => [1, 2, 3, 4, 5, 6, 7],
         'horas' => [23],
     ],
