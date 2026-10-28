@@ -412,7 +412,7 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
 
             if (!idfatura) return;
 
-            let button = $(this).children('td').eq(-2);
+            let button = $(this).children('td').eq(-3);
             button.css('white-space', 'nowrap');
 
             let botao = $('<a class="btn btn-primary abrir-modal-nota" data-id="' + idfatura + '" style="color:#FFFFFF;font-size:10px;cursor:pointer;margin:2px;"><i class="fas fa-file-invoice"></i> Enviar Nota</a>');
