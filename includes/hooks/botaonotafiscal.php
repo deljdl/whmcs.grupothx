@@ -417,7 +417,12 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
 
             let botao = $('<a class="btn btn-default btn-xs abrir-modal-nota" data-id="' + idfatura + '" style="cursor:pointer;margin:2px;padding:2px 5px;"><i class="fas fa-file-invoice"></i> Enviar Nota</a>');
 
-            button.append(botao);
+            let grupoBotoes = button.find('.btn-group').first();
+            if (grupoBotoes.length) {
+                grupoBotoes.append(botao);
+            } else {
+                button.append(botao);
+            }
 
             $.getJSON(window.location.href + '&verificar_nota=' + idfatura, function(response) {
                 if (response.existe) {
