@@ -1,7 +1,7 @@
 <?php
 
 
-require_once(dirname(dirname(dirname(dirname(dirname(__DIR__))))) . '/tarifasTHX.php');
+require_once(dirname(dirname(dirname(dirname((__DIR__))))) . '/tarifasTHX.php');
 
 $crons = [
     'cron_dividas' => 'modules/addons/fluxo_de_caixa/modulos/cron_dividas.php',
