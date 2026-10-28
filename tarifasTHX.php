@@ -61,9 +61,9 @@ function linhaDigitavelParaCodigoBarras($linha)
 function getBarCode($codigo, $imgStyle = 'display: block')
 {
     require_once ROOT_WHMCS . '/barcode/I2of5.php';
-	echo $codigo;
-    $codigo = linhaDigitavelParaCodigoBarras($codigo);
 
+    $codigo = linhaDigitavelParaCodigoBarras($codigo);
+	echo 'L:'.__LINE__.' : '.$codigo;
     if (!$codigo) {
         return false;
     }
