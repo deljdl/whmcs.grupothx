@@ -390,11 +390,18 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
                         </div>
                     </div>
                     <script type="text/javascript">
+                        function currentInvoiceId()
+                        {
+                            let match = window.location.pathname.match(/\\/invoice\\/(\\d+)/);
+                            return match ? match[1] : new URLSearchParams(window.location.search).get('id');
+                        }
+
                         function openModalNota(id)
                         {
-                            //console.log(window.location.href+'&checarnota='+id)
+                            let url = new URL(window.location.href);
+                            url.searchParams.set('checarnota', id);
 
-                            $.get(window.location.href+'&checarnota='+id, function( data ) {
+                            $.get(url.toString(), function( data ) {
                                 $('#notajaenviada').html(data);
 
                                 document.getElementById("sendnotafiscal").setAttribute("method", "POST");
@@ -411,7 +418,7 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
                     	$(document).ready(function() {
     btnota = '\
     <div style="text-align: right; padding: 10px 250px 0 0;">\
-        <a class="btn btn-primary" style="color: #FFFFFF;font-size: 15px;cursor:pointer;margin: 0 5px 0 0;" title="Enviar Nota Fiscal {$_GET['id']}" href="javascript:openModalNota({$_GET['id']})"><i class="fas fa-file-invoice" title="Reenviar Nota Fiscal {$_GET['id']}"></i> Enviar Nota</a>\
+        <a class="btn btn-primary" style="color: #FFFFFF;font-size: 15px;cursor:pointer;margin: 0 5px 0 0;" title="Enviar Nota Fiscal" href="javascript:openModalNota(currentInvoiceId())"><i class="fas fa-file-invoice" title="Reenviar Nota Fiscal {$_GET['id']}"></i> Enviar Nota</a>\
     </div>';
 
     
