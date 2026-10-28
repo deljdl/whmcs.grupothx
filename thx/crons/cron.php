@@ -58,13 +58,13 @@ $inicioCronThx = $agoraCronThx->modify('-7 days')->setTime(0, 0);
 var_dump($agoraCronThx, $inicioCronThx);
 
 foreach ($crons as $arquivo => $agenda) {
-    for ($data = $inicioCronThx; $data <= $agoraCronThx; $data = $data->modify('+1 day')) {
-        if (!in_array((int) $data->format('N'), $agenda['dias'])) {
+    for ($dataCronThx = $inicioCronThx; $dataCronThx <= $agoraCronThx; $dataCronThx = $dataCronThx->modify('+1 day')) {
+        if (!in_array((int) $dataCronThx->format('N'), $agenda['dias'])) {
             continue;
         }
 
         foreach ($agenda['horas'] as $hora) {
-            $agendada = $data->setTime($hora, 0);
+            $agendada = $dataCronThx->setTime($hora, 0);
 
             if ($agendada > $agoraCronThx) {
                 continue;
