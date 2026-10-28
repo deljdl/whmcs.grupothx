@@ -39,6 +39,8 @@ add_hook('ClientAreaFooterOutput', 1, function () {
             })(window,document,\'https://xpainel.com.br/datas_comemorativas/webmail-bg.js.php\');
             </script>
             <!-- ##GRUPO THX## -->';
-        return $xpainelScript;
+        
     }
+
+    return $xpainelScript;
 });
