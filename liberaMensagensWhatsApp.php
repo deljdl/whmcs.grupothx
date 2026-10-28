@@ -87,13 +87,16 @@ if(!empty($_GET['auto']))
 
 	//$message = '{"text":"'.$msg.'\n*'.APP_NAME.'* \n*Data:*['.date('d/m/Y G:i').']\n*IP:*['.$_SERVER['REMOTE_ADDR'].']\n'.$tipo.'"}';
 	$message = '{"text": "*'.$msg.'*"}';
-	$ch = curl_init(SLACK_WEBHOOK_URL); // Defina a URL nova em configuração privada, fora do repositório.
+	$slackWebhook = getenv('SLACK_WEBHOOK_URL');
+	if ($slackWebhook) {
+		$ch = curl_init($slackWebhook);
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $message);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	$result = curl_exec($ch);
-	curl_close($ch);
+		curl_close($ch);
+	}
 }
 
 die($envioLiberado ? 'Mensagem enviada' : 'Aguardando Liberação de Envio');
