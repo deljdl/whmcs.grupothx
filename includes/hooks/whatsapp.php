@@ -566,7 +566,7 @@ function sendMessageWhatsDomainRenewalSuccessful($vars)
 
 function sendMessageWhatsDomainRenewalConfirmation($vars)
 {
-	$dados = getDadosHospedagemById($vars['mergefields']['client_id']);
+	$dados = getDadosClienteById($vars['mergefields']['client_id']);
 	$whatsNumber = $vars['mergefields']['client_custom_fields'][1];
 	$vars['mergefields']['client_first_name'] = trim($vars['mergefields']['client_first_name']);
 	$mensagemWhats ="

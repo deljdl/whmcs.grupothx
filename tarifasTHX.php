@@ -871,14 +871,7 @@ function getDadosHospedagemById($id)
     $ret = localAPI('GetClientsProducts', ['serviceid' => $id], false);
     logModuleCall('/tarifasTHX.php', __FUNCTION__, ['serviceid' => $id], $ret, '', []);
 
-    if (empty($ret['products']['product'][0])) {
-        throw new RuntimeException(
-            'Nenhum produto encontrado para serviceid=' . $id .
-            '. Retorno: ' . print_r($ret, true)
-        );
-    }
-
-    return $ret['products']['product'][0];
+    return isset($ret['products']['product'][0]) ? $ret['products']['product'][0] : [];
 }
 function getDadosTicketById($id)
 {
