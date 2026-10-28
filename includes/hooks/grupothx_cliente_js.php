@@ -6,6 +6,11 @@ add_hook('ClientAreaFooterOutput', 1, function () {
     $systemUrl = rtrim(Setting::getValue('SystemURL'), '/');
     $basename = basename($_SERVER['SCRIPT_NAME']);
     $urlAtual = $_SERVER['REQUEST_URI'];
+    $backgroundDatasComemorativas = false;
+
+    if ($urlAtual == '/login') {
+        $backgroundDatasComemorativas = true;
+    }
     $xpainelScript = '
     <link rel="stylesheet" href="' . $systemUrl . '/assets/css/grupothx-client.css">
     <script src="' . $systemUrl . '/assets/js/grupothx-client.js"></script>
@@ -13,6 +18,7 @@ add_hook('ClientAreaFooterOutput', 1, function () {
     <script>console.log("self '.$_SERVER['SCRIPT_NAME'].'");</script>
     <script>console.log("urlatual '.$urlAtual.'");</script>
     <script>console.log("basename '.$basename.'");</script>
+    <script>console.log("backgroundDatasComemorativas '.($backgroundDatasComemorativas ? 'true' : 'false').'");</script>
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({\'gtm.start\':
@@ -23,7 +29,7 @@ add_hook('ClientAreaFooterOutput', 1, function () {
     <!-- End Google Tag Manager -->
     ';
 
-    if ($urlAtual == '/login') {
+    if ($backgroundDatasComemorativas) {
         $xpainelScript .= '
             <!-- ##GRUPO THX## -->
             <link rel="stylesheet" href="//grupothx.com/tihospedagem/cpanel.css">
