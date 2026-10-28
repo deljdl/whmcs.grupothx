@@ -1,6 +1,6 @@
 <?php
 
-
+require_once(dirname(dirname(dirname(dirname((__DIR__))))) . '/init.php');
 require_once(dirname(dirname(dirname(dirname((__DIR__))))) . '/tarifasTHX.php');
 
 $crons = [

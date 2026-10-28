@@ -4,26 +4,6 @@ $conn = new PDO('mysql:host='.THX_DB_HOST.';dbname='.THX_DB_NAME, THX_DB_USERNAM
 
 
 
-
-function alexa($msg)
-{
-    $msg = urlencode($msg);
-
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, 'https://alexa.grupothx.com.br/send-voice?message='.$msg);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-
-    $response = curl_exec($ch);
-
-    curl_close($ch);
-}
-#REQUIRE TARIFAS OBRIGATÓRIO PARA NÃO DAR ERRO NO CRON
-if(empty($_SERVER['DOCUMENT_ROOT']))
-{
-    $_SERVER['DOCUMENT_ROOT'] = '/home/thxcom/public_html';
-}
-
 $alexa = '';
 $alexasCount=1;
 $alexasSoma = 0;
@@ -127,8 +107,7 @@ $html = '<!DOCTYPE html>
 </body>
 </html>';
 
-require_once($_SERVER['DOCUMENT_ROOT'].'/thx/vendor/phpmailer/phpmailer/PHPMailerAutoload.php');
-$email = new PHPMailer();
+$email = new \PHPMailer\PHPMailer\PHPMailer();
 $email->WordWrap = 50;               // set word wrap
 $email->Priority = 1;
 $email->IsHTML(true);
