@@ -81,8 +81,8 @@ jQuery(function($){
       var m = delOnclick.match(/doDelete\\(\'(\\d+)\'\\)/);
       if (m) id = m[1];
       if (!id) {
-        var href = $tr.find("a[href*=\\"invoices.php?id=\\"],a[href*=\\"viewinvoice.php?id=\\"]").attr("href") || "";
-        var m2 = href.match(/[?&]id=(\\d+)/);
+        var href = $tr.find('a[href*="/invoice/"],a[href*="invoices.php?id="],a[href*="viewinvoice.php?id="]').attr("href") || "";
+        var m2 = href.match(/\\/invoice\\/(\\d+)/) || href.match(/[?&]id=(\\d+)/);
         if (m2) id = m2[1];
       }
       if (!id) {
