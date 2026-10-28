@@ -8,7 +8,7 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
     if (!empty($_GET['verificar_nota'])) {
         $idFaturaParaEnvio = $_GET['verificar_nota'];
         $arquivoName = md5(NOTAS_TOKEN . $idFaturaParaEnvio) . '.pdf';
-        $pathSavedPdfNota = ROOT_WHMCS . 'thx/notasfiscais/' . $arquivoName;
+        $pathSavedPdfNota = ROOT_WHMCS . '/thx/notasfiscais/' . $arquivoName;
 
         header('Content-Type: application/json');
         echo json_encode(['existe' => file_exists($pathSavedPdfNota)]);
@@ -140,7 +140,7 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
         {
             $idFaturaParaEnvio = $_POST['iddafatura'];
             $arquivoName = md5(NOTAS_TOKEN.$idFaturaParaEnvio).'.pdf';
-            $pathSavedPdfNota = ROOT_WHMCS.'thx/notasfiscais/'.$arquivoName;
+            $pathSavedPdfNota = ROOT_WHMCS.'/thx/notasfiscais/'.$arquivoName;
             move_uploaded_file($_FILES['notafiscal']['tmp_name'], $pathSavedPdfNota);
         }
 
