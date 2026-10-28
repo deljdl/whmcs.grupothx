@@ -1,2 +1,6 @@
 /* CSS global da área do cliente Grupo THX */
 p:has(> a[href="https://www.whmcs.com/"]) { display: none !important; }
+header.header .topbar {
+    background-color: #e13237;
+    color: white;
+}

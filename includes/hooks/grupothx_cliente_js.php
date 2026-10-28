@@ -23,7 +23,6 @@ add_hook('ClientAreaFooterOutput', 1, function () {
     <!-- End Google Tag Manager -->
     ';
 
-
     if ($urlAtual == '/login') {
         $xpainelScript .= '
             <!-- ##GRUPO THX## -->
