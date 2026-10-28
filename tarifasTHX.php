@@ -107,7 +107,7 @@ function getNotaFiscal($idFatura, $class='btn-copy btn-nota', $style = 'display:
         return '';
     }
 
-    $url = rtrim(HTTP_WHMCS, '/') . '/notasfiscais/' . $arquivo;
+    $url = rtrim(HTTP_WHMCS, '/') . '/thx/notasfiscais/' . $arquivo;
 
     return sprintf(
         '<a href="%s" target="_blank" title="Baixar Nota Fiscal" class="%s" style="%s">📄 Baixar Nota Fiscal</a>',
