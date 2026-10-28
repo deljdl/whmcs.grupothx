@@ -253,8 +253,7 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
 
             $msg = '';
             $msg = '<div class="successbox"><strong><span class="title">Nota enviada com sucesso</span></strong><br>A nota fiscal foi enviada para o cliente</div>';
-            require_once ROOT_WHMCS . '/vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
-            $email = new PHPMailer();
+            $email = new \PHPMailer\PHPMailer\PHPMailer();
             $email->WordWrap = 50;               // set word wrap
             $email->Priority = 1;
             $email->IsHTML(true);
