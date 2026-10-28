@@ -429,6 +429,7 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
         $(document).on('click', '.abrir-modal-nota', function() {
             openModalNota($(this).data('id'));
         });
+    }
 
     {$jsListInvoices}
 });
