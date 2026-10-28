@@ -1,9 +1,9 @@
 <?
-require_once(__DIR__ . '/tarifasTHX.php');
+require_once(dirname(__DIR__) . '/tarifasTHX.php');
 function listaHospedagemsComQuotaNoLImite()
 {
    $ch = curl_init();
-   curl_setopt($ch, CURLOPT_URL, 'https://grupothx.com/thx/includes/api.php');
+   curl_setopt($ch, CURLOPT_URL, HTTP_WHMCS . '/includes/api.php');
    curl_setopt($ch, CURLOPT_POST, 1);
    curl_setopt($ch, CURLOPT_POSTFIELDS,
       http_build_query(
@@ -52,7 +52,7 @@ function listaHospedagemsComQuotaNoLImite()
 function clienteAceitaReceberAvisosDeEspacoEmDisco($clientid)
 {
    $ch = curl_init();
-   curl_setopt($ch, CURLOPT_URL, 'https://grupothx.com/thx/includes/api.php');
+   curl_setopt($ch, CURLOPT_URL, HTTP_WHMCS . '/includes/api.php');
    curl_setopt($ch, CURLOPT_POST, 1);
    curl_setopt($ch, CURLOPT_POSTFIELDS,
       http_build_query(
@@ -83,7 +83,7 @@ function enviaAvisoDeEspacoEmDisco($res)
    $service_id = $res->id;
 
    $ch = curl_init();
-   curl_setopt($ch, CURLOPT_URL, 'https://grupothx.com/thx/includes/api.php');
+   curl_setopt($ch, CURLOPT_URL, HTTP_WHMCS . '/includes/api.php');
    curl_setopt($ch, CURLOPT_POST, 1);
    curl_setopt($ch, CURLOPT_POSTFIELDS,
       http_build_query(
