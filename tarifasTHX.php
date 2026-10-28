@@ -558,7 +558,7 @@ function getDadosInvoiceById($id)
 {
 
 	$ret = localAPI( 'GetInvoice', array('invoiceid' => $id), false);
-	logModuleCall('/includes/hooks/whatsapp.php', __FUNCTION__ , $ret, '', '');
+	logModuleCall('/tarifasTHX.php', __FUNCTION__ , $ret, '', '');
 	return $ret;
 }
 
@@ -862,21 +862,28 @@ function botaoNFSE($invoiceId)
 function getDadosClienteById($id)
 {
 	$ret = localAPI( 'GetClientsDetails', array('clientid' => $id), false);
-	logModuleCall('/includes/hooks/whatsapp.php', __FUNCTION__ , $ret, '', '');
+	logModuleCall('/tarifasTHX.php', __FUNCTION__ , $ret, '', '');
 	return $ret;
 }
 
 function getDadosHospedagemById($id)
 {
-	$ret = localAPI( 'GetClientsProducts', array('serviceid' => $id), false);
-	logModuleCall('/includes/hooks/whatsapp.php', __FUNCTION__ , $ret, '', '');
-	return $ret['products']['product'][0];
-}
+    $ret = localAPI('GetClientsProducts', ['serviceid' => $id], false);
+    logModuleCall('/tarifasTHX.php', __FUNCTION__, $ret, '', '');
 
+    if (empty($ret['products']['product'][0])) {
+        throw new RuntimeException(
+            'Nenhum produto encontrado para serviceid=' . $id .
+            '. Retorno: ' . print_r($ret, true)
+        );
+    }
+
+    return $ret['products']['product'][0];
+}
 function getDadosTicketById($id)
 {
 	$ret = localAPI( 'GetTicket', array('ticketid' => $id), false);
-	logModuleCall('/includes/hooks/whatsapp.php', __FUNCTION__ , $ret, '', '');
+	logModuleCall('/tarifasTHX.php', __FUNCTION__ , $ret, '', '');
 	return $ret;
 }
 
@@ -893,13 +900,13 @@ function getEmailTemplate($name, $vars)
 			$html = $template->message;
 	}
 
-	logModuleCall('/includes/hooks/whatsapp.php', __FUNCTION__ , $vars, $assunto, $html);
+	logModuleCall('/tarifasTHX.php', __FUNCTION__ , $vars, $assunto, $html);
 	return $html;
 }
 
 function replaceVars($str,$variaveis)
 {
-	logModuleCall('/includes/hooks/whatsapp.php', __FUNCTION__ , $vars, $variaveis, $str);
+	logModuleCall('/tarifasTHX.php', __FUNCTION__ , $vars, $variaveis, $str);
 	if(isset($variaveis['mergefields']))
 	{
 		foreach ($variaveis['mergefields'] as $key => $valor)
