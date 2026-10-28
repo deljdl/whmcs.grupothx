@@ -2,30 +2,6 @@
 $conn = new PDO('mysql:host='.THX_DB_HOST.';dbname='.THX_DB_NAME, THX_DB_USERNAME, THX_DB_PASSWORD);
 
 
-function criaTarefaKamban($tarefa, $prazo = '1 hora', $cliente = '')
-{
-    $url = 'https://kamban.grupothx.com.br/addtarefa';
-
-    $data = [
-        'tarefa' => $tarefa,
-        'duracao' => $prazo,
-        'titulo' => $cliente,
-        'avatar' => ''
-    ];
-
-    $ch = curl_init($url);
-
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-    $response = curl_exec($ch);
-
-    curl_close($ch);
-
-
-}
-
 
 
 

@@ -6,6 +6,7 @@ require_once(dirname(dirname(dirname(dirname((__DIR__))))) . '/tarifasTHX.php');
 $crons = [
     'cron_dividas.php',
     'cron_monitora_pagamentos.php',
+    'cron-resumo-diario.php'
 ];
 
 
