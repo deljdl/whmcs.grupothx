@@ -41,7 +41,14 @@ $crons = [
 $agoraCronThx = new DateTimeImmutable();
 
 foreach ($crons as $arquivo => $agenda) {
+    // Verifica se o dia atual está na lista de dias agendados para este cron
+    echo '<br />Verificando cron: ' . $arquivo . '<br />';
     if (!in_array((int) $agoraCronThx->format('N'), $agenda['dias'])) {
+        echo '<br />Dia atual não está na lista de dias agendados para este cron.';
+        echo '<br />Dias agendados: ' . implode(', ', $agenda['dias']);
+        echo '<br />Dia atual: ' . $agoraCronThx->format('N');
+        echo '<br />Hora atual: ' . $agoraCronThx->format('H:i:s');
+        echo '<hr />';
         continue;
     }
 
@@ -49,17 +56,24 @@ foreach ($crons as $arquivo => $agenda) {
         $agendada = $agoraCronThx->setTime($hora, 0);
 
         if ($agendada > $agoraCronThx) {
+            echo '<br />Hora agendada ainda não chegou: ' . $agendada->format('Y-m-d H:i:s');
             continue;
         }
 
         $controle = $controleDir . '/' . $arquivo . '-' . $agendada->format('Y-m-d-H') . '.ok';
 
         if (file_exists($controle)) {
+            echo '<br />Cron já executado para esta hora: ' . $controle;
             continue;
         }
 
+
         require $agenda['path'];
 
+        echo '<br />Executado cron: ' . $arquivo . ' para a hora agendada: ' . $agendada->format('Y-m-d H:i:s');
+
         file_put_contents($controle, date('Y-m-d H:i:s'));
+        echo '<br />Controle criado: ' . $controle;
+        echo '<hr />';
     }
 }
