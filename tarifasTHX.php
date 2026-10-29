@@ -1129,8 +1129,6 @@ function enviaWhatsApp($whatsNumber, $msg, $imagem = '', $code = '', $document =
     $whatsNumber = implode('', $matches[0]);
     $msg = strip_tags($msg);
 
-	$msg .= "\n" . 'Prioridade: ' . $prioridade . "\n";
-
     $host = 'autoresponder.grupothx.com.br';
     $path = '/api/createMessage';
 
