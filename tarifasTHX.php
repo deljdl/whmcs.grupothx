@@ -1136,7 +1136,7 @@ function enviaWhatsApp($whatsNumber , $msg, $imagem = '', $code = '', $document 
 	$msg =strip_tags($msg);
 
 
-	$ch = curl_init('https://grupothx.com/atendimento-online/apiTHX/bot/');
+	$ch = curl_init('https://autoresponder.grupothx.com.br/api/createMessage');
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($ch, CURLOPT_POST, true);
 	curl_setopt($ch, CURLOPT_POSTFIELDS,
