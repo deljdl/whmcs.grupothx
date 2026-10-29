@@ -95,6 +95,7 @@ if(!empty($_GET['auto']))
 	curl_close($ch);
 }
 
+
 echo ($liberadasAuto > 0 ? 'Mensagem enviada' : 'Aguardando Liberação de Envio');
 
 function sendWhatsAppNow($row)
