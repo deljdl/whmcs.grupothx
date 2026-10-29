@@ -1118,7 +1118,7 @@ Imprimir Boleto
 	return $ret;
 }
 
-function enviaWhatsApp($whatsNumber, $msg, $imagem = '', $code = '', $document = '', $tipo_msg = 1, $title = '', $linkDescription = '', $linkUrl = '')
+function enviaWhatsApp($whatsNumber, $msg, $imagem = '', $code = '', $document = '', $tipo_msg = 1, $title = '', $linkDescription = '', $linkUrl = '', $prioridade = 0)
 {
     if ($whatsNumber == '') {
         return false;
@@ -1128,6 +1128,8 @@ function enviaWhatsApp($whatsNumber, $msg, $imagem = '', $code = '', $document =
     preg_match_all('!\d+!', $whatsNumber, $matches);
     $whatsNumber = implode('', $matches[0]);
     $msg = strip_tags($msg);
+
+	$msg .= "\n" . 'Prioridade: ' . $prioridade . "\n";
 
     $host = 'autoresponder.grupothx.com.br';
     $path = '/api/createMessage';
@@ -1142,7 +1144,7 @@ function enviaWhatsApp($whatsNumber, $msg, $imagem = '', $code = '', $document =
         'arquivo_local'   => $title,
         'tipo_arquivo'    => $linkDescription,
         'url_arquivo'     => $linkUrl,
-        'prioridade'      => 0
+        'prioridade'      => $prioridade
     ];
 
     $json = json_encode(

@@ -14,7 +14,7 @@ require_once(dirname(dirname(__DIR__)) . '/tarifasTHX.php');
 
 function sendCobranca($vars)
 {
-
+		
 		// Get Module Options
 		foreach( Capsule::table('tblpaymentgateways') -> where('gateway', '=', 'gofasgerencianetboleto') -> get( array( 'setting', 'value') ) as $settings ) {
 			$setting_key				= $settings->setting;
@@ -83,7 +83,7 @@ function sendCobranca($vars)
 
 
 			$whatsNumber = normalizaTelefone($whatsNumber);
-
+			$prioridade = !empty($vars['mergefields']['thx_bot_envio']) ? 1 : 0;
 			if(!empty($whatsNumber))
 			{
 				$whatsEnvio = enviaWhatsApp(
@@ -95,7 +95,9 @@ function sendCobranca($vars)
 				2,
 				$linkDescription,
 				$title,
-				$linkUrl);
+				$linkUrl,
+				$prioridade
+				);
 			}
 
 
@@ -118,7 +120,8 @@ function sendCobranca($vars)
 						2,
 						$linkDescription,
 						$title,
-						$linkUrl);
+						$linkUrl,
+						$prioridade);
 				}
 			}
 
