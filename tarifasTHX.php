@@ -1118,55 +1118,89 @@ Imprimir Boleto
 	return $ret;
 }
 
-function enviaWhatsApp($whatsNumber , $msg, $imagem = '', $code = '', $document = '', $tipo_msg = 1, $title = '', $linkDescription = '', $linkUrl = '')
+function enviaWhatsApp($whatsNumber, $msg, $imagem = '', $code = '', $document = '', $tipo_msg = 1, $title = '', $linkDescription = '', $linkUrl = '')
 {
-	if($whatsNumber == '')
-	{
-		return false;
-	}
+    if ($whatsNumber == '') {
+        return false;
+    }
 
-	if($whatsNumber == WHATSAPP_ADMIN_JARDEL)
-	{
-		logSlack($msg.'\nImagem:'.$imagem, 'Nova mensagem whatsapp desviada para o SLACK');
-		return true;
-	}
+    // Mantém o comportamento original.
+    preg_match_all('!\d+!', $whatsNumber, $matches);
+    $whatsNumber = implode('', $matches[0]);
+    $msg = strip_tags($msg);
 
-	preg_match_all('!\d+!', $whatsNumber, $matches);
-	$whatsNumber = implode('',$matches[0]);
-	$msg =strip_tags($msg);
+    $host = 'autoresponder.grupothx.com.br';
+    $path = '/api/createMessage';
 
+    $dados = [
+        'whatsnumber'     => $whatsNumber,
+        'mensagem'        => $msg,
+        'imagemcabecalho' => $imagem,
+        'tipo_msg'        => $tipo_msg,
+        'code'            => $code,
+        'document'        => $document,
+        'arquivo_local'   => $title,
+        'tipo_arquivo'    => $linkDescription,
+        'url_arquivo'     => $linkUrl,
+        'prioridade'      => 0
+    ];
 
-	$ch = curl_init('https://autoresponder.grupothx.com.br/api/createMessage');
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	curl_setopt($ch, CURLOPT_POST, true);
-	curl_setopt($ch, CURLOPT_POSTFIELDS,
-	[
-		'tk' => 'tgftRFDEtTHHHHX3232WQWaswq123XpaInelNova',
-		'function' => 'sendWhatsApp',
-		'whatsnumber' => $whatsNumber,
-		'mensagem' => $msg,
-		'imagemcabecalho' => $imagem,
-		'tipo_msg' => $tipo_msg,
-		'code' => $code,
-		'document' => $document,
-		'arquivo_local' => $title,
-		'tipo_arquivo' => $linkDescription,
-		'url_arquivo' => $linkUrl
-	]);
-	curl_setopt($ch, CURLOPT_USERPWD, 'username'.':'.'senha');
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-	$resultado = curl_exec($ch);
-	//die(var_dump($resultado));
-	$resultado = json_decode($resultado);
-	
-	curl_close ($ch);
-	return true;
+    $json = json_encode(
+        $dados,
+        JSON_UNESCAPED_UNICODE
+        | JSON_UNESCAPED_SLASHES
+        | JSON_INVALID_UTF8_SUBSTITUTE
+    );
 
-	logModuleCall('/tarifasTHX.php', __FUNCTION__ , $sql, '', $sql);
+    // Mantém a validação do certificado TLS habilitada.
+    $context = stream_context_create([
+        'ssl' => [
+            'verify_peer'      => true,
+            'verify_peer_name' => true,
+            'peer_name'        => $host
+        ]
+    ]);
 
-	logModuleCall('/enviaWhatsApp', __FUNCTION__, $whatsNumber, '', $msg);
-	return $ret ? "Mensagem salva para envio\n\nWhatsApp:\n{$whatsNumber}\n\nMensagem:\n{$msg}" : false;
+    $socket = @stream_socket_client(
+        'tls://' . $host . ':443',
+        $errno,
+        $errstr,
+        2,
+        STREAM_CLIENT_CONNECT,
+        $context
+    );
+
+    if ($socket) {
+        stream_set_timeout($socket, 2);
+
+        $request = "POST {$path} HTTP/1.1\r\n"
+            . "Host: {$host}\r\n"
+            . "Content-Type: application/json\r\n"
+            . "Accept: application/json\r\n"
+            . "Content-Length: " . strlen($json) . "\r\n"
+            . "Connection: close\r\n\r\n"
+            . $json;
+
+        // Envia todo o conteúdo, tratando escritas parciais.
+        $total = strlen($request);
+        $enviado = 0;
+
+        while ($enviado < $total) {
+            $bytes = @fwrite($socket, substr($request, $enviado));
+
+            if ($bytes === false || $bytes === 0) {
+                break;
+            }
+
+            $enviado += $bytes;
+        }
+
+        @fflush($socket);
+        fclose($socket);
+    }
+
+    // Preserva o retorno esperado pelo sistema antigo.
+    return true;
 }
 
 function logSlack($msg, $assunto = '')
