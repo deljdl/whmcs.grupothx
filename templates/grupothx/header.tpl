@@ -13,6 +13,7 @@
     <meta property="og:title" content="Área do cliente Grupo THX">
     <meta property="og:description" content="Acesse seus produtos serviços e pagamentos.">
     <meta property="og:url" content="{$systemurl}{$smarty.server.REQUEST_URI}">
+    <meta property="og:logo" content="{$systemurl}thx/assets/images/ogimage.png" />
     <meta property="og:image" content="{$systemurl}thx/assets/images/ogimage.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
