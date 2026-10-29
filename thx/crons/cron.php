@@ -41,6 +41,11 @@ $cronsCronThx = [
         'dias' => [1, 3, 5],
         'horas' => [9],
     ],
+    'libera-mensagens-whatsapp' => [
+        'path' => $rootDirCronThx . '/thx/crons/liberaMensagensWhatsApp.php',
+        'dias' => [1, 2, 3, 4, 5, 6, 7],
+        'horas' => [8],
+    ],
 ];
 
 $agoraCronThx = new DateTimeImmutable();
