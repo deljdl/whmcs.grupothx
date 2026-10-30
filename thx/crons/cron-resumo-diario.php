@@ -176,7 +176,7 @@ $sql = "SELECT count(1) as total, SUM(total) as totalr FROM tblinvoices WHERE du
 
 
 $text=urlencode($text);
-        $url = 'https://alexa.grupothx.com.br/send-voice?message='.$text;
+        $url = 'https://alexa.grupothx.com.br/'.$text;
 
 
 

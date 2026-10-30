@@ -996,7 +996,7 @@ function formataData($data)
 function alexa($msg)
 {
 	$msg = urlencode($msg);
-	my_file_get_contents('https://alexa.grupothx.com.br/send-voice?message='.$msg);
+	my_file_get_contents('https://alexa.grupothx.com.br/'.$msg);
 }
 
 
