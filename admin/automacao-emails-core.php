@@ -1179,7 +1179,7 @@ function renderTabelaEmails($emails, $hospedagem)
 
                 if($limiteEmail == 'None')
                 {
-                    $limiteEmail = '∞';
+                    $limiteEmail = '<span style="font-size: 25px;line-height: 19px;">∞</span>';
                 }
 
                 $percentualEmail = isset($email['diskusedpercent'])
