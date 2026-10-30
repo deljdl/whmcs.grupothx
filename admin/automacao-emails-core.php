@@ -1177,6 +1177,11 @@ function renderTabelaEmails($emails, $hospedagem)
                     ? $email['humandiskquota']
                     : $email['diskquota'].' MB';
 
+                if($limiteEmail == 'None')
+                {
+                    $limiteEmail = '∞';
+                }
+
                 $percentualEmail = isset($email['diskusedpercent'])
                     ? $email['diskusedpercent']
                     : 0;
