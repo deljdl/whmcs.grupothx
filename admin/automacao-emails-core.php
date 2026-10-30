@@ -1180,6 +1180,7 @@ function renderTabelaEmails($emails, $hospedagem)
                 $percentualEmail = isset($email['diskusedpercent'])
                     ? $email['diskusedpercent']
                     : 0;
+
             ?>
 
             <tr>
@@ -1187,8 +1188,8 @@ function renderTabelaEmails($emails, $hospedagem)
                     <input type="checkbox" class="emailCheckbox" value="<?=$email['email']?>" title="Selecionar para ações em massa">
                 </td>
                 <td><?=$email['email']?></td>
-                <td><?=$usoEmail?></td>
                 <td><?=$limiteEmail?></td>
+                <td><?=$usoEmail?></td>
                 <td><?=$percentualEmail?>%</td>
 
                 <td>
