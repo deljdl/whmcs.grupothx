@@ -56,7 +56,7 @@ function fluxo_de_caixa_output($vars)
 {
     ## chamada segura cli e http (conte o número de barras ou quantos ../ do path relativo) do tarifasTHX modules\addons\fluxo_de_caixa\fluxo_de_caixa.php
     require_once(dirname(dirname(dirname(__DIR__))) . '/tarifasTHX.php');
-    $path ='https://grupothx.com/thx/admin/addonmodules.php?module=fluxo_de_caixa&tab=';
+    echo $path = HTTP_WHMCS_ADMIN . '/addonmodules.php?module=fluxo_de_caixa&tab=';
 
     echo '
     <div class="contentModule" style="padding: 0 5px;">
