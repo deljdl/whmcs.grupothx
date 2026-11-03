@@ -9,7 +9,7 @@
  * @version		2.2.0
  */
 use WHMCS\Database\Capsule;
-include __DIR__ . '/../../gateways/gofasgerencianetboleto/sdk/vendor/autoload.php';
+require_once __DIR__ . '/../../gateways/gofasgerencianetboleto/sdk/efi_rest.php';
 use Gerencianet\Exception\GerencianetException;
 use Gerencianet\Gerencianet;
 
