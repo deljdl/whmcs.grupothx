@@ -220,7 +220,7 @@ function viewPaymentData($idFaturaParaEnvio, $invoice)
 
          $grupothx_merge_fields['grupothx_html_formas_pagamento'] = '
          <div class="thx-vencimento"><i class="fa fa-calendar"></i> Vencimento: '.$vencimento.'</div>
-         <h3 class="thx-titulo-pagamento">Escolha como pagar</h3>
+         <h3 class="thx-titulo-pagamento">Pague sua fatura</h3>
          '.$abasPagamento;
 
          return  $grupothx_merge_fields['grupothx_html_formas_pagamento'];
