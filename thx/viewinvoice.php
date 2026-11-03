@@ -501,10 +501,21 @@ code{
 }
 
 .btn-nota {
-    width: 170px;
-    margin: 15px auto;
+    float: none;
     display: block;
-    float: right;
+    width: fit-content !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    margin: 8px 0 14px auto;
+    padding: 8px 12px;
+    font-size: 13px;
+    background: #fff;
+    color: #1a3c6a;
+    border: 1px solid #1a3c6a;
+}
+.btn-nota:hover {
+    background: #1a3c6a;
+    color: #fff;
 }
 
 /* Cabeçalho da fatura */
