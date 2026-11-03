@@ -306,8 +306,10 @@ function viewPaymentData($idFaturaParaEnvio, $invoice)
                     </tr>
                     <tr>
                         <td>
-                        '.$btNota.'
-                        '.viewPaymentData($idFaturaParaEnvio, $invoice).'
+                        <div class="thx-area-pagamento">
+                            '.$btNota.'
+                            '.viewPaymentData($idFaturaParaEnvio, $invoice).'
+                        </div>
                     </td>
                     </tr>
                 </tbody>
@@ -522,6 +524,11 @@ code{
 .thx-cabecalho { display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; margin:0 0 12px; }
 .thx-cabecalho #grupothx_emails_titulo { margin:0; font-size:20px; min-width:0; }
 .thx-cabecalho .thx-status { margin:0; }
+.thx-area-pagamento { display:flex; flex-direction:column; }
+.thx-area-pagamento .thx-vencimento { order:1; }
+.thx-area-pagamento .btn-nota { order:2; }
+.thx-area-pagamento .thx-titulo-pagamento { order:3; }
+.thx-area-pagamento .thx-pagamentos { order:4; }
 /* Página de pagamento compacta */
 .thx-status { display:inline-block; margin:0 0 5px; padding:7px 12px; border-radius:6px; font-size:13px; font-weight:bold; }
 .thx-status i { font-size:9px; vertical-align:middle; margin-right:4px; }
