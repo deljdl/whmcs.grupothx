@@ -3,6 +3,28 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/init.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/tarifasTHX.php';
 use WHMCS\Database\Capsule;
 
+// Redireciona somente links padrão do WHMCS com ID numérico.
+if (isset($_GET['id']) && ctype_digit((string) $_GET['id']) && (int) $_GET['id'] > 0) {
+    $id = (int) $_GET['id'];
+    $usuario = new \WHMCS\Authentication\CurrentUser();
+    $cliente = $usuario->client();
+
+    if (!$cliente && !$usuario->isAuthenticatedAdmin()) {
+        header('Location: /clientarea.php', true, 302);
+        exit;
+    }
+
+    $dono = Capsule::table('tblinvoices')->where('id', $id)->value('userid');
+    if (!$dono || (!$usuario->isAuthenticatedAdmin() && (int) $cliente->id !== (int) $dono)) {
+        http_response_code(403);
+        exit('Fatura não localizada ou acesso negado.');
+    }
+
+    header('Cache-Control: no-store');
+    header('Location: /viewinvoice-thx/' . rawurlencode(criptX((string) $id)), true, 302);
+    exit;
+}
+
 if(!isset($_GET['i']) || empty($_GET['i']))
 {
     die("fatura não localizada. ErrorCode: 001");
