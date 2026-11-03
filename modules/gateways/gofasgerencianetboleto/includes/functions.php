@@ -266,7 +266,7 @@ function ggnb_pay_charge( $api, $CHARGEID, $BODY2, $system_url, $debug_or_log) {
 
 	$NAME_ERROR = '<b><span class="ggnberror">Erro ao gerar o Boleto:<br/>Nome e/ou Sobrenome incorretos.<br/><a href="'.$system_url.'/clientarea.php?action=details" target="_blank" title="Minha Conta">Atualize aqui seu Nome/Sobrenome</a>.</span></b>';
 
-	$PROFILE_ERROR = '<b><span class="ggnberror">Erro ao gerar o Boleto devido a inconsistências no seu cadastro.<br/><a href="'.$system_url.'clientarea.php?action=details" target="_blank" title="Minha Conta">Atualize aqui seu cadastro</a>.</span></b>';
+	$PROFILE_ERROR = '<b><span class="ggnberror">Erro ao gerar o Boleto devido a inconsistências no seu cadastro.<br/><a href="'.$system_url.'/clientarea.php?action=details" target="_blank" title="Minha Conta">Atualize aqui seu cadastro</a>.</span></b>';
 	 
 	 // executa pagamento
 	 try {
@@ -531,7 +531,7 @@ function ggnb_send_error_email( $INVOICEID, $USERID, $FNAME, $LNAME, $system_url
 		}
 	}
 	$sendEOEvalues['custommessage'] = '<br/>Olá administrador,<br/>
-		Ocorreu uma falha ao gerar um Boleto para a <a href="'.$system_url.'/admin/invoices.php?action=edit&id='.$INVOICEID.'">Fatura #'.$INVOICEID.'</a>.<br/><br/>
+		Ocorreu uma falha ao gerar um Boleto para a <a href="'.$system_url.'/admin/billing/invoice/'.$INVOICEID.'">Fatura #'.$INVOICEID.'</a>.<br/><br/>
 		Detalhes do erro:<br/>
 		<b>Cliente:</b> <a href="'.$system_url.'/admin/clientssummary.php?userid='.$USERID.'">'.$FNAME.' '.$LNAME.'</a><br/><br/>
 		<b>Dados da fatura e do cadastro:</b><br/>'.$detailsHtml.'<br/>

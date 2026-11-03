@@ -109,7 +109,7 @@
 			$caixain .= '
 			<tr class="default">
 				<td style="line-height: 15px;">'.$linha['firstname'].'<br /><small style="font-size: 50%;">'.$linha['companyname'].'</small></td>
-				<td><a target="_blank" href="'.HTTP_WHMCS_ADMIN.'invoices.php?action=edit&id='.$linha['id'].'">'.$linha['id'].'</a></td>
+				<td><a target="_blank" href="'.HTTP_WHMCS_ADMIN.'billing/invoice/'.$linha['id'].'">'.$linha['id'].'</a></td>
 				<td>'.$linha['vencimento'].'</td>
 				<td>'.$linha['pagamento'].'</td>
 				<td style="white-space: nowrap;"> R$ '.$linha['total'].'</td>

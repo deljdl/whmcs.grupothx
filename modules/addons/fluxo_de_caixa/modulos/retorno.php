@@ -300,7 +300,7 @@ $baixas = '';
 				<td>'.$linha['pag_id'].'</td>
 				<td>'.strftime('%d/%m/%Y às %H:%M', strtotime($linha['pag_data'])).'</td>
 				<td><a target="_blank" href="'.HTTP_WHMCS_ADMIN.'clientssummary.php?userid='.$linha['pag_cliente'].'">'.$linha['pag_cliente'].'</a></td>
-				<td><a target="_blank" href="'.HTTP_WHMCS_ADMIN.'invoices.php?action=edit&id='.$linha['pag_invoice'].'">'.$linha['pag_invoice'].'</a></td>
+				<td><a target="_blank" href="'.HTTP_WHMCS_ADMIN.'billing/invoice/'.$linha['pag_invoice'].'">'.$linha['pag_invoice'].'</a></td>
 				<td>R$ '.$linha['pag_valor'].'</td>
 				<td>R$ '.$linha['pag_pago'].'</td>
 				<td>'.$linha['pag_carteira'].'</td>

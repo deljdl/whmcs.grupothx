@@ -34,7 +34,7 @@ function widget_open_invoices($vars) {
         $duedate = fromMySQLDate($duedate);
         $currency = getCurrency($userid);
         if (!$invoicenum) $invoicenum = $id;
-        $content .= '<tr bgcolor="#ffffff" style="text-align:center;"><td><a href="invoices.php?action=edit&id='.$id.'">'.$invoicenum.'</a></td><td>'.$firstname.' '.$lastname.'</td><td>'.$date.'</td><td>'.$duedate.'</td><td>'.formatCurrency($total).'</td><td>'.$paymentmethod.'</td><td><a href="invoices.php?action=edit&id='.$id.'"><img src="images/edit.gif" border="0" /></a></td></tr>';
+        $content .= '<tr bgcolor="#ffffff" style="text-align:center;"><td><a href="billing/invoice/'.$id.'">'.$invoicenum.'</a></td><td>'.$firstname.' '.$lastname.'</td><td>'.$date.'</td><td>'.$duedate.'</td><td>'.formatCurrency($total).'</td><td>'.$paymentmethod.'</td><td><a href="billing/invoice/'.$id.'"><img src="images/edit.gif" border="0" /></a></td></tr>';
     }
     if (!$id) $content .= '<tr bgcolor="#ffffff" style="text-align:center;"><td colspan="7">'.$_ADMINLANG['global']['norecordsfound'].'</td></tr>';
 
