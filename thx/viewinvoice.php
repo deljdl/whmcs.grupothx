@@ -291,7 +291,7 @@ function viewPaymentData($idFaturaParaEnvio, $invoice)
                     <tr>
                     <td width="100%">
                     <div class="thx-cabecalho">
-                        <h3 id="grupothx_emails_titulo" class="grupothx_emails_titulo">Olá, '.$dadosCliente[0]->firstname.' <i class="fa fa-smile-o"></i></h3>
+                        <h3 id="grupothx_emails_titulo" class="grupothx_emails_titulo">Olá, '.$dadosCliente[0]->firstname.'</h3>
                         <div class="thx-status thx-status-'.$classeStatus.'"><i class="fa fa-circle"></i> '.htmlspecialchars($textoStatus, ENT_QUOTES, 'UTF-8').'</div>
                     </div>
                     <div class="thx-resumo">
@@ -509,7 +509,7 @@ code{
 
 /* Cabeçalho da fatura */
 .thx-cabecalho { display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; margin:0 0 12px; }
-.thx-cabecalho #grupothx_emails_titulo { margin:0; }
+.thx-cabecalho #grupothx_emails_titulo { margin:0; font-size:20px; min-width:0; }
 .thx-cabecalho .thx-status { margin:0; }
 /* Página de pagamento compacta */
 .thx-status { display:inline-block; margin:0 0 5px; padding:7px 12px; border-radius:6px; font-size:13px; font-weight:bold; }
