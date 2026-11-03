@@ -35,19 +35,20 @@ if (
             $settings[$setting->setting] = $setting->value;
         }
         $mode = !empty($settings['sandbox']) ? 'sandbox' : 'live';
-        $debug['modo_efi'] = $mode;
+        $debug['modo_configurado'] = $mode;
         $transactions = $invoice['transactions']['transaction'] ?? [];
         if (isset($transactions['transid'])) $transactions = [$transactions];
         $debug['quantidade_transacoes'] = count($transactions);
         $chargeId = 0;
         foreach (array_reverse($transactions) as $transaction) {
             $ref = $transaction['transid'] ?? '';
-            if (strpos($ref, 'ggnb_'.$mode.'_') === 0 &&
-                preg_match('/(?:waiting|unpaid|_notification)-(\d+)(?:\[(?:waiting|unpaid)\])?$/', $ref, $match)) {
-                $chargeId = (int)$match[1];
+            if (preg_match('/^ggnb_(live|sandbox)_(?:waiting|unpaid|_notification)-(\d+)(?:\[(?:waiting|unpaid)\])?$/', $ref, $match)) {
+                $mode = $match[1];
+                $chargeId = (int)$match[2];
                 break;
             }
         }
+        $debug['modo_efi'] = $mode;
         $debug['charge_id_localizado'] = $chargeId;
         if ($chargeId) {
             $api = new Gerencianet([
@@ -204,13 +205,13 @@ add_hook('EmailPreSend', 1, function($vars) {
 				$charge_id = 0;
 				foreach (array_reverse($transactions) as $transaction) {
 					$reference = $transaction['transid'] ?? '';
-					if (strpos($reference, 'ggnb_'.$api_mode.'_') === 0 &&
-						preg_match('/(?:waiting|unpaid|_notification)-(\d+)(?:\[(?:waiting|unpaid)\])?$/', $reference, $match)) {
-						$charge_id = (int)$match[1];
+					if (preg_match('/^ggnb_(live|sandbox)_(?:waiting|unpaid|_notification)-(\d+)(?:\[(?:waiting|unpaid)\])?$/', $reference, $match)) {
+						$api_mode = $match[1];
+						$charge_id = (int)$match[2];
 						break;
 					}
 				}
-				logModuleCall('gofasgerencianet', 'EmailPreSendRecovery', 'transacao', ['charge_id' => $charge_id, 'quantidade' => count($transactions)], '');
+				logModuleCall('gofasgerencianet', 'EmailPreSendRecovery', 'transacao', ['charge_id' => $charge_id, 'api_mode' => $api_mode, 'quantidade' => count($transactions)], '');
 				if ($charge_id) {
 					try {
 						$api = new Gerencianet([
