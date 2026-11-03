@@ -299,7 +299,7 @@ function viewPaymentData($idFaturaParaEnvio, $invoice)
                         <strong>R$ '.number_format((float)$dadosCliente[0]->total, 2, ',', '.').'</strong>
                     </div>
                     <details class="thx-detalhes">
-                        <summary><i class="fa fa-list-ol"></i> Ver itens da fatura <span class="thx-seta">⌄</span></summary>
+                        <summary><i class="fa fa-list-ol"></i> Ver itens da fatura</summary>
                         <div class="thx-itens">'.$itensdafatura.'</div>
                     </details>
                     </td>
@@ -522,10 +522,8 @@ body > table, .grupothx_emails_topo { max-width:680px !important; }
 .thx-resumo { display:flex; justify-content:space-between; align-items:center; gap:12px; margin:14px 0; padding:16px; background:#f4f7fb; border:1px solid #dce5ef; border-radius:8px; color:#1a3c6a; }
 .thx-resumo > strong { font-size:23px; white-space:nowrap; }
 .thx-detalhes { margin:12px 0 18px; border:1px solid #dce5ef; border-radius:8px; overflow:hidden; }
-.thx-detalhes summary { display:flex; align-items:center; gap:8px; cursor:pointer; padding:13px 15px; background:#f8fafd; color:#1a3c6a; font-weight:bold; list-style:none; }
+.thx-detalhes summary { display:flex; align-items:center; gap:8px; cursor:pointer; padding:13px 15px; background:#1a3c6a; color:#fff; font-weight:bold; list-style:none; }
 .thx-detalhes summary::-webkit-details-marker { display:none; }
-.thx-seta { margin-left:auto; font-size:20px; line-height:1; }
-.thx-detalhes[open] .thx-seta { transform:rotate(180deg); }
 .thx-itens { padding:10px; overflow-wrap:anywhere; }
 .thx-itens table { font-size:12px !important; }
 .thx-vencimento { padding:11px 14px; border-radius:6px; background:#d92222; color:white; font-weight:bold; margin:14px 0; }
