@@ -10,7 +10,7 @@
  */
 use WHMCS\Database\Capsule;
 require_once __DIR__ . '/../../gateways/gofasgerencianetboleto/sdk/efi_rest.php';
-require_once __DIR__ . '/../../../includes/gatewayfunctions.php';
+// gatewayfunctions.php já é carregado pelo WHMCS durante a inicialização.
 use Gerencianet\Exception\GerencianetException;
 use Gerencianet\Gerencianet;
 
