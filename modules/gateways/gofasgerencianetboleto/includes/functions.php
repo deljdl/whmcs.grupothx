@@ -75,6 +75,7 @@ function ggnb_detail_charge( $api, $trans_id, $debug_or_log){
 			$log_result['chargeExist']	= 'status: '.$chargeExistStatus;
         }
     } catch (GerencianetException $e) {
+		$error = $e->code.' - '.$e->errorDescription;
 		if ($debug_or_log) {
             $log_result['chargeExist_']	= '<p class="ok">Resultado da busca por boletos gerados por esta fatura - API Gerencianet.</p>';
             if ($e->code == '3500034') {
@@ -85,6 +86,7 @@ function ggnb_detail_charge( $api, $trans_id, $debug_or_log){
 				$error = $e->error. ' - '.$e->errorDescription;
 			}
 		} catch (Exception $e) {
+			$error = $e->getMessage();
 			if ($debug_or_log) {
 				if ($e->code == '3500034') {
 				    $log_result['chargeExist_']	= '<p class="ok">Essa fatura ainda não gerou nenhum boleto.</p>';
@@ -101,7 +103,6 @@ function ggnb_detail_charge( $api, $trans_id, $debug_or_log){
 		if ($chargeExist) {
 			return array('result'=>$chargeExist, 'log_result' => $log_result,);
 		} else {
-			return $error;
 			return array('error'=>$error, 'log_result' => $log_result,);
 		}
 		
@@ -214,6 +215,7 @@ function ggnb_create_charge( $api, $BODY, $system_url, $debug_or_log) {
 					}
 				// Erros
 				} catch ( GerencianetException $e) {
+					$api_error = $e->code.' - '.$e->errorDescription;
 					$error = '<b>1) Não foi possível gerar o boleto, por favor <a href="'.$system_url.'/submitticket.php" target="_blank">entre em contato</a> informando o ID da fatura e o código do erro.<br/>Erro: '.$e->code.' - '.
 					$e->errorDescription.'</b>';
 
@@ -225,6 +227,7 @@ function ggnb_create_charge( $api, $BODY, $system_url, $debug_or_log) {
 						
 					}
  				} catch (Exception $e) {
+					$api_error = $e->getMessage();
 					$error = '<b>2) Não foi possível gerar o boleto, por favor <a href="'.$system_url.'/submitticket.php" target="_blank">entre em contato</a> informando o ID da fatura e o erro.<br/>'.$e->getMessage().'</b>';
 					sendErrorsToAdmin($error, 'Falha ao gerar a transação no sistema. Linha: '.__LINE__);
 					if ($debug_or_log) {
@@ -241,7 +244,7 @@ function ggnb_create_charge( $api, $BODY, $system_url, $debug_or_log) {
 			}
 			else {
 				//return $error;
-				return array('error'=>$error, 'log_result'=> $log_result);
+				return array('error'=>$error, 'api_error'=>$api_error ?? '', 'log_result'=> $log_result);
 			}
  }
 }
@@ -282,6 +285,7 @@ function ggnb_pay_charge( $api, $CHARGEID, $BODY2, $system_url, $debug_or_log) {
 	// Erros
 	} catch (GerencianetException $e) {
 		
+		$api_error = $e->code.' - '.$e->errorDescription;
 		$error = '<b><span class="ggnberror">Erro ao gerar o Boleto:<br/>'.$e->errorDescription.'<br/><a href="'.$system_url.'/submitticket.php" target="_blank">Contate o suporte</a> informando o ID da fatura.';
 		sendErrorsToAdmin($error, 'Falha ao gerar o boleto - 1ª tentativa. Linha: '.__LINE__);
 		if ($debug_or_log) {
@@ -293,6 +297,7 @@ function ggnb_pay_charge( $api, $CHARGEID, $BODY2, $system_url, $debug_or_log) {
 
 	} catch (Exception $e) {
 		
+		$api_error = $e->getMessage();
 		// Erro "CPF incorreto"
 		if( strpos($e->getMessage(), 'cpf') !== false || strpos($e->getMessage(), 'Cpf') !== false ) {
 			$chargePayError = $CPF_ERROR;
@@ -355,7 +360,8 @@ function ggnb_pay_charge( $api, $CHARGEID, $BODY2, $system_url, $debug_or_log) {
 		// Erros
 		} catch (GerencianetException $e) {
 
-			$error = '<b><span class="ggnberror">Erro ao gerar o Boleto:<br/>'.$e->errorDescription.'<br/><a href="'.$system_url.'/submitticket.php" target="_blank">Contate o suporte</a> informando o ID da fatura.';
+			$api_error = $e->code.' - '.$e->errorDescription;
+		$error = '<b><span class="ggnberror">Erro ao gerar o Boleto:<br/>'.$e->errorDescription.'<br/><a href="'.$system_url.'/submitticket.php" target="_blank">Contate o suporte</a> informando o ID da fatura.';
 			sendErrorsToAdmin($error, 'Falha ao gerar o boleto - 2ª tentativa. Linha: '.__LINE__);
 			if ($debug_or_log) {
 				$log_result = array();
@@ -364,7 +370,8 @@ function ggnb_pay_charge( $api, $CHARGEID, $BODY2, $system_url, $debug_or_log) {
 			}
 		
 		} catch (Exception $e) {
-			// Erro "CPF incorreto"
+			$api_error = $e->getMessage();
+		// Erro "CPF incorreto"
 			if( strpos($e->getMessage(), 'cpf') !== false || strpos($e->getMessage(), 'Cpf') !== false ) {
 				$chargePayError = $CPF_ERROR;
 			}
@@ -406,7 +413,7 @@ function ggnb_pay_charge( $api, $CHARGEID, $BODY2, $system_url, $debug_or_log) {
 		return array('result'=>$chargePay, 'log_result'=> $log_result);
 	} elseif ( $error ) {
 		//return (string)$error;
-		return array('error'=>(string)$error, 'log_result'=> $log_result);
+		return array('error'=>(string)$error, 'api_error'=>$api_error ?? '', 'log_result'=> $log_result);
 	}
 }
 }
@@ -513,7 +520,7 @@ function ggnb_store_billet($pay_charge,$invoice_amount,$invoice_id,$debug_or_log
  *
  */
 if (!function_exists('ggnb_send_error_email')) {
-function ggnb_send_error_email( $INVOICEID, $USERID, $FNAME, $LNAME, $system_url, $ADMIN, $EOE, $ERROR, $debug_or_log ) {
+function ggnb_send_error_email( $INVOICEID, $USERID, $FNAME, $LNAME, $system_url, $ADMIN, $EOE, $ERROR, $debug_or_log, $APIERROR = '' ) {
 	$sendEmailonError = "sendadminemail";
  	$sendEOEvalues['customsubject'] = 'Erro ao gerar boleto - fatura #'.$INVOICEID;
 	$sendEOEvalues['custommessage'] = '<br/>Olá administrador,<br/>
@@ -521,6 +528,7 @@ function ggnb_send_error_email( $INVOICEID, $USERID, $FNAME, $LNAME, $system_url
 		Detalhes do erro:<br/>
 		<b>Cliente:</b> <a href="'.$system_url.'/admin/clientssummary.php?userid='.$USERID.'">'.$FNAME.' '.$LNAME.'</a><br/><br/>
 		<b>Erro exibido na Fatura:</b><br/><i>"'.$ERROR.'"</i><br/><br/>
+		'.($APIERROR ? '<b>Motivo retornado pela API Efí:</b><br/>'.nl2br(htmlspecialchars($APIERROR, ENT_QUOTES, 'UTF-8')).'<br/><br/>' : '').'
 		Email gerado de acordo com às configurações do gateway <a title="Ir para as configurações do módulo ↗" href="'.$system_url.'/admin/configgateways.php?updated=gofasgerencianetboleto#m_gofasgerencianetboleto">Gofas Gerencianet Boleto</a>.<br/><br/>';
  	$sendEOEvalues['type'] = 'system';
  	$sendEOEvalues['deptid'] = $EOE;

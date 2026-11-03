@@ -50,6 +50,7 @@ function gofasgerencianetboleto_link( $params ) {
 
 			$chargeExist_			= ggnb_detail_charge( $api, $trans_id, $debug_or_log );
 			if (!is_array($chargeExist_) || empty($chargeExist_['result']['data']['charge_id'])) {
+				$error = is_array($chargeExist_) ? ($chargeExist_['error'] ?? 'Resposta incompleta da consulta Efí.') : ($chargeExist_ ?: 'Falha na consulta Efí.');
 				// A cobrança antiga pode ter sido removida na Efí; nesse caso, permita gerar outra.
 				$trans_id = false;
 				$chargeExist = array('data' => array('charge_id' => 0, 'total' => 0, 'status' => 'canceled', 'payment' => array('banking_billet' => array('expire_at' => '1970-01-01'))));
@@ -77,7 +78,7 @@ function gofasgerencianetboleto_link( $params ) {
 				}
 			}
 			
-			if ($chargeExist_['error']) {
+			if (is_array($chargeExist_) && !empty($chargeExist_['error'])) {
 				$error = $chargeExist_['error'];
 			}
 			///
@@ -124,7 +125,7 @@ function gofasgerencianetboleto_link( $params ) {
 						$error	= $pay_charge_['error'];
 					}
 					
-					if ( is_array($pay_charge) ) {
+					if ( is_array($pay_charge) && !empty($pay_charge['data']['link']) ) {
 						$link		= $pay_charge['data']['link'];
 						$expire_at	= $pay_charge['data']['expire_at'];
 						$barcode	= $pay_charge['data']['barcode'];
@@ -146,11 +147,11 @@ function gofasgerencianetboleto_link( $params ) {
 						}
 					}
 					elseif( is_string($pay_charge) ) {
-						$error = $pay_charge['error'];
+						$error = $pay_charge_['error'] ?? $error;
 					}
 				}
 				else {
-					$error = $charge_id['error'];
+					$error = $charge_id_['error'] ?? $error;
 				}
 			}
 			
@@ -184,7 +185,7 @@ function gofasgerencianetboleto_link( $params ) {
 					if($pay_charge_['error']){
 						$error	= $pay_charge_['error'];
 					}
-					if ( is_array($pay_charge) ) {
+					if ( is_array($pay_charge) && !empty($pay_charge['data']['link']) ) {
 						$link		= $pay_charge['data']['link'];
 						$expire_at	= $pay_charge['data']['expire_at'];
 						$barcode	= $pay_charge['data']['barcode'];
@@ -206,11 +207,11 @@ function gofasgerencianetboleto_link( $params ) {
 						}
 					}
 					elseif( is_string($pay_charge) ) {
-						$error = $pay_charge['error'];
+						$error = $pay_charge_['error'] ?? $error;
 					}
 				}
 				else {
-						$error = $charge_id['error'];
+						$error = $charge_id_['error'] ?? $error;
 
 				}
 			}
@@ -262,7 +263,7 @@ function gofasgerencianetboleto_link( $params ) {
 					if($pay_charge_['error']){
 						$error	= $pay_charge_['error'];
 					}
-					if ( is_array($pay_charge) ) {
+					if ( is_array($pay_charge) && !empty($pay_charge['data']['link']) ) {
 						$link		= $pay_charge['data']['link'];
 						$expire_at	= $pay_charge['data']['expire_at'];
 						$barcode	= $pay_charge['data']['barcode'];
@@ -275,17 +276,17 @@ function gofasgerencianetboleto_link( $params ) {
 							$log_result['addtrans']	= $addtrans;
 						}
 					} elseif( is_string($pay_charge) ) {
-						$error = $pay_charge['error'];
+						$error = $pay_charge_['error'] ?? $error;
 					}
 				} else {
-					$error = $charge_id['error'];
+					$error = $charge_id_['error'] ?? $error;
 					
 				}
 			}			
 		} // End of if ( $trans_id and !$error)
 		
 		/// The firt billet for the invoice
-		elseif ( !$trans_id ) {
+		elseif ( !$trans_id and !$error ) {
 
 			if ( (float)$invoiceTotal >= (float)$minimunAmount) {
 				// Criar transação
@@ -309,7 +310,7 @@ function gofasgerencianetboleto_link( $params ) {
 					if($pay_charge_['error']){
 						$error	= $pay_charge_['error'];
 					}
-					if ( is_array($pay_charge) ) {
+					if ( is_array($pay_charge) && !empty($pay_charge['data']['link']) ) {
 						$link		= $pay_charge['data']['link'];
 						$expire_at	= $pay_charge['data']['expire_at'];
 						$barcode	= $pay_charge['data']['barcode'];
@@ -331,11 +332,11 @@ function gofasgerencianetboleto_link( $params ) {
 						}
 					}
 					elseif( is_string($pay_charge) ) {
-						$error = $pay_charge['error'];
+						$error = $pay_charge_['error'] ?? $error;
 					}
 				}
 				else {
-						$error = $charge_id['error'];
+						$error = $charge_id_['error'] ?? $error;
 						
 				}
 			}
@@ -346,10 +347,13 @@ function gofasgerencianetboleto_link( $params ) {
 		} // end !$trans_id
 		
 		// Resultado impresso na área Visível na fatura/checkout
+		if (!$error && empty($link)) {
+			$error = 'A Efí não retornou o link do boleto.';
+		}
 		if( $error ) {
 			// Email enviado ao admin em caso de erro
 			if ( $emailonError ) {
-				$sendEmailonError = ggnb_send_error_email( $invoice_id, $user_id, $firstname, $lastname, $system_url, $whmcsAdmin, $emailonError, $error, $debug);
+				$sendEmailonError = ggnb_send_error_email( $invoice_id, $user_id, $firstname, $lastname, $system_url, $whmcsAdmin, $emailonError, $error, $debug, $pay_charge_['api_error'] ?? $charge_id_['api_error'] ?? '' );
 				if ($debug_or_log){
 					$log_result['sendEmailonError']	= $sendEmailonError;
  				}
