@@ -72,12 +72,12 @@ function viewPaymentData($idFaturaParaEnvio, $invoice)
 
     if($invoice['status'] == 'Paid')
     {
-        return '<h1 class="paid">Fatura Paga <strong>:)</strong></h1>';
+        return '';
     }
 
     if($invoice['status'] == 'Cancelled')
     {
-        return '<h1 class="paid">Fatura Cancelada <strong>:)</strong></h1>';
+        return '';
     }
 
 
@@ -273,6 +273,16 @@ function viewPaymentData($idFaturaParaEnvio, $invoice)
             $btNota = getNotaFiscal($idFaturaParaEnvio);
 
 
+            $statusFatura = [
+                'Paid' => ['Paga', 'paga'],
+                'Unpaid' => ['Aguardando pagamento', 'pendente'],
+                'Payment Pending' => ['Pagamento em processamento', 'pendente'],
+                'Cancelled' => ['Cancelada', 'cancelada'],
+                'Refunded' => ['Reembolsada', 'cancelada'],
+                'Draft' => ['Em elaboração', 'pendente'],
+            ];
+            [$textoStatus, $classeStatus] = $statusFatura[$invoice['status']] ?? [$invoice['status'], 'pendente'];
+
             $dadoscabecalho = Capsule::select("SELECT value FROM tblconfiguration WHERE setting IN('EmailGlobalHeader', 'EmailGlobalFooter') ORDER BY setting");
             $html = html_entity_decode($dadoscabecalho[1]->value);
             $html.='
@@ -281,6 +291,7 @@ function viewPaymentData($idFaturaParaEnvio, $invoice)
                     <tr>
                     <td width="100%">
                     <h3 id="grupothx_emails_titulo" class="grupothx_emails_titulo">Olá, '.$dadosCliente[0]->firstname.' <i class="fa fa-smile-o"></i></h3>
+                    <div class="thx-status thx-status-'.$classeStatus.'"><i class="fa fa-circle"></i> '.htmlspecialchars($textoStatus, ENT_QUOTES, 'UTF-8').'</div>
                     <div class="thx-resumo">
                         <span>Fatura <strong>#'.$idFaturaParaEnvio.'</strong></span>
                         <strong>R$ '.number_format((float)$dadosCliente[0]->total, 2, ',', '.').'</strong>
@@ -495,6 +506,11 @@ code{
 }
 
 /* Página de pagamento compacta */
+.thx-status { display:inline-block; margin:0 0 5px; padding:7px 12px; border-radius:6px; font-size:13px; font-weight:bold; }
+.thx-status i { font-size:9px; vertical-align:middle; margin-right:4px; }
+.thx-status-paga { background:#e5f5e9; color:#176532; }
+.thx-status-pendente { background:#fff4d8; color:#855700; }
+.thx-status-cancelada { background:#fce7e7; color:#9c2525; }
 body { padding:12px; }
 body > table, .grupothx_emails_topo { max-width:680px !important; }
 .thx-resumo { display:flex; justify-content:space-between; align-items:center; gap:12px; margin:14px 0; padding:16px; background:#f4f7fb; border:1px solid #dce5ef; border-radius:8px; color:#1a3c6a; }
