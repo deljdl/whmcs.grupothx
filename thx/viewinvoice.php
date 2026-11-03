@@ -553,7 +553,7 @@ body > table, .grupothx_emails_topo { max-width:680px !important; }
 .thx-aba i { margin-right:5px; }
 #thx-tab-pix:checked ~ .thx-aba-pix, #thx-tab-boleto:checked ~ .thx-aba-boleto { border-color:#1a3c6a; background:#1a3c6a; color:white; }
 .thx-pagamentos > input:focus-visible + .thx-aba { outline:3px solid #f05030; outline-offset:2px; }
-.thx-painel { display:none; width:100%; box-sizing:border-box; padding:16px 10px; border:1px solid #dce5ef; border-radius:8px; text-align:center; }
+.thx-painel { display:none; width:100%; box-sizing:border-box; padding:0; border:1px solid #dce5ef; border-radius:8px; text-align:center; }
 #thx-tab-pix:checked ~ .thx-painel-pix, #thx-tab-boleto:checked ~ .thx-painel-boleto { display:block; }
 .thx-painel table { max-width:100% !important; }
 .thx-painel td { padding:8px !important; }
@@ -564,7 +564,7 @@ body > table, .grupothx_emails_topo { max-width:680px !important; }
 @media (max-width:768px) {
   .thx-resumo { padding:12px; }
   .thx-resumo > strong { font-size:20px; }
-  .thx-painel { padding:12px 6px; }
+  .thx-painel { padding:0; }
   .thx-painel td { display:block; width:100% !important; }
   .thx-painel img { margin:10px auto; }
   .thx-painel .btn-copy { box-sizing:border-box; width:100% !important; max-width:100% !important; margin:7px 0; }
