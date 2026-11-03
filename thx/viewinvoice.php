@@ -524,7 +524,7 @@ body > table, .grupothx_emails_topo { max-width:680px !important; }
 .thx-detalhes { margin:12px 0 18px; border:1px solid #dce5ef; border-radius:8px; overflow:hidden; }
 .thx-detalhes summary { display:flex; align-items:center; gap:8px; cursor:pointer; padding:13px 15px; background:#1a3c6a; color:#fff; font-weight:bold; list-style:none; }
 .thx-detalhes summary::-webkit-details-marker { display:none; }
-.thx-itens { padding:10px; overflow-wrap:anywhere; }
+.thx-itens { padding:0; overflow-wrap:anywhere; }
 .thx-itens table { font-size:12px !important; }
 .thx-itens > table:first-child { display:none; }
 .thx-vencimento { padding:11px 14px; border-radius:6px; background:#d92222; color:white; font-weight:bold; margin:14px 0; }
