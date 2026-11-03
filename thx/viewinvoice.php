@@ -193,16 +193,35 @@ function viewPaymentData($idFaturaParaEnvio, $invoice)
          $vencimento = strftime('%d/%m/%Y', strtotime($invoice['duedate']));
 
 
+         $abasPagamento = '
+         <div class="thx-pagamentos">
+             <input type="radio" name="thx-pagamento" id="thx-tab-pix" checked>
+             <label for="thx-tab-pix" class="thx-aba thx-aba-pix"><i class="ri-pix-line"></i> Pagar com PIX</label>';
+
+         if ($boleto !== '') {
+             $abasPagamento .= '
+             <input type="radio" name="thx-pagamento" id="thx-tab-boleto">
+             <label for="thx-tab-boleto" class="thx-aba thx-aba-boleto"><i class="bx bx-barcode-reader"></i> Pagar com boleto</label>';
+         }
+
+         $abasPagamento .= '
+             <div class="thx-painel thx-painel-pix">
+                 <table><tbody>'.$pix.'</tbody></table>
+             </div>';
+
+         if ($boleto !== '') {
+             $abasPagamento .= '
+             <div class="thx-painel thx-painel-boleto">
+                 <table><tbody>'.$boleto.'</tbody></table>
+             </div>';
+         }
+
+         $abasPagamento .= '</div>';
+
          $grupothx_merge_fields['grupothx_html_formas_pagamento'] = '
-         <table width="100%">
-            <tbody>
-               <tr style="background-color:red;color:#ffffff;padding:7px 15px;font-weight:bold;height:17px">
-                  <td style="padding: 5px 10px;" colspan="2"><i class="fa fa-calendar"></i> Vencimento: '.$vencimento.'</td>
-               </tr>
-               '.$boleto.'
-               '.$pix.'
-            </tbody>
-         </table>';
+         <div class="thx-vencimento"><i class="fa fa-calendar"></i> Vencimento: '.$vencimento.'</div>
+         <h3 class="thx-titulo-pagamento">Escolha como pagar</h3>
+         '.$abasPagamento;
 
          return  $grupothx_merge_fields['grupothx_html_formas_pagamento'];
 }
@@ -262,8 +281,14 @@ function viewPaymentData($idFaturaParaEnvio, $invoice)
                     <tr>
                     <td width="100%">
                     <h3 id="grupothx_emails_titulo" class="grupothx_emails_titulo">Olá, '.$dadosCliente[0]->firstname.' <i class="fa fa-smile-o"></i></h3>
-                    <p>Esses são os serviços referentes à fatura <strong>#'.$idFaturaParaEnvio.'</strong>.</p>
-                    '.$itensdafatura.'
+                    <div class="thx-resumo">
+                        <span>Fatura <strong>#'.$idFaturaParaEnvio.'</strong></span>
+                        <strong>R$ '.number_format((float)$dadosCliente[0]->total, 2, ',', '.').'</strong>
+                    </div>
+                    <details class="thx-detalhes">
+                        <summary><i class="fa fa-list-ol"></i> Ver itens da fatura <span class="thx-seta">⌄</span></summary>
+                        <div class="thx-itens">'.$itensdafatura.'</div>
+                    </details>
                     </td>
                     </tr>
                     <tr>
@@ -467,6 +492,44 @@ code{
     margin: 15px auto;
     display: block;
     float: right;
+}
+
+/* Página de pagamento compacta */
+body { padding:12px; }
+body > table, .grupothx_emails_topo { max-width:680px !important; }
+.thx-resumo { display:flex; justify-content:space-between; align-items:center; gap:12px; margin:14px 0; padding:16px; background:#f4f7fb; border:1px solid #dce5ef; border-radius:8px; color:#1a3c6a; }
+.thx-resumo > strong { font-size:23px; white-space:nowrap; }
+.thx-detalhes { margin:12px 0 18px; border:1px solid #dce5ef; border-radius:8px; overflow:hidden; }
+.thx-detalhes summary { display:flex; align-items:center; gap:8px; cursor:pointer; padding:13px 15px; background:#f8fafd; color:#1a3c6a; font-weight:bold; list-style:none; }
+.thx-detalhes summary::-webkit-details-marker { display:none; }
+.thx-seta { margin-left:auto; font-size:20px; line-height:1; }
+.thx-detalhes[open] .thx-seta { transform:rotate(180deg); }
+.thx-itens { padding:10px; overflow-wrap:anywhere; }
+.thx-itens table { font-size:12px !important; }
+.thx-vencimento { padding:11px 14px; border-radius:6px; background:#d92222; color:white; font-weight:bold; margin:14px 0; }
+.thx-titulo-pagamento { color:#1a3c6a; font-size:19px; margin:20px 0 12px; text-align:center; }
+.thx-pagamentos { display:flex; flex-wrap:wrap; gap:8px; }
+.thx-pagamentos > input { position:absolute; width:1px; height:1px; opacity:0; }
+.thx-aba { box-sizing:border-box; flex:1; min-width:125px; text-align:center; padding:13px 8px; border:2px solid #dce5ef; border-radius:8px; color:#1a3c6a; cursor:pointer; font-weight:bold; font-size:15px; background:#f8fafd; }
+.thx-aba i { margin-right:5px; }
+#thx-tab-pix:checked ~ .thx-aba-pix, #thx-tab-boleto:checked ~ .thx-aba-boleto { border-color:#1a3c6a; background:#1a3c6a; color:white; }
+.thx-pagamentos > input:focus-visible + .thx-aba { outline:3px solid #f05030; outline-offset:2px; }
+.thx-painel { display:none; width:100%; box-sizing:border-box; padding:16px 10px; border:1px solid #dce5ef; border-radius:8px; text-align:center; }
+#thx-tab-pix:checked ~ .thx-painel-pix, #thx-tab-boleto:checked ~ .thx-painel-boleto { display:block; }
+.thx-painel table { max-width:100% !important; }
+.thx-painel td { padding:8px !important; }
+.thx-painel .qrcode-pix { width:100%; max-width:230px; height:auto; margin:10px auto; }
+.thx-painel .copia-cola { box-sizing:border-box; width:100%; max-width:100%; inline-size:auto; }
+.thx-painel #codigoBarras { font-size:12px; overflow-wrap:anywhere; }
+.thx-painel .btn-copy { float:none; }
+@media (max-width:768px) {
+  .thx-resumo { padding:12px; }
+  .thx-resumo > strong { font-size:20px; }
+  .thx-painel { padding:12px 6px; }
+  .thx-painel td { display:block; width:100% !important; }
+  .thx-painel img { margin:10px auto; }
+  .thx-painel .btn-copy { box-sizing:border-box; width:100% !important; max-width:100% !important; margin:7px 0; }
+  .thx-itens td { display:table-cell; width:auto !important; }
 }
     </style>
 </head>
