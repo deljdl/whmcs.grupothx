@@ -520,19 +520,34 @@ function ggnb_store_billet($pay_charge,$invoice_amount,$invoice_id,$debug_or_log
  *
  */
 if (!function_exists('ggnb_send_error_email')) {
-function ggnb_send_error_email( $INVOICEID, $USERID, $FNAME, $LNAME, $system_url, $ADMIN, $EOE, $ERROR, $debug_or_log, $APIERROR = '' ) {
+function ggnb_send_error_email( $INVOICEID, $USERID, $FNAME, $LNAME, $system_url, $ADMIN, $EOE, $ERROR, $debug_or_log, $APIERROR = '', $DETAILS = array() ) {
 	$sendEmailonError = "sendadminemail";
+ 	$sendEOEvalues['messagename'] = 'Mention Notification';
  	$sendEOEvalues['customsubject'] = 'Erro ao gerar boleto - fatura #'.$INVOICEID;
+	$detailsHtml = '';
+	foreach ($DETAILS as $field => $value) {
+		if ($value !== null && $value !== '') {
+			$detailsHtml .= '<b>'.htmlspecialchars((string)$field, ENT_QUOTES, 'UTF-8').':</b> '.htmlspecialchars((string)$value, ENT_QUOTES, 'UTF-8').'<br/>';
+		}
+	}
 	$sendEOEvalues['custommessage'] = '<br/>Olá administrador,<br/>
 		Ocorreu uma falha ao gerar um Boleto para a <a href="'.$system_url.'/admin/invoices.php?action=edit&id='.$INVOICEID.'">Fatura #'.$INVOICEID.'</a>.<br/><br/>
 		Detalhes do erro:<br/>
 		<b>Cliente:</b> <a href="'.$system_url.'/admin/clientssummary.php?userid='.$USERID.'">'.$FNAME.' '.$LNAME.'</a><br/><br/>
+		<b>Dados da fatura e do cadastro:</b><br/>'.$detailsHtml.'<br/>
 		<b>Erro exibido na Fatura:</b><br/><i>"'.$ERROR.'"</i><br/><br/>
 		'.($APIERROR ? '<b>Motivo retornado pela API Efí:</b><br/>'.nl2br(htmlspecialchars($APIERROR, ENT_QUOTES, 'UTF-8')).'<br/><br/>' : '').'
-		Email gerado de acordo com às configurações do gateway <a title="Ir para as configurações do módulo ↗" href="'.$system_url.'/admin/configgateways.php?updated=gofasgerencianetboleto#m_gofasgerencianetboleto">Gofas Gerencianet Boleto</a>.<br/><br/>';
+		Alerta automático do gateway Gofas Gerencianet Boleto.<br/><br/>';
  	$sendEOEvalues['type'] = 'system';
- 	$sendEOEvalues['deptid'] = $EOE;
- 	$sendEOEresults = @localAPI($sendEmailonError,$sendEOEvalues,$ADMIN);
+	try {
+		$sendEOEresults = localAPI($sendEmailonError, $sendEOEvalues);
+	} catch (\Throwable $e) {
+		$sendEOEresults = array('result' => 'error', 'message' => $e->getMessage());
+	}
+	logModuleCall('gofasgerencianetboleto', 'erro_email_admin', array('invoice_id' => $INVOICEID), $sendEOEresults, '');
+	if (($sendEOEresults['result'] ?? '') !== 'success') {
+		logActivity('Efí: falha ao notificar administrador sobre a fatura #'.$INVOICEID.': '.($sendEOEresults['message'] ?? 'erro desconhecido'));
+	}
 		
 	if ($debug_or_log and $sendEOEresults['result'] === 'success'){
 		$log_result = array();

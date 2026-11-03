@@ -351,12 +351,28 @@ function gofasgerencianetboleto_link( $params ) {
 			$error = 'A Efí não retornou o link do boleto.';
 		}
 		if( $error ) {
-			// Email enviado ao admin em caso de erro
-			if ( $emailonError ) {
-				$sendEmailonError = ggnb_send_error_email( $invoice_id, $user_id, $firstname, $lastname, $system_url, $whmcsAdmin, $emailonError, $error, $debug, $pay_charge_['api_error'] ?? $charge_id_['api_error'] ?? '' );
-				if ($debug_or_log){
-					$log_result['sendEmailonError']	= $sendEmailonError;
- 				}
+			// Envia ao administrador independentemente das opções do gateway.
+			$invoiceDetails = array(
+				'Status da fatura' => $GetInvoiceResults['status'] ?? '',
+				'Valor (R$)' => $GetInvoiceResults['total'] ?? '',
+				'Vencimento' => $GetInvoiceResults['duedate'] ?? '',
+				'ID do cliente' => $user_id,
+				'E-mail do cliente' => $params['clientdetails']['email'] ?? '',
+				'Empresa do cadastro' => $params['clientdetails']['companyname'] ?? '',
+				'Telefone do cadastro' => $params['clientdetails']['phonenumber'] ?? '',
+				'Documento fiscal do cadastro' => $params['clientdetails']['tax_id'] ?? '',
+				'CPF do cadastro' => $cpf_customfield_value ?? '',
+				'CNPJ do cadastro' => $cnpj_customfield_value ?? '',
+				'Nome enviado à Efí' => $body2['payment']['banking_billet']['customer']['name'] ?? '',
+				'CPF enviado à Efí' => $body2['payment']['banking_billet']['customer']['cpf'] ?? '',
+				'CNPJ enviado à Efí' => $body2['payment']['banking_billet']['customer']['juridical_person']['cnpj'] ?? '',
+				'Razão social enviada à Efí' => $body2['payment']['banking_billet']['customer']['juridical_person']['corporate_name'] ?? '',
+				'Telefone enviado à Efí' => $body2['payment']['banking_billet']['customer']['phone_number'] ?? '',
+				'Transação no WHMCS' => $trans_id_ ?? '',
+			);
+			$sendEmailonError = ggnb_send_error_email( $invoice_id, $user_id, $firstname, $lastname, $system_url, $whmcsAdmin, $emailonError, $error, $debug_or_log, $pay_charge_['api_error'] ?? $charge_id_['api_error'] ?? '', $invoiceDetails );
+			if ($debug_or_log) {
+				$log_result['sendEmailonError'] = $sendEmailonError;
 			}
 			
 			
