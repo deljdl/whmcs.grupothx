@@ -526,6 +526,7 @@ body > table, .grupothx_emails_topo { max-width:680px !important; }
 .thx-detalhes summary::-webkit-details-marker { display:none; }
 .thx-itens { padding:10px; overflow-wrap:anywhere; }
 .thx-itens table { font-size:12px !important; }
+.thx-itens > table:first-child { display:none; }
 .thx-vencimento { padding:11px 14px; border-radius:6px; background:#d92222; color:white; font-weight:bold; margin:14px 0; }
 .thx-titulo-pagamento { color:#1a3c6a; font-size:19px; margin:20px 0 12px; text-align:center; }
 .thx-pagamentos { display:flex; flex-wrap:wrap; gap:8px; }
