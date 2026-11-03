@@ -128,6 +128,7 @@ add_hook('EmailPreSend', 1, function($vars) {
 			// Recupera o mesmo boleto na Efí se a gravação local falhou.
 			$billet_saved = Capsule::table('gofasgerencianetboleto')->where('invoice_id', $vars['relid'])->first();
 			if (!$billet_saved && $invoice['status'] === 'Unpaid') {
+				logModuleCall('gofasgerencianet', 'EmailPreSendRecovery', 'inicio', ['invoice_id' => $vars['relid']], '');
 				$api_mode = !empty($params['sandbox']) ? 'sandbox' : 'live';
 				$transactions = $invoice['transactions']['transaction'] ?? [];
 				if (isset($transactions['transid'])) $transactions = [$transactions];
@@ -140,6 +141,7 @@ add_hook('EmailPreSend', 1, function($vars) {
 						break;
 					}
 				}
+				logModuleCall('gofasgerencianet', 'EmailPreSendRecovery', 'transacao', ['charge_id' => $charge_id, 'quantidade' => count($transactions)], '');
 				if ($charge_id) {
 					try {
 						$api = new Gerencianet([
@@ -150,6 +152,7 @@ add_hook('EmailPreSend', 1, function($vars) {
 						$charge = $api->detailCharge(['id' => $charge_id], []);
 						$info = $charge['data'] ?? [];
 						$billet = $info['payment']['banking_billet'] ?? [];
+						logModuleCall('gofasgerencianet', 'EmailPreSendRecovery', 'resposta_efi', ['id' => $info['charge_id'] ?? null, 'status' => $info['status'] ?? null, 'campos_boleto' => array_keys($billet)], '');
 						if ((int)($info['charge_id'] ?? 0) !== $charge_id ||
 							(!empty($info['custom_id']) && (string)$info['custom_id'] !== (string)$vars['relid']) ||
 							!in_array($info['status'] ?? '', ['waiting', 'unpaid'], true) ||
@@ -178,24 +181,31 @@ add_hook('EmailPreSend', 1, function($vars) {
 								Capsule::table('gofasgerencianetboleto')->insert($data);
 							}
 						});
+						logModuleCall('gofasgerencianet', 'EmailPreSendRecovery', 'persistencia', ['charge_id' => $charge_id], '');
 					} catch (GerencianetException $e) {
 						$reason = json_encode(['code' => $e->code, 'error' => $e->error, 'errorDescription' => $e->errorDescription], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 					} catch (\Throwable $e) {
 						$reason = $e->getMessage();
 					}
 					if (!empty($reason)) {
+						logModuleCall('gofasgerencianet', 'EmailPreSendRecovery', 'erro', $reason, '');
 						$email = [
+							'messagename' => 'Mention Notification',
 							'customsubject' => 'Efí - falha ao recuperar boleto da fatura #'.$vars['relid'],
 							'custommessage' => 'Fatura #'.$vars['relid'].' / Cobrança Efí #'.$charge_id.'<pre>'.htmlspecialchars($reason, ENT_QUOTES, 'UTF-8').'</pre>',
 							'type' => 'system',
 						];
 						if (!empty($params['emailonerror'])) $email['deptid'] = $params['emailonerror'];
-						localAPI('sendadminemail', $email, $params['admin'] ?: null);
+						$sendResult = localAPI('sendadminemail', $email, $params['admin'] ?: null);
+						logModuleCall('gofasgerencianet', 'EmailPreSendRecovery', 'email_admin', ['result' => $sendResult['result'] ?? null, 'message' => $sendResult['message'] ?? null], '');
 					}
 				}
 				$billet_saved = Capsule::table('gofasgerencianetboleto')->where('invoice_id', $vars['relid'])->first();
 			}
-			if (!$billet_saved) return;
+			if (!$billet_saved) {
+				logModuleCall('gofasgerencianet', 'EmailPreSendRecovery', 'sem_boleto', ['invoice_id' => $vars['relid']], '');
+				return;
+			}
 			$billet_saved = (array)$billet_saved;
 
 			logModuleCall('gofasgerencianet', 'EmailPreSend', 'billet_saved', $billet_saved, '');
