@@ -13,6 +13,75 @@ include __DIR__ . '/../../gateways/gofasgerencianetboleto/sdk/vendor/autoload.ph
 use Gerencianet\Exception\GerencianetException;
 use Gerencianet\Gerencianet;
 
+// TEMPORARIO: remover apos diagnosticar a fatura 17219.
+if (
+    !empty($_SESSION['adminid']) &&
+    ($_GET['ggnb_debug_17219'] ?? '') === '1' &&
+    strpos($_SERVER['REQUEST_URI'] ?? '', '/admin/billing/invoice/17219') !== false
+) {
+    $debug = ['fatura' => 17219, 'hook_carregado' => true];
+    try {
+        $invoice = localAPI('GetInvoice', ['invoiceid' => 17219], false);
+        $debug['whmcs'] = [
+            'result' => $invoice['result'] ?? null,
+            'status' => $invoice['status'] ?? null,
+            'paymentmethod' => $invoice['paymentmethod'] ?? null,
+            'total' => $invoice['total'] ?? null,
+        ];
+        $saved = Capsule::table('gofasgerencianetboleto')->where('invoice_id', 17219)->first();
+        $debug['registro_local'] = $saved ? ['charge_id' => $saved->charge_id, 'tem_link' => !empty($saved->link)] : 'ausente';
+        $settings = [];
+        foreach (Capsule::table('tblpaymentgateways')->where('gateway', 'gofasgerencianetboleto')->get(['setting', 'value']) as $setting) {
+            $settings[$setting->setting] = $setting->value;
+        }
+        $mode = !empty($settings['sandbox']) ? 'sandbox' : 'live';
+        $debug['modo_efi'] = $mode;
+        $transactions = $invoice['transactions']['transaction'] ?? [];
+        if (isset($transactions['transid'])) $transactions = [$transactions];
+        $debug['quantidade_transacoes'] = count($transactions);
+        $chargeId = 0;
+        foreach (array_reverse($transactions) as $transaction) {
+            $ref = $transaction['transid'] ?? '';
+            if (strpos($ref, 'ggnb_'.$mode.'_') === 0 &&
+                preg_match('/(?:waiting|unpaid|_notification)-(\d+)(?:\[(?:waiting|unpaid)\])?$/', $ref, $match)) {
+                $chargeId = (int)$match[1];
+                break;
+            }
+        }
+        $debug['charge_id_localizado'] = $chargeId;
+        if ($chargeId) {
+            $api = new Gerencianet([
+                'client_id' => $settings[$mode === 'live' ? 'clientid' : 'clientidsandbox'] ?? '',
+                'client_secret' => $settings[$mode === 'live' ? 'clientsecret' : 'clientsecretsandbox'] ?? '',
+                'sandbox' => $mode === 'sandbox',
+            ]);
+            $response = $api->detailCharge(['id' => $chargeId], []);
+            $data = $response['data'] ?? [];
+            $billet = $data['payment']['banking_billet'] ?? [];
+            $debug['resposta_efi'] = [
+                'charge_id' => $data['charge_id'] ?? null,
+                'custom_id' => $data['custom_id'] ?? null,
+                'status' => $data['status'] ?? null,
+                'total_centavos' => $data['total'] ?? null,
+                'data_keys' => array_keys($data),
+                'payment_keys' => array_keys((array)($data['payment'] ?? [])),
+                'banking_billet_keys' => array_keys((array)$billet),
+                'link_presente' => !empty($billet['link']),
+                'barcode_presente' => !empty($billet['barcode']),
+                'vencimento' => $billet['expire_at'] ?? null,
+                'pdf_tipo' => gettype($billet['pdf'] ?? null),
+                'pdf_keys' => is_array($billet['pdf'] ?? null) ? array_keys($billet['pdf']) : [],
+            ];
+        }
+    } catch (GerencianetException $e) {
+        $debug['erro_efi_original'] = ['code' => $e->code, 'error' => $e->error, 'errorDescription' => $e->errorDescription];
+    } catch (\Throwable $e) {
+        $debug['erro_php'] = $e->getMessage();
+    }
+    header('Content-Type: text/html; charset=utf-8');
+    die('<h3>DEBUG TEMPORARIO - FATURA 17219 (nenhum envio)</h3><pre>'.htmlspecialchars(print_r($debug, true), ENT_QUOTES, 'UTF-8').'</pre>');
+}
+
 // Cancel Billet on cancel invoice
 add_hook( 'InvoiceCancelled', 1, function($vars) {
 	//logModuleCall('gofasgerencianet','start',$vars );
