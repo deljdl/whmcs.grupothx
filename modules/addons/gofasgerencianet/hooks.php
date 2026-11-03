@@ -10,6 +10,7 @@
  */
 use WHMCS\Database\Capsule;
 require_once __DIR__ . '/../../gateways/gofasgerencianetboleto/sdk/efi_rest.php';
+require_once __DIR__ . '/../../../includes/gatewayfunctions.php';
 use Gerencianet\Exception\GerencianetException;
 use Gerencianet\Gerencianet;
 
@@ -30,10 +31,7 @@ if (
         ];
         $saved = Capsule::table('gofasgerencianetboleto')->where('invoice_id', 17219)->first();
         $debug['registro_local'] = $saved ? ['charge_id' => $saved->charge_id, 'tem_link' => !empty($saved->link)] : 'ausente';
-        $settings = [];
-        foreach (Capsule::table('tblpaymentgateways')->where('gateway', 'gofasgerencianetboleto')->get(['setting', 'value']) as $setting) {
-            $settings[$setting->setting] = $setting->value;
-        }
+        $settings = getGatewayVariables('gofasgerencianetboleto');
         $mode = !empty($settings['sandbox']) ? 'sandbox' : 'live';
         $debug['modo_configurado'] = $mode;
         $transactions = $invoice['transactions']['transaction'] ?? [];
@@ -87,10 +85,7 @@ if (
 add_hook( 'InvoiceCancelled', 1, function($vars) {
 	//logModuleCall('gofasgerencianet','start',$vars );
 	// Get Module Params
-	foreach( Capsule::table('tblpaymentgateways') -> where('gateway', '=', 'gofasgerencianetboleto') -> get( array( 'setting', 'value') ) as $settings ) {
-		$setting_key				= $settings->setting;
-		$params["$setting_key"]		= $settings->value;
-	}
+	$params = getGatewayVariables('gofasgerencianetboleto');
 	if ($params['cancelbilletoncancelinvoice']) {
 			// Parâmetros do Módulo
 			$sandbox	= $params['sandbox'];
@@ -166,10 +161,7 @@ add_hook( 'InvoiceCancelled', 1, function($vars) {
 add_hook('EmailPreSend', 1, function($vars) {
 	logModuleCall('gofasgerencianet', 'EmailPreSend', 'start', $vars, '');
     // Get Module Options
-	foreach( Capsule::table('tblpaymentgateways') -> where('gateway', '=', 'gofasgerencianetboleto') -> get( array( 'setting', 'value') ) as $settings ) {
-		$setting_key				= $settings->setting;
-		$params["$setting_key"]		= $settings->value;
-	}
+	$params = getGatewayVariables('gofasgerencianetboleto');
 	//$billetonemail					= $params['billetonemail'];
 
 	// Invoice Created | Invoice Payment Reminder | First Invoice Overdue Notice |  Second Invoice Overdue Notice |  Third Invoice Overdue Notice
