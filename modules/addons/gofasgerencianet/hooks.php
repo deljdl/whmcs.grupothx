@@ -71,6 +71,47 @@ if (
                 'pdf_tipo' => gettype($billet['pdf'] ?? null),
                 'pdf_keys' => is_array($billet['pdf'] ?? null) ? array_keys($billet['pdf']) : [],
             ];
+            if ($mode === 'live' && $chargeId === 1082805668 &&
+                (int)($data['charge_id'] ?? 0) === 1082805668 &&
+                (int)($data['custom_id'] ?? 0) === 17219 &&
+                (int)($data['total'] ?? 0) === 3000 &&
+                in_array($data['status'] ?? '', ['waiting', 'unpaid'], true) &&
+                !empty($billet['link']) && !empty($billet['barcode']) &&
+                !empty($billet['expire_at']) && !empty($billet['pdf']['charge'])) {
+                if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+                    $expected = $_SESSION['ggnb_recover_17219_token'] ?? '';
+                    if (!$expected || !hash_equals($expected, $_POST['ggnb_recover_17219_token'] ?? '')) {
+                        throw new \RuntimeException('Token de confirmação inválido.');
+                    }
+                    unset($_SESSION['ggnb_recover_17219_token']);
+                    $row = [
+                        'invoice_id' => 17219, 'charge_id' => 1082805668,
+                        'link' => $billet['link'], 'pdf' => $billet['pdf']['charge'],
+                        'expire_at' => $billet['expire_at'], 'total' => $data['total'],
+                        'barcode' => $billet['barcode'], 'status' => $data['status'],
+                        'qrcode' => $billet['pix']['qrcode'] ?? '',
+                        'qrcode_image' => $billet['pix']['qrcode_image'] ?? '',
+                        'api_mode' => 'live'
+                    ];
+                    Capsule::connection()->transaction(function () use ($row) {
+                        Capsule::table('tblinvoices')->where('id', 17219)->lockForUpdate()->first();
+                        if (!Capsule::table('gofasgerencianetboleto')->where('invoice_id', 17219)->exists()) {
+                            if (Capsule::table('gofasgerencianetboleto')->where('charge_id', 1082805668)->exists()) {
+                                throw new \RuntimeException('Cobrança associada a outra fatura. Nenhuma gravação efetuada.');
+                            }
+                            Capsule::table('gofasgerencianetboleto')->insert($row);
+                        }
+                    });
+                    $debug['salvamento'] = 'Concluído. Nenhuma cobrança criada e nenhum email enviado.';
+                    $saved = Capsule::table('gofasgerencianetboleto')->where('invoice_id', 17219)->first();
+                    $debug['registro_local'] = ['charge_id' => $saved->charge_id, 'tem_link' => !empty($saved->link)];
+                } elseif (!$saved) {
+                    $_SESSION['ggnb_recover_17219_token'] = bin2hex(random_bytes(16));
+                    $confirmacao = '<form method="post" action="?ggnb_debug_17219=1"><input type="hidden" name="ggnb_recover_17219_token" value="'.
+                        htmlspecialchars($_SESSION['ggnb_recover_17219_token'], ENT_QUOTES, 'UTF-8').
+                        '"><button type="submit">RECUPERAR BOLETO 1082805668 (sem envio de email)</button></form>';
+                }
+            }
         }
     } catch (GerencianetException $e) {
         $debug['erro_efi_original'] = ['code' => $e->code, 'error' => $e->error, 'errorDescription' => $e->errorDescription];
@@ -78,7 +119,7 @@ if (
         $debug['erro_php'] = $e->getMessage();
     }
     header('Content-Type: text/html; charset=utf-8');
-    die('<h3>DEBUG TEMPORARIO - FATURA 17219 (nenhum envio)</h3><pre>'.htmlspecialchars(print_r($debug, true), ENT_QUOTES, 'UTF-8').'</pre>');
+    die('<h3>DEBUG TEMPORARIO - FATURA 17219 (nenhum envio)</h3><pre>'.htmlspecialchars(print_r($debug, true), ENT_QUOTES, 'UTF-8').'</pre>'.($confirmacao ?? ''));
 }
 
 // Cancel Billet on cancel invoice
@@ -230,8 +271,8 @@ add_hook('EmailPreSend', 1, function($vars) {
 							'total' => $info['total'],
 							'barcode' => $billet['barcode'],
 							'status' => $info['status'],
-							'qrcode' => $info['payment']['pix']['qrcode'] ?? '',
-							'qrcode_image' => $info['payment']['pix']['qrcode_image'] ?? '',
+							'qrcode' => $billet['pix']['qrcode'] ?? $info['payment']['pix']['qrcode'] ?? '',
+							'qrcode_image' => $billet['pix']['qrcode_image'] ?? $info['payment']['pix']['qrcode_image'] ?? '',
 							'api_mode' => $api_mode,
 						];
 						Capsule::connection()->transaction(function () use ($vars, $charge_id, $data) {
