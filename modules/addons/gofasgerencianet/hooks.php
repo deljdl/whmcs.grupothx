@@ -107,7 +107,7 @@ if (
                     $debug['registro_local'] = ['charge_id' => $saved->charge_id, 'tem_link' => !empty($saved->link)];
                 } elseif (!$saved) {
                     $_SESSION['ggnb_recover_17219_token'] = bin2hex(random_bytes(16));
-                    $confirmacao = '<form method="post" action="?ggnb_debug_17219=1"><input type="hidden" name="ggnb_recover_17219_token" value="'.
+                    $confirmacao = '<form method="post" action="?ggnb_debug_17219=1"><input type="hidden" name="token" value="'.htmlspecialchars(generate_token('plain'), ENT_QUOTES, 'UTF-8').'"><input type="hidden" name="ggnb_recover_17219_token" value="'.
                         htmlspecialchars($_SESSION['ggnb_recover_17219_token'], ENT_QUOTES, 'UTF-8').
                         '"><button type="submit">RECUPERAR BOLETO 1082805668 (sem envio de email)</button></form>';
                 }
