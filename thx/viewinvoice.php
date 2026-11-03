@@ -549,7 +549,9 @@ body > table, .grupothx_emails_topo { max-width:680px !important; }
   .thx-painel td { display:block; width:100% !important; }
   .thx-painel img { margin:10px auto; }
   .thx-painel .btn-copy { box-sizing:border-box; width:100% !important; max-width:100% !important; margin:7px 0; }
-  .thx-itens td { display:table-cell; width:auto !important; }
+  .thx-itens table { table-layout:fixed; }
+  .thx-itens td { display:table-cell; width:auto !important; overflow-wrap:break-word; }
+  .thx-itens td:nth-child(2) { width:82px !important; white-space:nowrap; vertical-align:top; }
 }
     </style>
 </head>
