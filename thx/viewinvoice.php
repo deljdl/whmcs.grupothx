@@ -196,12 +196,12 @@ function viewPaymentData($idFaturaParaEnvio, $invoice)
          $abasPagamento = '
          <div class="thx-pagamentos">
              <input type="radio" name="thx-pagamento" id="thx-tab-pix" checked>
-             <label for="thx-tab-pix" class="thx-aba thx-aba-pix"><i class="ri-pix-line"></i> Pagar com PIX</label>';
+             <label for="thx-tab-pix" class="thx-aba thx-aba-pix"><i class="ri-pix-line"></i> PIX</label>';
 
          if ($boleto !== '') {
              $abasPagamento .= '
              <input type="radio" name="thx-pagamento" id="thx-tab-boleto">
-             <label for="thx-tab-boleto" class="thx-aba thx-aba-boleto"><i class="bx bx-barcode-reader"></i> Pagar com boleto</label>';
+             <label for="thx-tab-boleto" class="thx-aba thx-aba-boleto"><i class="bx bx-barcode-reader"></i> Boleto</label>';
          }
 
          $abasPagamento .= '
