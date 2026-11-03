@@ -215,7 +215,7 @@ function ggnb_create_charge( $api, $BODY, $system_url, $debug_or_log) {
 					}
 				// Erros
 				} catch ( GerencianetException $e) {
-					$api_error = $e->code.' - '.$e->errorDescription;
+					$api_error = json_encode(['code' => $e->code, 'error' => $e->error, 'errorDescription' => $e->errorDescription], JSON_UNESCAPED_UNICODE);
 					$error = '<b>1) Não foi possível gerar o boleto, por favor <a href="'.$system_url.'/submitticket.php" target="_blank">entre em contato</a> informando o ID da fatura e o código do erro.<br/>Erro: '.$e->code.' - '.
 					$e->errorDescription.'</b>';
 
@@ -285,7 +285,7 @@ function ggnb_pay_charge( $api, $CHARGEID, $BODY2, $system_url, $debug_or_log) {
 	// Erros
 	} catch (GerencianetException $e) {
 		
-		$api_error = $e->code.' - '.$e->errorDescription;
+		$api_error = json_encode(['code' => $e->code, 'error' => $e->error, 'errorDescription' => $e->errorDescription], JSON_UNESCAPED_UNICODE);
 		$error = '<b><span class="ggnberror">Erro ao gerar o Boleto:<br/>'.$e->errorDescription.'<br/><a href="'.$system_url.'/submitticket.php" target="_blank">Contate o suporte</a> informando o ID da fatura.';
 		sendErrorsToAdmin($error, 'Falha ao gerar o boleto - 1ª tentativa. Linha: '.__LINE__);
 		if ($debug_or_log) {
@@ -360,7 +360,7 @@ function ggnb_pay_charge( $api, $CHARGEID, $BODY2, $system_url, $debug_or_log) {
 		// Erros
 		} catch (GerencianetException $e) {
 
-			$api_error = $e->code.' - '.$e->errorDescription;
+			$api_error = json_encode(['code' => $e->code, 'error' => $e->error, 'errorDescription' => $e->errorDescription], JSON_UNESCAPED_UNICODE);
 		$error = '<b><span class="ggnberror">Erro ao gerar o Boleto:<br/>'.$e->errorDescription.'<br/><a href="'.$system_url.'/submitticket.php" target="_blank">Contate o suporte</a> informando o ID da fatura.';
 			sendErrorsToAdmin($error, 'Falha ao gerar o boleto - 2ª tentativa. Linha: '.__LINE__);
 			if ($debug_or_log) {

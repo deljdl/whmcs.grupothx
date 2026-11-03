@@ -125,13 +125,78 @@ add_hook('EmailPreSend', 1, function($vars) {
 
 
 		if( (float)$invoice['total'] > (float)'0.00' and $invoice['paymentmethod'] === 'gofasgerencianetboleto' ) {
-			// Saved Billets
-			$billet_saved = array();
-			foreach( Capsule::table('gofasgerencianetboleto') -> where('invoice_id', '=', $vars['relid']) -> get(
-				array( 'invoice_id', 'charge_id', 'link', 'pdf', 'expire_at', 'total', 'barcode', 'charge_id', 'status', 'api_mode', 'qrcode', 'qrcode_image' ) ) as $key => $value ) {
-				$billets_for_invoice[$key]					= json_decode(json_encode($value), true);
+			// Recupera o mesmo boleto na Efí se a gravação local falhou.
+			$billet_saved = Capsule::table('gofasgerencianetboleto')->where('invoice_id', $vars['relid'])->first();
+			if (!$billet_saved && $invoice['status'] === 'Unpaid') {
+				$api_mode = !empty($params['sandbox']) ? 'sandbox' : 'live';
+				$transactions = $invoice['transactions']['transaction'] ?? [];
+				if (isset($transactions['transid'])) $transactions = [$transactions];
+				$charge_id = 0;
+				foreach (array_reverse($transactions) as $transaction) {
+					$reference = $transaction['transid'] ?? '';
+					if (strpos($reference, 'ggnb_'.$api_mode.'_') === 0 &&
+						preg_match('/(?:waiting|unpaid|_notification)-(\d+)(?:\[(?:waiting|unpaid)\])?$/', $reference, $match)) {
+						$charge_id = (int)$match[1];
+						break;
+					}
+				}
+				if ($charge_id) {
+					try {
+						$api = new Gerencianet([
+							'client_id' => $params[$api_mode === 'live' ? 'clientid' : 'clientidsandbox'],
+							'client_secret' => $params[$api_mode === 'live' ? 'clientsecret' : 'clientsecretsandbox'],
+							'sandbox' => $api_mode === 'sandbox'
+						]);
+						$charge = $api->detailCharge(['id' => $charge_id], []);
+						$info = $charge['data'] ?? [];
+						$billet = $info['payment']['banking_billet'] ?? [];
+						if ((int)($info['charge_id'] ?? 0) !== $charge_id ||
+							(!empty($info['custom_id']) && (string)$info['custom_id'] !== (string)$vars['relid']) ||
+							!in_array($info['status'] ?? '', ['waiting', 'unpaid'], true) ||
+							empty($billet['link']) || empty($billet['barcode']) || empty($billet['expire_at']) || empty($billet['pdf']['charge'])) {
+							throw new \RuntimeException('A cobrança existente não retornou dados válidos para recuperar o boleto.');
+						}
+						$data = [
+							'invoice_id' => $vars['relid'],
+							'charge_id' => $charge_id,
+							'link' => $billet['link'],
+							'pdf' => $billet['pdf']['charge'],
+							'expire_at' => $billet['expire_at'],
+							'total' => $info['total'],
+							'barcode' => $billet['barcode'],
+							'status' => $info['status'],
+							'qrcode' => $info['payment']['pix']['qrcode'] ?? '',
+							'qrcode_image' => $info['payment']['pix']['qrcode_image'] ?? '',
+							'api_mode' => $api_mode,
+						];
+						Capsule::connection()->transaction(function () use ($vars, $charge_id, $data) {
+							Capsule::table('tblinvoices')->where('id', $vars['relid'])->lockForUpdate()->first();
+							if (!Capsule::table('gofasgerencianetboleto')->where('invoice_id', $vars['relid'])->exists()) {
+								if (Capsule::table('gofasgerencianetboleto')->where('charge_id', $charge_id)->exists()) {
+									throw new \RuntimeException('A cobrança já está associada a outra fatura.');
+								}
+								Capsule::table('gofasgerencianetboleto')->insert($data);
+							}
+						});
+					} catch (GerencianetException $e) {
+						$reason = json_encode(['code' => $e->code, 'error' => $e->error, 'errorDescription' => $e->errorDescription], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+					} catch (\Throwable $e) {
+						$reason = $e->getMessage();
+					}
+					if (!empty($reason)) {
+						$email = [
+							'customsubject' => 'Efí - falha ao recuperar boleto da fatura #'.$vars['relid'],
+							'custommessage' => 'Fatura #'.$vars['relid'].' / Cobrança Efí #'.$charge_id.'<pre>'.htmlspecialchars($reason, ENT_QUOTES, 'UTF-8').'</pre>',
+							'type' => 'system',
+						];
+						if (!empty($params['emailonerror'])) $email['deptid'] = $params['emailonerror'];
+						localAPI('sendadminemail', $email, $params['admin'] ?: null);
+					}
+				}
+				$billet_saved = Capsule::table('gofasgerencianetboleto')->where('invoice_id', $vars['relid'])->first();
 			}
-			$billet_saved = $billets_for_invoice['0']; // Array
+			if (!$billet_saved) return;
+			$billet_saved = (array)$billet_saved;
 
 			logModuleCall('gofasgerencianet', 'EmailPreSend', 'billet_saved', $billet_saved, '');
 
