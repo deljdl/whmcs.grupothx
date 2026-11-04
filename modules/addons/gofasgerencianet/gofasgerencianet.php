@@ -346,7 +346,18 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
                 $customId = (string)($data['custom_id'] ?? ($data['metadata']['custom_id'] ?? ''));
                 $paid = $status === 'paid' && (int)($data['charge_id'] ?? 0) === $chargeId
                     && $customId === (string)$id && $amount === $expected;
-                $statuses[$id] = array('text' => $paid ? 'Pago na Efí' : ($status ?: 'Resposta incompleta'), 'paid' => $paid);
+                $statuses[$id] = array('text' => $paid ? 'Pago na Efí' : ($status ?: 'Resposta incompleta'), 'paid' => $paid,
+                    'debug' => array(
+                        'invoice_id' => $id,
+                        'charge_id_local' => $chargeId,
+                        'charge_id_efi' => $data['charge_id'] ?? null,
+                        'status' => $status,
+                        'custom_id_efi' => $customId,
+                        'total_efi_centavos' => $amount,
+                        'total_fatura_centavos' => $expected,
+                        'paid_at' => $data['paid_at'] ?? ($data['payment']['paid_at'] ?? null),
+                        'validacao_para_baixa' => $paid
+                    ));
                 if ($action === 'pay') {
                     $already = Capsule::table('tblaccounts')->where('invoiceid', $id)->where('amountin', '>', 0)->exists()
                         || Capsule::table('tblaccounts')->where('transid', 'efi-manual-' . $chargeId)->exists();
@@ -439,7 +450,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
         <td>' . htmlspecialchars(date('d/m/Y', strtotime($r->date)), ENT_QUOTES, 'UTF-8') . '</td>
         <td>' . htmlspecialchars(date('d/m/Y', strtotime($r->duedate)), ENT_QUOTES, 'UTF-8') . '</td>
         <td>R$ ' . number_format((float)$r->total, 2, ',', '.') . '</td>
-        <td>' . htmlspecialchars($info['text'], ENT_QUOTES, 'UTF-8') . '</td><td>
+        <td>' . htmlspecialchars($info['text'], ENT_QUOTES, 'UTF-8')
+         . (isset($info['debug']) ? '<details><summary style="cursor:pointer">Debug</summary><pre style="white-space:pre-wrap;font-size:12px">' . htmlspecialchars(json_encode($info['debug'], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), ENT_QUOTES, 'UTF-8') . '</pre></details>' : '') . '</td><td>
         <form method="post" action="' . $url . '">
           <input type="hidden" name="efi_token" value="' . $csrf . '">
           <input type="hidden" name="efi_page" value="' . $page . '">
