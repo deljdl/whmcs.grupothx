@@ -302,7 +302,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
     }
 
     $rows = Capsule::table('tblinvoices')->where('status', 'Unpaid')
-        ->where('paymentmethod', 'gofasgerencianetboleto')->orderBy('duedate', 'asc')->orderBy('id', 'asc')
+        ->where('paymentmethod', 'gofasgerencianetboleto')->orderBy('duedate', 'desc')->orderBy('id', 'desc')
         ->offset(($page - 1) * 20)->limit(21)->get(array('id', 'userid', 'total', 'duedate', 'date'));
     $hasNext = count($rows) > 20;
     $rows = array_slice($rows->all(), 0, 20);
@@ -401,7 +401,28 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
     </style>';
     foreach ($alerts as $alert) echo '<div class="alert alert-info">' . htmlspecialchars($alert, ENT_QUOTES, 'UTF-8') . '</div>';
 
-    echo '<div class="efi-box"><h3>Conferir pagamentos na Efí</h3>
+    echo '<details class="efi-box"><summary style="cursor:pointer;font-size:17px;font-weight:600">Cancelar boletos (ações administrativas)</summary>
+      <p style="margin-top:12px">Escolha uma das opções abaixo. Cada botão atua somente sobre o campo de seu próprio quadro.</p>
+      <div class="efi-cancel-grid">
+      <div class="efi-cancel-item"><strong>Cancelar usando o número da fatura</strong>
+        <p>Localiza a cobrança vinculada à fatura no WHMCS.</p>
+        <form method="post" action="' . $url . '" onsubmit="return confirm(\'Cancelar cobrança associada à fatura informada?\')">
+          <input type="hidden" name="efi_token" value="' . $csrf . '">
+          <label for="efi_cancel_invoice">ID da fatura no WHMCS</label>
+          <input id="efi_cancel_invoice" name="invoice_id" type="number" min="1" required placeholder="Ex.: 17241">
+          <button class="btn btn-danger" type="submit">Cancelar boleto desta fatura</button>
+        </form>
+      </div>
+      <div class="efi-cancel-item"><strong>Cancelar usando o ID da cobrança</strong>
+        <p>Consulta diretamente a cobrança pelo identificador da Efí.</p>
+        <form method="post" action="' . $url . '" onsubmit="return confirm(\'Cancelar a cobrança Efí informada?\')">
+          <input type="hidden" name="efi_token" value="' . $csrf . '">
+          <label for="efi_cancel_charge">ID da cobrança na Efí</label>
+          <input id="efi_cancel_charge" name="trans_id" type="number" min="1" required placeholder="Ex.: 1080498367">
+          <button class="btn btn-danger" type="submit">Cancelar esta cobrança Efí</button>
+        </form>
+      </div></div></details>';
+    echo '<details class="efi-box"><summary style="cursor:pointer;font-size:17px;font-weight:600">Conferir pagamentos na Efí</summary>
       <p>Faturas não pagas no WHMCS. A consulta não faz baixas. Consulte e confirme individualmente cada pagamento.</p>
       <form method="post" action="' . $url . '">
         <input type="hidden" name="efi_token" value="' . $csrf . '">
@@ -440,28 +461,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
     echo '</tbody></table></div><div style="margin-top:12px">';
     if ($page > 1) echo '<a class="btn btn-default" href="' . $url . '&efi_page=' . ($page - 1) . '">Anterior</a> ';
     if ($hasNext) echo '<a class="btn btn-default" href="' . $url . '&efi_page=' . ($page + 1) . '">Próxima</a>';
-    echo '</div></div>';
+    echo '</div></details>';
 
-    echo '<details class="efi-box"><summary style="cursor:pointer;font-size:17px;font-weight:600">Cancelar boletos (ações administrativas)</summary>
-      <p style="margin-top:12px">Escolha uma das opções abaixo. Cada botão atua somente sobre o campo de seu próprio quadro.</p>
-      <div class="efi-cancel-grid">
-      <div class="efi-cancel-item"><strong>Cancelar usando o número da fatura</strong>
-        <p>Localiza a cobrança vinculada à fatura no WHMCS.</p>
-        <form method="post" action="' . $url . '" onsubmit="return confirm(\'Cancelar cobrança associada à fatura informada?\')">
-          <input type="hidden" name="efi_token" value="' . $csrf . '">
-          <label for="efi_cancel_invoice">ID da fatura no WHMCS</label>
-          <input id="efi_cancel_invoice" name="invoice_id" type="number" min="1" required placeholder="Ex.: 17241">
-          <button class="btn btn-danger" type="submit">Cancelar boleto desta fatura</button>
-        </form>
-      </div>
-      <div class="efi-cancel-item"><strong>Cancelar usando o ID da cobrança</strong>
-        <p>Consulta diretamente a cobrança pelo identificador da Efí.</p>
-        <form method="post" action="' . $url . '" onsubmit="return confirm(\'Cancelar a cobrança Efí informada?\')">
-          <input type="hidden" name="efi_token" value="' . $csrf . '">
-          <label for="efi_cancel_charge">ID da cobrança na Efí</label>
-          <input id="efi_cancel_charge" name="trans_id" type="number" min="1" required placeholder="Ex.: 1080498367">
-          <button class="btn btn-danger" type="submit">Cancelar esta cobrança Efí</button>
-        </form>
-      </div></div></details>';
     echo '<div style="background:#f4f6f9;padding:10px 15px">Versão ' . htmlspecialchars((string)$version, ENT_QUOTES, 'UTF-8') . ' | Gofas.net</div>';
 }
