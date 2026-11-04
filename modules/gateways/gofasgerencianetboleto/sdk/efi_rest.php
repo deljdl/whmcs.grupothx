@@ -49,6 +49,7 @@ namespace Gerencianet {
    } return $r;
   }
   public function detailCharge($p,$b=array()){ $id=isset($p['id'])?(int)$p['id']:0; if(!$id)throw new GerencianetException(array('error'=>'invalid_charge','error_description'=>'ID da cobrança inválido.')); return $this->request('GET','/v1/charge/'.$id); }
+  public function updateChargeMetadata($p,$b=array()){ $id=isset($p['id'])?(int)$p['id']:0; if(!$id)throw new GerencianetException(array('error'=>'invalid_charge','error_description'=>'ID da cobrança inválido.')); return $this->request('PUT','/v1/charge/'.$id.'/metadata',$b); }
   public function updateBillet($p,$b=array()){ $id=isset($p['id'])?(int)$p['id']:0; if(!$id)throw new GerencianetException(array('error'=>'invalid_charge','error_description'=>'ID da cobrança inválido.')); return $this->request('PUT','/v1/charge/'.$id.'/billet',$b); }
   public function cancelCharge($p,$b=array()){ $id=isset($p['id'])?(int)$p['id']:0; if(!$id)throw new GerencianetException(array('error'=>'invalid_charge','error_description'=>'ID da cobrança inválido.')); return $this->request('PUT','/v1/charge/'.$id.'/cancel',new \stdClass()); }
   public function getNotification($p,$b=array()){ $t=isset($p['token'])?trim($p['token']):''; if($t==='')throw new GerencianetException(array('error'=>'invalid_notification','error_description'=>'Token de notificação ausente.')); return $this->request('GET','/v1/notification/'.rawurlencode($t)); }
