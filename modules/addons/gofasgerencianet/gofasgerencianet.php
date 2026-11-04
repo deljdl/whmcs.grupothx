@@ -121,7 +121,11 @@ function gofasgerencianet_output($vars) {
 	}
 
 	
-if ( $_POST['invoice_id'] || $_POST['trans_id'] ) {
+if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']) || isset($_POST['trans_id']))) {
+    if (empty($_SESSION['efi_conferencia_token']) || !hash_equals($_SESSION['efi_conferencia_token'], (string)($_POST['efi_token'] ?? ''))) {
+        echo '<div class="alert alert-danger">Sessão inválida. Recarregue a página.</div>';
+        return;
+    }
 		
 	// Verifica transações associadas à fatura
 	if ( $_POST['invoice_id'] ) {
@@ -138,19 +142,24 @@ if ( $_POST['invoice_id'] || $_POST['trans_id'] ) {
 		if($transIDendA) {
 			$transIDend					= $transIDendA['transaction'];
 		}
-		if ($transIDend) {
-			$transIDp					= end($transIDend); // Pula para o último resultado do array
-			$transID					= preg_replace("/[^0-9]/", "", $transIDp['transid']); // Captura ID da Última transação
-			$charge 					= $transID;
-
-		} else {
-			$transID					= false;
-			$error					.= 'Nenhuma transação que possa ser cancelada foi encontrada para a fatura #'.$invoice_id .' ou essa fatura não existe.';
-		}
+        $charge = 0;
+        if ($transIDend) {
+            foreach (array_reverse($transIDend) as $transaction) {
+                if (preg_match('/^ggnb_' . preg_quote($api_mode, '/') . '_.*?(?:waiting|unpaid|notification)-([0-9]+)/', (string)($transaction['transid'] ?? ''), $match)) {
+                    $charge = (int)$match[1];
+                    break;
+                }
+            }
+        }
+        $transID = $charge;
+        if (!$charge) {
+            $error .= 'Nenhuma cobrança Efí válida localizada para esta fatura.';
+        }
 
 	} elseif ( $_POST['trans_id'] ) {
 		$trans_id = $_POST['trans_id'];
-		$charge = $trans_id;
+        $charge = ctype_digit((string)$trans_id) ? (int)$trans_id : 0;
+        if (!$charge) $error .= 'ID da cobrança inválido.';
 	}
 	
 	// Verifica se a fatura possui um boleto associado
@@ -203,7 +212,7 @@ if ( $_POST['invoice_id'] || $_POST['trans_id'] ) {
 	}
 	
 	// Cancela
-	if ( !$error and $chargeExistStatus !== 'paid' and $chargeExistStatus !== 'canceled' ) {
+	if ( !$error and $charge && isset($chargeExistStatus) && $chargeExistStatus !== 'paid' && $chargeExistStatus !== 'canceled' ) {
 		try {
                 $api = new Gerencianet($options);
                 $cancelCharge = $api->cancelCharge(array('id' => (int)$charge ), array());
@@ -411,10 +420,12 @@ if ( $_POST['invoice_id'] || $_POST['trans_id'] ) {
     echo '<div class="efi-box"><h3>Cancelar boletos</h3>
       <p>Cancelamento manual de cobranças na Efí. Confira o ID antes de confirmar.</p>
       <form method="post" action="' . $url . '" onsubmit="return confirm(\'Cancelar cobrança associada à fatura?\')">
+        <input type="hidden" name="efi_token" value="' . $csrf . '">
         <div class="efi-line"><div><label>ID da fatura</label><input name="invoice_id" type="number" min="1" required></div>
         <button class="btn btn-danger" type="submit">Cancelar pela fatura</button></div>
       </form>
       <form method="post" action="' . $url . '" onsubmit="return confirm(\'Cancelar esta cobrança na Efí?\')">
+        <input type="hidden" name="efi_token" value="' . $csrf . '">
         <div class="efi-line"><div><label>ID da cobrança Efí</label><input name="trans_id" type="number" min="1" required></div>
         <button class="btn btn-danger" type="submit">Cancelar pela cobrança</button></div>
       </form></div>';
