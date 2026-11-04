@@ -82,28 +82,30 @@ function gofasgerencianetboleto_link( $params ) {
 				$error = $chargeExist_['error'];
 			}
 			///
-			if (!$error and $chargeExistID === $trans_id and $chargeExistStatus !== 'canceled' and $chargeExistDuedate >= date('Y-m-d') and $chargeExistTotal === $invoice_amount) {
+			if (!$error and $chargeExistID === $trans_id and $chargeExistStatus !== 'canceled' and $chargeExistTotal === $invoice_amount) {
 				$link		= $chargeExist['data']['payment']['banking_billet']['link'];
 				$expire_at	= $chargeExistDuedate;
 				$barcode	= $chargeExist['data']['payment']['banking_billet']['barcode'];
 			}
 			///
-			elseif (!$error and  ($chargeExistID === $trans_id and $chargeExistStatus !== 'canceled' and $chargeExistDuedate < date('Y-m-d')) and !$configurations and !$cancelBillet ) {
-				// edita transação gerada anteriormente
-				$updateBillet = ggnb_update_billet( $api, $chargeExistID, $billet_duedate, $system_url, $debug_or_log );
-				// segunda via do boleto com multa e juros
-				if ( $updateBillet['result'] === 'sucess' ) {	
-					$link		= $chargeExist['data']['payment']['banking_billet']['link'];
-					$expire_at	= $billet_duedate;
-					$barcode	= $chargeExist['data']['payment']['banking_billet']['barcode'];
-				}
-				else {
-					$error = $updateBillet['error'];
-				}
-				if($debug_or_log){
-					$log_result['updateBillet']	= $updateBillet;
-				}
-			}
+// Atualização automática de vencimento desativada: manter o boleto original, inclusive vencido.
+// Evita requisições de atualização à Efí e alertas de erro decorrentes dessa operação.
+			// elseif (!$error and  ($chargeExistID === $trans_id and $chargeExistStatus !== 'canceled' and $chargeExistDuedate < date('Y-m-d')) and !$configurations and !$cancelBillet ) {
+				// // edita transação gerada anteriormente
+				// $updateBillet = ggnb_update_billet( $api, $chargeExistID, $billet_duedate, $system_url, $debug_or_log );
+				// // segunda via do boleto com multa e juros
+				// if ( $updateBillet['result'] === 'sucess' ) {	
+					// $link		= $chargeExist['data']['payment']['banking_billet']['link'];
+					// $expire_at	= $billet_duedate;
+					// $barcode	= $chargeExist['data']['payment']['banking_billet']['barcode'];
+				// }
+				// else {
+					// $error = $updateBillet['error'];
+				// }
+				// if($debug_or_log){
+					// $log_result['updateBillet']	= $updateBillet;
+				// }
+			// }
 			///
 			elseif (!$error and ($chargeExistID === $trans_id and $chargeExistStatus === 'canceled' and $chargeExistDuedate >= date('Y-m-d')) ) {
 				$charge_id_ = ggnb_create_charge( $api, $body, $system_url, $debug_or_log); // body
