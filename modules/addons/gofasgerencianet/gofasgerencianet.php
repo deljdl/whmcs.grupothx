@@ -292,6 +292,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
     $searchValue = $searchId ? (string)$searchId : '';
     $searchHidden = '<input type="hidden" name="efi_search" value="' . $searchValue . '">';
     $url = htmlspecialchars($ggnbwhmcsadminurl . 'addonmodules.php?module=gofasgerencianet', ENT_QUOTES, 'UTF-8');
+    // Mesma origem de callback utilizada pelo gateway na criação de cobranças.
+    $expectedCallback = rtrim((string)$ggnbwhmcsurl, '/') . '/modules/gateways/gofasgerencianetboleto/includes/callback.php';
+    $callbackConfigured = filter_var($expectedCallback, FILTER_VALIDATE_URL)
+        && parse_url($expectedCallback, PHP_URL_SCHEME) === 'https';
     $statuses = array();
     $alerts = array();
     if ($action && !$valid) {
@@ -317,7 +321,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
         }
     }
 
-    if (in_array($action, array('check', 'check_all'), true)) {
+    if (in_array($action, array('check', 'check_all', 'fix_callback'), true)) {
         $requested = (int)($_POST['efi_invoice'] ?? 0);
         $targets = $action === 'check_all' ? $ids : (in_array($requested, $ids, true) ? array($requested) : array());
         if (!$targets) $alerts[] = 'Fatura não encontrada na página atual.';
@@ -349,6 +353,28 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
                 $amount = (int)($data['total'] ?? -1);
                 $expected = (int)round((float)$invoice->total * 100);
                 $customId = (string)($data['custom_id'] ?? ($data['metadata']['custom_id'] ?? ''));
+                $currentCallback = (string)($data['notification_url'] ?? ($data['metadata']['notification_url'] ?? ''));
+                $identifiersMatch = (int)($data['charge_id'] ?? 0) === $chargeId
+                    && $customId === (string)$id && $amount === $expected;
+                $callbackMismatch = $currentCallback !== '' && $currentCallback !== $expectedCallback;
+                if ($action === 'fix_callback') {
+                    if (!$callbackConfigured || !$identifiersMatch || !$callbackMismatch) {
+                        $alerts[] = 'Fatura #' . $id . ': correção bloqueada; confira a URL e os identificadores da cobrança.';
+                    } else {
+                        $api->updateChargeMetadata(array('id' => $chargeId), array(
+                            'notification_url' => $expectedCallback,
+                            'custom_id' => $customId
+                        ));
+                        // A Efí retorna somente o código de sucesso; conferir por nova consulta.
+                        $response = $api->detailCharge(array('id' => $chargeId), array());
+                        $data = $response['data'] ?? array();
+                        $currentCallback = (string)($data['notification_url'] ?? ($data['metadata']['notification_url'] ?? ''));
+                        $callbackMismatch = $currentCallback !== '' && $currentCallback !== $expectedCallback;
+                        $alerts[] = 'Fatura #' . $id . ': ' . ($currentCallback === $expectedCallback
+                            ? 'URL de callback corrigida e confirmada na Efí.'
+                            : 'A Efí recebeu a atualização, mas a URL ainda não foi confirmada. Consulte novamente.');
+                    }
+                }
                 $details = array(
                     'fatura_whmcs' => $id,
                     'cliente_whmcs' => $invoice->userid,
@@ -361,6 +387,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
                     'charge_id_confere' => (int)($data['charge_id'] ?? 0) === $chargeId,
                     'fatura_id_confere' => $customId === (string)$id,
                     'valor_confere' => $amount === $expected,
+                    'url_callback_efi' => $currentCallback !== '' ? $currentCallback : 'Não informada pela Efí',
+                    'url_callback_esperada' => $expectedCallback,
+                    'url_callback_confere' => $currentCallback !== '' ? !$callbackMismatch : null,
                     'retorno_completo_efi' => $response
                 );
                 $sanitize = function (&$values) use (&$sanitize) {
@@ -375,8 +404,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
                     unset($value);
                 };
                 $sanitize($details);
-                $statuses[$id] = array('text' => $status === 'paid' ? 'Pago na Efí' : ($status ?: 'Resposta incompleta'),
-                    'debug' => $details);
+                $statuses[$id] = array(
+                    'text' => $status === 'paid' ? 'Pago na Efí' : ($status ?: 'Resposta incompleta'),
+                    'callback_text' => $currentCallback === '' ? 'URL de callback não informada pela Efí'
+                        : ($callbackMismatch ? 'URL de callback divergente' : 'URL de callback correta'),
+                    'can_fix_callback' => $callbackConfigured && $callbackMismatch && $identifiersMatch,
+                    'debug' => $details
+                );
             } catch (\Throwable $e) {
                 $detail = $e->getMessage();
                 if ($e instanceof GerencianetException && !empty($e->errorDescription)) {
@@ -460,6 +494,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
         <td>' . htmlspecialchars(date('d/m/Y', strtotime($r->duedate)), ENT_QUOTES, 'UTF-8') . '</td>
         <td>R$ ' . number_format((float)$r->total, 2, ',', '.') . '</td>
         <td>' . htmlspecialchars($info['text'], ENT_QUOTES, 'UTF-8')
+         . (!empty($info['callback_text']) ? '<div style="margin-top:4px;' . (!empty($info['can_fix_callback']) ? 'color:#b42318;font-weight:600' : '') . '">' . htmlspecialchars($info['callback_text'], ENT_QUOTES, 'UTF-8') . '</div>' : '')
          . (isset($info['debug']) ? '<details><summary style="cursor:pointer">Detalhes da Efí</summary><pre style="white-space:pre-wrap;font-size:12px;max-width:700px;overflow:auto">' . htmlspecialchars(json_encode($info['debug'], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), ENT_QUOTES, 'UTF-8') . '</pre></details>' : '') . '</td><td>
         <form method="post" action="' . $url . '">
           <input type="hidden" name="efi_token" value="' . $csrf . '">
@@ -467,6 +502,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
           ' . $searchHidden . '
           <input type="hidden" name="efi_invoice" value="' . $id . '">
           <button class="btn btn-default btn-sm" name="efi_action" value="check">Consultar</button>
+        </form>';
+        if (!empty($info['can_fix_callback'])) echo ' <form method="post" action="' . $url . '" onsubmit="return confirm(\'Corrigir a URL de callback desta cobrança na Efí?\')">
+          <input type="hidden" name="efi_token" value="' . $csrf . '">
+          <input type="hidden" name="efi_page" value="' . $page . '">
+          ' . $searchHidden . '
+          <input type="hidden" name="efi_invoice" value="' . $id . '">
+          <button class="btn btn-warning btn-sm" name="efi_action" value="fix_callback">Corrigir URL</button>
         </form>';
         echo '</td></tr>';
     }
@@ -487,6 +529,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
         if (!button || !panel.contains(button)) return;
         var form = button.form;
         if (!form || !window.fetch || !window.DOMParser) return;
+        if (button.value === 'fix_callback' && !confirm('Corrigir a URL de callback desta cobrança na Efí?')) {
+            event.preventDefault();
+            return;
+        }
         event.preventDefault();
         var data = new FormData(form);
         data.set(button.name, button.value);
