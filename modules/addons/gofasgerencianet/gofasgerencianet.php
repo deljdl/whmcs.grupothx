@@ -302,7 +302,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
     }
 
     $rows = Capsule::table('tblinvoices')->where('status', 'Unpaid')
-        ->where('paymentmethod', 'gofasgerencianetboleto')->orderBy('duedate', 'desc')->orderBy('id', 'desc')
+        ->where('paymentmethod', 'gofasgerencianetboleto')->orderBy('date', 'desc')->orderBy('id', 'desc')
         ->offset(($page - 1) * 20)->limit(21)->get(array('id', 'userid', 'total', 'duedate', 'date'));
     $hasNext = count($rows) > 20;
     $rows = array_slice($rows->all(), 0, 20);
@@ -399,7 +399,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
         .efi-box td,.efi-box th{padding:10px;border-bottom:1px solid #e4e9f0;text-align:left}
         .efi-box th{background:#f5f7fa}
     </style>';
-    foreach ($alerts as $alert) echo '<div class="alert alert-info">' . htmlspecialchars($alert, ENT_QUOTES, 'UTF-8') . '</div>';
+    // Resultados de consultas são exibidos dentro da seção de pagamentos.
 
     echo '<details class="efi-box"><summary style="cursor:pointer;font-size:17px;font-weight:600">Cancelar boletos (ações administrativas)</summary>
       <p style="margin-top:12px">Escolha uma das opções abaixo. Cada botão atua somente sobre o campo de seu próprio quadro.</p>
@@ -422,14 +422,16 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
           <button class="btn btn-danger" type="submit">Cancelar esta cobrança Efí</button>
         </form>
       </div></div></details>';
-    echo '<details class="efi-box"><summary style="cursor:pointer;font-size:17px;font-weight:600">Conferir pagamentos na Efí</summary>
-      <p>Faturas não pagas no WHMCS. A consulta não faz baixas. Consulte e confirme individualmente cada pagamento.</p>
+    echo '<details id="efi-check-panel" class="efi-box"><summary style="cursor:pointer;font-size:17px;font-weight:600">Conferir pagamentos na Efí</summary>
+      <div id="efi-check-body"><p>Faturas não pagas no WHMCS. A consulta não faz baixas. Consulte e confirme individualmente cada pagamento.</p>
       <form method="post" action="' . $url . '">
         <input type="hidden" name="efi_token" value="' . $csrf . '">
         <input type="hidden" name="efi_page" value="' . $page . '">
         <button class="btn btn-primary" name="efi_action" value="check_all">Consultar todas desta página</button>
       </form>
-      <div style="overflow-x:auto;margin-top:15px"><table><thead><tr>
+      <div id="efi-check-feedback">'; 
+    foreach ($alerts as $alert) echo '<div class="alert alert-info">' . htmlspecialchars($alert, ENT_QUOTES, 'UTF-8') . '</div>';
+    echo '</div><div style="overflow-x:auto;margin-top:15px"><table><thead><tr>
         <th>Fatura</th><th>Cliente</th><th>Emissão</th><th>Vencimento</th><th>Valor</th><th>Efí</th><th>Ações</th>
       </tr></thead><tbody>';
     foreach ($rows as $r) {
@@ -461,7 +463,51 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
     echo '</tbody></table></div><div style="margin-top:12px">';
     if ($page > 1) echo '<a class="btn btn-default" href="' . $url . '&efi_page=' . ($page - 1) . '">Anterior</a> ';
     if ($hasNext) echo '<a class="btn btn-default" href="' . $url . '&efi_page=' . ($page + 1) . '">Próxima</a>';
-    echo '</div></details>';
+    echo '</div></div></details>';
+
+    // AJAX sem alterar endpoints: reaproveita a saída administrativa do addon.
+    echo <<<'HTML'
+<script>
+(function () {
+    var panel = document.getElementById('efi-check-panel');
+    if (!panel) return;
+    panel.addEventListener('click', function (event) {
+        var button = event.target.closest('button[name="efi_action"]');
+        if (!button || !panel.contains(button)) return;
+        var form = button.form;
+        if (!form || !window.fetch || !window.DOMParser) return;
+        if (button.value === 'pay' && !confirm('Registrar baixa desta fatura no WHMCS?')) {
+            event.preventDefault();
+            return;
+        }
+        event.preventDefault();
+        var data = new FormData(form);
+        data.set(button.name, button.value);
+        var body = document.getElementById('efi-check-body');
+        var feedback = document.getElementById('efi-check-feedback');
+        var buttons = panel.querySelectorAll('button[name="efi_action"]');
+        buttons.forEach(function (b) { b.disabled = true; });
+        if (feedback) feedback.textContent = 'Consultando Efí...';
+        fetch(form.action, { method: 'POST', body: data, credentials: 'same-origin' })
+            .then(function (response) {
+                if (!response.ok) throw new Error('HTTP ' + response.status);
+                return response.text();
+            })
+            .then(function (html) {
+                var doc = new DOMParser().parseFromString(html, 'text/html');
+                var updated = doc.getElementById('efi-check-body');
+                if (!updated) throw new Error('O servidor não retornou a listagem do módulo.');
+                body.innerHTML = updated.innerHTML;
+                panel.open = true;
+            })
+            .catch(function (error) {
+                buttons.forEach(function (b) { b.disabled = false; });
+                if (feedback) feedback.textContent = 'Falha na requisição: ' + error.message;
+            });
+    });
+})();
+</script>
+HTML;
 
     echo '<div style="background:#f4f6f9;padding:10px 15px">Versão ' . htmlspecialchars((string)$version, ENT_QUOTES, 'UTF-8') . ' | Gofas.net</div>';
 }
