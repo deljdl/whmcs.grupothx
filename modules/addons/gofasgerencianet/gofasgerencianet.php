@@ -11,16 +11,14 @@
 if (!defined("WHMCS")) die("This file cannot be accessed directly");
 use WHMCS\Database\Capsule;
 require_once __DIR__ . '/../../gateways/gofasgerencianetboleto/sdk/efi_rest.php';
+require_once ROOTDIR . '/includes/gatewayfunctions.php';
 use Gerencianet\Exception\GerencianetException;
 use Gerencianet\Gerencianet;
 
 function gofasgerencianet_config() {
 	
 	// Get Module Params
-	foreach( Capsule::table('tblpaymentgateways') -> where('gateway', '=', 'gofasgerencianetboleto') -> get( array( 'setting', 'value') ) as $settings ) {
-		$setting_key				= $settings->setting;
-		$params["$setting_key"]		= $settings->value;
-	}
+	$params = getGatewayVariables('gofasgerencianetboleto');
 	// Parâmetros do Módulo
 	$sandbox = $params['sandbox'];
 
@@ -83,10 +81,7 @@ function gofasgerencianet_config() {
 function gofasgerencianet_output($vars) {
  
 	// Get Module Params
-	foreach( Capsule::table('tblpaymentgateways') -> where('gateway', '=', 'gofasgerencianetboleto') -> get( array( 'setting', 'value') ) as $settings ) {
-		$setting_key				= $settings->setting;
-		$params["$setting_key"]		= $settings->value;
-	}
+	$params = getGatewayVariables('gofasgerencianetboleto');
 	// Parâmetros do Módulo
 	$sandbox = $params['sandbox'];
 	$version	= $vars['version'];
