@@ -288,6 +288,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
     $valid = $post && hash_equals($_SESSION['efi_conferencia_token'], (string)($_POST['efi_token'] ?? ''));
     $action = (string)($_POST['efi_action'] ?? '');
     $page = max(1, (int)($_REQUEST['efi_page'] ?? 1));
+    $searchId = max(0, (int)($_REQUEST['efi_search'] ?? 0));
+    $searchValue = $searchId ? (string)$searchId : '';
+    $searchHidden = '<input type="hidden" name="efi_search" value="' . $searchValue . '">';
     $url = htmlspecialchars($ggnbwhmcsadminurl . 'addonmodules.php?module=gofasgerencianet', ENT_QUOTES, 'UTF-8');
     $statuses = array();
     $alerts = array();
@@ -296,10 +299,12 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
         $action = '';
     }
 
-    $rows = Capsule::table('tblinvoices')->where('status', 'Unpaid')
-        ->where('paymentmethod', 'gofasgerencianetboleto')->orderBy('date', 'desc')->orderBy('id', 'desc')
-        ->offset(($page - 1) * 20)->limit(21)->get(array('id', 'userid', 'total', 'duedate', 'date'));
-    $hasNext = count($rows) > 20;
+    $query = Capsule::table('tblinvoices')->where('status', 'Unpaid')
+        ->where('paymentmethod', 'gofasgerencianetboleto');
+    if ($searchId) $query->where('id', $searchId);
+    $rows = $query->orderBy('date', 'desc')->orderBy('id', 'desc')
+        ->offset($searchId ? 0 : ($page - 1) * 20)->limit($searchId ? 1 : 21)->get(array('id', 'userid', 'total', 'duedate', 'date'));
+    $hasNext = !$searchId && count($rows) > 20;
     $rows = array_slice($rows->all(), 0, 20);
     $ids = array_map(function ($r) { return (int)$r->id; }, $rows);
     $clientNames = array();
@@ -428,9 +433,17 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
           <button class="btn btn-danger" type="submit">Cancelar esta cobrança Efí</button>
         </form>
       </div></div></details>';
-    echo '<details id="efi-check-panel" class="efi-box"><summary style="cursor:pointer;font-size:17px;font-weight:600">Conferir pagamentos na Efí</summary>
+    echo '<details id="efi-check-panel" class="efi-box"' . ((isset($_GET['efi_page']) || isset($_GET['efi_search'])) ? ' open' : '') . '><summary style="cursor:pointer;font-size:17px;font-weight:600">Conferir pagamentos na Efí</summary>
       <div id="efi-check-body"><p>Faturas não pagas no WHMCS. A consulta não faz baixas. Consulte e confirme individualmente cada pagamento.</p>
+      <form method="get" action="' . htmlspecialchars($ggnbwhmcsadminurl . 'addonmodules.php', ENT_QUOTES, 'UTF-8') . '">
+        <input type="hidden" name="module" value="gofasgerencianet">
+        <label for="efi_search">Buscar fatura pelo ID</label>
+        <input id="efi_search" name="efi_search" type="number" min="1" placeholder="Ex.: 17241" value="' . $searchValue . '">
+        <button class="btn btn-default" type="submit">Buscar</button>
+        ' . ($searchId ? '<a class="btn btn-default" href="' . $url . '&efi_page=1">Limpar</a>' : '') . '
+      </form>
       <form method="post" action="' . $url . '">
+        ' . $searchHidden . '
         <input type="hidden" name="efi_token" value="' . $csrf . '">
         <input type="hidden" name="efi_page" value="' . $page . '">
         <button class="btn btn-primary" name="efi_action" value="check_all">Consultar todas desta página</button>
@@ -455,12 +468,14 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
         <form method="post" action="' . $url . '">
           <input type="hidden" name="efi_token" value="' . $csrf . '">
           <input type="hidden" name="efi_page" value="' . $page . '">
+          ' . $searchHidden . '
           <input type="hidden" name="efi_invoice" value="' . $id . '">
           <button class="btn btn-default btn-sm" name="efi_action" value="check">Consultar</button>
         </form>';
         if ($info['paid']) echo ' <form method="post" action="' . $url . '" onsubmit="return confirm(\'Registrar pagamento da fatura #' . $id . ' no WHMCS?\')">
           <input type="hidden" name="efi_token" value="' . $csrf . '">
           <input type="hidden" name="efi_page" value="' . $page . '">
+          ' . $searchHidden . '
           <input type="hidden" name="efi_invoice" value="' . $id . '">
           <button class="btn btn-success btn-sm" name="efi_action" value="pay">Dar baixa</button>
         </form>';
@@ -468,7 +483,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
     }
     if (!$rows) echo '<tr><td colspan="7">Nenhuma fatura pendente nesta página.</td></tr>';
     echo '</tbody></table></div><div style="margin-top:12px">';
-    if ($page > 1) echo '<a class="btn btn-default" href="' . $url . '&efi_page=' . ($page - 1) . '">Anterior</a> ';
+    if (!$searchId && $page > 1) echo '<a class="btn btn-default" href="' . $url . '&efi_page=' . ($page - 1) . '">Anterior</a> ';
     if ($hasNext) echo '<a class="btn btn-default" href="' . $url . '&efi_page=' . ($page + 1) . '">Próxima</a>';
     echo '</div></div></details>';
 
