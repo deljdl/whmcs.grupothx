@@ -317,7 +317,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
         }
     }
 
-    if (in_array($action, array('check', 'check_all', 'pay'), true)) {
+    if (in_array($action, array('check', 'check_all'), true)) {
         $requested = (int)($_POST['efi_invoice'] ?? 0);
         $targets = $action === 'check_all' ? $ids : (in_array($requested, $ids, true) ? array($requested) : array());
         if (!$targets) $alerts[] = 'Fatura não encontrada na página atual.';
@@ -339,7 +339,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
                 }
             }
             if (!$chargeId) {
-                $statuses[$id] = array('text' => 'Sem cobrança identificada', 'paid' => false);
+                $statuses[$id] = array('text' => 'Sem cobrança identificada');
                 continue;
             }
             try {
@@ -349,36 +349,34 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
                 $amount = (int)($data['total'] ?? -1);
                 $expected = (int)round((float)$invoice->total * 100);
                 $customId = (string)($data['custom_id'] ?? ($data['metadata']['custom_id'] ?? ''));
-                $paid = $status === 'paid' && (int)($data['charge_id'] ?? 0) === $chargeId
-                    && $customId === (string)$id && $amount === $expected;
-                $statuses[$id] = array('text' => $paid ? 'Pago na Efí' : ($status ?: 'Resposta incompleta'), 'paid' => $paid,
-                    'debug' => array(
-                        'invoice_id' => $id,
-                        'charge_id_local' => $chargeId,
-                        'charge_id_efi' => $data['charge_id'] ?? null,
-                        'status' => $status,
-                        'custom_id_efi' => $customId,
-                        'total_efi_centavos' => $amount,
-                        'total_fatura_centavos' => $expected,
-                        'paid_at' => $data['paid_at'] ?? ($data['payment']['paid_at'] ?? null),
-                        'validacao_para_baixa' => $paid
-                    ));
-                if ($action === 'pay') {
-                    $already = Capsule::table('tblaccounts')->where('invoiceid', $id)->where('amountin', '>', 0)->exists()
-                        || Capsule::table('tblaccounts')->where('transid', 'efi-manual-' . $chargeId)->exists();
-                    if (!$paid || $already) {
-                        $alerts[] = 'Fatura #' . $id . ': baixa bloqueada (pagamento não validado ou já registrado).';
-                        continue;
+                $details = array(
+                    'fatura_whmcs' => $id,
+                    'cliente_whmcs' => $invoice->userid,
+                    'charge_id_local' => $chargeId,
+                    'charge_id_efi' => $data['charge_id'] ?? null,
+                    'status_efi' => $status,
+                    'custom_id_efi' => $customId,
+                    'valor_fatura_reais' => (float)$invoice->total,
+                    'valor_cobranca_efi_reais' => $amount >= 0 ? $amount / 100 : null,
+                    'charge_id_confere' => (int)($data['charge_id'] ?? 0) === $chargeId,
+                    'fatura_id_confere' => $customId === (string)$id,
+                    'valor_confere' => $amount === $expected,
+                    'retorno_completo_efi' => $response
+                );
+                $sanitize = function (&$values) use (&$sanitize) {
+                    if (!is_array($values)) return;
+                    foreach ($values as $key => &$value) {
+                        if (preg_match('/token|secret|password|authorization|credential|api_key|client_id/i', (string)$key)) {
+                            $value = '[oculto]';
+                        } elseif (is_array($value)) {
+                            $sanitize($value);
+                        }
                     }
-                    $result = localAPI('AddInvoicePayment', array(
-                        'invoiceid' => $id, 'transid' => 'efi-manual-' . $chargeId,
-                        'gateway' => 'gofasgerencianetboleto', 'date' => date('Y-m-d H:i:s'),
-                        'amount' => $expected / 100, 'noemail' => true
-                    ), $whmcs_admin);
-                    $alerts[] = ($result['result'] ?? '') === 'success'
-                        ? 'Fatura #' . $id . ': baixa registrada.'
-                        : 'Fatura #' . $id . ': erro ao registrar baixa.';
-                }
+                    unset($value);
+                };
+                $sanitize($details);
+                $statuses[$id] = array('text' => $status === 'paid' ? 'Pago na Efí' : ($status ?: 'Resposta incompleta'),
+                    'debug' => $details);
             } catch (\Throwable $e) {
                 $detail = $e->getMessage();
                 if ($e instanceof GerencianetException && !empty($e->errorDescription)) {
@@ -388,7 +386,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
                 }
                 $detail = preg_replace('/(client_secret|client_id|authorization|bearer|token)\s*[:=]\s*[^\s,}]+/i', '$1=[oculto]', $detail);
                 $detail = substr((string)$detail, 0, 500);
-                $statuses[$id] = array('text' => 'Erro: ' . $detail, 'paid' => false);
+                $statuses[$id] = array('text' => 'Erro: ' . $detail);
                 $alerts[] = 'Fatura #' . $id . ': ' . $detail;
             }
         }
@@ -455,29 +453,20 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
       </tr></thead><tbody>';
     foreach ($rows as $r) {
         $id = (int)$r->id;
-        if ($action === 'pay' && $id === (int)($_POST['efi_invoice'] ?? 0)
-            && Capsule::table('tblinvoices')->where('id', $id)->value('status') !== 'Unpaid') continue;
-        $info = $statuses[$id] ?? array('text' => 'Não consultado', 'paid' => false);
+        $info = $statuses[$id] ?? array('text' => 'Não consultado');
         echo '<tr><td><a target="_blank" href="' . htmlspecialchars($ggnbwhmcsadminurl . 'billing/invoice/' . $id, ENT_QUOTES, 'UTF-8') . '">#' . $id . '</a></td>
         <td>' . htmlspecialchars($clientNames[$r->userid] ?? 'Cliente #' . (int)$r->userid, ENT_QUOTES, 'UTF-8') . '</td>
         <td>' . htmlspecialchars(date('d/m/Y', strtotime($r->date)), ENT_QUOTES, 'UTF-8') . '</td>
         <td>' . htmlspecialchars(date('d/m/Y', strtotime($r->duedate)), ENT_QUOTES, 'UTF-8') . '</td>
         <td>R$ ' . number_format((float)$r->total, 2, ',', '.') . '</td>
         <td>' . htmlspecialchars($info['text'], ENT_QUOTES, 'UTF-8')
-         . (isset($info['debug']) ? '<details><summary style="cursor:pointer">Debug</summary><pre style="white-space:pre-wrap;font-size:12px">' . htmlspecialchars(json_encode($info['debug'], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), ENT_QUOTES, 'UTF-8') . '</pre></details>' : '') . '</td><td>
+         . (isset($info['debug']) ? '<details><summary style="cursor:pointer">Detalhes da Efí</summary><pre style="white-space:pre-wrap;font-size:12px;max-width:700px;overflow:auto">' . htmlspecialchars(json_encode($info['debug'], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), ENT_QUOTES, 'UTF-8') . '</pre></details>' : '') . '</td><td>
         <form method="post" action="' . $url . '">
           <input type="hidden" name="efi_token" value="' . $csrf . '">
           <input type="hidden" name="efi_page" value="' . $page . '">
           ' . $searchHidden . '
           <input type="hidden" name="efi_invoice" value="' . $id . '">
           <button class="btn btn-default btn-sm" name="efi_action" value="check">Consultar</button>
-        </form>';
-        if ($info['paid']) echo ' <form method="post" action="' . $url . '" onsubmit="return confirm(\'Registrar pagamento da fatura #' . $id . ' no WHMCS?\')">
-          <input type="hidden" name="efi_token" value="' . $csrf . '">
-          <input type="hidden" name="efi_page" value="' . $page . '">
-          ' . $searchHidden . '
-          <input type="hidden" name="efi_invoice" value="' . $id . '">
-          <button class="btn btn-success btn-sm" name="efi_action" value="pay">Dar baixa</button>
         </form>';
         echo '</td></tr>';
     }
@@ -498,10 +487,6 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
         if (!button || !panel.contains(button)) return;
         var form = button.form;
         if (!form || !window.fetch || !window.DOMParser) return;
-        if (button.value === 'pay' && !confirm('Registrar baixa desta fatura no WHMCS?')) {
-            event.preventDefault();
-            return;
-        }
         event.preventDefault();
         var data = new FormData(form);
         data.set(button.name, button.value);
