@@ -424,6 +424,16 @@ echo '
 #tabelaEmails tbody tr:hover { border-left: solid #2e6da4 5px; border-right: solid #2e6da4 5px; }
 #textoWhatsApp { height: 1px;overflow: hidden; width: 1px; }
 
+@media (max-width: 767px) {
+    #modalEmails #tabelaEmails {
+        display: block;
+        max-width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
 .btnStatusEnvio {
     border: 0;
     cursor: pointer;
