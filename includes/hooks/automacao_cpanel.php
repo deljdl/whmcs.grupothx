@@ -72,6 +72,31 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
 
 
     return '
+    <style>
+    @media (max-width: 767px) {
+        #modalCpanel .modal-dialog,
+        #modalEmails .modal-dialog,
+        #modalDisco .modal-dialog {
+            width: auto;
+            margin: 8px;
+        }
+        #modalCpanel .modal-content,
+        #modalEmails .modal-content,
+        #modalDisco .modal-content {
+            max-height: calc(100vh - 16px);
+            max-height: calc(100dvh - 16px);
+            display: flex;
+            flex-direction: column;
+        }
+        #modalCpanel .modal-body,
+        #modalEmails .modal-body,
+        #modalDisco .modal-body {
+            min-height: 0;
+            overflow: auto;
+        }
+    }
+    </style>
+
     <div class="modal fade" id="modalCpanel">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
