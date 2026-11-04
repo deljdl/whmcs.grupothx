@@ -274,20 +274,149 @@ if ( $_POST['invoice_id'] || $_POST['trans_id'] ) {
 		echo '</pre>';
 	}
 }
-	// Admin form
-	echo '<h3>Cancelar Boletos associados às Faturas</h3>';
-	echo '<p style="margin-bottom:20px;border-bottom: 1px solid #dde9f9; padding-bottom: 10px;">Cancele transações na API Gerenciante através do ID da <b>Fatura</b> ou ID do <b>Boleto / Transação</b>.</p>';
-	echo '	<form style="margin:0px 0px 25px 0px;min-height: 130px;border-bottom: 1px solid #dde9f9;" name="cancel_billet" method="POST" action="'.$ggnbwhmcsadminurl.'addonmodules.php?module=gofasgerencianet" >
-    			<div style="margin-bottom:15px;">
-					<span>Cancelar Transação através do ID da <b>Fatura</b></span>
-					<input type="text" name="invoice_id">
-		    		<input type="submit" value="Cancelar Transação">
-				</div>
-				<div>
-					<span>Cancelar Transação através do ID da <b>Transação</b>
-					<input type="text" name="trans_id">
-		    		<input type="submit" value="Cancelar Transação">
-				</div>
-			</form>';
-	echo '<div style="background: #dde9f9;padding: 5px 15px;">Versão '.$version.' | <a target="_blank" title="↗ Gofas.net" href="https://gofas.net">&copy; 2016 - '.date('Y').' Gofas.net</a><br/></div>';
+
+    // Pagamentos: consulta isolada, sem alterar cobranças na Efí.
+    if (empty($_SESSION['efi_conferencia_token'])) {
+        $_SESSION['efi_conferencia_token'] = bin2hex(random_bytes(24));
+    }
+    $csrf = htmlspecialchars($_SESSION['efi_conferencia_token'], ENT_QUOTES, 'UTF-8');
+    $post = ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST';
+    $valid = $post && hash_equals($_SESSION['efi_conferencia_token'], (string)($_POST['efi_token'] ?? ''));
+    $action = (string)($_POST['efi_action'] ?? '');
+    $page = max(1, (int)($_REQUEST['efi_page'] ?? 1));
+    $url = htmlspecialchars($ggnbwhmcsadminurl . 'addonmodules.php?module=gofasgerencianet', ENT_QUOTES, 'UTF-8');
+    $statuses = array();
+    $alerts = array();
+    if ($action && !$valid) {
+        $alerts[] = 'Sessão expirada. Recarregue a página.';
+        $action = '';
+    }
+
+    $rows = Capsule::table('tblinvoices')->where('status', 'Unpaid')
+        ->where('paymentmethod', 'gofasgerencianetboleto')->orderBy('id', 'desc')
+        ->offset(($page - 1) * 20)->limit(21)->get(array('id', 'total', 'duedate'));
+    $hasNext = count($rows) > 20;
+    $rows = array_slice($rows->all(), 0, 20);
+    $ids = array_map(function ($r) { return (int)$r->id; }, $rows);
+
+    if (in_array($action, array('check', 'check_all', 'pay'), true)) {
+        $requested = (int)($_POST['efi_invoice'] ?? 0);
+        $targets = $action === 'check_all' ? $ids : (in_array($requested, $ids, true) ? array($requested) : array());
+        if (!$targets) $alerts[] = 'Fatura não encontrada na página atual.';
+        foreach ($targets as $id) {
+            $invoice = Capsule::table('tblinvoices')->where('id', $id)
+                ->where('status', 'Unpaid')->where('paymentmethod', 'gofasgerencianetboleto')->first();
+            if (!$invoice) continue;
+            $boleto = Capsule::table('gofasgerencianetboleto')->where('invoice_id', $id)
+                ->where('api_mode', $api_mode)->orderBy('id', 'desc')->first();
+            $chargeId = $boleto ? (int)$boleto->charge_id : 0;
+            if (!$chargeId) {
+                $history = Capsule::table('tblaccounts')->where('invoiceid', $id)
+                    ->orderBy('id', 'desc')->limit(20)->get(array('transid'));
+                foreach ($history as $t) {
+                    if (preg_match('/^ggnb_.*?(?:waiting|unpaid|notification)-([0-9]+)/', (string)$t->transid, $m)) {
+                        $chargeId = (int)$m[1];
+                        break;
+                    }
+                }
+            }
+            if (!$chargeId) {
+                $statuses[$id] = array('text' => 'Sem cobrança identificada', 'paid' => false);
+                continue;
+            }
+            try {
+                $response = $api->detailCharge(array('id' => $chargeId), array());
+                $data = $response['data'] ?? array();
+                $status = (string)($data['status'] ?? '');
+                $amount = (int)($data['total'] ?? -1);
+                $expected = (int)round((float)$invoice->total * 100);
+                $customId = (string)($data['custom_id'] ?? ($data['metadata']['custom_id'] ?? ''));
+                $paid = $status === 'paid' && (int)($data['charge_id'] ?? 0) === $chargeId
+                    && $customId === (string)$id && $amount === $expected;
+                $statuses[$id] = array('text' => $paid ? 'Pago na Efí' : ($status ?: 'Resposta incompleta'), 'paid' => $paid);
+                if ($action === 'pay') {
+                    $already = Capsule::table('tblaccounts')->where('invoiceid', $id)->where('amountin', '>', 0)->exists()
+                        || Capsule::table('tblaccounts')->where('transid', 'efi-manual-' . $chargeId)->exists();
+                    if (!$paid || $already) {
+                        $alerts[] = 'Fatura #' . $id . ': baixa bloqueada (pagamento não validado ou já registrado).';
+                        continue;
+                    }
+                    $result = localAPI('AddInvoicePayment', array(
+                        'invoiceid' => $id, 'transid' => 'efi-manual-' . $chargeId,
+                        'gateway' => 'gofasgerencianetboleto', 'date' => date('Y-m-d H:i:s'),
+                        'amount' => $expected / 100, 'noemail' => true
+                    ), $whmcs_admin);
+                    $alerts[] = ($result['result'] ?? '') === 'success'
+                        ? 'Fatura #' . $id . ': baixa registrada.'
+                        : 'Fatura #' . $id . ': erro ao registrar baixa.';
+                }
+            } catch (\Throwable $e) {
+                $statuses[$id] = array('text' => 'Erro na consulta', 'paid' => false);
+                $alerts[] = 'Fatura #' . $id . ': falha ao consultar Efí.';
+            }
+        }
+    }
+
+    echo '<style>
+        .efi-box{border:1px solid #dfe5ed;border-radius:8px;background:#fff;padding:20px;margin:18px 0}
+        .efi-box h3{margin:0 0 8px}.efi-box p{color:#64748b;margin-bottom:16px}
+        .efi-box .efi-line{display:flex;align-items:end;gap:12px;flex-wrap:wrap;margin:12px 0}
+        .efi-box label{display:block;margin:0 0 5px;font-weight:600}
+        .efi-box input{height:35px;padding:6px 10px;border:1px solid #ccd5e0;border-radius:4px}
+        .efi-box form{display:inline-block;margin:0}
+        .efi-box table{width:100%;border-collapse:collapse}
+        .efi-box td,.efi-box th{padding:10px;border-bottom:1px solid #e4e9f0;text-align:left}
+        .efi-box th{background:#f5f7fa}
+    </style>';
+    foreach ($alerts as $alert) echo '<div class="alert alert-info">' . htmlspecialchars($alert, ENT_QUOTES, 'UTF-8') . '</div>';
+
+    echo '<div class="efi-box"><h3>Conferir pagamentos na Efí</h3>
+      <p>Faturas não pagas no WHMCS. A consulta não faz baixas. Consulte e confirme individualmente cada pagamento.</p>
+      <form method="post" action="' . $url . '">
+        <input type="hidden" name="efi_token" value="' . $csrf . '">
+        <input type="hidden" name="efi_page" value="' . $page . '">
+        <button class="btn btn-primary" name="efi_action" value="check_all">Consultar todas desta página</button>
+      </form>
+      <div style="overflow-x:auto;margin-top:15px"><table><thead><tr>
+        <th>Fatura</th><th>Valor</th><th>Vencimento</th><th>Efí</th><th>Ações</th>
+      </tr></thead><tbody>';
+    foreach ($rows as $r) {
+        $id = (int)$r->id;
+        if ($action === 'pay' && $id === (int)($_POST['efi_invoice'] ?? 0)
+            && Capsule::table('tblinvoices')->where('id', $id)->value('status') !== 'Unpaid') continue;
+        $info = $statuses[$id] ?? array('text' => 'Não consultado', 'paid' => false);
+        echo '<tr><td>#' . $id . '</td><td>R$ ' . number_format((float)$r->total, 2, ',', '.') . '</td>
+        <td>' . htmlspecialchars((string)$r->duedate, ENT_QUOTES, 'UTF-8') . '</td>
+        <td>' . htmlspecialchars($info['text'], ENT_QUOTES, 'UTF-8') . '</td><td>
+        <form method="post" action="' . $url . '">
+          <input type="hidden" name="efi_token" value="' . $csrf . '">
+          <input type="hidden" name="efi_page" value="' . $page . '">
+          <input type="hidden" name="efi_invoice" value="' . $id . '">
+          <button class="btn btn-default btn-sm" name="efi_action" value="check">Consultar</button>
+        </form>';
+        if ($info['paid']) echo ' <form method="post" action="' . $url . '" onsubmit="return confirm(\'Registrar pagamento da fatura #' . $id . ' no WHMCS?\')">
+          <input type="hidden" name="efi_token" value="' . $csrf . '">
+          <input type="hidden" name="efi_page" value="' . $page . '">
+          <input type="hidden" name="efi_invoice" value="' . $id . '">
+          <button class="btn btn-success btn-sm" name="efi_action" value="pay">Dar baixa</button>
+        </form>';
+        echo '</td></tr>';
+    }
+    if (!$rows) echo '<tr><td colspan="5">Nenhuma fatura pendente nesta página.</td></tr>';
+    echo '</tbody></table></div><div style="margin-top:12px">';
+    if ($page > 1) echo '<a class="btn btn-default" href="' . $url . '&efi_page=' . ($page - 1) . '">Anterior</a> ';
+    if ($hasNext) echo '<a class="btn btn-default" href="' . $url . '&efi_page=' . ($page + 1) . '">Próxima</a>';
+    echo '</div></div>';
+
+    echo '<div class="efi-box"><h3>Cancelar boletos</h3>
+      <p>Cancelamento manual de cobranças na Efí. Confira o ID antes de confirmar.</p>
+      <form method="post" action="' . $url . '" onsubmit="return confirm(\'Cancelar cobrança associada à fatura?\')">
+        <div class="efi-line"><div><label>ID da fatura</label><input name="invoice_id" type="number" min="1" required></div>
+        <button class="btn btn-danger" type="submit">Cancelar pela fatura</button></div>
+      </form>
+      <form method="post" action="' . $url . '" onsubmit="return confirm(\'Cancelar esta cobrança na Efí?\')">
+        <div class="efi-line"><div><label>ID da cobrança Efí</label><input name="trans_id" type="number" min="1" required></div>
+        <button class="btn btn-danger" type="submit">Cancelar pela cobrança</button></div>
+      </form></div>';
+    echo '<div style="background:#f4f6f9;padding:10px 15px">Versão ' . htmlspecialchars((string)$version, ENT_QUOTES, 'UTF-8') . ' | Gofas.net</div>';
 }
