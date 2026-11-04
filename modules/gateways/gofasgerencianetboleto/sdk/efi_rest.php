@@ -27,7 +27,7 @@ namespace Gerencianet {
    if($body!==null)curl_setopt($c,CURLOPT_POSTFIELDS,json_encode($body));
    $r=curl_exec($c); $status=(int)curl_getinfo($c,CURLINFO_HTTP_CODE); $responseType=(string)curl_getinfo($c,CURLINFO_CONTENT_TYPE); $ce=curl_error($c); curl_close($c);
    if($r===false)throw new GerencianetException(array('error'=>'connection_error','error_description'=>'Falha de comunicação com a API Efí: '.$ce));
-   $d=json_decode($r,true); if(!is_array($d))throw new GerencianetException(array('error'=>'invalid_response','error_description'=>'A API Efí retornou uma resposta inválida (HTTP '.$status.', Content-Type: '.preg_replace('/[^a-zA-Z0-9;=+\/._ -]/','',substr($responseType,0,100)).').','code'=>$status),$status);
+   $d=json_decode($r,true); if(!is_array($d))throw new GerencianetException(array('error'=>'invalid_response','error_description'=>'A API Efí retornou uma resposta inválida na rota '.$path.' (HTTP '.$status.', Content-Type: '.preg_replace('/[^a-zA-Z0-9;=+\/._ -]/','',substr($responseType,0,100)).').','code'=>$status),$status);
    if($status<200||$status>=300)throw new GerencianetException($d,$status); return $d;
   }
   private function token(){
