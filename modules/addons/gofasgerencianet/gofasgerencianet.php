@@ -566,7 +566,6 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
     function load(form, submitter, link) {
         if (busy) return;
         var action = submitter ? submitter.value : '';
-        if (action === 'fix_callback' && !confirm('Corrigir a URL de callback desta cobrança na Efí?')) return;
         if (action === 'pay' && !confirm('Registrar o pagamento desta fatura no WHMCS?')) return;
 
         var targetId = form && form.elements.efi_invoice ? Number(form.elements.efi_invoice.value) : 0;
