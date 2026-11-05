@@ -292,6 +292,45 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
     $searchValue = $searchId ? (string)$searchId : '';
     $searchHidden = '<input type="hidden" name="efi_search" value="' . $searchValue . '">';
     $url = htmlspecialchars($ggnbwhmcsadminurl . 'addonmodules.php?module=gofasgerencianet', ENT_QUOTES, 'UTF-8');
+    // Diagnóstico somente leitura do reconhecimento de transações pelo gateway.
+    $testInvoiceId = max(0, (int)($_GET['efi_test_invoice'] ?? 0));
+    if ($testInvoiceId) {
+        $testInvoice = localAPI('GetInvoice', array('invoiceid' => $testInvoiceId), $whmcs_admin);
+        $testLines = array('Fatura: #' . $testInvoiceId, 'Modo Efí: ' . $api_mode);
+        if (($testInvoice['result'] ?? '') !== 'success') {
+            $testLines[] = 'Erro ao consultar a fatura: ' . ($testInvoice['message'] ?? 'Resposta inválida do WHMCS');
+        } else {
+            $testLines[] = 'Status WHMCS: ' . ($testInvoice['status'] ?? '');
+            $transactions = $testInvoice['transactions']['transaction'] ?? array();
+            if (isset($transactions['transid'])) $transactions = array($transactions);
+            $testLines[] = 'Transações retornadas por GetInvoice: ' . count($transactions);
+            foreach ($transactions as $transaction) {
+                $testLines[] = ' - ' . ($transaction['transid'] ?? '(sem referência)');
+            }
+            // Reproduz literalmente a seleção da última transação em params/3_invoice.php.
+            $last = $transactions ? end($transactions) : array();
+            $reference = (string)($last['transid'] ?? '');
+            $recognized = strpos($reference, 'ggnb') !== false
+                && (strpos($reference, 'unpaid') !== false || strpos($reference, 'waiting') !== false)
+                && strpos($reference, $api_mode);
+            $chargeId = $recognized ? (int)preg_replace('/[^0-9]/', '', $reference) : 0;
+            $testLines[] = '';
+            $testLines[] = 'Última referência selecionada: ' . ($reference ?: '(nenhuma)');
+            $testLines[] = 'ID reconhecido: ' . ($chargeId ?: 'NENHUM');
+            $testLines[] = 'Próxima etapa prevista: ' . ($chargeId ? 'Consultar cobrança existente na Efí' : 'Criar uma cobrança na Efí');
+            $testLines[] = '';
+            $testLines[] = 'Transações no banco (tblaccounts):';
+            $records = Capsule::table('tblaccounts')->where('invoiceid', $testInvoiceId)
+                ->orderBy('id', 'asc')->get(array('id', 'transid', 'amountin'));
+            foreach ($records as $record) {
+                $testLines[] = $record->id . ' | ' . $record->transid . ' | R$ ' . $record->amountin;
+            }
+        }
+        echo '<div class="alert alert-info" style="margin:15px 0"><strong>Teste isolado (somente leitura)</strong>'
+            . '<pre style="white-space:pre-wrap;margin-top:10px">'
+            . htmlspecialchars(implode("\n", $testLines), ENT_QUOTES, 'UTF-8')
+            . '</pre></div>';
+    }
     // Mesma origem de callback utilizada pelo gateway na criação de cobranças.
     $expectedCallback = rtrim((string)$ggnbwhmcsurl, '/') . '/modules/gateways/gofasgerencianetboleto/includes/callback.php';
     $callbackConfigured = filter_var($expectedCallback, FILTER_VALIDATE_URL)
