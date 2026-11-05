@@ -321,7 +321,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
         }
     }
 
-    if (in_array($action, array('check', 'check_all', 'fix_callback'), true)) {
+    if (in_array($action, array('check', 'check_all', 'fix_callback', 'pay'), true)) {
         $requested = (int)($_POST['efi_invoice'] ?? 0);
         $targets = $action === 'check_all' ? $ids : (in_array($requested, $ids, true) ? array($requested) : array());
         if (!$targets) $alerts[] = 'Fatura não encontrada na página atual.';
@@ -375,6 +375,25 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
                             : 'A Efí recebeu a atualização, mas a URL ainda não foi confirmada. Consulte novamente.');
                     }
                 }
+                // A baixa é permitida somente após nova consulta e validação integral na Efí.
+                $paidVerified = $status === 'paid' && $identifiersMatch;
+                $alreadyPaid = Capsule::table('tblaccounts')->where('invoiceid', $id)->where('amountin', '>', 0)->exists()
+                    || Capsule::table('tblaccounts')->where('transid', 'efi-manual-' . $chargeId)->exists();
+                $paymentDone = false;
+                if ($action === 'pay') {
+                    if (!$paidVerified || $alreadyPaid) {
+                        $alerts[] = 'Fatura #' . $id . ': baixa bloqueada (pagamento não confirmado ou já registrado).';
+                    } else {
+                        $result = localAPI('AddInvoicePayment', array(
+                            'invoiceid' => $id, 'transid' => 'efi-manual-' . $chargeId,
+                            'gateway' => 'gofasgerencianetboleto', 'date' => date('Y-m-d H:i:s'),
+                            'amount' => $expected / 100, 'noemail' => true
+                        ), $whmcs_admin);
+                        $paymentDone = ($result['result'] ?? '') === 'success';
+                        $alerts[] = 'Fatura #' . $id . ': ' . ($paymentDone
+                            ? 'baixa registrada no WHMCS.' : 'não foi possível registrar a baixa: ' . (string)($result['message'] ?? 'erro retornado pelo WHMCS.'));
+                    }
+                }
                 $details = array(
                     'fatura_whmcs' => $id,
                     'cliente_whmcs' => $invoice->userid,
@@ -405,7 +424,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
                 };
                 $sanitize($details);
                 $statuses[$id] = array(
-                    'text' => $status === 'paid' ? 'Pago na Efí' : ($status ?: 'Resposta incompleta'),
+                    'text' => $paymentDone ? 'Baixa registrada no WHMCS' : ($status === 'paid' ? 'Pago na Efí' : ($status ?: 'Resposta incompleta')),
+                    'can_pay' => $paidVerified && !$alreadyPaid && !$paymentDone,
+                    'payment_done' => $paymentDone,
                     'callback_text' => $currentCallback === '' ? 'URL de callback não informada pela Efí'
                         : ($callbackMismatch ? 'URL de callback divergente' : 'URL de callback correta'),
                     'can_fix_callback' => $callbackConfigured && $callbackMismatch && $identifiersMatch,
@@ -466,7 +487,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
         </form>
       </div></div></details>';
     echo '<details id="efi-check-panel" class="efi-box"' . ((isset($_GET['efi_page']) || isset($_GET['efi_search'])) ? ' open' : '') . '><summary style="cursor:pointer;font-size:17px;font-weight:600">Conferir pagamentos na Efí</summary>
-      <div id="efi-check-body"><p>Faturas não pagas no WHMCS. A consulta não faz baixas. Consulte e confirme individualmente cada pagamento.</p>
+      <div id="efi-check-body"><p>Faturas não pagas no WHMCS. Consulte a Efí e confirme individualmente qualquer baixa antes de registrar o pagamento.</p>
       <form method="get" action="' . htmlspecialchars($ggnbwhmcsadminurl . 'addonmodules.php', ENT_QUOTES, 'UTF-8') . '">
         <input type="hidden" name="module" value="gofasgerencianet">
         <label for="efi_search">Buscar fatura pelo ID</label>
@@ -488,7 +509,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
     foreach ($rows as $r) {
         $id = (int)$r->id;
         $info = $statuses[$id] ?? array('text' => 'Não consultado');
-        echo '<tr><td><a target="_blank" href="' . htmlspecialchars($ggnbwhmcsadminurl . 'billing/invoice/' . $id, ENT_QUOTES, 'UTF-8') . '">#' . $id . '</a></td>
+        echo '<tr data-efi-invoice="' . $id . '"><td><a target="_blank" href="' . htmlspecialchars($ggnbwhmcsadminurl . 'billing/invoice/' . $id, ENT_QUOTES, 'UTF-8') . '">#' . $id . '</a></td>
         <td>' . htmlspecialchars($clientNames[$r->userid] ?? 'Cliente #' . (int)$r->userid, ENT_QUOTES, 'UTF-8') . '</td>
         <td>' . htmlspecialchars(date('d/m/Y', strtotime($r->date)), ENT_QUOTES, 'UTF-8') . '</td>
         <td>' . htmlspecialchars(date('d/m/Y', strtotime($r->duedate)), ENT_QUOTES, 'UTF-8') . '</td>
@@ -503,12 +524,19 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
           <input type="hidden" name="efi_invoice" value="' . $id . '">
           <button class="btn btn-default btn-sm" name="efi_action" value="check">Consultar</button>
         </form>';
-        if (!empty($info['can_fix_callback'])) echo ' <form method="post" action="' . $url . '" onsubmit="return confirm(\'Corrigir a URL de callback desta cobrança na Efí?\')">
+        if (!empty($info['can_fix_callback'])) echo ' <form method="post" action="' . $url . '">
           <input type="hidden" name="efi_token" value="' . $csrf . '">
           <input type="hidden" name="efi_page" value="' . $page . '">
           ' . $searchHidden . '
           <input type="hidden" name="efi_invoice" value="' . $id . '">
           <button class="btn btn-warning btn-sm" name="efi_action" value="fix_callback">Corrigir URL</button>
+        </form>';
+        if (!empty($info['can_pay'])) echo ' <form method="post" action="' . $url . '">
+          <input type="hidden" name="efi_token" value="' . $csrf . '">
+          <input type="hidden" name="efi_page" value="' . $page . '">
+          ' . $searchHidden . '
+          <input type="hidden" name="efi_invoice" value="' . $id . '">
+          <button class="btn btn-success btn-sm" name="efi_action" value="pay">Dar baixa</button>
         </form>';
         echo '</td></tr>';
     }
@@ -518,30 +546,36 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
     if ($hasNext) echo '<a class="btn btn-default" href="' . $url . '&efi_page=' . ($page + 1) . '">Próxima</a>';
     echo '</div></div></details>';
 
-    // AJAX sem alterar endpoints: reaproveita a saída administrativa do addon.
+    // Operações assíncronas preservam as consultas das outras faturas na tabela.
     echo <<<'HTML'
 <script>
 (function () {
     var panel = document.getElementById('efi-check-panel');
     if (!panel) return;
-    panel.addEventListener('click', function (event) {
-        var button = event.target.closest('button[name="efi_action"]');
-        if (!button || !panel.contains(button)) return;
-        var form = button.form;
-        if (!form || !window.fetch || !window.DOMParser) return;
-        if (button.value === 'fix_callback' && !confirm('Corrigir a URL de callback desta cobrança na Efí?')) {
-            event.preventDefault();
-            return;
-        }
-        event.preventDefault();
-        var data = new FormData(form);
-        data.set(button.name, button.value);
+    var busy = false;
+
+    function load(form, submitter, link) {
+        if (busy) return;
+        var action = submitter ? submitter.value : '';
+        if (action === 'fix_callback' && !confirm('Corrigir a URL de callback desta cobrança na Efí?')) return;
+        if (action === 'pay' && !confirm('Registrar o pagamento desta fatura no WHMCS?')) return;
+
+        var targetId = form && form.elements.efi_invoice ? Number(form.elements.efi_invoice.value) : 0;
+        var single = targetId > 0 && action !== 'check_all';
         var body = document.getElementById('efi-check-body');
         var feedback = document.getElementById('efi-check-feedback');
-        var buttons = panel.querySelectorAll('button[name="efi_action"]');
-        buttons.forEach(function (b) { b.disabled = true; });
-        if (feedback) feedback.textContent = 'Consultando Efí...';
-        fetch(form.action, { method: 'POST', body: data, credentials: 'same-origin' })
+        var controls = panel.querySelectorAll('button');
+        var data = form ? new FormData(form) : null;
+        if (submitter && submitter.name) data.set(submitter.name, submitter.value);
+        var method = form ? form.method.toUpperCase() : 'GET';
+        var address = link || form.action;
+        if (method === 'GET' && data) address += (address.indexOf('?') < 0 ? '?' : '&') + new URLSearchParams(data).toString();
+
+        busy = true;
+        controls.forEach(function (b) { b.disabled = true; });
+        if (feedback) feedback.textContent = action === 'pay' ? 'Registrando pagamento...' : 'Consultando Efí...';
+
+        fetch(address, { method: method, body: method === 'POST' ? data : null, credentials: 'same-origin' })
             .then(function (response) {
                 if (!response.ok) throw new Error('HTTP ' + response.status);
                 return response.text();
@@ -550,13 +584,44 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
                 var doc = new DOMParser().parseFromString(html, 'text/html');
                 var updated = doc.getElementById('efi-check-body');
                 if (!updated) throw new Error('O servidor não retornou a listagem do módulo.');
-                body.innerHTML = updated.innerHTML;
+                if (single) {
+                    var currentRow = Array.from(body.querySelectorAll('tr[data-efi-invoice]'))
+                        .find(function (row) { return Number(row.getAttribute('data-efi-invoice')) === targetId; });
+                    var newRow = Array.from(updated.querySelectorAll('tr[data-efi-invoice]'))
+                        .find(function (row) { return Number(row.getAttribute('data-efi-invoice')) === targetId; });
+                    if (currentRow && newRow) currentRow.replaceWith(newRow);
+                    else body.innerHTML = updated.innerHTML;
+                    var resultFeedback = updated.querySelector('#efi-check-feedback');
+                    var currentFeedback = document.getElementById('efi-check-feedback');
+                    if (currentFeedback && resultFeedback) currentFeedback.innerHTML = resultFeedback.innerHTML;
+                } else {
+                    body.innerHTML = updated.innerHTML;
+                }
                 panel.open = true;
             })
             .catch(function (error) {
-                buttons.forEach(function (b) { b.disabled = false; });
-                if (feedback) feedback.textContent = 'Falha na requisição: ' + error.message;
+                var currentFeedback = document.getElementById('efi-check-feedback');
+                if (currentFeedback) currentFeedback.textContent = 'Falha na requisição: ' + error.message;
+            })
+            .finally(function () {
+                busy = false;
+                panel.querySelectorAll('button').forEach(function (b) { b.disabled = false; });
             });
+    }
+
+    panel.addEventListener('submit', function (event) {
+        var form = event.target;
+        if (!form || !panel.contains(form)) return;
+        event.preventDefault();
+        var submitter = event.submitter || form.querySelector('button[type="submit"], button[name="efi_action"]');
+        load(form, submitter, null);
+    });
+
+    panel.addEventListener('click', function (event) {
+        var link = event.target.closest('a[href]');
+        if (!link || !panel.contains(link) || !/efi_page=|efi_search=/.test(link.href)) return;
+        event.preventDefault();
+        load(null, null, link.href);
     });
 })();
 </script>
