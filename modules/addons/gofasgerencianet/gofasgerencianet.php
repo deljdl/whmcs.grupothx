@@ -318,6 +318,37 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
             $testLines[] = 'Última referência selecionada: ' . ($reference ?: '(nenhuma)');
             $testLines[] = 'ID reconhecido: ' . ($chargeId ?: 'NENHUM');
             $testLines[] = 'Próxima etapa prevista: ' . ($chargeId ? 'Consultar cobrança existente na Efí' : 'Criar uma cobrança na Efí');
+            if ($chargeId) {
+                $testLines[] = '';
+                $testLines[] = '--- CONSULTA REAL À EFÍ (SOMENTE LEITURA) ---';
+                try {
+                    $efiResponse = $api->detailCharge(array('id' => $chargeId));
+                    $efiData = $efiResponse['data'] ?? array();
+                    $efiAmount = (int)($efiData['total'] ?? -1);
+                    $invoiceAmount = (int)round((float)($testInvoice['total'] ?? 0) * 100);
+                    $efiCustomId = (string)($efiData['custom_id'] ?? ($efiData['metadata']['custom_id'] ?? ''));
+                    $testLines[] = 'ID da cobrança: ' . ($efiData['charge_id'] ?? '(ausente)');
+                    $testLines[] = 'Status da cobrança: ' . ($efiData['status'] ?? '(ausente)');
+                    $testLines[] = 'custom_id: ' . ($efiCustomId ?: '(ausente)');
+                    $testLines[] = 'Valor Efí: R$ ' . ($efiAmount >= 0 ? number_format($efiAmount / 100, 2, ',', '.') : '(ausente)');
+                    $testLines[] = 'Valor fatura: R$ ' . number_format($invoiceAmount / 100, 2, ',', '.');
+                    $testLines[] = 'IDs conferem: ' . (((int)($efiData['charge_id'] ?? 0) === $chargeId && $efiCustomId === (string)$testInvoiceId) ? 'SIM' : 'NÃO');
+                    $testLines[] = 'Valores conferem: ' . ($efiAmount === $invoiceAmount ? 'SIM' : 'NÃO');
+                } catch (\Throwable $e) {
+                    $testLines[] = 'Erro ao consultar a Efí: ' . $e->getMessage();
+                }
+                $testLines[] = '';
+                $testLines[] = '--- REGISTRO WHMCS (SOMENTE LEITURA) ---';
+                $expectedTransid = 'ggnb_' . $api_mode . '_waiting-' . $chargeId;
+                $matching = Capsule::table('tblaccounts')->where('transid', $expectedTransid)
+                    ->get(array('invoiceid', 'transid', 'amountin'));
+                $testLines[] = 'Transação de emissão esperada: ' . $expectedTransid;
+                $testLines[] = 'Registros com esse ID: ' . count($matching);
+                foreach ($matching as $matched) {
+                    $testLines[] = ' - Fatura #' . $matched->invoiceid . ' | ' . $matched->transid . ' | R$ ' . $matched->amountin;
+                }
+                $testLines[] = 'AddTransaction seria necessário agora: ' . (count($matching) ? 'NÃO (transação já registrada)' : 'SIM (ainda não registrada)');
+            }
             $testLines[] = '';
             $testLines[] = 'Transações no banco (tblaccounts):';
             $records = Capsule::table('tblaccounts')->where('invoiceid', $testInvoiceId)
