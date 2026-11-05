@@ -434,15 +434,20 @@ function ggnb_add_trans( $USERID, $INVOICEID, $CHARGEID, $whmcsAdmin, $api_mode,
  	$addtransvalues['paymentmethod'] = 'gofasgerencianetboleto';
  	$addtransvalues['transid'] = 'ggnb_'.$api_mode.'_waiting-'.$CHARGEID.'';
  	$addtransvalues['date'] = date('d/m/Y');
+	// A mesma cobrança pode ser processada mais de uma vez (cron, callback ou acesso à fatura).
+	$existing = Capsule::table('tblaccounts')->where('transid', $addtransvalues['transid'])->first();
+	if ($existing && (int)$existing->invoiceid === (int)$INVOICEID) {
+		return array('result'=>array('result'=>'success', 'message'=>'Transação já registrada nesta fatura.'));
+	}
 	$addtransresults = localAPI( $addtransaction, $addtransvalues, $whmcsAdmin );
 	
-		if ($debug_or_log and $addtransresults['result'] === 'success' ) {
+		if ($debug and $addtransresults['result'] === 'success' ) {
 			$log_result = array();
 			$log_result['addtransaction__']	= '<p class="ok">Transação gravada com sucesso - API WHMCS.</p>';
 			$log_result['addtransaction_']	=  'ID da Transação: ' . $addtransvalues['transid'] . '<br>';
 			$log_result['addtransaction']		= $addtransresults;
 			
-		} elseif ($debug_or_log and $addtransresults['result'] !== 'success'){
+		} elseif ($debug and $addtransresults['result'] !== 'success'){
 			$log_result = array();
 			$log_result['addtransaction_']	= '<p class="erro">Erro ao gravar a transação - API WHMCS.</p>';
 			$log_result['addtransaction']	= $addtransresults;
@@ -452,6 +457,14 @@ function ggnb_add_trans( $USERID, $INVOICEID, $CHARGEID, $whmcsAdmin, $api_mode,
 		return array('result'=>$addtransresults, 'log_result'=> $log_result);
 		
 	} elseif ($addtransresults['result'] !== 'success') {
+		// Se outra execução inseriu a transação enquanto a API era chamada, não é falha.
+		$existing = Capsule::table('tblaccounts')->where('transid', $addtransvalues['transid'])->first();
+		if ($existing && (int)$existing->invoiceid === (int)$INVOICEID) {
+			return array('result'=>array('result'=>'success', 'message'=>'Transação já registrada nesta fatura.'));
+		}
+		logModuleCall('gofasgerencianetboleto', 'AddTransaction_falhou', array(
+			'invoiceid'=>$INVOICEID, 'transid'=>$addtransvalues['transid']
+		), $addtransresults, '');
 		$error = '<b>3) Não foi possível gerar o boleto, por favor <a href="'.$system_url.'/submitticket.php" target="_blank">entre em contato</a> informando o ID da fatura.</b>';
 		// Preserva o erro retornado pelo WHMCS para o relatório administrativo.
 		$api_error = json_encode(array(
