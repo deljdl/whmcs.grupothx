@@ -312,7 +312,15 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
     $rows = array_slice($rows->all(), 0, 20);
     $ids = array_map(function ($r) { return (int)$r->id; }, $rows);
     $clientNames = array();
+    $efiTransactions = array();
     if ($rows) {
+        $transactions = Capsule::table('tblaccounts')->whereIn('invoiceid', $ids)
+            ->where('transid', 'like', 'ggnb_%')->orderBy('id', 'desc')->get(array('invoiceid', 'transid'));
+        foreach ($transactions as $transaction) {
+            if (!isset($efiTransactions[$transaction->invoiceid]) && strpos((string)$transaction->transid, 'ggnb_') === 0) {
+                $efiTransactions[$transaction->invoiceid] = (string)$transaction->transid;
+            }
+        }
         $clients = Capsule::table('tblclients')->whereIn('id', array_unique(array_map(function ($r) { return (int)$r->userid; }, $rows)))
             ->get(array('id', 'firstname', 'lastname', 'companyname'));
         foreach ($clients as $client) {
@@ -504,12 +512,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
       <div id="efi-check-feedback">'; 
     foreach ($alerts as $alert) echo '<div class="alert alert-info">' . htmlspecialchars($alert, ENT_QUOTES, 'UTF-8') . '</div>';
     echo '</div><div style="overflow-x:auto;margin-top:15px"><table><thead><tr>
-        <th>Fatura</th><th>Cliente</th><th>Emissão</th><th>Vencimento</th><th>Valor</th><th>Efí</th><th>Ações</th>
+        <th>Fatura</th><th>ID Efí / Transação</th><th>Cliente</th><th>Emissão</th><th>Vencimento</th><th>Valor</th><th>Efí</th><th>Ações</th>
       </tr></thead><tbody>';
     foreach ($rows as $r) {
         $id = (int)$r->id;
         $info = $statuses[$id] ?? array('text' => 'Não consultado');
         echo '<tr data-efi-invoice="' . $id . '"><td><a target="_blank" href="' . htmlspecialchars($ggnbwhmcsadminurl . 'billing/invoice/' . $id, ENT_QUOTES, 'UTF-8') . '">#' . $id . '</a></td>
+        <td>' . htmlspecialchars($efiTransactions[$id] ?? '—', ENT_QUOTES, 'UTF-8') . '</td>
         <td>' . htmlspecialchars($clientNames[$r->userid] ?? 'Cliente #' . (int)$r->userid, ENT_QUOTES, 'UTF-8') . '</td>
         <td>' . htmlspecialchars(date('d/m/Y', strtotime($r->date)), ENT_QUOTES, 'UTF-8') . '</td>
         <td>' . htmlspecialchars(date('d/m/Y', strtotime($r->duedate)), ENT_QUOTES, 'UTF-8') . '</td>
@@ -540,7 +549,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
         </form>';
         echo '</td></tr>';
     }
-    if (!$rows) echo '<tr><td colspan="7">Nenhuma fatura pendente nesta página.</td></tr>';
+    if (!$rows) echo '<tr><td colspan="8">Nenhuma fatura pendente nesta página.</td></tr>';
     echo '</tbody></table></div><div style="margin-top:12px">';
     if (!$searchId && $page > 1) echo '<a class="btn btn-default" href="' . $url . '&efi_page=' . ($page - 1) . '">Anterior</a> ';
     if ($hasNext) echo '<a class="btn btn-default" href="' . $url . '&efi_page=' . ($page + 1) . '">Próxima</a>';
