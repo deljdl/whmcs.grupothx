@@ -542,7 +542,7 @@ function ggnb_send_error_email( $INVOICEID, $USERID, $FNAME, $LNAME, $system_url
 		<b>Cliente:</b> <a href="'.$system_url.'/admin/clientssummary.php?userid='.$USERID.'">'.$FNAME.' '.$LNAME.'</a><br/><br/>
 		<b>Dados da fatura e do cadastro:</b><br/>'.$detailsHtml.'<br/>
 		<b>Erro exibido na Fatura:</b><br/><i>"'.$ERROR.'"</i><br/><br/>
-		'.($APIERROR ? '<b>Motivo retornado pela API Efí:</b><br/>'.nl2br(htmlspecialchars($APIERROR, ENT_QUOTES, 'UTF-8')).'<br/><br/>' : '').'
+		'.($APIERROR ? '<b>Detalhes técnicos do erro:</b><br/>'.nl2br(htmlspecialchars($APIERROR, ENT_QUOTES, 'UTF-8')).'<br/><br/>' : '').'
 		Alerta automático do gateway Gofas Gerencianet Boleto.<br/><br/>';
  	$sendEOEvalues['type'] = 'system';
 	try {
