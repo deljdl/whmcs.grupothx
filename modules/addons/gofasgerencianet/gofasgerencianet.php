@@ -307,7 +307,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
         ->where('paymentmethod', 'gofasgerencianetboleto');
     if ($searchId) $query->where('id', $searchId);
     $rows = $query->orderBy('date', 'desc')->orderBy('id', 'desc')
-        ->offset($searchId ? 0 : ($page - 1) * 20)->limit($searchId ? 1 : 21)->get(array('id', 'userid', 'total', 'duedate', 'date'));
+        ->offset($searchId ? 0 : ($page - 1) * 20)->limit($searchId ? 1 : 21)->get(array('id', 'userid', 'total', 'duedate', 'date', 'status'));
     $hasNext = !$searchId && count($rows) > 20;
     $rows = array_slice($rows->all(), 0, 20);
     $ids = array_map(function ($r) { return (int)$r->id; }, $rows);
@@ -402,9 +402,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
                             ? 'baixa registrada no WHMCS.' : 'não foi possível registrar a baixa: ' . (string)($result['message'] ?? 'erro retornado pelo WHMCS.'));
                     }
                 }
+                $whmcsStatus = $paymentDone
+                    ? Capsule::table('tblinvoices')->where('id', $id)->value('status')
+                    : $invoice->status;
                 $details = array(
                     'fatura_whmcs' => $id,
                     'cliente_whmcs' => $invoice->userid,
+                    'status_whmcs' => $whmcsStatus,
                     'charge_id_local' => $chargeId,
                     'charge_id_efi' => $data['charge_id'] ?? null,
                     'status_efi' => $status,
@@ -435,6 +439,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
                     'text' => $paymentDone ? 'Baixa registrada no WHMCS' : ($status === 'paid' ? 'Pago na Efí' : ($status ?: 'Resposta incompleta')),
                     'can_pay' => $paidVerified && !$alreadyPaid && !$paymentDone,
                     'payment_done' => $paymentDone,
+                    'whmcs_status' => $whmcsStatus,
                     'callback_text' => $currentCallback === '' ? 'URL de callback não informada pela Efí'
                         : ($callbackMismatch ? 'URL de callback divergente' : 'URL de callback correta'),
                     'can_fix_callback' => $callbackConfigured && $callbackMismatch && $identifiersMatch,
@@ -511,14 +516,19 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
       </form>
       <div id="efi-check-feedback">'; 
     foreach ($alerts as $alert) echo '<div class="alert alert-info">' . htmlspecialchars($alert, ENT_QUOTES, 'UTF-8') . '</div>';
-    echo '</div><div style="overflow-x:auto;margin-top:15px"><table><thead><tr>
-        <th>Fatura</th><th>ID Efí / Transação</th><th>Cliente</th><th>Emissão</th><th>Vencimento</th><th>Valor</th><th>Efí</th><th>Ações</th>
+    echo '</div>';
+    if (count(array_filter($statuses, function ($entry) { return !empty($entry['can_fix_callback']); }))) {
+        echo '<button id="efi-fix-all" class="btn btn-warning" type="button" style="margin-top:10px">Corrigir todas as URLs da página</button>';
+    }
+    echo '<div style="overflow-x:auto;margin-top:15px"><table><thead><tr>
+        <th>Fatura</th><th>ID Efí / Transação</th><th>Status WHMCS</th><th>Cliente</th><th>Emissão</th><th>Vencimento</th><th>Valor</th><th>Efí</th><th>Ações</th>
       </tr></thead><tbody>';
     foreach ($rows as $r) {
         $id = (int)$r->id;
         $info = $statuses[$id] ?? array('text' => 'Não consultado');
         echo '<tr data-efi-invoice="' . $id . '"><td><a target="_blank" href="' . htmlspecialchars($ggnbwhmcsadminurl . 'billing/invoice/' . $id, ENT_QUOTES, 'UTF-8') . '">#' . $id . '</a></td>
         <td>' . htmlspecialchars($efiTransactions[$id] ?? '—', ENT_QUOTES, 'UTF-8') . '</td>
+        <td>' . htmlspecialchars($info['whmcs_status'] ?? $r->status, ENT_QUOTES, 'UTF-8') . '</td>
         <td>' . htmlspecialchars($clientNames[$r->userid] ?? 'Cliente #' . (int)$r->userid, ENT_QUOTES, 'UTF-8') . '</td>
         <td>' . htmlspecialchars(date('d/m/Y', strtotime($r->date)), ENT_QUOTES, 'UTF-8') . '</td>
         <td>' . htmlspecialchars(date('d/m/Y', strtotime($r->duedate)), ENT_QUOTES, 'UTF-8') . '</td>
@@ -549,7 +559,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
         </form>';
         echo '</td></tr>';
     }
-    if (!$rows) echo '<tr><td colspan="8">Nenhuma fatura pendente nesta página.</td></tr>';
+    if (!$rows) echo '<tr><td colspan="9">Nenhuma fatura pendente nesta página.</td></tr>';
     echo '</tbody></table></div><div style="margin-top:12px">';
     if (!$searchId && $page > 1) echo '<a class="btn btn-default" href="' . $url . '&efi_page=' . ($page - 1) . '">Anterior</a> ';
     if ($hasNext) echo '<a class="btn btn-default" href="' . $url . '&efi_page=' . ($page + 1) . '">Próxima</a>';
@@ -562,9 +572,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
     var panel = document.getElementById('efi-check-panel');
     if (!panel) return;
     var busy = false;
+    var batchRunning = false;
 
-    function load(form, submitter, link) {
-        if (busy) return;
+    function load(form, submitter, link, fromBatch) {
+        if (busy || (batchRunning && !fromBatch)) return Promise.resolve();
         var action = submitter ? submitter.value : '';
         if (action === 'pay' && !confirm('Registrar o pagamento desta fatura no WHMCS?')) return;
 
@@ -583,7 +594,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
         controls.forEach(function (b) { b.disabled = true; });
         if (feedback) feedback.textContent = action === 'pay' ? 'Registrando pagamento...' : 'Consultando Efí...';
 
-        fetch(address, { method: method, body: method === 'POST' ? data : null, credentials: 'same-origin' })
+        return fetch(address, { method: method, body: method === 'POST' ? data : null, credentials: 'same-origin' })
             .then(function (response) {
                 if (!response.ok) throw new Error('HTTP ' + response.status);
                 return response.text();
@@ -616,6 +627,35 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
                 panel.querySelectorAll('button').forEach(function (b) { b.disabled = false; });
             });
     }
+
+    panel.addEventListener('click', function (event) {
+        var bulk = event.target.closest('#efi-fix-all');
+        if (!bulk || busy || batchRunning) return;
+        event.preventDefault();
+        batchRunning = true;
+        var buttons = Array.from(panel.querySelectorAll('button[name="efi_action"][value="fix_callback"]'));
+        var count = 0;
+        var errors = 0;
+        (async function () {
+            for (var button of buttons) {
+                await load(button.form, button, null, true);
+                count++;
+                var feedback = document.getElementById('efi-check-feedback');
+                if (feedback && feedback.textContent.indexOf('Falha na requisição:') !== -1) errors++;
+            }
+        })().finally(function () {
+            batchRunning = false;
+            var feedback = document.getElementById('efi-check-feedback');
+            if (feedback) {
+                var summary = document.createElement('div');
+                summary.className = 'alert alert-info';
+                summary.textContent = 'Correção de URLs concluída: ' + count + ' cobrança(s) processada(s).' + (errors ? ' Falhas de comunicação: ' + errors + '.' : '');
+                feedback.prepend(summary);
+            }
+            var all = panel.querySelector('#efi-fix-all');
+            if (all && !panel.querySelector('button[name="efi_action"][value="fix_callback"]')) all.remove();
+        });
+    });
 
     panel.addEventListener('submit', function (event) {
         var form = event.target;
