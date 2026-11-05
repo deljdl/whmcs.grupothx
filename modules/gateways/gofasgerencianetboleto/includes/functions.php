@@ -453,8 +453,14 @@ function ggnb_add_trans( $USERID, $INVOICEID, $CHARGEID, $whmcsAdmin, $api_mode,
 		
 	} elseif ($addtransresults['result'] !== 'success') {
 		$error = '<b>3) Não foi possível gerar o boleto, por favor <a href="'.$system_url.'/submitticket.php" target="_blank">entre em contato</a> informando o ID da fatura.</b>';
-		//return $error;
-		return array('error'=>$error, 'log_result'=> $log_result);
+		// Preserva o erro retornado pelo WHMCS para o relatório administrativo.
+		$api_error = json_encode(array(
+			'origem' => 'WHMCS AddTransaction',
+			'resultado' => $addtransresults['result'] ?? '',
+			'mensagem' => $addtransresults['message'] ?? '',
+			'resposta' => $addtransresults
+		), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+		return array('error'=>$error, 'api_error'=>$api_error, 'log_result'=> $log_result);
 	}
 }
 }
