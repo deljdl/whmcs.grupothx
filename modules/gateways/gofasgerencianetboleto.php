@@ -372,7 +372,7 @@ function gofasgerencianetboleto_link( $params ) {
 				'Telefone enviado à Efí' => $body2['payment']['banking_billet']['customer']['phone_number'] ?? '',
 				'Transação no WHMCS' => $trans_id_ ?? '',
 			);
-			$sendEmailonError = ggnb_send_error_email( $invoice_id, $user_id, $firstname, $lastname, $system_url, $whmcsAdmin, $emailonError, $error, $debug_or_log, $pay_charge_['api_error'] ?? $charge_id_['api_error'] ?? '', $invoiceDetails );
+			$sendEmailonError = ggnb_send_error_email( $invoice_id, $user_id, $firstname, $lastname, $system_url, $whmcsAdmin, $emailonError, $error, $debug_or_log, $addtrans['api_error'] ?? $pay_charge_['api_error'] ?? $charge_id_['api_error'] ?? '', $invoiceDetails );
 			if ($debug_or_log) {
 				$log_result['sendEmailonError'] = $sendEmailonError;
 			}
