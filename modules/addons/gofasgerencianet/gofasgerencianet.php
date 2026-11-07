@@ -292,6 +292,16 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
     $searchValue = $searchId ? (string)$searchId : '';
     $searchHidden = '<input type="hidden" name="efi_search" value="' . $searchValue . '">';
     $url = htmlspecialchars($ggnbwhmcsadminurl . 'addonmodules.php?module=gofasgerencianet', ENT_QUOTES, 'UTF-8');
+    // Diagnóstico manual de fatura (somente leitura).
+    echo '<div class="panel panel-default" style="margin:15px 0"><div class="panel-heading"><strong>Diagnóstico de fatura Efí</strong></div><div class="panel-body">'
+        . '<form method="get" action="addonmodules.php" class="form-inline">'
+        . '<input type="hidden" name="module" value="gofasgerencianet">'
+        . '<label for="efi-test-id" style="margin-right:8px">ID da fatura</label> '
+        . '<input id="efi-test-id" type="number" name="efi_test_invoice" min="1" required class="form-control" style="width:150px" value="'
+        . htmlspecialchars((string)max(0, (int)($_GET['efi_test_invoice'] ?? 0)), ENT_QUOTES, 'UTF-8')
+        . '"> <button type="submit" class="btn btn-primary">Verificar fatura</button>'
+        . '</form><small>Somente consultas: não gera boletos, não registra pagamentos e não altera transações.</small>'
+        . '</div></div>';
     // Diagnóstico somente leitura do reconhecimento de transações pelo gateway.
     $testInvoiceId = max(0, (int)($_GET['efi_test_invoice'] ?? 0));
     if ($testInvoiceId) {
@@ -301,11 +311,33 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
             $testLines[] = 'Erro ao consultar a fatura: ' . ($testInvoice['message'] ?? 'Resposta inválida do WHMCS');
         } else {
             $testLines[] = 'Status WHMCS: ' . ($testInvoice['status'] ?? '');
+            $testLines[] = 'Cliente ID: ' . ($testInvoice['userid'] ?? '(ausente)');
+            $testLines[] = 'Data de emissão: ' . ($testInvoice['date'] ?? '(ausente)');
+            $testLines[] = 'Vencimento: ' . ($testInvoice['duedate'] ?? '(ausente)');
+            $testLines[] = 'Forma de pagamento: ' . ($testInvoice['paymentmethod'] ?? '(ausente)');
+            $testLines[] = 'Subtotal: R$ ' . number_format((float)($testInvoice['subtotal'] ?? 0), 2, ',', '.');
+            $testLines[] = 'Créditos aplicados: R$ ' . number_format((float)($testInvoice['credit'] ?? 0), 2, ',', '.');
+            $testLines[] = 'Total: R$ ' . number_format((float)($testInvoice['total'] ?? 0), 2, ',', '.');
+            $testLines[] = 'Saldo: R$ ' . number_format((float)($testInvoice['balance'] ?? 0), 2, ',', '.');
+            $testLines[] = 'Data do pagamento: ' . ($testInvoice['datepaid'] ?: '(não paga)');
+            $testLines[] = '';
+            $testLines[] = '--- ITENS DA FATURA ---';
+            foreach (($testInvoice['items']['item'] ?? array()) as $item) {
+                $testLines[] = ' - ' . ($item['description'] ?? '(sem descrição)')
+                    . ' | R$ ' . number_format((float)($item['amount'] ?? 0), 2, ',', '.')
+                    . ' | Tipo: ' . ($item['type'] ?? '(ausente)')
+                    . ' | Ref.: ' . ($item['relid'] ?? '(ausente)');
+            }
+            $testLines[] = '';
+            $testLines[] = '--- TRANSAÇÕES DA FATURA ---';
             $transactions = $testInvoice['transactions']['transaction'] ?? array();
             if (isset($transactions['transid'])) $transactions = array($transactions);
             $testLines[] = 'Transações retornadas por GetInvoice: ' . count($transactions);
             foreach ($transactions as $transaction) {
-                $testLines[] = ' - ' . ($transaction['transid'] ?? '(sem referência)');
+                $testLines[] = ' - ' . ($transaction['transid'] ?? '(sem referência)')
+                    . ' | Data: ' . ($transaction['date'] ?? '(ausente)')
+                    . ' | Entrada: R$ ' . number_format((float)($transaction['amountin'] ?? 0), 2, ',', '.')
+                    . ' | Saída: R$ ' . number_format((float)($transaction['amountout'] ?? 0), 2, ',', '.');
             }
             // Reproduz literalmente a seleção da última transação em params/3_invoice.php.
             $last = $transactions ? end($transactions) : array();
@@ -329,6 +361,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
                     $efiCustomId = (string)($efiData['custom_id'] ?? ($efiData['metadata']['custom_id'] ?? ''));
                     $testLines[] = 'ID da cobrança: ' . ($efiData['charge_id'] ?? '(ausente)');
                     $testLines[] = 'Status da cobrança: ' . ($efiData['status'] ?? '(ausente)');
+                    $testLines[] = 'Criada na Efí: ' . ($efiData['created_at'] ?? '(ausente)');
+                    $testLines[] = 'Método de pagamento: ' . ($efiData['payment']['method'] ?? '(ausente)');
+                    $testLines[] = 'Vencimento do boleto: ' . ($efiData['payment']['banking_billet']['expire_at'] ?? '(ausente)');
+                    $testLines[] = 'Link do boleto: ' . ($efiData['payment']['banking_billet']['link'] ?? '(ausente)');
+                    $testLines[] = 'URL de notificação: ' . ($efiData['metadata']['notification_url'] ?? '(ausente)');
                     $testLines[] = 'custom_id: ' . ($efiCustomId ?: '(ausente)');
                     $testLines[] = 'Valor Efí: R$ ' . ($efiAmount >= 0 ? number_format($efiAmount / 100, 2, ',', '.') : '(ausente)');
                     $testLines[] = 'Valor fatura: R$ ' . number_format($invoiceAmount / 100, 2, ',', '.');
@@ -352,9 +389,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
             $testLines[] = '';
             $testLines[] = 'Transações no banco (tblaccounts):';
             $records = Capsule::table('tblaccounts')->where('invoiceid', $testInvoiceId)
-                ->orderBy('id', 'asc')->get(array('id', 'transid', 'amountin'));
+                ->orderBy('id', 'asc')->get(array('id', 'transid', 'amountin', 'date', 'description'));
             foreach ($records as $record) {
-                $testLines[] = $record->id . ' | ' . $record->transid . ' | R$ ' . $record->amountin;
+                $testLines[] = $record->id . ' | ' . $record->transid . ' | Entrada R$ ' . $record->amountin
+                    . ' | Data: ' . $record->date . ' | Descrição: ' . ($record->description ?: '(sem descrição)');
             }
         }
         echo '<div class="alert alert-info" style="margin:15px 0"><strong>Teste isolado (somente leitura)</strong>'
