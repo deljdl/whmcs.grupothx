@@ -372,7 +372,19 @@ function gofasgerencianetboleto_link( $params ) {
 				'Telefone enviado à Efí' => $body2['payment']['banking_billet']['customer']['phone_number'] ?? '',
 				'Transação no WHMCS' => $trans_id_ ?? '',
 			);
-			$sendEmailonError = ggnb_send_error_email( $invoice_id, $user_id, $firstname, $lastname, $system_url, $whmcsAdmin, $emailonError, $error, $debug_or_log, $addtrans['api_error'] ?? $pay_charge_['api_error'] ?? $charge_id_['api_error'] ?? '', $invoiceDetails );
+			$operation = 'processar boleto';
+			if (!empty($chargeExist_['error']) && $error === $chargeExist_['error']) {
+				$operation = 'consultar boleto existente';
+			} elseif (!empty($addtrans['error']) && $error === $addtrans['error']) {
+				$operation = 'registrar boleto no WHMCS';
+			} elseif (!empty($charge_id_['error']) && $error === $charge_id_['error']) {
+				$operation = 'criar cobrança na Efí';
+			} elseif (!empty($pay_charge_['error']) && $error === $pay_charge_['error']) {
+				$operation = 'emitir boleto na Efí';
+			}
+			$invoiceDetails['Operação que falhou'] = $operation;
+			$invoiceDetails['ID da cobrança existente'] = $chargeExistID ?? $trans_id ?? '';
+			$sendEmailonError = ggnb_send_error_email( $invoice_id, $user_id, $firstname, $lastname, $system_url, $whmcsAdmin, $emailonError, $error, $debug_or_log, $addtrans['api_error'] ?? $pay_charge_['api_error'] ?? $charge_id_['api_error'] ?? '', $invoiceDetails, $operation );
 			if ($debug_or_log) {
 				$log_result['sendEmailonError'] = $sendEmailonError;
 			}
