@@ -539,10 +539,10 @@ function ggnb_store_billet($pay_charge,$invoice_amount,$invoice_id,$debug_or_log
  *
  */
 if (!function_exists('ggnb_send_error_email')) {
-function ggnb_send_error_email( $INVOICEID, $USERID, $FNAME, $LNAME, $system_url, $ADMIN, $EOE, $ERROR, $debug_or_log, $APIERROR = '', $DETAILS = array() ) {
+function ggnb_send_error_email( $INVOICEID, $USERID, $FNAME, $LNAME, $system_url, $ADMIN, $EOE, $ERROR, $debug_or_log, $APIERROR = '', $DETAILS = array(), $OPERATION = 'processar boleto' ) {
 	$sendEmailonError = "sendadminemail";
  	$sendEOEvalues['messagename'] = 'Mention Notification';
- 	$sendEOEvalues['customsubject'] = 'Erro ao gerar boleto - fatura #'.$INVOICEID;
+ 	$sendEOEvalues['customsubject'] = 'Falha ao '.$OPERATION.' - fatura #'.$INVOICEID;
 	$detailsHtml = '';
 	foreach ($DETAILS as $field => $value) {
 		if ($value !== null && $value !== '') {
@@ -550,11 +550,11 @@ function ggnb_send_error_email( $INVOICEID, $USERID, $FNAME, $LNAME, $system_url
 		}
 	}
 	$sendEOEvalues['custommessage'] = '<br/>Olá administrador,<br/>
-		Ocorreu uma falha ao gerar um Boleto para a <a href="'.$system_url.'/admin/billing/invoice/'.$INVOICEID.'">Fatura #'.$INVOICEID.'</a>.<br/><br/>
+		Ocorreu uma falha ao '.$OPERATION.' para a <a href="'.$system_url.'/admin/billing/invoice/'.$INVOICEID.'">Fatura #'.$INVOICEID.'</a>.<br/><br/>
 		Detalhes do erro:<br/>
 		<b>Cliente:</b> <a href="'.$system_url.'/admin/clientssummary.php?userid='.$USERID.'">'.$FNAME.' '.$LNAME.'</a><br/><br/>
 		<b>Dados da fatura e do cadastro:</b><br/>'.$detailsHtml.'<br/>
-		<b>Erro exibido na Fatura:</b><br/><i>"'.$ERROR.'"</i><br/><br/>
+		<b>Erro retornado pelo gateway:</b><br/><i>"'.$ERROR.'"</i><br/><br/>
 		'.($APIERROR ? '<b>Detalhes técnicos do erro:</b><br/>'.nl2br(htmlspecialchars($APIERROR, ENT_QUOTES, 'UTF-8')).'<br/><br/>' : '').'
 		Alerta automático do gateway Gofas Gerencianet Boleto.<br/><br/>';
  	$sendEOEvalues['type'] = 'system';
