@@ -319,7 +319,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && (isset($_POST['invoice_id']
             $testLines[] = 'Créditos aplicados: R$ ' . number_format((float)($testInvoice['credit'] ?? 0), 2, ',', '.');
             $testLines[] = 'Total: R$ ' . number_format((float)($testInvoice['total'] ?? 0), 2, ',', '.');
             $testLines[] = 'Saldo: R$ ' . number_format((float)($testInvoice['balance'] ?? 0), 2, ',', '.');
-            $testLines[] = 'Data do pagamento: ' . ($testInvoice['datepaid'] ?: '(não paga)');
+            $testLines[] = 'Data do pagamento: ' . ($testInvoice['datepaid'] ?? '(não paga)');
             $testLines[] = '';
             $testLines[] = '--- ITENS DA FATURA ---';
             foreach (($testInvoice['items']['item'] ?? array()) as $item) {
