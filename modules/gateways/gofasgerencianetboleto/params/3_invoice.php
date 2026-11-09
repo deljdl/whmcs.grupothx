@@ -39,17 +39,21 @@ $trans_idendA				= $GetInvoiceResults['transactions'];
 if($trans_idendA) {
 	$trans_idend				= $trans_idendA['transaction'];
 }
-$trans_id = false;
-$trans_id_ = '';
-
-if (!empty($trans_idend)) {
-	foreach (array_reverse($trans_idend) as $transacao) {
-		$trans_id_ = $transacao['transid'] ?? '';
-		if (preg_match('/^ggnb_' . preg_quote($api_mode, '/') . '_(?:waiting|unpaid)-(\\d+)$/', $trans_id_, $matches)) {
-			$trans_id = (int)$matches[1];
-			break;
-		}
+if ($trans_idend) {
+	$trans_idp				= end( $trans_idend );
+	$trans_id_				= $trans_idp['transid'];
+	
+	// Verifica se a transação pertence ao módulo
+	if ( strpos( $trans_id_, 'ggnb') !== false and (strpos( $trans_id_, 'unpaid') !== false or strpos( $trans_id_, 'waiting') !== false ) and strpos( $trans_id_, $api_mode) ) {
+		$trans_id					= (int)preg_replace('/[^0-9]/', '', $trans_id_ ); // ggnb_waiting_213630
 	}
+	else {
+		$trans_id				= false;
+	}
+	
+}
+else {
+	$trans_id				= false;
 }
 // Serviços/produtos relacionados à fatura
 $invoiceItemsItem	= $GetInvoiceResults['items']['item'];
