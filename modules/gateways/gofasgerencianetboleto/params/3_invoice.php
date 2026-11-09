@@ -40,7 +40,7 @@ $trans_idendA = $GetInvoiceResults['transactions'] ?? array();
 $trans_idend = $trans_idendA['transaction'] ?? array();
 foreach (array_reverse($trans_idend) as $transacao) {
     $trans_id_ = $transacao['transid'] ?? '';
-    if (preg_match('/^ggnb_'.preg_quote($api_mode, '/').'_(?:waiting|unpaid)-(\\d+)$/', $trans_id_, $matches)) {
+    if (preg_match('/^ggnb_'.preg_quote($api_mode, '/').'_(?:waiting|unpaid)-([0-9]+)$/', $trans_id_, $matches)) {
         $trans_id = (int)$matches[1];
         break;
     }
