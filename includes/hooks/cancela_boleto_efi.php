@@ -1,19 +1,14 @@
 <?php
 
 use WHMCS\Database\Capsule;
-include __DIR__ . '/../../gateways/gofasgerencianetboleto/sdk/vendor/autoload.php';
+require_once __DIR__ . '/../../modules/gateways/gofasgerencianetboleto/sdk/efi_rest.php';
 use Gerencianet\Exception\GerencianetException;
 use Gerencianet\Gerencianet;
 
-#REQUIRE TARIFAS OBRIGATÓRIO PARA NÃO DAR ERRO NO CRON
-if(empty($_SERVER['DOCUMENT_ROOT']))
-{
-    $_SERVER['DOCUMENT_ROOT'] = '/home/thxcom/public_html';
-}
-require_once($_SERVER['DOCUMENT_ROOT'].'/tarifasTHX.php');
+require_once __DIR__ . '/../../tarifasTHX.php';
 
 add_hook('InvoiceCancelled', 1, function($vars) {
-	logModuleCall('includes/hooks/cancela_boleto_efi.php','start',$vars );
+	logModuleCall('includes/hooks/cancela_boleto_efi.php','start',$vars, '', '');
     $envioEmailLog = '<br />Invoice <strong>'.$vars['invoiceid'].'</strong> foi cancelada.';
 
     $api_mode				= 'live';
@@ -24,7 +19,7 @@ add_hook('InvoiceCancelled', 1, function($vars) {
     $invoice_id	= (int)$vars['invoiceid'];
 	$invoice	= localAPI('GetInvoice',array( 'invoiceid' => $invoice_id, ), ADMIN_THX);
 
-	logModuleCall('includes/hooks/cancela_boleto_efi.php', 'geninvoices', $invoice);
+	logModuleCall('includes/hooks/cancela_boleto_efi.php', 'geninvoices', $invoice, '', '');
 
 	// Parâmetros das transações associadas à Fatura
 	$trans_idendA				= $invoice['transactions'];
@@ -48,7 +43,7 @@ add_hook('InvoiceCancelled', 1, function($vars) {
 	else {
 		$trans_id				= false;
 	}
-	logModuleCall('includes/hooks/cancela_boleto_efi.php', 'trans_idendA', $trans_idendA, $trans_idp);
+	logModuleCall('includes/hooks/cancela_boleto_efi.php', 'trans_idendA', $trans_idendA, $trans_idp, '');
 
 
 
@@ -58,17 +53,17 @@ add_hook('InvoiceCancelled', 1, function($vars) {
 			$id = array('id' => (int)$trans_id);
 			$cancelCharge = $api->cancelCharge( $id, array() );
             $envioEmailLog.='<br /><br />Retorno Efí do cancelamento<hr /> Sucesso:<br /><pre>'.print_r($cancelCharge,1).'</pre>';
-			logModuleCall('includes/hooks/cancela_boleto_efi.php','cancel_transaction',array('Sucesso:'=>$cancelCharge), '' );
+			logModuleCall('includes/hooks/cancela_boleto_efi.php','cancel_transaction',array('Sucesso:'=>$cancelCharge), '', '' );
 		}
 		catch (GerencianetException $e) {
 			$error	= 'Erro ao cancelar Boleto: ' . $e->errorDescription;
             $envioEmailLog.='<br />'.$error;
-			logModuleCall('includes/hooks/cancela_boleto_efi.php','cancel_transaction',array('Error:'=>$error), '' );
+			logModuleCall('includes/hooks/cancela_boleto_efi.php','cancel_transaction',array('Error:'=>$error), '', '' );
 		}
 		catch (Exception $e) {
 			$error	= 'Erro ao cancelar Boleto: ' . $e->getMessage();
             $envioEmailLog.='<br />'.$error;
-			logModuleCall('includes/hooks/cancela_boleto_efi.php','cancel_transaction',array('Error:'=>$error), '' );
+			logModuleCall('includes/hooks/cancela_boleto_efi.php','cancel_transaction',array('Error:'=>$error), '', '' );
 		}
 
 		$UpdateTransaction = localAPI('UpdateTransaction', array('transactionid' => $trans_idp['id'], 'transid' => 'ggnb_'.$api_mode.'_canceled-'.$trans_id, ), ADMIN_THX);
