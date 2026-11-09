@@ -13,7 +13,7 @@
 require_once __DIR__ . '/../../../../init.php';
 require_once __DIR__ . '/../../../../includes/gatewayfunctions.php';
 require_once __DIR__ . '/../../../../includes/invoicefunctions.php';
-require_once __DIR__ . '/../../../../tarifasTHX.php';
+require_once($_SERVER['DOCUMENT_ROOT'].'/thx/tarifasTHX.php');
 // Require GN PHP SDK
 require __DIR__ . '/../sdk/vendor/autoload.php';
 use Gerencianet\Exception\GerencianetException;
@@ -35,38 +35,9 @@ if (!$params['type']) {
 }
 
 // Recebe o GN token
-$token = $_REQUEST['notification'] ?? null;
+$token = $_REQUEST['notification'];
 
-// Histórico completo das tentativas recebidas da Efí, independente do Slack.
-$efiLogId = null;
-$efiResultados = [];
-$efiLog = function (array $dados) use (&$efiLogId) {
-    if (!$efiLogId) {
-        return;
-    }
-    try {
-        \WHMCS\Database\Capsule::table('efi_notificacoes')
-            ->where('id', $efiLogId)->update($dados);
-    } catch (\Throwable $e) {
-        error_log('Falha ao atualizar efi_notificacoes: ' . $e->getMessage());
-    }
-};
-
-try {
-    $efiLogId = \WHMCS\Database\Capsule::table('efi_notificacoes')->insertGetId([
-        'token' => $token,
-        'metodo' => $_SERVER['REQUEST_METHOD'] ?? '',
-        'ip' => $_SERVER['REMOTE_ADDR'] ?? '',
-        'dados_recebidos' => json_encode([
-            'get' => $_GET,
-            'post' => $_POST,
-            'body' => file_get_contents('php://input')
-        ], JSON_UNESCAPED_UNICODE | JSON_INVALID_UTF8_SUBSTITUTE | JSON_PARTIAL_OUTPUT_ON_ERROR)
-    ]);
-} catch (\Throwable $e) {
-    error_log('Falha ao gravar efi_notificacoes: ' . $e->getMessage());
-}
-
+require_once($_SERVER['DOCUMENT_ROOT'].'/thx/tarifasTHX.php');
 
 
 if ($token) {
@@ -122,14 +93,6 @@ if ($token) {
 		$chargeStatus			= $notificationData['status']['current']; // Status atual
 		$tituloStatus = $chargeStatus;
 
-        $efiLog([
-            'invoice_id' => $invoiceId,
-            'charge_id' => $charge_id,
-            'status' => $chargeStatus,
-            'valor' => $paymentAmount,
-            'retorno_efi' => json_encode($notification, JSON_UNESCAPED_UNICODE | JSON_INVALID_UTF8_SUBSTITUTE | JSON_PARTIAL_OUTPUT_ON_ERROR)
-        ]);
-
 
 		enviaLogTHXJdl('Novo post de notificação gerencianet '.date('d/m/Y G:i').'<br /> Token: '.$token.'<br /> Status: '.$chargeStatus.'<br /> Valor Pago: '.$paymentAmount.'<br /> Dados Brutos da ultima notificação: <br /><pre>'.print_r($notificationData, 1).'</pre>');
 
@@ -148,12 +111,10 @@ if ($token) {
 		echo 'Dados da Fatura: ', json_encode($invoice_data);
 
 	} catch (GerencianetException $e) {
-        $efiLog(['erro' => (string) $e->errorDescription]);
 		enviaLogTHXJdl($token.'<br />'.print_r($e->errorDescription, 1));
 		die( print_r($e->errorDescription) );
 
 	} catch (Exception $e) {
-        $efiLog(['erro' => $e->getMessage()]);
 		enviaLogTHXJdl($token.'<br />'.print_r($e->getMessage(), 1));
 		die( print_r($e->getMessage()) );
 	}
@@ -168,12 +129,6 @@ if ($token) {
 	$addtransvalues['transid']			= 'ggnb_'.$api_mode.'_'.'_notification-'.$charge_id.'['.$chargeStatus.']';
 	$addtransvalues['date']				= date('d/m/Y');
 	$addtransresult						= localAPI( 'addtransaction' , $addtransvalues, $whmcsAdmin );
-	$efiResultados[] = [
-	    'tipo' => 'notificacao',
-	    'dados' => $addtransvalues,
-	    'resposta' => $addtransresult
-	];
-	$efiLog(['resultado_baixa' => json_encode($efiResultados, JSON_UNESCAPED_UNICODE | JSON_INVALID_UTF8_SUBSTITUTE | JSON_PARTIAL_OUTPUT_ON_ERROR)]);
 
 
 
@@ -231,15 +186,6 @@ if ($token) {
  		$addtransvalues['transid']			= 'ggnb_'.$api_mode.'_'.'_'.$tituloStatus.'-'.$charge_id.'['.$valorPagoOuIdentificado.':'.$paymentAmount.']';
  		$addtransvalues['date']				= date('d/m/Y');
 		$addtransresult						= localAPI( 'addtransaction' , $addtransvalues, $whmcsAdmin );
-		$efiResultados[] = [
-		    'tipo' => 'pagamento',
-		    'dados' => $addtransvalues,
-		    'resposta' => $addtransresult
-		];
-		$efiLog(['resultado_baixa' => json_encode($efiResultados, JSON_UNESCAPED_UNICODE | JSON_INVALID_UTF8_SUBSTITUTE | JSON_PARTIAL_OUTPUT_ON_ERROR)]);
-		if (($addtransresult['result'] ?? '') !== 'success') {
-			logModuleCall('gofasgerencianetboleto', 'paid_notification_addtransaction_error', $addtransvalues, $addtransresult);
-		}
 
 		// Debug
 		echo 'Add transaction: ', json_encode($addtransresult);
@@ -262,12 +208,6 @@ if ($token) {
  		$addtransvalues['transid']			= 'ggnb_'.$api_mode.'_unpaid-'.$charge_id.'';
  		$addtransvalues['date']				= date('d/m/Y');
 		$addtransresult						= localAPI( 'addtransaction' , $addtransvalues, $whmcsAdmin );
-		$efiResultados[] = [
-		    'tipo' => 'inadimplencia',
-		    'dados' => $addtransvalues,
-		    'resposta' => $addtransresult
-		];
-		$efiLog(['resultado_baixa' => json_encode($efiResultados, JSON_UNESCAPED_UNICODE | JSON_INVALID_UTF8_SUBSTITUTE | JSON_PARTIAL_OUTPUT_ON_ERROR)]);
 
 		// Debug
 		echo 'Resultado: ', json_encode($addtransresult);
