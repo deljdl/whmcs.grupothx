@@ -13,7 +13,7 @@ if(empty($_SERVER['DOCUMENT_ROOT']))
 require_once($_SERVER['DOCUMENT_ROOT'].'/tarifasTHX.php');
 
 add_hook('InvoiceCancelled', 1, function($vars) {
-	logModuleCall('includes/hooks/cancela_boleto_efi.php','start',$vars );
+	logModuleCall('includes/hooks/cancela_boleto_efi.php','start',$vars, '' );
     $envioEmailLog = '<br />Invoice <strong>'.$vars['invoiceid'].'</strong> foi cancelada.';
 
     $api_mode				= 'live';
@@ -24,7 +24,7 @@ add_hook('InvoiceCancelled', 1, function($vars) {
     $invoice_id	= (int)$vars['invoiceid'];
 	$invoice	= localAPI('GetInvoice',array( 'invoiceid' => $invoice_id, ), ADMIN_THX);
 
-	logModuleCall('includes/hooks/cancela_boleto_efi.php', 'geninvoices', $invoice);
+	logModuleCall('includes/hooks/cancela_boleto_efi.php', 'geninvoices', $invoice, '');
 
 	// Parâmetros das transações associadas à Fatura
 	$trans_idendA				= $invoice['transactions'];
