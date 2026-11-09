@@ -54,7 +54,7 @@ $registrarEfi = function (array $dados = array()) use (&$efiLog, &$efiLogId) {
         } else {
             Capsule::table('efi_notificacoes')->where('id', $efiLogId)->update($dados);
         }
-    } catch (\\Throwable $e) {
+    } catch (\Throwable $e) {
         // O log não pode interromper o processamento financeiro.
     }
 };
