@@ -1665,6 +1665,11 @@ $(document).off('click', '#btnExecutarTesteEnvio').on('click', '#btnExecutarTest
                         '</pre>' +
 
                         '<small>Clique no comando para copiar.</small>' +
+                        '<hr><label>ID da mensagem (terceiro campo do log):</label>' +
+                        '<input type="text" id="idEximConsulta" class="form-control" placeholder="Cole o ID Exim aqui">' +
+                        '<b>Comando de confirmação:</b>' +
+                        '<pre id="comandoConfirmacaoSSH" style="margin-top:5px;cursor:pointer;display:none"></pre>' +
+                        '<small id="dicaComandoConfirmacao" style="display:none">Clique no comando para copiar.</small>' +
 
                     '</div>'
                 );
@@ -1741,6 +1746,21 @@ $(document).off('click', '#comandoSSH').on('click', '#comandoSSH', function(){
 
     });
 
+});
+
+$(document).off('input', '#idEximConsulta').on('input', '#idEximConsulta', function(){
+    var id = $(this).val().trim();
+    var valido = /^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)+$/.test(id);
+    var comando = valido
+        ? "grep -F '" + id + "' /var/log/exim_mainlog | grep -E ' => | == | \\*\\* |Completed'"
+        : '';
+
+    $('#comandoConfirmacaoSSH').text(comando).toggle(!!valido);
+    $('#dicaComandoConfirmacao').toggle(!!valido);
+});
+
+$(document).off('click', '#comandoConfirmacaoSSH').on('click', '#comandoConfirmacaoSSH', function(){
+    navigator.clipboard.writeText($(this).text().trim());
 });
 
 $(document).off('click', '#btnBloquearConta').on('click', '#btnBloquearConta', function(){
