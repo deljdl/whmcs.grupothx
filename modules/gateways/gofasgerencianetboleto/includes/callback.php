@@ -39,6 +39,7 @@ if (!$params['type']) {
 
 // Cada recebimento é registrado separadamente, sem interromper o callback se o log falhar.
 $efiLogId = null;
+$efiResultados = array();
 $efiLog = array(
     'data_recebimento' => date('Y-m-d H:i:s'),
     'token' => (string)($_REQUEST['notification'] ?? ''),
@@ -163,8 +164,9 @@ if ($token) {
 	$addtransvalues['transid']			= 'ggnb_'.$api_mode.'_'.'_notification-'.$charge_id.'['.$chargeStatus.']';
 	$addtransvalues['date']				= date('d/m/Y');
 	$addtransresult = localAPI('addtransaction', $addtransvalues, $whmcsAdmin);
+    $efiResultados[] = array('request' => $addtransvalues, 'response' => $addtransresult);
     $registrarEfi(array(
-        'resultado_baixa' => json_encode(array('request' => $addtransvalues, 'response' => $addtransresult), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
+        'resultado_baixa' => json_encode($efiResultados, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
         'erro' => (($addtransresult['result'] ?? '') === 'success' ? null : ($addtransresult['message'] ?? 'AddTransaction não retornou sucesso')),
     ));
 
@@ -224,8 +226,9 @@ if ($token) {
  		$addtransvalues['transid']			= 'ggnb_'.$api_mode.'_'.'_'.$tituloStatus.'-'.$charge_id.'['.$valorPagoOuIdentificado.':'.$paymentAmount.']';
  		$addtransvalues['date']				= date('d/m/Y');
 		$addtransresult = localAPI('addtransaction', $addtransvalues, $whmcsAdmin);
+    $efiResultados[] = array('request' => $addtransvalues, 'response' => $addtransresult);
     $registrarEfi(array(
-        'resultado_baixa' => json_encode(array('request' => $addtransvalues, 'response' => $addtransresult), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
+        'resultado_baixa' => json_encode($efiResultados, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
         'erro' => (($addtransresult['result'] ?? '') === 'success' ? null : ($addtransresult['message'] ?? 'AddTransaction não retornou sucesso')),
     ));
 
@@ -250,8 +253,9 @@ if ($token) {
  		$addtransvalues['transid']			= 'ggnb_'.$api_mode.'_unpaid-'.$charge_id.'';
  		$addtransvalues['date']				= date('d/m/Y');
 		$addtransresult = localAPI('addtransaction', $addtransvalues, $whmcsAdmin);
+    $efiResultados[] = array('request' => $addtransvalues, 'response' => $addtransresult);
     $registrarEfi(array(
-        'resultado_baixa' => json_encode(array('request' => $addtransvalues, 'response' => $addtransresult), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
+        'resultado_baixa' => json_encode($efiResultados, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
         'erro' => (($addtransresult['result'] ?? '') === 'success' ? null : ($addtransresult['message'] ?? 'AddTransaction não retornou sucesso')),
     ));
 
