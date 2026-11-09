@@ -20,6 +20,7 @@ require_once __DIR__ . '/../../../../tarifasTHX.php';
 require_once __DIR__ . '/../sdk/efi_rest.php';
 use Gerencianet\Exception\GerencianetException;
 use Gerencianet\Gerencianet;
+use WHMCS\Database\Capsule;
 
 // Reporta todos os erros e avisos do php independende da configuração do servidor
 
@@ -36,8 +37,31 @@ if (!$params['type']) {
 	die("Module Not Activated");
 }
 
+// Cada recebimento é registrado separadamente, sem interromper o callback se o log falhar.
+$efiLogId = null;
+$efiLog = array(
+    'data_recebimento' => date('Y-m-d H:i:s'),
+    'token' => (string)($_REQUEST['notification'] ?? ''),
+    'metodo' => $_SERVER['REQUEST_METHOD'] ?? '',
+    'ip' => $_SERVER['REMOTE_ADDR'] ?? '',
+    'dados_recebidos' => json_encode(array('get' => $_GET, 'post' => $_POST, 'body' => file_get_contents('php://input')), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
+);
+$registrarEfi = function (array $dados = array()) use (&$efiLog, &$efiLogId) {
+    $efiLog = array_merge($efiLog, $dados);
+    try {
+        if ($efiLogId === null) {
+            $efiLogId = Capsule::table('efi_notificacoes')->insertGetId($efiLog);
+        } else {
+            Capsule::table('efi_notificacoes')->where('id', $efiLogId)->update($dados);
+        }
+    } catch (\\Throwable $e) {
+        // O log não pode interromper o processamento financeiro.
+    }
+};
+$registrarEfi();
+
 // Recebe o GN token
-$token = $_REQUEST['notification'];
+$token = $_REQUEST['notification'] ?? null;
 
 
 
@@ -83,6 +107,7 @@ if ($token) {
 	try {
 		$api = new Gerencianet($options);
 		$notification = $api->getNotification($params, []);
+        $registrarEfi(array('retorno_efi' => json_encode($notification, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)));
 
 		// Prepara dados retornados
 		@$notificationDataEnd	= end($notification['data']);
@@ -93,6 +118,12 @@ if ($token) {
 		$previousStatus			= $notificationData['status']['previous']; // Status anterior
 		$chargeStatus			= $notificationData['status']['current']; // Status atual
 		$tituloStatus = $chargeStatus;
+        $registrarEfi(array(
+            'invoice_id' => $invoiceId,
+            'charge_id' => $charge_id,
+            'status' => $chargeStatus,
+            'valor' => $paymentAmount,
+        ));
 
 
 		enviaLogTHXJdl('Novo post de notificação gerencianet '.date('d/m/Y G:i').'<br /> Token: '.$token.'<br /> Status: '.$chargeStatus.'<br /> Valor Pago: '.$paymentAmount.'<br /> Dados Brutos da ultima notificação: <br /><pre>'.print_r($notificationData, 1).'</pre>');
@@ -112,10 +143,12 @@ if ($token) {
 		echo 'Dados da Fatura: ', json_encode($invoice_data);
 
 	} catch (GerencianetException $e) {
+        $registrarEfi(array('erro' => (string)$e->errorDescription));
 		enviaLogTHXJdl($token.'<br />'.print_r($e->errorDescription, 1));
 		die( print_r($e->errorDescription) );
 
 	} catch (Exception $e) {
+        $registrarEfi(array('erro' => $e->getMessage()));
 		enviaLogTHXJdl($token.'<br />'.print_r($e->getMessage(), 1));
 		die( print_r($e->getMessage()) );
 	}
@@ -130,6 +163,10 @@ if ($token) {
 	$addtransvalues['transid']			= 'ggnb_'.$api_mode.'_'.'_notification-'.$charge_id.'['.$chargeStatus.']';
 	$addtransvalues['date']				= date('d/m/Y');
 	$addtransresult = localAPI('addtransaction', $addtransvalues, $whmcsAdmin);
+    $registrarEfi(array(
+        'resultado_baixa' => json_encode(array('request' => $addtransvalues, 'response' => $addtransresult), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
+        'erro' => (($addtransresult['result'] ?? '') === 'success' ? null : ($addtransresult['message'] ?? 'AddTransaction não retornou sucesso')),
+    ));
 
 
 
@@ -187,6 +224,10 @@ if ($token) {
  		$addtransvalues['transid']			= 'ggnb_'.$api_mode.'_'.'_'.$tituloStatus.'-'.$charge_id.'['.$valorPagoOuIdentificado.':'.$paymentAmount.']';
  		$addtransvalues['date']				= date('d/m/Y');
 		$addtransresult = localAPI('addtransaction', $addtransvalues, $whmcsAdmin);
+    $registrarEfi(array(
+        'resultado_baixa' => json_encode(array('request' => $addtransvalues, 'response' => $addtransresult), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
+        'erro' => (($addtransresult['result'] ?? '') === 'success' ? null : ($addtransresult['message'] ?? 'AddTransaction não retornou sucesso')),
+    ));
 
 		// Debug
 		echo 'Add transaction: ', json_encode($addtransresult);
@@ -209,6 +250,10 @@ if ($token) {
  		$addtransvalues['transid']			= 'ggnb_'.$api_mode.'_unpaid-'.$charge_id.'';
  		$addtransvalues['date']				= date('d/m/Y');
 		$addtransresult = localAPI('addtransaction', $addtransvalues, $whmcsAdmin);
+    $registrarEfi(array(
+        'resultado_baixa' => json_encode(array('request' => $addtransvalues, 'response' => $addtransresult), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
+        'erro' => (($addtransresult['result'] ?? '') === 'success' ? null : ($addtransresult['message'] ?? 'AddTransaction não retornou sucesso')),
+    ));
 
 		// Debug
 		echo 'Resultado: ', json_encode($addtransresult);
@@ -220,6 +265,7 @@ if ($token) {
 	}
 
 } elseif( !$token ) {
+    $registrarEfi(array('erro' => 'Nenhum token válido recebido.'));
 	enviaLogTHXJdl($token.'<br />'.'Nenhum token válido recebido.');
 	die('Nenhum token válido recebido.');
 }
