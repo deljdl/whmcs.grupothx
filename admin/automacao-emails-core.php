@@ -363,7 +363,7 @@ if($acao == 'alterarStatusEnvio')
 
 if($acao == 'testarEnvio')
 {
-    testarEnvio($hospedagem);
+    testarEnvio($hospedagem, $server);
     exit;
 }
 
@@ -470,7 +470,7 @@ echo renderListaEmails(
 
 echo renderFormularioNovoEmail();
 
-function testarEnvio($hospedagem)
+function testarEnvio($hospedagem, $server)
 {
     header('Content-Type: application/json');
 
@@ -520,7 +520,7 @@ function testarEnvio($hospedagem)
     $senha = $emailsGerenciados[$email]['senha'];
 
     $dominio = $hospedagem['domain'];
-    $servidorSMTP = 'mail.' . $dominio;
+    $servidorSMTP = $server->hostname;
 
     $dataHora = date('d/m/Y, H:i:s');
 
@@ -655,8 +655,6 @@ Esta é uma mensagem automática de teste de envio.";
     smtpComandoTeste($socket, 'EHLO ' . $dominio);
 
     smtpComandoTeste($socket, 'AUTH LOGIN');
-
-    $respostaUsuario = fgets($socket, 515);
 
     fwrite($socket, base64_encode($email) . "\r\n");
 
