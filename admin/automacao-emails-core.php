@@ -650,7 +650,9 @@ Esta é uma mensagem automática de teste de envio.";
         return $resposta;
     }
 
-    $resposta = fgets($socket, 515);
+    do {
+        $resposta = fgets($socket, 515);
+    } while($resposta !== false && isset($resposta[3]) && $resposta[3] === '-');
 
     smtpComandoTeste($socket, 'EHLO ' . $dominio);
 
