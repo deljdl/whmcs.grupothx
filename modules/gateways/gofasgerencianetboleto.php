@@ -181,10 +181,10 @@ function gofasgerencianetboleto_link( $params ) {
 					if($pay_charge_['error']){
 						$error	= $pay_charge_['error'];
 					}
-					if ( is_array($pay_charge) && !empty($pay_charge['data']['link']) ) {
-						$link		= $pay_charge['data']['link'];
-						$expire_at	= $pay_charge['data']['expire_at'];
-						$barcode	= $pay_charge['data']['barcode'];
+					if (is_array($pay_charge) && !empty($pay_charge['data']['charge_id']) && (int)$pay_charge['data']['charge_id'] === (int)$charge_id) {
+						$link		= $pay_charge['data']['link'] ?? '';
+						$expire_at	= $pay_charge['data']['expire_at'] ?? '';
+						$barcode	= $pay_charge['data']['barcode'] ?? '';
 						// Cria transação no whmcs "Boleto gerado aguardando pagamento."
 						$addtrans = ggnb_add_trans($user_id,$invoice_id,$charge_id,$whmcsAdmin, $api_mode, $system_url, $debug_or_log );
 						if($addtrans['error']) {
@@ -200,6 +200,7 @@ function gofasgerencianetboleto_link( $params ) {
 						}
 						if ($ggnb_store_billet['error']) {
 							$error = $ggnb_store_billet['error'];
+							$erroGravacaoEfi = $ggnb_store_billet['api_error'] ?? '';
 						}
 					}
 					elseif( is_string($pay_charge) ) {
@@ -248,12 +249,14 @@ function gofasgerencianetboleto_link( $params ) {
 				$operation = 'registrar boleto no WHMCS';
 			} elseif (!empty($charge_id_['error']) && $error === $charge_id_['error']) {
 				$operation = 'criar cobrança na Efí';
+			} elseif (!empty($ggnb_store_billet['error']) && $error === $ggnb_store_billet['error']) {
+				$operation = 'salvar boleto no banco';
 			} elseif (!empty($pay_charge_['error']) && $error === $pay_charge_['error']) {
 				$operation = 'emitir boleto na Efí';
 			}
 			$invoiceDetails['Operação que falhou'] = $operation;
 			$invoiceDetails['ID da cobrança existente'] = $trans_id ?: ($chargeExistID ?? '');
-			$sendEmailonError = ggnb_send_error_email( $invoice_id, $user_id, $firstname, $lastname, $system_url, $whmcsAdmin, $emailonError, $error, $debug_or_log, $addtrans['api_error'] ?? $pay_charge_['api_error'] ?? $charge_id_['api_error'] ?? '', $invoiceDetails, $operation );
+			$sendEmailonError = ggnb_send_error_email( $invoice_id, $user_id, $firstname, $lastname, $system_url, $whmcsAdmin, $emailonError, $error, $debug_or_log, $erroGravacaoEfi ?? $addtrans['api_error'] ?? $pay_charge_['api_error'] ?? $charge_id_['api_error'] ?? '', $invoiceDetails, $operation );
 			if ($debug_or_log) {
 				$log_result['sendEmailonError'] = $sendEmailonError;
 			}

@@ -486,50 +486,72 @@ function ggnb_add_trans( $USERID, $INVOICEID, $CHARGEID, $whmcsAdmin, $api_mode,
  */
 if( !function_exists('ggnb_store_billet') ) {
 function ggnb_store_billet($pay_charge,$invoice_amount,$invoice_id,$debug_or_log,$api_mode) {
+    $charge = $pay_charge['data'] ?? array();
+    $pix = $charge['pix'] ?? array();
 
-	 //die('die jardel ggnb_store_billet<pre>'.print_r($pay_charge, 1).'</pre>'); //aqui o boleto já foi gerado :()
-	 $date = str_replace('/', '-', $pay_charge['data']['charges']['0']['dueDate']) ;
-	 $dueDate = date("Y-m-d", strtotime($date));
-	 $data = array(
-				'invoice_id'=>$invoice_id,
-				'charge_id'=>$pay_charge['data']['charge_id'],
-				'link'=>$pay_charge['data']['link'],
-				'pdf'=>$pay_charge['data']['pdf']['charge'],
-				'expire_at'=> $pay_charge['data']['expire_at'],
-				'total'=> $pay_charge['data']['total'],
-				'barcode'=>$pay_charge['data']['barcode'],
-				'status'=>$pay_charge['data']['status'],
-				'qrcode'=> isset($pay_charge['data']['pix']['qrcode']) ? $pay_charge['data']['pix']['qrcode'] : '',
-				'qrcode_image'=> isset($pay_charge['data']['pix']['qrcode_image']) ? $pay_charge['data']['pix']['qrcode_image'] : '',
-				'api_mode'=>$api_mode,
-			);
-	 try {
+    $data = array(
+        'invoice_id' => (int)$invoice_id,
+        'charge_id' => (int)($charge['charge_id'] ?? 0),
+        'link' => trim((string)($charge['link'] ?? '')),
+        'pdf' => trim((string)($charge['pdf']['charge'] ?? '')),
+        'expire_at' => (string)($charge['expire_at'] ?? ''),
+        'total' => (int)($charge['total'] ?? 0),
+        'barcode' => trim((string)($charge['barcode'] ?? '')),
+        'status' => (string)($charge['status'] ?? ''),
+        'qrcode' => (string)($pix['qrcode'] ?? ''),
+        'qrcode_image' => (string)($pix['qrcode_image'] ?? ''),
+        'api_mode' => $api_mode
+    );
 
-		$save_billet = Capsule::table('gofasgerencianetboleto') ->insert($data);
-		
-	}
-	catch (\Exception $e) {
-		$error = "Não foi possível gravar o Boleto no banco de dados. {$e->getMessage()}";
-	}
-	
-	if ($error) {
-		if ($debug_or_log) {
-			return array('error'=>$error, 'data'=>$data, 'date'=>$date,'duedate'=>$dueDate, 'save_billet'=>$save_billet);
-		}
-		else {
-			return array('error'=>$error);
-		}
-	}
-	elseif (!$error) {
-		if ($debug_or_log) {
-			return array('sucess'=>true, 'data'=>$data, 'date'=>$date,'duedate'=>$dueDate, 'save_billet'=>$save_billet);
-		}
-		else {
-			return array('sucess'=>true);
-		}
-		
-	}
-		
+    // Validar os dados necessários para exibir o boleto ANTES da gravação.
+    // Pix não é obrigatório em boletos que não o oferecem.
+    $faltando = array();
+    foreach (array('charge_id','link','expire_at','total','barcode','status') as $campo) {
+        if ($data[$campo] === '' || $data[$campo] === 0) $faltando[] = $campo;
+    }
+    if ($data['charge_id'] > 0 && !empty($pay_charge['data']['charge_id'])
+        && (int)$pay_charge['data']['charge_id'] !== $data['charge_id']) {
+        $faltando[] = 'charge_id_inconsistente';
+    }
+    if ($data['expire_at'] !== '' && !preg_match('/^\d{4}-\d{2}-\d{2}$/', $data['expire_at'])) {
+        $faltando[] = 'expire_at_invalido';
+    }
+
+    $log = array(
+        'invoice_id' => $invoice_id,
+        'charge_id' => $data['charge_id'],
+        'api_mode' => $api_mode,
+        'valor_centavos' => $data['total'],
+        'vencimento' => $data['expire_at'],
+        'status' => $data['status'],
+        'link_presente' => $data['link'] !== '',
+        'pdf_presente' => $data['pdf'] !== '',
+        'barcode_presente' => $data['barcode'] !== '',
+        'pix_copia_cola_presente' => $data['qrcode'] !== '',
+        'pix_imagem_presente' => $data['qrcode_image'] !== '',
+        'campos_invalidos' => $faltando,
+        'origem' => strtok((string)($_SERVER['REQUEST_URI'] ?? 'cron'), '?')
+    );
+
+    if ($faltando) {
+        $error = 'Cobrança Efí não foi armazenada: dados obrigatórios ausentes ou inválidos ('
+            .implode(', ', $faltando).'). ID Efí: '.$data['charge_id'].'.';
+        logActivity('Efí boleto incompleto: '.json_encode($log, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+        return array('error' => $error, 'api_error' => json_encode($log, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+    }
+
+    try {
+        Capsule::table('gofasgerencianetboleto')->insert($data);
+        return array('sucess' => true, 'data' => $debug_or_log ? $log : array());
+    } catch (\Throwable $e) {
+        $log['erro_banco'] = $e->getMessage();
+        logActivity('Efí boleto não salvo: '.json_encode($log, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+        return array(
+            'error' => 'Falha ao gravar cobrança Efí '.$data['charge_id'].' no banco: '.$e->getMessage(),
+            'api_error' => json_encode($log, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)
+        );
+    }
+}
 }}
 
 /**
