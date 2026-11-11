@@ -42,11 +42,24 @@ function asaas_config()
             'Size' => '80',
             'Description' => 'Credencial exclusiva da produção.',
         ],
-        'webhookToken' => [
-            'FriendlyName' => 'Token do webhook',
+        'sandboxWebhookToken' => [
+            'FriendlyName' => 'Token webhook Sandbox',
             'Type' => 'password',
             'Size' => '80',
-            'Description' => 'Token configurado no painel Asaas (não é a chave da API).',
+            'Description' => 'Token gerado no webhook do ambiente Sandbox.',
+        ],
+        'productionWebhookToken' => [
+            'FriendlyName' => 'Token webhook Produção',
+            'Type' => 'password',
+            'Size' => '80',
+            'Description' => 'Token gerado no webhook de Produção.',
+        ],
+        'webhookUrl' => [
+            'FriendlyName' => 'URL do webhook',
+            'Type' => 'text',
+            'Size' => '80',
+            'Default' => 'https://central.grupothx.com.br/modules/gateways/callback/asaas.php',
+            'Description' => 'Copie esta URL para configurar os webhooks no Asaas. O endpoint ainda está em desenvolvimento.',
         ],
     ];
 }
