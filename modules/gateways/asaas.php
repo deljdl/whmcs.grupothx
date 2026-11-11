@@ -30,11 +30,17 @@ function asaas_config()
             'Default' => 'sandbox',
             'Description' => 'Produção não libera a emissão de cobranças.',
         ],
-        'apiKey' => [
-            'FriendlyName' => 'Chave da API Asaas',
+        'sandboxApiKey' => [
+            'FriendlyName' => 'Token API Sandbox',
             'Type' => 'password',
             'Size' => '80',
-            'Description' => 'Credencial do ambiente selecionado.',
+            'Description' => 'Credencial exclusiva do ambiente de testes.',
+        ],
+        'productionApiKey' => [
+            'FriendlyName' => 'Token API Produção',
+            'Type' => 'password',
+            'Size' => '80',
+            'Description' => 'Credencial exclusiva da produção.',
         ],
         'webhookToken' => [
             'FriendlyName' => 'Token do webhook',
