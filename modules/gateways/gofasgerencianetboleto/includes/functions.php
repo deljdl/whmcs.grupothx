@@ -551,7 +551,6 @@ function ggnb_store_billet($pay_charge,$invoice_amount,$invoice_id,$debug_or_log
             'api_error' => json_encode($log, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)
         );
     }
-}
 }}
 
 /**
