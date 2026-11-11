@@ -52,7 +52,7 @@ function asaas_config()
             'FriendlyName' => 'Token webhook Produção',
             'Type' => 'password',
             'Size' => '80',
-            'Description' => 'Token gerado no webhook de Produção.<br><strong>URL para ambos os ambientes:</strong><br><input type="text" readonly onclick="this.select()" style="width:100%;max-width:620px" value="https://central.grupothx.com.br/modules/gateways/callback/asaas.php"> <small>Endpoint ainda em desenvolvimento. Não ative os webhooks.</small>',
+            'Description' => 'Token gerado no webhook de Produção.<br><strong>URL para ambos os ambientes:</strong><br><code>https://central.grupothx.com.br/modules/gateways/callback/asaas.php</code> <small>Endpoint ainda em desenvolvimento. Não ative os webhooks.</small>',
         ],
 
     ];
