@@ -32,27 +32,34 @@ function asaas_config()
         ],
         'sandboxApiKey' => [
             'FriendlyName' => 'Token API Sandbox',
-            'Type' => 'password',
+            'Type' => 'text',
             'Size' => '80',
-            'Description' => 'Credencial exclusiva do ambiente de testes. <button type="button" class="btn btn-default btn-xs" onclick="var i=this.closest(&quot;td&quot;).querySelector(&quot;input[type=password], input[type=text]&quot;); if(i){i.type=i.type===&quot;password&quot;?&quot;text&quot;:&quot;password&quot;;this.textContent=i.type===&quot;password&quot;?&quot;Mostrar&quot;:&quot;Ocultar&quot;;}">Mostrar</button>',
+            'Description' => 'Credencial exclusiva do ambiente de testes.',
         ],
         'productionApiKey' => [
             'FriendlyName' => 'Token API Produção',
-            'Type' => 'password',
+            'Type' => 'text',
             'Size' => '80',
-            'Description' => 'Credencial exclusiva da produção. <button type="button" class="btn btn-default btn-xs" onclick="var i=this.closest(&quot;td&quot;).querySelector(&quot;input[type=password], input[type=text]&quot;); if(i){i.type=i.type===&quot;password&quot;?&quot;text&quot;:&quot;password&quot;;this.textContent=i.type===&quot;password&quot;?&quot;Mostrar&quot;:&quot;Ocultar&quot;;}">Mostrar</button>',
+            'Description' => 'Credencial exclusiva da produção.',
         ],
         'sandboxWebhookToken' => [
             'FriendlyName' => 'Token webhook Sandbox',
-            'Type' => 'password',
+            'Type' => 'text',
             'Size' => '80',
-            'Description' => 'Token gerado no webhook do ambiente Sandbox. <button type="button" class="btn btn-default btn-xs" onclick="var i=this.closest(&quot;td&quot;).querySelector(&quot;input[type=password], input[type=text]&quot;); if(i){i.type=i.type===&quot;password&quot;?&quot;text&quot;:&quot;password&quot;;this.textContent=i.type===&quot;password&quot;?&quot;Mostrar&quot;:&quot;Ocultar&quot;;}">Mostrar</button>',
+            'Description' => 'Token gerado no webhook do ambiente Sandbox.',
+        ],
+        'asaasFee' => [
+            'FriendlyName' => 'Tarifa Asaas (R$)',
+            'Type' => 'text',
+            'Size' => '10',
+            'Default' => '0,99',
+            'Description' => 'Valor de referência da tarifa por pagamento. Ainda não utilizado nas baixas.',
         ],
         'productionWebhookToken' => [
             'FriendlyName' => 'Token webhook Produção',
-            'Type' => 'password',
+            'Type' => 'text',
             'Size' => '80',
-            'Description' => 'Token gerado no webhook de Produção. <button type="button" class="btn btn-default btn-xs" onclick="var i=this.closest(&quot;td&quot;).querySelector(&quot;input[type=password], input[type=text]&quot;); if(i){i.type=i.type===&quot;password&quot;?&quot;text&quot;:&quot;password&quot;;this.textContent=i.type===&quot;password&quot;?&quot;Mostrar&quot;:&quot;Ocultar&quot;;}">Mostrar</button><div style="margin-top:8px;max-width:100%;"><strong>URL para cadastrar no webhook do Asaas:</strong><div style="overflow-wrap:anywhere;word-break:break-all;max-width:100%;"><code>https://central.grupothx.com.br/modules/gateways/callback/asaas.php</code></div><small>Endpoint ainda em desenvolvimento. Não ative os webhooks.</small></div>',
+            'Description' => 'Token gerado no webhook de Produção.<div style="margin-top:8px;max-width:100%;"><strong>URL para cadastrar no webhook do Asaas:</strong><div style="overflow-wrap:anywhere;word-break:break-all;max-width:100%;"><code>https://central.grupothx.com.br/modules/gateways/callback/asaas.php</code></div><small>Endpoint ainda em desenvolvimento. Não ative os webhooks.</small></div>',
         ],
 
     ];
