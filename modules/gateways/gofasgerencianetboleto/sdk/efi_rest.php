@@ -25,10 +25,46 @@ namespace Gerencianet {
    $h[]=$auth?'Authorization: Bearer '.$this->token():'Authorization: Basic '.base64_encode($this->clientId.':'.$this->clientSecret);
    $c=curl_init($this->baseUrl.$path); curl_setopt_array($c,array(CURLOPT_RETURNTRANSFER=>true,CURLOPT_CUSTOMREQUEST=>$method,CURLOPT_HTTPHEADER=>$h,CURLOPT_CONNECTTIMEOUT=>15,CURLOPT_TIMEOUT=>45));
    if($body!==null)curl_setopt($c,CURLOPT_POSTFIELDS,json_encode($body));
-   $r=curl_exec($c); $status=(int)curl_getinfo($c,CURLINFO_HTTP_CODE); $responseType=(string)curl_getinfo($c,CURLINFO_CONTENT_TYPE); $ce=curl_error($c); curl_close($c);
-   if($r===false)throw new GerencianetException(array('error'=>'connection_error','error_description'=>'Falha de comunicação com a API Efí: '.$ce));
-   $d=json_decode($r,true); if(!is_array($d))throw new GerencianetException(array('error'=>'invalid_response','error_description'=>'A API Efí retornou uma resposta inválida na rota '.$path.' (HTTP '.$status.', Content-Type: '.preg_replace('/[^a-zA-Z0-9;=+\/._ -]/','',substr($responseType,0,100)).').','code'=>$status),$status);
-   if($status<200||$status>=300)throw new GerencianetException($d,$status); return $d;
+   $r=curl_exec($c);
+   $status=(int)curl_getinfo($c,CURLINFO_HTTP_CODE);
+   $responseType=(string)curl_getinfo($c,CURLINFO_CONTENT_TYPE);
+   $ce=curl_error($c); $errno=curl_errno($c);
+   $timings=array(
+    'ip'=>curl_getinfo($c,CURLINFO_PRIMARY_IP),
+    'dns_ms'=>round(curl_getinfo($c,CURLINFO_NAMELOOKUP_TIME)*1000),
+    'connect_ms'=>round(curl_getinfo($c,CURLINFO_CONNECT_TIME)*1000),
+    'tls_ms'=>round(curl_getinfo($c,CURLINFO_APPCONNECT_TIME)*1000),
+    'first_byte_ms'=>round(curl_getinfo($c,CURLINFO_STARTTRANSFER_TIME)*1000),
+    'total_ms'=>round(curl_getinfo($c,CURLINFO_TOTAL_TIME)*1000)
+   );
+   curl_close($c);
+   if($r===false){
+    $this->logFailure($method,$path,$status,$errno,$ce,$timings);
+    throw new GerencianetException(array('error'=>'connection_error','error_description'=>'Falha de comunicação com a API Efí: '.$ce));
+   }
+   $d=json_decode($r,true);
+   if(!is_array($d)){
+    $this->logFailure($method,$path,$status,0,'Resposta JSON inválida (Content-Type: '.substr($responseType,0,80).')',$timings);
+    throw new GerencianetException(array('error'=>'invalid_response','error_description'=>'A API Efí retornou uma resposta inválida na rota '.$path.' (HTTP '.$status.').','code'=>$status),$status);
+   }
+   if($status<200||$status>=300){
+    $this->logFailure($method,$path,$status,0,'Erro HTTP retornado pela Efí',$timings);
+    throw new GerencianetException($d,$status);
+   }
+   return $d;
+  }
+  // Registro centralizado de falhas de todas as operações (inclusive autenticação).
+  // Nunca registrar credenciais, corpo da requisição ou token de notificação.
+  private function logFailure($method,$path,$status,$errno,$message,$timings){
+   if(!function_exists('logActivity'))return;
+   $safePath=preg_replace('~(/v1/notification/)[^/?]+~','$1[oculto]',$path);
+   $info=array(
+    'method'=>$method,'route'=>$safePath,'http'=>$status,
+    'curl_errno'=>$errno,'curl_error'=>$message,'timings'=>$timings,
+    'origin'=>strtok((string)($_SERVER['REQUEST_URI'] ?? 'cron'),'?')
+   );
+   try{logActivity('Efí API HTTP: '.json_encode($info,JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES));}
+   catch(\Throwable $e){}
   }
   private function token(){
    if($this->accessToken)return $this->accessToken;

@@ -46,247 +46,116 @@ function gofasgerencianetboleto_link( $params ) {
 		*
 		*/
 		
-		if ( $trans_id and !$error) {
+        // A cobrança emitida é imutável. Utilizar primeiro o boleto salvo no WHMCS.
+        // Se existir um ID de cobrança, jamais emitir outro boleto automaticamente.
+        $boletoLocal = Capsule::table('gofasgerencianetboleto')
+            ->where('invoice_id', $invoice_id)
+            ->where('api_mode', $api_mode)
+            ->when($trans_id, function ($query) use ($trans_id) {
+                return $query->where('charge_id', $trans_id);
+            })
+            ->orderBy('charge_id', 'desc')
+            ->first();
 
-			$chargeExist_			= ggnb_detail_charge( $api, $trans_id, $debug_or_log );
-			if (!is_array($chargeExist_) || empty($chargeExist_['result']['data']['charge_id'])) {
-				$error = is_array($chargeExist_) ? ($chargeExist_['error'] ?? 'Resposta incompleta da consulta Efí.') : ($chargeExist_ ?: 'Falha na consulta Efí.');
-				// A cobrança antiga pode ter sido removida na Efí; nesse caso, permita gerar outra.
-				$trans_id = false;
-				$chargeExist = array('data' => array('charge_id' => 0, 'total' => 0, 'status' => 'canceled', 'payment' => array('banking_billet' => array('expire_at' => '1970-01-01'))));
-			} else {
-				$chargeExist = $chargeExist_['result'];
-			}
-			$chargeExistID			= (int)$chargeExist['data']['charge_id']; // ID da transação gerada pela fatura
-			$chargeExistTotal		= (int)$chargeExist['data']['total'];
-			$chargeExistStatus		= (string)$chargeExist['data']['status'];
-			$chargeExistDuedate		= $chargeExist['data']['payment']['banking_billet']['expire_at'];
-			$chargeExistDiscount	= $chargeExist['data']['payment']['discount'];
-			if ($chargeExistDiscount and $chargeExistDiscount > 0) {
-				$chargeExistTotal	= $chargeExistTotal - $chargeExistDiscount;
-			}
-			
-			if ($debug_or_log ) {
-				$log_result['chargeExist'] = $chargeExist_['log_result'];
-				$log_result['chargeExistTotal__']	= '$chargeExistTotal: '.$chargeExistTotal.'<br>$invoice_amount : '. $invoice_amount ;
-				$log_result['chargeExistTotal_']	.= '<br>$discount_tax_valueRS: '.$discount_tax_valueRS.'<br>';
-				if ($chargeExistTotal === $invoice_amount ) {
-					$log_result['chargeExistTotal']	.= 'valor da transação existente é igual ao valor da fatura';
-				}
-				if ($chargeExistTotal !== $invoice_amount ) {
-					$log_result['chargeExistTotal']	.= '<br>valor da transação existente é diferente do valor da fatura';
-				}
-			}
-			
-			if (is_array($chargeExist_) && !empty($chargeExist_['error'])) {
-				$error = $chargeExist_['error'];
-			}
-			///
-			if (!$error and $chargeExistID === $trans_id and $chargeExistStatus !== 'canceled' and $chargeExistTotal === $invoice_amount) {
-				$link		= $chargeExist['data']['payment']['banking_billet']['link'];
-				$expire_at	= $chargeExistDuedate;
-				$barcode	= $chargeExist['data']['payment']['banking_billet']['barcode'];
-			}
-			///
-// Atualização automática de vencimento desativada: manter o boleto original, inclusive vencido.
-// Evita requisições de atualização à Efí e alertas de erro decorrentes dessa operação.
-			// elseif (!$error and  ($chargeExistID === $trans_id and $chargeExistStatus !== 'canceled' and $chargeExistDuedate < date('Y-m-d')) and !$configurations and !$cancelBillet ) {
-				// // edita transação gerada anteriormente
-				// $updateBillet = ggnb_update_billet( $api, $chargeExistID, $billet_duedate, $system_url, $debug_or_log );
-				// // segunda via do boleto com multa e juros
-				// if ( $updateBillet['result'] === 'sucess' ) {	
-					// $link		= $chargeExist['data']['payment']['banking_billet']['link'];
-					// $expire_at	= $billet_duedate;
-					// $barcode	= $chargeExist['data']['payment']['banking_billet']['barcode'];
-				// }
-				// else {
-					// $error = $updateBillet['error'];
-				// }
-				// if($debug_or_log){
-					// $log_result['updateBillet']	= $updateBillet;
-				// }
-			// }
-			///
-			elseif (!$error and ($chargeExistID === $trans_id and $chargeExistStatus === 'canceled' and $chargeExistDuedate >= date('Y-m-d')) ) {
-				$charge_id_ = ggnb_create_charge( $api, $body, $system_url, $debug_or_log); // body
-				$charge_id = $charge_id_['result'];
-				if($debug_or_log){
-					$log_result['charge_id_']	= $charge_id_;
-				}
-				if($charge_id_['error']){
-					$error	= $charge_id_['error'];
-				}
-				// Definir método de pagamanto e Gerar a Cobrança (retorna link do boleto etc)
-				if ( is_int($charge_id) ) {
-					$pay_charge_	= ggnb_pay_charge( $api, $charge_id, $body2, $system_url, $debug_or_log);
-					$pay_charge		= $pay_charge_['result'];
-					if($debug_or_log){
-						$log_result['pay_charge']	= $pay_charge_;
-					}
-					if($pay_charge_['error']){
-						$error	= $pay_charge_['error'];
-					}
-					
-					if ( is_array($pay_charge) && !empty($pay_charge['data']['link']) ) {
-						$link		= $pay_charge['data']['link'];
-						$expire_at	= $pay_charge['data']['expire_at'];
-						$barcode	= $pay_charge['data']['barcode'];
-						// Cria transação no whmcs "Boleto gerado aguardando pagamento."
-						$addtrans = ggnb_add_trans($user_id,$invoice_id,$charge_id,$whmcsAdmin, $api_mode, $system_url, $debug_or_log );
-						if($addtrans['error']) {
-							$error	= $addtrans['error'];
-						}
-						if($debug_or_log){
-							$log_result['addtrans']	= $addtrans;
-						}
-						// Save billet on DB
-						$ggnb_store_billet = ggnb_store_billet($pay_charge,$invoice_amount,$invoice_id,$debug_or_log,$api_mode);
-						if($debug_or_log){
-							$log_result['ggnb_store_billet']	= $ggnb_store_billet;
-						}
-						if ($ggnb_store_billet['error']) {
-							$error = $ggnb_store_billet['error'];
-						}
-					}
-					elseif( is_string($pay_charge) ) {
-						$error = $pay_charge_['error'] ?? $error;
-					}
-				}
-				else {
-					$error = $charge_id_['error'] ?? $error;
-				}
-			}
-			
-			///
-			elseif (!$error and $chargeExistID === $trans_id and $chargeExistDuedate >= date('Y-m-d') and $chargeExistTotal !== $invoice_amount ) {
-				if($cancelBillet) {
-					$cancelCharge = ggnb_cancel_charge( $api, $chargeExistID, $debug_or_log );
-					 if($cancelCharge['error']){
-						 $error = $cancelCharge['error'];
-					 }
-					 if($debug_or_log){
-						 $log_result['cancelCharge']	= $cancelCharge;
-					 }
-				}
-				
-				$charge_id_ = ggnb_create_charge( $api, $body, $system_url, $debug_or_log); // body
-				$charge_id = $charge_id_['result'];
-				if($debug_or_log){
-					$log_result['charge_id_']	= $charge_id_;
-				}
-				if($charge_id_['error']){
-					$error	= $charge_id_['error'];
-				}
-				// Definir método de pagamanto e Gerar a Cobrança (retorna link do boleto etc)
-				if ( is_int($charge_id) ) {
-					$pay_charge_	= ggnb_pay_charge( $api, $charge_id, $body2, $system_url, $debug_or_log);
-					$pay_charge		= $pay_charge_['result'];
-					if($debug_or_log){
-						$log_result['pay_charge']	= $pay_charge_;
-					}
-					if($pay_charge_['error']){
-						$error	= $pay_charge_['error'];
-					}
-					if ( is_array($pay_charge) && !empty($pay_charge['data']['link']) ) {
-						$link		= $pay_charge['data']['link'];
-						$expire_at	= $pay_charge['data']['expire_at'];
-						$barcode	= $pay_charge['data']['barcode'];
-						// Cria transação no whmcs "Boleto gerado aguardando pagamento."
-						$addtrans = ggnb_add_trans($user_id,$invoice_id,$charge_id,$whmcsAdmin, $api_mode, $system_url, $debug_or_log );
-						if($addtrans['error']) {
-							$error	= $addtrans['error'];
-						}
-						if($debug_or_log){
-							$log_result['addtrans']	= $addtrans;
-						}
-						// Save billet on DB
-						$ggnb_store_billet = ggnb_store_billet($pay_charge,$invoice_amount,$invoice_id,$debug_or_log,$api_mode);
-						if($debug_or_log){
-							$log_result['ggnb_store_billet']	= $ggnb_store_billet;
-						}
-						if ($ggnb_store_billet['error']) {
-							$error = $ggnb_store_billet['error'];
-						}
-					}
-					elseif( is_string($pay_charge) ) {
-						$error = $pay_charge_['error'] ?? $error;
-					}
-				}
-				else {
-						$error = $charge_id_['error'] ?? $error;
+        // Um boleto salvo no banco também impede reemissão caso sua
+        // transação não tenha sido gravada corretamente no WHMCS.
+        if (!$trans_id && $boletoLocal && (int)$boletoLocal->charge_id > 0) {
+            $trans_id = (int)$boletoLocal->charge_id;
+        }
 
-				}
-			}
-			
-			///
-			elseif (!$error and ($chargeExistID === $trans_id and $chargeExistDuedate < date('Y-m-d') ) and ($configurations or $cancelBillet) ) {
-				// cancela transação gerada anteriormente
-				if ( $chargeExistStatus === 'new' || $chargeExistStatus === 'waiting' || $chargeExistStatus === 'unpaid' ) {
-					$cancelCharge = ggnb_cancel_charge( $api, $chargeExistID, $debug_or_log );
-					 if($cancelCharge['error']){
-						 $error = $cancelCharge['error'];
-					 }
-					 if($debug_or_log){
-						 $log_result['cancelCharge']	= $cancelCharge;
-					 }
-					// segunda via do boleto com multa e juros
-					if ( $cancelCharge['result'] === 'sucess' ) {
-						// Criar transação
-						$charge_id_ = ggnb_create_charge( $api, $body, $system_url, $debug_or_log); // body
-						$charge_id = $charge_id_['result'];
-						if($debug_or_log){
-							$log_result['charge_id_']	= $charge_id_;
-						}
-						if($charge_id_['error']) {
-							$error = $charge_id_['error'];
-						}
-					}
-					else {
-						$error = $cancelCharge['error'];
-					}
-				}
-				elseif ($chargeExistStatus === 'canceled') { // ignora transação cancelada
-					$charge_id_ = ggnb_create_charge( $api, $body, $system_url, $debug); // body
-					$charge_id = $charge_id_['result'];
-					if($debug_or_log){
-						$log_result['charge_id_']	= $charge_id_;
-					}
-					if($charge_id_['error']){
-						$error	= $charge_id_['error'];
-					}
-				}
-				// Definir método de pagamanto e Gerar a Cobrança (retorna link do boleto etc)
-				if ( is_int($charge_id) ) {
-					$pay_charge_	= ggnb_pay_charge( $api, $charge_id, $body2, $system_url, $debug_or_log);
-					$pay_charge		= $pay_charge_['result'];
-					if($debug_or_log){
-						$log_result['pay_charge']	= $pay_charge_;
-					}
-					if($pay_charge_['error']){
-						$error	= $pay_charge_['error'];
-					}
-					if ( is_array($pay_charge) && !empty($pay_charge['data']['link']) ) {
-						$link		= $pay_charge['data']['link'];
-						$expire_at	= $pay_charge['data']['expire_at'];
-						$barcode	= $pay_charge['data']['barcode'];
-						// Cria transação no whmcs "Boleto gerado aguardando pagamento."
-						$addtrans = ggnb_add_trans($user_id,$invoice_id,$charge_id,$whmcsAdmin, $api_mode, $system_url, $debug_or_log );
-						if($addtrans['error']) {
-							$error	= $addtrans['error'];
-						}
-						if($debug_or_log){
-							$log_result['addtrans']	= $addtrans;
-						}
-					} elseif( is_string($pay_charge) ) {
-						$error = $pay_charge_['error'] ?? $error;
-					}
-				} else {
-					$error = $charge_id_['error'] ?? $error;
-					
-				}
-			}			
-		} // End of if ( $trans_id and !$error)
-		
+        if ($trans_id && !$error) {
+            $chargeExistID = (int)$trans_id;
+            $link = trim((string)($boletoLocal->link ?? ''));
+            $barcode = trim((string)($boletoLocal->barcode ?? ''));
+            $expire_at = (string)($boletoLocal->expire_at ?? '');
+            $pix = array(
+                'qrcode' => (string)($boletoLocal->qrcode ?? ''),
+                'qrcode_image' => (string)($boletoLocal->qrcode_image ?? '')
+            );
+
+            // Não consultar a Efí para boleto completo. Pix pode ser opcional
+            // para boletos antigos; sua ausência isolada não bloqueia o pagamento.
+            if ($link === '' || $barcode === '') {
+                $chargeExist_ = ggnb_detail_charge($api, $trans_id, $debug_or_log);
+                $chargeData = $chargeExist_['result']['data'] ?? array();
+
+                if (empty($chargeData)) {
+                    $error = 'Não foi possível recuperar a cobrança existente '.$trans_id.': '
+                        .($chargeExist_['error'] ?? 'resposta vazia da API Efí');
+                } elseif ((int)($chargeData['charge_id'] ?? 0) !== (int)$trans_id) {
+                    $error = 'A Efí retornou uma cobrança diferente da solicitada ('.$trans_id.').';
+                } else {
+                    $billetData = $chargeData['payment']['banking_billet'] ?? array();
+                    if ($link === '') $link = trim((string)($billetData['link'] ?? $chargeData['link'] ?? ''));
+                    if ($barcode === '') $barcode = trim((string)($billetData['barcode'] ?? $chargeData['barcode'] ?? ''));
+                    if ($expire_at === '') $expire_at = (string)($billetData['expire_at'] ?? $chargeData['expire_at'] ?? '');
+                    $pixApi = $chargeData['pix'] ?? $billetData['pix'] ?? array();
+                    if (empty($pix['qrcode'])) $pix['qrcode'] = (string)($pixApi['qrcode'] ?? '');
+                    if (empty($pix['qrcode_image'])) $pix['qrcode_image'] = (string)($pixApi['qrcode_image'] ?? '');
+
+                    // Preencher somente lacunas, sem atualizar valor ou vencimento.
+                    try {
+                        if ($boletoLocal) {
+                            $campos = array();
+                            if (empty($boletoLocal->link) && $link !== '') $campos['link'] = $link;
+                            if (empty($boletoLocal->barcode) && $barcode !== '') $campos['barcode'] = $barcode;
+                            if (empty($boletoLocal->qrcode) && $pix['qrcode'] !== '') $campos['qrcode'] = $pix['qrcode'];
+                            if (empty($boletoLocal->qrcode_image) && $pix['qrcode_image'] !== '') $campos['qrcode_image'] = $pix['qrcode_image'];
+                            if ($campos) {
+                                Capsule::table('gofasgerencianetboleto')
+                                    ->where('invoice_id', $invoice_id)
+                                    ->where('api_mode', $api_mode)
+                                    ->where('charge_id', $trans_id)
+                                    ->update($campos);
+                            }
+                        } else {
+                            Capsule::table('gofasgerencianetboleto')->insert(array(
+                                'invoice_id' => $invoice_id,
+                                'charge_id' => $trans_id,
+                                'api_mode' => $api_mode,
+                                'status' => (string)($chargeData['status'] ?? 'waiting'),
+                                'total' => (int)($chargeData['total'] ?? 0),
+                                'expire_at' => $expire_at,
+                                'link' => $link,
+                                'pdf' => (string)($billetData['pdf']['charge'] ?? ''),
+                                'barcode' => $barcode,
+                                'qrcode' => $pix['qrcode'],
+                                'qrcode_image' => $pix['qrcode_image']
+                            ));
+                        }
+                    } catch (\Throwable $e) {
+                        logActivity('Efí: falha ao restaurar boleto no banco: '.json_encode(array(
+                            'invoice_id' => $invoice_id, 'charge_id' => $trans_id,
+                            'erro' => $e->getMessage()
+                        ), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+                    }
+                }
+
+                if ($error) {
+                    logActivity('Efí: consulta de boleto existente falhou: '.json_encode(array(
+                        'invoice_id' => $invoice_id,
+                        'charge_id' => $trans_id,
+                        'possui_link_local' => !empty($boletoLocal->link),
+                        'possui_barcode_local' => !empty($boletoLocal->barcode),
+                        'possui_pix_local' => !empty($pix['qrcode']) || !empty($pix['qrcode_image']),
+                        'erro' => $error,
+                        'origem' => strtok((string)($_SERVER['REQUEST_URI'] ?? 'cron'), '?')
+                    ), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+                }
+            }
+            if (!$error && $link === '') {
+                $error = 'A cobrança '.$trans_id.' já existe, mas seu link de pagamento está ausente.';
+            }
+            if ($debug_or_log) {
+                $log_result['boleto_local'] = array(
+                    'invoice_id' => $invoice_id, 'charge_id' => $trans_id,
+                    'link_presente' => $link !== '', 'barcode_presente' => $barcode !== '',
+                    'pix_presente' => !empty($pix['qrcode']) || !empty($pix['qrcode_image']),
+                    'consultou_efi' => !$boletoLocal || empty($boletoLocal->link) || empty($boletoLocal->barcode)
+                );
+            }
+        }
+
 		/// The firt billet for the invoice
 		elseif ( !$trans_id and !$error ) {
 
@@ -383,7 +252,7 @@ function gofasgerencianetboleto_link( $params ) {
 				$operation = 'emitir boleto na Efí';
 			}
 			$invoiceDetails['Operação que falhou'] = $operation;
-			$invoiceDetails['ID da cobrança existente'] = $chargeExistID ?? $trans_id ?? '';
+			$invoiceDetails['ID da cobrança existente'] = $trans_id ?: ($chargeExistID ?? '');
 			$sendEmailonError = ggnb_send_error_email( $invoice_id, $user_id, $firstname, $lastname, $system_url, $whmcsAdmin, $emailonError, $error, $debug_or_log, $addtrans['api_error'] ?? $pay_charge_['api_error'] ?? $charge_id_['api_error'] ?? '', $invoiceDetails, $operation );
 			if ($debug_or_log) {
 				$log_result['sendEmailonError'] = $sendEmailonError;
