@@ -90,7 +90,44 @@ function asaas_config()
 
 function asaas_link($params)
 {
-    // Bloqueio intencional: a emissão só será implementada após validação no Sandbox.
-    return '<div class="alert alert-info">Pagamento Asaas em desenvolvimento. '
-        . 'Nenhuma cobrança será emitida por este gateway.</div>';
+    // Proteção obrigatória: nenhuma chamada financeira no ambiente de Produção.
+    if (($params['environment'] ?? 'sandbox') !== 'sandbox') {
+        return '<div class="alert alert-warning">Emissão em Produção ainda bloqueada durante os testes.</div>';
+    }
+
+    require_once __DIR__ . '/asaas/api.php';
+
+    try {
+        $charge = asaas_get_or_create_charge($params);
+        $key = (string) ($params['sandboxApiKey'] ?? '');
+        $id = (string) $charge['charge_id'];
+        $boleto = (string) ($charge['bank_slip_url'] ?: $charge['invoice_url']);
+        $html = '<div class="alert alert-info"><strong>Asaas Sandbox</strong> — cobrança de teste, sem valor financeiro real.</div>';
+
+        if ($boleto !== '' && preg_match('~^https://[a-z0-9.-]*asaas\\.com(?:\\.br)?/~i', $boleto)) {
+            $html .= '<p><a href="' . htmlspecialchars($boleto, ENT_QUOTES, 'UTF-8')
+                . '" target="_blank" rel="noopener">Visualizar boleto bancário</a></p>';
+        }
+
+        try {
+            $pix = asaas_api($key, 'GET', 'payments/' . rawurlencode($id) . '/pixQrCode');
+            if (!empty($pix['encodedImage'])) {
+                $html .= '<p><img alt="QR Code Pix" style="max-width:180px" src="data:image/png;base64,'
+                    . htmlspecialchars((string) $pix['encodedImage'], ENT_QUOTES, 'UTF-8') . '"></p>';
+            }
+            if (!empty($pix['payload'])) {
+                $html .= '<label>Pix Copia e Cola</label><textarea readonly class="form-control" rows="3" onclick="this.select()">'
+                    . htmlspecialchars((string) $pix['payload'], ENT_QUOTES, 'UTF-8') . '</textarea>';
+            }
+        } catch (\\Throwable $exception) {
+            $html .= '<p>Pix temporariamente indisponível. Utilize o boleto.</p>';
+        }
+        return $html;
+    } catch (\\Throwable $exception) {
+        logModuleCall('asaas', 'sandbox_invoice_error', [
+            'invoice_id' => (int) ($params['invoiceid'] ?? 0),
+        ], ['error' => $exception->getMessage()]);
+        return '<div class="alert alert-warning">Asaas Sandbox: '
+            . htmlspecialchars($exception->getMessage(), ENT_QUOTES, 'UTF-8') . '</div>';
+    }
 }
