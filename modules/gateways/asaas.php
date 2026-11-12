@@ -38,7 +38,7 @@ function asaas_config()
             'FriendlyName' => 'Token API Sandbox',
             'Type' => 'text',
             'Size' => '80',
-            'Description' => 'Credencial exclusiva do ambiente de testes. <a class="btn btn-default btn-xs" target="_blank" rel="noopener" href="/modules/gateways/asaas/test.php?environment=sandbox">Testar conexão Sandbox</a> <small>Salve o token antes de testar. Consulta somente leitura.</small>',
+            'Description' => 'Credencial exclusiva do ambiente de testes. <button type="button" class="btn btn-default btn-xs" onclick="var b=this,s=b.nextElementSibling;b.disabled=true;s.textContent=&#39; Testando...&#39;;fetch(&#39;/modules/gateways/asaas/test.php?environment=sandbox&#39;,{credentials:&#39;same-origin&#39;}).then(function(r){return r.text().then(function(t){s.textContent=&#39; &#39;+t;s.style.color=r.ok&&t.includes(&#39;HTTP 200&#39;)?&#39;green&#39;:&#39;#b94a48&#39;;});}).catch(function(){s.textContent=&#39; Falha na comunicação.&#39;;s.style.color=&#39;#b94a48&#39;;}).finally(function(){b.disabled=false;});">Testar conexão Sandbox</button><span role="status" aria-live="polite"></span> <small>Salve o token antes de testar. Consulta somente leitura.</small>',
         ],
         'sandboxWebhookToken' => [
             'FriendlyName' => 'Token webhook Sandbox',
@@ -54,7 +54,7 @@ function asaas_config()
             'FriendlyName' => 'Token API Produção',
             'Type' => 'text',
             'Size' => '80',
-            'Description' => 'Credencial exclusiva da produção. <a class="btn btn-default btn-xs" target="_blank" rel="noopener" href="/modules/gateways/asaas/test.php?environment=production">Testar conexão Produção</a> <small>Salve o token antes de testar. Consulta somente leitura.</small>',
+            'Description' => 'Credencial exclusiva da produção. <button type="button" class="btn btn-default btn-xs" onclick="var b=this,s=b.nextElementSibling;b.disabled=true;s.textContent=&#39; Testando...&#39;;fetch(&#39;/modules/gateways/asaas/test.php?environment=production&#39;,{credentials:&#39;same-origin&#39;}).then(function(r){return r.text().then(function(t){s.textContent=&#39; &#39;+t;s.style.color=r.ok&&t.includes(&#39;HTTP 200&#39;)?&#39;green&#39;:&#39;#b94a48&#39;;});}).catch(function(){s.textContent=&#39; Falha na comunicação.&#39;;s.style.color=&#39;#b94a48&#39;;}).finally(function(){b.disabled=false;});">Testar conexão Produção</button><span role="status" aria-live="polite"></span> <small>Salve o token antes de testar. Consulta somente leitura.</small>',
         ],
         'productionWebhookToken' => [
             'FriendlyName' => 'Token webhook Produção',
