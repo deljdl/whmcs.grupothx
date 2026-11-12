@@ -307,6 +307,7 @@ function asaas_get_or_create_charge($params)
             'description' => 'Fatura WHMCS #' . $invoiceId,
             'externalReference' => $reference,
             'postalService' => false,
+            'daysAfterDueDateToRegistrationCancellation' => 3650,
             'interest' => ['value' => 0],
             'fine' => ['value' => 0],
         ]);
