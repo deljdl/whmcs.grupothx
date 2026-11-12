@@ -118,6 +118,24 @@ try {
     asaas_record_issuance($invoiceId, $paymentId);
     asaas_record_notification($invoiceId, $paymentId, $eventType);
 
+    if ($eventType === 'PAYMENT_UPDATED') {
+        $key = trim((string) ($gateway['sandboxApiKey'] ?? ''));
+        if ($key === '') {
+            throw new RuntimeException('Token API Sandbox não configurado');
+        }
+        $payment = asaas_api($key, 'GET', 'payments/' . rawurlencode($paymentId));
+        if ((string) ($payment['id'] ?? '') !== $paymentId
+            || (string) ($payment['externalReference'] ?? '') !== 'whmcs-invoice-' . $invoiceId) {
+            throw new RuntimeException('Atualização de cobrança não corresponde à fatura');
+        }
+        asaas_install_charge_table();
+        asaas_save_charge($invoiceId, $payment);
+        asaas_store_boleto($key, $invoiceId, $paymentId);
+        asaas_store_pix($key, $invoiceId, $paymentId);
+        $finish('updated', 'Dados de boleto e Pix atualizados', $invoiceId);
+        exit('OK');
+    }
+
     if (!in_array($eventType, ['PAYMENT_CONFIRMED', 'PAYMENT_RECEIVED'], true)) {
         $finish('logged', 'Notificação registrada no histórico WHMCS sem baixa', $invoiceId);
         exit('OK');
