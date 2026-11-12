@@ -101,7 +101,7 @@ function asaas_link($params)
         $charge = asaas_get_or_create_charge($params);
         $key = (string) ($params['sandboxApiKey'] ?? '');
         $id = (string) $charge['charge_id'];
-        $boleto = (string) ($charge['bank_slip_url'] ?: $charge['invoice_url']);
+        $boleto = (string) ($charge['bank_slip_url'] ?? '');
         $html = '<div class="alert alert-info"><strong>Asaas Sandbox</strong> — cobrança de teste, sem valor financeiro real.</div>';
 
         if ($boleto !== '' && preg_match('~^https://[a-z0-9.-]*asaas\.com(?:\.br)?/~i', $boleto)) {
