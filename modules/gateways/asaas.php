@@ -1,7 +1,7 @@
 <?php
 /**
  * Gateway Asaas - Grupo THX
- * Etapa inicial: configuração apenas. Nenhuma cobrança é criada.
+ * Cobrança por ambiente configurado no WHMCS.
  */
 
 if (!defined('WHMCS')) {
@@ -28,7 +28,7 @@ function asaas_config()
             'Type' => 'dropdown',
             'Options' => 'sandbox,production',
             'Default' => 'sandbox',
-            'Description' => 'Selecione o ambiente usado pelo gateway. Durante os testes, somente o Sandbox será utilizado.',
+            'Description' => 'Selecione Sandbox para testes ou Produção para cobranças reais.',
         ],
         'sandboxSection' => [
             'Type' => 'System',
@@ -64,7 +64,7 @@ function asaas_config()
         ],
         'webhookSection' => [
             'Type' => 'System',
-            'Value' => '<div style="padding-top:5px;"><strong>URL para cadastrar no webhook do Asaas:</strong><div style="overflow-wrap:anywhere;word-break:break-all;"><code>https://central.grupothx.com.br/modules/gateways/callback/asaas.php</code></div><small>Webhook Sandbox pronto para testes. Mantenha o webhook de Produção desativado.</small></div>',
+            'Value' => '<div style="padding-top:5px;"><strong>URL para cadastrar no webhook do Asaas:</strong><div style="overflow-wrap:anywhere;word-break:break-all;"><code>https://central.grupothx.com.br/modules/gateways/callback/asaas.php</code></div><small>Use tokens de webhook diferentes para Sandbox e Produção.</small></div>',
         ],
         'otherSection' => [
             'Type' => 'System',
@@ -90,9 +90,9 @@ function asaas_config()
 
 function asaas_link($params)
 {
-    // Proteção obrigatória: nenhuma chamada financeira no ambiente de Produção.
-    if (($params['environment'] ?? 'sandbox') !== 'sandbox') {
-        return '<div class="alert alert-warning">Emissão em Produção ainda bloqueada durante os testes.</div>';
+    $environment = (string) ($params['environment'] ?? 'sandbox');
+    if (!in_array($environment, ['sandbox', 'production'], true)) {
+        return '<div class="alert alert-warning">Ambiente Asaas inválido.</div>';
     }
 
     require_once __DIR__ . '/asaas/api.php';
@@ -101,7 +101,9 @@ function asaas_link($params)
         $charge = asaas_get_or_create_charge($params);
         $id = (string) $charge['charge_id'];
         $boleto = (string) ($charge['bank_slip_url'] ?? '');
-        $html = '<div class="alert alert-info"><strong>Asaas Sandbox</strong> — cobrança de teste, sem valor financeiro real.</div>';
+        $html = $environment === 'sandbox'
+            ? '<div class="alert alert-info"><strong>Asaas Sandbox</strong> — cobrança de teste, sem valor financeiro real.</div>'
+            : '';
 
         if ($boleto !== '' && preg_match('~^https://[a-z0-9.-]*asaas\.com(?:\.br)?/~i', $boleto)) {
             $html .= '<p><a href="' . htmlspecialchars($boleto, ENT_QUOTES, 'UTF-8')
@@ -121,10 +123,10 @@ function asaas_link($params)
         }
         return $html;
     } catch (\Throwable $exception) {
-        logModuleCall('asaas', 'sandbox_invoice_error', [
+        logModuleCall('asaas', 'invoice_error', [
             'invoice_id' => (int) ($params['invoiceid'] ?? 0),
         ], ['error' => $exception->getMessage()]);
-        return '<div class="alert alert-warning">Asaas Sandbox: '
+        return '<div class="alert alert-warning">Asaas: '
             . htmlspecialchars($exception->getMessage(), ENT_QUOTES, 'UTF-8') . '</div>';
     }
 }
