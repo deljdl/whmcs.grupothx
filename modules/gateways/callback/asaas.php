@@ -1,7 +1,7 @@
 <?php
 /**
  * Callback Asaas / WHMCS Grupo THX.
- * Salva cada entrega autenticada e processa pagamentos APENAS do Sandbox.
+ * Salva entregas autenticadas e processa pagamentos no ambiente de origem.
  */
 require_once __DIR__ . '/../../../init.php';
 require_once __DIR__ . '/../../../includes/gatewayfunctions.php';
@@ -89,12 +89,6 @@ try {
         exit('Invalid payload');
     }
 
-    // Produção fica completamente impedida de realizar baixas.
-    if ($environment !== 'sandbox') {
-        $finish('ignored', 'Produção bloqueada durante o desenvolvimento');
-        exit('OK');
-    }
-
     if ($paymentId === '') {
         $finish('ignored', 'Evento sem identificação de cobrança');
         exit('OK');
@@ -106,7 +100,7 @@ try {
 
     $charge = Capsule::table('asaas_cobrancas')
         ->where('charge_id', $paymentId)
-        ->where('environment', 'sandbox')
+        ->where('environment', $environment)
         ->first();
 
     if (!$charge) {
@@ -115,23 +109,23 @@ try {
     }
 
     $invoiceId = (int) $charge->invoice_id;
-    asaas_record_issuance($invoiceId, $paymentId);
-    asaas_record_notification($invoiceId, $paymentId, $eventType);
+    asaas_record_issuance($invoiceId, $paymentId, $environment);
+    asaas_record_notification($invoiceId, $paymentId, $eventType, $environment);
 
     if ($eventType === 'PAYMENT_UPDATED') {
-        $key = trim((string) ($gateway['sandboxApiKey'] ?? ''));
+        $key = trim((string) ($gateway[$environment === 'production' ? 'productionApiKey' : 'sandboxApiKey'] ?? ''));
         if ($key === '') {
-            throw new RuntimeException('Token API Sandbox não configurado');
+            throw new RuntimeException('Token API Asaas não configurado');
         }
-        $payment = asaas_api($key, 'GET', 'payments/' . rawurlencode($paymentId));
+        $payment = asaas_api($key, 'GET', 'payments/' . rawurlencode($paymentId), null, $environment);
         if ((string) ($payment['id'] ?? '') !== $paymentId
             || (string) ($payment['externalReference'] ?? '') !== 'whmcs-invoice-' . $invoiceId) {
             throw new RuntimeException('Atualização de cobrança não corresponde à fatura');
         }
         asaas_install_charge_table();
-        asaas_save_charge($invoiceId, $payment);
-        asaas_store_boleto($key, $invoiceId, $paymentId);
-        asaas_store_pix($key, $invoiceId, $paymentId);
+        asaas_save_charge($invoiceId, $payment, $environment);
+        asaas_store_boleto($key, $invoiceId, $paymentId, $environment);
+        asaas_store_pix($key, $invoiceId, $paymentId, $environment);
         $finish('updated', 'Dados de boleto e Pix atualizados', $invoiceId);
         exit('OK');
     }
@@ -140,12 +134,12 @@ try {
         $finish('logged', 'Notificação registrada no histórico WHMCS sem baixa', $invoiceId);
         exit('OK');
     }
-    $key = trim((string) ($gateway['sandboxApiKey'] ?? ''));
+    $key = trim((string) ($gateway[$environment === 'production' ? 'productionApiKey' : 'sandboxApiKey'] ?? ''));
     if ($key === '') {
-        throw new RuntimeException('Token API Sandbox não configurado');
+        throw new RuntimeException('Token API Asaas não configurado');
     }
 
-    $payment = asaas_api($key, 'GET', 'payments/' . rawurlencode($paymentId));
+    $payment = asaas_api($key, 'GET', 'payments/' . rawurlencode($paymentId), null, $environment);
     if ((string) ($payment['id'] ?? '') !== $paymentId
         || (string) ($payment['externalReference'] ?? '') !== 'whmcs-invoice-' . $invoiceId
         || !in_array((string) ($payment['status'] ?? ''), ['CONFIRMED', 'RECEIVED'], true)) {
@@ -163,13 +157,13 @@ try {
     }
 
     $amountLabel = number_format($amount, 2, '.', '');
-    $transactionId = 'asaas_sandbox__' . strtolower(substr($eventType, 8)) . '-' . $paymentId
+    $transactionId = 'asaas_' . $environment . '__' . strtolower(substr($eventType, 8)) . '-' . $paymentId
         . '[ValorPago:' . $amountLabel . ']';
     // Mantém a proteção das baixas anteriores e dos dois eventos de confirmação.
     $paidReferences = [
-        'asaas_sandbox_' . $paymentId,
-        'asaas_sandbox__confirmed-' . $paymentId . '[ValorPago:' . $amountLabel . ']',
-        'asaas_sandbox__received-' . $paymentId . '[ValorPago:' . $amountLabel . ']',
+        'asaas_' . $environment . '_' . $paymentId,
+        'asaas_' . $environment . '__confirmed-' . $paymentId . '[ValorPago:' . $amountLabel . ']',
+        'asaas_' . $environment . '__received-' . $paymentId . '[ValorPago:' . $amountLabel . ']',
     ];
     $lockName = 'asaas_paid_' . $invoiceId;
     $locked = Capsule::connection()->selectOne('SELECT GET_LOCK(?, 15) AS acquired', [$lockName]);
