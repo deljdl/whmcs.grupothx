@@ -28,7 +28,11 @@ function asaas_config()
             'Type' => 'dropdown',
             'Options' => 'sandbox,production',
             'Default' => 'sandbox',
-            'Description' => 'Produção não libera a emissão de cobranças.',
+            'Description' => 'Selecione o ambiente usado pelo gateway. Durante os testes, somente o Sandbox será utilizado.',
+        ],
+        'connectionTest' => [
+            'Type' => 'System',
+            'Value' => '<a class="btn btn-default btn-sm" target="_blank" rel="noopener" href="../modules/gateways/asaas/test.php">Testar conexão Sandbox</a> <small>Teste de leitura, não cria clientes nem cobranças. Salve o token antes de testar.</small>',
         ],
         'sandboxSection' => [
             'Type' => 'System',
