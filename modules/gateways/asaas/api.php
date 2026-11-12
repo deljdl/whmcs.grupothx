@@ -46,7 +46,7 @@ function asaas_api($key, $method, $path, $body = null)
 function asaas_install_charge_table()
 {
     if (Capsule::schema()->hasTable('asaas_cobrancas')) {
-        foreach (['pix_payload', 'pix_qr_code', 'pix_expiration_date'] as $column) {
+        foreach (['pix_payload', 'pix_qr_code', 'pix_expiration_date', 'barcode', 'identification_field'] as $column) {
             if (!Capsule::schema()->hasColumn('asaas_cobrancas', $column)) {
                 Capsule::schema()->table('asaas_cobrancas', function ($table) use ($column) {
                     $table->longText($column)->nullable();
@@ -67,6 +67,8 @@ function asaas_install_charge_table()
         $table->longText('pix_payload')->nullable();
         $table->longText('pix_qr_code')->nullable();
         $table->longText('pix_expiration_date')->nullable();
+        $table->string('barcode', 64)->nullable();
+        $table->string('identification_field', 80)->nullable();
         $table->decimal('amount', 12, 2);
         $table->date('due_date');
         $table->timestamps();
@@ -250,6 +252,21 @@ function asaas_save_charge($invoiceId, $charge)
     }
 }
 
+function asaas_store_boleto($key, $invoiceId, $paymentId)
+{
+    $boleto = asaas_api($key, 'GET', 'payments/' . rawurlencode($paymentId) . '/identificationField');
+    $barcode = preg_replace('/\\D/', '', (string) ($boleto['barCode'] ?? ''));
+    $linha = preg_replace('/\\D/', '', (string) ($boleto['identificationField'] ?? ''));
+    if (strlen($barcode) !== 44 || strlen($linha) !== 47) {
+        throw new RuntimeException('Asaas não retornou o código de barras e a linha digitável válidos.');
+    }
+    Capsule::table('asaas_cobrancas')->where('invoice_id', $invoiceId)->where('charge_id', $paymentId)->update([
+        'barcode' => $barcode,
+        'identification_field' => $linha,
+        'updated_at' => date('Y-m-d H:i:s'),
+    ]);
+}
+
 function asaas_store_pix($key, $invoiceId, $paymentId)
 {
     $pix = asaas_api($key, 'GET', 'payments/' . rawurlencode($paymentId) . '/pixQrCode');
@@ -286,6 +303,9 @@ function asaas_get_or_create_charge($params)
             if ($local->environment !== 'sandbox') {
                 throw new RuntimeException('Cobrança já vinculada em outro ambiente.');
             }
+            if (empty($local->barcode) || empty($local->identification_field)) {
+                asaas_store_boleto($key, $invoiceId, (string) $local->charge_id);
+            }
             if (empty($local->pix_payload) || empty($local->pix_qr_code)) {
                 asaas_store_pix($key, $invoiceId, (string) $local->charge_id);
             }
@@ -302,6 +322,7 @@ function asaas_get_or_create_charge($params)
         }
         if ($items) {
             asaas_save_charge($invoiceId, $items[0]);
+            asaas_store_boleto($key, $invoiceId, (string) $items[0]['id']);
             asaas_store_pix($key, $invoiceId, (string) $items[0]['id']);
             asaas_record_issuance($invoiceId, (string) $items[0]['id']);
             asaas_sync_prior_notifications($invoiceId, (string) $items[0]['id']);
@@ -340,6 +361,7 @@ function asaas_get_or_create_charge($params)
             'fine' => ['value' => 0],
         ]);
         asaas_save_charge($invoiceId, $charge);
+        asaas_store_boleto($key, $invoiceId, (string) $charge['id']);
         asaas_store_pix($key, $invoiceId, (string) $charge['id']);
         asaas_record_issuance($invoiceId, (string) $charge['id']);
         return (array) Capsule::table('asaas_cobrancas')->where('invoice_id', $invoiceId)->first();
