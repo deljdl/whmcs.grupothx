@@ -22,15 +22,16 @@ function thx_payment_data($invoiceId, $invoice)
         $charge = Capsule::schema()->hasTable('asaas_cobrancas')
             ? Capsule::table('asaas_cobrancas')->where('invoice_id', $invoiceId)->first()
             : null;
-        if (!$charge) {
-            return $data;
+        if ($charge) {
+            $data['pix'] = (string) ($charge->pix_payload ?? '');
+            // getBarCode() exige a linha digitável de 47 dígitos.
+            $data['barcode'] = (string) ($charge->identification_field ?? '');
+            $data['boleto'] = (string) ($charge->bank_slip_url ?? '');
+            $data['due_date'] = (string) ($charge->due_date ?? $data['due_date']);
+            if ($data['pix'] !== '' || ($data['barcode'] !== '' && $data['boleto'] !== '')) {
+                return $data;
+            }
         }
-        $data['pix'] = (string) ($charge->pix_payload ?? '');
-        // getBarCode() exige a linha digitável de 47 dígitos.
-        $data['barcode'] = (string) ($charge->identification_field ?? '');
-        $data['boleto'] = (string) ($charge->bank_slip_url ?? '');
-        $data['due_date'] = (string) ($charge->due_date ?? $data['due_date']);
-        return $data;
     }
 
     if ($gateway === 'gofasgerencianetboleto' && Capsule::schema()->hasTable('gofasgerencianetboleto')) {
@@ -40,14 +41,20 @@ function thx_payment_data($invoiceId, $invoice)
             $data['pix'] = (string) ($charge->qrcode ?? '');
             $data['barcode'] = (string) ($charge->barcode ?? '');
             $data['boleto'] = (string) ($charge->pdf ?? '');
-            return $data;
+            if ($data['pix'] !== '' || ($data['barcode'] !== '' && $data['boleto'] !== '')) {
+                return $data;
+            }
         }
     }
 
-    // Mantém o Pix padrão THX para faturas sem cobrança de boleto.
-    $data['pix'] = (string) file_get_contents('https://pix.grupothx.com/?valor='
-        . rawurlencode($data['total']) . '&id=A' . $invoiceId . '&cc=true');
-    $data['notify_receipt'] = true;
+    // Fallback: Pix simples THX se o gateway não tiver dados de pagamento utilizáveis.
+    $data['barcode'] = '';
+    $data['boleto'] = '';
+    $pix = @file_get_contents('https://pix.grupothx.com/?valor='
+        . rawurlencode($data['total']) . '&id=A' . $invoiceId . '&cc=true', false,
+        stream_context_create(['http' => ['timeout' => 5]]));
+    $data['pix'] = $pix === false ? '' : trim($pix);
+    $data['notify_receipt'] = $data['pix'] !== '';
     return $data;
 }
 
