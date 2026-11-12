@@ -64,7 +64,7 @@ function asaas_config()
         ],
         'webhookSection' => [
             'Type' => 'System',
-            'Value' => '<div style="padding-top:5px;"><strong>URL para cadastrar no webhook do Asaas:</strong><div style="overflow-wrap:anywhere;word-break:break-all;"><code>https://central.grupothx.com.br/modules/gateways/callback/asaas.php</code></div><small>Endpoint ainda em desenvolvimento. Não ative os webhooks.</small></div>',
+            'Value' => '<div style="padding-top:5px;"><strong>URL para cadastrar no webhook do Asaas:</strong><div style="overflow-wrap:anywhere;word-break:break-all;"><code>https://central.grupothx.com.br/modules/gateways/callback/asaas.php</code></div><small>Webhook Sandbox pronto para testes. Mantenha o webhook de Produção desativado.</small></div>',
         ],
         'otherSection' => [
             'Type' => 'System',
