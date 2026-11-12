@@ -104,7 +104,7 @@ function asaas_link($params)
         $boleto = (string) ($charge['bank_slip_url'] ?: $charge['invoice_url']);
         $html = '<div class="alert alert-info"><strong>Asaas Sandbox</strong> — cobrança de teste, sem valor financeiro real.</div>';
 
-        if ($boleto !== '' && preg_match('~^https://[a-z0-9.-]*asaas\\.com(?:\\.br)?/~i', $boleto)) {
+        if ($boleto !== '' && preg_match('~^https://[a-z0-9.-]*asaas\.com(?:\.br)?/~i', $boleto)) {
             $html .= '<p><a href="' . htmlspecialchars($boleto, ENT_QUOTES, 'UTF-8')
                 . '" target="_blank" rel="noopener">Visualizar boleto bancário</a></p>';
         }
@@ -119,11 +119,11 @@ function asaas_link($params)
                 $html .= '<label>Pix Copia e Cola</label><textarea readonly class="form-control" rows="3" onclick="this.select()">'
                     . htmlspecialchars((string) $pix['payload'], ENT_QUOTES, 'UTF-8') . '</textarea>';
             }
-        } catch (\\Throwable $exception) {
+        } catch (\Throwable $exception) {
             $html .= '<p>Pix temporariamente indisponível. Utilize o boleto.</p>';
         }
         return $html;
-    } catch (\\Throwable $exception) {
+    } catch (\Throwable $exception) {
         logModuleCall('asaas', 'sandbox_invoice_error', [
             'invoice_id' => (int) ($params['invoiceid'] ?? 0),
         ], ['error' => $exception->getMessage()]);
