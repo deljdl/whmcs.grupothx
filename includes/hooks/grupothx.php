@@ -35,7 +35,7 @@ add_hook('EmailPreSend', 1, function($vars) {
         $dadosPagamento = thx_payment_data((int) $vars['relid'], $invoice);
         $grupothx_merge_fields = [
             'grupothx_pix_copia_e_cola' => $dadosPagamento['pix'],
-            'grupothx_html_formas_pagamento' => thx_payment_html((int) $vars['relid'], $invoice, true),
+            'grupothx_html_formas_pagamento' => thx_payment_html((int) $vars['relid'], $invoice, true, $dadosPagamento),
         ];
 
         // Preserva os merge fields existentes dos templates Efí.
