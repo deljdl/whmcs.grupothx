@@ -1,14 +1,17 @@
 <?php
-// Funções internas do gateway Asaas. Emissão permitida SOMENTE no Sandbox.
+// Funções internas do gateway Asaas. Ambientes Sandbox e Produção separados.
 if (!defined('WHMCS')) {
     exit;
 }
 
 use WHMCS\Database\Capsule;
 
-function asaas_api($key, $method, $path, $body = null)
+function asaas_api($key, $method, $path, $body = null, $environment = 'sandbox')
 {
-    $url = 'https://api-sandbox.asaas.com/v3/' . ltrim($path, '/');
+    if (!in_array($environment, ['sandbox', 'production'], true)) {
+        throw new RuntimeException('Ambiente Asaas inválido.');
+    }
+    $url = ($environment === 'production' ? 'https://api.asaas.com/v3/' : 'https://api-sandbox.asaas.com/v3/') . ltrim($path, '/');
     $headers = [
         'accept: application/json',
         'access_token: ' . $key,
@@ -34,11 +37,11 @@ function asaas_api($key, $method, $path, $body = null)
 
     if ($result === false || $status < 200 || $status >= 300) {
         // Não logar corpo das respostas: pode conter dados pessoais.
-        throw new RuntimeException('Asaas Sandbox: falha de comunicação (HTTP ' . $status . ').');
+        throw new RuntimeException('Asaas ' . $environment . ': falha de comunicação (HTTP ' . $status . ').');
     }
     $data = json_decode($result, true);
     if (!is_array($data)) {
-        throw new RuntimeException('Asaas Sandbox: resposta JSON inválida.');
+        throw new RuntimeException('Asaas ' . $environment . ': resposta JSON inválida.');
     }
     return $data;
 }
@@ -153,21 +156,21 @@ function asaas_record_history($invoiceId, $paymentId, $reference, $description)
     }
 }
 
-function asaas_record_issuance($invoiceId, $paymentId)
+function asaas_record_issuance($invoiceId, $paymentId, $environment = 'sandbox')
 {
-    asaas_record_history($invoiceId, $paymentId, 'asaas_sandbox_waiting-' . $paymentId,
+    asaas_record_history($invoiceId, $paymentId, 'asaas_' . $environment . '_waiting-' . $paymentId,
         'Boleto gerado aguardando pagamento.');
 }
 
-function asaas_record_notification($invoiceId, $paymentId, $eventType)
+function asaas_record_notification($invoiceId, $paymentId, $eventType, $environment = 'sandbox')
 {
-    // Igual ao Gofas: uma transação por cobrança e status, independente de reenvios.
+    // Uma transação por cobrança, ambiente e status, independente de reenvios.
     asaas_record_history($invoiceId, $paymentId,
-        'asaas_sandbox__notification-' . $paymentId . '[' . $eventType . ']',
+        'asaas_' . $environment . '__notification-' . $paymentId . '[' . $eventType . ']',
         'Notificação Asaas: ' . $eventType);
 }
 
-function asaas_sync_prior_notifications($invoiceId, $paymentId)
+function asaas_sync_prior_notifications($invoiceId, $paymentId, $environment = 'sandbox')
 {
     if (!Capsule::schema()->hasTable('asaas_notificacoes')) {
         return;
@@ -175,22 +178,22 @@ function asaas_sync_prior_notifications($invoiceId, $paymentId)
 
     $events = Capsule::table('asaas_notificacoes')
         ->where('payment_id', $paymentId)
-        ->where('environment', 'sandbox')
+        ->where('environment', $environment)
         ->whereNotNull('event_type')
         ->distinct()
         ->pluck('event_type');
     foreach ($events as $eventType) {
         if ($eventType !== '') {
-            asaas_record_notification($invoiceId, $paymentId, (string) $eventType);
+            asaas_record_notification($invoiceId, $paymentId, (string) $eventType, $environment);
         }
     }
 }
 
-function asaas_get_customer($key, $client)
+function asaas_get_customer($key, $client, $environment)
 {
     $clientId = (int) ($client['id'] ?? 0);
     $reference = 'whmcs-client-' . $clientId;
-    $existing = asaas_api($key, 'GET', 'customers?externalReference=' . rawurlencode($reference) . '&limit=10');
+    $existing = asaas_api($key, 'GET', 'customers?externalReference=' . rawurlencode($reference) . '&limit=10', null, $environment);
     $items = $existing['data'] ?? [];
     if (count($items) > 1) {
         throw new RuntimeException('Existem clientes Asaas duplicados para este cadastro. Verifique antes de continuar.');
@@ -201,7 +204,7 @@ function asaas_get_customer($key, $client)
             throw new RuntimeException('Identificador do cliente Asaas inválido.');
         }
         // Asaas não deve enviar notificações aos clientes.
-        asaas_api($key, 'PUT', 'customers/' . rawurlencode($id), ['notificationDisabled' => true]);
+        asaas_api($key, 'PUT', 'customers/' . rawurlencode($id), ['notificationDisabled' => true], $environment);
         return $id;
     }
 
@@ -216,14 +219,14 @@ function asaas_get_customer($key, $client)
         'email' => (string) ($client['email'] ?? ''),
         'externalReference' => $reference,
         'notificationDisabled' => true,
-    ]);
+    ], $environment);
     if (empty($created['id'])) {
         throw new RuntimeException('Asaas não retornou o ID do cliente.');
     }
     return (string) $created['id'];
 }
 
-function asaas_save_charge($invoiceId, $charge)
+function asaas_save_charge($invoiceId, $charge, $environment)
 {
     if (empty($charge['id']) || empty($charge['customer'])) {
         throw new RuntimeException('Cobrança sem identificação válida.');
@@ -231,7 +234,7 @@ function asaas_save_charge($invoiceId, $charge)
     $data = [
         'charge_id' => (string) $charge['id'],
         'customer_id' => (string) $charge['customer'],
-        'environment' => 'sandbox',
+        'environment' => $environment,
         'status' => (string) ($charge['status'] ?? 'PENDING'),
         'invoice_url' => (string) ($charge['invoiceUrl'] ?? ''),
         'bank_slip_url' => (string) ($charge['bankSlipUrl'] ?? ''),
@@ -241,7 +244,7 @@ function asaas_save_charge($invoiceId, $charge)
     ];
     $found = Capsule::table('asaas_cobrancas')->where('invoice_id', $invoiceId)->first();
     if ($found) {
-        if ($found->charge_id !== $data['charge_id']) {
+        if ($found->environment !== $environment || $found->charge_id !== $data['charge_id']) {
             throw new RuntimeException('Já existe outra cobrança vinculada a esta fatura.');
         }
         Capsule::table('asaas_cobrancas')->where('invoice_id', $invoiceId)->update($data);
@@ -252,9 +255,9 @@ function asaas_save_charge($invoiceId, $charge)
     }
 }
 
-function asaas_store_boleto($key, $invoiceId, $paymentId)
+function asaas_store_boleto($key, $invoiceId, $paymentId, $environment)
 {
-    $boleto = asaas_api($key, 'GET', 'payments/' . rawurlencode($paymentId) . '/identificationField');
+    $boleto = asaas_api($key, 'GET', 'payments/' . rawurlencode($paymentId) . '/identificationField', null, $environment);
     $barcode = preg_replace('/\\D/', '', (string) ($boleto['barCode'] ?? ''));
     $linha = preg_replace('/\\D/', '', (string) ($boleto['identificationField'] ?? ''));
     if (strlen($barcode) !== 44 || strlen($linha) !== 47) {
@@ -267,9 +270,9 @@ function asaas_store_boleto($key, $invoiceId, $paymentId)
     ]);
 }
 
-function asaas_store_pix($key, $invoiceId, $paymentId)
+function asaas_store_pix($key, $invoiceId, $paymentId, $environment)
 {
-    $pix = asaas_api($key, 'GET', 'payments/' . rawurlencode($paymentId) . '/pixQrCode');
+    $pix = asaas_api($key, 'GET', 'payments/' . rawurlencode($paymentId) . '/pixQrCode', null, $environment);
     if (empty($pix['payload']) || empty($pix['encodedImage'])) {
         throw new RuntimeException('Asaas não retornou os dados completos do Pix.');
     }
@@ -284,9 +287,13 @@ function asaas_store_pix($key, $invoiceId, $paymentId)
 function asaas_get_or_create_charge($params)
 {
     $invoiceId = (int) ($params['invoiceid'] ?? 0);
-    $key = trim((string) ($params['sandboxApiKey'] ?? ''));
+    $environment = (string) ($params['environment'] ?? 'sandbox');
+    if (!in_array($environment, ['sandbox', 'production'], true)) {
+        throw new RuntimeException('Ambiente Asaas inválido.');
+    }
+    $key = trim((string) ($params[$environment === 'production' ? 'productionApiKey' : 'sandboxApiKey'] ?? ''));
     if ($invoiceId < 1 || $key === '') {
-        throw new RuntimeException('Fatura ou token Sandbox não configurado.');
+        throw new RuntimeException('Fatura ou token Asaas não configurado.');
     }
 
     // O lock MySQL cobre dois acessos simultâneos à mesma fatura.
@@ -300,32 +307,32 @@ function asaas_get_or_create_charge($params)
         asaas_install_charge_table();
         $local = Capsule::table('asaas_cobrancas')->where('invoice_id', $invoiceId)->first();
         if ($local) {
-            if ($local->environment !== 'sandbox') {
+            if ($local->environment !== $environment) {
                 throw new RuntimeException('Cobrança já vinculada em outro ambiente.');
             }
             if (empty($local->barcode) || empty($local->identification_field)) {
-                asaas_store_boleto($key, $invoiceId, (string) $local->charge_id);
+                asaas_store_boleto($key, $invoiceId, (string) $local->charge_id, $environment);
             }
             if (empty($local->pix_payload) || empty($local->pix_qr_code)) {
-                asaas_store_pix($key, $invoiceId, (string) $local->charge_id);
+                asaas_store_pix($key, $invoiceId, (string) $local->charge_id, $environment);
             }
-            asaas_record_issuance($invoiceId, (string) $local->charge_id);
-            asaas_sync_prior_notifications($invoiceId, (string) $local->charge_id);
-            return (array) $local;
+            asaas_record_issuance($invoiceId, (string) $local->charge_id, $environment);
+            asaas_sync_prior_notifications($invoiceId, (string) $local->charge_id, $environment);
+            return (array) Capsule::table('asaas_cobrancas')->where('invoice_id', $invoiceId)->first();
         }
 
         $reference = 'whmcs-invoice-' . $invoiceId;
-        $remote = asaas_api($key, 'GET', 'payments?externalReference=' . rawurlencode($reference) . '&limit=10');
+        $remote = asaas_api($key, 'GET', 'payments?externalReference=' . rawurlencode($reference) . '&limit=10', null, $environment);
         $items = $remote['data'] ?? [];
         if (count($items) > 1) {
             throw new RuntimeException('Encontradas cobranças duplicadas no Asaas. Emissão bloqueada.');
         }
         if ($items) {
-            asaas_save_charge($invoiceId, $items[0]);
-            asaas_store_boleto($key, $invoiceId, (string) $items[0]['id']);
-            asaas_store_pix($key, $invoiceId, (string) $items[0]['id']);
-            asaas_record_issuance($invoiceId, (string) $items[0]['id']);
-            asaas_sync_prior_notifications($invoiceId, (string) $items[0]['id']);
+            asaas_save_charge($invoiceId, $items[0], $environment);
+            asaas_store_boleto($key, $invoiceId, (string) $items[0]['id'], $environment);
+            asaas_store_pix($key, $invoiceId, (string) $items[0]['id'], $environment);
+            asaas_record_issuance($invoiceId, (string) $items[0]['id'], $environment);
+            asaas_sync_prior_notifications($invoiceId, (string) $items[0]['id'], $environment);
             return (array) Capsule::table('asaas_cobrancas')->where('invoice_id', $invoiceId)->first();
         }
 
@@ -347,7 +354,7 @@ function asaas_get_or_create_charge($params)
         }
 
         $client = $params['clientdetails'] ?? [];
-        $customerId = asaas_get_customer($key, $client);
+        $customerId = asaas_get_customer($key, $client, $environment);
         $charge = asaas_api($key, 'POST', 'payments', [
             'customer' => $customerId,
             'billingType' => 'BOLETO',
@@ -359,11 +366,11 @@ function asaas_get_or_create_charge($params)
             'daysAfterDueDateToRegistrationCancellation' => 3650,
             'interest' => ['value' => 0],
             'fine' => ['value' => 0],
-        ]);
-        asaas_save_charge($invoiceId, $charge);
-        asaas_store_boleto($key, $invoiceId, (string) $charge['id']);
-        asaas_store_pix($key, $invoiceId, (string) $charge['id']);
-        asaas_record_issuance($invoiceId, (string) $charge['id']);
+        ], $environment);
+        asaas_save_charge($invoiceId, $charge, $environment);
+        asaas_store_boleto($key, $invoiceId, (string) $charge['id'], $environment);
+        asaas_store_pix($key, $invoiceId, (string) $charge['id'], $environment);
+        asaas_record_issuance($invoiceId, (string) $charge['id'], $environment);
         return (array) Capsule::table('asaas_cobrancas')->where('invoice_id', $invoiceId)->first();
     } finally {
         Capsule::connection()->selectOne('SELECT RELEASE_LOCK(?) AS released', [$lockName]);
