@@ -144,7 +144,15 @@ try {
         throw new RuntimeException('Valor da cobrança divergente da emissão original');
     }
 
-    $transactionId = 'asaas_sandbox_' . $paymentId;
+    $amountLabel = number_format($amount, 2, '.', '');
+    $transactionId = 'asaas_sandbox__' . strtolower(substr($eventType, 8)) . '-' . $paymentId
+        . '[ValorPago:' . $amountLabel . ']';
+    // Mantém a proteção das baixas anteriores e dos dois eventos de confirmação.
+    $paidReferences = [
+        'asaas_sandbox_' . $paymentId,
+        'asaas_sandbox__confirmed-' . $paymentId . '[ValorPago:' . $amountLabel . ']',
+        'asaas_sandbox__received-' . $paymentId . '[ValorPago:' . $amountLabel . ']',
+    ];
     $lockName = 'asaas_paid_' . $invoiceId;
     $locked = Capsule::connection()->selectOne('SELECT GET_LOCK(?, 15) AS acquired', [$lockName]);
     if ((int) ($locked->acquired ?? 0) !== 1) {
@@ -152,7 +160,7 @@ try {
     }
 
     try {
-        $existing = Capsule::table('tblaccounts')->where('transid', $transactionId)->first();
+        $existing = Capsule::table('tblaccounts')->whereIn('transid', $paidReferences)->first();
         if ($existing) {
             if ((int) $existing->invoiceid !== $invoiceId) {
                 throw new RuntimeException('Transação já associada a outra fatura');
@@ -171,7 +179,18 @@ try {
         $fee = $netValue !== null ? max(0, round($amount - $netValue, 2))
             : (float) str_replace(',', '.', (string) ($gateway['asaasFee'] ?? 0));
 
-        addInvoicePayment($invoiceId, $transactionId, $amount, $fee, 'asaas');
+        $result = localAPI('AddTransaction', [
+            'userid' => (int) $invoice->userid,
+            'invoiceid' => $invoiceId,
+            'description' => 'Boleto pago!',
+            'paymentmethod' => 'asaas',
+            'transid' => $transactionId,
+            'amountin' => $amount,
+            'fees' => $fee,
+        ]);
+        if (($result['result'] ?? '') !== 'success') {
+            throw new RuntimeException('WHMCS não registrou o pagamento: ' . ($result['message'] ?? 'erro desconhecido'));
+        }
         Capsule::table('asaas_cobrancas')->where('invoice_id', $invoiceId)
             ->where('charge_id', $paymentId)->update([
                 'status' => (string) $payment['status'],
