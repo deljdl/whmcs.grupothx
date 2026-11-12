@@ -38,6 +38,24 @@ add_hook('EmailPreSend', 1, function($vars) {
             'grupothx_html_formas_pagamento' => thx_payment_html((int) $vars['relid'], $invoice, true),
         ];
 
+        // Preserva os merge fields existentes dos templates Efí.
+        if (($invoice['paymentmethod'] ?? '') === 'gofasgerencianetboleto') {
+            $efi = Capsule::table('gofasgerencianetboleto')->where('invoice_id', (int) $vars['relid'])->first();
+            if ($efi) {
+                $grupothx_merge_fields += [
+                    'grupothx_link' => (string) $efi->link,
+                    'grupothx_pdf' => (string) $efi->pdf,
+                    'grupothx_barcode' => (string) $efi->barcode,
+                    'grupothx_expire_at' => date('d/m/Y', strtotime($efi->expire_at)),
+                    'grupothx_total' => number_format($efi->total / 100, 2, ',', '.'),
+                    'grupothx_charge_id' => (string) $efi->charge_id,
+                    'grupothx_api_mode' => (string) $efi->api_mode,
+                    'grupothx_qrcode' => (string) $efi->qrcode,
+                    'invoice_link' => (string) $efi->link,
+                ];
+            }
+        }
+
 			return $grupothx_merge_fields;
 		
 
