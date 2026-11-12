@@ -116,7 +116,7 @@ try {
 
     $invoiceId = (int) $charge->invoice_id;
     asaas_record_issuance($invoiceId, $paymentId);
-    asaas_record_notification($invoiceId, $paymentId, $eventType);
+    asaas_record_notification($invoiceId, $paymentId, $eventType, $logId);
 
     if (!in_array($eventType, ['PAYMENT_CONFIRMED', 'PAYMENT_RECEIVED'], true)) {
         $finish('logged', 'Notificação registrada no histórico WHMCS sem baixa', $invoiceId);
