@@ -95,12 +95,9 @@ try {
         exit('OK');
     }
 
-    if (!in_array($eventType, ['PAYMENT_CONFIRMED', 'PAYMENT_RECEIVED'], true)) {
-        $finish('ignored', 'Evento registrado sem ação financeira');
-        exit('OK');
-    }
     if ($paymentId === '') {
-        throw new RuntimeException('Evento de pagamento sem ID da cobrança');
+        $finish('ignored', 'Evento sem identificação de cobrança');
+        exit('OK');
     }
 
     if (!Capsule::schema()->hasTable('asaas_cobrancas')) {
@@ -113,11 +110,18 @@ try {
         ->first();
 
     if (!$charge) {
-        // Guarda o evento, mas requer conciliação da cobrança ainda desconhecida.
+        // Não associa eventos de cobranças desconhecidas a faturas.
         throw new RuntimeException('Cobrança não localizada no WHMCS: ' . $paymentId);
     }
 
     $invoiceId = (int) $charge->invoice_id;
+    asaas_record_issuance($invoiceId, $paymentId);
+    asaas_record_notification($invoiceId, $paymentId, $eventType);
+
+    if (!in_array($eventType, ['PAYMENT_CONFIRMED', 'PAYMENT_RECEIVED'], true)) {
+        $finish('logged', 'Notificação registrada no histórico WHMCS sem baixa', $invoiceId);
+        exit('OK');
+    }
     $key = trim((string) ($gateway['sandboxApiKey'] ?? ''));
     if ($key === '') {
         throw new RuntimeException('Token API Sandbox não configurado');
