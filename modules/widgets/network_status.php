@@ -24,7 +24,7 @@ $content = '<div class="fixed-height-container">
         $active = $data['active'];
         $active = ($active) ? '*' : '';
         $numaccounts = get_query_val("tblhosting","COUNT(*)","server='$id' AND (domainstatus='Active' OR domainstatus='Suspended')");
-        $percentuse = @round(($numaccounts / $maxaccounts) * 100, 0);
+        $percentuse = $maxaccounts > 0 ? round(($numaccounts / $maxaccounts) * 100, 0) : 0;
         $http = $serverload = $uptime = "-";
         if (isset($_POST['checknetwork'])) {
             $http = @ fsockopen($ipaddress, 80, $errno, $errstr, 5);
