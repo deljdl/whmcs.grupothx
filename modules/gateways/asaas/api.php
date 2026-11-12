@@ -147,10 +147,11 @@ function asaas_record_issuance($invoiceId, $paymentId)
         'Boleto gerado aguardando pagamento.');
 }
 
-function asaas_record_notification($invoiceId, $paymentId, $eventType)
+function asaas_record_notification($invoiceId, $paymentId, $eventType, $notificationId)
 {
+    // Cada entrega recebida possui seu próprio ID no banco, inclusive reenvios.
     asaas_record_history($invoiceId, $paymentId,
-        'asaas_sandbox__notification-' . $paymentId . '[' . $eventType . ']',
+        'asaas_sandbox__notification-' . $paymentId . '[' . $eventType . ']#' . (int) $notificationId,
         'Notificação Asaas: ' . $eventType);
 }
 
@@ -164,11 +165,11 @@ function asaas_sync_prior_notifications($invoiceId, $paymentId)
         ->where('payment_id', $paymentId)
         ->where('environment', 'sandbox')
         ->whereNotNull('event_type')
-        ->distinct()
-        ->pluck('event_type');
-    foreach ($events as $eventType) {
-        if ($eventType !== '') {
-            asaas_record_notification($invoiceId, $paymentId, (string) $eventType);
+        ->orderBy('id')
+        ->get(['id', 'event_type']);
+    foreach ($events as $event) {
+        if ($event->event_type !== '') {
+            asaas_record_notification($invoiceId, $paymentId, (string) $event->event_type, (int) $event->id);
         }
     }
 }
