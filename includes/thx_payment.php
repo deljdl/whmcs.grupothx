@@ -26,7 +26,8 @@ function thx_payment_data($invoiceId, $invoice)
             return $data;
         }
         $data['pix'] = (string) ($charge->pix_payload ?? '');
-        $data['barcode'] = (string) ($charge->barcode ?? '');
+        // getBarCode() exige a linha digitável de 47 dígitos.
+        $data['barcode'] = (string) ($charge->identification_field ?? '');
         $data['boleto'] = (string) ($charge->bank_slip_url ?? '');
         $data['due_date'] = (string) ($charge->due_date ?? $data['due_date']);
         return $data;
