@@ -70,6 +70,13 @@ function asaas_config()
             'Type' => 'System',
             'Value' => '<div style="border-top:1px solid #ccc;padding-top:10px;margin-top:5px;"><strong>Outros</strong></div>',
         ],
+        'minimumAmount' => [
+            'FriendlyName' => 'Valor mínimo do Boleto (R$)',
+            'Type' => 'text',
+            'Size' => '10',
+            'Default' => '5',
+            'Description' => 'Valor mínimo da fatura para permitir emissão de boleto. Ex.: 5 equivale a R$ 5,00.',
+        ],
         'asaasFee' => [
             'FriendlyName' => 'Tarifa Asaas (R$)',
             'Type' => 'text',
