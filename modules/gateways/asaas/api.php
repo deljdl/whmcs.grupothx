@@ -89,6 +89,90 @@ function asaas_cpf_cnpj($clientId, $company)
     return $company && $cnpj ? $cnpj : ($cpf ?: $cnpj);
 }
 
+/**
+ * Registra histórico de cobrança/eventos sem alterar o saldo da fatura.
+ * A referência é estável por cobrança e tipo de evento.
+ */
+function asaas_record_history($invoiceId, $paymentId, $reference, $description)
+{
+    $invoiceId = (int) $invoiceId;
+    if ($invoiceId < 1 || $paymentId === '') {
+        throw new RuntimeException('Fatura ou cobrança inválida para registrar transação.');
+    }
+
+    $lockName = 'asaas_history_' . md5($reference);
+    $acquired = Capsule::connection()->selectOne('SELECT GET_LOCK(?, 15) AS acquired', [$lockName]);
+    if ((int) ($acquired->acquired ?? 0) !== 1) {
+        throw new RuntimeException('Não foi possível bloquear registro simultâneo da transação.');
+    }
+
+    try {
+        $existing = Capsule::table('tblaccounts')->where('transid', $reference)->first();
+        if ($existing) {
+            if ((int) $existing->invoiceid !== $invoiceId) {
+                throw new RuntimeException('Referência já utilizada em outra fatura.');
+            }
+            return;
+        }
+
+        $invoice = Capsule::table('tblinvoices')->where('id', $invoiceId)->first();
+        if (!$invoice || $invoice->paymentmethod !== 'asaas') {
+            throw new RuntimeException('Fatura não localizada com gateway Asaas.');
+        }
+
+        $result = localAPI('AddTransaction', [
+            'userid' => (int) $invoice->userid,
+            'invoiceid' => $invoiceId,
+            'paymentmethod' => 'asaas',
+            'transid' => $reference,
+            'description' => $description,
+            'amountin' => '0.00',
+            'fees' => '0.00',
+        ]);
+
+        if (($result['result'] ?? '') !== 'success') {
+            $existing = Capsule::table('tblaccounts')->where('transid', $reference)->first();
+            if (!$existing || (int) $existing->invoiceid !== $invoiceId) {
+                throw new RuntimeException('WHMCS não registrou a transação: ' . ($result['message'] ?? 'erro desconhecido'));
+            }
+        }
+    } finally {
+        Capsule::connection()->selectOne('SELECT RELEASE_LOCK(?) AS released', [$lockName]);
+    }
+}
+
+function asaas_record_issuance($invoiceId, $paymentId)
+{
+    asaas_record_history($invoiceId, $paymentId, 'asaas_sandbox_waiting-' . $paymentId,
+        'Boleto gerado aguardando pagamento.');
+}
+
+function asaas_record_notification($invoiceId, $paymentId, $eventType)
+{
+    asaas_record_history($invoiceId, $paymentId,
+        'asaas_sandbox__notification-' . $paymentId . '[' . $eventType . ']',
+        'Notificação Asaas: ' . $eventType);
+}
+
+function asaas_sync_prior_notifications($invoiceId, $paymentId)
+{
+    if (!Capsule::schema()->hasTable('asaas_notificacoes')) {
+        return;
+    }
+
+    $events = Capsule::table('asaas_notificacoes')
+        ->where('payment_id', $paymentId)
+        ->where('environment', 'sandbox')
+        ->whereNotNull('event_type')
+        ->distinct()
+        ->pluck('event_type');
+    foreach ($events as $eventType) {
+        if ($eventType !== '') {
+            asaas_record_notification($invoiceId, $paymentId, (string) $eventType);
+        }
+    }
+}
+
 function asaas_get_customer($key, $client)
 {
     $clientId = (int) ($client['id'] ?? 0);
@@ -177,6 +261,8 @@ function asaas_get_or_create_charge($params)
             if ($local->environment !== 'sandbox') {
                 throw new RuntimeException('Cobrança já vinculada em outro ambiente.');
             }
+            asaas_record_issuance($invoiceId, (string) $local->charge_id);
+            asaas_sync_prior_notifications($invoiceId, (string) $local->charge_id);
             return (array) $local;
         }
 
@@ -188,6 +274,8 @@ function asaas_get_or_create_charge($params)
         }
         if ($items) {
             asaas_save_charge($invoiceId, $items[0]);
+            asaas_record_issuance($invoiceId, (string) $items[0]['id']);
+            asaas_sync_prior_notifications($invoiceId, (string) $items[0]['id']);
             return (array) Capsule::table('asaas_cobrancas')->where('invoice_id', $invoiceId)->first();
         }
 
@@ -222,6 +310,7 @@ function asaas_get_or_create_charge($params)
             'fine' => ['value' => 0],
         ]);
         asaas_save_charge($invoiceId, $charge);
+        asaas_record_issuance($invoiceId, (string) $charge['id']);
         return (array) Capsule::table('asaas_cobrancas')->where('invoice_id', $invoiceId)->first();
     } finally {
         Capsule::connection()->selectOne('SELECT RELEASE_LOCK(?) AS released', [$lockName]);
