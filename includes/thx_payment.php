@@ -50,9 +50,9 @@ function thx_payment_data($invoiceId, $invoice)
     return $data;
 }
 
-function thx_payment_html($invoiceId, $invoice, $email = false)
+function thx_payment_html($invoiceId, $invoice, $email = false, $data = null)
 {
-    $data = thx_payment_data($invoiceId, $invoice);
+    $data = $data ?? thx_payment_data($invoiceId, $invoice);
     $pixCode = htmlspecialchars($data['pix'], ENT_QUOTES, 'UTF-8');
     $barcode = htmlspecialchars($data['barcode'], ENT_QUOTES, 'UTF-8');
     $boletoUrl = htmlspecialchars($data['boleto'], ENT_QUOTES, 'UTF-8');
