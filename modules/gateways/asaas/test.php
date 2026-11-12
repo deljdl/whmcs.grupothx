@@ -1,6 +1,6 @@
 <?php
 /**
- * Teste de leitura da API Asaas Sandbox.
+ * Teste de leitura da API Asaas Sandbox ou Produção.
  * Não cria clientes, cobranças ou alterações no WHMCS.
  */
 require_once __DIR__ . '/../../../init.php';
@@ -15,20 +15,31 @@ require_once __DIR__ . '/../../../includes/gatewayfunctions.php';
 header('Content-Type: text/plain; charset=UTF-8');
 header('Cache-Control: no-store');
 
+$environment = $_GET['environment'] ?? '';
+if (!in_array($environment, ['sandbox', 'production'], true)) {
+    http_response_code(400);
+    exit('Ambiente inválido.');
+}
+
 $params = getGatewayVariables('asaas');
-$key = trim((string) ($params['sandboxApiKey'] ?? ''));
+$keyField = $environment === 'sandbox' ? 'sandboxApiKey' : 'productionApiKey';
+$key = trim((string) ($params[$keyField] ?? ''));
+$apiUrl = $environment === 'sandbox'
+    ? 'https://api-sandbox.asaas.com/v3/customers?limit=1'
+    : 'https://api.asaas.com/v3/customers?limit=1';
+$environmentName = $environment === 'sandbox' ? 'Sandbox' : 'Produção';
 
 if (empty($params['type'])) {
     exit('Asaas não está ativo no WHMCS.');
 }
 if ($key === '') {
-    exit('Token API Sandbox não configurado. Salve a configuração e tente novamente.');
+    exit('Token API ' . $environmentName . ' não configurado. Salve a configuração e tente novamente.');
 }
 if (!function_exists('curl_init')) {
     exit('Extensão cURL indisponível no PHP.');
 }
 
-$curl = curl_init('https://api-sandbox.asaas.com/v3/customers?limit=1');
+$curl = curl_init($apiUrl);
 curl_setopt_array($curl, [
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_HTTPGET => true,
@@ -47,13 +58,13 @@ $error = curl_error($curl);
 curl_close($curl);
 
 if ($response === false) {
-    exit('Falha de conexão com o Sandbox: ' . $error);
+    exit('Falha de conexão com ' . $environmentName . ': ' . $error);
 }
 if ($status === 200) {
-    exit('Conexão com o Asaas Sandbox realizada com sucesso (HTTP 200). Nenhuma cobrança foi criada.');
+    exit('Conexão com o Asaas ' . $environmentName . ' realizada com sucesso (HTTP 200). Nenhuma cobrança foi criada.');
 }
 
 echo 'Falha no teste de conexão. HTTP ' . $status . '.';
 if ($status === 401) {
-    echo ' Verifique se o token pertence ao ambiente Sandbox.';
+    echo ' Verifique se o token pertence ao ambiente ' . $environmentName . '.';
 }
