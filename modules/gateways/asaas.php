@@ -30,10 +30,6 @@ function asaas_config()
             'Default' => 'sandbox',
             'Description' => 'Selecione o ambiente usado pelo gateway. Durante os testes, somente o Sandbox será utilizado.',
         ],
-        'connectionTest' => [
-            'Type' => 'System',
-            'Value' => '<a class="btn btn-default btn-sm" target="_blank" rel="noopener" href="../modules/gateways/asaas/test.php">Testar conexão Sandbox</a> <small>Teste de leitura, não cria clientes nem cobranças. Salve o token antes de testar.</small>',
-        ],
         'sandboxSection' => [
             'Type' => 'System',
             'Value' => '<div style="border-top:1px solid #ccc;padding-top:10px;margin-top:5px;"><strong>Sandbox</strong></div>',
@@ -42,7 +38,7 @@ function asaas_config()
             'FriendlyName' => 'Token API Sandbox',
             'Type' => 'text',
             'Size' => '80',
-            'Description' => 'Credencial exclusiva do ambiente de testes.',
+            'Description' => 'Credencial exclusiva do ambiente de testes. <a class="btn btn-default btn-xs" target="_blank" rel="noopener" href="/modules/gateways/asaas/test.php?environment=sandbox">Testar conexão Sandbox</a> <small>Salve o token antes de testar. Consulta somente leitura.</small>',
         ],
         'sandboxWebhookToken' => [
             'FriendlyName' => 'Token webhook Sandbox',
@@ -58,7 +54,7 @@ function asaas_config()
             'FriendlyName' => 'Token API Produção',
             'Type' => 'text',
             'Size' => '80',
-            'Description' => 'Credencial exclusiva da produção.',
+            'Description' => 'Credencial exclusiva da produção. <a class="btn btn-default btn-xs" target="_blank" rel="noopener" href="/modules/gateways/asaas/test.php?environment=production">Testar conexão Produção</a> <small>Salve o token antes de testar. Consulta somente leitura.</small>',
         ],
         'productionWebhookToken' => [
             'FriendlyName' => 'Token webhook Produção',
