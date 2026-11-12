@@ -81,6 +81,48 @@ function viewPaymentData($idFaturaParaEnvio, $invoice)
     }
 
 
+    if (($invoice['paymentmethod'] ?? '') === 'asaas') {
+        $charge = Capsule::schema()->hasTable('asaas_cobrancas')
+            ? Capsule::table('asaas_cobrancas')->where('invoice_id', $idFaturaParaEnvio)->first()
+            : null;
+        if (!$charge) {
+            return '<p>Cobrança Asaas ainda não gerada.</p>';
+        }
+
+        $boleto = (string) ($charge->bank_slip_url ?? '');
+        $pixCode = (string) ($charge->pix_payload ?? '');
+        $pixImage = (string) ($charge->pix_qr_code ?? '');
+        $html = '<div class="thx-vencimento"><i class="fa fa-calendar"></i> Vencimento: '
+            . htmlspecialchars(date('d/m/Y', strtotime($charge->due_date)), ENT_QUOTES, 'UTF-8')
+            . '</div><h3 class="thx-titulo-pagamento">Pague sua fatura</h3><div class="thx-pagamentos">';
+
+        if ($pixCode !== '' && $pixImage !== '') {
+            $html .= '<input type="radio" name="thx-pagamento" id="thx-tab-pix" checked>'
+                . '<label for="thx-tab-pix" class="thx-aba thx-aba-pix">PIX</label>';
+        }
+        if ($boleto !== '') {
+            $html .= '<input type="radio" name="thx-pagamento" id="thx-tab-boleto"'
+                . ($pixCode === '' || $pixImage === '' ? ' checked' : '') . '>'
+                . '<label for="thx-tab-boleto" class="thx-aba thx-aba-boleto">Boleto</label>';
+        }
+        if ($pixCode !== '' && $pixImage !== '') {
+            $html .= '<div class="thx-painel thx-painel-pix"><table><tbody><tr><td>'
+                . '<img class="qrcode-pix" alt="QR Code Pix" src="data:image/png;base64,'
+                . htmlspecialchars($pixImage, ENT_QUOTES, 'UTF-8') . '">'
+                . '<code id="pixCode" class="copia-cola">'
+                . htmlspecialchars($pixCode, ENT_QUOTES, 'UTF-8') . '</code>'
+                . '<button class="btn-copy" onclick="copiarTexto(\'pixCode\',this,\'Código PIX copiado!\')">Copiar PIX</button>'
+                . '</td></tr></tbody></table></div>';
+        }
+        if ($boleto !== '' && preg_match('~^https://[a-z0-9.-]*asaas\\.com(?:\\.br)?/~i', $boleto)) {
+            $html .= '<div class="thx-painel thx-painel-boleto"><table><tbody><tr><td>'
+                . '<a class="btn-copy" target="_blank" rel="noopener" href="'
+                . htmlspecialchars($boleto, ENT_QUOTES, 'UTF-8') . '">Visualizar boleto bancário</a>'
+                . '</td></tr></tbody></table></div>';
+        }
+        return $html . '</div>';
+    }
+
     $grupothx_merge_fields['grupothx_pix_copia_e_cola']		= file_get_contents('https://pix.grupothx.com/?valor='.$invoice['total'].'&id=A'.$idFaturaParaEnvio.'&cc=true');
 
 
