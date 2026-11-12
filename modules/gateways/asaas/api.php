@@ -46,6 +46,13 @@ function asaas_api($key, $method, $path, $body = null)
 function asaas_install_charge_table()
 {
     if (Capsule::schema()->hasTable('asaas_cobrancas')) {
+        foreach (['pix_payload', 'pix_qr_code', 'pix_expiration_date'] as $column) {
+            if (!Capsule::schema()->hasColumn('asaas_cobrancas', $column)) {
+                Capsule::schema()->table('asaas_cobrancas', function ($table) use ($column) {
+                    $table->longText($column)->nullable();
+                });
+            }
+        }
         return;
     }
     Capsule::schema()->create('asaas_cobrancas', function ($table) {
@@ -57,6 +64,9 @@ function asaas_install_charge_table()
         $table->string('status', 40);
         $table->string('invoice_url', 512)->nullable();
         $table->string('bank_slip_url', 512)->nullable();
+        $table->longText('pix_payload')->nullable();
+        $table->longText('pix_qr_code')->nullable();
+        $table->longText('pix_expiration_date')->nullable();
         $table->decimal('amount', 12, 2);
         $table->date('due_date');
         $table->timestamps();
@@ -240,6 +250,20 @@ function asaas_save_charge($invoiceId, $charge)
     }
 }
 
+function asaas_store_pix($key, $invoiceId, $paymentId)
+{
+    $pix = asaas_api($key, 'GET', 'payments/' . rawurlencode($paymentId) . '/pixQrCode');
+    if (empty($pix['payload']) || empty($pix['encodedImage'])) {
+        throw new RuntimeException('Asaas não retornou os dados completos do Pix.');
+    }
+    Capsule::table('asaas_cobrancas')->where('invoice_id', $invoiceId)->where('charge_id', $paymentId)->update([
+        'pix_payload' => (string) $pix['payload'],
+        'pix_qr_code' => (string) $pix['encodedImage'],
+        'pix_expiration_date' => (string) ($pix['expirationDate'] ?? ''),
+        'updated_at' => date('Y-m-d H:i:s'),
+    ]);
+}
+
 function asaas_get_or_create_charge($params)
 {
     $invoiceId = (int) ($params['invoiceid'] ?? 0);
@@ -262,6 +286,9 @@ function asaas_get_or_create_charge($params)
             if ($local->environment !== 'sandbox') {
                 throw new RuntimeException('Cobrança já vinculada em outro ambiente.');
             }
+            if (empty($local->pix_payload) || empty($local->pix_qr_code)) {
+                asaas_store_pix($key, $invoiceId, (string) $local->charge_id);
+            }
             asaas_record_issuance($invoiceId, (string) $local->charge_id);
             asaas_sync_prior_notifications($invoiceId, (string) $local->charge_id);
             return (array) $local;
@@ -275,6 +302,7 @@ function asaas_get_or_create_charge($params)
         }
         if ($items) {
             asaas_save_charge($invoiceId, $items[0]);
+            asaas_store_pix($key, $invoiceId, (string) $items[0]['id']);
             asaas_record_issuance($invoiceId, (string) $items[0]['id']);
             asaas_sync_prior_notifications($invoiceId, (string) $items[0]['id']);
             return (array) Capsule::table('asaas_cobrancas')->where('invoice_id', $invoiceId)->first();
@@ -312,6 +340,7 @@ function asaas_get_or_create_charge($params)
             'fine' => ['value' => 0],
         ]);
         asaas_save_charge($invoiceId, $charge);
+        asaas_store_pix($key, $invoiceId, (string) $charge['id']);
         asaas_record_issuance($invoiceId, (string) $charge['id']);
         return (array) Capsule::table('asaas_cobrancas')->where('invoice_id', $invoiceId)->first();
     } finally {
