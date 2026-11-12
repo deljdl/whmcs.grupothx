@@ -99,7 +99,6 @@ function asaas_link($params)
 
     try {
         $charge = asaas_get_or_create_charge($params);
-        $key = (string) ($params['sandboxApiKey'] ?? '');
         $id = (string) $charge['charge_id'];
         $boleto = (string) ($charge['bank_slip_url'] ?? '');
         $html = '<div class="alert alert-info"><strong>Asaas Sandbox</strong> — cobrança de teste, sem valor financeiro real.</div>';
@@ -109,17 +108,15 @@ function asaas_link($params)
                 . '" target="_blank" rel="noopener">Visualizar boleto bancário</a></p>';
         }
 
-        try {
-            $pix = asaas_api($key, 'GET', 'payments/' . rawurlencode($id) . '/pixQrCode');
-            if (!empty($pix['encodedImage'])) {
-                $html .= '<p><img alt="QR Code Pix" style="max-width:180px" src="data:image/png;base64,'
-                    . htmlspecialchars((string) $pix['encodedImage'], ENT_QUOTES, 'UTF-8') . '"></p>';
-            }
-            if (!empty($pix['payload'])) {
-                $html .= '<label>Pix Copia e Cola</label><textarea readonly class="form-control" rows="3" onclick="this.select()">'
-                    . htmlspecialchars((string) $pix['payload'], ENT_QUOTES, 'UTF-8') . '</textarea>';
-            }
-        } catch (\Throwable $exception) {
+        if (!empty($charge['pix_qr_code'])) {
+            $html .= '<p><img alt="QR Code Pix" style="max-width:180px" src="data:image/png;base64,'
+                . htmlspecialchars((string) $charge['pix_qr_code'], ENT_QUOTES, 'UTF-8') . '"></p>';
+        }
+        if (!empty($charge['pix_payload'])) {
+            $html .= '<label>Pix Copia e Cola</label><textarea readonly class="form-control" rows="3" onclick="this.select()">'
+                . htmlspecialchars((string) $charge['pix_payload'], ENT_QUOTES, 'UTF-8') . '</textarea>';
+        }
+        if (empty($charge['pix_payload'])) {
             $html .= '<p>Pix temporariamente indisponível. Utilize o boleto.</p>';
         }
         return $html;
