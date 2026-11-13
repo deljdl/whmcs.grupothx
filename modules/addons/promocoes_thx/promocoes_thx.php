@@ -130,10 +130,7 @@ function promocoes_thx_output($vars)
                         $id = $tabela->insertGetId($dados);
                     }
 
-                    die(var_export(
-    Capsule::table('mod_promocoes_thx')->where('id', $id)->value('conteudo'),
-    true
-));
+                    
                     if ($erro === '') {
                         $_POST['promocao_id'] = $id;
                         echo '<div class="alert alert-success">Promoção salva com sucesso.</div>';
