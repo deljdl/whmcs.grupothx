@@ -8,7 +8,7 @@ add_hook('EmailPreSend', 1, function($vars) {
     #REQUIRE TARIFAS OBRIGATÓRIO PARA NÃO DAR ERRO NO CRON
     if(empty($_SERVER['DOCUMENT_ROOT']))
     {
-        $_SERVER['DOCUMENT_ROOT'] = '/home/thxcom/public_html';
+        $_SERVER['DOCUMENT_ROOT'] = '/home/thxcom/whmcs.grupothx.com.br';
     }
     require_once($_SERVER['DOCUMENT_ROOT'].'/tarifasTHX.php');
 

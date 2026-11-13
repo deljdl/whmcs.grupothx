@@ -10,7 +10,7 @@ if (!defined("WHMCS")){
 #REQUIRE TARIFAS OBRIGATÓRIO PARA NÃO DAR ERRO NO CRON
 if(empty($_SERVER['DOCUMENT_ROOT']))
 {
-    $_SERVER['DOCUMENT_ROOT'] = '/home/thxcom/public_html';
+    $_SERVER['DOCUMENT_ROOT'] = '/home/thxcom/whmcs.grupothx.com.br';
 }
 require_once($_SERVER['DOCUMENT_ROOT'].'/tarifasTHX.php');
 
@@ -18,7 +18,7 @@ add_hook('InvoicePaid', 1, function($vars) {
 
     $vars['invoiceid'];
 
-    $url = 'https://grupothx.com/updatePaymentRest.php?tk=lhvtfk675ri7futrdxu54sujcytfidchkfYHTDJYCKhykjrsjhj&whmcsinvoiceid='.$vars['invoiceid'];
+    $url = 'https://propostas.grupothx.com.br/updatePaymentRest.php?tk=lhvtfk675ri7futrdxu54sujcytfidchkfYHTDJYCKhykjrsjhj&whmcsinvoiceid='.$vars['invoiceid'];
     $ch = curl_init();
     $timeout = 5; // set to zero for no timeout
     curl_setopt ($ch, CURLOPT_URL, $url);
