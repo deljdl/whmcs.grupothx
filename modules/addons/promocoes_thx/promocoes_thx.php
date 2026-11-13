@@ -176,9 +176,15 @@ function promocoes_thx_output($vars)
     $campo('URL amigável', 'slug', $val('slug'));
     $campo('Descrição curta', 'descricao', $val('descricao'), 'textarea');
     $campo('Conteúdo da landing page', 'conteudo', $val('conteudo'), 'textarea');
-    echo '<div class="form-group"><div class="col-sm-offset-2 col-sm-8"><button type="button" class="btn btn-default btn-sm" id="promo_editor_visual">Abrir editor visual</button> <small>O HTML abre em código para permitir colar HTML sem converter as tags em texto.</small></div></div>';
+    echo '<div class="form-group"><div class="col-sm-offset-2 col-sm-8"><button type="button" class="btn btn-default btn-sm" id="promo_editor_visual">Abrir editor visual</button> <button type="button" class="btn btn-default btn-sm" id="promo_limpar_html">Limpar conteúdo HTML</button> <small>Use o campo para colar o HTML original.</small></div></div>';
     echo '<script src="../assets/js/tinymce/tinymce.min.js"></script>';
     echo '<script>
+    document.getElementById("promo_limpar_html").addEventListener("click",function(){
+        if(!confirm("Limpar o HTML deste formulário? A alteração só será gravada ao salvar."))return;
+        var editor=window.tinymce && tinymce.get("promocoes_conteudo");
+        if(editor){editor.setContent("");editor.save();}
+        document.getElementById("promocoes_conteudo").value="";
+    });
     document.getElementById("promo_editor_visual").addEventListener("click",function(){
         var botao=this, editor=window.tinymce && tinymce.get("promocoes_conteudo");
         if(editor){editor.save();editor.remove();botao.textContent="Abrir editor visual";return;}
