@@ -184,6 +184,7 @@ function promocoes_thx_output($vars)
             CKEDITOR.replace("promocoes_conteudo", {
                 height: 420,
                 allowedContent: true,
+                versionCheck: false,
                 entities: false,
                 basicEntities: false,
                 entities_latin: false
