@@ -119,12 +119,8 @@ function promocoes_thx_output($vars)
                     $tabela = Capsule::table('mod_promocoes_thx');
                     if ($tabela->where('slug', $dados['slug'])->where('id', '!=', $id)->exists()) {
                         $erro = 'Esta URL amigável já está cadastrada.';
-                    } elseif ($id) {
-                        if (!$tabela->where('id', $id)->exists()) {
-                            $erro = 'Promoção não localizada.';
-                        } else {
-                            $tabela->where('id', $id)->update($dados);
-                        }
+                    } elseif ($id && $tabela->where('id', $id)->exists()) {
+                        $tabela->where('id', $id)->update($dados);
                     } else {
                         $dados['created_at'] = date('Y-m-d H:i:s');
                         $id = $tabela->insertGetId($dados);
@@ -152,6 +148,7 @@ function promocoes_thx_output($vars)
 
     $editId = max(0, (int) ($_POST['promocao_id'] ?? $_GET['editar'] ?? 0));
     $item = $editId ? Capsule::table('mod_promocoes_thx')->where('id', $editId)->first() : null;
+    if (!$item) $editId = 0;
     $enviado = $_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['acao'] ?? '') === 'salvar';
     $val = static function ($campo, $padrao = '') use ($item, $esc, $enviado, $erro) {
         return $esc($enviado && $erro !== '' ? ($_POST[$campo] ?? $padrao) : ($item->$campo ?? $padrao));
