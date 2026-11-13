@@ -75,14 +75,34 @@ function promocoes_thx_output($vars)
             $slug = strtolower(trim((string) ($_POST['slug'] ?? '')));
             $descricao = trim((string) ($_POST['descricao'] ?? ''));
             $imagem = trim((string) ($_POST['imagem'] ?? ''));
+            $pastaImagens = __DIR__ . '/../../../thx/promocao/';
+            $upload = $_FILES['nova_imagem'] ?? null;
 
             if ($titulo === '' || $slug === '' || $descricao === '') {
                 $erro = 'Preencha título, URL amigável e descrição.';
             } elseif (!preg_match('/^[a-z0-9]+(?:-[a-z0-9]+)*$/', $slug)) {
                 $erro = 'A URL amigável deve conter apenas letras minúsculas, números e hífens.';
-            } elseif ($imagem !== '' && (!preg_match('/^[0-9]+\.jpg$/', $imagem) || !is_file(__DIR__ . '/../../../thx/promocao/' . $imagem))) {
+            } elseif ($imagem !== '' && (!preg_match('/^[a-zA-Z0-9_-]+\.(?:jpg|jpeg|png|webp)$/i', $imagem) || !is_file($pastaImagens . $imagem))) {
                 $erro = 'Escolha uma imagem existente na pasta thx/promocao.';
+            } elseif ($upload && $upload['error'] !== UPLOAD_ERR_NO_FILE && $upload['error'] !== UPLOAD_ERR_OK) {
+                $erro = 'Não foi possível receber a imagem.';
             } else {
+                if ($upload && $upload['error'] === UPLOAD_ERR_OK) {
+                    $tipos = [IMAGETYPE_JPEG => 'jpg', IMAGETYPE_PNG => 'png', IMAGETYPE_WEBP => 'webp'];
+                    $tipo = @exif_imagetype($upload['tmp_name']);
+                    if ($upload['size'] > 5 * 1024 * 1024 || !isset($tipos[$tipo]) || !is_uploaded_file($upload['tmp_name'])) {
+                        $erro = 'Envie uma imagem JPG, PNG ou WebP de até 5 MB.';
+                    } else {
+                        $novoNome = 'promo-' . bin2hex(random_bytes(8)) . '.' . $tipos[$tipo];
+                        if (!move_uploaded_file($upload['tmp_name'], $pastaImagens . $novoNome)) {
+                            $erro = 'Não foi possível salvar a imagem no servidor.';
+                        } else {
+                            $imagem = $novoNome;
+                        }
+                    }
+                }
+            }
+            if ($erro === '') {
                 $dados = [
                     'titulo' => mb_substr($titulo, 0, 180),
                     'slug' => mb_substr($slug, 0, 180),
@@ -137,14 +157,14 @@ function promocoes_thx_output($vars)
     };
 
     echo '<h3>' . ($item ? 'Editar promoção' : 'Nova promoção') . '</h3>';
-    echo '<form method="post" action="' . $esc($base) . '" class="form-horizontal">';
+    echo '<form method="post" enctype="multipart/form-data" action="' . $esc($base) . '" class="form-horizontal">';
     echo '<input type="hidden" name="acao" value="salvar"><input type="hidden" name="csrf" value="' . $esc($csrf) . '">';
     echo '<input type="hidden" name="id" value="' . (int) ($item->id ?? 0) . '">';
 
     $campo = static function ($rotulo, $nome, $valor, $tipo = 'text') use ($esc) {
         echo '<div class="form-group"><label class="col-sm-2 control-label">' . $esc($rotulo) . '</label><div class="col-sm-8">';
         if ($tipo === 'textarea') {
-            echo '<textarea class="form-control" name="' . $esc($nome) . '" rows="4">' . $valor . '</textarea>';
+            echo '<textarea class="form-control" name="' . $esc($nome) . '"' . ($nome === 'conteudo' ? ' id="promocoes_conteudo" rows="16"' : ' rows="4"') . '>' . $valor . '</textarea>';
         } else {
             echo '<input class="form-control" type="text" name="' . $esc($nome) . '" value="' . $valor . '">';
         }
@@ -155,17 +175,35 @@ function promocoes_thx_output($vars)
     $campo('URL amigável', 'slug', $val('slug'));
     $campo('Descrição curta', 'descricao', $val('descricao'), 'textarea');
     $campo('Conteúdo da landing page', 'conteudo', $val('conteudo'), 'textarea');
+    echo '<div class="form-group"><div class="col-sm-offset-2 col-sm-8"><button type="button" class="btn btn-default btn-sm" id="promo_editor_visual">Abrir editor visual</button> <small>O HTML abre em código para permitir colar HTML sem converter as tags em texto.</small></div></div>';
     echo '<script src="../assets/js/tinymce/tinymce.min.js"></script>';
-    echo '<script>if (window.tinymce) tinymce.init({selector:"textarea[name=conteudo]",height:420,menubar:false,plugins:"link lists table code image",toolbar:"undo redo | styleselect | bold italic | bullist numlist | link image table | code",relative_urls:false,convert_urls:false});</script>';
+    echo '<script>
+    document.getElementById("promo_editor_visual").addEventListener("click",function(){
+        var botao=this, editor=window.tinymce && tinymce.get("promocoes_conteudo");
+        if(editor){editor.save();editor.remove();botao.textContent="Abrir editor visual";return;}
+        if(!window.tinymce)return;
+        tinymce.init({selector:"#promocoes_conteudo",height:420,menubar:false,plugins:"link lists table code image",toolbar:"undo redo | styleselect | bold italic | bullist numlist | link image table | code",relative_urls:false,convert_urls:false});
+        botao.textContent="Editar HTML";
+    });
+    </script>';
 
-    $imagens = glob(__DIR__ . '/../../../thx/promocao/[0-9]*.jpg') ?: [];
+    $imagens = array_filter(glob(__DIR__ . '/../../../thx/promocao/*') ?: [], static function ($arquivo) {
+        return is_file($arquivo) && preg_match('/^[a-zA-Z0-9_-]+\\.(jpg|jpeg|png|webp)$/i', basename($arquivo));
+    });
     natsort($imagens);
-    echo '<div class="form-group"><label class="col-sm-2 control-label">Imagem</label><div class="col-sm-8"><select class="form-control" name="imagem"><option value="">Selecione</option>';
+    $imagemSelecionada = $enviado && $erro !== '' ? ($_POST['imagem'] ?? '') : ($item->imagem ?? '');
+    echo '<div class="form-group"><label class="col-sm-2 control-label">Imagem</label><div class="col-sm-8">';
+    echo '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;max-height:350px;overflow:auto;padding:8px;border:1px solid #ddd;border-radius:4px">';
     foreach ($imagens as $arquivo) {
         $nome = basename($arquivo);
-        echo '<option value="' . $esc($nome) . '"' . ($nome === ($enviado && $erro !== '' ? ($_POST['imagem'] ?? '') : ($item->imagem ?? '')) ? ' selected' : '') . '>' . $esc($nome) . '</option>';
+        $url = '../thx/promocao/' . rawurlencode($nome);
+        echo '<label style="border:1px solid #ddd;border-radius:5px;padding:7px;cursor:pointer;text-align:center">';
+        echo '<img src="' . $esc($url) . '" alt="' . $esc($nome) . '" loading="lazy" style="width:100%;height:105px;object-fit:contain">';
+        echo '<div><input type="radio" name="imagem" value="' . $esc($nome) . '"' . ($nome === $imagemSelecionada ? ' checked' : '') . '> ' . $esc($nome) . '</div></label>';
     }
-    echo '</select><p class="help-block">Imagens existentes em thx/promocao. O upload será tratado em etapa posterior.</p></div></div>';
+    echo '</div><p class="help-block">Ou envie uma imagem nova (JPG, PNG ou WebP, até 5 MB):</p>';
+    echo '<input type="file" name="nova_imagem" accept="image/jpeg,image/png,image/webp">';
+    echo '</div></div>';
 
     $campo('SEO - Título', 'seo_titulo', $val('seo_titulo'));
     $campo('SEO - Descrição', 'seo_descricao', $val('seo_descricao'), 'textarea');
