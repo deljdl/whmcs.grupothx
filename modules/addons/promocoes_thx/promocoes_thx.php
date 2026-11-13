@@ -130,8 +130,8 @@ function promocoes_thx_output($vars)
                         echo '<div class="alert alert-success">Promoção salva com sucesso.</div>';
                     }
                 } catch (\Throwable $e) {
-                    $erro = 'Não foi possível salvar a promoção. Verifique os dados e tente novamente.';
-                    logActivity('Promoções THX: falha ao salvar campanha: ' . $e->getMessage());
+                    $erro = 'Erro ao salvar: ' . $e->getMessage();
+                    logActivity('Promoções THX: ' . $e->getMessage());
                 }
             }
         }
