@@ -172,6 +172,7 @@ function promocoes_thx_output($vars)
         echo '</div></div>';
     };
 
+
     $campo('Título', 'titulo', $val('titulo'));
     $campo('URL amigável', 'slug', $val('slug'));
     $campo('Descrição curta', 'descricao', $val('descricao'), 'textarea');
@@ -187,7 +188,10 @@ function promocoes_thx_output($vars)
                 versionCheck: false,
                 entities: false,
                 basicEntities: false,
-                entities_latin: false
+                entities_latin: false,
+                autoParagraph: false,
+                enterMode: CKEDITOR.ENTER_BR,
+                shiftEnterMode: CKEDITOR.ENTER_P
             });
             document.getElementById("promocoes_form").addEventListener("submit", function() {
                 CKEDITOR.instances.promocoes_conteudo.updateElement();
