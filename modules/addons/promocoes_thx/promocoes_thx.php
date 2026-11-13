@@ -115,8 +115,7 @@ function promocoes_thx_output($vars)
                         $tabela->insert($dados);
                     }
                     if ($erro === '') {
-                        header('Location: ' . $base . '&salvo=1');
-                        exit;
+                        echo '<div class="alert alert-success">Promoção salva com sucesso.</div>';
                     }
                 } catch (\Throwable $e) {
                     $erro = 'Não foi possível salvar a promoção. Verifique os dados e tente novamente.';
