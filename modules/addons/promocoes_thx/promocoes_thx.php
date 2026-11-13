@@ -102,7 +102,7 @@ function promocoes_thx_output($vars)
                     }
                 }
             }
-            die($_POST['conteudo']);
+        
             if ($erro === '') {
                 $dados = [
                     'titulo' => mb_substr($titulo, 0, 180),
@@ -129,6 +129,11 @@ function promocoes_thx_output($vars)
                         $dados['created_at'] = date('Y-m-d H:i:s');
                         $id = $tabela->insertGetId($dados);
                     }
+
+                    die(var_export(
+    Capsule::table('mod_promocoes_thx')->where('id', $id)->value('conteudo'),
+    true
+));
                     if ($erro === '') {
                         $_POST['promocao_id'] = $id;
                         echo '<div class="alert alert-success">Promoção salva com sucesso.</div>';
