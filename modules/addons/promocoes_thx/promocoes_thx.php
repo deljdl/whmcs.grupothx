@@ -117,9 +117,12 @@ function promocoes_thx_output($vars)
 
                 try {
                     $tabela = Capsule::table('mod_promocoes_thx');
-                    if ($tabela->where('slug', $dados['slug'])->where('id', '!=', $id)->exists()) {
-                        $erro = 'Esta URL amigável já está cadastrada.';
-                    } elseif ($id && $tabela->where('id', $id)->exists()) {
+                    $registro = $id ? $tabela->where('id', $id)->first() : null;
+                    if (!$registro) {
+                        $registro = $tabela->where('slug', $dados['slug'])->first();
+                    }
+                    if ($registro) {
+                        $id = (int) $registro->id;
                         $tabela->where('id', $id)->update($dados);
                     } else {
                         $dados['created_at'] = date('Y-m-d H:i:s');
@@ -130,7 +133,7 @@ function promocoes_thx_output($vars)
                         echo '<div class="alert alert-success">Promoção salva com sucesso.</div>';
                     }
                 } catch (\Throwable $e) {
-                    $erro = 'Erro ao salvar: ' . $e->getMessage();
+                    $erro = 'Erro ao salvar. Consulte o Log de Atividades do WHMCS (Promoções THX).';
                     logActivity('Promoções THX: ' . $e->getMessage());
                 }
             }
