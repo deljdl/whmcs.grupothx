@@ -158,7 +158,7 @@ function promocoes_thx_output($vars)
     };
 
     echo '<h3>' . ($item ? 'Editar promoção' : 'Nova promoção') . '</h3>';
-    echo '<form method="post" enctype="multipart/form-data" action="' . $esc($base) . '" class="form-horizontal">';
+    echo '<form id="promocoes_form" method="post" enctype="multipart/form-data" action="' . $esc($base) . '" class="form-horizontal">';
     echo '<input type="hidden" name="acao" value="salvar"><input type="hidden" name="csrf" value="' . $esc($csrf) . '">';
     echo '<input type="hidden" name="promocao_id" value="' . (int) ($item->id ?? $editId) . '">';
 
@@ -176,20 +176,20 @@ function promocoes_thx_output($vars)
     $campo('URL amigável', 'slug', $val('slug'));
     $campo('Descrição curta', 'descricao', $val('descricao'), 'textarea');
     $campo('Conteúdo da landing page', 'conteudo', $val('conteudo'), 'textarea');
-    echo '<script src="../assets/js/tinymce/tinymce.min.js"></script>';
+    echo '<script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>';
     echo '<script>
-    (function () {
+    (function() {
         function iniciarEditor() {
-            if (!window.tinymce) return;
-            tinymce.init({
-                selector: "#promocoes_conteudo",
+            if (!window.CKEDITOR) return;
+            CKEDITOR.replace("promocoes_conteudo", {
                 height: 420,
-                menubar: false,
-                plugins: "link lists table code image",
-                toolbar: "undo redo | styleselect | bold italic | bullist numlist | link image table | code",
-                entity_encoding: "raw",
-                relative_urls: false,
-                convert_urls: false
+                allowedContent: true,
+                entities: false,
+                basicEntities: false,
+                entities_latin: false
+            });
+            document.getElementById("promocoes_form").addEventListener("submit", function() {
+                CKEDITOR.instances.promocoes_conteudo.updateElement();
             });
         }
         if (document.readyState === "loading") {
