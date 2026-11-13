@@ -75,7 +75,6 @@ function promocoes_thx_output($vars)
             $slug = strtolower(trim((string) ($_POST['slug'] ?? '')));
             $descricao = trim((string) ($_POST['descricao'] ?? ''));
             $imagem = trim((string) ($_POST['imagem'] ?? ''));
-            $botaoUrl = trim((string) ($_POST['botao_url'] ?? ''));
 
             if ($titulo === '' || $slug === '' || $descricao === '') {
                 $erro = 'Preencha título, URL amigável e descrição.';
@@ -83,8 +82,6 @@ function promocoes_thx_output($vars)
                 $erro = 'A URL amigável deve conter apenas letras minúsculas, números e hífens.';
             } elseif ($imagem !== '' && (!preg_match('/^[0-9]+\.jpg$/', $imagem) || !is_file(__DIR__ . '/../../../thx/promocao/' . $imagem))) {
                 $erro = 'Escolha uma imagem existente na pasta thx/promocao.';
-            } elseif ($botaoUrl !== '' && !preg_match('~^(https?://[^\\s]+|/(?!/)[^\\s]*)$~i', $botaoUrl)) {
-                $erro = 'Informe um link interno começando com / ou uma URL http(s).';
             } else {
                 $dados = [
                     'titulo' => mb_substr($titulo, 0, 180),
@@ -92,8 +89,6 @@ function promocoes_thx_output($vars)
                     'descricao' => $descricao,
                     'conteudo' => trim((string) ($_POST['conteudo'] ?? '')),
                     'imagem' => $imagem,
-                    'botao_texto' => mb_substr(trim((string) ($_POST['botao_texto'] ?? 'Solicitar proposta')), 0, 100),
-                    'botao_url' => $botaoUrl,
                     'seo_titulo' => mb_substr(trim((string) ($_POST['seo_titulo'] ?? '')), 0, 180),
                     'seo_descricao' => mb_substr(trim((string) ($_POST['seo_descricao'] ?? '')), 0, 255),
                     'ativo' => isset($_POST['ativo']) ? 1 : 0,
@@ -172,9 +167,6 @@ function promocoes_thx_output($vars)
     }
     echo '</select><p class="help-block">Imagens existentes em thx/promocao. O upload será tratado em etapa posterior.</p></div></div>';
 
-    $campo('Texto do botão', 'botao_texto', $val('botao_texto', 'Solicitar proposta'));
-    $campo('Link do botão (opcional)', 'botao_url', $val('botao_url'));
-    echo '<p class="help-block" style="margin-left:17%">Pode ficar vazio. Aceita endereço interno (/contato) ou URL completa (https://...).</p>';
     $campo('SEO - Título', 'seo_titulo', $val('seo_titulo'));
     $campo('SEO - Descrição', 'seo_descricao', $val('seo_descricao'), 'textarea');
 
