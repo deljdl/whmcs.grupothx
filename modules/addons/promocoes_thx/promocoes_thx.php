@@ -70,7 +70,7 @@ function promocoes_thx_output($vars)
         if (!hash_equals($csrf, (string) ($_POST['csrf'] ?? ''))) {
             $erro = 'Sessão expirada. Atualize a página e tente novamente.';
         } else {
-            $id = max(0, (int) ($_POST['id'] ?? 0));
+            $id = max(0, (int) ($_POST['promocao_id'] ?? 0));
             $titulo = trim((string) ($_POST['titulo'] ?? ''));
             $slug = strtolower(trim((string) ($_POST['slug'] ?? '')));
             $descricao = trim((string) ($_POST['descricao'] ?? ''));
@@ -127,9 +127,10 @@ function promocoes_thx_output($vars)
                         }
                     } else {
                         $dados['created_at'] = date('Y-m-d H:i:s');
-                        $tabela->insert($dados);
+                        $id = $tabela->insertGetId($dados);
                     }
                     if ($erro === '') {
+                        $_POST['promocao_id'] = $id;
                         echo '<div class="alert alert-success">Promoção salva com sucesso.</div>';
                     }
                 } catch (\Throwable $e) {
@@ -149,7 +150,7 @@ function promocoes_thx_output($vars)
         echo '<div class="alert alert-danger">' . $esc($erro) . '</div>';
     }
 
-    $editId = max(0, (int) ($_POST['id'] ?? $_GET['editar'] ?? 0));
+    $editId = max(0, (int) ($_POST['promocao_id'] ?? $_GET['editar'] ?? 0));
     $item = $editId ? Capsule::table('mod_promocoes_thx')->where('id', $editId)->first() : null;
     $enviado = $_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['acao'] ?? '') === 'salvar';
     $val = static function ($campo, $padrao = '') use ($item, $esc, $enviado, $erro) {
@@ -159,7 +160,7 @@ function promocoes_thx_output($vars)
     echo '<h3>' . ($item ? 'Editar promoção' : 'Nova promoção') . '</h3>';
     echo '<form method="post" enctype="multipart/form-data" action="' . $esc($base) . '" class="form-horizontal">';
     echo '<input type="hidden" name="acao" value="salvar"><input type="hidden" name="csrf" value="' . $esc($csrf) . '">';
-    echo '<input type="hidden" name="id" value="' . (int) ($item->id ?? 0) . '">';
+    echo '<input type="hidden" name="promocao_id" value="' . (int) ($item->id ?? $editId) . '">';
 
     $campo = static function ($rotulo, $nome, $valor, $tipo = 'text') use ($esc) {
         echo '<div class="form-group"><label class="col-sm-2 control-label">' . $esc($rotulo) . '</label><div class="col-sm-8">';
