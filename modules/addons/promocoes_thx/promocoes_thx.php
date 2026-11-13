@@ -102,6 +102,7 @@ function promocoes_thx_output($vars)
                     }
                 }
             }
+            die($_POST['conteudo']);
             if ($erro === '') {
                 $dados = [
                     'titulo' => mb_substr($titulo, 0, 180),
