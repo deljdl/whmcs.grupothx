@@ -176,22 +176,28 @@ function promocoes_thx_output($vars)
     $campo('URL amigável', 'slug', $val('slug'));
     $campo('Descrição curta', 'descricao', $val('descricao'), 'textarea');
     $campo('Conteúdo da landing page', 'conteudo', $val('conteudo'), 'textarea');
-    echo '<div class="form-group"><div class="col-sm-offset-2 col-sm-8"><button type="button" class="btn btn-default btn-sm" id="promo_editor_visual">Abrir editor visual</button> <button type="button" class="btn btn-default btn-sm" id="promo_limpar_html">Limpar conteúdo HTML</button> <small>Use o campo para colar o HTML original.</small></div></div>';
     echo '<script src="../assets/js/tinymce/tinymce.min.js"></script>';
     echo '<script>
-    document.getElementById("promo_limpar_html").addEventListener("click",function(){
-        if(!confirm("Limpar o HTML deste formulário? A alteração só será gravada ao salvar."))return;
-        var editor=window.tinymce && tinymce.get("promocoes_conteudo");
-        if(editor){editor.setContent("");editor.save();}
-        document.getElementById("promocoes_conteudo").value="";
-    });
-    document.getElementById("promo_editor_visual").addEventListener("click",function(){
-        var botao=this, editor=window.tinymce && tinymce.get("promocoes_conteudo");
-        if(editor){editor.save();editor.remove();botao.textContent="Abrir editor visual";return;}
-        if(!window.tinymce)return;
-        tinymce.init({selector:"#promocoes_conteudo",height:420,menubar:false,plugins:"link lists table code image",toolbar:"undo redo | styleselect | bold italic | bullist numlist | link image table | code",relative_urls:false,convert_urls:false});
-        botao.textContent="Editar HTML";
-    });
+    (function () {
+        function iniciarEditor() {
+            if (!window.tinymce) return;
+            tinymce.init({
+                selector: "#promocoes_conteudo",
+                height: 420,
+                menubar: false,
+                plugins: "link lists table code image",
+                toolbar: "undo redo | styleselect | bold italic | bullist numlist | link image table | code",
+                entity_encoding: "raw",
+                relative_urls: false,
+                convert_urls: false
+            });
+        }
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", iniciarEditor);
+        } else {
+            iniciarEditor();
+        }
+    })();
     </script>';
 
     $imagens = array_filter(glob(__DIR__ . '/../../../thx/promocao/*') ?: [], static function ($arquivo) {
