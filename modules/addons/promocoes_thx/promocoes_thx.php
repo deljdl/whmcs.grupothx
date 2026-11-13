@@ -83,8 +83,8 @@ function promocoes_thx_output($vars)
                 $erro = 'A URL amigável deve conter apenas letras minúsculas, números e hífens.';
             } elseif ($imagem !== '' && (!preg_match('/^[0-9]+\.jpg$/', $imagem) || !is_file(__DIR__ . '/../../../thx/promocao/' . $imagem))) {
                 $erro = 'Escolha uma imagem existente na pasta thx/promocao.';
-            } elseif ($botaoUrl !== '' && !filter_var($botaoUrl, FILTER_VALIDATE_URL)) {
-                $erro = 'Informe uma URL completa e válida para o botão.';
+            } elseif ($botaoUrl !== '' && !preg_match('~^(https?://[^\\s]+|/(?!/)[^\\s]*)$~i', $botaoUrl)) {
+                $erro = 'Informe um link interno começando com / ou uma URL http(s).';
             } else {
                 $dados = [
                     'titulo' => mb_substr($titulo, 0, 180),
@@ -134,10 +134,11 @@ function promocoes_thx_output($vars)
         echo '<div class="alert alert-danger">' . $esc($erro) . '</div>';
     }
 
-    $editId = max(0, (int) ($_GET['editar'] ?? 0));
+    $editId = max(0, (int) ($_POST['id'] ?? $_GET['editar'] ?? 0));
     $item = $editId ? Capsule::table('mod_promocoes_thx')->where('id', $editId)->first() : null;
-    $val = static function ($campo, $padrao = '') use ($item, $esc) {
-        return $esc($item->$campo ?? $padrao);
+    $enviado = $_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['acao'] ?? '') === 'salvar';
+    $val = static function ($campo, $padrao = '') use ($item, $esc, $enviado, $erro) {
+        return $esc($enviado && $erro !== '' ? ($_POST[$campo] ?? $padrao) : ($item->$campo ?? $padrao));
     };
 
     echo '<h3>' . ($item ? 'Editar promoção' : 'Nova promoção') . '</h3>';
@@ -159,22 +160,25 @@ function promocoes_thx_output($vars)
     $campo('URL amigável', 'slug', $val('slug'));
     $campo('Descrição curta', 'descricao', $val('descricao'), 'textarea');
     $campo('Conteúdo da landing page', 'conteudo', $val('conteudo'), 'textarea');
+    echo '<script src="../assets/js/tinymce/tinymce.min.js"></script>';
+    echo '<script>if (window.tinymce) tinymce.init({selector:"textarea[name=conteudo]",height:420,menubar:false,plugins:"link lists table code image",toolbar:"undo redo | styleselect | bold italic | bullist numlist | link image table | code",relative_urls:false,convert_urls:false});</script>';
 
     $imagens = glob(__DIR__ . '/../../../thx/promocao/[0-9]*.jpg') ?: [];
     natsort($imagens);
     echo '<div class="form-group"><label class="col-sm-2 control-label">Imagem</label><div class="col-sm-8"><select class="form-control" name="imagem"><option value="">Selecione</option>';
     foreach ($imagens as $arquivo) {
         $nome = basename($arquivo);
-        echo '<option value="' . $esc($nome) . '"' . ($nome === ($item->imagem ?? '') ? ' selected' : '') . '>' . $esc($nome) . '</option>';
+        echo '<option value="' . $esc($nome) . '"' . ($nome === ($enviado && $erro !== '' ? ($_POST['imagem'] ?? '') : ($item->imagem ?? '')) ? ' selected' : '') . '>' . $esc($nome) . '</option>';
     }
     echo '</select><p class="help-block">Imagens existentes em thx/promocao. O upload será tratado em etapa posterior.</p></div></div>';
 
     $campo('Texto do botão', 'botao_texto', $val('botao_texto', 'Solicitar proposta'));
-    $campo('Link do botão', 'botao_url', $val('botao_url'));
+    $campo('Link do botão (opcional)', 'botao_url', $val('botao_url'));
+    echo '<p class="help-block" style="margin-left:17%">Pode ficar vazio. Aceita endereço interno (/contato) ou URL completa (https://...).</p>';
     $campo('SEO - Título', 'seo_titulo', $val('seo_titulo'));
     $campo('SEO - Descrição', 'seo_descricao', $val('seo_descricao'), 'textarea');
 
-    echo '<div class="form-group"><div class="col-sm-offset-2 col-sm-8"><label><input type="checkbox" name="ativo" value="1"' . ((!$item || $item->ativo) ? ' checked' : '') . '> Campanha ativa</label></div></div>';
+    echo '<div class="form-group"><div class="col-sm-offset-2 col-sm-8"><label><input type="checkbox" name="ativo" value="1"' . (($enviado && $erro !== '' ? isset($_POST['ativo']) : (!$item || $item->ativo)) ? ' checked' : '') . '> Campanha ativa</label></div></div>';
     echo '<div class="form-group"><div class="col-sm-offset-2 col-sm-8"><button type="submit" class="btn btn-primary">Salvar promoção</button> <a class="btn btn-default" href="' . $esc($base) . '">Nova promoção</a></div></div>';
     echo '</form><hr><h3>Promoções cadastradas</h3>';
 
