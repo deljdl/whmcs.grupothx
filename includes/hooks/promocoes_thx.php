@@ -1,5 +1,8 @@
 
 <?php
+
+use WHMCS\Database\Capsule;
+
 require_once ROOTDIR . '/tarifasTHX.php';
 
 add_hook('EmailPreSend', 1, function ($vars) {
