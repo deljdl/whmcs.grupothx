@@ -7,6 +7,15 @@ require_once __DIR__ . '/../../tarifasTHX.php';
 $slug = $_GET['slug'] ?? '';
 $token = $_GET['token'] ?? '';
 
+$dadosToken = $token !== '' ? explode('|', (string) decriptX($token), 2) : [];
+$clienteIdentificado = isset($dadosToken[0], $dadosToken[1])
+    && ctype_digit($dadosToken[0])
+    && (int) $dadosToken[0] > 0;
+
+$destinoProposta = $clienteIdentificado
+    ? 'https://propostas.grupothx.com.br/'
+    : '#solicitar-proposta';
+
 $promocao = $slug !== '' ? getPromocao($slug) : null;
 
 if ($slug !== '' && (!$promocao || !$promocao->ativo)) {
@@ -710,8 +719,63 @@ if (!str_contains(mb_strtolower($seoTitulo), 'grupo thx')) {
         .footer-content,
         .footer-brand { flex-direction: column; align-items: flex-start; }
     }
+  
+    /* Identidade visual Grupo THX */
+    body { background: #eaf0f7; }
+    .hero { background: radial-gradient(circle at 89% 18%, rgba(230,45,58,.20), transparent 31%),linear-gradient(128deg,#080e19,#102a4c 62%,#163e70); }
+    .hero::before { border-color:rgba(230,45,58,.25); }
+    .hero .eyebrow { color:#ff9ca3; }
+    .notice { background:linear-gradient(90deg,#a91928,#eb303c,#aa192a); }
+    .hero .btn-light { background:#ec3440;color:#fff;box-shadow:0 14px 28px rgba(236,52,64,.20); }
+    .hero .btn-light:hover { background:#ca2030; }
+    .section-heading .eyebrow { color:#d72d39; }
+    .section-heading h2 { color:#111e31; }
+    .destaque { border-top:4px solid #e63238; }
+    .card { border-bottom:3px solid #1b467c; }
+    .card:hover { border-bottom-color:#e63238; }
+    .process { background:linear-gradient(135deg,#0b1729,#13375e 78%,#1c4e7e);border:0;box-shadow:0 18px 48px rgba(8,25,48,.18); }
+    .process .section-heading h2,.process .step h3 { color:#fff; }
+    .process .section-heading p,.process .step p { color:#c8d8ec; }
+    .process .section-heading .eyebrow { color:#ff9a9d; }
+    .process .step { background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.12); }
+    .process .step:hover { background:rgba(255,255,255,.10); }
+    .process .step-icon { color:#fff;background:#e63238; }
+    .process .step-number { color:#ff8d96; }
+    .mini-cta { background:#122f53;border:0;color:#fff; }
+    .mini-cta h2 { color:#fff; }
+    .mini-cta p { color:#c9d7e8; }
+    .mini-cta .btn { background:#e63238; }
+    .mini-cta .btn:hover { background:#ca202d; }
+    .benefits { padding:45px 0 5px; }
+    .benefits-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px; }
+    .benefit { padding:26px;border-radius:14px;background:#142d4c;color:#fff;border:1px solid rgba(255,255,255,.08);box-shadow:0 12px 34px rgba(16,43,77,.10);transition:transform .25s,box-shadow .25s; }
+    .benefit:nth-child(2) { background:#1b426f; }
+    .benefit:nth-child(3) { background:#9f2232; }
+    .benefit:hover { transform:translateY(-6px);box-shadow:0 20px 38px rgba(16,43,77,.2); }
+    .benefit i { font-size:25px;color:#fff;margin-bottom:15px;display:block; }
+    .benefit h3 { color:#fff;font-size:19px;margin:0 0 8px; }
+    .benefit p { color:#e2e9f4;font-size:14px;margin:0; }
+    .lead-section { margin:58px 0 12px;padding:35px;border-radius:16px;background:#fff;display:grid;grid-template-columns:1fr 1.1fr;gap:32px;box-shadow:0 12px 38px rgba(16,43,77,.09);border-top:5px solid #e63238; }
+    .lead-section h2 { font-size:clamp(25px,3vw,33px);line-height:1.2;margin:0 0 15px;color:#101e32; }
+    .lead-section p { color:#596e88; }
+    .lead-section label { font-size:13px;font-weight:700;display:block;margin-bottom:6px;color:#26384d; }
+    .lead-section input,.lead-section textarea { display:block;width:100%;padding:12px 13px;border:1px solid #cbd7e5;border-radius:8px;font:inherit;color:#20334c;background:#f9fbfe; }
+    .lead-section textarea { min-height:104px;resize:vertical; }
+    .lead-section input:focus,.lead-section textarea:focus { outline:2px solid #3777b7;outline-offset:1px; }
+    .lead-section .field { margin-bottom:14px; }
+    .lead-section button { border:0;cursor:pointer;width:100%;background:#e63238;color:#fff; }
+    .lead-section button:hover { background:#ba2430; }
+    .lead-section small { display:block;margin-top:12px;color:#6a7c90;line-height:1.5; }
+    .section-heading,.benefit,.lead-section { scroll-margin-top:110px; }
+    @media(max-width:850px){ .benefits-grid { grid-template-columns:1fr; }.lead-section { grid-template-columns:1fr; } }
+    @media(max-width:650px){ .lead-section {padding:23px;}.benefits {padding-top:30px;} }
+    @media(prefers-reduced-motion:reduce){
+        *,*::before,*::after {animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}
+    }
+
 </style>
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!--Icons by X-Painel-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Grupo-THX/xpainel-assets/icons.css" />
     <!--End Icons by X-Painel-->
@@ -735,7 +799,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- <a href="<?= $esc($baseUrl) ?>"><i class="fa-solid fa-bullhorn"></i> Promoções</a> -->
             <a href="#como-funciona"><i class="fa-solid fa-gears"></i> Como funciona</a>
             <!-- <a href="<?= $esc(rtrim(HTTP_WHMCS, '/') . '/clientarea.php') ?>"><i class="fa-solid fa-user"></i> Minha conta</a> -->
-            <a class="nav-cta" href="https://propostas.grupothx.com.br/"><i class="fa-solid fa-file-signature"></i> Solicitar proposta</a>
+            <a class="nav-cta" href="<?= $esc($destinoProposta) ?>"><i class="fa-solid fa-file-signature"></i> Solicitar proposta</a>
         </nav>
 
         <details class="mobile-menu">
@@ -744,7 +808,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- <a href="<?= $esc($baseUrl) ?>">Promoções</a> -->
                 <a href="#como-funciona">Como funciona</a>
                 <!-- <a href="<?= $esc(rtrim(HTTP_WHMCS, '/') . '/clientarea.php') ?>">Minha conta</a> -->
-                <a href="https://propostas.grupothx.com.br/">Solicitar proposta</a>
+                <a href="<?= $esc($destinoProposta) ?>">Solicitar proposta</a>
             </nav>
         </details>
     </div>
@@ -763,13 +827,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <?php endif; ?>
 
         <div class="actions">
-            <a class="btn btn-light" href="https://propostas.grupothx.com.br/"><i class="fa-solid fa-paper-plane"></i> Solicitar proposta sem compromisso</a>
+            <a class="btn btn-light" href="<?= $esc($destinoProposta) ?>"><i class="fa-solid fa-paper-plane"></i> Solicitar proposta sem compromisso</a>
         </div>
     </div>
 </section>
-</section>
 
-<main class="container" id="solucoes">
 <main class="container" id="solucoes">
 
     <?php if ($promocao): ?>
@@ -779,7 +841,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p>Uma apresentação objetiva para você avaliar esta solução com tranquilidade.</p>
         </div>
 
-        <div class="section-heading"><span class="eyebrow">Uma oportunidade para você</span><h2>Conheça esta solução</h2><p>Descubra como podemos ajudar sua empresa a evoluir.</p></div>
         <article class="destaque">
             <?php if ($imagemPromocao($promocao)): ?>
                 <img
@@ -848,6 +909,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     <?php endif; ?>
 
+
+    <section class="benefits" aria-labelledby="benefits-title">
+        <div class="section-heading">
+            <span class="eyebrow"><i class="fa-solid fa-shield-halved"></i> Por que a Grupo THX</span>
+            <h2 id="benefits-title">Tecnologia com propósito, do planejamento à entrega</h2>
+            <p>Projetos desenvolvidos de acordo com as necessidades reais de cada negócio.</p>
+        </div>
+        <div class="benefits-grid">
+            <article class="benefit"><i class="fa-solid fa-code"></i><h3>Desenvolvimento sob medida</h3><p>Sites e sistemas pensados para seus objetivos, com atenção à usabilidade, desempenho e evolução.</p></article>
+            <article class="benefit"><i class="fa-solid fa-comments"></i><h3>Atendimento próximo</h3><p>Conversa direta, entendimento das prioridades e uma proposta clara para sua decisão.</p></article>
+            <article class="benefit"><i class="fa-solid fa-chart-line"></i><h3>Foco no seu negócio</h3><p>Tecnologia aplicada para fortalecer sua presença digital e apoiar novos resultados.</p></article>
+        </div>
+    </section>
+
     <section id="como-funciona" class="process">
         <div class="section-heading">
             <span class="eyebrow"><i class="fa-solid fa-diagram-project"></i> Como funciona</span>
@@ -860,31 +935,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="step-icon"><i class="fa-solid fa-file-circle-plus"></i></div>
                 <span class="step-number">01 / SOLICITAÇÃO</span>
                 <h3>Você solicita sua proposta</h3>
-                <p>Nos informa o que precisa — novo site, modernização, sistema ou loja virtual — e o objetivo do projeto.</p>
+                <p>Conte o que sua empresa precisa e compartilhe os objetivos do projeto. É simples e sem compromisso.</p>
             </article>
 
             <article class="step">
                 <div class="step-icon"><i class="fa-solid fa-file-lines"></i></div>
                 <span class="step-number">02 / APRESENTAÇÃO</span>
                 <h3>Enviamos a proposta sem compromisso</h3>
-                <p>Montamos uma proposta personalizada com escopo, investimento e direcionamento inicial, de forma clara e profissional.</p>
+                <p>Analisamos sua necessidade e apresentamos uma proposta com escopo, investimento e condições para sua avaliação.</p>
             </article>
 
             <article class="step">
                 <div class="step-icon"><i class="fa-solid fa-rocket"></i></div>
                 <span class="step-number">03 / APROVAÇÃO</span>
-                <h3>Cliente aprova e seguimos para a execução</h3>
-                <p>Com a aprovação, alinhamos os detalhes e iniciamos o projeto com foco em qualidade, prazo e resultado.</p>
+                <h3>Você aprova e iniciamos o projeto</h3>
+                <p>Após sua aprovação, alinhamos o cronograma e iniciamos o desenvolvimento com acompanhamento em cada etapa.</p>
             </article>
         </div>
     </section>
 
+
+    <?php if (!$clienteIdentificado): ?>
+    <section id="solicitar-proposta" class="lead-section">
+        <div>
+            <span class="eyebrow" style="color:#d62e3b"><i class="fa-solid fa-paper-plane"></i> Faça seu pedido</span>
+            <h2>Conte sobre o projeto que você tem em mente</h2>
+            <p>Preencha os dados e envie sua solicitação diretamente ao WhatsApp comercial da Grupo THX. Nossa equipe poderá entender sua necessidade e preparar uma proposta sem compromisso.</p>
+            <p><i class="fa-solid fa-lock" style="color:#d62e3b"></i> Seus dados serão usados para responder à solicitação.</p>
+        </div>
+        <form id="form-solicitar-proposta">
+            <div class="field"><label for="lead-nome">Nome</label><input id="lead-nome" name="nome" type="text" autocomplete="name" maxlength="120" required></div>
+            <div class="field"><label for="lead-email">E-mail</label><input id="lead-email" name="email" type="email" autocomplete="email" maxlength="180" required></div>
+            <div class="field"><label for="lead-telefone">WhatsApp</label><input id="lead-telefone" name="telefone" type="tel" autocomplete="tel" maxlength="25" required></div>
+            <div class="field"><label for="lead-mensagem">O que você precisa?</label><textarea id="lead-mensagem" name="mensagem" maxlength="1500" placeholder="Ex.: criar um site institucional, modernizar o atual ou desenvolver um sistema." required></textarea></div>
+            <button type="submit" class="btn"><i class="fa-brands fa-whatsapp"></i> Continuar no WhatsApp</button>
+            <small>Ao continuar, o WhatsApp abrirá com sua solicitação preenchida. Confirme o envio da mensagem para falar com nossa equipe.</small>
+        </form>
+    </section>
+    <?php endif; ?>
     <section class="mini-cta">
         <div>
             <h2>Pronto para transformar sua ideia em projeto?</h2>
             <p>Solicite uma proposta e receba um atendimento profissional, com foco na melhor solução para o seu negócio.</p>
         </div>
-        <a class="btn btn-primary" href="https://propostas.grupothx.com.br/">
+        <a class="btn btn-primary" href="<?= $esc($destinoProposta) ?>">
             <i class="fa-solid fa-paper-plane"></i> Solicitar proposta
         </a>
     </section>
@@ -909,5 +1003,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </footer> -->
 <script src="//grupothx.com/atendimento-online/apiTHX/scriptAtendimentoOnlineTodosOsSitesJs.php"></script>
+
+<script>
+(function () {
+    const form = document.getElementById('form-solicitar-proposta');
+    if (!form) return;
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const fields = new FormData(form);
+        const texto = [
+            'Solicitação de proposta - Grupo THX',
+            'Campanha: <?= $esc($promocao->titulo ?? 'Promoções e Serviços') ?>',
+            'URL: <?= $esc($canonical) ?>',
+            'Nome: ' + fields.get('nome'),
+            'E-mail: ' + fields.get('email'),
+            'WhatsApp: ' + fields.get('telefone'),
+            'Projeto: ' + fields.get('mensagem')
+        ].join('\n');
+        window.location.href = 'https://wa.me/551146550330?text=' + encodeURIComponent(texto);
+    });
+})();
+</script>
 </body>
 </html>
