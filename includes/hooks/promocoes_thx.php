@@ -11,10 +11,7 @@ add_hook('EmailPreSend', 1, function ($vars) {
 
 
 
-	$campanha = Capsule::table('mod_promocoes_thx')
-		->where('ativo', 1)
-		->inRandomOrder()
-		->first();
+	$campanha = getPromocao();
 
 	if (!$campanha) {
 		return [];
@@ -26,7 +23,7 @@ add_hook('EmailPreSend', 1, function ($vars) {
 	$token = criptX($token);
 
 	$url = HTTP_WHMCS . '/thx/promocao/'.$campanha->slug.'/' . urlencode($token);
-	$urlImg = HTTP_WHMCS . '/thx/promocao/' . $campanha->imagem;
+	$urlImg = $campanha->urlImg;
 
 	$url = getUrlCurta($url);
 
