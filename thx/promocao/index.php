@@ -1082,7 +1082,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         track.addEventListener('scroll', update, {passive:true});
         window.addEventListener('resize', update);
         update();
+
+        let pausedUntil = 0;
+        let hovering = false;
+        track.addEventListener('mouseenter', function () { hovering = true; });
+        track.addEventListener('mouseleave', function () { hovering = false; });
+        controls.addEventListener('mouseenter', function () { hovering = true; });
+        controls.addEventListener('mouseleave', function () { hovering = false; });
+        track.addEventListener('touchstart', function () { pausedUntil = Date.now() + 8000; }, {passive:true});
+        buttons.forEach(function (button) {
+            button.addEventListener('click', function () { pausedUntil = Date.now() + 8000; });
+        });
+        setInterval(function () {
+            if (document.hidden || hovering || Date.now() < pausedUntil ||
+                window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+                getComputedStyle(controls).display === 'none' ||
+                track.scrollWidth <= track.clientWidth + 2) return;
+
+            const card = track.firstElementChild;
+            if (!card) return;
+            const gap = parseFloat(getComputedStyle(track).gap) || 0;
+            const advance = card.getBoundingClientRect().width + gap;
+            const end = track.scrollWidth - track.clientWidth;
+            track.scrollTo({
+                left: track.scrollLeft + advance >= end - 2 ? 0 : track.scrollLeft + advance,
+                behavior: 'smooth'
+            });
+        }, 5000);
     });
+
+    const mobileMenu = document.querySelector('.mobile-menu');
+    if (mobileMenu) {
+        mobileMenu.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () { mobileMenu.open = false; });
+        });
+    }
 })();
 </script>
 </body>
