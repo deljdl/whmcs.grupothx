@@ -720,6 +720,8 @@ if (!str_contains(mb_strtolower($seoTitulo), 'grupo thx')) {
         .footer-brand { flex-direction: column; align-items: flex-start; }
     }
   
+    @keyframes cardAppear { from { opacity:0; } to { opacity:1; } }
+    .card { animation-name:cardAppear;transform:none; }
     /* Identidade visual Grupo THX */
     body { background: #eaf0f7; }
     .hero { background: radial-gradient(circle at 89% 18%, rgba(230,45,58,.20), transparent 31%),linear-gradient(128deg,#080e19,#102a4c 62%,#163e70); }
