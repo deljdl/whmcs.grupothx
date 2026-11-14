@@ -242,6 +242,63 @@ function executarRequisicaoWHM($server, $params)
     );
 }
 
+function getPromocao($slugOrId)
+{
+	$isInt = ctype_digit((string)$slugOrId);
+	if($isInt)
+	{
+		$campanha = Capsule::table('mod_promocoes_thx')
+			->where('id', (int)$slugOrId)
+			->first();
+	}
+	else
+	{
+		$campanha = Capsule::table('mod_promocoes_thx')
+			->where('slug', $slugOrId)
+			->first();
+	}
+
+	if (!$campanha) {
+		return null;
+	}
+
+	$url = HTTP_WHMCS . '/thx/promocao/'.$campanha->slug;
+	$urlImg = HTTP_WHMCS . '/thx/promocao/' . $campanha->imagem;
+
+	$url = getUrlCurta($url);
+
+	$html = '
+	<a href="' . $url . '">
+		<img style="width:100%; max-width:700px;" src="' . $urlImg . '"  alt="' . $campanha->titulo . '" title="' . $campanha->titulo . '" />
+	</a>';
+
+	$campanha->html = $html;
+	$campanha->url = $url;
+	$campanha->urlImg = $urlImg;
+
+
+	return $campanha;
+}
+
+
+function getPromocoes($excluirId = 0)
+{
+    $query = Capsule::table('mod_promocoes_thx')->where('ativo', 1);
+
+    if ($excluirId) {
+        $query->where('id', '<>', (int)$excluirId);
+    }
+
+    $promocoes = $query->orderBy('id', 'desc')->get();
+
+    foreach ($promocoes as $key => $promocao) {
+        $promocoes[$key] = getPromocao($promocao->id);
+    }
+
+    return $promocoes;
+}
+
+
 function getLoggedAdmin()
 {
     if (empty($_SESSION['adminid']))
