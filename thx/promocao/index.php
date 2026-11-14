@@ -36,10 +36,12 @@ $urlPromocao = static function ($item) use ($baseUrl, $token) {
         . ($token !== '' ? '/' . rawurlencode($token) : '');
 };
 
-$imagemPromocao = static function ($item) use ($baseUrl) {
+$imagemPadrao = rtrim(HTTP_WHMCS, '/') . '/thx/promocao/og-image.jpg';
+
+$imagemPromocao = static function ($item) use ($baseUrl, $imagemPadrao) {
     return !empty($item->imagem)
         ? $baseUrl . '/' . rawurlencode($item->imagem)
-        : '';
+        : $imagemPadrao;
 };
 
 // SEO
@@ -55,7 +57,7 @@ $canonical = $baseUrl . ($promocao ? '/' . $promocao->slug : '');
 
 $imagemSeo = $promocao
     ? $imagemPromocao($promocao)
-    : (!empty($promocoes[0]) ? $imagemPromocao($promocoes[0]) : HTTP_WHMCS . '/thx/promocao/og-image.jpg');
+    : $imagemPadrao;
 
 $seoTitulo = $titulo;
 
