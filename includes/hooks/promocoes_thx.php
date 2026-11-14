@@ -8,6 +8,7 @@ require_once ROOTDIR . '/tarifasTHX.php';
 add_hook('EmailPreSend', 1, function ($vars) {
 
 	$clienteId = (int) ($vars['mergefields']['client_id'] ?? 0);
+
 	
 
 	$campanha = Capsule::table('mod_promocoes_thx')
@@ -19,7 +20,10 @@ add_hook('EmailPreSend', 1, function ($vars) {
 		return [];
 	}
 
-	$token = criptX($clienteId);
+	$token = $clienteId;
+	$token .= '|' . $campanha->id;
+
+	die($token);
 
 	$url = HTTP_WHMCS . '/thx/promocao/?promo=' . $campanha->id . '&cliente=' . urlencode($token);
 	$urlImg = HTTP_WHMCS . '/thx/promocao/' . $campanha->imagem;
