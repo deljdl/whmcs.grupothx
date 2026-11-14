@@ -55,7 +55,7 @@ $canonical = $baseUrl . ($promocao ? '/' . $promocao->slug : '');
 
 $imagemSeo = $promocao
     ? $imagemPromocao($promocao)
-    : (!empty($promocoes[0]) ? $imagemPromocao($promocoes[0]) : '');
+    : (!empty($promocoes[0]) ? $imagemPromocao($promocoes[0]) : HTTP_WHMCS . '/thx/promocao/og-image.jpg');
 
 $seoTitulo = $titulo;
 
@@ -89,6 +89,12 @@ if (!str_contains(mb_strtolower($seoTitulo), 'grupo thx')) {
     <meta property="og:title" content="<?= $esc($seoTitulo) ?>">
     <meta property="og:description" content="<?= $esc($descricao) ?>">
     <meta property="og:url" content="<?= $esc($canonical) ?>">
+
+       <!-- Favicons-->
+    <link rel="shortcut icon" href="<?=HTTP_WHMCS?>/thx/assets/favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="192x192" href="<?=HTTP_WHMCS?>/thx/assets/favicon/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="512x114" href="<?=HTTP_WHMCS?>/thx/assets/favicon/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="32x32" href="<?=HTTP_WHMCS?>/thx/assets/favicon/favicon-32x32.png">
 
     <?php if ($imagemSeo): ?>
         <meta property="og:image" content="<?= $esc($imagemSeo) ?>">
