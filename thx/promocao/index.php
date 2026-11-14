@@ -911,6 +911,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <div class="grade carousel-track" id="carousel-promocoes">
+                <?php if (!$promocao): ?>
+                    <article class="card">
+                        <a class="card-imagem" href="<?= $esc($destinoProposta) ?>">
+                            <img src="<?= $esc($imagemPadrao) ?>" alt="Grupo THX - Soluções em tecnologia" loading="lazy">
+                        </a>
+                        <div class="card-conteudo">
+                            <h2>Soluções em tecnologia para sua empresa</h2>
+                            <p>Conheça o Grupo THX e solicite uma proposta personalizada para o seu negócio.</p>
+                            <a class="btn btn-primary" href="<?= $esc($destinoProposta) ?>">
+                                <i class="fa-solid fa-arrow-right"></i> Solicitar proposta
+                            </a>
+                        </div>
+                    </article>
+                <?php endif; ?>
                 <?php foreach ($promocoes as $item): ?>
                     <?php
                         $url = $urlPromocao($item);
