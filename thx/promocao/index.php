@@ -51,7 +51,6 @@ if (!str_contains(mb_strtolower($seoTitulo), 'grupo thx')) {
     $seoTitulo .= ' | Grupo THX';
 }
 
-ob_start();
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -458,11 +457,6 @@ ob_start();
 <footer>
     &copy; <?= date('Y') ?> Grupo THX — Soluções para o seu negócio
 </footer>
-
+<script src="//grupothx.com/atendimento-online/apiTHX/scriptAtendimentoOnlineTodosOsSitesJs.php"></script>
 </body>
 </html>
-<?php
-
-$html = ob_get_clean();
-
-echo $html;
