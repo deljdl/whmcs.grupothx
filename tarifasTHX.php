@@ -242,8 +242,11 @@ function executarRequisicaoWHM($server, $params)
     );
 }
 
-function getPromocao($slugOrId)
+function getPromocao($slugOrId = null)
 {
+	if ($slugOrId === null) {
+		$campanha = Capsule::table('mod_promocoes_thx')->where('ativo', 1)->inRandomOrder()->first();
+	} else {
 	$isInt = ctype_digit((string)$slugOrId);
 	if($isInt)
 	{
@@ -256,6 +259,7 @@ function getPromocao($slugOrId)
 		$campanha = Capsule::table('mod_promocoes_thx')
 			->where('slug', $slugOrId)
 			->first();
+	}
 	}
 
 	if (!$campanha) {
