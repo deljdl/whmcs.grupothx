@@ -30,16 +30,11 @@ add_hook('EmailPreSend', 1, function ($vars) {
 
 	$url = getUrlCurta($url);
 
-	die($url);
-
-
 	$html = '
 	<a href="' . $url . '">
 		<img style="width:100%; max-width:700px;" src="' . $urlImg . '"  alt="' . $campanha->titulo . '" title="' . $campanha->titulo . '" />
 	</a>';
 
-	echo $html;
-	die('<pre>'.print_r($vars, true).'</pre>');
     return [
         'promocoes_thx_html' => $html
     ];
