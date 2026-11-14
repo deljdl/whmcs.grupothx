@@ -987,20 +987,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer class="site-footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <img src="<?= $esc(rtrim(HTTP_WHMCS, '/') . '/assets/img/logo.png') ?>" alt="Grupo THX">
-                <p>Tecnologia, criação e soluções digitais para o seu negócio.</p>
-            </div>
-
-            <nav class="footer-links" aria-label="Links do rodapé">
-                <a href="<?= $esc($baseUrl) ?>">Promoções</a>
-                <a href="#como-funciona">Como funciona</a>
-                <a href="<?= $esc(rtrim(HTTP_WHMCS, '/') . '/clientarea.php') ?>">Minha conta</a>
-            </nav>
-        </div>
-
+    <div class="container py-4">
         <div class="copyright">&copy; <?= date('Y') ?> Grupo THX. Todos os direitos reservados.</div>
     </div>
 </footer>
