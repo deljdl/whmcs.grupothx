@@ -1,4 +1,10 @@
 <?php
+
+echo '<pre>';
+print_r($_GET);
+echo '</pre>';
+
+
 $imagens = glob(__DIR__ . '/*.jpg');
 $promocoes = [];
 
