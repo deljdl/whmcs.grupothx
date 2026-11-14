@@ -108,7 +108,7 @@ function promocoes_thx_output($vars)
                     'titulo' => mb_substr($titulo, 0, 180),
                     'slug' => mb_substr($slug, 0, 180),
                     'descricao' => $descricao,
-                    'conteudo' => trim((string) ($_POST['conteudo'] ?? '')),
+                    'conteudo' => html_entity_decode(trim((string) ($_POST['conteudo'] ?? '')), ENT_QUOTES | ENT_HTML5, 'UTF-8'),
                     'imagem' => $imagem,
                     'seo_titulo' => mb_substr(trim((string) ($_POST['seo_titulo'] ?? '')), 0, 180),
                     'seo_descricao' => mb_substr(trim((string) ($_POST['seo_descricao'] ?? '')), 0, 255),
