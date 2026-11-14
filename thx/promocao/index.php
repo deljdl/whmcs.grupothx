@@ -727,23 +727,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header class="site-header">
     <div class="container nav">
-        <a class="brand" href="<?= $esc(rtrim(HTTP_WHMCS, '/') . '/') ?>" aria-label="Grupo THX - início">
+        <a class="brand" href="#" aria-label="Grupo THX - início">
             <img src="<?= $esc(rtrim(HTTP_WHMCS, '/') . '/assets/img/logo.png') ?>" alt="Grupo THX">
         </a>
 
         <nav class="nav-links" aria-label="Navegação principal">
-            <a href="<?= $esc($baseUrl) ?>"><i class="fa-solid fa-bullhorn"></i> Promoções</a>
+            <!-- <a href="<?= $esc($baseUrl) ?>"><i class="fa-solid fa-bullhorn"></i> Promoções</a> -->
             <a href="#como-funciona"><i class="fa-solid fa-gears"></i> Como funciona</a>
-            <a href="<?= $esc(rtrim(HTTP_WHMCS, '/') . '/clientarea.php') ?>"><i class="fa-solid fa-user"></i> Minha conta</a>
+            <!-- <a href="<?= $esc(rtrim(HTTP_WHMCS, '/') . '/clientarea.php') ?>"><i class="fa-solid fa-user"></i> Minha conta</a> -->
             <a class="nav-cta" href="https://propostas.grupothx.com.br/"><i class="fa-solid fa-file-signature"></i> Solicitar proposta</a>
         </nav>
 
         <details class="mobile-menu">
             <summary aria-label="Abrir menu"><i class="fa-solid fa-bars"></i></summary>
             <nav class="mobile-links" aria-label="Navegação móvel">
-                <a href="<?= $esc($baseUrl) ?>">Promoções</a>
+                <!-- <a href="<?= $esc($baseUrl) ?>">Promoções</a> -->
                 <a href="#como-funciona">Como funciona</a>
-                <a href="<?= $esc(rtrim(HTTP_WHMCS, '/') . '/clientarea.php') ?>">Minha conta</a>
+                <!-- <a href="<?= $esc(rtrim(HTTP_WHMCS, '/') . '/clientarea.php') ?>">Minha conta</a> -->
                 <a href="https://propostas.grupothx.com.br/">Solicitar proposta</a>
             </nav>
         </details>
@@ -762,15 +762,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p>Desenvolvemos sites, lojas virtuais e soluções web sob medida para empresas que querem evoluir sua presença digital com profissionalismo.</p>
         <?php endif; ?>
 
-        <ul class="hero-points">
-            <li><i class="fa-solid fa-check"></i> Proposta personalizada</li>
-            <li><i class="fa-solid fa-check"></i> Atendimento profissional</li>
-            <li><i class="fa-solid fa-check"></i> Soluções sob medida</li>
-        </ul>
-
         <div class="actions">
             <a class="btn btn-light" href="https://propostas.grupothx.com.br/"><i class="fa-solid fa-paper-plane"></i> Solicitar proposta sem compromisso</a>
-            <a class="btn btn-outline" href="#solucoes"><i class="fa-solid fa-arrow-down"></i> Conhecer soluções</a>
         </div>
     </div>
 </section>
@@ -897,7 +890,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 </main>
 
-<footer class="site-footer">
+<!-- <footer class="site-footer">
     <div class="container">
         <div class="footer-content">
             <div class="footer-brand">
@@ -914,7 +907,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="copyright">&copy; <?= date('Y') ?> Grupo THX. Todos os direitos reservados.</div>
     </div>
-</footer>
+</footer> -->
 <script src="//grupothx.com/atendimento-online/apiTHX/scriptAtendimentoOnlineTodosOsSitesJs.php"></script>
 </body>
 </html>
