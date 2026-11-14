@@ -771,6 +771,39 @@ if (!str_contains(mb_strtolower($seoTitulo), 'grupo thx')) {
     .section-heading,.benefit,.lead-section { scroll-margin-top:110px; }
     @media(max-width:850px){ .benefits-grid { grid-template-columns:1fr; }.lead-section { grid-template-columns:1fr; } }
     @media(max-width:650px){ .lead-section {padding:23px;}.benefits {padding-top:30px;} }
+
+    /* Carrosséis responsivos */
+    .offer-list .grade {
+        display:flex;overflow-x:auto;gap:22px;scroll-snap-type:x mandatory;
+        scroll-behavior:smooth;scrollbar-width:none;padding:4px 3px 14px;
+    }
+    .offer-list .grade::-webkit-scrollbar,.benefits-grid::-webkit-scrollbar,.process-grid::-webkit-scrollbar {display:none;}
+    .offer-list .grade > .card {flex:0 0 calc((100% - 44px)/3);min-width:0;scroll-snap-align:start;}
+    .carousel-controls {display:flex;justify-content:center;gap:12px;margin-top:12px;}
+    .carousel-arrow {
+        width:42px;height:42px;border:1px solid #cbd7e5;border-radius:50%;
+        background:#fff;color:#173b68;cursor:pointer;
+        display:inline-flex;align-items:center;justify-content:center;
+        transition:background .2s,color .2s;
+    }
+    .carousel-arrow:hover:not(:disabled) {background:#173b68;color:#fff;}
+    .carousel-arrow:disabled {opacity:.35;cursor:default;}
+    .benefits .carousel-controls,.process .carousel-controls {display:none;}
+    @media(max-width:930px){.offer-list .grade > .card {flex-basis:calc((100% - 22px)/2);}}
+    @media(max-width:700px){
+        .offer-list .grade > .card {flex-basis:88%;}
+        .benefits-grid,.process-grid {
+            display:flex;overflow-x:auto;gap:14px;scroll-snap-type:x mandatory;
+            scroll-behavior:smooth;scrollbar-width:none;padding:4px 2px 12px;
+        }
+        .benefits-grid > .benefit,.process-grid > .step {
+            flex:0 0 90%;min-width:0;scroll-snap-align:start;
+        }
+        .benefits .carousel-controls,.process .carousel-controls {display:flex;}
+        .process .carousel-arrow {background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:#fff;}
+        .process .carousel-arrow:hover:not(:disabled) {background:#e63238;}
+    }
+    @media(prefers-reduced-motion:reduce){.carousel-track {scroll-behavior:auto!important;}}
     @media(prefers-reduced-motion:reduce){
         *,*::before,*::after {animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}
     }
@@ -870,7 +903,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <p>Selecione uma opção e veja como podemos ajudar sua empresa a crescer com tecnologia.</p>
             </div>
 
-            <div class="grade">
+            <div class="grade carousel-track" id="carousel-promocoes">
                 <?php foreach ($promocoes as $item): ?>
                     <?php
                         $url = $urlPromocao($item);
@@ -903,6 +936,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </article>
                 <?php endforeach; ?>
             </div>
+        <div class="carousel-controls" data-carousel="carousel-promocoes" aria-label="Navegação do carrossel">
+            <button type="button" class="carousel-arrow" data-direction="-1" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+            <button type="button" class="carousel-arrow" data-direction="1" aria-label="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
         </section>
     <?php elseif (!$promocao): ?>
         <div class="vazio">
@@ -918,10 +955,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h2 id="benefits-title">Tecnologia com propósito, do planejamento à entrega</h2>
             <p>Projetos desenvolvidos de acordo com as necessidades reais de cada negócio.</p>
         </div>
-        <div class="benefits-grid">
+        <div class="benefits-grid carousel-track" id="carousel-beneficios">
             <article class="benefit"><i class="fa-solid fa-code"></i><h3>Desenvolvimento sob medida</h3><p>Sites e sistemas pensados para seus objetivos, com atenção à usabilidade, desempenho e evolução.</p></article>
             <article class="benefit"><i class="fa-solid fa-comments"></i><h3>Atendimento próximo</h3><p>Conversa direta, entendimento das prioridades e uma proposta clara para sua decisão.</p></article>
             <article class="benefit"><i class="fa-solid fa-chart-line"></i><h3>Foco no seu negócio</h3><p>Tecnologia aplicada para fortalecer sua presença digital e apoiar novos resultados.</p></article>
+        </div>
+        <div class="carousel-controls" data-carousel="carousel-beneficios" aria-label="Navegação do carrossel">
+            <button type="button" class="carousel-arrow" data-direction="-1" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+            <button type="button" class="carousel-arrow" data-direction="1" aria-label="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
     </section>
 
@@ -932,7 +973,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p>Trabalhamos de forma clara, profissional e sem complicação.</p>
         </div>
 
-        <div class="process-grid">
+        <div class="process-grid carousel-track" id="carousel-processo">
             <article class="step">
                 <div class="step-icon"><i class="fa-solid fa-file-circle-plus"></i></div>
                 <span class="step-number">01 / SOLICITAÇÃO</span>
@@ -953,6 +994,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h3>Você aprova e iniciamos o projeto</h3>
                 <p>Após sua aprovação, alinhamos o cronograma e iniciamos o desenvolvimento com acompanhamento em cada etapa.</p>
             </article>
+        </div>
+        <div class="carousel-controls" data-carousel="carousel-processo" aria-label="Navegação do carrossel">
+            <button type="button" class="carousel-arrow" data-direction="-1" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+            <button type="button" class="carousel-arrow" data-direction="1" aria-label="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
     </section>
 
@@ -1010,6 +1055,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             'Projeto: ' + fields.get('mensagem')
         ].join('\n');
         window.location.href = 'https://wa.me/551146550330?text=' + encodeURIComponent(texto);
+    });
+})();
+</script>
+
+<script>
+(function () {
+    document.querySelectorAll('.carousel-controls').forEach(function (controls) {
+        const track = document.getElementById(controls.dataset.carousel);
+        if (!track) return;
+        const buttons = controls.querySelectorAll('button');
+        function update() {
+            const active = getComputedStyle(controls).display !== 'none';
+            const limit = track.scrollWidth - track.clientWidth;
+            buttons[0].disabled = !active || track.scrollLeft <= 2;
+            buttons[1].disabled = !active || track.scrollLeft >= limit - 2;
+        }
+        buttons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                const card = track.firstElementChild;
+                if (!card) return;
+                const gap = parseFloat(getComputedStyle(track).gap) || 0;
+                track.scrollBy({left:(card.getBoundingClientRect().width + gap) * Number(button.dataset.direction),behavior:'smooth'});
+            });
+        });
+        track.addEventListener('scroll', update, {passive:true});
+        window.addEventListener('resize', update);
+        update();
     });
 })();
 </script>
