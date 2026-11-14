@@ -92,6 +92,7 @@ if (!str_contains(mb_strtolower($seoTitulo), 'grupo thx')) {
     <meta name="twitter:title" content="<?= $esc($seoTitulo) ?>">
     <meta name="twitter:description" content="<?= $esc($descricao) ?>">
 
+
     <style>
     :root {
         --blue: #173b68;
@@ -773,7 +774,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 </section>
+</section>
 
+<main class="container" id="solucoes">
 <main class="container" id="solucoes">
 
     <?php if ($promocao): ?>
@@ -783,6 +786,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p>Uma apresentação objetiva para você avaliar esta solução com tranquilidade.</p>
         </div>
 
+        <div class="section-heading"><span class="eyebrow">Uma oportunidade para você</span><h2>Conheça esta solução</h2><p>Descubra como podemos ajudar sua empresa a evoluir.</p></div>
         <article class="destaque">
             <?php if ($imagemPromocao($promocao)): ?>
                 <img
