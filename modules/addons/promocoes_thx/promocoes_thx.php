@@ -185,6 +185,13 @@ function promocoes_thx_output($vars)
     (function() {
         function iniciarEditor() {
             if (!window.CKEDITOR) return;
+
+            const campo = document.getElementById("promocoes_conteudo");
+            const decoder = document.createElement("textarea");
+            decoder.innerHTML = campo.value;
+            campo.value = decoder.value;
+
+
             CKEDITOR.replace("promocoes_conteudo", {
                 height: 420,
                 allowedContent: true,
