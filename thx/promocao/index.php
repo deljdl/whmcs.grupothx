@@ -986,7 +986,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 </main>
 
-<!-- <footer class="site-footer">
+<footer class="site-footer">
     <div class="container">
         <div class="footer-content">
             <div class="footer-brand">
@@ -1003,7 +1003,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="copyright">&copy; <?= date('Y') ?> Grupo THX. Todos os direitos reservados.</div>
     </div>
-</footer> -->
+</footer>
 <script src="//grupothx.com/atendimento-online/apiTHX/scriptAtendimentoOnlineTodosOsSitesJs.php"></script>
 
 <script>
