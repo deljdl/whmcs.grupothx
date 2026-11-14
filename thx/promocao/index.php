@@ -376,7 +376,6 @@ if (!str_contains(mb_strtolower($seoTitulo), 'grupo thx')) {
 
     .destaque-imagem {
         width: 100%;
-        max-height: 430px;
         object-fit: contain;
         background: #f9fbfe;
         display: block;
