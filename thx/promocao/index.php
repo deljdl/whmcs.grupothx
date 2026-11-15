@@ -71,9 +71,14 @@ if (!str_contains(mb_strtolower($seoTitulo), 'grupo thx')) {
     $seoTitulo .= ' | Grupo THX';
 }
 
-$textWhatsapp = getUrlCurta($urlPromocao($promocao));
+$atualUrl = $baseUrl;
+if ($promocao) {
+    $atualUrl .= '/'. $promocao->slug;
+}
 
-$textWhatsapp =urlencode($textWhatsapp);
+$textWhatsapp .= $whatsBreLineLine . 'Estou em '.$atualUrl;
+
+$textWhatsapp = urlencode($textWhatsapp);
 $linkWhatsapp = 'https://wa.me/551146550330?text=' . $textWhatsapp;
 
 ?>
@@ -861,7 +866,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- <a href="<?= $esc($baseUrl) ?>">Promoções</a> -->
                 <a href="#como-funciona">Como funciona</a>
                 <!-- <a href="<?= $esc(rtrim(HTTP_WHMCS, '/') . '/clientarea.php') ?>">Minha conta</a> -->
-                <a href="<?=$linkWhatsapp?>">Solicitar proposta</a>
+                <a target="_blank"  href="<?=$linkWhatsapp?>">Solicitar proposta</a>
             </nav>
         </details>
     </div>
@@ -880,7 +885,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <?php endif; ?>
 
         <div class="actions">
-            <a class="btn btn-light" href="<?=$linkWhatsapp?>"><i class="fa-solid fa-paper-plane"></i> Solicitar proposta sem compromisso</a>
+            <a  target="_blank" class="btn btn-light" href="<?=$linkWhatsapp?>"><i class="fa-solid fa-paper-plane"></i> Solicitar proposta sem compromisso</a>
         </div>
     </div>
 </section>
@@ -1039,7 +1044,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h2>Pronto para transformar sua ideia em projeto?</h2>
             <p>Solicite uma proposta e receba um atendimento profissional, com foco na melhor solução para o seu negócio.</p>
         </div>
-        <a class="btn btn-primary" href="<?= $linkWhatsapp ?>">
+        <a class="btn btn-primary"  target="_blank" href="<?= $linkWhatsapp ?>">
             <i class="fa-solid fa-paper-plane"></i> Solicitar proposta
         </a>
     </section>
