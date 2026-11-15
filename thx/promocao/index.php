@@ -36,10 +36,12 @@ $urlPromocao = static function ($item) use ($baseUrl, $token) {
         . ($token !== '' ? '/' . rawurlencode($token) : '');
 };
 
-$imagemPromocao = static function ($item) use ($baseUrl) {
+$imagemPadrao = rtrim(HTTP_WHMCS, '/') . '/thx/promocao/og-image.jpg';
+
+$imagemPromocao = static function ($item) use ($baseUrl, $imagemPadrao) {
     return !empty($item->imagem)
         ? $baseUrl . '/' . rawurlencode($item->imagem)
-        : '';
+        : $imagemPadrao;
 };
 
 // SEO
@@ -55,7 +57,7 @@ $canonical = $baseUrl . ($promocao ? '/' . $promocao->slug : '');
 
 $imagemSeo = $promocao
     ? $imagemPromocao($promocao)
-    : (!empty($promocoes[0]) ? $imagemPromocao($promocoes[0]) : HTTP_WHMCS . '/thx/promocao/og-image.jpg');
+    : $imagemPadrao;
 
 $seoTitulo = $titulo;
 
@@ -874,31 +876,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main class="container" id="solucoes">
 
-    <?php if ($promocao): ?>
-        <div class="section-heading">
+    <div class="section-heading">
             <span class="eyebrow"><i class="fa-solid fa-star"></i> Solução em destaque</span>
             <h2>Conheça esta oportunidade</h2>
             <p>Uma apresentação objetiva para você avaliar esta solução com tranquilidade.</p>
         </div>
 
         <article class="destaque">
-            <?php if ($imagemPromocao($promocao)): ?>
-                <img
-                    class="destaque-imagem"
-                    src="<?= $esc($imagemPromocao($promocao)) ?>"
-                    alt="<?= $esc($promocao->titulo) ?>"
-                    width="1200"
-                    loading="eager"
-                >
-            <?php endif; ?>
+            <img
+                class="destaque-imagem"
+                src="<?= $esc($promocao ? $imagemPromocao($promocao) : $imagemPadrao) ?>"
+                alt="<?= $esc($promocao->titulo ?? 'Grupo THX - Soluções em tecnologia') ?>"
+                width="1200"
+                loading="eager"
+            >
 
-            <?php if (trim((string)$promocao->conteudo) !== ''): ?>
+            <?php if ($promocao && trim((string)$promocao->conteudo) !== ''): ?>
                 <div class="destaque-conteudo">
                     <?= $promocao->conteudo ?>
                 </div>
             <?php endif; ?>
         </article>
-    <?php endif; ?>
 
     <?php if (count($promocoes)): ?>
         <section class="offer-list <?= $promocao ? 'other' : 'all' ?>">
