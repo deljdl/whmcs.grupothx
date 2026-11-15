@@ -37,8 +37,7 @@ $urlPromocao = static function ($item) use ($baseUrl, $token) {
 };
 
 
-$textWhatsapp = "Desejo  mais informações sobre o serviço:";
-$whatsBreLineLine = '%0A';
+$textWhatsapp = "Olá! Gostaria de mais informações sobre:\n";
 
 $imagemPadrao = rtrim(HTTP_WHMCS, '/') . '/thx/promocao/og-image.jpg';
 
@@ -53,7 +52,7 @@ $titulo = $promocao
     ? ($promocao->seo_titulo ?: $promocao->titulo)
     : 'Promoções e Serviços | Grupo THX';
 
-$textWhatsapp.= $whatsBreLineLine . $titulo;
+$textWhatsapp .= '*' . $titulo . "*\n\n";
 
 $descricao = $promocao
     ? ($promocao->seo_descricao ?: $promocao->descricao)
@@ -76,10 +75,8 @@ if ($promocao) {
     $atualUrl .= '/'. $promocao->slug;
 }
 
-$textWhatsapp .= $whatsBreLineLine . 'Estou em '.$atualUrl;
-echo $textWhatsapp;
-$textWhatsapp = urlencode($textWhatsapp);
-$linkWhatsapp = 'https://wa.me/551146550330?text=' . $textWhatsapp;
+$textWhatsapp .= $atualUrl;
+$linkWhatsapp = 'https://wa.me/551146550330?text=' . rawurlencode($textWhatsapp);
 
 ?>
 <!doctype html>
