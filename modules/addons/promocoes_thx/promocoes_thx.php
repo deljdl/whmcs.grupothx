@@ -243,7 +243,7 @@ function promocoes_thx_output($vars)
     $registros = Capsule::table('mod_promocoes_thx')->orderBy('id', 'desc')->get();
     echo '<div class="table-responsive"><table class="table table-striped"><thead><tr><th>ID</th><th>Título</th><th>URL</th><th>Imagem</th><th>Status</th><th></th></tr></thead><tbody>';
     foreach ($registros as $registro) {
-        echo '<tr><td>' . (int) $registro->id . '</td><td>' . $esc($registro->titulo) . '</td><td>' . $esc($registro->slug) . '</td><td>' . $esc($registro->imagem) . '</td><td>' . ($registro->ativo ? 'Ativa' : 'Inativa') . '</td><td><a class="btn btn-default btn-sm" href="' . $esc($base) . '&editar=' . (int) $registro->id . '">Editar</a></td></tr>';
+        echo '<tr><td>' . (int) $registro->id . '</td><td>' . $esc($registro->titulo) . '</td><td>' . $esc($registro->slug) . '</td><td>' . $esc($registro->imagem) . '<img src="../thx/promocao/' . rawurlencode($registro->imagem) . '" style="max-width:100px;max-height:100px" /></td><td>' . ($registro->ativo ? 'Ativa' : 'Inativa') . '</td><td><a class="btn btn-default btn-sm" href="' . $esc($base) . '&editar=' . (int) $registro->id . '">Editar</a></td></tr>';
     }
     echo '</tbody></table></div>';
 }
