@@ -20,7 +20,7 @@ $promocao = $slug !== '' ? getPromocao($slug) : null;
 
 if ($slug !== '' && (!$promocao || !$promocao->ativo)) {
     http_response_code(404);
-    die('Promoção não encontrada.');
+    die('Página não encontrada.');
 }
 
 $promocoes = getPromocoes($promocao->id ?? 0);
@@ -36,6 +36,10 @@ $urlPromocao = static function ($item) use ($baseUrl, $token) {
         . ($token !== '' ? '/' . rawurlencode($token) : '');
 };
 
+
+$textWhatsapp = "Desejo  mais informações sobre o serviço:";
+$whatsBreLineLine = '%0A';
+
 $imagemPadrao = rtrim(HTTP_WHMCS, '/') . '/thx/promocao/og-image.jpg';
 
 $imagemPromocao = static function ($item) use ($baseUrl, $imagemPadrao) {
@@ -48,6 +52,8 @@ $imagemPromocao = static function ($item) use ($baseUrl, $imagemPadrao) {
 $titulo = $promocao
     ? ($promocao->seo_titulo ?: $promocao->titulo)
     : 'Promoções e Serviços | Grupo THX';
+
+$textWhatsapp.= $whatsBreLineLine . $titulo;
 
 $descricao = $promocao
     ? ($promocao->seo_descricao ?: $promocao->descricao)
@@ -64,6 +70,9 @@ $seoTitulo = $titulo;
 if (!str_contains(mb_strtolower($seoTitulo), 'grupo thx')) {
     $seoTitulo .= ' | Grupo THX';
 }
+
+$textWhatsapp =urlencode($textWhatsapp);
+$linkWhatsapp = 'https://wa.me/551146550330?text=' . $textWhatsapp;
 
 ?>
 <!doctype html>
@@ -841,7 +850,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- <a href="<?= $esc($baseUrl) ?>"><i class="fa-solid fa-bullhorn"></i> Promoções</a> -->
             <a href="#como-funciona"><i class="fa-solid fa-gears"></i> Como funciona</a>
             <!-- <a href="<?= $esc(rtrim(HTTP_WHMCS, '/') . '/clientarea.php') ?>"><i class="fa-solid fa-user"></i> Minha conta</a> -->
-            <a class="nav-cta" href="<?= $esc($destinoProposta) ?>"><i class="fa-solid fa-file-signature"></i> Solicitar proposta</a>
+            <a class="nav-cta" href="<?=$linkWhatsapp?>"><i class="fa-solid fa-file-signature"></i> Solicitar proposta</a>
         </nav>
 
         <details class="mobile-menu">
@@ -850,7 +859,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- <a href="<?= $esc($baseUrl) ?>">Promoções</a> -->
                 <a href="#como-funciona">Como funciona</a>
                 <!-- <a href="<?= $esc(rtrim(HTTP_WHMCS, '/') . '/clientarea.php') ?>">Minha conta</a> -->
-                <a href="<?= $esc($destinoProposta) ?>">Solicitar proposta</a>
+                <a href="<?=$linkWhatsapp?>">Solicitar proposta</a>
             </nav>
         </details>
     </div>
@@ -869,7 +878,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <?php endif; ?>
 
         <div class="actions">
-            <a class="btn btn-light" href="<?= $esc($destinoProposta) ?>"><i class="fa-solid fa-paper-plane"></i> Solicitar proposta sem compromisso</a>
+            <a class="btn btn-light" href="<?=$linkWhatsapp?>"><i class="fa-solid fa-paper-plane"></i> Solicitar proposta sem compromisso</a>
         </div>
     </div>
 </section>
@@ -1006,7 +1015,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
     <?php if (!$clienteIdentificado): ?>
-    <section id="solicitar-proposta" class="lead-section">
+    <!-- <section id="solicitar-proposta" class="lead-section">
         <div>
             <span class="eyebrow" style="color:#d62e3b"><i class="fa-solid fa-paper-plane"></i> Faça seu pedido</span>
             <h2>Conte sobre o projeto que você tem em mente</h2>
@@ -1021,14 +1030,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <button type="submit" class="btn"><i class="fa-brands fa-whatsapp"></i> Continuar no WhatsApp</button>
             <small>Ao continuar, o WhatsApp abrirá com sua solicitação preenchida. Confirme o envio da mensagem para falar com nossa equipe.</small>
         </form>
-    </section>
+    </section> -->
     <?php endif; ?>
     <section class="mini-cta">
         <div>
             <h2>Pronto para transformar sua ideia em projeto?</h2>
             <p>Solicite uma proposta e receba um atendimento profissional, com foco na melhor solução para o seu negócio.</p>
         </div>
-        <a class="btn btn-primary" href="<?= $esc($destinoProposta) ?>">
+        <a class="btn btn-primary" href="<?= $linkWhatsapp ?>">
             <i class="fa-solid fa-paper-plane"></i> Solicitar proposta
         </a>
     </section>
