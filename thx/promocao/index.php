@@ -876,11 +876,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main class="container" id="solucoes">
 
-    <div class="section-heading">
+    <!-- <div class="section-heading">
             <span class="eyebrow"><i class="fa-solid fa-star"></i> Solução em destaque</span>
             <h2>Conheça esta oportunidade</h2>
             <p>Uma apresentação objetiva para você avaliar esta solução com tranquilidade.</p>
-        </div>
+        </div> -->
 
         <article class="destaque">
             <img
