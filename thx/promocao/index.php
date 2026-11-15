@@ -75,7 +75,7 @@ if ($promocao) {
     $atualUrl .= '/'. $promocao->slug;
 }
 
-$textWhatsapp .= $atualUrl;
+$textWhatsapp .= getUrlCurta($atualUrl);
 $linkWhatsapp = 'https://wa.me/551146550330?text=' . rawurlencode($textWhatsapp);
 
 ?>
