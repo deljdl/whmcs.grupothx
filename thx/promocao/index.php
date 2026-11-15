@@ -77,7 +77,7 @@ if ($promocao) {
 }
 
 $textWhatsapp .= $whatsBreLineLine . 'Estou em '.$atualUrl;
-
+echo $textWhatsapp;
 $textWhatsapp = urlencode($textWhatsapp);
 $linkWhatsapp = 'https://wa.me/551146550330?text=' . $textWhatsapp;
 
@@ -857,7 +857,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- <a href="<?= $esc($baseUrl) ?>"><i class="fa-solid fa-bullhorn"></i> Promoções</a> -->
             <a href="#como-funciona"><i class="fa-solid fa-gears"></i> Como funciona</a>
             <!-- <a href="<?= $esc(rtrim(HTTP_WHMCS, '/') . '/clientarea.php') ?>"><i class="fa-solid fa-user"></i> Minha conta</a> -->
-            <a class="nav-cta" href="<?=$linkWhatsapp?>"><i class="fa-solid fa-file-signature"></i> Solicitar proposta</a>
+            <a class="nav-cta" target="_blank"  href="<?=$linkWhatsapp?>"><i class="fa-solid fa-file-signature"></i> Solicitar proposta</a>
         </nav>
 
         <details class="mobile-menu">
