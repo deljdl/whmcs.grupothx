@@ -71,6 +71,8 @@ if (!str_contains(mb_strtolower($seoTitulo), 'grupo thx')) {
     $seoTitulo .= ' | Grupo THX';
 }
 
+$textWhatsapp = getUrlCurta($urlPromocao($promocao));
+
 $textWhatsapp =urlencode($textWhatsapp);
 $linkWhatsapp = 'https://wa.me/551146550330?text=' . $textWhatsapp;
 
