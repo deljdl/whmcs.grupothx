@@ -1,16 +1,7 @@
 <?php
-/**
- * Módulo Gerencinet Dashboard para WHMCS
- * @author		Mauricio Gofas | gofas.net
- * @see			https://gofas.net/?p=7893
- * @copyright	2017 https://gofas.net
- * @license		https://gofas.net?p=9340
- * @support		https://gofas.net/?p=7856
- * @version		2.2.0
- */
 use WHMCS\Database\Capsule;
 require_once __DIR__ . '/../../gateways/gofasgerencianetboleto/sdk/efi_rest.php';
-// gatewayfunctions.php já é carregado pelo WHMCS durante a inicialização.
+
 use Gerencianet\Exception\GerencianetException;
 use Gerencianet\Gerencianet;
 
@@ -18,7 +9,12 @@ use Gerencianet\Gerencianet;
 add_hook( 'InvoiceCancelled', 1, function($vars) {
 	//logModuleCall('gofasgerencianet','start',$vars );
 	// Get Module Params
+	if (!function_exists('getGatewayVariables')) {
+		require_once ROOTDIR . '/includes/gatewayfunctions.php';
+	}
 	$params = getGatewayVariables('gofasgerencianetboleto');
+
+
 	if ($params['cancelbilletoncancelinvoice']) {
 			// Parâmetros do Módulo
 			$sandbox	= $params['sandbox'];
