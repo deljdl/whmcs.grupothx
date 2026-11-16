@@ -90,6 +90,9 @@ add_hook( 'InvoiceCancelled', 1, function($vars) {
 add_hook('EmailPreSend', 1, function($vars) {
 	logModuleCall('gofasgerencianet', 'EmailPreSend', 'start', $vars, '');
     // Get Module Options
+	if (!function_exists('getGatewayVariables')) {
+		require_once ROOTDIR . '/includes/gatewayfunctions.php';
+	}
 	$params = getGatewayVariables('gofasgerencianetboleto');
 	//$billetonemail					= $params['billetonemail'];
 
