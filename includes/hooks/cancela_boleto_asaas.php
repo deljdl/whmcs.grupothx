@@ -18,25 +18,26 @@ add_hook('InvoiceCancelled', 1, function ($vars) {
         require_once __DIR__ . '/../../modules/gateways/asaas/api.php';
 
         $gateway = getGatewayVariables('asaas');
-        if (empty($gateway['type']) || ($gateway['environment'] ?? '') !== 'sandbox') {
-            return; // Produção permanece bloqueada.
+        $environment = (string) ($gateway['environment'] ?? 'sandbox');
+        if (empty($gateway['type']) || !in_array($environment, ['sandbox', 'production'], true)) {
+            return;
         }
 
         $charge = Capsule::table('asaas_cobrancas')
             ->where('invoice_id', $invoiceId)
-            ->where('environment', 'sandbox')
+            ->where('environment', $environment)
             ->first();
         if (!$charge || $charge->status === 'DELETED') {
             return;
         }
 
-        $key = trim((string) ($gateway['sandboxApiKey'] ?? ''));
+        $key = trim((string) ($gateway[$environment === 'production' ? 'productionApiKey' : 'sandboxApiKey'] ?? ''));
         if ($key === '') {
-            throw new RuntimeException('Token Sandbox não configurado.');
+            throw new RuntimeException('Token Asaas não configurado.');
         }
 
         $paymentId = (string) $charge->charge_id;
-        $payment = asaas_api($key, 'GET', 'payments/' . rawurlencode($paymentId));
+        $payment = asaas_api($key, 'GET', 'payments/' . rawurlencode($paymentId), null, $environment);
 
         if ((string) ($payment['id'] ?? '') !== $paymentId
             || (string) ($payment['externalReference'] ?? '') !== 'whmcs-invoice-' . $invoiceId) {
@@ -49,7 +50,7 @@ add_hook('InvoiceCancelled', 1, function ($vars) {
             return;
         }
 
-        $response = asaas_api($key, 'DELETE', 'payments/' . rawurlencode($paymentId));
+        $response = asaas_api($key, 'DELETE', 'payments/' . rawurlencode($paymentId), null, $environment);
         if (empty($response['deleted'])) {
             throw new RuntimeException('Asaas não confirmou a exclusão.');
         }
@@ -59,7 +60,7 @@ add_hook('InvoiceCancelled', 1, function ($vars) {
             ->where('charge_id', $paymentId)
             ->update(['status' => 'DELETED', 'updated_at' => date('Y-m-d H:i:s')]);
 
-        logModuleCall('asaas', 'cancel_success', ['invoice_id' => $invoiceId, 'payment_id' => $paymentId], 'Cobrança excluída no Sandbox.');
+        logModuleCall('asaas', 'cancel_success', ['invoice_id' => $invoiceId, 'payment_id' => $paymentId], 'Cobrança excluída no Asaas ' . $environment . '.');
     } catch (\Throwable $e) {
         logModuleCall('asaas', 'cancel_error', ['invoice_id' => $invoiceId], ['error' => $e->getMessage()]);
     }
