@@ -1061,6 +1061,7 @@ $_ADMINLANG['cloudflare']['fetchError'] = "The system could not fetch IP address
 $_ADMINLANG['cloudflare']['ipNotDetected'] = "The system could not detect IP address from CloudFlare header.";
 $_ADMINLANG['config']['manageAdmins'] = "Manage Admins";
 $_ADMINLANG['config']['sysLogs'] = "System Logs";
+$_ADMINLANG['configOptions']['assignedProductsInfo'] = "Select the products that offer the options in this group. To select more than one product, press Ctrl (Command on macOS) while you click.";
 $_ADMINLANG['configOptions']['optionGroupDelete'] = "The option group has been deleted successfully!";
 $_ADMINLANG['configOptions']['optionGroupDuplicate'] = "Duplicate a Group";
 $_ADMINLANG['configOptions']['optionGroupDuplicated'] = "The option group has been duplicated successfully!";

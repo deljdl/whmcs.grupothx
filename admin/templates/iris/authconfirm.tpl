@@ -1,9 +1,3 @@
-<style>
-.contentarea {
-    background-color: #f8f8f8;
-}
-</style>
-
 <div class="auth-container">
 
     <h2>{lang key='login.auth.heading'}</h2>
