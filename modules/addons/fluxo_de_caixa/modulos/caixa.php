@@ -15,10 +15,14 @@
 		}
 
 
-		$formasdepagamento = array(
-		'deposito_ou_transferencia' => array('D','Depósito ou Transferência', 0,0, 0, 'N', 'success','deposito_ou_transferencia'),
-		'gofasgerencianetboleto' => array('G','Gerencianet Boleto',TAXA_GERENCIANET, 0, 0, 'G', 'danger', 'gofasgerencianetboleto')
-		);
+		$formasdepagamento = array();
+		$nomesGateways = array();
+		$gateways = mysql_query("SELECT gateway, value FROM tblpaymentgateways WHERE setting = 'name'");
+		if ($gateways) {
+			while ($g = mysql_fetch_assoc($gateways)) {
+				$nomesGateways[$g['gateway']] = $g['value'];
+			}
+		}
 
 
 		$caixain = $caixaout = '';
@@ -92,7 +96,7 @@
 
 		 $retorno ='';
 		 $entrada = $saida = $cobrancas = 0;
-		 $results = mysql_query("SELECT i.*,c.firstname, c.companyname, i.invoicenum, date_format(i.duedate, '%d/%m/%Y') AS vencimento, date_format(i.datepaid, '%d/%m/%Y') AS pagamento, i.status, i.total  FROM tblinvoices i
+		 $results = mysql_query("SELECT i.*, (SELECT COALESCE(SUM(a.fees), 0) FROM tblaccounts a WHERE a.invoiceid = i.id AND a.amountin > 0) AS taxa_registrada, c.firstname, c.companyname, i.invoicenum, date_format(i.duedate, '%d/%m/%Y') AS vencimento, date_format(i.datepaid, '%d/%m/%Y') AS pagamento, i.status, i.total  FROM tblinvoices i
 									INNER JOIN tblclients c ON c.id = i.userid
 										WHERE MONTH(i.datepaid) = {$_SESSION['Xmes']} AND YEAR(i.datepaid) = {$_SESSION['Xano']} AND i.status = 'paid' AND total > 0
 											ORDER BY i.datepaid");
@@ -106,6 +110,11 @@
 			// echo '<h1>linha</h1><pre>'.print_r($linha,1).'</pre>';
 			// $aha++;
 			//echo '<br /><pre>'.print_r($linha,1).'</pre><br />';
+			$gateway = (string) $linha['paymentmethod'];
+			if (!isset($formasdepagamento[$gateway])) {
+				$nomeGateway = $nomesGateways[$gateway] ?? ($gateway !== '' ? $gateway : 'Não definido');
+				$formasdepagamento[$gateway] = array('', htmlspecialchars($nomeGateway, ENT_QUOTES, 'UTF-8'), 0, 0, 0, '', 'default', $gateway, 0);
+			}
 			$caixain .= '
 			<tr class="default">
 				<td style="line-height: 15px;">'.$linha['firstname'].'<br /><small style="font-size: 50%;">'.$linha['companyname'].'</small></td>
@@ -119,6 +128,7 @@
 			$cobrancas ++;
 			$formasdepagamento[$linha['paymentmethod']][3] ++;
 			$formasdepagamento[$linha['paymentmethod']][4] += $linha['total'];
+			$formasdepagamento[$linha['paymentmethod']][8] += (float) $linha['taxa_registrada'];
 
 
 		}
@@ -310,21 +320,7 @@
 		{
 			//echo '<h1>formP</h1><pre>'.print_r($formP,1).'</pre>';
 			//echo '<h1>formasdepagamentodentro</h1><pre>'.print_r($formasdepagamento,1).'</pre>';
-			$totalG = 0;
-			if($formP[5] == 'G')
-			{
-				$totalG  = TAXA_GERENCIANET * $formP[3];
-
-			}
-			elseif($formP[5] == 'F')
-			{
-				$totalG = $formP[2] * $formP[3];
-			}
-			elseif($formP[5] == 'N')
-			{
-				$totalG  = TAXA_TRANSFERENCIA_DEPOSITO;
-
-			}
+			$totalG = $formP[8];
 
 			$saida += $totalG;
 
