@@ -160,57 +160,57 @@ function gofasgerencianetboleto_link( $params ) {
 		elseif ( !$trans_id and !$error ) {
 
 			if ( (float)$invoiceTotal >= (float)$minimunAmount) {
-				// Criar transação
-				//die('<pre>'.print_r(get_defined_vars(),1).'</pre>');
-				//die('die jardel gofasgerencianetboleto_link <pre>'.print_r($body, 1).'</pre>'); //aqui mata antes de gerar o boleto // aqui o primeiro boleto é gerado // parei aqui 666
-				$charge_id_ = ggnb_create_charge( $api, $body, $system_url, $debug_or_log); // body
-				$charge_id = $charge_id_['result'];
-				if($debug_or_log){
-					$log_result['charge_id_']	= $charge_id_;
-				}
-				if($charge_id_['error']){
-					$error	= $charge_id_['error'];
-				}
-				// Definir método de pagamanto e Gerar a Cobrança (retorna link do boleto etc)
-				if ( is_int($charge_id) ) {
-					$pay_charge_	= ggnb_pay_charge( $api, $charge_id, $body2, $system_url, $debug_or_log);
-					$pay_charge		= $pay_charge_['result'];
-					if($debug_or_log){
-						$log_result['pay_charge']	= $pay_charge_;
-					}
-					if($pay_charge_['error']){
-						$error	= $pay_charge_['error'];
-					}
-					if (is_array($pay_charge) && !empty($pay_charge['data']['charge_id']) && (int)$pay_charge['data']['charge_id'] === (int)$charge_id) {
-						$link		= $pay_charge['data']['link'] ?? '';
-						$expire_at	= $pay_charge['data']['expire_at'] ?? '';
-						$barcode	= $pay_charge['data']['barcode'] ?? '';
-						// Cria transação no whmcs "Boleto gerado aguardando pagamento."
-						$addtrans = ggnb_add_trans($user_id,$invoice_id,$charge_id,$whmcsAdmin, $api_mode, $system_url, $debug_or_log );
-						if($addtrans['error']) {
-							$error	= $addtrans['error'];
-						}
-						if($debug_or_log){
-							$log_result['addtrans']	= $addtrans;
-						}
-						// Save billet on DB
-						$ggnb_store_billet = ggnb_store_billet($pay_charge,$invoice_amount,$invoice_id,$debug_or_log,$api_mode);
-						if($debug_or_log){
-							$log_result['ggnb_store_billet']	= $ggnb_store_billet;
-						}
-						if ($ggnb_store_billet['error']) {
-							$error = $ggnb_store_billet['error'];
-							$erroGravacaoEfi = $ggnb_store_billet['api_error'] ?? '';
-						}
-					}
-					elseif( is_string($pay_charge) ) {
-						$error = $pay_charge_['error'] ?? $error;
-					}
-				}
-				else {
-						$error = $charge_id_['error'] ?? $error;
-						
-				}
+                // One Step: emitir o boleto em uma única requisição à Efí.
+                $oneStepBody = array_merge($body, $body2);
+                // Preserva a remoção destes campos já feita pelo SDK na emissão anterior.
+                unset($oneStepBody['payment']['banking_billet']['instructions'], $oneStepBody['payment']['banking_billet']['configurations']);
+                try {
+                    $pay_charge = $api->createOneStepCharge($oneStepBody);
+                    $charge_id = (int)($pay_charge['data']['charge_id'] ?? 0);
+                    if (!$charge_id) throw new \RuntimeException('A Efí não retornou o ID da cobrança One Step.');
+                    $pay_charge_ = array('result' => $pay_charge);
+                    try {
+                        logActivity('Efí One Step: '.json_encode(array(
+                            'invoice_id' => (int)$invoice_id, 'charge_id' => $charge_id,
+                            'status' => $pay_charge['data']['status'] ?? '',
+                            'link_presente' => !empty($pay_charge['data']['link']),
+                            'barcode_presente' => !empty($pay_charge['data']['barcode']),
+                            'origem' => strtok((string)($_SERVER['REQUEST_URI'] ?? 'cron'), '?')
+                        ), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+                    } catch (\Throwable $e) {}
+                } catch (\Throwable $e) {
+                    $error = 'Falha ao emitir boleto na Efí (One Step): '.$e->getMessage();
+                    $pay_charge_ = array('error' => $error, 'api_error' => $e->getMessage());
+                    try {
+                        logActivity('Efí One Step: '.json_encode(array(
+                            'invoice_id' => (int)$invoice_id, 'resultado' => 'falha',
+                            'tipo' => get_class($e),
+                            'origem' => strtok((string)($_SERVER['REQUEST_URI'] ?? 'cron'), '?')
+                        ), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+                    } catch (\Throwable $ignored) {}
+                }
+                if ($debug_or_log) {
+                    $log_result['one_step'] = array(
+                        'invoice_id' => $invoice_id, 'charge_id' => $charge_id ?? 0,
+                        'resultado' => empty($pay_charge_['error']) ? 'success' : 'error'
+                    );
+                }
+                if (!empty($pay_charge_['error'])) $error = $pay_charge_['error'];
+                if (is_array($pay_charge ?? null) && !empty($pay_charge['data']['charge_id'])
+                    && (int)$pay_charge['data']['charge_id'] === $charge_id) {
+                    $link = $pay_charge['data']['link'] ?? '';
+                    $expire_at = $pay_charge['data']['expire_at'] ?? '';
+                    $barcode = $pay_charge['data']['barcode'] ?? '';
+                    $addtrans = ggnb_add_trans($user_id,$invoice_id,$charge_id,$whmcsAdmin, $api_mode, $system_url, $debug_or_log );
+                    if (!empty($addtrans['error'])) $error = $addtrans['error'];
+                    if ($debug_or_log) $log_result['addtrans'] = $addtrans;
+                    $ggnb_store_billet = ggnb_store_billet($pay_charge,$invoice_amount,$invoice_id,$debug_or_log,$api_mode);
+                    if ($debug_or_log) $log_result['ggnb_store_billet'] = $ggnb_store_billet;
+                    if (!empty($ggnb_store_billet['error'])) {
+                        $error = $ggnb_store_billet['error'];
+                        $erroGravacaoEfi = $ggnb_store_billet['api_error'] ?? '';
+                    }
+                }
 			}
 			elseif ( (float)$invoiceTotal < (float)$minimunAmount ) {
 				$error = '<b><span class="ggnberror">O valor total da fatura é R$'.number_format( $invoiceTotal,  2, ',', '.' ) .', mas o valor mínimo para pagamento via Boleto que é R$'. number_format( $minimunAmount,  2, ',', '.' ) .'.</span></b>';

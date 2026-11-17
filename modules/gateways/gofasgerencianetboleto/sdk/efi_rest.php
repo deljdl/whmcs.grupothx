@@ -51,6 +51,12 @@ namespace Gerencianet {
     $this->logFailure($method,$path,$status,0,'Erro HTTP retornado pela Efí',$timings);
     throw new GerencianetException($d,$status);
    }
+   if($path==='/v1/charge/one-step' && function_exists('logActivity')){
+    try{logActivity('Efí One Step HTTP: '.json_encode(array(
+     'http'=>$status,'timings'=>$timings,
+     'origem'=>strtok((string)($_SERVER['REQUEST_URI'] ?? 'cron'), '?')
+    ),JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES));}catch(\Throwable $e){}
+   }
    return $d;
   }
   // Registro centralizado de falhas de todas as operações (inclusive autenticação).
@@ -72,6 +78,7 @@ namespace Gerencianet {
    if(empty($r['access_token']))throw new GerencianetException(array('error'=>'invalid_token','error_description'=>'A API Efí não retornou um access_token.'));
    return $this->accessToken=$r['access_token'];
   }
+  public function createOneStepCharge($b=array()){return $this->request('POST','/v1/charge/one-step',$b);}
   public function createCharge($p=array(),$b=array()){return $this->request('POST','/v1/charge',$b);}
   public function payCharge($p,$b=array()){
    $id=isset($p['id'])?(int)$p['id']:0; if(!$id)throw new GerencianetException(array('error'=>'invalid_charge','error_description'=>'ID da cobrança inválido.'));

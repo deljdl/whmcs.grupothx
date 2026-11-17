@@ -38,9 +38,10 @@ $invoiceCredit	=	(int)($GetInvoiceResults['credit'] * 100);
 $trans_id = false;
 $trans_idendA = $GetInvoiceResults['transactions'] ?? array();
 $trans_idend = $trans_idendA['transaction'] ?? array();
+if (isset($trans_idend['transid'])) $trans_idend = array($trans_idend);
 foreach (array_reverse($trans_idend) as $transacao) {
     $trans_id_ = $transacao['transid'] ?? '';
-    if (preg_match('/^ggnb_'.preg_quote($api_mode, '/').'_(?:waiting|unpaid)-([0-9]+)$/', $trans_id_, $matches)) {
+    if (preg_match('/^ggnb_'.preg_quote($api_mode, '/').'_(?:waiting|unpaid|_notification)-([0-9]+)(?:\[(?:new|waiting|unpaid|paid|identified)\])?$/', $trans_id_, $matches)) {
         $trans_id = (int)$matches[1];
         break;
     }
