@@ -376,3 +376,51 @@ function asaas_get_or_create_charge($params)
         Capsule::connection()->selectOne('SELECT RELEASE_LOCK(?) AS released', [$lockName]);
     }
 }
+
+/**
+ * Cancela a cobrança Asaas pendente após pagamento manual por Pix.
+ * Não altera a fatura nem registra novo pagamento.
+ */
+function asaas_cancelar_por_pix_manual($invoiceId)
+{
+    if (!Capsule::schema()->hasTable('asaas_cobrancas')) {
+        return;
+    }
+    $charge = Capsule::table('asaas_cobrancas')->where('invoice_id', (int) $invoiceId)->first();
+    if (!$charge || $charge->status === 'DELETED') {
+        return;
+    }
+
+    $gateway = getGatewayVariables('asaas');
+    $environment = (string) $charge->environment;
+    if (empty($gateway['type']) || !in_array($environment, ['sandbox', 'production'], true)) {
+        throw new RuntimeException('Gateway Asaas inativo ou ambiente inválido.');
+    }
+    $key = trim((string) ($gateway[$environment === 'production' ? 'productionApiKey' : 'sandboxApiKey'] ?? ''));
+    if ($key === '') {
+        throw new RuntimeException('Token Asaas não configurado.');
+    }
+
+    $paymentId = (string) $charge->charge_id;
+    $payment = asaas_api($key, 'GET', 'payments/' . rawurlencode($paymentId), null, $environment);
+    if ((string) ($payment['id'] ?? '') !== $paymentId
+        || (string) ($payment['externalReference'] ?? '') !== 'whmcs-invoice-' . $invoiceId) {
+        throw new RuntimeException('Cobrança Asaas não corresponde à fatura ' . $invoiceId);
+    }
+
+    $status = (string) ($payment['status'] ?? '');
+    if ($status !== 'DELETED') {
+        if (!in_array($status, ['PENDING', 'OVERDUE'], true)) {
+            throw new RuntimeException('Cobrança Asaas não cancelável: ' . $status);
+        }
+        $response = asaas_api($key, 'DELETE', 'payments/' . rawurlencode($paymentId), null, $environment);
+        if (empty($response['deleted'])) {
+            throw new RuntimeException('Asaas não confirmou a exclusão da cobrança.');
+        }
+    }
+    Capsule::table('asaas_cobrancas')
+        ->where('invoice_id', (int) $invoiceId)
+        ->where('charge_id', $paymentId)
+        ->update(['status' => 'DELETED', 'updated_at' => date('Y-m-d H:i:s')]);
+    logModuleCall('asaas', 'cancel_pix_manual', ['invoice_id' => (int) $invoiceId, 'payment_id' => $paymentId], 'Cobrança cancelada: ' . $environment);
+}
