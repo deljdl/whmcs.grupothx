@@ -85,6 +85,33 @@ function gofasgerencianetboleto_link( $params ) {
                 } elseif ((int)($chargeData['charge_id'] ?? 0) !== (int)$trans_id) {
                     $error = 'A Efí retornou uma cobrança diferente da solicitada ('.$trans_id.').';
                 } else {
+                    // Para cobranças antigas em new, concluir o boleto no mesmo ID.
+                    if (($chargeData['status'] ?? '') === 'new') {
+                        if ((string)($chargeData['custom_id'] ?? '') !== (string)$invoice_id
+                            || (int)($chargeData['total'] ?? 0) !== (int)round($invoiceTotal * 100)) {
+                            $error = 'Cobrança '.$trans_id.' não corresponde à fatura '.$invoice_id.'.';
+                        } else {
+                            $pay_charge_ = ggnb_pay_charge($api, $trans_id, $body2, $system_url, $debug_or_log);
+                            $pay_charge = $pay_charge_['result'] ?? array();
+                            if (!empty($pay_charge_['error'])) {
+                                $error = $pay_charge_['error'];
+                            } elseif ((int)($pay_charge['data']['charge_id'] ?? 0) !== (int)$trans_id
+                                || ($pay_charge['data']['status'] ?? '') !== 'waiting') {
+                                $error = 'A Efí não confirmou a emissão da cobrança '.$trans_id.'.';
+                            } else {
+                                $chargeData = array_merge($chargeData, $pay_charge['data']);
+                                $addtrans = ggnb_add_trans($user_id, $invoice_id, $trans_id, $whmcsAdmin, $api_mode, $system_url, $debug_or_log);
+                                if (!empty($addtrans['error'])) $error = $addtrans['error'];
+                                logActivity('Efí recuperação new: '.json_encode(array(
+                                    'invoice_id' => $invoice_id, 'charge_id' => $trans_id,
+                                    'status' => $chargeData['status'] ?? '',
+                                    'link_presente' => !empty($chargeData['link']),
+                                    'origem' => strtok((string)($_SERVER['REQUEST_URI'] ?? 'cron'), '?')
+                                ), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+                            }
+                        }
+                    }
+                    if (!$error) {
                     $billetData = $chargeData['payment']['banking_billet'] ?? array();
                     if ($link === '') $link = trim((string)($billetData['link'] ?? $chargeData['link'] ?? ''));
                     if ($barcode === '') $barcode = trim((string)($billetData['barcode'] ?? $chargeData['barcode'] ?? ''));
@@ -99,6 +126,9 @@ function gofasgerencianetboleto_link( $params ) {
                             $campos = array();
                             if (empty($boletoLocal->link) && $link !== '') $campos['link'] = $link;
                             if (empty($boletoLocal->barcode) && $barcode !== '') $campos['barcode'] = $barcode;
+                            if (empty($boletoLocal->pdf) && !empty($chargeData['pdf']['charge'])) $campos['pdf'] = $chargeData['pdf']['charge'];
+                            if (empty($boletoLocal->expire_at) && $expire_at !== '') $campos['expire_at'] = $expire_at;
+                            if (($boletoLocal->status ?? '') === 'new' && !empty($chargeData['status'])) $campos['status'] = $chargeData['status'];
                             if (empty($boletoLocal->qrcode) && $pix['qrcode'] !== '') $campos['qrcode'] = $pix['qrcode'];
                             if (empty($boletoLocal->qrcode_image) && $pix['qrcode_image'] !== '') $campos['qrcode_image'] = $pix['qrcode_image'];
                             if ($campos) {
@@ -117,7 +147,7 @@ function gofasgerencianetboleto_link( $params ) {
                                 'total' => (int)($chargeData['total'] ?? 0),
                                 'expire_at' => $expire_at,
                                 'link' => $link,
-                                'pdf' => (string)($billetData['pdf']['charge'] ?? ''),
+                                'pdf' => (string)($billetData['pdf']['charge'] ?? $chargeData['pdf']['charge'] ?? ''),
                                 'barcode' => $barcode,
                                 'qrcode' => $pix['qrcode'],
                                 'qrcode_image' => $pix['qrcode_image']
@@ -129,6 +159,7 @@ function gofasgerencianetboleto_link( $params ) {
                             'erro' => $e->getMessage()
                         ), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
                     }
+                    } // Dados de boleto disponíveis
                 }
 
                 if ($error) {
