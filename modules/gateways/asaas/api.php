@@ -131,8 +131,10 @@ function asaas_record_history($invoiceId, $paymentId, $reference, $description)
         }
 
         $invoice = Capsule::table('tblinvoices')->where('id', $invoiceId)->first();
-        if (!$invoice || $invoice->paymentmethod !== 'asaas') {
-            throw new RuntimeException('Fatura não localizada com gateway Asaas.');
+        if (!$invoice || ($invoice->paymentmethod !== 'asaas'
+            && !Capsule::table('asaas_cobrancas')->where('invoice_id', $invoiceId)
+                ->where('charge_id', $paymentId)->exists())) {
+            throw new RuntimeException('Fatura não vinculada à cobrança Asaas.');
         }
 
         $result = localAPI('AddTransaction', [
