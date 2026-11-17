@@ -607,3 +607,63 @@ function ggnb_send_error_email( $INVOICEID, $USERID, $FNAME, $LNAME, $system_url
  	}
 }
 }
+
+/** Cancela boletos Efí pendentes associados à fatura paga manualmente por Pix. */
+function ggnb_cancelar_por_pix_manual($invoiceId)
+{
+    $gateway = getGatewayVariables('gofasgerencianetboleto');
+    if (empty($gateway['type'])) {
+        throw new \RuntimeException('Gateway Efí inativo.');
+    }
+    $sandbox = !empty($gateway['sandbox']);
+    $mode = $sandbox ? 'sandbox' : 'live';
+    $ids = [];
+    $hasTable = Capsule::schema()->hasTable('gofasgerencianetboleto');
+    if ($hasTable) {
+        foreach (Capsule::table('gofasgerencianetboleto')
+            ->where('invoice_id', (int)$invoiceId)->where('api_mode', $mode)->get() as $row) {
+            if ((int)$row->charge_id > 0) {
+                $ids[(int)$row->charge_id] = true;
+            }
+        }
+    }
+    foreach (Capsule::table('tblaccounts')->where('invoiceid', (int)$invoiceId)
+        ->where('gateway', 'gofasgerencianetboleto')->where('amountin', 0)->pluck('transid') as $ref) {
+        if (preg_match('/^ggnb_' . $mode . '_(?:waiting|unpaid)-([0-9]+)$/', (string)$ref, $match)) {
+            $ids[(int)$match[1]] = true;
+        }
+    }
+    if (!$ids) {
+        return;
+    }
+    require_once __DIR__ . '/../sdk/efi_rest.php';
+    $api = new \Gerencianet\Gerencianet([
+        'client_id' => $sandbox ? ($gateway['clientidsandbox'] ?? '') : ($gateway['clientid'] ?? ''),
+        'client_secret' => $sandbox ? ($gateway['clientsecretsandbox'] ?? '') : ($gateway['clientsecret'] ?? ''),
+        'sandbox' => $sandbox,
+    ]);
+    foreach (array_keys($ids) as $chargeId) {
+        $result = $api->detailCharge(['id' => $chargeId], []);
+        $charge = $result['data'] ?? [];
+        if ((int)($charge['charge_id'] ?? 0) !== $chargeId
+            || (string)($charge['custom_id'] ?? $charge['metadata']['custom_id'] ?? '') !== (string)$invoiceId) {
+            throw new \RuntimeException('Efí: cobrança ' . $chargeId . ' não corresponde à fatura.');
+        }
+        $status = strtolower((string)($charge['status'] ?? ''));
+        if (!in_array($status, ['canceled', 'cancelled'], true)) {
+            if (!in_array($status, ['new', 'waiting', 'unpaid'], true)) {
+                throw new \RuntimeException('Efí: cobrança não cancelável: ' . $status);
+            }
+            $api->cancelCharge(['id' => $chargeId], []);
+            $check = $api->detailCharge(['id' => $chargeId], []);
+            if (!in_array(strtolower((string)($check['data']['status'] ?? '')), ['canceled', 'cancelled'], true)) {
+                throw new \RuntimeException('Efí não confirmou cancelamento da cobrança ' . $chargeId);
+            }
+        }
+        if ($hasTable) {
+            Capsule::table('gofasgerencianetboleto')->where('invoice_id', (int)$invoiceId)
+                ->where('api_mode', $mode)->where('charge_id', $chargeId)
+                ->update(['status' => 'canceled']);
+        }
+    }
+}

@@ -131,8 +131,10 @@ function asaas_record_history($invoiceId, $paymentId, $reference, $description)
         }
 
         $invoice = Capsule::table('tblinvoices')->where('id', $invoiceId)->first();
-        if (!$invoice || $invoice->paymentmethod !== 'asaas') {
-            throw new RuntimeException('Fatura não localizada com gateway Asaas.');
+        if (!$invoice || ($invoice->paymentmethod !== 'asaas'
+            && !Capsule::table('asaas_cobrancas')->where('invoice_id', $invoiceId)
+                ->where('charge_id', $paymentId)->exists())) {
+            throw new RuntimeException('Fatura não vinculada à cobrança Asaas.');
         }
 
         $result = localAPI('AddTransaction', [
@@ -375,4 +377,43 @@ function asaas_get_or_create_charge($params)
     } finally {
         Capsule::connection()->selectOne('SELECT RELEASE_LOCK(?) AS released', [$lockName]);
     }
+}
+
+/** Cancela somente o boleto Asaas pendente da fatura paga manualmente por Pix. */
+function asaas_cancelar_por_pix_manual($invoiceId)
+{
+    if (!Capsule::schema()->hasTable('asaas_cobrancas')) {
+        return;
+    }
+    $charge = Capsule::table('asaas_cobrancas')->where('invoice_id', (int)$invoiceId)->first();
+    if (!$charge || $charge->status === 'DELETED') {
+        return;
+    }
+    $environment = (string)$charge->environment;
+    $gateway = getGatewayVariables('asaas');
+    if (empty($gateway['type']) || !in_array($environment, ['sandbox', 'production'], true)) {
+        throw new \RuntimeException('Asaas inativo ou ambiente inválido.');
+    }
+    $key = trim((string)($gateway[$environment === 'production' ? 'productionApiKey' : 'sandboxApiKey'] ?? ''));
+    if ($key === '') {
+        throw new \RuntimeException('Asaas sem token configurado.');
+    }
+    $paymentId = (string)$charge->charge_id;
+    $payment = asaas_api($key, 'GET', 'payments/' . rawurlencode($paymentId), null, $environment);
+    if ((string)($payment['id'] ?? '') !== $paymentId
+        || (string)($payment['externalReference'] ?? '') !== 'whmcs-invoice-' . $invoiceId) {
+        throw new \RuntimeException('Asaas: cobrança não corresponde à fatura.');
+    }
+    if (($payment['status'] ?? '') !== 'DELETED') {
+        if (!in_array(($payment['status'] ?? ''), ['PENDING', 'OVERDUE'], true)) {
+            throw new \RuntimeException('Asaas: cobrança não cancelável: ' . ($payment['status'] ?? ''));
+        }
+        $result = asaas_api($key, 'DELETE', 'payments/' . rawurlencode($paymentId), null, $environment);
+        if (empty($result['deleted'])) {
+            throw new \RuntimeException('Asaas não confirmou exclusão.');
+        }
+    }
+    Capsule::table('asaas_cobrancas')->where('invoice_id', (int)$invoiceId)
+        ->where('charge_id', $paymentId)
+        ->update(['status' => 'DELETED', 'updated_at' => date('Y-m-d H:i:s')]);
 }
