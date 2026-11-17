@@ -121,7 +121,7 @@
 				<td><a target="_blank" href="'.HTTP_WHMCS_ADMIN.'billing/invoice/'.$linha['id'].'">'.$linha['id'].'</a></td>
 				<td>'.$linha['vencimento'].'</td>
 				<td>'.$linha['pagamento'].'</td>
-				<td style="white-space: nowrap;"> R$ '.$linha['total'].'</td>
+				<td style="white-space: nowrap;"> R$ '.$linha['total'].'<br /><small style="color: #777;">Taxa: R$ '.number_format((float) $linha['taxa_registrada'], 2, ',', '.').'</small></td>
 				<td><span class="label label-'.$formasdepagamento[$linha['paymentmethod']][6].'" style="float: right;">'.$formasdepagamento[$linha['paymentmethod']][1].'</span></td>
 			</tr>';
 			$entrada += $linha['total'];
