@@ -245,7 +245,7 @@ function executarRequisicaoWHM($server, $params)
 function getPromocao($slugOrId = null)
 {
 	if ($slugOrId === null) {
-		$campanha = Capsule::table('mod_promocoes_thx')->where('ativo', 1)->where('divulgar_email', 1)->inRandomOrder()->first();
+		$campanha = Capsule::table('mod_promocoes_thx')->where('ativo', 1)->orderByDesc('divulgar_email')->inRandomOrder()->first();
 	} else {
 	$isInt = ctype_digit((string)$slugOrId);
 	if($isInt)

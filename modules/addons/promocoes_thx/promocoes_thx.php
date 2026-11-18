@@ -307,7 +307,7 @@ function promocoes_thx_output($vars)
     echo '<div class="form-group"><div class="col-sm-offset-2 col-sm-8"><label><input type="checkbox" name="ativo" value="1"' . (($enviado && $erro !== '' ? isset($_POST['ativo']) : (!$item || $item->ativo)) ? ' checked' : '') . '> Campanha ativa</label></div></div>';
     echo '<div class="form-group"><div class="col-sm-offset-2 col-sm-8"><button type="submit" class="btn btn-primary">Salvar promoção</button> <a class="btn btn-default" href="' . $esc($base) . '">Nova promoção</a></div></div>';
     echo '</form><hr><h3>Promoções cadastradas</h3>';
-    echo '<p>Somente promoções ativas e marcadas para divulgação participam dos e-mails. Se nenhuma estiver selecionada, o e-mail será enviado sem promoção.</p><div id="promocoes_status_msg" role="status" aria-live="polite"></div>';
+    echo '<p>As promoções ativas e marcadas para divulgação têm prioridade nos e-mails. Se nenhuma promoção ativa estiver marcada, o sistema sorteará entre todas as promoções ativas.</p><div id="promocoes_status_msg" role="status" aria-live="polite"></div>';
 
     $registros = Capsule::table('mod_promocoes_thx')->orderBy('id', 'desc')->get();
     echo '<div class="table-responsive"><table class="table table-striped"><thead><tr><th>ID</th><th>Título</th><th>URL</th><th>Imagem</th><th>Acessos</th><th class="text-center">Ativa</th><th class="text-center">Divulgar nos e-mails</th><th></th></tr></thead><tbody>';
