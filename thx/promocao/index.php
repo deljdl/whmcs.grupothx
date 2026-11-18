@@ -23,6 +23,14 @@ if ($slug !== '' && (!$promocao || !$promocao->ativo)) {
     die('Página não encontrada.');
 }
 
+if ($promocao && isset($promocao->acessos) && $_SERVER['REQUEST_METHOD'] === 'GET' && empty($_SESSION['adminid'])) {
+    try {
+        \WHMCS\Database\Capsule::table('mod_promocoes_thx')->where('id', $promocao->id)->increment('acessos');
+    } catch (\Throwable $e) {
+        error_log('Promoções THX: falha ao contabilizar acesso.');
+    }
+}
+
 $promocoes = getPromocoes($promocao->id ?? 0);
 
 $esc = static function ($valor) {

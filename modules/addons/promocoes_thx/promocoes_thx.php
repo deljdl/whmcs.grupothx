@@ -33,6 +33,7 @@ function promocoes_thx_activate()
                 $table->string('seo_titulo', 180)->nullable();
                 $table->string('seo_descricao', 255)->nullable();
                 $table->boolean('ativo')->default(true);
+                $table->unsignedBigInteger('acessos')->default(0);
                 $table->timestamps();
             });
         }
@@ -241,9 +242,9 @@ function promocoes_thx_output($vars)
     echo '</form><hr><h3>Promoções cadastradas</h3>';
 
     $registros = Capsule::table('mod_promocoes_thx')->orderBy('id', 'desc')->get();
-    echo '<div class="table-responsive"><table class="table table-striped"><thead><tr><th>ID</th><th>Título</th><th>URL</th><th>Imagem</th><th>Status</th><th></th></tr></thead><tbody>';
+    echo '<div class="table-responsive"><table class="table table-striped"><thead><tr><th>ID</th><th>Título</th><th>URL</th><th>Imagem</th><th>Acessos</th><th>Status</th><th></th></tr></thead><tbody>';
     foreach ($registros as $registro) {
-        echo '<tr><td>' . (int) $registro->id . '</td><td>' . $esc($registro->titulo) . '</td><td><a target="_blank" href="'.HTTP_WHMCS.'/thx/promocao/' . $esc($registro->slug) . '">' . $esc($registro->slug) . '</a></td><td><img title="' . $esc($registro->imagem) . '" alt="' . $esc($registro->imagem) . '" src="../thx/promocao/' . rawurlencode($registro->imagem) . '" style="max-width:100px;max-height:100px" /></td><td>' . ($registro->ativo ? 'Ativa' : 'Inativa') . '</td><td><a class="btn btn-default btn-sm" href="' . $esc($base) . '&editar=' . (int) $registro->id . '">Editar</a></td></tr>';
+        echo '<tr><td>' . (int) $registro->id . '</td><td>' . $esc($registro->titulo) . '</td><td><a target="_blank" href="'.HTTP_WHMCS.'/thx/promocao/' . $esc($registro->slug) . '">' . $esc($registro->slug) . '</a></td><td><img title="' . $esc($registro->imagem) . '" alt="' . $esc($registro->imagem) . '" src="../thx/promocao/' . rawurlencode($registro->imagem) . '" style="max-width:100px;max-height:100px" /></td><td>' . (isset($registro->acessos) ? number_format((int) $registro->acessos, 0, ',', '.') : '—') . '</td><td>' . ($registro->ativo ? 'Ativa' : 'Inativa') . '</td><td><a class="btn btn-default btn-sm" target="_blank" rel="noopener" href="' . $esc(rtrim(HTTP_WHMCS, '/') . '/thx/promocao/' . rawurlencode($registro->slug)) . '">Ver página</a> <a class="btn btn-default btn-sm" href="' . $esc($base) . '&editar=' . (int) $registro->id . '">Editar</a></td></tr>';
     }
     echo '</tbody></table></div>';
 }
