@@ -51,6 +51,8 @@ function promocoes_thx_deactivate()
 
 function promocoes_thx_output($vars)
 {
+    require_once __DIR__ . '/../../../thx/promocao/cache.php';
+
     $base = $vars['modulelink'];
     $esc = static function ($valor) {
         return htmlspecialchars((string) ($valor ?? ''), ENT_QUOTES, 'UTF-8');
@@ -67,6 +69,16 @@ function promocoes_thx_output($vars)
     }
 
     $erro = '';
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['acao'] ?? '') === 'limpar_cache') {
+        if (empty($_SESSION['adminid']) || !hash_equals($csrf, (string) ($_POST['csrf'] ?? ''))) {
+            $erro = 'Sessão expirada. Atualize a página e tente novamente.';
+        } elseif (thxPromoCacheClear()) {
+            echo '<div class="alert alert-success">Cache das promoções limpo com sucesso.</div>';
+        } else {
+            $erro = 'Não foi possível limpar o cache das promoções. Verifique as permissões do diretório temporário.';
+        }
+    }
+
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['acao'] ?? '') === 'salvar') {
         if (!hash_equals($csrf, (string) ($_POST['csrf'] ?? ''))) {
             $erro = 'Sessão expirada. Atualize a página e tente novamente.';
@@ -135,6 +147,10 @@ function promocoes_thx_output($vars)
                     if ($erro === '') {
                         $_POST['promocao_id'] = $id;
                         echo '<div class="alert alert-success">Promoção salva com sucesso.</div>';
+                        if (!thxPromoCacheClear()) {
+                            echo '<div class="alert alert-warning">A promoção foi salva, mas não foi possível invalidar o cache. Verifique as permissões ou tente limpar o cache manualmente.</div>';
+                            logActivity('Promoções THX: falha ao invalidar o cache após salvar.');
+                        }
                     }
                 } catch (\Throwable $e) {
                     $erro = 'Erro ao salvar. Consulte o Log de Atividades do WHMCS (Promoções THX).';
@@ -152,6 +168,17 @@ function promocoes_thx_output($vars)
     if ($erro !== '') {
         echo '<div class="alert alert-danger">' . $esc($erro) . '</div>';
     }
+
+    $cacheStats = thxPromoCacheStats();
+    echo '<div class="panel panel-default"><div class="panel-heading"><strong>Cache HTML das promoções</strong></div><div class="panel-body">';
+    if ($cacheStats === null) {
+        echo '<p class="text-warning">Cache indisponível. As páginas continuam funcionando normalmente.</p>';
+    } else {
+        echo '<p>Arquivos armazenados: <strong>' . (int) $cacheStats['files'] . '</strong> &middot; Espaço utilizado: <strong>' . number_format($cacheStats['bytes'] / 1024, 1, ',', '.') . ' KB</strong></p>';
+        echo '<p>O cache é invalidado ao salvar uma promoção e expira em até 24 horas.</p>';
+        echo '<form method="post" action="' . $esc($base) . '"><input type="hidden" name="acao" value="limpar_cache"><input type="hidden" name="csrf" value="' . $esc($csrf) . '"><button type="submit" class="btn btn-danger">Limpar todo o cache</button></form>';
+    }
+    echo '</div></div>';
 
     $editId = max(0, (int) ($_POST['promocao_id'] ?? $_GET['editar'] ?? 0));
     $item = $editId ? Capsule::table('mod_promocoes_thx')->where('id', $editId)->first() : null;

@@ -1,20 +1,36 @@
-
 <?php
 
 require_once __DIR__ . '/../../init.php';
 require_once __DIR__ . '/../../tarifasTHX.php';
+require_once __DIR__ . '/cache.php';
+
+if (!headers_sent()) {
+    header('Cache-Control: private, no-store, max-age=0');
+}
 
 $slug = $_GET['slug'] ?? '';
 $token = $_GET['token'] ?? '';
+if (!is_string($slug) || strlen($slug) > 180 || ($slug !== '' && !preg_match('/^[a-z0-9]+(?:-[a-z0-9]+)*$/D', $slug))) {
+    http_response_code(404);
+    die('Página não encontrada.');
+}
+$token = is_string($token) ? $token : '';
 
 $dadosToken = $token !== '' ? explode('|', (string) decriptX($token), 2) : [];
 $clienteIdentificado = isset($dadosToken[0], $dadosToken[1])
     && ctype_digit($dadosToken[0])
     && (int) $dadosToken[0] > 0;
 
-$destinoProposta = $clienteIdentificado
-    ? 'https://propostas.grupothx.com.br/'
-    : '#solicitar-proposta';
+$baseUrl = rtrim(HTTP_WHMCS, '/') . '/thx/promocao';
+$cacheVersion = hash('sha256', hash_file('sha256', __FILE__) . hash_file('sha256', __DIR__ . '/cache.php') . $baseUrl . date('Y'));
+$cache = in_array($_SERVER['REQUEST_METHOD'], ['GET', 'HEAD'], true)
+    ? thxPromoCacheRead($slug, $cacheVersion)
+    : null;
+
+if ($cache && $cache['html'] !== null) {
+    thxPromoDeliver($cache['html'], $cache['id'], $token, $clienteIdentificado, 'HIT');
+    exit;
+}
 
 $promocao = $slug !== '' ? getPromocao($slug) : null;
 
@@ -23,25 +39,21 @@ if ($slug !== '' && (!$promocao || !$promocao->ativo)) {
     die('Página não encontrada.');
 }
 
-if ($promocao && isset($promocao->acessos) && $_SERVER['REQUEST_METHOD'] === 'GET' && empty($_SESSION['adminid'])) {
-    try {
-        \WHMCS\Database\Capsule::table('mod_promocoes_thx')->where('id', $promocao->id)->increment('acessos');
-    } catch (\Throwable $e) {
-        error_log('Promoções THX: falha ao contabilizar acesso.');
-    }
-}
+$promocaoId = $promocao && isset($promocao->acessos) ? (int) $promocao->id : 0;
 
-$promocoes = getPromocoes($promocao->id ?? 0);
+// O carrossel usa apenas os dados públicos, sem precisar encurtar cada link.
+$query = \WHMCS\Database\Capsule::table('mod_promocoes_thx')->where('ativo', 1);
+if ($promocao) {
+    $query->where('id', '<>', (int) $promocao->id);
+}
+$promocoes = $query->orderBy('id', 'desc')->get(['id', 'slug', 'titulo', 'descricao', 'imagem']);
 
 $esc = static function ($valor) {
     return htmlspecialchars((string)($valor ?? ''), ENT_QUOTES, 'UTF-8');
 };
 
-$baseUrl = rtrim(HTTP_WHMCS, '/') . '/thx/promocao';
-
-$urlPromocao = static function ($item) use ($baseUrl, $token) {
-    return $baseUrl . '/' . rawurlencode($item->slug)
-        . ($token !== '' ? '/' . rawurlencode($token) : '');
+$urlPromocao = static function ($item) use ($baseUrl) {
+    return $baseUrl . '/' . rawurlencode($item->slug) . '__THX_PROMO_TOKEN_SUFFIX__';
 };
 
 
@@ -83,6 +95,7 @@ $textWhatsapp .= $promocao
     : getUrlCurta($canonical, $seoTitulo, $descricao, '', $imagemSeo);
 $linkWhatsapp = 'https://wa.me/551146550330?text=' . rawurlencode($textWhatsapp);
 
+ob_start();
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -1142,7 +1155,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
 
-    <?php if (!$clienteIdentificado): ?>
+    <!-- THX_PROMO_ANONYMOUS_START -->
     <!-- <section id="solicitar-proposta" class="lead-section">
         <div>
             <span class="eyebrow" style="color:#d62e3b"><i class="fa-solid fa-paper-plane"></i> Faça seu pedido</span>
@@ -1159,7 +1172,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <small>Ao continuar, o WhatsApp abrirá com sua solicitação preenchida. Confirme o envio da mensagem para falar com nossa equipe.</small>
         </form>
     </section> -->
-    <?php endif; ?>
+    <!-- THX_PROMO_ANONYMOUS_END -->
     <section class="mini-cta">
         <div>
             <h2>Pronto para transformar sua ideia em projeto?</h2>
@@ -1261,3 +1274,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </script>
 </body>
 </html>
+<?php
+$html = ob_get_clean();
+$status = 'BYPASS';
+if ($cache && thxPromoCacheWrite($slug, $cacheVersion, $cache['generation'], $promocaoId, $html)) {
+    $status = 'MISS';
+}
+thxPromoDeliver($html, $promocaoId, $token, $clienteIdentificado, $status);
