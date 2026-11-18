@@ -78,12 +78,9 @@ if (!str_contains(mb_strtolower($seoTitulo), 'grupo thx')) {
     $seoTitulo .= ' | Grupo THX';
 }
 
-$atualUrl = $baseUrl;
-if ($promocao) {
-    $atualUrl .= '/'. $promocao->slug;
-}
-
-$textWhatsapp .= getUrlCurta($atualUrl);
+$textWhatsapp .= $promocao
+    ? $promocao->url
+    : getUrlCurta($canonical, $seoTitulo, $descricao, '', $imagemSeo);
 $linkWhatsapp = 'https://wa.me/551146550330?text=' . rawurlencode($textWhatsapp);
 
 ?>

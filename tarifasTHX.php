@@ -269,7 +269,14 @@ function getPromocao($slugOrId = null)
 	$url = HTTP_WHMCS . '/thx/promocao/'.$campanha->slug;
 	$urlImg = HTTP_WHMCS . '/thx/promocao/' . $campanha->imagem;
 
-	$url = getUrlCurta($url);
+	$tituloSeo = $campanha->seo_titulo ?: $campanha->titulo;
+	if (!str_contains(mb_strtolower($tituloSeo), 'grupo thx')) {
+		$tituloSeo .= ' | Grupo THX';
+	}
+	$descricaoSeo = $campanha->seo_descricao ?: $campanha->descricao;
+	$imagemSeo = !empty($campanha->imagem) ? $urlImg : HTTP_WHMCS . '/thx/promocao/og-image.jpg';
+
+	$url = getUrlCurta($url, $tituloSeo, $descricaoSeo, '', $imagemSeo);
 
 	$html = '
 	<a href="' . $url . '">
@@ -599,13 +606,13 @@ function getUrlCurta($url, $title = '', $description = '',  $hash = '', $img = '
 	CURLOPT_FOLLOWLOCATION => true,
 	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 	CURLOPT_CUSTOMREQUEST => 'POST',
-	CURLOPT_POSTFIELDS =>'{
-		"url": "'.$url.'",
-		"title": "'.$title.'",
-		"img": "'.$img.'",
-		"description": "'.$description.'",
-		"hash": "'.$hash.'"
-	}',
+	CURLOPT_POSTFIELDS => json_encode([
+		'url' => $url,
+		'title' => $title,
+		'img' => $img,
+		'description' => $description,
+		'hash' => $hash
+	], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
 	CURLOPT_HTTPHEADER => array(
 		'Content-Type: application/json',
 		'token: '.TOKEN_SHORT_LINKS
