@@ -609,6 +609,7 @@ function ggnb_send_error_email( $INVOICEID, $USERID, $FNAME, $LNAME, $system_url
 }
 
 /** Cancela boletos Efí pendentes associados à fatura paga manualmente por Pix. */
+if (!function_exists('ggnb_cancelar_por_pix_manual')) {
 function ggnb_cancelar_por_pix_manual($invoiceId)
 {
     $gateway = getGatewayVariables('gofasgerencianetboleto');
@@ -666,4 +667,5 @@ function ggnb_cancelar_por_pix_manual($invoiceId)
                 ->update(['status' => 'canceled']);
         }
     }
+}
 }
