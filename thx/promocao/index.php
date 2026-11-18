@@ -430,6 +430,61 @@ $linkWhatsapp = 'https://wa.me/551146550330?text=' . rawurlencode($textWhatsapp)
         height: auto;
     }
 
+    /* Detalhes das promoções */
+    .destaque-conteudo details {
+        margin: 12px 0;
+        padding: 0 18px;
+        border: 1px solid #d9e3ef;
+        border-left: 3px solid var(--blue-soft);
+        border-radius: 10px;
+        background: #fff;
+    }
+    .destaque-conteudo details > summary {
+        position: relative;
+        display: block;
+        list-style: none;
+        margin: 0 -18px;
+        padding: 14px 46px 14px 18px;
+        min-height: 48px;
+        border-radius: 7px;
+        background: #f2f6fb;
+        color: var(--blue-dark);
+        font-weight: 700;
+        line-height: 1.45;
+        cursor: pointer;
+        transition: background .2s ease, color .2s ease;
+    }
+    .destaque-conteudo details > summary::-webkit-details-marker { display: none; }
+    .destaque-conteudo details > summary::after {
+        content: '';
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        width: 9px;
+        height: 9px;
+        border-right: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        transform: translateY(-70%) rotate(45deg);
+        transition: transform .2s ease;
+    }
+    @media (hover:hover) {
+        .destaque-conteudo details > summary:hover { background: #e5eef9; }
+    }
+    .destaque-conteudo details > summary:focus-visible { outline: 2px solid var(--blue-soft); outline-offset: -3px; }
+    .destaque-conteudo details[open] { border-left-color: var(--red); padding-bottom: 4px; }
+    .destaque-conteudo details[open] > summary {
+        background: linear-gradient(120deg, var(--blue-dark), var(--blue));
+        color: #fff;
+        border-radius: 7px 7px 0 0;
+    }
+    .destaque-conteudo details[open] > summary::after { transform: translateY(-25%) rotate(225deg); }
+    .destaque-conteudo details[open] > summary:focus-visible { outline-color: #fff; }
+    @media (max-width: 700px) {
+        .destaque-conteudo details { padding-left: 12px; padding-right: 12px; }
+        .destaque-conteudo details > summary { margin-left: -12px; margin-right: -12px; padding: 13px 38px 13px 12px; font-size: 15px; }
+        .destaque-conteudo details > summary::after { right: 15px; }
+    }
+
     .offer-list { margin-top: 64px; }
 
     .grade {
