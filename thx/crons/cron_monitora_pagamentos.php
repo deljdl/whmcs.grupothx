@@ -435,6 +435,87 @@ foreach($semPagamento as $servico)
 $tableSemPagamento .= '</table>';
 
 
+
+/*
+|--------------------------------------------------------------------------
+| AUDITORIA DE BOLETOS EFI / ASAAS (somente leitura)
+|--------------------------------------------------------------------------
+*/
+
+$auditoriaBoletos = '';
+$alertaBoletos = false;
+$gatewaysAuditoriaBoletos = [
+    'gofasgerencianetboleto' => [
+        'nome' => 'Efí',
+        'tabela' => 'gofasgerencianetboleto',
+        'pendente' => "b.api_mode = 'live' AND b.charge_id > 0 AND b.status IN ('waiting', 'unpaid')",
+        'completo' => "TRIM(COALESCE(b.link, '')) <> '' AND TRIM(COALESCE(b.barcode, '')) <> ''",
+    ],
+    'asaas' => [
+        'nome' => 'Asaas',
+        'tabela' => 'asaas_cobrancas',
+        'pendente' => "b.environment = 'production' AND TRIM(COALESCE(b.charge_id, '')) <> '' AND b.status IN ('PENDING', 'OVERDUE')",
+        'completo' => "TRIM(COALESCE(b.bank_slip_url, '')) <> '' AND TRIM(COALESCE(b.barcode, '')) <> '' AND TRIM(COALESCE(b.identification_field, '')) <> ''",
+    ],
+];
+
+foreach ($gatewaysAuditoriaBoletos as $gatewayAuditoria => $configAuditoria) {
+    try {
+        $sqlAuditoria = "SELECT i.id, i.duedate, i.total,
+                COUNT(DISTINCT b.charge_id) AS pendentes,
+                COUNT(DISTINCT CASE WHEN {$configAuditoria['completo']} THEN b.charge_id END) AS completos
+            FROM tblinvoices i
+            LEFT JOIN {$configAuditoria['tabela']} b ON b.invoice_id = i.id AND {$configAuditoria['pendente']}
+            WHERE i.status = 'Unpaid' AND i.total > 0 AND i.paymentmethod = :gateway
+            GROUP BY i.id, i.duedate, i.total
+            HAVING completos = 0 OR pendentes > 1
+            ORDER BY i.duedate, i.id";
+
+        $stmtAuditoria = $pdo->prepare($sqlAuditoria);
+        if (!$stmtAuditoria || !$stmtAuditoria->execute(['gateway' => $gatewayAuditoria])) {
+            throw new RuntimeException('Falha na consulta de auditoria.');
+        }
+
+        foreach ($stmtAuditoria->fetchAll(PDO::FETCH_ASSOC) as $faturaAuditoria) {
+            $alertaBoletos = true;
+            $motivosAuditoria = [];
+            if ((int)$faturaAuditoria['completos'] === 0) {
+                $motivosAuditoria[] = 'Sem boleto pendente completo no banco local';
+            }
+            if ((int)$faturaAuditoria['pendentes'] > 1) {
+                $motivosAuditoria[] = 'Possível duplicidade: '.$faturaAuditoria['pendentes'].' cobranças pendentes';
+            }
+            $auditoriaBoletos .= '<tr>
+                <td '.$tableTdStyle.'>'.$configAuditoria['nome'].'</td>
+                <td '.$tableTdStyle.'><a href="'.HTTP_WHMCS_ADMIN.'/invoices.php?action=edit&id='.(int)$faturaAuditoria['id'].'">#'.(int)$faturaAuditoria['id'].'</a></td>
+                <td '.$tableTdStyle.'>'.date('d/m/Y', strtotime($faturaAuditoria['duedate'])).'</td>
+                <td '.$tableTdStyle.'>R$ '.number_format((float)$faturaAuditoria['total'], 2, ',', '.').'</td>
+                <td '.$tableTdStyle.'>'.implode('; ', $motivosAuditoria).'</td>
+            </tr>';
+        }
+    } catch (\Throwable $erroAuditoria) {
+        $alertaBoletos = true;
+        $auditoriaBoletos .= '<tr><td '.$tableTdStyle.'>'.$configAuditoria['nome'].'</td><td '.$tableTdStyle.' colspan="4">Falha ao consultar a auditoria deste gateway. Verifique o banco local.</td></tr>';
+    }
+}
+
+$tableAuditoriaBoletos = '<h2>AUDITORIA DE BOLETOS EFI / ASAAS</h2>';
+if ($alertaBoletos) {
+    $tableAuditoriaBoletos .= '<p><strong style="color:red">Atenção: existem pendências ou falhas na auditoria de cobranças.</strong></p>
+        <table '.$tableStyle.'>
+        <tr>
+            <th '.$tableTdStyle.'>Gateway</th>
+            <th '.$tableTdStyle.'>Fatura</th>
+            <th '.$tableTdStyle.'>Vencimento</th>
+            <th '.$tableTdStyle.'>Valor</th>
+            <th '.$tableTdStyle.'>Motivo</th>
+        </tr>'.$auditoriaBoletos.'</table>
+        <p>Consulte o gateway antes de emitir ou cancelar boletos. A auditoria verifica somente registros locais.</p>';
+} else {
+    $tableAuditoriaBoletos .= '<p>Nenhuma inconsistência encontrada nos registros locais de boletos pendentes.</p>';
+}
+
+
 /*
 |--------------------------------------------------------------------------
 | HTML
@@ -449,6 +530,9 @@ $html = '<!DOCTYPE html>
     <title>Monitoramento de cobranças</title>
 </head>
 <body>
+
+'.$tableAuditoriaBoletos.'
+<hr />
 
 <p>
     '.'Relatório de clientes inativos ou com faturas em aberto desde '.date('d/m/Y', strtotime($dataLimite)).'
@@ -498,7 +582,7 @@ $email->Priority = 1;
 $email->IsHTML(true);
 $email->From = 'financeiro@grupothx.com.br';
 $email->FromName = 'Grupo THX';
-$email->Subject = 'Clientes com faturas em aberto / Anomalias de cobrança';
+$email->Subject = ($alertaBoletos ? '[ALERTA BOLETOS] ' : '').'Clientes com faturas em aberto / Anomalias de cobrança';
 $email->Body = $html;
 $email->CharSet = "UTF-8";
 $email->Encoding = 'base64';
