@@ -68,8 +68,6 @@ function thxPromoCacheRead($slug, $version)
         $state = ['generation' => $generation, 'html' => null, 'id' => 0];
         $file = $dir . '/' . hash('sha256', $slug) . '.html';
         clearstatcache(true, $file);
-        $mtime = @filemtime($file);
-        if (!$mtime || time() - $mtime >= 86400) return $state;
         $raw = @file_get_contents($file);
         if (!is_string($raw)) return $state;
         $parts = explode("\n", $raw, 2);

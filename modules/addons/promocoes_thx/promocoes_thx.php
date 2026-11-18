@@ -175,7 +175,7 @@ function promocoes_thx_output($vars)
         echo '<p class="text-warning">Cache indisponível. As páginas continuam funcionando normalmente.</p>';
     } else {
         echo '<p>Arquivos armazenados: <strong>' . (int) $cacheStats['files'] . '</strong> &middot; Espaço utilizado: <strong>' . number_format($cacheStats['bytes'] / 1024, 1, ',', '.') . ' KB</strong></p>';
-        echo '<p>O cache é invalidado ao salvar uma promoção e expira em até 24 horas.</p>';
+        echo '<p>O cache não possui prazo de expiração. É invalidado ao salvar uma promoção, alterar o layout ou limpar manualmente.</p>';
         echo '<form method="post" action="' . $esc($base) . '"><input type="hidden" name="acao" value="limpar_cache"><input type="hidden" name="csrf" value="' . $esc($csrf) . '"><button type="submit" class="btn btn-danger">Limpar todo o cache</button></form>';
     }
     echo '</div></div>';
