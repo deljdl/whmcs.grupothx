@@ -11,10 +11,15 @@ add_hook('EmailPreSend', 1, function ($vars) {
 
 
 
-	$campanha = getPromocao();
+	try {
+		$campanha = getPromocao();
+	} catch (\Throwable $e) {
+		error_log('Promoções THX: falha ao selecionar promoção para e-mail.');
+		return ['promocoes_thx_html' => ''];
+	}
 
 	if (!$campanha) {
-		return [];
+		return ['promocoes_thx_html' => ''];
 	}
 
 	$token = $clienteId;

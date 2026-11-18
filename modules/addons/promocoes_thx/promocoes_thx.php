@@ -33,6 +33,7 @@ function promocoes_thx_activate()
                 $table->string('seo_titulo', 180)->nullable();
                 $table->string('seo_descricao', 255)->nullable();
                 $table->boolean('ativo')->default(true);
+                $table->boolean('divulgar_email')->default(true);
                 $table->unsignedBigInteger('acessos')->default(0);
                 $table->timestamps();
             });
@@ -62,6 +63,45 @@ function promocoes_thx_output($vars)
         $_SESSION['promocoes_thx_csrf'] = bin2hex(random_bytes(24));
     }
     $csrf = $_SESSION['promocoes_thx_csrf'];
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['acao'] ?? '') === 'alterar_status') {
+        $responder = static function ($dados, $status = 200) {
+            http_response_code($status);
+            header('Content-Type: application/json; charset=utf-8');
+            header('Cache-Control: no-store');
+            echo json_encode($dados);
+            exit;
+        };
+
+        if (empty($_SESSION['adminid']) || !is_string($_POST['csrf'] ?? null) || !hash_equals($csrf, $_POST['csrf'])) {
+            $responder(['success' => false, 'message' => 'Sessão inválida. Atualize a página.'], 403);
+        }
+
+        $id = (int) ($_POST['promocao_id'] ?? 0);
+        $campo = $_POST['campo'] ?? '';
+        $valor = $_POST['valor'] ?? '';
+        if ($id <= 0 || !in_array($campo, ['ativo', 'divulgar_email'], true) || !in_array($valor, ['0', '1'], true)) {
+            $responder(['success' => false, 'message' => 'Dados inválidos.'], 400);
+        }
+
+        try {
+            $query = Capsule::table('mod_promocoes_thx')->where('id', $id);
+            if (!$query->first()) {
+                $responder(['success' => false, 'message' => 'Promoção não localizada.'], 404);
+            }
+            $query->update([$campo => (int) $valor, 'updated_at' => date('Y-m-d H:i:s')]);
+
+            $aviso = '';
+            if ($campo === 'ativo' && !thxPromoCacheClear()) {
+                $aviso = 'Status salvo, mas não foi possível limpar o cache. Limpe-o manualmente.';
+                logActivity('Promoções THX: falha ao invalidar o cache após alterar status.');
+            }
+            $responder(['success' => true, 'message' => $aviso ?: 'Alteração salva.', 'warning' => $aviso !== '']);
+        } catch (\Throwable $e) {
+            logActivity('Promoções THX: falha ao alterar status: ' . $e->getMessage());
+            $responder(['success' => false, 'message' => 'Não foi possível salvar a alteração.'], 500);
+        }
+    }
 
     if (!Capsule::schema()->hasTable('mod_promocoes_thx')) {
         echo '<div class="alert alert-danger">Tabela do módulo não localizada. Ative o módulo em Configurações &gt; Módulos Adicionais.</div>';
@@ -267,11 +307,55 @@ function promocoes_thx_output($vars)
     echo '<div class="form-group"><div class="col-sm-offset-2 col-sm-8"><label><input type="checkbox" name="ativo" value="1"' . (($enviado && $erro !== '' ? isset($_POST['ativo']) : (!$item || $item->ativo)) ? ' checked' : '') . '> Campanha ativa</label></div></div>';
     echo '<div class="form-group"><div class="col-sm-offset-2 col-sm-8"><button type="submit" class="btn btn-primary">Salvar promoção</button> <a class="btn btn-default" href="' . $esc($base) . '">Nova promoção</a></div></div>';
     echo '</form><hr><h3>Promoções cadastradas</h3>';
+    echo '<p>Somente promoções ativas e marcadas para divulgação participam dos e-mails. Se nenhuma estiver selecionada, o e-mail será enviado sem promoção.</p><div id="promocoes_status_msg" role="status" aria-live="polite"></div>';
 
     $registros = Capsule::table('mod_promocoes_thx')->orderBy('id', 'desc')->get();
-    echo '<div class="table-responsive"><table class="table table-striped"><thead><tr><th>ID</th><th>Título</th><th>URL</th><th>Imagem</th><th>Acessos</th><th>Status</th><th></th></tr></thead><tbody>';
+    echo '<div class="table-responsive"><table class="table table-striped"><thead><tr><th>ID</th><th>Título</th><th>URL</th><th>Imagem</th><th>Acessos</th><th class="text-center">Ativa</th><th class="text-center">Divulgar nos e-mails</th><th></th></tr></thead><tbody>';
     foreach ($registros as $registro) {
-        echo '<tr><td>' . (int) $registro->id . '</td><td>' . $esc($registro->titulo) . '</td><td><a target="_blank" href="'.HTTP_WHMCS.'/thx/promocao/' . $esc($registro->slug) . '">' . $esc($registro->slug) . '</a></td><td><img title="' . $esc($registro->imagem) . '" alt="' . $esc($registro->imagem) . '" src="../thx/promocao/' . rawurlencode($registro->imagem) . '" style="max-width:100px;max-height:100px" /></td><td>' . (isset($registro->acessos) ? number_format((int) $registro->acessos, 0, ',', '.') : '—') . '</td><td>' . ($registro->ativo ? 'Ativa' : 'Inativa') . '</td><td><a class="btn btn-default btn-sm" target="_blank" rel="noopener" href="' . $esc(rtrim(HTTP_WHMCS, '/') . '/thx/promocao/' . rawurlencode($registro->slug)) . '">Ver página</a> <a class="btn btn-default btn-sm" href="' . $esc($base) . '&editar=' . (int) $registro->id . '">Editar</a></td></tr>';
+        echo '<tr><td>' . (int) $registro->id . '</td><td>' . $esc($registro->titulo) . '</td><td><a target="_blank" href="'.HTTP_WHMCS.'/thx/promocao/' . $esc($registro->slug) . '">' . $esc($registro->slug) . '</a></td><td><img title="' . $esc($registro->imagem) . '" alt="' . $esc($registro->imagem) . '" src="../thx/promocao/' . rawurlencode($registro->imagem) . '" style="max-width:100px;max-height:100px" /></td><td>' . (isset($registro->acessos) ? number_format((int) $registro->acessos, 0, ',', '.') : '—') . '</td><td class="text-center"><input type="checkbox" class="promocao-status" data-id="' . (int) $registro->id . '" data-campo="ativo" aria-label="Campanha ativa: ' . $esc($registro->titulo) . '" style="cursor:pointer;width:18px;height:18px"' . ($registro->ativo ? ' checked' : '') . '></td><td class="text-center"><input type="checkbox" class="promocao-status" data-id="' . (int) $registro->id . '" data-campo="divulgar_email" aria-label="Divulgar nos e-mails: ' . $esc($registro->titulo) . '" style="cursor:pointer;width:18px;height:18px"' . ($registro->divulgar_email ? ' checked' : '') . '></td><td><a class="btn btn-default btn-sm" target="_blank" rel="noopener" href="' . $esc(rtrim(HTTP_WHMCS, '/') . '/thx/promocao/' . rawurlencode($registro->slug)) . '">Ver página</a> <a class="btn btn-default btn-sm" href="' . $esc($base) . '&editar=' . (int) $registro->id . '">Editar</a></td></tr>';
     }
     echo '</tbody></table></div>';
+
+    echo '<script>
+    (function() {
+        const msg = document.getElementById("promocoes_status_msg");
+        const form = document.getElementById("promocoes_form");
+        document.querySelectorAll(".promocao-status").forEach(function(box) {
+            box.addEventListener("change", async function() {
+                const checked = box.checked;
+                box.disabled = true;
+                msg.className = "alert alert-info";
+                msg.textContent = "Salvando...";
+                try {
+                    const data = new URLSearchParams({
+                        acao: "alterar_status",
+                        csrf: form.elements.csrf.value,
+                        promocao_id: box.dataset.id,
+                        campo: box.dataset.campo,
+                        valor: checked ? "1" : "0"
+                    });
+                    const response = await fetch(form.action, {
+                        method: "POST",
+                        credentials: "same-origin",
+                        headers: {"X-Requested-With": "XMLHttpRequest"},
+                        body: data
+                    });
+                    const result = await response.json();
+                    if (!response.ok || !result.success) throw new Error(result.message || "Erro ao salvar.");
+                    if (box.dataset.campo === "ativo" && form.elements.promocao_id.value === box.dataset.id) {
+                        form.elements.ativo.checked = checked;
+                    }
+                    msg.className = "alert alert-" + (result.warning ? "warning" : "success");
+                    msg.textContent = result.message;
+                } catch (e) {
+                    box.checked = !checked;
+                    msg.className = "alert alert-danger";
+                    msg.textContent = "Não foi possível confirmar a alteração. Atualize a página para verificar o status.";
+                } finally {
+                    box.disabled = false;
+                }
+            });
+        });
+    })();
+    </script>';
 }
