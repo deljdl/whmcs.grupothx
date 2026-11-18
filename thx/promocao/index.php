@@ -430,6 +430,60 @@ $linkWhatsapp = 'https://wa.me/551146550330?text=' . rawurlencode($textWhatsapp)
         height: auto;
     }
 
+    /* Listas das promoções */
+    .destaque-conteudo ul {
+        list-style-type: "\200B";
+        padding-left: 0;
+        margin: 16px 0 22px;
+    }
+    .destaque-conteudo ul > li {
+        position: relative;
+        padding: 7px 0 7px 30px;
+        line-height: 1.6;
+        min-width: 0;
+    }
+    .destaque-conteudo ul > li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #e7effa url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='m5 10 3 3 7-7' fill='none' stroke='%23173b68' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 16px no-repeat;
+    }
+    .destaque-conteudo > ul,
+    .destaque-conteudo > section > ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+    .destaque-conteudo > ul > li,
+    .destaque-conteudo > section > ul > li {
+        padding: 12px 14px 12px 44px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #f5f8fc;
+    }
+    .destaque-conteudo > ul > li::before,
+    .destaque-conteudo > section > ul > li::before {
+        left: 13px;
+        top: 15px;
+    }
+    .destaque-conteudo ol {
+        padding-left: 28px;
+        margin: 16px 0 22px;
+    }
+    .destaque-conteudo ol > li {
+        padding: 7px 0 7px 4px;
+        line-height: 1.6;
+    }
+    .destaque-conteudo ol > li::marker { color: var(--blue-soft); font-weight: 800; }
+    @media (max-width: 850px) {
+        .destaque-conteudo > ul,
+        .destaque-conteudo > section > ul { grid-template-columns: minmax(0, 1fr); }
+    }
+
     /* Detalhes das promoções */
     .destaque-conteudo details {
         margin: 12px 0;
