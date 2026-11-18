@@ -89,7 +89,7 @@ function promocoes_thx_output($vars)
             } else {
                 if ($upload && $upload['error'] === UPLOAD_ERR_OK) {
                     $tipos = [IMAGETYPE_JPEG => 'jpg', IMAGETYPE_PNG => 'png', IMAGETYPE_WEBP => 'webp'];
-                    $tipo = @exif_imagetype($upload['tmp_name']);
+                    $tipo = @getimagesize($upload['tmp_name'])[2] ?? false;
                     if ($upload['size'] > 5 * 1024 * 1024 || !isset($tipos[$tipo]) || !is_uploaded_file($upload['tmp_name'])) {
                         $erro = 'Envie uma imagem JPG, PNG ou WebP de até 5 MB.';
                     } else {
