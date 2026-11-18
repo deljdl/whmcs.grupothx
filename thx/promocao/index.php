@@ -755,6 +755,11 @@ $linkWhatsapp = 'https://wa.me/551146550330?text=' . rawurlencode($textWhatsapp)
     .notice { background:linear-gradient(90deg,#a91928,#eb303c,#aa192a); }
     .hero .btn-light { background:#ec3440;color:#fff;box-shadow:0 14px 28px rgba(236,52,64,.20); }
     .hero .btn-light:hover { background:#ca2030; }
+    .destaque-cta { justify-content:center;margin-top:26px; }
+    .destaque-cta .btn { background:var(--red);color:#fff;text-align:center;line-height:1.4;min-width:0;max-width:100%;box-shadow:0 10px 24px rgba(230,50,56,.18); }
+    .destaque-cta .btn i { flex-shrink:0;font-size:20px; }
+    .destaque-cta .btn:hover { background:#ca2030; }
+    .destaque-cta .btn:focus-visible { outline:2px solid var(--blue);outline-offset:3px; }
     .section-heading .eyebrow { color:#d72d39; }
     .section-heading h2 { color:#111e31; }
     .destaque { border-top:4px solid #e63238; }
@@ -912,6 +917,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <?php if ($promocao && trim((string)$promocao->conteudo) !== ''): ?>
                 <div class="destaque-conteudo">
                     <?= $promocao->conteudo ?>
+                    <div class="actions destaque-cta">
+                        <a class="btn btn-primary" target="_blank" rel="noopener" href="<?= $esc($linkWhatsapp) ?>">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span>Solicitar proposta pelo WhatsApp</span>
+                        </a>
+                    </div>
                 </div>
             <?php endif; ?>
         </article>
