@@ -50,6 +50,69 @@ function promocoes_thx_deactivate()
     return ['status' => 'success', 'description' => 'Módulo desativado. Campanhas preservadas no banco.'];
 }
 
+function promocoes_thx_gravar_seo($arquivo, $conteudo)
+{
+    if (is_link($arquivo) || (file_exists($arquivo) && !is_file($arquivo))) {
+        return false;
+    }
+
+    $tmp = @tempnam(dirname($arquivo), '.thx-seo-');
+    if (!$tmp) return false;
+
+    try {
+        if (dirname($tmp) !== dirname($arquivo)) return false;
+        $modo = is_file($arquivo) ? fileperms($arquivo) & 0777 : 0644;
+        return @file_put_contents($tmp, $conteudo) === strlen($conteudo)
+            && @chmod($tmp, $modo)
+            && @rename($tmp, $arquivo);
+    } finally {
+        if (is_file($tmp)) @unlink($tmp);
+    }
+}
+
+function promocoes_thx_gerar_seo($raiz, $baseUrl)
+{
+    $xmlEsc = static function ($valor) {
+        return htmlspecialchars($valor, ENT_XML1 | ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    };
+    $registros = Capsule::table('mod_promocoes_thx')
+        ->where('ativo', 1)->orderBy('id', 'desc')->get(['slug', 'updated_at']);
+
+    $xml = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+    $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+    $xml .= '  <url><loc>' . $xmlEsc($baseUrl) . '</loc></url>' . "\n";
+    $total = 1;
+
+    foreach ($registros as $registro) {
+        $xml .= '  <url><loc>' . $xmlEsc($baseUrl . '/' . rawurlencode($registro->slug)) . '</loc>';
+        if (!empty($registro->updated_at)) {
+            $data = strtotime((string) $registro->updated_at);
+            if ($data !== false) $xml .= '<lastmod>' . date('Y-m-d', $data) . '</lastmod>';
+        }
+        $xml .= '</url>' . "\n";
+        $total++;
+    }
+    $xml .= '</urlset>' . "\n";
+
+    if (!promocoes_thx_gravar_seo($raiz . '/thx/promocao/sitemap.xml', $xml)) {
+        throw new \RuntimeException('Não foi possível gravar sitemap.xml.');
+    }
+
+    $robotsPath = $raiz . '/robots.txt';
+    $robots = is_file($robotsPath) ? @file_get_contents($robotsPath) : "User-agent: *\nDisallow:\n";
+    $sitemapUrl = $baseUrl . '/sitemap.xml';
+    $robotsOk = is_string($robots) && !is_link($robotsPath);
+    if ($robotsOk) {
+        $pattern = '~^[ \t]*Sitemap:[ \t]*' . preg_quote($sitemapUrl, '~') . '[ \t]*(?:#[^\r\n]*)?\r?$~mi';
+        if (!preg_match($pattern, $robots)) {
+            $robots .= (substr($robots, -1) === "\n" ? '' : "\n") . "\nSitemap: " . $sitemapUrl . "\n";
+            $robotsOk = promocoes_thx_gravar_seo($robotsPath, $robots);
+        }
+    }
+
+    return ['total' => $total, 'robots' => $robotsOk];
+}
+
 function promocoes_thx_output($vars)
 {
     require_once __DIR__ . '/../../../thx/promocao/cache.php';
@@ -109,6 +172,28 @@ function promocoes_thx_output($vars)
     }
 
     $erro = '';
+    $raizSeo = dirname(__DIR__, 3);
+    $baseSeo = rtrim(HTTP_WHMCS, '/') . '/thx/promocao';
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['acao'] ?? '') === 'gerar_seo') {
+        if (empty($_SESSION['adminid']) || !is_string($_POST['csrf'] ?? null) || !hash_equals($csrf, $_POST['csrf'])) {
+            $erro = 'Sessão expirada. Atualize a página e tente novamente.';
+        } else {
+            try {
+                $seo = promocoes_thx_gerar_seo($raizSeo, $baseSeo);
+                echo '<div class="alert alert-success">Sitemap gerado com ' . (int) $seo['total'] . ' URLs.</div>';
+                if ($seo['robots']) {
+                    echo '<div class="alert alert-success">Referência ao sitemap confirmada no robots.txt.</div>';
+                } else {
+                    echo '<div class="alert alert-warning">Sitemap gerado, mas não foi possível atualizar o robots.txt. Verifique o arquivo e suas permissões.</div>';
+                }
+            } catch (\Throwable $e) {
+                $erro = 'Não foi possível gerar o sitemap. Consulte o Log de Atividades do WHMCS.';
+                logActivity('Promoções THX: falha ao gerar SEO: ' . $e->getMessage());
+            }
+        }
+    }
+
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['acao'] ?? '') === 'limpar_cache') {
         if (empty($_SESSION['adminid']) || !hash_equals($csrf, (string) ($_POST['csrf'] ?? ''))) {
             $erro = 'Sessão expirada. Atualize a página e tente novamente.';
@@ -219,6 +304,25 @@ function promocoes_thx_output($vars)
         echo '<form method="post" action="' . $esc($base) . '"><input type="hidden" name="acao" value="limpar_cache"><input type="hidden" name="csrf" value="' . $esc($csrf) . '"><button type="submit" class="btn btn-danger">Limpar todo o cache</button></form>';
     }
     echo '</div></div>';
+
+    $sitemapPath = $raizSeo . '/thx/promocao/sitemap.xml';
+    clearstatcache(true, $sitemapPath);
+    $sitemapConteudo = is_file($sitemapPath) ? @file_get_contents($sitemapPath) : false;
+    echo '<div class="panel panel-default"><div class="panel-heading"><strong>SEO — Sitemap e robots.txt</strong></div><div class="panel-body">';
+    if (is_string($sitemapConteudo)) {
+        echo '<p>Última geração: <strong>' . $esc(date('d/m/Y H:i:s', filemtime($sitemapPath))) . '</strong> &middot; URLs: <strong>' . substr_count($sitemapConteudo, '<url>') . '</strong></p>';
+    } else {
+        echo '<p>Sitemap ainda não gerado.</p>';
+    }
+    echo '<p>Arquivos estáticos, atualizados somente pelo botão abaixo. Gere novamente após cadastrar, editar, ativar ou desativar uma promoção. As regras existentes no robots.txt são preservadas.</p>';
+    echo '<form method="post" action="' . $esc($base) . '"><input type="hidden" name="acao" value="gerar_seo"><input type="hidden" name="csrf" value="' . $esc($csrf) . '"><button type="submit" class="btn btn-primary">Gerar/Atualizar sitemap e robots.txt</button>';
+    if (is_string($sitemapConteudo)) {
+        echo ' <a target="_blank" rel="noopener" class="btn btn-default" href="' . $esc($baseSeo . '/sitemap.xml') . '">Visualizar sitemap.xml</a>';
+    }
+    if (is_file($raizSeo . '/robots.txt')) {
+        echo ' <a target="_blank" rel="noopener" class="btn btn-default" href="' . $esc(rtrim(HTTP_WHMCS, '/') . '/robots.txt') . '">Visualizar robots.txt</a>';
+    }
+    echo '</form></div></div>';
 
     $editId = max(0, (int) ($_POST['promocao_id'] ?? $_GET['editar'] ?? 0));
     $item = $editId ? Capsule::table('mod_promocoes_thx')->where('id', $editId)->first() : null;

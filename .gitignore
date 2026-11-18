@@ -27,3 +27,5 @@ modules/gateways/callback/mercadopago/vendor/mercadopago/
 /vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache/Serializer/HTML/
 .htaccess
 *nao-versionado*
+/robots.txt
+/thx/promocao/sitemap.xml

@@ -95,6 +95,59 @@ $textWhatsapp .= $promocao
     : getUrlCurta($canonical, $seoTitulo, $descricao, '', $imagemSeo);
 $linkWhatsapp = 'https://wa.me/551146550330?text=' . rawurlencode($textWhatsapp);
 
+// Dados estruturados públicos, sem tokens nem dados dos visitantes.
+$organizacaoId = $baseUrl . '#organization';
+$schema = [
+    [
+        '@type' => 'Organization',
+        '@id' => $organizacaoId,
+        'name' => 'Grupo THX',
+        'url' => $baseUrl,
+        'logo' => rtrim(HTTP_WHMCS, '/') . '/assets/img/logo.png',
+        'telephone' => '+55 11 4655-0330',
+    ],
+];
+
+if ($promocao) {
+    $schema[] = [
+        '@type' => 'Service',
+        '@id' => $canonical . '#service',
+        'name' => $promocao->titulo,
+        'description' => $promocao->descricao,
+        'url' => $canonical,
+        'image' => $imagemSeo,
+        'provider' => ['@id' => $organizacaoId],
+    ];
+    $schema[] = [
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Promoções e Serviços', 'item' => $baseUrl],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => $promocao->titulo, 'item' => $canonical],
+        ],
+    ];
+} else {
+    $itensSchema = [];
+    foreach ($promocoes as $item) {
+        $itensSchema[] = [
+            '@type' => 'ListItem',
+            'position' => count($itensSchema) + 1,
+            'name' => $item->titulo,
+            'url' => $baseUrl . '/' . rawurlencode($item->slug),
+        ];
+    }
+    if ($itensSchema) {
+        $schema[] = [
+            '@type' => 'ItemList',
+            '@id' => $baseUrl . '#servicos',
+            'name' => 'Promoções e Serviços do Grupo THX',
+            'itemListElement' => $itensSchema,
+        ];
+    }
+}
+
+$schemaJson = json_encode(['@context' => 'https://schema.org', '@graph' => $schema],
+    JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_INVALID_UTF8_SUBSTITUTE);
+
 ob_start();
 ?>
 <!doctype html>
@@ -115,6 +168,9 @@ ob_start();
     <meta name="description" content="<?= $esc($descricao) ?>">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="<?= $esc($canonical) ?>">
+    <?php if ($schemaJson !== false): ?>
+        <script type="application/ld+json"><?= $schemaJson ?></script>
+    <?php endif; ?>
 
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
