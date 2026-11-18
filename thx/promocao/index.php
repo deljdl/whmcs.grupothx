@@ -920,7 +920,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <section class="offer-list <?= $promocao ? 'other' : 'all' ?>">
             <div class="section-heading">
                 <span class="eyebrow"><i class="fa-solid fa-layer-group"></i> <?= $promocao ? 'Explore mais' : 'Soluções e oportunidades' ?></span>
-                <h2><?= $promocao ? 'Conheça também outras soluções da Grupo THX' : 'Escolha a solução ideal para o seu momento' ?></h2>
+                <h2><?= $promocao ? 'Conheça também outras soluções do Grupo THX' : 'Escolha a solução ideal para o seu momento' ?></h2>
                 <p>Selecione uma opção e veja como podemos ajudar sua empresa a crescer com tecnologia.</p>
             </div>
 
@@ -972,7 +972,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section class="benefits" aria-labelledby="benefits-title">
         <div class="section-heading">
-            <span class="eyebrow"><i class="fa-solid fa-shield-halved"></i> Por que a Grupo THX</span>
+            <span class="eyebrow"><i class="fa-solid fa-shield-halved"></i> Por que o Grupo THX</span>
             <h2 id="benefits-title">Tecnologia com propósito, do planejamento à entrega</h2>
             <p>Projetos desenvolvidos de acordo com as necessidades reais de cada negócio.</p>
         </div>
@@ -1028,7 +1028,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div>
             <span class="eyebrow" style="color:#d62e3b"><i class="fa-solid fa-paper-plane"></i> Faça seu pedido</span>
             <h2>Conte sobre o projeto que você tem em mente</h2>
-            <p>Preencha os dados e envie sua solicitação diretamente ao WhatsApp comercial da Grupo THX. Nossa equipe poderá entender sua necessidade e preparar uma proposta sem compromisso.</p>
+            <p>Preencha os dados e envie sua solicitação diretamente ao WhatsApp comercial do Grupo THX. Nossa equipe poderá entender sua necessidade e preparar uma proposta sem compromisso.</p>
             <p><i class="fa-solid fa-lock" style="color:#d62e3b"></i> Seus dados serão usados para responder à solicitação.</p>
         </div>
         <form id="form-solicitar-proposta">
