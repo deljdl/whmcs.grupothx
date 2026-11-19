@@ -14,7 +14,7 @@ add_hook('ClientAreaFooterOutput', 1, function () {
     $xpainelScript = '
     <link rel="stylesheet" href="' . $systemUrl . '/assets/css/grupothx-client.css">
     <script src="' . $systemUrl . '/assets/js/grupothx-client.js"></script>
-    <script src="https://grupothx.com/atendimento-online/apiTHX/scriptAtendimentoOnlineTodosOsSitesJs.php"></script>
+    <script defer src="https://autoresponder.grupothx.com.br/widget/"></script>
     <script>console.log("self '.$_SERVER['SCRIPT_NAME'].'");</script>
     <script>console.log("urlatual '.$urlAtual.'");</script>
     <script>console.log("basename '.$basename.'");</script>
