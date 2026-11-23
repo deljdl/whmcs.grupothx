@@ -468,7 +468,7 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
 
                             if (paginaFatura && currentInvoiceId()) {
                                 let idfatura = currentInvoiceId();
-                                let botao = $('<a class="btn btn-default abrir-modal-nota hook-thx-buttons" data-id="' + idfatura + '" title="Gerar Nota Fiscal" style="cursor:pointer;margin-bottom:12px;"><i class="fas fa-file-invoice"></i> Gerar Nota Fiscal</a>');
+                                let botao = $('<a class="btn btn-default abrir-modal-nota" data-id="' + idfatura + '" title="Gerar Nota Fiscal" style="cursor:pointer;margin-right:5px;"><i class="fas fa-file-invoice"></i> Gerar Nota Fiscal</a>');
                                 let area = $('#btnShowAttemptCaptureDialog');
                                 if (!area.length) area = $('a[href="#tab1"]').first().closest('ul');
                                 if (!area.length) area = $('#tab1');
