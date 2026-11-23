@@ -436,9 +436,12 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
                         function openModalNota(id, botao)
                         {
                             if (botao.data('loading')) return;
+                            botao.data('loading', true);
 
-                            let htmlOriginal = botao.html();
-                            botao.data('loading', true).addClass('disabled').html('<i class="fas fa-spinner fa-spin"></i> Aguarde...');
+                            $("#faturaselecionada").text(id);
+                            $('#sendnotafiscal').hide();
+                            $('#notajaenviada').html('<div class="text-center" style="padding:30px;"><i class="fas fa-spinner fa-spin fa-2x"></i><p>Carregando nota fiscal...</p></div>');
+                            $('#modalNotas').modal('show');
 
                             let url = new URL(window.location.href);
                             url.searchParams.set('checarnota', id);
@@ -451,12 +454,11 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
                                 document.getElementById("sendnotafiscal").setAttribute("action", window.location.href);
 
                                 $("#iddafatura").val(id);
-                                $("#faturaselecionada").text(id);
-                                $('#modalNotas').modal();
+                                $('#sendnotafiscal').show();
                             }).fail(function() {
-                                alert('Não foi possível carregar a nota fiscal.');
+                                $('#notajaenviada').html('<div class="alert alert-danger">Não foi possível carregar a nota fiscal.</div>');
                             }).always(function() {
-                                botao.removeClass('disabled').html(htmlOriginal).removeData('loading');
+                                botao.removeData('loading');
                             });
                         }
 
@@ -467,7 +469,8 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
                             if (paginaFatura && currentInvoiceId()) {
                                 let idfatura = currentInvoiceId();
                                 let botao = $('<a class="btn btn-default abrir-modal-nota hook-thx-buttons" data-id="' + idfatura + '" title="Gerar Nota Fiscal" style="cursor:pointer;margin-bottom:12px;"><i class="fas fa-file-invoice"></i> Gerar Nota Fiscal</a>');
-                                let area = $('a[href="#tab1"]').first().closest('ul');
+                                let area = $('#btnShowAttemptCaptureDialog');
+                                if (!area.length) area = $('a[href="#tab1"]').first().closest('ul');
                                 if (!area.length) area = $('#tab1');
                                 if (area.length) {
                                     area.before(botao);
