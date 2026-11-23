@@ -20,7 +20,7 @@ add_hook('AdminAreaHeaderOutput', 1, function($vars)
 
     $debugMail = '';
     $pathSavedPdfNota = false;
-    if ($vars['filename'] == 'invoices' || $vars['filename'] == 'clientsinvoices' || (isset($vars['pageicon']) && $vars['pageicon'] == 'invoices'))
+    if ($vars['filename'] == 'invoices' || $vars['filename'] == 'clientsinvoices' || (isset($vars['pageicon']) && $vars['pageicon'] == 'invoices') || preg_match('~/billing/invoice/[0-9]+/?~', $_SERVER['REQUEST_URI'] ?? ''))
     {
         ## chamada segura cli e http do tarifasTHX
         require_once(dirname(dirname(__DIR__)) . '/tarifasTHX.php');
@@ -422,59 +422,83 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
                             return match ? match[1] : new URLSearchParams(window.location.search).get('id');
                         }
 
-                        function openModalNota(id)
+                        function atualizarStatusNota(botao, id)
                         {
+                            let url = new URL(window.location.href);
+                            url.searchParams.set('verificar_nota', id);
+                            $.getJSON(url.toString(), function(response) {
+                                if (response.existe) {
+                                    botao.removeClass('btn-default').addClass('btn-success');
+                                }
+                            });
+                        }
+
+                        function openModalNota(id, botao)
+                        {
+                            if (botao.data('loading')) return;
+
+                            let htmlOriginal = botao.html();
+                            botao.data('loading', true).addClass('disabled').html('<i class="fas fa-spinner fa-spin"></i> Aguarde...');
+
                             let url = new URL(window.location.href);
                             url.searchParams.set('checarnota', id);
 
-                            $.get(url.toString(), function( data ) {
+                            $.get(url.toString(), function(data) {
                                 $('#notajaenviada').html(data);
 
                                 document.getElementById("sendnotafiscal").setAttribute("method", "POST");
                                 document.getElementById("sendnotafiscal").setAttribute("enctype", "multipart/form-data");
                                 document.getElementById("sendnotafiscal").setAttribute("action", window.location.href);
 
-
                                 $("#iddafatura").val(id);
                                 $("#faturaselecionada").text(id);
                                 $('#modalNotas').modal();
-
+                            }).fail(function() {
+                                alert('Não foi possível carregar a nota fiscal.');
+                            }).always(function() {
+                                botao.removeClass('disabled').html(htmlOriginal).removeData('loading');
                             });
                         }
-                    	$(document).ready(function() {
-    if (!document.getElementById("tab1")) {
-        notaEnviada = {$notaEnviada};
 
-        $('.datatable tbody tr').each(function() {
-            let idfatura = $(this).find('input[name="selectedinvoices[]"]').val();
+                        $(document).ready(function() {
+                            let paginaFatura = /\\/billing\\/invoice\\/\\d+/.test(window.location.pathname)
+                                || new URLSearchParams(window.location.search).get('action') === 'edit';
 
-            if (!idfatura) return;
+                            if (paginaFatura && currentInvoiceId()) {
+                                let idfatura = currentInvoiceId();
+                                let botao = $('<a class="btn btn-default abrir-modal-nota hook-thx-buttons" data-id="' + idfatura + '" title="Gerar Nota Fiscal" style="cursor:pointer;margin-bottom:12px;"><i class="fas fa-file-invoice"></i> Gerar Nota Fiscal</a>');
+                                let area = $('#tab1');
+                                if (!area.length) area = $('.contentarea, #contentarea, #content').first();
+                                if (area.length) {
+                                    area.prepend(botao);
+                                    atualizarStatusNota(botao, idfatura);
+                                }
+                            } else if (!document.getElementById("tab1")) {
+                                $('.datatable tbody tr').each(function() {
+                                    let idfatura = $(this).find('input[name="selectedinvoices[]"]').val();
+                                    if (!idfatura) return;
 
-            let button = $(this).children('td').last();
-            button.css('white-space', 'nowrap');
+                                    let button = $(this).children('td').last();
+                                    button.css('white-space', 'nowrap');
 
-            let botao = $('<a class="btn btn-default btn-xs abrir-modal-nota hook-thx-buttons" data-id="' + idfatura + '" title="Enviar Nota" style="cursor:pointer;margin:2px;padding:2px 5px;"><i class="fas fa-file-invoice"></i></a>');
+                                    let botao = $('<a class="btn btn-default btn-xs abrir-modal-nota hook-thx-buttons" data-id="' + idfatura + '" title="Enviar Nota" style="cursor:pointer;margin:2px;padding:2px 5px;"><i class="fas fa-file-invoice"></i></a>');
 
-            let grupoBotoes = button.find('.btn-group').first();
-            if (grupoBotoes.length) {
-                grupoBotoes.append(botao);
-            } else {
-                button.append(botao);
-            }
+                                    let grupoBotoes = button.find('.btn-group').first();
+                                    if (grupoBotoes.length) {
+                                        grupoBotoes.append(botao);
+                                    } else {
+                                        button.append(botao);
+                                    }
 
-            $.getJSON(window.location.href + '&verificar_nota=' + idfatura, function(response) {
-                if (response.existe) {
-                    botao.removeClass('btn-primary').addClass('btn-success');
-                }
-            });
-        });
+                                    atualizarStatusNota(botao, idfatura);
+                                });
+                            }
 
-        $(document).on('click', '.abrir-modal-nota', function() {
-            openModalNota($(this).data('id'));
-        });
-    }
-
-});
+                            $(document).on('click', '.abrir-modal-nota', function(e) {
+                                e.preventDefault();
+                                openModalNota($(this).data('id'), $(this));
+                            });
+                        });
 
 
 
