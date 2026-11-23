@@ -467,10 +467,10 @@ no valor de *R$ {$dadosCliente[0]->total}* já foi emitida e enviada aqui e *em 
                             if (paginaFatura && currentInvoiceId()) {
                                 let idfatura = currentInvoiceId();
                                 let botao = $('<a class="btn btn-default abrir-modal-nota hook-thx-buttons" data-id="' + idfatura + '" title="Gerar Nota Fiscal" style="cursor:pointer;margin-bottom:12px;"><i class="fas fa-file-invoice"></i> Gerar Nota Fiscal</a>');
-                                let area = $('#tab1');
-                                if (!area.length) area = $('.contentarea, #contentarea, #content').first();
+                                let area = $('a[href="#tab1"]').first().closest('ul');
+                                if (!area.length) area = $('#tab1');
                                 if (area.length) {
-                                    area.prepend(botao);
+                                    area.before(botao);
                                     atualizarStatusNota(botao, idfatura);
                                 }
                             } else if (!document.getElementById("tab1")) {
