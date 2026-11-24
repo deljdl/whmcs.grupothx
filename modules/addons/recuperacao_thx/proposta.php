@@ -35,6 +35,19 @@ try {
     }
     $p = recuperacao_thx_proposta_atual($p);
     $compartilhadas = $p->compartilhadas;
+    // Não contabiliza a conferência feita pelo administrador como acesso do cliente.
+    if ($_SERVER['REQUEST_METHOD'] === 'GET' && empty($p->visualizada_at)) {
+        try {
+            $usuario = new \WHMCS\Authentication\CurrentUser();
+            if (!$usuario->isAuthenticatedAdmin() && Capsule::schema()->hasColumn('mod_recuperacao_thx', 'visualizada_at')) {
+                Capsule::table('mod_recuperacao_thx')->where('id', $p->id)->where('token', $token)
+                    ->whereIn('status', ['criada', 'enviada', 'pix_visualizado'])->whereNull('visualizada_at')
+                    ->update(['visualizada_at' => date('Y-m-d H:i:s')]);
+            }
+        } catch (\Throwable $e) {
+            logActivity('Recuperação THX: falha no registro de visualização da negociação #'.(int)$p->id);
+        }
+    }
 } catch (\Throwable $e) {
     $erroPix = get_class($e) === RuntimeException::class ? $e->getMessage() : 'Proposta em revisão. Entre em contato com nossa equipe.';
 }

@@ -40,7 +40,7 @@ function recuperacao_thx_propostas_tabela()
         'enviada_at' => 'dateTime', 'aceita_at' => 'dateTime',
         'aviso_final_at' => 'dateTime', 'pagamento_at' => 'dateTime',
         'concluida_at' => 'dateTime', 'motivo' => 'string',
-        'mensagem_apoio' => 'text', 'apoio_at' => 'dateTime', 'pix_notificado_at' => 'dateTime',
+        'mensagem_apoio' => 'text', 'apoio_at' => 'dateTime', 'pix_notificado_at' => 'dateTime', 'visualizada_at' => 'dateTime',
     ];
     foreach ($campos as $nome => $tipo) {
         if (!Capsule::schema()->hasColumn('mod_recuperacao_thx', $nome)) {
@@ -387,7 +387,20 @@ function recuperacao_thx_output($vars)
         $acao = '—';
         if ($p) {
             $identificador = '#'.(int)$p->id.'<br><strong>R'.(int)$p->id.'S'.(int)$p->servico_id.'</strong><br><small>'.$esc($p->created_at).'</small>';
-            $status = $esc($statusNegociacao[$p->status] ?? $p->status);
+            $status = $esc(in_array($p->status, ['criada', 'enviada'], true) && !empty($p->visualizada_at)
+                ? 'Visualizada' : ($statusNegociacao[$p->status] ?? $p->status));
+            $etapas = [];
+            foreach (['created_at' => 'Criação', 'enviada_at' => 'Envio', 'visualizada_at' => 'Primeira abertura',
+                'aceita_at' => 'Aceite', 'pix_notificado_at' => 'Primeiro Pix disponibilizado',
+                'pagamento_at' => 'Pagamento confirmado', 'aviso_final_at' => 'Aviso final',
+                'concluida_at' => 'Conclusão'] as $campo => $rotulo) {
+                if (!empty($p->$campo)) {
+                    $etapas[] = $esc($rotulo).': '.$esc(date('d/m/Y H:i', strtotime($p->$campo)));
+                }
+            }
+            if ($etapas) {
+                $status .= '<details style="margin-top:5px"><summary style="cursor:pointer">Etapas</summary><small>'.implode('<br>', $etapas).'</small></details>';
+            }
             $ativa = in_array($p->status, ['criada', 'enviada', 'pix_visualizado'], true);
             $expirada = $ativa && recuperacao_thx_expirada($p);
             if ($expirada) {
