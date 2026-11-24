@@ -9,7 +9,7 @@ header('Referrer-Policy: no-referrer');
 header('X-Robots-Tag: noindex, nofollow');
 header('X-Content-Type-Options: nosniff');
 $nonce = bin2hex(random_bytes(16));
-header("Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src 'self' https://pix.grupothx.com; script-src 'nonce-".$nonce."'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'");
+header("Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src 'self' https://pix.grupothx.com; script-src 'nonce-".$nonce."' https://autoresponder.grupothx.com.br; frame-ancestors 'none'; base-uri 'none'; form-action 'self'");
 
 $token = $_GET['t'] ?? '';
 $p = null;
