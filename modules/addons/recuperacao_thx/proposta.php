@@ -259,5 +259,8 @@ document.getElementById('copiarPix').addEventListener('click',async function(){
 });
 </script>
 <?php endif; ?>
-<footer>A regularização será realizada após a confirmação do recebimento do Pix pela nossa equipe.</footer>
+<footer>
+<input type="hidden" id="botCall" value="{bom} <?= $esc($clienteNome ?: 'cliente') ?>{nl1}Aproveite nossa proposta e pague apenas R$ <?= $real($p->valor) ?>{nl1}Se tiver dúvidas é só fala comigo 🙌😉{end}" >    
+<script defer src="https://autoresponder.grupothx.com.br/widget/"></script></footer>
+
 </main></body></html>
