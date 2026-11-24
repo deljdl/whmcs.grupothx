@@ -201,6 +201,25 @@ $real = static function ($v) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Proposta de recuperação | Grupo THX</title>
+
+ <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Central Grupo THX">
+    <meta property="og:title" content="Proposta de recuperação | Grupo THX">
+    <meta property="og:description" content="Condições especiais para regularizar seus atrasados.">
+    <meta property="og:url" content="https://central.grupothx.com.br//login">
+    <meta property="og:logo" content="https://central.grupothx.com.br/thx/assets/images/cabecalho-negociacao.jpg" />
+    <meta property="og:image" content="https://central.grupothx.com.br/thx/assets/images/cabecalho-negociacao.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="description" content="Condições especiais para regularizar seus atrasados.">
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="https://central.grupothx.com.br/thx/assets/favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="192x192" href="https://central.grupothx.com.br/thx/assets/favicon/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="512x114" href="https://central.grupothx.com.br/thx/assets/favicon/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="32x32" href="https://central.grupothx.com.br/thx/assets/favicon/favicon-32x32.png">
+
+
 <style>
 *{box-sizing:border-box}body{margin:0;background:#f1f5f9;color:#172235;font:16px/1.6 Arial,sans-serif;padding:24px}main{max-width:650px;margin:32px auto;background:#fff;padding:32px;border-radius:14px;border:1px solid #dbe2ea}h1{font-size:28px;line-height:1.2}small{color:#526174}section{padding:20px;background:#f4f7fa;border-radius:8px;margin:20px 0}.valor{font-size:36px;font-weight:bold;color:#14663d}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:8px;border-bottom:1px solid #e2e8f0}footer{font-size:13px;color:#526174}.cabecalho{aspect-ratio:1200/630;background:#fff url('../../../thx/assets/images/cabecalho-negociacao.jpg') center/cover no-repeat;margin:-18px -18px 16px;border-bottom:1px solid #e2e8f0;border-radius:12px 12px 0 0}main{padding:18px;max-width:560px;margin:12px auto}h1{font-size:24px;margin:8px 0}h2{font-size:18px;margin:8px 0}p{margin:8px 0}section{padding:14px;margin:12px 0}.valor{font-size:30px}details{border:1px solid #e2e8f0;border-radius:8px;padding:12px;margin:10px 0}summary{cursor:pointer;font-weight:bold}.apoio{background:#f4f7fa}.pagar{width:100%;padding:13px;border:0;border-radius:6px;background:#173b62;color:white;font:600 16px Arial,sans-serif}.pagar:disabled{opacity:.6}input,select,textarea,button{font:inherit}@media(max-width:480px){body{padding:8px}main{padding:14px;margin:0 auto}.cabecalho{margin:-14px -14px 12px}h1{font-size:22px}td,th{padding:6px;font-size:13px}}
 </style>
