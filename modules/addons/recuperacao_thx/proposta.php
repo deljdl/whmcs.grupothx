@@ -191,7 +191,7 @@ $real = static function ($v) {
 <p>Valor para regularização<br><span class="valor"><?= $real($p->valor) ?></span></p>
 <p>Com a confirmação do pagamento do acordo, cancelaremos as faturas em aberto para esse serviço.</p>
 </section>
-<details><summary>Faturas da proposta (<?= count(json_decode($p->faturas, true)) ?>)</summary>
+<details><summary>Faturas que serão canceladas (<?= count(json_decode($p->faturas, true)) ?>)</summary>
 <table><thead><tr><th>Fatura</th><th>Vencimento</th><th>Valor</th></tr></thead><tbody>
 <?php foreach (json_decode($p->faturas, true) as $f): ?>
 <tr><td>#<?= (int)$f['id'] ?></td><td><?= $esc(date('d/m/Y', strtotime($f['vencimento']))) ?></td><td><?= $real($f['valor']) ?></td></tr>
@@ -213,7 +213,7 @@ $real = static function ($v) {
 <img alt="QR Code Pix" style="width:100%;max-width:340px;height:auto" src="https://pix.grupothx.com/copiaecolatoqrcode.php?codigo=<?= $esc(rawurlencode($pix)) ?>">
 <p><label for="pixCode">Pix copia e cola</label></p>
 <textarea id="pixCode" readonly rows="3" style="width:100%;overflow-wrap:anywhere"><?= $esc($pix) ?></textarea>
-<button class="pagar" type="button" id="copiarPix">Copiar código Pix</button>
+<button class="pagar" type="button" id="copiarPix" style="cursor:pointer">Copiar código Pix</button>
 <p>Após o pagamento, os débitos anteriores do serviço serão cancelados.</p>
 </section>
 <script nonce="<?= $esc($nonce) ?>">
