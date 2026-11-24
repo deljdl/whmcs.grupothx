@@ -11,7 +11,7 @@ function recuperacao_thx_config()
     return [
         'name' => 'Recuperação de Hospedagens THX',
         'description' => 'Identificação de hospedagens inadimplentes para recuperação ou encerramento.',
-        'version' => '1.1.0',
+        'version' => '1.2.0',
         'author' => 'Grupo THX',
     ];
 }
@@ -35,17 +35,31 @@ function recuperacao_thx_propostas_tabela()
             $t->dateTime('created_at');
         });
     }
+    // Atualização aditiva: preserva negociações existentes.
+    $campos = [
+        'enviada_at' => 'dateTime', 'aceita_at' => 'dateTime',
+        'aviso_final_at' => 'dateTime', 'pagamento_at' => 'dateTime',
+        'concluida_at' => 'dateTime', 'motivo' => 'string',
+        'mensagem_apoio' => 'text', 'apoio_at' => 'dateTime',
+    ];
+    foreach ($campos as $nome => $tipo) {
+        if (!Capsule::schema()->hasColumn('mod_recuperacao_thx', $nome)) {
+            Capsule::schema()->table('mod_recuperacao_thx', function ($t) use ($nome, $tipo) {
+                $t->$tipo($nome)->nullable();
+            });
+        }
+    }
 }
 
 function recuperacao_thx_criar_proposta($registro)
 {
     $s = $registro['servico'];
-    $hoje = date('Y-m-d');
+    $hoje = (new DateTimeImmutable('today', new DateTimeZone('America/Sao_Paulo')))->format('Y-m-d');
     $faturas = array_values(array_filter($registro['faturas'], static function ($f) use ($hoje) {
         return $f->duedate <= $hoje;
     }));
-    if (count($faturas) < 2) {
-        throw new RuntimeException('É necessário haver pelo menos duas faturas vencidas.');
+    if (!$faturas) {
+        throw new RuntimeException('Não há faturas vencidas elegíveis.');
     }
 
     $dados = [];
@@ -155,7 +169,7 @@ function recuperacao_thx_output($vars)
                 throw new RuntimeException('Já existe uma proposta para este serviço.');
             }
             $encontrado = false;
-            foreach ($recuperacao as $registro) {
+            foreach ($servicos as $registro) {
                 if ((int)$registro['servico']->id === $id) {
                     recuperacao_thx_criar_proposta($registro);
                     $encontrado = true;
@@ -178,7 +192,7 @@ function recuperacao_thx_output($vars)
     echo '<p>Data de referência: '.$hoje->format('d/m/Y').' | 3 meses: '.$esc($limite3).' | 5 meses: '.$esc($limite5).'</p>';
 
     foreach (['Recuperação (3 a menos de 5 meses)' => $recuperacao,
-        'Revisão para encerramento (5 meses ou mais)' => $encerramento] as $titulo => $registros) {
+        'Recuperação / revisão para encerramento (5 meses ou mais)' => $encerramento] as $titulo => $registros) {
         echo '<h2>'.$esc($titulo).' ('.count($registros).')</h2>';
         if (!$registros) {
             echo '<p>Nenhuma hospedagem encontrada.</p>';
@@ -193,7 +207,7 @@ function recuperacao_thx_output($vars)
             $acao = '—';
             if (isset($propostas[$s->id])) {
                 $acao = '<a class="btn btn-default" target="_blank" rel="noopener noreferrer" href="'.$esc($urlBase.'/modules/addons/recuperacao_thx/proposta.php?t='.$propostas[$s->id]->token).'">Abrir proposta</a>';
-            } elseif ($s->duedate > $limite5) {
+            } else {
                 $acao = '<form method="post"><input type="hidden" name="csrf_recuperacao" value="'.$esc($_SESSION['recuperacao_thx_csrf']).'"><button class="btn btn-primary" name="criar_proposta" value="'.(int)$s->id.'">Criar proposta</button></form>';
             }
             echo '<div class="table-responsive"><table class="table table-striped table-bordered"><thead><tr>
@@ -212,5 +226,15 @@ function recuperacao_thx_output($vars)
         }
     }
 
+    echo '<h2>Histórico de negociações</h2>';
+    echo '<div class="table-responsive"><table class="table table-bordered"><thead><tr><th>Negociação</th><th>Hospedagem</th><th>Status</th><th>Valor original</th><th>Valor negociado</th><th>Perdão</th><th>Motivo / pedido de ajuda</th><th>Criada em</th></tr></thead><tbody>';
+    foreach ($propostas as $p) {
+        echo '<tr><td>#'.(int)$p->id.'</td><td>'.$esc($p->dominio).'</td><td>'.$esc($p->status).'</td>
+            <td>R$ '.number_format((float)$p->valor + (float)$p->perdao, 2, ',', '.').'</td>
+            <td>R$ '.number_format((float)$p->valor, 2, ',', '.').'</td>
+            <td>R$ '.number_format((float)$p->perdao, 2, ',', '.').'</td>
+            <td>'.$esc($p->motivo ?? '').'<br>'.nl2br($esc($p->mensagem_apoio ?? '')).'</td><td>'.$esc($p->created_at).'</td></tr>';
+    }
+    echo '</tbody></table></div>';
     echo '<p>Valores dos itens antes de eventuais créditos, impostos ou pagamentos parciais. Não representam saldo confirmado do gateway.</p>';
 }
