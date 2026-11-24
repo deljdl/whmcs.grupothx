@@ -29,7 +29,8 @@ $cronsCronThx = [
     'cron_monitora_pagamentos' => [
         'path' => $rootDirCronThx . '/thx/crons/cron_monitora_pagamentos.php',
         'dias' => [1, 2, 3, 4, 5],
-        'horas' => [8],
+        'horas' => [11],
+        'minuto' => 10, // Temporário para validação do relatório
     ],
     'cron_resumo_diario' => [
         'path' => $rootDirCronThx . '/thx/crons/cron-resumo-diario.php',
@@ -68,7 +69,7 @@ foreach ($cronsCronThx as $arquivoCronThx => $agendaCronThx) {
     $jaRodouNessaHoraCronThx = false;
 
     foreach ($agendaCronThx['horas'] as $horaCronThx) {
-        $agendadaCronThx = $agoraCronThx->setTime($horaCronThx, 0);
+        $agendadaCronThx = $agoraCronThx->setTime($horaCronThx, $agendaCronThx['minuto'] ?? 0);
 
         if ($agendadaCronThx > $agoraCronThx) {
             echo '<br />Hora agendada ainda não chegou: ' . $agendadaCronThx->format('Y-m-d H:i:s');
