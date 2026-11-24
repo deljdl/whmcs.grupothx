@@ -263,9 +263,9 @@ function recuperacao_thx_output($vars)
     }
 
     echo '<h2>Histórico de negociações</h2>';
-    echo '<div class="table-responsive"><table class="table table-bordered"><thead><tr><th>Negociação</th><th>Hospedagem</th><th>Status</th><th>Valor original</th><th>Valor negociado</th><th>Perdão</th><th>Motivo / pedido de ajuda</th><th>Criada em</th></tr></thead><tbody>';
+    echo '<div class="table-responsive"><table class="table table-bordered"><thead><tr><th>Negociação</th><th>ID Pix</th><th>Hospedagem</th><th>Status</th><th>Valor original</th><th>Valor negociado</th><th>Perdão</th><th>Motivo / pedido de ajuda</th><th>Criada em</th></tr></thead><tbody>';
     foreach ($propostas as $p) {
-        echo '<tr><td>#'.(int)$p->id.'</td><td>'.$esc($p->dominio).'</td><td>'.$esc($p->status).'</td>
+        echo '<tr><td>#'.(int)$p->id.'</td><td><strong>R'.(int)$p->id.'S'.(int)$p->servico_id.'</strong></td><td>'.$esc($p->dominio).'</td><td>'.$esc($p->status).'</td>
             <td>R$ '.number_format((float)$p->valor + (float)$p->perdao, 2, ',', '.').'</td>
             <td>R$ '.number_format((float)$p->valor, 2, ',', '.').'</td>
             <td>R$ '.number_format((float)$p->perdao, 2, ',', '.').'</td>

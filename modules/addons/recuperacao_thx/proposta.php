@@ -79,7 +79,7 @@ if (($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pagar_acordo'])) || 
         if (!$servico) {
             throw new RuntimeException('Hospedagem indisponível.');
         }
-        $idPix = 'RNG'.(int)$p->id.'S'.(int)$p->servico_id; // TXID Pix aceita somente letras e números.
+        $idPix = 'R'.(int)$p->id.'S'.(int)$p->servico_id; // TXID Pix aceita somente letras e números.
         // Mesmo endpoint de Pix simples usado por includes/thx_payment.php.
         $resposta = @file_get_contents('https://pix.grupothx.com/?'.http_build_query([
             'valor' => number_format((float)$p->valor, 2, '.', ''),
