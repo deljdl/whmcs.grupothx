@@ -7,7 +7,8 @@ header('Cache-Control: no-store, private');
 header('Referrer-Policy: no-referrer');
 header('X-Robots-Tag: noindex, nofollow');
 header('X-Content-Type-Options: nosniff');
-header("Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'");
+$nonce = bin2hex(random_bytes(16));
+header("Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src 'self' https://pix.grupothx.com; script-src 'nonce-".$nonce."'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'");
 
 $token = $_GET['t'] ?? '';
 $p = null;
@@ -32,6 +33,8 @@ $motivos = [
     'outro' => 'Outro motivo',
 ];
 $aviso = '';
+$erroPix = '';
+$pix = '';
 if (empty($_SESSION['recuperacao_apoio_csrf'])) {
     $_SESSION['recuperacao_apoio_csrf'] = bin2hex(random_bytes(32));
 }
@@ -74,25 +77,86 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pagar_acordo'])) {
         if (!$servico) {
             throw new RuntimeException('Hospedagem indisponível.');
         }
-        if ($p->status !== 'pix_visualizado') {
-            $alteradas = Capsule::table('mod_recuperacao_thx')->where('id', $p->id)
-                ->where('token', $token)->whereIn('status', ['criada', 'enviada'])
-                ->update(['status' => 'pix_visualizado', 'aceita_at' => date('Y-m-d H:i:s')]);
-            if (!$alteradas) {
-                throw new RuntimeException('Proposta indisponível.');
+        $idPix = 'RENEG-'.(int)$p->id;
+        // Mesmo endpoint de Pix simples usado por includes/thx_payment.php.
+        $resposta = @file_get_contents('https://pix.grupothx.com/?'.http_build_query([
+            'valor' => number_format((float)$p->valor, 2, '.', ''),
+            'id' => $idPix,
+            'cc' => 'true',
+        ]), false, stream_context_create(['http' => ['timeout' => 8, 'follow_location' => 0]]));
+        $codigo = $resposta === false ? '' : trim($resposta);
+        if (strlen($codigo) > 1024 || !preg_match('/^000201.+6304[0-9A-Fa-f]{4}$/D', $codigo)) {
+            throw new RuntimeException('O gerador de Pix simples não retornou um código válido.');
+        }
+        // Confere os campos EMV de valor, identificador e CRC antes de apresentar a cobrança.
+        $lerCampos = static function ($texto) {
+            $campos = [];
+            for ($pos = 0, $fim = strlen($texto); $pos < $fim;) {
+                $cab = substr($texto, $pos, 4);
+                if (strlen($cab) !== 4 || !ctype_digit($cab)) {
+                    throw new RuntimeException('Código Pix com formato inválido.');
+                }
+                $tag = substr($cab, 0, 2);
+                $tam = (int)substr($cab, 2);
+                $pos += 4;
+                if ($pos + $tam > $fim || isset($campos[$tag])) {
+                    throw new RuntimeException('Código Pix com campos inválidos.');
+                }
+                $campos[$tag] = substr($texto, $pos, $tam);
+                $pos += $tam;
+            }
+            return $campos;
+        };
+        $campos = $lerCampos($codigo);
+        $referencia = $lerCampos($campos['62'] ?? '')['05'] ?? '';
+        $crc = 0xFFFF;
+        foreach (str_split(substr($codigo, 0, -4)) as $byte) {
+            $crc ^= ord($byte) << 8;
+            for ($bit = 0; $bit < 8; $bit++) {
+                $crc = (($crc & 0x8000) ? (($crc << 1) ^ 0x1021) : ($crc << 1)) & 0xFFFF;
             }
         }
-        $urlPix = 'https://pix.grupothx.com/cobranca-layout?'.http_build_query([
-            'id' => 'RENEG-'.(int)$p->id,
-            'generate' => 'true',
-            'conta' => 'nujuridica',
-            'valor' => number_format((float)$p->valor, 2, '.', ''),
-            'descricao' => 'Grupo THX - Renegociação #'.(int)$p->id,
-        ]);
-        header('Location: '.$urlPix, true, 303);
-        exit;
+        if (($campos['53'] ?? '') !== '986'
+            || !preg_match('/^\d+(?:\.\d{1,2})?$/D', $campos['54'] ?? '')
+            || number_format((float)$campos['54'], 2, '.', '') !== number_format((float)$p->valor, 2, '.', '')
+            || $referencia !== $idPix
+            || strtoupper(substr($codigo, -4)) !== sprintf('%04X', $crc)) {
+            throw new RuntimeException('O Pix retornado diverge do valor, identificador ou código de verificação esperado.');
+        }
+
+        // Uma única transição para a primeira exibição, inclusive propostas testadas antes desta versão.
+        $primeira = Capsule::table('mod_recuperacao_thx')->where('id', $p->id)->where('token', $token)
+            ->whereIn('status', ['criada', 'enviada', 'pix_visualizado'])->whereNull('pix_notificado_at')
+            ->update(['status' => 'pix_visualizado', 'aceita_at' => $p->aceita_at ?: date('Y-m-d H:i:s'),
+                'pix_notificado_at' => date('Y-m-d H:i:s')]);
+        $atual = Capsule::table('mod_recuperacao_thx')->where('id', $p->id)->where('token', $token)
+            ->where('status', 'pix_visualizado')->first();
+        if (!$atual) {
+            throw new RuntimeException('Proposta indisponível.');
+        }
+        $p = $atual;
+        $pix = $codigo;
+        if ($primeira) {
+            try {
+                $email = new \PHPMailer\PHPMailer\PHPMailer();
+                $email->CharSet = 'UTF-8';
+                $email->From = 'financeiro@grupothx.com.br';
+                $email->FromName = 'Grupo THX';
+                $email->AddAddress('deljdl@gmail.com', 'Admin');
+                $email->Subject = '[RECUPERAÇÃO THX] Negociação iniciada #'.(int)$p->id;
+                $email->Body = "Pix disponibilizado na negociação ".$idPix."\nHospedagem: ".$p->dominio
+                    ."\nValor: R$ ".number_format((float)$p->valor, 2, ',', '.')
+                    ."\nAguardando confirmação manual do pagamento.";
+                if (!$email->Send()) {
+                    throw new RuntimeException('Envio não confirmado.');
+                }
+            } catch (\Throwable $erroEmail) {
+                logActivity('Recuperação THX: falha no aviso administrativo da negociação #'.(int)$p->id);
+            }
+        }
     } catch (\Throwable $e) {
-        $aviso = 'Não foi possível disponibilizar o Pix. Entre em contato para conferência da proposta.';
+        $erroPix = $e instanceof RuntimeException ? $e->getMessage() : 'Falha ao consultar os dados da negociação.';
+        logActivity('Recuperação THX: Pix indisponível na negociação #'.(int)$p->id);
     }
 } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $csrf = $_POST['csrf'] ?? '';
@@ -170,5 +234,27 @@ $real = static function ($v) {
 <input type="hidden" name="csrf" value="<?= $esc($_SESSION['recuperacao_apoio_csrf']) ?>">
 <p><button class="pagar" type="submit" name="pagar_acordo" value="1"><?= $p->status === 'pix_visualizado' ? 'Visualizar Pix novamente' : 'Quero pagar o acordo' ?></button></p>
 </form>
+<?php if ($erroPix !== ''): ?>
+<p role="alert" style="color:#a12626"><strong><?= $esc($erroPix) ?></strong></p>
+<?php endif; ?>
+<?php if ($pix !== ''): ?>
+<section id="pagamento" style="text-align:center">
+<h2>Pagamento via Pix</h2>
+<p><strong><?= $real($p->valor) ?></strong> — <?= $esc('RENEG-'.(int)$p->id) ?></p>
+<img alt="QR Code Pix" style="width:100%;max-width:230px;height:auto" src="https://pix.grupothx.com/copiaecolatoqrcode.php?codigo=<?= $esc(rawurlencode($pix)) ?>">
+<p><label for="pixCode">Pix copia e cola</label></p>
+<textarea id="pixCode" readonly rows="3" style="width:100%;overflow-wrap:anywhere"><?= $esc($pix) ?></textarea>
+<button class="pagar" type="button" id="copiarPix">Copiar código Pix</button>
+<p>Após o pagamento, guarde o comprovante. A confirmação será realizada manualmente pela nossa equipe.</p>
+</section>
+<script nonce="<?= $esc($nonce) ?>">
+document.getElementById('pagamento').scrollIntoView({block:'start'});
+document.getElementById('copiarPix').addEventListener('click',async function(){
+    const campo=document.getElementById('pixCode');
+    try { await navigator.clipboard.writeText(campo.value); this.textContent='Código copiado'; }
+    catch(e) { campo.focus(); campo.select(); }
+});
+</script>
+<?php endif; ?>
 <footer>A regularização será realizada após a confirmação do recebimento do Pix pela nossa equipe.</footer>
 </main></body></html>

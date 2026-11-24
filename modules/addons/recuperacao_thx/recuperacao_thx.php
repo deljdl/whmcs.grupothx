@@ -40,7 +40,7 @@ function recuperacao_thx_propostas_tabela()
         'enviada_at' => 'dateTime', 'aceita_at' => 'dateTime',
         'aviso_final_at' => 'dateTime', 'pagamento_at' => 'dateTime',
         'concluida_at' => 'dateTime', 'motivo' => 'string',
-        'mensagem_apoio' => 'text', 'apoio_at' => 'dateTime',
+        'mensagem_apoio' => 'text', 'apoio_at' => 'dateTime', 'pix_notificado_at' => 'dateTime',
     ];
     foreach ($campos as $nome => $tipo) {
         if (!Capsule::schema()->hasColumn('mod_recuperacao_thx', $nome)) {
