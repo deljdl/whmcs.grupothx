@@ -228,7 +228,7 @@ $real = static function ($v) {
 <div class="cabecalho" role="img" aria-label="Grupo THX"></div>
 <h1>Olá, <?= $esc($clienteNome ?: 'cliente') ?>!</h1>
 <h2>Proposta de regularização</h2>
-<p>Preparamos uma condição especial para regularizar os débitos de seu serviço.<br>Nossa equipe está à disposição para auxiliá-lo.</p>
+<p>Preparamos uma condição especial para regularizar os débitos de seu serviço.</p>
 <p><strong><?= $esc($p->dominio) ?></strong><br><?= $esc($p->produto) ?></p>
 <section>
 <small>Valor total devido</small><br><strong><del><?= $real((float)$p->valor + (float)$p->perdao) ?></del></strong><br><small>Desconto concedido: <?= $real($p->perdao) ?></small>
