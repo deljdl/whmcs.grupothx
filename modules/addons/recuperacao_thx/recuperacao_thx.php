@@ -184,10 +184,6 @@ function recuperacao_thx_output($vars)
             echo '<p>Nenhuma hospedagem encontrada.</p>';
             continue;
         }
-        echo '<div class="table-responsive"><table class="table table-striped table-bordered"><thead><tr>
-            <th>Cliente</th><th>Hospedagem</th><th>Status</th><th>Vencimento mais antigo</th>
-            <th>Dias de atraso</th><th>Itens vencidos (bruto)</th><th>Faturas em aberto do serviço</th><th>Proposta</th>
-            </tr></thead><tbody>';
         foreach ($registros as $registro) {
             $s = $registro['servico'];
             $links = [];
@@ -200,6 +196,10 @@ function recuperacao_thx_output($vars)
             } elseif ($s->duedate > $limite5) {
                 $acao = '<form method="post"><input type="hidden" name="csrf_recuperacao" value="'.$esc($_SESSION['recuperacao_thx_csrf']).'"><button class="btn btn-primary" name="criar_proposta" value="'.(int)$s->id.'">Criar proposta</button></form>';
             }
+            echo '<div class="table-responsive"><table class="table table-striped table-bordered"><thead><tr>
+                <th>Cliente</th><th>Hospedagem</th><th>Status</th><th>Vencimento mais antigo</th>
+                <th>Dias de atraso</th><th>Itens vencidos (bruto)</th><th>Faturas em aberto do serviço</th><th>Proposta</th>
+                </tr></thead><tbody>';
             echo '<tr>
                 <td><a href="clientssummary.php?userid='.(int)$s->userid.'">'.$esc(trim($s->firstname.' '.$s->lastname.' '.$s->companyname)).'</a></td>
                 <td><a href="clientsservices.php?userid='.(int)$s->userid.'&amp;id='.(int)$s->id.'">'.$esc($s->produto.' / '.$s->domain).'</a></td>
@@ -207,9 +207,9 @@ function recuperacao_thx_output($vars)
                 <td>'.$esc(date('d/m/Y', strtotime($s->duedate))).'</td>
                 <td>'.$hoje->diff(new DateTimeImmutable($s->duedate, $hoje->getTimezone()))->days.'</td>
                 <td>R$ '.number_format($registro['valor'], 2, ',', '.').'</td>
-                <td>'.implode('<br>', $links).'</td><td>'.$acao.'</td></tr>';
+                <td><details><summary style="cursor:pointer">'.count($links).' fatura(s)</summary><div style="margin-top:8px">'.implode('<br>', $links).'</div></details></td><td>'.$acao.'</td></tr>';
+            echo '</tbody></table></div>';
         }
-        echo '</tbody></table></div>';
     }
 
     echo '<p>Valores dos itens antes de eventuais créditos, impostos ou pagamentos parciais. Não representam saldo confirmado do gateway.</p>';
