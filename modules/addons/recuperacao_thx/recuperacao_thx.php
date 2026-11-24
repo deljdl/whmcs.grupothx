@@ -330,57 +330,92 @@ function recuperacao_thx_output($vars)
         }
     }
 
-    foreach (['Recuperação (2 meses ou mais, sem limite máximo)' => $recuperacao] as $titulo => $registros) {
-        echo '<h2>'.$esc($titulo).' ('.count($registros).')</h2>';
-        if (!$registros) {
-            echo '<p>Nenhuma hospedagem encontrada.</p>';
+    // Uma linha por serviço, incluindo negociações que já saíram da lista de inadimplência.
+    $registros = $recuperacao;
+    foreach ($propostas as $p) {
+        if (isset($registros[$p->servico_id])) {
             continue;
         }
-        foreach ($registros as $registro) {
-            $s = $registro['servico'];
-            $links = [];
-            foreach ($registro['faturas'] as $f) {
-                $links[] = '<a target="_blank" rel="noopener" href="invoices.php?action=edit&amp;id='.(int)$f->fatura_id.'">#'.(int)$f->fatura_id.'</a> ('.$esc(date('d/m/Y', strtotime($f->duedate))).')';
-            }
-            $acao = '—';
-            if (isset($propostas[$s->id])) {
-                $acao = '<a class="btn btn-default" target="_blank" rel="noopener noreferrer" href="'.$esc($urlBase.'/modules/addons/recuperacao_thx/proposta.php?t='.$propostas[$s->id]->token).'">Abrir proposta</a>';
-            } else {
-                $acao = '<form method="post"><input type="hidden" name="csrf_recuperacao" value="'.$esc($_SESSION['recuperacao_thx_csrf']).'"><button class="btn btn-primary" name="criar_proposta" value="'.(int)$s->id.'">Criar proposta</button></form>';
-            }
-            echo '<div class="table-responsive" style="overflow-x:auto"><table class="table table-striped table-bordered" style="width:100%;min-width:1100px;table-layout:fixed;overflow-wrap:anywhere"><colgroup><col style="width:22%"><col style="width:22%"><col style="width:7%"><col style="width:11%"><col style="width:7%"><col style="width:10%"><col style="width:12%"><col style="width:9%"></colgroup><thead><tr>
-                <th>Cliente</th><th>Hospedagem</th><th>Status</th><th>Vencimento mais antigo</th>
-                <th>Dias de atraso</th><th>Itens vencidos (bruto)</th><th>Faturas em aberto do serviço</th><th>Proposta</th>
-                </tr></thead><tbody>';
-            $selecionavel = !isset($propostas[$s->id]) || in_array($propostas[$s->id]->status, ['criada', 'enviada'], true);
-            $checkbox = $selecionavel ? '<label><input type="checkbox" class="selecionar-negociacao" form="simulacao-negociacoes" name="servicos_simulacao[]" value="'.(int)$s->id.'"> Negociar</label><br>' : '';
-            echo '<tr>
-                <td>'.$checkbox.'<a href="clientssummary.php?userid='.(int)$s->userid.'">'.$esc(trim($s->firstname.' '.$s->lastname.' '.$s->companyname)).'</a></td>
-                <td><a href="clientsservices.php?userid='.(int)$s->userid.'&amp;id='.(int)$s->id.'">'.$esc($s->produto.' / '.$s->domain).'</a></td>
-                <td>'.$esc($s->domainstatus === 'Suspended' ? 'Suspenso' : 'Ativo').'</td>
-                <td>'.$esc(date('d/m/Y', strtotime($s->duedate))).'</td>
-                <td>'.$hoje->diff(new DateTimeImmutable($s->duedate, $hoje->getTimezone()))->days.'</td>
-                <td>R$ '.number_format($registro['valor'], 2, ',', '.').'</td>
-                <td><a target="_blank" rel="noopener" href="clientsinvoices.php?userid='.(int)$s->userid.'&amp;serviceid='.(int)$s->id.'">Ver faturas do serviço</a><br><details><summary style="cursor:pointer">'.count($links).' fatura(s)</summary><div style="margin-top:8px">'.implode('<br>', $links).'</div></details></td><td>'.$acao.'</td></tr>';
-            echo '</tbody></table></div>';
+        $s = Capsule::table('tblhosting as h')
+            ->leftJoin('tblproducts as pr', 'pr.id', '=', 'h.packageid')
+            ->leftJoin('tblclients as c', 'c.id', '=', 'h.userid')
+            ->where('h.id', $p->servico_id)->where('h.userid', $p->cliente_id)
+            ->first(['h.id', 'h.userid', 'h.domain', 'h.domainstatus', 'pr.name as produto',
+                'c.firstname', 'c.lastname', 'c.companyname']);
+        if (!$s) {
+            $s = (object)['id' => $p->servico_id, 'userid' => $p->cliente_id, 'domain' => $p->dominio,
+                'domainstatus' => 'Indisponível', 'produto' => $p->produto, 'firstname' => 'Cliente #'.$p->cliente_id,
+                'lastname' => '', 'companyname' => ''];
         }
+        $s->duedate = null;
+        $abertas = $faturas->filter(static function ($f) use ($s) {
+            return (int)$f->id === (int)$s->id && (int)$f->userid === (int)$s->userid;
+        })->values()->all();
+        $valor = 0;
+        foreach ($abertas as $f) {
+            if ($f->duedate <= $hoje->format('Y-m-d')) {
+                $valor += (float)$f->valor;
+                if (!$s->duedate) {
+                    $s->duedate = $f->duedate;
+                }
+            }
+        }
+        $registros[$p->servico_id] = ['servico' => $s, 'faturas' => $abertas, 'valor' => $valor];
     }
 
-    echo '<h2>Histórico de negociações</h2>';
-    echo '<div class="table-responsive"><table class="table table-bordered"><thead><tr><th>Negociação</th><th>ID Pix</th><th>Hospedagem</th><th>Status</th><th>Valor original</th><th>Valor negociado</th><th>Perdão</th><th>Motivo / pedido de ajuda</th><th>Criada em</th><th>Encerramento</th></tr></thead><tbody>';
-    foreach ($propostas as $p) {
-        $encerrar = $p->status === 'enviada' && recuperacao_thx_expirada($p)
-            && empty($p->aceita_at) && empty($p->pagamento_at) && empty($p->concluida_at);
-        $revisao = '';
-        if (in_array($p->status, ['criada', 'enviada', 'pix_visualizado'], true)) {
-            try { $p = recuperacao_thx_proposta_atual($p); } catch (\Throwable $e) { $revisao = '<br><small>Revisão necessária</small>'; }
+    echo '<h2>Negociações de hospedagem ('.count($registros).')</h2>';
+    echo '<div class="table-responsive" style="overflow-x:auto"><table class="table table-striped table-bordered" style="width:100%;min-width:1250px;table-layout:fixed;overflow-wrap:anywhere">
+        <colgroup><col style="width:14%"><col style="width:18%"><col style="width:8%"><col style="width:9%"><col style="width:11%"><col style="width:12%"><col style="width:10%"><col style="width:9%"><col style="width:9%"></colgroup>
+        <thead><tr><th>Cliente</th><th>Hospedagem</th><th>Status do serviço</th><th>Atraso</th><th>Faturas em aberto do serviço</th><th>Negociação / ID Pix</th><th>Valores do acordo</th><th>Status da negociação</th><th>Ações</th></tr></thead><tbody>';
+    if (!$registros) {
+        echo '<tr><td colspan="9">Nenhuma hospedagem encontrada.</td></tr>';
+    }
+    $statusServico = ['Active' => 'Ativo', 'Suspended' => 'Suspenso', 'Terminated' => 'Finalizado', 'Cancelled' => 'Cancelado'];
+    $statusNegociacao = ['criada' => 'Criada', 'enviada' => 'Enviada', 'pix_visualizado' => 'Pix visualizado',
+        'paga' => 'Paga', 'concluida' => 'Concluída', 'cancelada' => 'Cancelada', 'encerrada' => 'Encerrada'];
+    foreach ($registros as $registro) {
+        $s = $registro['servico'];
+        $p = $propostas[$s->id] ?? null;
+        $links = [];
+        foreach ($registro['faturas'] as $f) {
+            $links[] = '<a target="_blank" rel="noopener" href="invoices.php?action=edit&amp;id='.(int)$f->fatura_id.'">#'.(int)$f->fatura_id.'</a> ('.$esc(date('d/m/Y', strtotime($f->duedate))).')';
         }
-        $acaoEncerrar = $encerrar ? '<button type="button" class="btn btn-danger btn-xs" disabled>Cancelar cobranças e finalizar serviço</button><br><small>Aguardando validação do cancelamento</small>' : '—';
-        echo '<tr><td>#'.(int)$p->id.'</td><td><strong>R'.(int)$p->id.'S'.(int)$p->servico_id.'</strong></td><td>'.$esc($p->dominio).'</td><td>'.$esc($p->status).$revisao.'</td>
-            <td>R$ '.number_format((float)$p->valor + (float)$p->perdao, 2, ',', '.').'</td>
-            <td>R$ '.number_format((float)$p->valor, 2, ',', '.').'</td>
-            <td>R$ '.number_format((float)$p->perdao, 2, ',', '.').'</td>
-            <td>'.$esc($p->motivo ?? '').'<br>'.nl2br($esc($p->mensagem_apoio ?? '')).'</td><td>'.$esc($p->created_at).'</td><td>'.$acaoEncerrar.'</td></tr>';
+        $selecionavel = isset($servicos[$s->id]) && (!$p || (in_array($p->status, ['criada', 'enviada'], true) && !recuperacao_thx_expirada($p)));
+        $checkbox = $selecionavel ? '<label><input type="checkbox" class="selecionar-negociacao" form="simulacao-negociacoes" name="servicos_simulacao[]" value="'.(int)$s->id.'"> Negociar</label><br>' : '';
+        $identificador = $valores = '—';
+        $status = 'Sem proposta';
+        $acao = '—';
+        if ($p) {
+            $identificador = '#'.(int)$p->id.'<br><strong>R'.(int)$p->id.'S'.(int)$p->servico_id.'</strong><br><small>'.$esc($p->created_at).'</small>';
+            $status = $esc($statusNegociacao[$p->status] ?? $p->status);
+            $ativa = in_array($p->status, ['criada', 'enviada', 'pix_visualizado'], true);
+            $expirada = $ativa && recuperacao_thx_expirada($p);
+            if ($expirada) {
+                $status .= '<br><small>Prazo encerrado</small>';
+            }
+            if ($ativa) {
+                try {
+                    $p = recuperacao_thx_proposta_atual($p);
+                } catch (\Throwable $e) {
+                    $status .= '<br><small>Revisão necessária</small>';
+                }
+                $acao = '<a class="btn btn-default btn-xs" target="_blank" rel="noopener noreferrer" href="'.$esc($urlBase.'/modules/addons/recuperacao_thx/proposta.php?t='.$p->token).'">Abrir proposta</a>';
+            }
+            $valores = '<small>Total: R$ '.number_format((float)$p->valor + (float)$p->perdao, 2, ',', '.').'</small><br><strong>R$ '.number_format((float)$p->valor, 2, ',', '.').'</strong><br><small>Desconto: R$ '.number_format((float)$p->perdao, 2, ',', '.').'</small>';
+            if ($p->status === 'enviada' && $expirada && empty($p->aceita_at) && empty($p->pagamento_at) && empty($p->concluida_at)) {
+                $acao .= '<br><button type="button" class="btn btn-danger btn-xs" style="white-space:normal" disabled>Cancelar cobranças e finalizar serviço</button><br><small>Aguardando validação</small>';
+            }
+        } elseif (isset($servicos[$s->id])) {
+            $acao = '<form method="post"><input type="hidden" name="csrf_recuperacao" value="'.$esc($_SESSION['recuperacao_thx_csrf']).'"><button class="btn btn-primary btn-xs" name="criar_proposta" value="'.(int)$s->id.'">Criar proposta</button></form>';
+        }
+        $atraso = $s->duedate ? $esc(date('d/m/Y', strtotime($s->duedate))).'<br><small>'.$hoje->diff(new DateTimeImmutable($s->duedate, $hoje->getTimezone()))->days.' dias</small>' : '—';
+        echo '<tr>
+            <td>'.$checkbox.'<a href="clientssummary.php?userid='.(int)$s->userid.'">'.$esc(trim($s->firstname.' '.$s->lastname.' '.$s->companyname)).'</a></td>
+            <td><a href="clientsservices.php?userid='.(int)$s->userid.'&amp;id='.(int)$s->id.'">'.$esc($s->produto.' / '.$s->domain).'</a></td>
+            <td>'.$esc($statusServico[$s->domainstatus] ?? $s->domainstatus).'</td>
+            <td>'.$atraso.'</td>
+            <td><a target="_blank" rel="noopener" href="clientsinvoices.php?userid='.(int)$s->userid.'&amp;serviceid='.(int)$s->id.'">Ver faturas do serviço</a><br><details><summary style="cursor:pointer">'.count($links).' fatura(s)</summary><div style="margin-top:8px">'.implode('<br>', $links).'</div></details><small>Vencidos: R$ '.number_format($registro['valor'], 2, ',', '.').'</small></td>
+            <td>'.$identificador.'</td><td>'.$valores.'</td><td>'.$status.'</td><td>'.$acao.'</td></tr>';
     }
     echo '</tbody></table></div>';
     echo '<p>Valores dos itens antes de eventuais créditos, impostos ou pagamentos parciais. Não representam saldo confirmado do gateway.</p>';
