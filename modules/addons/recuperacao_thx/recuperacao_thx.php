@@ -84,12 +84,24 @@ function recuperacao_thx_criar_proposta($registro)
             $motivos[] = 'crédito aplicado: R$ '.number_format((float)$i->credit, 2, ',', '.');
         }
         $transacoes = Capsule::table('tblaccounts')->where('invoiceid', $f->fatura_id)
-            ->get(['id', 'gateway', 'amountin', 'amountout']);
+            ->get(['id', 'gateway', 'transid', 'amountin', 'amountout', 'fees']);
         foreach ($transacoes as $tr) {
+            // Aceita somente referências conhecidas de controle, sem valores financeiros.
+            $zerado = (float)$tr->amountin == 0 && (float)$tr->amountout == 0 && (float)$tr->fees == 0;
+            $referencia = (string)$tr->transid;
+            $controleEfi = $tr->gateway === 'gofasgerencianetboleto'
+                && preg_match('/^ggnb_(?:live|sandbox)_(?:(?:waiting|unpaid|canceled|cancelled)-[0-9]+|_notification-[0-9]+\[(?:new|waiting|unpaid|canceled|cancelled|expired)\])$/D', $referencia);
+            $controleAsaas = $tr->gateway === 'asaas'
+                && preg_match('/^asaas_(?:production|sandbox)_(?:waiting-pay_[A-Za-z0-9]+|_notification-pay_[A-Za-z0-9]+\[(?:PAYMENT_CREATED|PAYMENT_UPDATED|PAYMENT_OVERDUE|PAYMENT_DELETED|PAYMENT_RESTORED|PAYMENT_BANK_SLIP_VIEWED|PAYMENT_CHECKOUT_VIEWED)\])$/D', $referencia);
+            if ($zerado && ($controleEfi || $controleAsaas)) {
+                continue;
+            }
             $motivos[] = 'registro #'.(int)$tr->id.' em tblaccounts (gateway: '.$tr->gateway
                 .', entrada: R$ '.number_format((float)$tr->amountin, 2, ',', '.')
-                .', saída: R$ '.number_format((float)$tr->amountout, 2, ',', '.').')'
-                .(((float)$tr->amountin == 0 && (float)$tr->amountout == 0) ? ' — sem movimentação financeira' : '');
+                .', saída: R$ '.number_format((float)$tr->amountout, 2, ',', '.')
+                .', taxas: R$ '.number_format((float)$tr->fees, 2, ',', '.').')'
+                .', referência: '.$referencia
+                .($zerado ? ' — registro zerado não reconhecido como controle seguro' : ' — movimentação financeira');
         }
         foreach ($itens as $item) {
             if ($item->type !== 'Hosting' || (int)$item->relid !== (int)$s->id) {
@@ -98,7 +110,7 @@ function recuperacao_thx_criar_proposta($registro)
             }
         }
         if ($motivos) {
-            throw new RuntimeException($prefixo.implode('; ', $motivos).'.');
+            throw new RuntimeException($prefixo."\n".implode("\n", $motivos).'.');
         }
         $dados[] = ['id' => (int)$i->id, 'vencimento' => $i->duedate, 'valor' => (string)$i->total];
     }
@@ -205,7 +217,7 @@ function recuperacao_thx_output($vars)
             }
             echo '<div class="alert alert-success">Proposta criada. Nenhuma mensagem ou cobrança foi enviada.</div>';
         } catch (RuntimeException $e) {
-            echo '<div class="alert alert-warning">'.$esc($e->getMessage()).'</div>';
+            echo '<div class="alert alert-warning">'.nl2br($esc($e->getMessage())).'</div>';
         } catch (\Throwable $e) {
             echo '<div class="alert alert-danger">Não foi possível criar a proposta.</div>';
         }
