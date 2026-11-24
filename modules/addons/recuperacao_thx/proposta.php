@@ -79,11 +79,12 @@ if (($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pagar_acordo'])) || 
         if (!$servico) {
             throw new RuntimeException('Hospedagem indisponível.');
         }
-        $idPix = 'RENEG'.(int)$p->id; // TXID Pix aceita somente letras e números.
+        $idPix = 'RNG'.(int)$p->id.'S'.(int)$p->servico_id; // TXID Pix aceita somente letras e números.
         // Mesmo endpoint de Pix simples usado por includes/thx_payment.php.
         $resposta = @file_get_contents('https://pix.grupothx.com/?'.http_build_query([
             'valor' => number_format((float)$p->valor, 2, '.', ''),
             'id' => $idPix,
+            'descricao' => 'Renegociacao '.(int)$p->id.' - Servico '.(int)$p->servico_id,
             'cc' => 'true',
         ]), false, stream_context_create(['http' => ['timeout' => 8, 'follow_location' => 0]]));
         $codigo = $resposta === false ? '' : trim($resposta);
@@ -255,12 +256,12 @@ $real = static function ($v) {
 <?php if ($pix !== ''): ?>
 <section id="pagamento" style="text-align:center">
 <h2>Pagamento via Pix</h2>
-<p><strong><?= $real($p->valor) ?></strong> — <?= $esc('RENEG'.(int)$p->id) ?></p>
-<img alt="QR Code Pix" style="width:100%;max-width:230px;height:auto" src="https://pix.grupothx.com/copiaecolatoqrcode.php?codigo=<?= $esc(rawurlencode($pix)) ?>">
+<p><strong><?= $real($p->valor) ?></strong> — <?= $esc($idPix) ?></p>
+<img alt="QR Code Pix" style="width:100%;max-width:340px;height:auto" src="https://pix.grupothx.com/copiaecolatoqrcode.php?codigo=<?= $esc(rawurlencode($pix)) ?>">
 <p><label for="pixCode">Pix copia e cola</label></p>
 <textarea id="pixCode" readonly rows="3" style="width:100%;overflow-wrap:anywhere"><?= $esc($pix) ?></textarea>
 <button class="pagar" type="button" id="copiarPix">Copiar código Pix</button>
-<p>Após o pagamento, guarde o comprovante. A confirmação será realizada manualmente pela nossa equipe.</p>
+<p>Após o pagamento, os débitos anteriores do serviço serão cancelados.</p>
 </section>
 <script nonce="<?= $esc($nonce) ?>">
 <?php if (isset($_POST['pagar_acordo'])): ?>document.getElementById('pagamento').scrollIntoView({block:'start'});<?php endif; ?>
