@@ -132,6 +132,10 @@ if (($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pagar_acordo'])) || 
             throw new RuntimeException('CRC do Pix inválido: esperado '.sprintf('%04X', $crc).', recebido '.substr($codigo, -4).'.');
         }
 
+        if (!Capsule::schema()->hasColumn('mod_recuperacao_thx', 'pix_notificado_at')) {
+            throw new RuntimeException('O módulo precisa de uma atualização administrativa antes de disponibilizar o Pix.');
+        }
+
         // Uma única transição para a primeira exibição, inclusive propostas testadas antes desta versão.
         $primeira = Capsule::table('mod_recuperacao_thx')->where('id', $p->id)->where('token', $token)
             ->whereIn('status', ['criada', 'enviada', 'pix_visualizado'])->whereNull('pix_notificado_at')
@@ -163,7 +167,7 @@ if (($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pagar_acordo'])) || 
             }
         }
     } catch (\Throwable $e) {
-        $erroPix = $e instanceof RuntimeException ? $e->getMessage() : 'Falha ao consultar os dados da negociação.';
+        $erroPix = get_class($e) === RuntimeException::class ? $e->getMessage() : 'Falha ao consultar os dados da negociação. Entre em contato com nossa equipe.';
         logActivity('Recuperação THX: Pix indisponível na negociação #'.(int)$p->id);
     }
 }
@@ -209,10 +213,10 @@ $real = static function ($v) {
 <div class="cabecalho" role="img" aria-label="Grupo THX"></div>
 <h1>Olá, <?= $esc($clienteNome ?: 'cliente') ?>!</h1>
 <h2>Proposta de regularização</h2>
-<p>Preparamos uma condição especial para regularizar sua hospedagem. Nossa equipe está à disposição para auxiliá-lo.</p>
+<p>Preparamos uma condição especial para regularizar os débitos de seu serviço.<br>Nossa equipe está à disposição para auxiliá-lo.</p>
 <p><strong><?= $esc($p->dominio) ?></strong><br><?= $esc($p->produto) ?></p>
 <section>
-<small>Valor total devido</small><br><strong><?= $real((float)$p->valor + (float)$p->perdao) ?></strong><br><small>Desconto concedido: <?= $real($p->perdao) ?></small>
+<small>Valor total devido</small><br><strong><del><?= $real((float)$p->valor + (float)$p->perdao) ?></del></strong><br><small>Desconto concedido: <?= $real($p->perdao) ?></small>
 <p>Valor para regularização<br><span class="valor"><?= $real($p->valor) ?></span></p>
 <p>Com a confirmação do pagamento do acordo, cancelaremos as faturas em aberto para esse serviço.</p>
 </section>
