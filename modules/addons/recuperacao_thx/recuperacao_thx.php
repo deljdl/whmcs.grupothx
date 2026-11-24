@@ -63,6 +63,7 @@ function recuperacao_thx_criar_proposta($registro, $simular = false)
     }
 
     $dados = [];
+    $compartilhadas = [];
     foreach ($faturas as $f) {
         $prefixo = 'Fatura #'.(int)$f->fatura_id.': ';
         $i = Capsule::table('tblinvoices')->where('id', $f->fatura_id)->where('userid', $s->userid)->first();
@@ -74,6 +75,13 @@ function recuperacao_thx_criar_proposta($registro, $simular = false)
             $motivos[] = 'status atual: '.$i->status.' (esperado: Unpaid)';
         }
         $itens = Capsule::table('tblinvoiceitems')->where('invoiceid', $f->fatura_id)->get();
+        $outrosItens = $itens->filter(static function ($item) use ($s) {
+            return $item->type !== 'Hosting' || (int)$item->relid !== (int)$s->id;
+        });
+        if ($outrosItens->count()) {
+            $compartilhadas[] = (int)$i->id;
+            continue;
+        }
         if (!$itens->count()) {
             $motivos[] = 'nenhum item encontrado';
         }
@@ -103,18 +111,15 @@ function recuperacao_thx_criar_proposta($registro, $simular = false)
                 .', referência: '.$referencia
                 .($zerado ? ' — registro zerado não reconhecido como controle seguro' : ' — movimentação financeira');
         }
-        foreach ($itens as $item) {
-            if ($item->type !== 'Hosting' || (int)$item->relid !== (int)$s->id) {
-                $motivos[] = 'item #'.(int)$item->id.' incompatível (tipo: '.$item->type
-                    .', serviço vinculado: '.(int)$item->relid.', esperado: '.(int)$s->id.')';
-            }
-        }
         if ($motivos) {
             throw new RuntimeException($prefixo."\n".implode("\n", $motivos).'.');
         }
         $dados[] = ['id' => (int)$i->id, 'vencimento' => $i->duedate, 'valor' => (string)$i->total];
     }
 
+    if (!$dados) {
+        throw new RuntimeException('Não há faturas exclusivas do serviço disponíveis para negociação.');
+    }
     $ultima = end($dados);
     $perdao = 0;
     foreach (array_slice($dados, 0, -1) as $item) {
@@ -130,9 +135,64 @@ function recuperacao_thx_criar_proposta($registro, $simular = false)
         'status' => 'criada', 'created_at' => date('Y-m-d H:i:s'),
     ];
     if ($simular) {
+        $proposta['compartilhadas'] = $compartilhadas;
         return (object)$proposta;
     }
     Capsule::table('mod_recuperacao_thx')->insert($proposta);
+}
+
+// Prazo contado do primeiro envio, sem reiniciar a cada lembrete.
+function recuperacao_thx_expirada($p)
+{
+    if (empty($p->enviada_at)) {
+        return false;
+    }
+    $inicio = new DateTimeImmutable($p->enviada_at, new DateTimeZone('America/Sao_Paulo'));
+    $mes = $inicio->modify('first day of this month')->modify('+4 months');
+    $fim = $mes->setDate((int)$mes->format('Y'), (int)$mes->format('m'),
+        min((int)$inicio->format('d'), (int)$mes->format('t')));
+    return new DateTimeImmutable('now', new DateTimeZone('America/Sao_Paulo')) >= $fim;
+}
+
+// Consulta as faturas vencidas atuais, preservando o valor pactuado e o registro original.
+function recuperacao_thx_proposta_atual($p)
+{
+    $s = Capsule::table('tblhosting as h')->join('tblproducts as pr', 'pr.id', '=', 'h.packageid')
+        ->where('h.id', $p->servico_id)->where('h.userid', $p->cliente_id)
+        ->whereIn('h.domainstatus', ['Active', 'Suspended'])->whereIn('pr.type', ['hostingaccount', 'reselleraccount'])
+        ->first(['h.id', 'h.userid', 'h.domain', 'pr.name as produto']);
+    if (!$s) {
+        throw new RuntimeException('Hospedagem indisponível.');
+    }
+    $faturas = Capsule::table('tblinvoices as i')->join('tblinvoiceitems as ii', 'ii.invoiceid', '=', 'i.id')
+        ->where('i.userid', $p->cliente_id)->where('i.status', 'Unpaid')
+        ->where('ii.type', 'Hosting')->where('ii.relid', $p->servico_id)
+        ->where('i.duedate', '>', '0000-00-00')
+        ->select('i.id as fatura_id', 'i.duedate')->distinct()->orderBy('i.duedate')->orderBy('i.id')->get()->all();
+    $atual = recuperacao_thx_criar_proposta(['servico' => $s, 'faturas' => $faturas], true);
+    $dados = json_decode($atual->faturas, true);
+    $originais = json_decode($p->faturas, true);
+    if (!$originais || !$dados) {
+        throw new RuntimeException('Proposta inválida.');
+    }
+    $porId = array_column($dados, null, 'id');
+    foreach ($originais as $f) {
+        if (!isset($porId[$f['id']]) || (float)$porId[$f['id']]['valor'] !== (float)$f['valor']) {
+            throw new RuntimeException('Uma fatura original foi alterada. A proposta precisa de revisão.');
+        }
+    }
+    $total = array_sum(array_map(static function ($f) {
+        return (int)round((float)$f['valor'] * 100);
+    }, $dados));
+    $valor = (int)round((float)$p->valor * 100);
+    if ($valor <= 0 || $total < $valor) {
+        throw new RuntimeException('Valor da proposta incompatível.');
+    }
+    $atualizada = clone $p;
+    $atualizada->faturas = $atual->faturas;
+    $atualizada->perdao = number_format(($total - $valor) / 100, 2, '.', '');
+    $atualizada->compartilhadas = $atual->compartilhadas;
+    return $atualizada;
 }
 
 function recuperacao_thx_output($vars)
@@ -145,7 +205,6 @@ function recuperacao_thx_output($vars)
             min((int)$hoje->format('d'), (int)$mes->format('t')))->format('Y-m-d');
     };
     $limite2 = $limite(2);
-    $limiteEncerramento = $limite(5);
     $esc = static function ($valor) {
         return htmlspecialchars((string)$valor, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
     };
@@ -243,13 +302,12 @@ function recuperacao_thx_output($vars)
                     continue;
                 }
                 try {
-                    $validada = recuperacao_thx_criar_proposta($registro, true);
-                    $p = $propostas[$s->id] ?? $validada;
+                    $p = isset($propostas[$s->id]) ? recuperacao_thx_proposta_atual($propostas[$s->id]) : recuperacao_thx_criar_proposta($registro, true);
                     if (!in_array($p->status, ['criada', 'enviada'], true)) {
                         throw new RuntimeException('Proposta já iniciada ou encerrada.');
                     }
-                    if (isset($propostas[$s->id]) && $p->faturas !== $validada->faturas) {
-                        throw new RuntimeException('Faturas da proposta divergentes da situação atual. Revise antes de enviar.');
+                    if (recuperacao_thx_expirada($p)) {
+                        throw new RuntimeException('Prazo da negociação encerrado.');
                     }
                     $cliente = Capsule::table('tblclients')->where('id', $s->userid)->first(['firstname', 'email', 'phonenumber']);
                     if (!$cliente) {
@@ -303,7 +361,7 @@ function recuperacao_thx_output($vars)
                 <td>'.$esc(date('d/m/Y', strtotime($s->duedate))).'</td>
                 <td>'.$hoje->diff(new DateTimeImmutable($s->duedate, $hoje->getTimezone()))->days.'</td>
                 <td>R$ '.number_format($registro['valor'], 2, ',', '.').'</td>
-                <td><details><summary style="cursor:pointer">'.count($links).' fatura(s)</summary><div style="margin-top:8px">'.implode('<br>', $links).'</div></details></td><td>'.$acao.'</td></tr>';
+                <td><a target="_blank" rel="noopener" href="clientsinvoices.php?userid='.(int)$s->userid.'&amp;serviceid='.(int)$s->id.'">Ver faturas do serviço</a><br><details><summary style="cursor:pointer">'.count($links).' fatura(s)</summary><div style="margin-top:8px">'.implode('<br>', $links).'</div></details></td><td>'.$acao.'</td></tr>';
             echo '</tbody></table></div>';
         }
     }
@@ -311,10 +369,14 @@ function recuperacao_thx_output($vars)
     echo '<h2>Histórico de negociações</h2>';
     echo '<div class="table-responsive"><table class="table table-bordered"><thead><tr><th>Negociação</th><th>ID Pix</th><th>Hospedagem</th><th>Status</th><th>Valor original</th><th>Valor negociado</th><th>Perdão</th><th>Motivo / pedido de ajuda</th><th>Criada em</th><th>Encerramento</th></tr></thead><tbody>';
     foreach ($propostas as $p) {
-        $encerrar = $p->status === 'enviada' && !empty($p->enviada_at) && substr($p->enviada_at, 0, 10) < $limiteEncerramento
+        $encerrar = $p->status === 'enviada' && recuperacao_thx_expirada($p)
             && empty($p->aceita_at) && empty($p->pagamento_at) && empty($p->concluida_at);
+        $revisao = '';
+        if (in_array($p->status, ['criada', 'enviada', 'pix_visualizado'], true)) {
+            try { $p = recuperacao_thx_proposta_atual($p); } catch (\Throwable $e) { $revisao = '<br><small>Revisão necessária</small>'; }
+        }
         $acaoEncerrar = $encerrar ? '<button type="button" class="btn btn-danger btn-xs" disabled>Cancelar cobranças e finalizar serviço</button><br><small>Aguardando validação do cancelamento</small>' : '—';
-        echo '<tr><td>#'.(int)$p->id.'</td><td><strong>R'.(int)$p->id.'S'.(int)$p->servico_id.'</strong></td><td>'.$esc($p->dominio).'</td><td>'.$esc($p->status).'</td>
+        echo '<tr><td>#'.(int)$p->id.'</td><td><strong>R'.(int)$p->id.'S'.(int)$p->servico_id.'</strong></td><td>'.$esc($p->dominio).'</td><td>'.$esc($p->status).$revisao.'</td>
             <td>R$ '.number_format((float)$p->valor + (float)$p->perdao, 2, ',', '.').'</td>
             <td>R$ '.number_format((float)$p->valor, 2, ',', '.').'</td>
             <td>R$ '.number_format((float)$p->perdao, 2, ',', '.').'</td>

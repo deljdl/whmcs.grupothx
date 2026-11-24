@@ -2,6 +2,7 @@
 require_once dirname(__DIR__, 3).'/init.php';
 
 use WHMCS\Database\Capsule;
+require_once __DIR__.'/recuperacao_thx.php';
 
 header('Cache-Control: no-store, private');
 header('Referrer-Policy: no-referrer');
@@ -26,6 +27,17 @@ if (!$p) {
 $clienteNome = Capsule::table('tblclients')->where('id', $p->cliente_id)->value('firstname');
 $erroPix = '';
 $pix = '';
+$compartilhadas = [];
+$expirada = recuperacao_thx_expirada($p);
+try {
+    if ($expirada) {
+        throw new RuntimeException('O prazo desta negociação foi encerrado. Entre em contato com nossa equipe.');
+    }
+    $p = recuperacao_thx_proposta_atual($p);
+    $compartilhadas = $p->compartilhadas;
+} catch (\Throwable $e) {
+    $erroPix = get_class($e) === RuntimeException::class ? $e->getMessage() : 'Proposta em revisão. Entre em contato com nossa equipe.';
+}
 if (empty($_SESSION['recuperacao_apoio_csrf'])) {
     $_SESSION['recuperacao_apoio_csrf'] = bin2hex(random_bytes(32));
 }
@@ -36,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pagar_acordo'])) {
         exit('Solicitação inválida.');
     }
 }
-if (($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pagar_acordo'])) || $p->status === 'pix_visualizado') {
+if ($erroPix === '' && (($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pagar_acordo'])) || $p->status === 'pix_visualizado')) {
     try {
         $dados = json_decode($p->faturas, true);
         if (!$dados || (float)$p->valor <= 0) {
@@ -189,7 +201,7 @@ $real = static function ($v) {
 <section>
 <small>Valor total devido</small><br><strong><del><?= $real((float)$p->valor + (float)$p->perdao) ?></del></strong><br><small>Desconto concedido: <?= $real($p->perdao) ?></small>
 <p>Valor para regularização<br><span class="valor"><?= $real($p->valor) ?></span></p>
-<p>Com a confirmação do pagamento do acordo, cancelaremos as faturas em aberto para esse serviço.</p>
+<p>Com a confirmação do pagamento do acordo, cancelaremos as faturas em aberto incluídas nesta negociação.</p>
 </section>
 <details><summary>Faturas que serão canceladas (<?= count(json_decode($p->faturas, true)) ?>)</summary>
 <table><thead><tr><th>Fatura</th><th>Vencimento</th><th>Valor</th></tr></thead><tbody>
@@ -197,7 +209,10 @@ $real = static function ($v) {
 <tr><td>#<?= (int)$f['id'] ?></td><td><?= $esc(date('d/m/Y', strtotime($f['vencimento']))) ?></td><td><?= $real($f['valor']) ?></td></tr>
 <?php endforeach; ?>
 </tbody></table></details>
-<?php if ($pix === ''): ?>
+<?php if ($compartilhadas): ?>
+<p><small>Faturas com outros serviços ou domínios não fazem parte do acordo: <?= $esc(implode(', ', array_map(static function ($id) { return '#'.(int)$id; }, $compartilhadas))) ?>. Essas cobranças precisam de conferência separada.</small></p>
+<?php endif; ?>
+<?php if ($pix === '' && $erroPix === ''): ?>
 <form method="post">
 <input type="hidden" name="csrf" value="<?= $esc($_SESSION['recuperacao_apoio_csrf']) ?>">
 <p><button class="pagar" type="submit" name="pagar_acordo" value="1"><?= $p->status === 'pix_visualizado' ? 'Tentar carregar Pix novamente' : 'Quero pagar o acordo' ?></button></p>
