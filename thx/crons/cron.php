@@ -29,7 +29,7 @@ $cronsCronThx = [
     'cron_monitora_pagamentos' => [
         'path' => $rootDirCronThx . '/thx/crons/cron_monitora_pagamentos.php',
         'dias' => [1, 2, 3, 4, 5],
-        'horas' => [8, 12, 16],
+        'horas' => [8],
     ],
     'cron_resumo_diario' => [
         'path' => $rootDirCronThx . '/thx/crons/cron-resumo-diario.php',

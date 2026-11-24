@@ -516,6 +516,81 @@ if ($alertaBoletos) {
 }
 
 
+
+/*
+|--------------------------------------------------------------------------
+| SERVIÇOS COM MAIS DE 3 MESES EM ATRASO
+|--------------------------------------------------------------------------
+*/
+
+$sql = "SELECT
+            h.id, h.userid, h.domain, h.domainstatus, p.name AS produto,
+            CONCAT(c.firstname, ' ', c.lastname, ' [', c.companyname, ']') AS cliente,
+            i.id AS fatura_id, i.duedate, SUM(ii.amount) AS valor
+        FROM tblhosting h
+        INNER JOIN tblclients c ON c.id = h.userid
+        INNER JOIN tblproducts p ON p.id = h.packageid
+        INNER JOIN tblinvoiceitems ii ON ii.type = 'Hosting' AND ii.relid = h.id
+        INNER JOIN tblinvoices i ON i.id = ii.invoiceid AND i.userid = h.userid
+        WHERE h.domainstatus IN ('Active', 'Suspended')
+            AND i.status = 'Unpaid'
+            AND i.duedate != '0000-00-00'
+        GROUP BY h.id, h.userid, h.domain, h.domainstatus, p.name, c.firstname,
+            c.lastname, c.companyname, i.id, i.duedate
+        HAVING SUM(ii.amount) > 0
+        ORDER BY i.duedate, i.id";
+
+$servicosAtrasados = [];
+foreach ($pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC) as $itemAtrasado) {
+    $idServico = (int)$itemAtrasado['id'];
+    if (!isset($servicosAtrasados[$idServico])) {
+        if ($itemAtrasado['duedate'] >= $dataLimite) {
+            continue;
+        }
+        $servicosAtrasados[$idServico] = $itemAtrasado;
+        $servicosAtrasados[$idServico]['valor_vencido'] = 0;
+        $servicosAtrasados[$idServico]['faturas'] = [];
+    }
+    if ($itemAtrasado['duedate'] < $hoje) {
+        $servicosAtrasados[$idServico]['valor_vencido'] += (float)$itemAtrasado['valor'];
+    }
+    $servicosAtrasados[$idServico]['faturas'][] =
+        '<a target="_blank" href="'.HTTP_WHMCS_ADMIN.'/invoices.php?action=edit&id='.(int)$itemAtrasado['fatura_id'].'">#'.(int)$itemAtrasado['fatura_id'].'</a> ('.date('d/m/Y', strtotime($itemAtrasado['duedate'])).')';
+}
+
+$tableServicosAtrasados = '<h2>SERVIÇOS COM MAIS DE 3 MESES EM ATRASO</h2>
+<p>Serviços ativos ou suspensos com faturas em aberto há mais de três meses. O valor corresponde aos itens vencidos do serviço, sem descontar eventuais pagamentos parciais. Confira as faturas antes de excluir.</p>';
+
+if (!$servicosAtrasados) {
+    $tableServicosAtrasados .= '<p>Nenhum serviço encontrado.</p>';
+} else {
+    $tableServicosAtrasados .= '<table '.$tableStyle.'>
+    <tr>
+        <th '.$tableTdStyle.'>Cliente</th>
+        <th '.$tableTdStyle.'>Serviço / Domínio</th>
+        <th '.$tableTdStyle.'>Status</th>
+        <th '.$tableTdStyle.'>Vencimento mais antigo</th>
+        <th '.$tableTdStyle.'>Dias em atraso</th>
+        <th '.$tableTdStyle.'>Valor dos itens vencidos</th>
+        <th '.$tableTdStyle.'>Faturas em aberto do serviço</th>
+    </tr>';
+
+    foreach ($servicosAtrasados as $servicoAtrasado) {
+        $diasAtraso = (new DateTimeImmutable($servicoAtrasado['duedate']))->diff(new DateTimeImmutable($hoje))->days;
+        $tableServicosAtrasados .= '<tr>
+            <td '.$tableTdStyle.'><a target="_blank" href="'.HTTP_WHMCS_ADMIN.'/clientssummary.php?userid='.(int)$servicoAtrasado['userid'].'">'.htmlspecialchars($servicoAtrasado['cliente'], ENT_QUOTES, 'UTF-8').'</a></td>
+            <td '.$tableTdStyle.'><a target="_blank" href="'.HTTP_WHMCS_ADMIN.'/clientsservices.php?userid='.(int)$servicoAtrasado['userid'].'&amp;id='.(int)$servicoAtrasado['id'].'">'.htmlspecialchars($servicoAtrasado['produto'].' / '.$servicoAtrasado['domain'], ENT_QUOTES, 'UTF-8').'</a></td>
+            <td '.$tableTdStyle.'>'.($servicoAtrasado['domainstatus'] === 'Suspended' ? 'Suspenso' : 'Ativo').'</td>
+            <td '.$tableTdStyle.'>'.date('d/m/Y', strtotime($servicoAtrasado['duedate'])).'</td>
+            <td '.$tableTdStyle.'>'.$diasAtraso.'</td>
+            <td '.$tableTdStyle.'>R$ '.number_format($servicoAtrasado['valor_vencido'], 2, ',', '.').'</td>
+            <td '.$tableTdStyle.'>'.implode('<br />', $servicoAtrasado['faturas']).'</td>
+        </tr>';
+    }
+
+    $tableServicosAtrasados .= '</table>';
+}
+
 /*
 |--------------------------------------------------------------------------
 | HTML
@@ -532,6 +607,9 @@ $html = '<!DOCTYPE html>
 <body>
 
 '.$tableAuditoriaBoletos.'
+<hr />
+
+'.$tableServicosAtrasados.'
 <hr />
 
 <p>
