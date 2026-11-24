@@ -44,6 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pagar_acordo'])) {
         http_response_code(403);
         exit('Solicitação inválida.');
     }
+}
+if (($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pagar_acordo'])) || $p->status === 'pix_visualizado') {
     try {
         $dados = json_decode($p->faturas, true);
         if (!$dados || (float)$p->valor <= 0) {
@@ -77,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pagar_acordo'])) {
         if (!$servico) {
             throw new RuntimeException('Hospedagem indisponível.');
         }
-        $idPix = 'RENEG-'.(int)$p->id;
+        $idPix = 'RENEG'.(int)$p->id; // TXID Pix aceita somente letras e números.
         // Mesmo endpoint de Pix simples usado por includes/thx_payment.php.
         $resposta = @file_get_contents('https://pix.grupothx.com/?'.http_build_query([
             'valor' => number_format((float)$p->valor, 2, '.', ''),
@@ -116,12 +118,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pagar_acordo'])) {
                 $crc = (($crc & 0x8000) ? (($crc << 1) ^ 0x1021) : ($crc << 1)) & 0xFFFF;
             }
         }
-        if (($campos['53'] ?? '') !== '986'
-            || !preg_match('/^\d+(?:\.\d{1,2})?$/D', $campos['54'] ?? '')
-            || number_format((float)$campos['54'], 2, '.', '') !== number_format((float)$p->valor, 2, '.', '')
-            || $referencia !== $idPix
-            || strtoupper(substr($codigo, -4)) !== sprintf('%04X', $crc)) {
-            throw new RuntimeException('O Pix retornado diverge do valor, identificador ou código de verificação esperado.');
+        if (($campos['53'] ?? '') !== '986') {
+            throw new RuntimeException('Moeda Pix incompatível: esperado 986 (BRL).');
+        }
+        if (!preg_match('/^\d+(?:\.\d{1,2})?$/D', $campos['54'] ?? '')
+            || number_format((float)$campos['54'], 2, '.', '') !== number_format((float)$p->valor, 2, '.', '')) {
+            throw new RuntimeException('Valor Pix divergente: esperado '.number_format((float)$p->valor, 2, '.', '').', recebido '.($campos['54'] ?? '(ausente)').'.');
+        }
+        if ($referencia !== $idPix) {
+            throw new RuntimeException('Identificador Pix divergente: esperado '.$idPix.', recebido '.($referencia !== '' ? $referencia : '(ausente)').'.');
+        }
+        if (strtoupper(substr($codigo, -4)) !== sprintf('%04X', $crc)) {
+            throw new RuntimeException('CRC do Pix inválido: esperado '.sprintf('%04X', $crc).', recebido '.substr($codigo, -4).'.');
         }
 
         // Uma única transição para a primeira exibição, inclusive propostas testadas antes desta versão.
@@ -158,7 +166,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pagar_acordo'])) {
         $erroPix = $e instanceof RuntimeException ? $e->getMessage() : 'Falha ao consultar os dados da negociação.';
         logActivity('Recuperação THX: Pix indisponível na negociação #'.(int)$p->id);
     }
-} elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+}
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && !isset($_POST['pagar_acordo'])) {
     $csrf = $_POST['csrf'] ?? '';
     $motivo = $_POST['motivo'] ?? '';
     $mensagem = $_POST['mensagem'] ?? '';
@@ -230,17 +239,19 @@ $real = static function ($v) {
 <button type="submit" style="padding:12px 18px;background:#173b62;color:white;border:0;border-radius:6px;cursor:pointer">Solicitar atendimento</button>
 </form>
 </details>
+<?php if ($pix === ''): ?>
 <form method="post">
 <input type="hidden" name="csrf" value="<?= $esc($_SESSION['recuperacao_apoio_csrf']) ?>">
-<p><button class="pagar" type="submit" name="pagar_acordo" value="1"><?= $p->status === 'pix_visualizado' ? 'Visualizar Pix novamente' : 'Quero pagar o acordo' ?></button></p>
+<p><button class="pagar" type="submit" name="pagar_acordo" value="1"><?= $p->status === 'pix_visualizado' ? 'Tentar carregar Pix novamente' : 'Quero pagar o acordo' ?></button></p>
 </form>
+<?php endif; ?>
 <?php if ($erroPix !== ''): ?>
 <p role="alert" style="color:#a12626"><strong><?= $esc($erroPix) ?></strong></p>
 <?php endif; ?>
 <?php if ($pix !== ''): ?>
 <section id="pagamento" style="text-align:center">
 <h2>Pagamento via Pix</h2>
-<p><strong><?= $real($p->valor) ?></strong> — <?= $esc('RENEG-'.(int)$p->id) ?></p>
+<p><strong><?= $real($p->valor) ?></strong> — <?= $esc('RENEG'.(int)$p->id) ?></p>
 <img alt="QR Code Pix" style="width:100%;max-width:230px;height:auto" src="https://pix.grupothx.com/copiaecolatoqrcode.php?codigo=<?= $esc(rawurlencode($pix)) ?>">
 <p><label for="pixCode">Pix copia e cola</label></p>
 <textarea id="pixCode" readonly rows="3" style="width:100%;overflow-wrap:anywhere"><?= $esc($pix) ?></textarea>
@@ -248,7 +259,7 @@ $real = static function ($v) {
 <p>Após o pagamento, guarde o comprovante. A confirmação será realizada manualmente pela nossa equipe.</p>
 </section>
 <script nonce="<?= $esc($nonce) ?>">
-document.getElementById('pagamento').scrollIntoView({block:'start'});
+<?php if (isset($_POST['pagar_acordo'])): ?>document.getElementById('pagamento').scrollIntoView({block:'start'});<?php endif; ?>
 document.getElementById('copiarPix').addEventListener('click',async function(){
     const campo=document.getElementById('pixCode');
     try { await navigator.clipboard.writeText(campo.value); this.textContent='Código copiado'; }
