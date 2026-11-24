@@ -84,7 +84,7 @@ if (($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pagar_acordo'])) || 
         $resposta = @file_get_contents('https://pix.grupothx.com/?'.http_build_query([
             'valor' => number_format((float)$p->valor, 2, '.', ''),
             'id' => $idPix,
-            'descricao' => 'Renegociacao '.(int)$p->id.' - Servico '.(int)$p->servico_id,
+            'descricao' => 'Renegociação - Serviço '.(int)$p->servico_id,
             'cc' => 'true',
         ]), false, stream_context_create(['http' => ['timeout' => 8, 'follow_location' => 0]]));
         $codigo = $resposta === false ? '' : trim($resposta);
