@@ -210,7 +210,7 @@ function recuperacao_thx_output($vars)
             } else {
                 $acao = '<form method="post"><input type="hidden" name="csrf_recuperacao" value="'.$esc($_SESSION['recuperacao_thx_csrf']).'"><button class="btn btn-primary" name="criar_proposta" value="'.(int)$s->id.'">Criar proposta</button></form>';
             }
-            echo '<div class="table-responsive"><table class="table table-striped table-bordered"><thead><tr>
+            echo '<div class="table-responsive" style="overflow-x:auto"><table class="table table-striped table-bordered" style="width:100%;min-width:1100px;table-layout:fixed;overflow-wrap:anywhere"><colgroup><col style="width:22%"><col style="width:22%"><col style="width:7%"><col style="width:11%"><col style="width:7%"><col style="width:10%"><col style="width:12%"><col style="width:9%"></colgroup><thead><tr>
                 <th>Cliente</th><th>Hospedagem</th><th>Status</th><th>Vencimento mais antigo</th>
                 <th>Dias de atraso</th><th>Itens vencidos (bruto)</th><th>Faturas em aberto do serviço</th><th>Proposta</th>
                 </tr></thead><tbody>';
