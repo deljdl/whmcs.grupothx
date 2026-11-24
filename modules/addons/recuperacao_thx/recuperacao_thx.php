@@ -64,17 +64,41 @@ function recuperacao_thx_criar_proposta($registro)
 
     $dados = [];
     foreach ($faturas as $f) {
-        $i = Capsule::table('tblinvoices')->where('id', $f->fatura_id)->where('userid', $s->userid)
-            ->where('status', 'Unpaid')->first();
+        $prefixo = 'Fatura #'.(int)$f->fatura_id.': ';
+        $i = Capsule::table('tblinvoices')->where('id', $f->fatura_id)->where('userid', $s->userid)->first();
+        if (!$i) {
+            throw new RuntimeException($prefixo.'não encontrada para este cliente.');
+        }
+        $motivos = [];
+        if ($i->status !== 'Unpaid') {
+            $motivos[] = 'status atual: '.$i->status.' (esperado: Unpaid)';
+        }
         $itens = Capsule::table('tblinvoiceitems')->where('invoiceid', $f->fatura_id)->get();
-        if (!$i || !$itens->count() || (float)$i->total <= 0 || (float)$i->credit != 0
-            || Capsule::table('tblaccounts')->where('invoiceid', $f->fatura_id)->exists()) {
-            throw new RuntimeException('Fatura com crédito, transação ou situação incompatível. Confira manualmente.');
+        if (!$itens->count()) {
+            $motivos[] = 'nenhum item encontrado';
+        }
+        if ((float)$i->total <= 0) {
+            $motivos[] = 'valor total inválido: R$ '.number_format((float)$i->total, 2, ',', '.');
+        }
+        if ((float)$i->credit != 0) {
+            $motivos[] = 'crédito aplicado: R$ '.number_format((float)$i->credit, 2, ',', '.');
+        }
+        $transacoes = Capsule::table('tblaccounts')->where('invoiceid', $f->fatura_id)
+            ->get(['id', 'gateway', 'amountin', 'amountout']);
+        foreach ($transacoes as $tr) {
+            $motivos[] = 'registro #'.(int)$tr->id.' em tblaccounts (gateway: '.$tr->gateway
+                .', entrada: R$ '.number_format((float)$tr->amountin, 2, ',', '.')
+                .', saída: R$ '.number_format((float)$tr->amountout, 2, ',', '.').')'
+                .(((float)$tr->amountin == 0 && (float)$tr->amountout == 0) ? ' — sem movimentação financeira' : '');
         }
         foreach ($itens as $item) {
             if ($item->type !== 'Hosting' || (int)$item->relid !== (int)$s->id) {
-                throw new RuntimeException('Existe fatura compartilhada ou com outros itens. Confira manualmente.');
+                $motivos[] = 'item #'.(int)$item->id.' incompatível (tipo: '.$item->type
+                    .', serviço vinculado: '.(int)$item->relid.', esperado: '.(int)$s->id.')';
             }
+        }
+        if ($motivos) {
+            throw new RuntimeException($prefixo.implode('; ', $motivos).'.');
         }
         $dados[] = ['id' => (int)$i->id, 'vencimento' => $i->duedate, 'valor' => (string)$i->total];
     }
