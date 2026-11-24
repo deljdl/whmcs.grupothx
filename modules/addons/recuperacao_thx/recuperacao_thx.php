@@ -316,11 +316,13 @@ function recuperacao_thx_output($vars)
                     $original = 'R$ '.number_format((float)$p->valor + (float)$p->perdao, 2, ',', '.');
                     $valor = 'R$ '.number_format((float)$p->valor, 2, ',', '.');
                     $link = $p->token ? $urlBase.'/modules/addons/recuperacao_thx/proposta.php?t='.$p->token : '[Link gerado ao criar a proposta]';
-                    $assunto = 'Condição especial para regularizar sua hospedagem';
-                    $mensagem = "Olá, ".$cliente->firstname."!\n\nPreparamos uma condição especial para regularizar os débitos de seu serviço de hospedagem (".$s->domain.").\n\nDe ".$original." por apenas ".$valor.".\n\nCom a confirmação do pagamento, os débitos anteriores serão cancelados e o serviço será reativado, caso esteja suspenso.\n\nConfira sua proposta:\n".$link."\n\nNossa equipe está à disposição para auxiliá-lo.";
+                    $assunto = 'Condição especial para regularizar seus débitos';
+                    $mensagem = "Olá, ".$cliente->firstname."!\n\nPreparamos uma condição especial para regularizar os débitos de seu serviço de hospedagem (".$s->domain.").\n\nDe ".$original." por apenas ".$valor.".\n\nCom a confirmação do pagamento, os débitos anteriores serão cancelados e o serviço será reativado.\n\nConfira sua proposta:\n".$link;
+                    $imagem = $urlBase.'/thx/assets/images/cabecalho-negociacao.jpg';
+                    $cabecalho = '<img src="'.$esc($imagem).'" alt="Grupo THX - Negociação" style="display:block;width:100%;max-width:560px;height:auto;margin:10px 0">';
                     echo '<div class="panel panel-default"><div class="panel-heading"><strong>'.$esc($s->domain).'</strong></div><div class="panel-body">'
-                        .'<p><strong>E-mail:</strong> '.$esc($cliente->email).'<br><strong>Assunto:</strong> '.$esc($assunto).'</p><pre style="white-space:pre-wrap">'.$esc($mensagem).'</pre>'
-                        .'<p><strong>WhatsApp:</strong> '.$esc($cliente->phonenumber).'</p><pre style="white-space:pre-wrap">'.$esc($mensagem).'</pre></div></div>';
+                        .'<p><strong>E-mail:</strong> '.$esc($cliente->email).'<br><strong>Assunto:</strong> '.$esc($assunto).'</p>'.$cabecalho.'<pre style="white-space:pre-wrap">'.$esc($mensagem).'</pre>'
+                        .'<p><strong>WhatsApp:</strong> '.$esc($cliente->phonenumber).'</p>'.$cabecalho.'<pre style="white-space:pre-wrap">'.$esc($mensagem).'</pre></div></div>';
                 } catch (RuntimeException $e) {
                     echo '<div class="alert alert-warning">'.$esc($s->domain).': '.nl2br($esc(get_class($e) === RuntimeException::class ? $e->getMessage() : 'Falha na conferência.')).'</div>';
                 } catch (\Throwable $e) {
