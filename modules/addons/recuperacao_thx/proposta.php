@@ -24,15 +24,6 @@ if (!$p) {
     exit('Proposta indisponível.');
 }
 $clienteNome = Capsule::table('tblclients')->where('id', $p->cliente_id)->value('firstname');
-$motivos = [
-    'financeiro' => 'Dificuldades financeiras',
-    'tecnico' => 'Problemas técnicos ou de funcionamento',
-    'atendimento' => 'Dificuldade com atendimento ou suporte',
-    'cobranca' => 'Problemas com cobrança ou pagamento',
-    'uso' => 'Não estou utilizando a hospedagem',
-    'outro' => 'Outro motivo',
-];
-$aviso = '';
 $erroPix = '';
 $pix = '';
 if (empty($_SESSION['recuperacao_apoio_csrf'])) {
@@ -172,27 +163,6 @@ if (($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pagar_acordo'])) || 
         logActivity('Recuperação THX: Pix indisponível na negociação #'.(int)$p->id);
     }
 }
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && !isset($_POST['pagar_acordo'])) {
-    $csrf = $_POST['csrf'] ?? '';
-    $motivo = $_POST['motivo'] ?? '';
-    $mensagem = $_POST['mensagem'] ?? '';
-    if (!is_string($csrf) || !hash_equals($_SESSION['recuperacao_apoio_csrf'], $csrf)
-        || !is_string($motivo) || !isset($motivos[$motivo])
-        || !is_string($mensagem) || strlen($mensagem) > 4000) {
-        $aviso = 'Confira os dados e tente novamente.';
-    } else {
-        try {
-            Capsule::table('mod_recuperacao_thx')->where('id', $p->id)->where('token', $token)
-                ->whereIn('status', ['criada', 'enviada', 'pix_visualizado'])->update([
-                    'motivo' => $motivos[$motivo], 'mensagem_apoio' => trim($mensagem),
-                    'apoio_at' => date('Y-m-d H:i:s'),
-                ]);
-            $aviso = 'Sua solicitação foi registrada. Nossa equipe poderá avaliar as informações e orientar você.';
-        } catch (\Throwable $e) {
-            $aviso = 'Não foi possível registrar sua mensagem neste momento.';
-        }
-    }
-}
 $esc = static function ($v) {
     return htmlspecialchars((string)$v, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 };
@@ -227,23 +197,6 @@ $real = static function ($v) {
 <tr><td>#<?= (int)$f['id'] ?></td><td><?= $esc(date('d/m/Y', strtotime($f['vencimento']))) ?></td><td><?= $real($f['valor']) ?></td></tr>
 <?php endforeach; ?>
 </tbody></table></details>
-<details class="apoio" <?= $aviso !== '' ? 'open' : '' ?>><summary>Como podemos ajudá-lo?</summary>
-<p>Caso tenha enfrentado dificuldades, informe-nos para que possamos avaliar sua situação. O preenchimento é opcional.</p>
-<?php if ($aviso !== ''): ?><p role="status"><strong><?= $esc($aviso) ?></strong></p><?php endif; ?>
-<form method="post">
-<input type="hidden" name="csrf" value="<?= $esc($_SESSION['recuperacao_apoio_csrf']) ?>">
-<label for="motivo">O que dificultou a continuidade?</label><br>
-<select id="motivo" name="motivo" required style="width:100%;padding:10px;margin:8px 0">
-<option value="">Selecione um motivo</option>
-<?php foreach ($motivos as $chave => $rotulo): ?>
-<option value="<?= $esc($chave) ?>"><?= $esc($rotulo) ?></option>
-<?php endforeach; ?>
-</select>
-<label for="mensagem">Como nossa equipe pode ajudar? (opcional)</label><br>
-<textarea id="mensagem" name="mensagem" rows="4" maxlength="1000" style="width:100%;padding:10px;margin:8px 0" placeholder="Não informe senhas ou dados bancários."></textarea>
-<button type="submit" style="padding:12px 18px;background:#173b62;color:white;border:0;border-radius:6px;cursor:pointer">Solicitar atendimento</button>
-</form>
-</details>
 <?php if ($pix === ''): ?>
 <form method="post">
 <input type="hidden" name="csrf" value="<?= $esc($_SESSION['recuperacao_apoio_csrf']) ?>">
@@ -265,9 +218,15 @@ $real = static function ($v) {
 </section>
 <script nonce="<?= $esc($nonce) ?>">
 <?php if (isset($_POST['pagar_acordo'])): ?>document.getElementById('pagamento').scrollIntoView({block:'start'});<?php endif; ?>
+let timerCopiarPix;
 document.getElementById('copiarPix').addEventListener('click',async function(){
     const campo=document.getElementById('pixCode');
-    try { await navigator.clipboard.writeText(campo.value); this.textContent='Código copiado'; }
+    try {
+        await navigator.clipboard.writeText(campo.value);
+        this.textContent='Código copiado';
+        clearTimeout(timerCopiarPix);
+        timerCopiarPix = setTimeout(() => { this.textContent='Copiar código Pix'; }, 2000);
+    }
     catch(e) { campo.focus(); campo.select(); }
 });
 </script>

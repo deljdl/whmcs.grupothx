@@ -140,8 +140,7 @@ function recuperacao_thx_output($vars)
         return $mes->setDate((int)$mes->format('Y'), (int)$mes->format('m'),
             min((int)$hoje->format('d'), (int)$mes->format('t')))->format('Y-m-d');
     };
-    $limite3 = $limite(3);
-    $limite5 = $limite(5);
+    $limite2 = $limite(2);
     $esc = static function ($valor) {
         return htmlspecialchars((string)$valor, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
     };
@@ -171,7 +170,7 @@ function recuperacao_thx_output($vars)
     $servicos = [];
     foreach ($faturas as $fatura) {
         if (!isset($servicos[$fatura->id])) {
-            if ($fatura->duedate > $limite3) {
+            if ($fatura->duedate > $limite2) {
                 continue;
             }
             $servicos[$fatura->id] = ['servico' => $fatura, 'faturas' => [], 'valor' => 0];
@@ -182,14 +181,7 @@ function recuperacao_thx_output($vars)
         }
     }
 
-    $recuperacao = $encerramento = [];
-    foreach ($servicos as $registro) {
-        if ($registro['servico']->duedate <= $limite5) {
-            $encerramento[] = $registro;
-        } else {
-            $recuperacao[] = $registro;
-        }
-    }
+    $recuperacao = $servicos;
 
     recuperacao_thx_propostas_tabela();
     if (empty($_SESSION['recuperacao_thx_csrf'])) {
@@ -225,10 +217,9 @@ function recuperacao_thx_output($vars)
     $propostas = Capsule::table('mod_recuperacao_thx')->get()->keyBy('servico_id');
     $urlBase = rtrim((string)Capsule::table('tblconfiguration')->where('setting', 'SystemURL')->value('value'), '/');
     echo '<div class="alert alert-info">Modo proposta: nenhuma campanha, cobrança ou exclusão será executada. A classificação é preliminar e exige conferência dos pagamentos e das faturas compartilhadas.</div>';
-    echo '<p>Data de referência: '.$hoje->format('d/m/Y').' | 3 meses: '.$esc($limite3).' | 5 meses: '.$esc($limite5).'</p>';
+    echo '<p>Data de referência: '.$hoje->format('d/m/Y').' | Elegíveis a partir de 2 meses de atraso: '.$esc($limite2).'</p>';
 
-    foreach (['Recuperação (3 a menos de 5 meses)' => $recuperacao,
-        'Recuperação / revisão para encerramento (5 meses ou mais)' => $encerramento] as $titulo => $registros) {
+    foreach (['Recuperação (2 meses ou mais, sem limite máximo)' => $recuperacao] as $titulo => $registros) {
         echo '<h2>'.$esc($titulo).' ('.count($registros).')</h2>';
         if (!$registros) {
             echo '<p>Nenhuma hospedagem encontrada.</p>';
