@@ -593,7 +593,7 @@ function consultarQuotaWHM($server, $usuarioCpanel)
 #Funcões de manipulação de contas direto no WHM / Fim
 
 
-function getUrlCurta($url, $title = '', $description = '',  $hash = '', $img = '')
+function getUrlCurta($url, $title = '', $description = '',  $hash = '', $img = '', $timeout = 0)
 {
 	$curl = curl_init();
 
@@ -602,7 +602,7 @@ function getUrlCurta($url, $title = '', $description = '',  $hash = '', $img = '
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_ENCODING => '',
 	CURLOPT_MAXREDIRS => 10,
-	CURLOPT_TIMEOUT => 0,
+	CURLOPT_TIMEOUT => (int)$timeout,
 	CURLOPT_FOLLOWLOCATION => true,
 	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 	CURLOPT_CUSTOMREQUEST => 'POST',

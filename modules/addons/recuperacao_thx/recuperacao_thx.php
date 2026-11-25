@@ -40,7 +40,7 @@ function recuperacao_thx_propostas_tabela()
         'enviada_at' => 'dateTime', 'aceita_at' => 'dateTime',
         'aviso_final_at' => 'dateTime', 'pagamento_at' => 'dateTime',
         'concluida_at' => 'dateTime', 'motivo' => 'string',
-        'mensagem_apoio' => 'text', 'apoio_at' => 'dateTime', 'pix_notificado_at' => 'dateTime', 'visualizada_at' => 'dateTime',
+        'mensagem_apoio' => 'text', 'apoio_at' => 'dateTime', 'pix_notificado_at' => 'dateTime', 'visualizada_at' => 'dateTime', 'url_curta' => 'string',
     ];
     foreach ($campos as $nome => $tipo) {
         if (!Capsule::schema()->hasColumn('mod_recuperacao_thx', $nome)) {
@@ -195,20 +195,8 @@ function recuperacao_thx_proposta_atual($p)
     return $atualizada;
 }
 
-function recuperacao_thx_output($vars)
+function recuperacao_thx_servicos($hoje, $limite2)
 {
-    $hoje = new DateTimeImmutable('today', new DateTimeZone('America/Sao_Paulo'));
-    // Subtração de meses pelo calendário, sem transbordar para o mês seguinte.
-    $limite = static function ($meses) use ($hoje) {
-        $mes = $hoje->modify('first day of this month')->modify('-'.$meses.' months');
-        return $mes->setDate((int)$mes->format('Y'), (int)$mes->format('m'),
-            min((int)$hoje->format('d'), (int)$mes->format('t')))->format('Y-m-d');
-    };
-    $limite2 = $limite(2);
-    $esc = static function ($valor) {
-        return htmlspecialchars((string)$valor, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
-    };
-
     // Apenas produtos Shared Hosting e Reseller Hosting; não inclui VPS, domínios ou outros serviços.
     $faturas = Capsule::table('tblhosting as h')
         ->join('tblproducts as p', 'p.id', '=', 'h.packageid')
@@ -244,6 +232,47 @@ function recuperacao_thx_output($vars)
             $servicos[$fatura->id]['valor'] += (float)$fatura->valor;
         }
     }
+
+    return [$faturas, $servicos];
+}
+
+function recuperacao_thx_link($p, $urlBase)
+{
+    $url = $urlBase.'/modules/addons/recuperacao_thx/proposta.php?t='.$p->token;
+    if (!empty($p->url_curta) && preg_match('~^https://l\.grupothx\.com\.br/[^\s]+$~D', $p->url_curta)) {
+        return $p->url_curta;
+    }
+    try {
+        require_once dirname(__DIR__, 3).'/tarifasTHX.php';
+        $curta = getUrlCurta($url, 'Condição especial para regularizar seus débitos',
+            'Confira sua proposta de regularização', '', $urlBase.'/thx/assets/images/cabecalho-negociacao.jpg', 5);
+        if (is_string($curta) && preg_match('~^https://l\.grupothx\.com\.br/[^\s]+$~D', $curta)) {
+            Capsule::table('mod_recuperacao_thx')->where('id', $p->id)->where('token', $p->token)
+                ->update(['url_curta' => $curta]);
+            $p->url_curta = $curta;
+            return $curta;
+        }
+    } catch (\Throwable $e) {
+        logActivity('Recuperação THX: falha ao encurtar proposta #'.(int)$p->id);
+    }
+    return $url;
+}
+
+function recuperacao_thx_output($vars)
+{
+    $hoje = new DateTimeImmutable('today', new DateTimeZone('America/Sao_Paulo'));
+    // Subtração de meses pelo calendário, sem transbordar para o mês seguinte.
+    $limite = static function ($meses) use ($hoje) {
+        $mes = $hoje->modify('first day of this month')->modify('-'.$meses.' months');
+        return $mes->setDate((int)$mes->format('Y'), (int)$mes->format('m'),
+            min((int)$hoje->format('d'), (int)$mes->format('t')))->format('Y-m-d');
+    };
+    $limite2 = $limite(2);
+    $esc = static function ($valor) {
+        return htmlspecialchars((string)$valor, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    };
+
+    [$faturas, $servicos] = recuperacao_thx_servicos($hoje, $limite2);
 
     $recuperacao = $servicos;
 
@@ -315,7 +344,7 @@ function recuperacao_thx_output($vars)
                     }
                     $original = 'R$ '.number_format((float)$p->valor + (float)$p->perdao, 2, ',', '.');
                     $valor = 'R$ '.number_format((float)$p->valor, 2, ',', '.');
-                    $link = $p->token ? $urlBase.'/modules/addons/recuperacao_thx/proposta.php?t='.$p->token : '[Link gerado ao criar a proposta]';
+                    $link = $p->token ? recuperacao_thx_link($p, $urlBase) : '[Link curto gerado ao criar a proposta]';
                     $assunto = 'Condição especial para regularizar seus débitos';
                     $mensagem = "Olá, ".$cliente->firstname."!\n\nPreparamos uma condição especial para regularizar os débitos de seu serviço de hospedagem (".$s->domain.").\n\nDe ".$original." por apenas ".$valor.".\n\nCom a confirmação do pagamento, os débitos anteriores serão cancelados e o serviço será reativado.\n\nConfira sua proposta:\n".$link;
                     $imagem = $urlBase.'/thx/assets/images/cabecalho-negociacao.jpg';
@@ -414,7 +443,7 @@ function recuperacao_thx_output($vars)
                 } catch (\Throwable $e) {
                     $status .= '<br><small>Revisão necessária</small>';
                 }
-                $acao = '<a class="btn btn-default btn-xs" target="_blank" rel="noopener noreferrer" href="'.$esc($urlBase.'/modules/addons/recuperacao_thx/proposta.php?t='.$p->token).'">Abrir proposta</a>';
+                $acao = '<a class="btn btn-default btn-xs" target="_blank" rel="noopener noreferrer" href="'.$esc(recuperacao_thx_link($p, $urlBase)).'">Abrir proposta</a>';
             }
             $valores = '<small>Total: R$ '.number_format((float)$p->valor + (float)$p->perdao, 2, ',', '.').'</small><br><strong>R$ '.number_format((float)$p->valor, 2, ',', '.').'</strong><br><small>Desconto: R$ '.number_format((float)$p->perdao, 2, ',', '.').'</small>';
             if ($p->status === 'enviada' && $expirada && empty($p->aceita_at) && empty($p->pagamento_at) && empty($p->concluida_at)) {
