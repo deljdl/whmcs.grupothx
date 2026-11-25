@@ -73,10 +73,19 @@ if (realpath($_SERVER['SCRIPT_FILENAME'] ?? '') === __FILE__) {
                     $acao = 'Regularização pendente';
                     $detalhes .= '; '.recuperacao_thx_prever_cancelamentos($p).'; reativação e novo vencimento pendentes de conferência.';
                 } elseif (recuperacao_thx_expirada($p)) {
-                    $acao = 'Revisar encerramento';
-                    $detalhes .= '; '.recuperacao_thx_prever_encerramento($p);
+                    if ($p->status === 'pix_visualizado' || !empty($p->aceita_at) || !empty($p->pix_notificado_at)) {
+                        $acao = 'Encerramento bloqueado — conferir Pix';
+                        $detalhes .= '; Não finalizar enquanto o recebimento do Pix não for conferido. '.recuperacao_thx_prever_cancelamentos($p);
+                    } elseif (empty($p->aviso_final_at)) {
+                        $acao = 'Encerramento bloqueado — aviso final pendente';
+                        $detalhes .= '; Não finalizar sem conferir o aviso final e o recebimento. '.recuperacao_thx_prever_cancelamentos($p);
+                    } else {
+                        $acao = 'Revisar encerramento';
+                        $detalhes .= '; '.recuperacao_thx_prever_encerramento($p);
+                    }
                 } elseif ($p->status === 'pix_visualizado') {
                     $acao = 'Conferir recebimento Pix';
+                    $detalhes .= '; Somente se o pagamento for confirmado: '.recuperacao_thx_prever_cancelamentos($p).'; conferir reativação e novo vencimento.';
                 } elseif (empty($p->enviada_at)) {
                     $acao = 'Envio de proposta';
                     $detalhes .= '; '.recuperacao_thx_comunicar($atual, 'inicial');
@@ -121,7 +130,7 @@ if (realpath($_SERVER['SCRIPT_FILENAME'] ?? '') === __FILE__) {
         $email->Body = $html;
         $email->AddAddress('deljdl@gmail.com', 'Admin');
         if (!$email->Send()) { throw new RuntimeException('Falha no envio do relatório.'); }
-        echo '<p>Recuperação THX: relatório de simulação enviado ao administrador.</p>';
+        echo '<p>Recuperação THX: relatório diário enviado ao administrador.</p>';
     } catch (\Throwable $e) {
         logActivity('Recuperação THX: falha ao enviar relatório de simulação.');
         echo '<p>Recuperação THX: falha no envio do relatório.</p>';

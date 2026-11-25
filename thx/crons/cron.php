@@ -31,12 +31,11 @@ $cronsCronThx = [
         'dias' => [1, 2, 3, 4, 5],
         'horas' => [8],
     ],
-    // Temporariamente desabilitado até validação do primeiro envio individual.
-    /*'cron_recuperacao_thx' => [
+    'cron_recuperacao_thx' => [
         'path' => $rootDirCronThx . '/thx/crons/cron_recuperacao_thx.php',
         'dias' => [1, 2, 3, 4, 5, 6, 7],
         'horas' => [10],
-    ],*/
+    ],
     'cron_resumo_diario' => [
         'path' => $rootDirCronThx . '/thx/crons/cron-resumo-diario.php',
         'dias' => [1, 2, 3, 4, 5],
