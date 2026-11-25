@@ -17,6 +17,40 @@ if (!is_writable($controleDirCronThx)) {
     die("O diretório de controle não é gravável: $controleDirCronThx");
 }
 
+$alertaCronThx = static function ($cron, $erro, $arquivo, $linha) {
+    $mensagem = "[CRON THX] Falha em ".$cron."\n"
+        ."Horário: ".date('d/m/Y H:i:s')."\n"
+        ."Erro: ".$erro."\n"
+        ."Arquivo: ".$arquivo."\n"
+        ."Linha: ".$linha."\n";
+    error_log($mensagem);
+    if (!error_log($mensagem, 1, 'deljdl@gmail.com')) {
+        error_log('[CRON THX] Não foi possível enviar o alerta por e-mail.');
+    }
+};
+
+$lockCronThx = fopen($controleDirCronThx . '/cron-thx.lock', 'c');
+if (!$lockCronThx) {
+    $alertaCronThx('cron.php', 'Não foi possível abrir o arquivo de bloqueio', __FILE__, __LINE__);
+    return;
+}
+if (!flock($lockCronThx, LOCK_EX | LOCK_NB)) {
+    fclose($lockCronThx);
+    return;
+}
+
+$cronAtivoThx = null;
+register_shutdown_function(static function () use (&$cronAtivoThx, $alertaCronThx) {
+    if ($cronAtivoThx === null) return;
+    $erro = error_get_last();
+    $alertaCronThx(
+        $cronAtivoThx,
+        'Execução interrompida antes de concluir'.($erro ? ' (tipo PHP '.$erro['type'].')' : ''),
+        $erro['file'] ?? __FILE__,
+        $erro['line'] ?? 0
+    );
+});
+
 require_once $rootDirCronThx . '/init.php';
 require_once $rootDirCronThx . '/tarifasTHX.php';
 
@@ -87,16 +121,25 @@ foreach ($cronsCronThx as $arquivoCronThx => $agendaCronThx) {
             continue;
         }
 
-        require $agendaCronThx['path'];
+        $cronAtivoThx = $arquivoCronThx;
+        try {
+            require $agendaCronThx['path'];
 
-        echo '<br />Executado cron: ' . $arquivoCronThx . ' para a hora agendada: ' . $agendadaCronThx->format('Y-m-d H:i:s');
+            if (file_put_contents($controleCronThx, date('Y-m-d H:i:s')) === false) {
+                throw new \RuntimeException('Falha ao gravar controle do cron');
+            }
 
-        file_put_contents($controleCronThx, date('Y-m-d H:i:s'));
+            echo '<br />Executado cron: ' . $arquivoCronThx . ' para a hora agendada: ' . $agendadaCronThx->format('Y-m-d H:i:s');
+            echo '<br />Controle criado: ' . $arquivoCronThx;
+            echo '<hr />';
 
-        echo '<br />Controle criado: ' . $arquivoCronThx;
-        echo '<hr />';
-
-        $jaRodouNessaHoraCronThx = true;
+            $jaRodouNessaHoraCronThx = true;
+        } catch (\Throwable $e) {
+            $alertaCronThx($arquivoCronThx, get_class($e), $e->getFile(), $e->getLine());
+            echo '<br />Falha no cron: ' . $arquivoCronThx . '<hr />';
+        } finally {
+            $cronAtivoThx = null;
+        }
     }
 }
 echo '<h3>Fim da execução do cron THX</h3>';
