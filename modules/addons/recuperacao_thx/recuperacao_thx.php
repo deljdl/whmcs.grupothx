@@ -399,33 +399,6 @@ function recuperacao_thx_output($vars)
     if (empty($_SESSION['recuperacao_thx_csrf'])) {
         $_SESSION['recuperacao_thx_csrf'] = bin2hex(random_bytes(32));
     }
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['criar_proposta'])) {
-        try {
-            if (!hash_equals($_SESSION['recuperacao_thx_csrf'], (string)($_POST['csrf_recuperacao'] ?? ''))) {
-                throw new RuntimeException('Solicitação inválida.');
-            }
-            $id = (int)$_POST['criar_proposta'];
-            if (Capsule::table('mod_recuperacao_thx')->where('servico_id', $id)->exists()) {
-                throw new RuntimeException('Já existe uma proposta para este serviço.');
-            }
-            $encontrado = false;
-            foreach ($servicos as $registro) {
-                if ((int)$registro['servico']->id === $id) {
-                    recuperacao_thx_criar_proposta($registro);
-                    $encontrado = true;
-                    break;
-                }
-            }
-            if (!$encontrado) {
-                throw new RuntimeException('Hospedagem não elegível.');
-            }
-            echo '<div class="alert alert-success">Proposta criada. Nenhuma mensagem ou cobrança foi enviada.</div>';
-        } catch (RuntimeException $e) {
-            echo '<div class="alert alert-warning">'.nl2br($esc($e->getMessage())).'</div>';
-        } catch (\Throwable $e) {
-            echo '<div class="alert alert-danger">Não foi possível criar a proposta.</div>';
-        }
-    }
     $propostas = Capsule::table('mod_recuperacao_thx')->get()->keyBy('servico_id');
     $urlBase = rtrim((string)Capsule::table('tblconfiguration')->where('setting', 'SystemURL')->value('value'), '/');
     echo '<div class="alert alert-info">Envio real de propostas por e-mail e WhatsApp. Cancelamentos de faturas e finalização de serviços permanecem em simulação.</div>';
@@ -435,11 +408,11 @@ function recuperacao_thx_output($vars)
         <button type="submit" class="btn btn-primary" name="enviar_negociacoes" value="1" onclick="return confirm(&quot;Enviar propostas reais aos serviços selecionados?&quot;)">Enviar propostas (e-mail e WhatsApp)</button></form>';
     echo '<script>document.getElementById("selecionar-todas-negociacoes").addEventListener("change",function(){document.querySelectorAll(".selecionar-negociacao").forEach(e=>e.checked=this.checked);});</script>';
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar_negociacoes'])) {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && (isset($_POST['enviar_negociacoes']) || isset($_POST['criar_proposta']))) {
         if (!is_string($_POST['csrf_recuperacao'] ?? null) || !hash_equals($_SESSION['recuperacao_thx_csrf'], $_POST['csrf_recuperacao'])) {
             echo '<div class="alert alert-warning">Solicitação inválida.</div>';
         } else {
-            $selecionados = array_map('intval', (array)($_POST['servicos_simulacao'] ?? []));
+            $selecionados = isset($_POST['criar_proposta']) ? [(int)$_POST['criar_proposta']] : array_map('intval', (array)($_POST['servicos_simulacao'] ?? []));
             echo '<h2>Resultado do envio</h2>';
             if (!$selecionados) {
                 echo '<p>Selecione ao menos uma hospedagem.</p>';
@@ -566,7 +539,7 @@ function recuperacao_thx_output($vars)
                 $acao .= '<br><button type="button" class="btn btn-danger btn-xs" style="white-space:normal" disabled>Cancelar cobranças e finalizar serviço</button><br><small>Aguardando validação</small>';
             }
         } elseif (isset($servicos[$s->id])) {
-            $acao = '<form method="post"><input type="hidden" name="csrf_recuperacao" value="'.$esc($_SESSION['recuperacao_thx_csrf']).'"><button class="btn btn-primary btn-xs" name="criar_proposta" value="'.(int)$s->id.'">Criar proposta</button></form>';
+            $acao = '<form method="post"><input type="hidden" name="csrf_recuperacao" value="'.$esc($_SESSION['recuperacao_thx_csrf']).'"><button class="btn btn-primary btn-xs" name="criar_proposta" value="'.(int)$s->id.'" onclick="return confirm(&quot;Enviar proposta real para este serviço?&quot;)">Criar e enviar proposta</button></form>';
         }
         $atraso = $s->duedate ? $esc(date('d/m/Y', strtotime($s->duedate))).'<br><small>'.$hoje->diff(new DateTimeImmutable($s->duedate, $hoje->getTimezone()))->days.' dias</small>' : '—';
         echo '<tr>
