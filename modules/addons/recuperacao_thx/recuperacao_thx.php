@@ -428,55 +428,52 @@ function recuperacao_thx_output($vars)
     }
     $propostas = Capsule::table('mod_recuperacao_thx')->get()->keyBy('servico_id');
     $urlBase = rtrim((string)Capsule::table('tblconfiguration')->where('setting', 'SystemURL')->value('value'), '/');
-    echo '<div class="alert alert-info">Modo proposta: nenhuma campanha, cobrança ou exclusão será executada. A classificação é preliminar e exige conferência dos pagamentos e das faturas compartilhadas.</div>';
+    echo '<div class="alert alert-info">Envio real de propostas por e-mail e WhatsApp. Cancelamentos de faturas e finalização de serviços permanecem em simulação.</div>';
     echo '<p>Data de referência: '.$hoje->format('d/m/Y').' | Elegíveis a partir de 2 meses de atraso: '.$esc($limite2).'</p>';
     echo '<form id="simulacao-negociacoes" method="post"><input type="hidden" name="csrf_recuperacao" value="'.$esc($_SESSION['recuperacao_thx_csrf']).'">
         <label><input type="checkbox" id="selecionar-todas-negociacoes"> Selecionar todas para negociação</label>
-        <button type="submit" class="btn btn-primary" name="simular_negociacoes" value="1">Simular envio (e-mail e WhatsApp)</button></form>';
+        <button type="submit" class="btn btn-primary" name="enviar_negociacoes" value="1" onclick="return confirm(&quot;Enviar propostas reais aos serviços selecionados?&quot;)">Enviar propostas (e-mail e WhatsApp)</button></form>';
     echo '<script>document.getElementById("selecionar-todas-negociacoes").addEventListener("change",function(){document.querySelectorAll(".selecionar-negociacao").forEach(e=>e.checked=this.checked);});</script>';
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['simular_negociacoes'])) {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar_negociacoes'])) {
         if (!is_string($_POST['csrf_recuperacao'] ?? null) || !hash_equals($_SESSION['recuperacao_thx_csrf'], $_POST['csrf_recuperacao'])) {
             echo '<div class="alert alert-warning">Solicitação inválida.</div>';
         } else {
             $selecionados = array_map('intval', (array)($_POST['servicos_simulacao'] ?? []));
-            echo '<h2>Simulação de envio — nenhuma mensagem enviada</h2>';
+            echo '<h2>Resultado do envio</h2>';
             if (!$selecionados) {
                 echo '<p>Selecione ao menos uma hospedagem.</p>';
             }
-            foreach ($servicos as $registro) {
-                $s = $registro['servico'];
-                if (!in_array((int)$s->id, $selecionados, true)) {
-                    continue;
-                }
+            $lock = fopen(sys_get_temp_dir().'/thx-recuperacao-cron.lock', 'c');
+            if (!$lock || !flock($lock, LOCK_EX | LOCK_NB)) {
+                echo '<div class="alert alert-warning">Outra execução de recuperação está em andamento.</div>';
+            } else {
                 try {
-                    $p = isset($propostas[$s->id]) ? recuperacao_thx_proposta_atual($propostas[$s->id]) : recuperacao_thx_criar_proposta($registro, true);
-                    if (!in_array($p->status, ['criada', 'enviada'], true)) {
-                        throw new RuntimeException('Proposta já iniciada ou encerrada.');
+                    foreach ($servicos as $registro) {
+                        $s = $registro['servico'];
+                        if (!in_array((int)$s->id, $selecionados, true)) { continue; }
+                        try {
+                            $p = Capsule::table('mod_recuperacao_thx')->where('servico_id', $s->id)->first();
+                            if (!$p) {
+                                recuperacao_thx_criar_proposta($registro);
+                                $p = Capsule::table('mod_recuperacao_thx')->where('servico_id', $s->id)->first();
+                            }
+                            if (!$p || $p->status !== 'criada' || !empty($p->enviada_at) || recuperacao_thx_expirada($p)) {
+                                throw new RuntimeException('Proposta já enviada, iniciada ou encerrada.');
+                            }
+                            $p = recuperacao_thx_proposta_atual($p);
+                            $resultado = recuperacao_thx_comunicar($p, 'inicial');
+                            echo '<div class="alert alert-info">'.$esc($s->domain).': '.$esc($resultado).'</div>';
+                        } catch (\Throwable $e) {
+                            echo '<div class="alert alert-warning">'.$esc($s->domain).': '.$esc(get_class($e) === RuntimeException::class ? $e->getMessage() : 'Falha no processamento; verificar logs.').'</div>';
+                        }
                     }
-                    if (recuperacao_thx_expirada($p)) {
-                        throw new RuntimeException('Prazo da negociação encerrado.');
-                    }
-                    $cliente = Capsule::table('tblclients')->where('id', $s->userid)->first(['firstname', 'email', 'phonenumber']);
-                    if (!$cliente) {
-                        throw new RuntimeException('Cliente não localizado.');
-                    }
-                    $original = 'R$ '.number_format((float)$p->valor + (float)$p->perdao, 2, ',', '.');
-                    $valor = 'R$ '.number_format((float)$p->valor, 2, ',', '.');
-                    $link = $p->token ? recuperacao_thx_link($p, $urlBase) : '[Link curto gerado ao criar a proposta]';
-                    $assunto = 'Condição especial para regularizar seus débitos';
-                    $mensagem = "Olá, ".$cliente->firstname."!\n\nPreparamos uma condição especial para regularizar os débitos de seu serviço de hospedagem (".$s->domain.").\n\nDe ".$original." por apenas ".$valor.".\n\nCom a confirmação do pagamento, os débitos anteriores serão cancelados e o serviço será reativado.\n\nConfira sua proposta:\n".$link;
-                    $imagem = $urlBase.'/thx/assets/images/cabecalho-negociacao.jpg';
-                    $cabecalho = '<img src="'.$esc($imagem).'" alt="Grupo THX - Negociação" style="display:block;width:100%;max-width:560px;height:auto;margin:10px 0">';
-                    echo '<div class="panel panel-default"><div class="panel-heading"><strong>'.$esc($s->domain).'</strong></div><div class="panel-body">'
-                        .'<p><strong>E-mail:</strong> '.$esc($cliente->email).'<br><strong>Assunto:</strong> '.$esc($assunto).'</p>'.$cabecalho.'<pre style="white-space:pre-wrap">'.$esc($mensagem).'</pre>'
-                        .'<p><strong>WhatsApp:</strong> '.$esc($cliente->phonenumber).'</p>'.$cabecalho.'<pre style="white-space:pre-wrap">'.$esc($mensagem).'</pre></div></div>';
-                } catch (RuntimeException $e) {
-                    echo '<div class="alert alert-warning">'.$esc($s->domain).': '.nl2br($esc(get_class($e) === RuntimeException::class ? $e->getMessage() : 'Falha na conferência.')).'</div>';
-                } catch (\Throwable $e) {
-                    echo '<div class="alert alert-warning">'.$esc($s->domain).': Falha na conferência.</div>';
+                } finally {
+                    flock($lock, LOCK_UN);
+                    fclose($lock);
                 }
             }
+            $propostas = Capsule::table('mod_recuperacao_thx')->get()->keyBy('servico_id');
         }
     }
 
@@ -530,7 +527,7 @@ function recuperacao_thx_output($vars)
         foreach ($registro['faturas'] as $f) {
             $links[] = '<a target="_blank" rel="noopener" href="invoices.php?action=edit&amp;id='.(int)$f->fatura_id.'">#'.(int)$f->fatura_id.'</a> ('.$esc(date('d/m/Y', strtotime($f->duedate))).')';
         }
-        $selecionavel = isset($servicos[$s->id]) && (!$p || (in_array($p->status, ['criada', 'enviada'], true) && !recuperacao_thx_expirada($p)));
+        $selecionavel = isset($servicos[$s->id]) && (!$p || ($p->status === 'criada' && empty($p->enviada_at) && !recuperacao_thx_expirada($p)));
         $checkbox = $selecionavel ? '<label><input type="checkbox" class="selecionar-negociacao" form="simulacao-negociacoes" name="servicos_simulacao[]" value="'.(int)$s->id.'"> Negociar</label><br>' : '';
         $identificador = $valores = '—';
         $status = 'Sem proposta';
