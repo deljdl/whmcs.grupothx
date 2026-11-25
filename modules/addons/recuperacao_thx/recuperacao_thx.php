@@ -529,7 +529,7 @@ function recuperacao_thx_output($vars)
                 }
                 $item('Conferir resultado no WHMCS e registrar a conclusão da negociação.');
                 echo '<p><strong>'.($bloqueado ? 'Prévia somente: não execute o encerramento enquanto houver bloqueios.' : 'Nenhuma ação será executada pelo módulo.').'</strong> Os itens marcados não são gravados. A baixa da negociação ainda não está disponível.</p>';
-            } catch (\\Throwable $e) {
+            } catch (\Throwable $e) {
                 echo '<div class="alert alert-danger">Checklist bloqueado: '.$esc(get_class($e) === RuntimeException::class ? $e->getMessage() : 'Falha na consulta; verificar logs.').'</div>';
             }
             echo '</div></div>';
