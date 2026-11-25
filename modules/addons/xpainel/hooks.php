@@ -21,7 +21,6 @@ if (!defined("WHMCS"))
 require_once('/home/thxcom/whmcs.grupothx.com.br/tarifasTHX.php');
 /// /home/thxcom/public_html/thx
 
-define('TOKEN_XPAINEL', 'Thayna-Papai-Jardel-Pra-Sempre-85691184');
 function xpainel_hook_login($vars) {
     // Your code goes here
 }
