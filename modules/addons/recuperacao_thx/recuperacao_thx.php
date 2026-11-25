@@ -294,7 +294,7 @@ function recuperacao_thx_comunicar($p, $tipo)
     $assunto = 'Condição especial para regularizar seus débitos';
     $original = 'R$ '.number_format((float)$p->valor + (float)$p->perdao, 2, ',', '.');
     $valor = 'R$ '.number_format((float)$p->valor, 2, ',', '.');
-    $msg = "Olá, ".$cliente->firstname."!\n\nPreparamos uma condição especial para regularizar os débitos de seu serviço de hospedagem (".$p->dominio.").\n\nDe ".$original." por apenas ".$valor.".\n\nCom a confirmação do pagamento, os débitos anteriores serão cancelados e o serviço será reativado.\n\nConfira sua proposta:\n".$link;
+    $msg = "Olá, {primeiro_nome}!\n\nPreparamos uma condição especial para regularizar os débitos de seu serviço de hospedagem (".$p->dominio.").\n\nDe ".$original." por apenas ".$valor.".\n\nCom a confirmação do pagamento, os débitos anteriores serão cancelados e o serviço será reativado.\n\nConfira sua proposta:\n".$link;
     if ($tipo === 'final') {
         $assunto = 'Aviso final para regularizar sua hospedagem';
         $msg = "Atenção: o prazo para regularizar sua hospedagem está próximo do encerramento. Após esse prazo, o serviço poderá ser finalizado e seus arquivos e e-mails excluídos definitivamente.\n\n".$msg;
@@ -350,31 +350,9 @@ function recuperacao_thx_comunicar($p, $tipo)
                 }
                 $lote[$canal] = 'aceito';
             } else {
-                // A preferência de bloqueio do WhatsApp existente é o primeiro campo customizado de cliente.
-                $campo = Capsule::table('tblcustomfields')->where('type', 'client')->orderBy('sortorder')->orderBy('id')->first(['id', 'fieldname']);
-                if (!$campo || !preg_match('/whats/i', $campo->fieldname)) {
-                    $lote[$canal] = 'bloqueado: conferir campo de preferência WhatsApp';
-                } elseif (Capsule::table('tblcustomfieldsvalues')->where('fieldid', $campo->id)->where('relid', $cliente->id)->value('value') === 'on') {
-                    $lote[$canal] = 'bloqueado pelo cliente';
-                } else {
-                    $telefone = normalizaTelefone($cliente->phonenumber);
-                    if ($telefone === '') { throw new RuntimeException('Telefone inválido'); }
-                    $ch = curl_init('https://autoresponder.grupothx.com.br/api/createMessage');
-                    curl_setopt_array($ch, [CURLOPT_RETURNTRANSFER => true, CURLOPT_POST => true,
-                        CURLOPT_POSTFIELDS => json_encode(['whatsnumber' => $telefone, 'mensagem' => $msg,
-                            'imagemcabecalho' => $imagem, 'tipo_msg' => 2, 'arquivo_local' => 'Confira sua negociação',
-                            'tipo_arquivo' => $assunto, 'url_arquivo' => $link, 'prioridade' => 1]),
-                        CURLOPT_HTTPHEADER => ['Content-Type: application/json', 'Accept: application/json'],
-                        CURLOPT_CONNECTTIMEOUT => 2, CURLOPT_TIMEOUT => 5, CURLOPT_FOLLOWLOCATION => false]);
-                    $body = curl_exec($ch);
-                    $http = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
-                    curl_close($ch);
-                    $resp = json_decode((string)$body, true);
-                    if ($http !== 202 || ($resp['status'] ?? $resp['success'] ?? false) !== true) {
-                        throw new RuntimeException('Fila não confirmada (HTTP '.$http.')');
-                    }
-                    $lote[$canal] = 'na fila';
-                }
+                $lote[$canal] = enviaWhatsAppTodosOsContatos(
+                    $cliente->id, $msg, $imagem, '', '', 2, 'Confira sua negociação', $assunto, $link, 1
+                );
             }
         } catch (\Throwable $e) {
             $lote[$canal] = 'revisão necessária: '.(get_class($e) === RuntimeException::class ? $e->getMessage() : 'falha não confirmada');

@@ -1195,7 +1195,51 @@ Imprimir Boleto
 	return $ret;
 }
 
-function enviaWhatsApp($whatsNumber, $msg, $imagem = '', $code = '', $document = '', $tipo_msg = 1, $title = '', $linkDescription = '', $linkUrl = '', $prioridade = 0)
+function enviaWhatsAppTodosOsContatos($clienteId, $msg, $imagem = '', $code = '', $document = '', $tipo_msg = 1, $title = '', $linkDescription = '', $linkUrl = '', $prioridade = 0)
+{
+    $cliente = Capsule::table('tblclients')->where('id', $clienteId)->first();
+    if (!$cliente) { throw new RuntimeException('Cliente não encontrado.'); }
+
+    $campo = Capsule::table('tblcustomfields')->where('type', 'client')->orderBy('sortorder')->orderBy('id')->first(['id', 'fieldname']);
+    if (!$campo || !preg_match('/whats/i', $campo->fieldname)) {
+        return 'bloqueado: conferir campo de preferência WhatsApp';
+    }
+    if (Capsule::table('tblcustomfieldsvalues')->where('fieldid', $campo->id)->where('relid', $clienteId)->value('value') === 'on') {
+        return 'bloqueado pelo cliente';
+    }
+
+    $primeiro = static function ($nome) {
+        return preg_split('/\s+/u', trim((string)$nome))[0];
+    };
+    $nomeCliente = trim($cliente->firstname.' '.$cliente->lastname);
+    $contatos = array_merge([(array)$cliente], getClientContacts($clienteId));
+    $telefones = [];
+    $confirmados = 0;
+    $falhas = 0;
+    foreach ($contatos as $contato) {
+        $telefone = normalizaTelefone($contato['phonenumber'] ?? '');
+        if ($telefone === '' || isset($telefones[$telefone])) { continue; }
+        $telefones[$telefone] = true;
+        $mensagem = strtr($msg, [
+            '{primeiro_nome}' => $primeiro($contato['firstname'] ?? ''),
+            '{nome}' => trim(($contato['firstname'] ?? '').' '.($contato['lastname'] ?? '')),
+            '{primeiro_nome_cliente}' => $primeiro($cliente->firstname),
+            '{nome_cliente}' => $nomeCliente,
+        ]);
+        if (enviaWhatsApp($telefone, $mensagem, $imagem, $code, $document, $tipo_msg, $title, $linkDescription, $linkUrl, $prioridade, true)) {
+            $confirmados++;
+        } else {
+            $falhas++;
+        }
+    }
+    if (!$telefones) { return 'bloqueado: nenhum telefone disponível'; }
+    if ($falhas) {
+        return 'revisão necessária: '.$confirmados.' na fila; '.$falhas.' sem confirmação';
+    }
+    return 'na fila';
+}
+
+function enviaWhatsApp($whatsNumber, $msg, $imagem = '', $code = '', $document = '', $tipo_msg = 1, $title = '', $linkDescription = '', $linkUrl = '', $prioridade = 0, $confirmarFila = false)
 {
     if ($whatsNumber == '') {
         return false;
@@ -1228,6 +1272,25 @@ function enviaWhatsApp($whatsNumber, $msg, $imagem = '', $code = '', $document =
         | JSON_UNESCAPED_SLASHES
         | JSON_INVALID_UTF8_SUBSTITUTE
     );
+
+    // Confirmação opcional da fila, sem alterar o retorno dos usos antigos.
+    if ($confirmarFila) {
+        $ch = curl_init('https://'.$host.$path);
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS => $json,
+            CURLOPT_HTTPHEADER => ['Content-Type: application/json', 'Accept: application/json'],
+            CURLOPT_CONNECTTIMEOUT => 2,
+            CURLOPT_TIMEOUT => 5,
+            CURLOPT_FOLLOWLOCATION => false,
+        ]);
+        $body = curl_exec($ch);
+        $http = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+        $resp = json_decode((string)$body, true);
+        return $http === 202 && ($resp['status'] ?? $resp['success'] ?? false) === true;
+    }
 
     // Mantém a validação do certificado TLS habilitada.
     $context = stream_context_create([
