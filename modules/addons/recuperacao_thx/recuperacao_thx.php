@@ -318,16 +318,11 @@ function recuperacao_thx_comunicar($p, $tipo)
             if ($canal === 'email') {
                 if (!filter_var($cliente->email, FILTER_VALIDATE_EMAIL)) { throw new RuntimeException('E-mail inválido'); }
                 $esc = static function ($v) { return htmlspecialchars((string)$v, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); };
-                $email = new \PHPMailer\PHPMailer\PHPMailer();
-                $email->CharSet = 'UTF-8';
-                $email->IsHTML(true);
-                $email->From = 'financeiro@grupothx.com.br';
-                $email->FromName = 'Grupo THX';
-                $email->AddAddress($cliente->email);
-                $email->Subject = $assunto;
-                $email->Body = '<div style="max-width:600px;margin:auto;font-family:Arial"><img src="'.$esc($imagem).'" alt="Grupo THX" style="width:100%;height:auto"><p>'.nl2br($esc($msg)).'</p><p><a href="'.$esc($link).'" style="display:inline-block;padding:12px;background:#173b62;color:white">Abrir proposta</a></p></div>';
-                $email->AltBody = $msg;
-                if (!$email->Send()) { throw new RuntimeException('Envio não confirmado: '.$email->ErrorInfo); }
+                $html = '<div style="max-width:600px;margin:auto;font-family:Arial"><img src="'.$esc($imagem).'" alt="Grupo THX" style="width:100%;height:auto"><p>'.nl2br($esc($msg)).'</p><p><a href="'.$esc($link).'" style="display:inline-block;padding:12px;background:#173b62;color:white">Abrir proposta</a></p></div>';
+                $retorno = enviaEmailPersonalizadoTHX($cliente->id, $assunto, $html);
+                if (($retorno['result'] ?? '') !== 'success') {
+                    throw new RuntimeException('WHMCS: '.($retorno['message'] ?? 'Envio não confirmado'));
+                }
                 $lote[$canal] = 'aceito';
             } else {
                 // A preferência de bloqueio do WhatsApp existente é o primeiro campo customizado de cliente.

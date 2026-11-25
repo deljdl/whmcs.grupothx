@@ -1145,6 +1145,18 @@ function enviaEmailTHX($template, $id)
         return false;
 }
 
+// Padrão THX para novos e-mails personalizados destinados a clientes.
+// O WHMCS aplica suas configurações de envio e layout global.
+function enviaEmailPersonalizadoTHX($clienteId, $assunto, $html)
+{
+    return localAPI('SendEmail', [
+        'id' => (int)$clienteId,
+        'customtype' => 'general',
+        'customsubject' => $assunto,
+        'custommessage' => $html
+    ], 'deljdl');
+}
+
 function getDadosBoletoHtmlTHX($invoiceId, $html = false)
 {
 	return;
