@@ -151,7 +151,7 @@ function recuperacao_thx_expirada($p)
         return false;
     }
     $inicio = new DateTimeImmutable($p->enviada_at, new DateTimeZone('America/Sao_Paulo'));
-    $mes = $inicio->modify('first day of this month')->modify('+4 months');
+    $mes = $inicio->modify('first day of this month')->modify('+1 month');
     $fim = $mes->setDate((int)$mes->format('Y'), (int)$mes->format('m'),
         min((int)$inicio->format('d'), (int)$mes->format('t')));
     return new DateTimeImmutable('now', new DateTimeZone('America/Sao_Paulo')) >= $fim;

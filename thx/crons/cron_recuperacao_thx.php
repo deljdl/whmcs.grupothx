@@ -91,13 +91,13 @@ if (realpath($_SERVER['SCRIPT_FILENAME'] ?? '') === __FILE__) {
                     $detalhes .= '; '.recuperacao_thx_comunicar($atual, 'inicial');
                 } else {
                     $inicio = new DateTimeImmutable($p->enviada_at, $hoje->getTimezone());
-                    $mesFim = $inicio->modify('first day of this month')->modify('+4 months');
+                    $mesFim = $inicio->modify('first day of this month')->modify('+1 month');
                     $fim = $mesFim->setDate((int)$mesFim->format('Y'), (int)$mesFim->format('m'), min((int)$inicio->format('d'), (int)$mesFim->format('t')));
                     $ultimo = new DateTimeImmutable($p->ultimo_envio_at ?? $p->enviada_at, $hoje->getTimezone());
-                    if (empty($p->aviso_final_at) && $hoje >= $fim->modify('-30 days')->setTime(0, 0)) {
+                    if (empty($p->aviso_final_at) && $hoje >= $fim->modify('-7 days')->setTime(0, 0)) {
                         $acao = 'Aviso final';
                         $detalhes .= '; '.recuperacao_thx_comunicar($atual, 'final');
-                    } elseif ($hoje >= $ultimo->modify('+7 days')->setTime(0, 0)) {
+                    } elseif ($hoje >= $ultimo->modify('+3 days')->setTime(0, 0)) {
                         $acao = 'Reenvio de proposta';
                         $detalhes .= '; '.recuperacao_thx_comunicar($atual, 'reenvio');
                     } else {
