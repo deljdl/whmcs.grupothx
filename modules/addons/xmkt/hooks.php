@@ -19,7 +19,6 @@ if (!defined("WHMCS"))
     die("This file cannot be accessed directly");
 
 
-define('TOKEN_MKT', 'Thayna-Papai-Jardel-Pra-Sempre-85691184');
 function xmkt_hook_login($vars) {
     // Your code goes here
 }
