@@ -626,9 +626,9 @@ function recuperacao_thx_output($vars)
             $valores = '<small>Total: R$ '.number_format((float)$p->valor + (float)$p->perdao, 2, ',', '.').'</small><br><strong>R$ '.number_format((float)$p->valor, 2, ',', '.').'</strong><br><small>Desconto: R$ '.number_format((float)$p->perdao, 2, ',', '.').'</small>';
             if (($ativa || $p->status === 'paga') && empty($p->concluida_at)) {
                 $urlChecklist = 'addonmodules.php?module=recuperacao_thx&amp;proposta_id='.(int)$p->id.'&amp;checklist=';
-                $acao .= '<br><a class="btn btn-success btn-xs" style="white-space:normal;margin-top:5px" href="'.$urlChecklist.'recuperar#checklist-negociacao">Recuperar cliente</a>';
+                $acao .= '<br><a class="btn btn-success btn-xs" style="white-space:normal;margin-top:5px" href="'.$urlChecklist.'recuperar#checklist-negociacao">Confirmar pagamento</a>';
                 if ($expirada && $p->status === 'enviada' && !empty($p->aviso_final_at) && empty($p->aceita_at) && empty($p->pix_notificado_at) && empty($p->pagamento_at)) {
-                    $acao .= '<br><a class="btn btn-danger btn-xs" style="white-space:normal;margin-top:5px" href="'.$urlChecklist.'encerrar#checklist-negociacao">Encerrar negociação</a>';
+                    $acao .= '<br><a class="btn btn-danger btn-xs" style="white-space:normal;margin-top:5px" href="'.$urlChecklist.'encerrar#checklist-negociacao">Encerrar por inadimplência</a>';
                 }
             }
         } elseif (isset($servicos[$s->id])) {
