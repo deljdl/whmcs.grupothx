@@ -1131,30 +1131,27 @@ function tiracento($texto)
     return $titletext;
 }
 
-function enviaEmailTHX($template, $id)
+// Padrão THX: templates existentes ou conteúdo personalizado, pela API nativa WHMCS.
+// O retorno booleano padrão preserva as chamadas antigas.
+function enviaEmailTHX($template, $id, $assunto = '', $html = '', $retornoCompleto = false)
 {
-	    $command = 'SendEmail';
-        $values=$vars;
-       	$values = array('messagename' => $template, 'id' => $id);
-        $adminuser = 'deljdl';
-        $results = localAPI($command,$values,$adminuser);
-        if(isset($results['result']) && $results['result'] == 'success')
-        {
-            return true;
-        }
-        return false;
-}
+    if ($html !== '') {
+        $values = [
+            'id' => (int)$id,
+            'customtype' => 'general',
+            'customsubject' => $assunto,
+            'custommessage' => $html
+        ];
+    } else {
+        $values = [
+            'messagename' => $template,
+            'id' => $id
+        ];
+    }
 
-// Padrão THX para novos e-mails personalizados destinados a clientes.
-// O WHMCS aplica suas configurações de envio e layout global.
-function enviaEmailPersonalizadoTHX($clienteId, $assunto, $html)
-{
-    return localAPI('SendEmail', [
-        'id' => (int)$clienteId,
-        'customtype' => 'general',
-        'customsubject' => $assunto,
-        'custommessage' => $html
-    ], 'deljdl');
+    $results = localAPI('SendEmail', $values, 'deljdl');
+
+    return $retornoCompleto ? $results : (($results['result'] ?? '') === 'success');
 }
 
 function getDadosBoletoHtmlTHX($invoiceId, $html = false)
