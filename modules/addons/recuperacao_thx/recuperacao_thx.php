@@ -489,6 +489,53 @@ function recuperacao_thx_output($vars)
         }
     }
 
+    // Checklist somente leitura: nenhuma operação financeira ou de hospedagem.
+    if (isset($_GET['checklist'], $_GET['proposta_id'])) {
+        $tipo = $_GET['checklist'];
+        $p = Capsule::table('mod_recuperacao_thx')->where('id', (int)$_GET['proposta_id'])->first();
+        if ($p && in_array($tipo, ['recuperar', 'encerrar'], true) && in_array($p->status, ['criada', 'enviada', 'pix_visualizado', 'paga'], true)) {
+            $recuperar = $tipo === 'recuperar';
+            echo '<div id="checklist-negociacao" class="panel panel-default"><div class="panel-heading"><strong>Checklist — '.($recuperar ? 'Recuperar cliente' : 'Encerrar negociação').' — '.$esc($p->dominio).' (#'.(int)$p->id.')</strong></div><div class="panel-body">';
+            echo '<p>Simulação para execução manual. Marcar os itens não altera dados nem confirma pagamentos.</p>';
+            echo '<p><a target="_blank" rel="noopener" href="clientsservices.php?userid='.(int)$p->cliente_id.'&amp;id='.(int)$p->servico_id.'">Abrir serviço #'.(int)$p->servico_id.'</a> | <a target="_blank" rel="noopener" href="clientsinvoices.php?userid='.(int)$p->cliente_id.'&amp;serviceid='.(int)$p->servico_id.'&amp;status=Unpaid">Ver todas as faturas em aberto</a></p>';
+            $bloqueado = false;
+            if (!$recuperar && (!recuperacao_thx_expirada($p) || empty($p->aviso_final_at) || !empty($p->aceita_at) || !empty($p->pix_notificado_at) || !empty($p->pagamento_at) || in_array($p->status, ['pix_visualizado', 'paga'], true))) {
+                $bloqueado = true;
+                echo '<div class="alert alert-warning">Encerramento bloqueado: confira prazo, aviso final e eventual pagamento Pix antes de finalizar.</div>';
+            }
+            try {
+                $atual = recuperacao_thx_proposta_atual($p);
+                $item = static function ($texto) { echo '<div class="checkbox"><label><input type="checkbox"> '.$texto.'</label></div>'; };
+                $item(($recuperar ? 'Confirmar recebimento de ' : 'Confirmar ausência de recebimento de ').'R$ '.number_format((float)$p->valor, 2, ',', '.').' pelo Pix <strong>R'.(int)$p->id.'S'.(int)$p->servico_id.'</strong>, no extrato bancário.');
+                if (!$recuperar) {
+                    $item('Conferir expiração do prazo e envio do aviso final.');
+                }
+                echo '<h4>Faturas exclusivas do serviço</h4>';
+                foreach (json_decode($atual->faturas, true) as $f) {
+                    $id = (int)$f['id'];
+                    $gateway = Capsule::table('tblinvoices')->where('id', $id)->value('paymentmethod');
+                    $item('Conferir situação e pagamentos no gateway '.$esc($gateway).'; cancelar a cobrança externa se aplicável e somente após confirmar que não está paga.');
+                    $item('Cancelar no WHMCS a fatura <a target="_blank" rel="noopener" href="invoices.php?action=edit&amp;id='.$id.'">#'.$id.'</a> — R$ '.number_format((float)$f['valor'], 2, ',', '.').' — '.$esc($f['vencimento']).', sem gerar crédito indevido.');
+                }
+                if ($atual->compartilhadas) {
+                    echo '<div class="alert alert-warning"><strong>Não cancelar faturas compartilhadas:</strong> #'.implode(', #', array_map('intval', $atual->compartilhadas)).'. Conferir os itens separadamente.</div>';
+                    $item('Preservar as cobranças compartilhadas e revisar os itens de cada serviço.');
+                }
+                if ($recuperar) {
+                    $item('Reativar somente o serviço #'.(int)$p->servico_id.' e conferir funcionamento da hospedagem.');
+                    $item('Ajustar o próximo vencimento conforme o ciclo contratado, contado da data real do pagamento; conferir também a próxima data de faturamento.');
+                } else {
+                    $item('Finalizar somente o serviço #'.(int)$p->servico_id.' ('.$esc($p->dominio).'), após conferir todos os bloqueios.');
+                }
+                $item('Conferir resultado no WHMCS e registrar a conclusão da negociação.');
+                echo '<p><strong>'.($bloqueado ? 'Prévia somente: não execute o encerramento enquanto houver bloqueios.' : 'Nenhuma ação será executada pelo módulo.').'</strong> Os itens marcados não são gravados. A baixa da negociação ainda não está disponível.</p>';
+            } catch (\\Throwable $e) {
+                echo '<div class="alert alert-danger">Checklist bloqueado: '.$esc(get_class($e) === RuntimeException::class ? $e->getMessage() : 'Falha na consulta; verificar logs.').'</div>';
+            }
+            echo '</div></div>';
+        }
+    }
+
     // Uma linha por serviço, incluindo negociações que já saíram da lista de inadimplência.
     $registros = $recuperacao;
     foreach ($propostas as $p) {
@@ -577,8 +624,10 @@ function recuperacao_thx_output($vars)
                 $acao = '<a class="btn btn-default btn-xs" target="_blank" rel="noopener noreferrer" href="'.$esc(recuperacao_thx_link($p, $urlBase)).'">Abrir proposta</a>';
             }
             $valores = '<small>Total: R$ '.number_format((float)$p->valor + (float)$p->perdao, 2, ',', '.').'</small><br><strong>R$ '.number_format((float)$p->valor, 2, ',', '.').'</strong><br><small>Desconto: R$ '.number_format((float)$p->perdao, 2, ',', '.').'</small>';
-            if ($p->status === 'enviada' && $expirada && empty($p->aceita_at) && empty($p->pagamento_at) && empty($p->concluida_at)) {
-                $acao .= '<br><button type="button" class="btn btn-danger btn-xs" style="white-space:normal" disabled>Cancelar cobranças e finalizar serviço</button><br><small>Aguardando validação</small>';
+            if (($ativa || $p->status === 'paga') && empty($p->concluida_at)) {
+                $urlChecklist = 'addonmodules.php?module=recuperacao_thx&amp;proposta_id='.(int)$p->id.'&amp;checklist=';
+                $acao .= '<br><a class="btn btn-success btn-xs" style="white-space:normal;margin-top:5px" href="'.$urlChecklist.'recuperar#checklist-negociacao">Recuperar cliente</a>';
+                $acao .= '<br><a class="btn btn-danger btn-xs" style="white-space:normal;margin-top:5px" href="'.$urlChecklist.'encerrar#checklist-negociacao">Encerrar negociação</a>';
             }
         } elseif (isset($servicos[$s->id])) {
             $acao = '<form method="post"><input type="hidden" name="csrf_recuperacao" value="'.$esc($_SESSION['recuperacao_thx_csrf']).'"><button class="btn btn-primary btn-xs" name="criar_proposta" value="'.(int)$s->id.'" onclick="return confirm(&quot;Enviar proposta real para este serviço?&quot;)">Criar e enviar proposta</button></form>';
