@@ -568,6 +568,9 @@ function recuperacao_thx_output($vars)
             if ($ativa) {
                 try {
                     $p = recuperacao_thx_proposta_atual($p);
+                    if ($p->compartilhadas) {
+                        $status .= '<br><small style="color:#a66b00">Faturas compartilhadas fora do acordo: #'.implode(', #', array_map('intval', $p->compartilhadas)).'</small>';
+                    }
                 } catch (\Throwable $e) {
                     $status .= '<br><small>Revisão necessária</small>';
                 }
@@ -586,7 +589,7 @@ function recuperacao_thx_output($vars)
             <td><a href="clientsservices.php?userid='.(int)$s->userid.'&amp;id='.(int)$s->id.'">'.$esc($s->produto.' / '.$s->domain).'</a></td>
             <td>'.$esc($statusServico[$s->domainstatus] ?? $s->domainstatus).'</td>
             <td>'.$atraso.'</td>
-            <td><a target="_blank" rel="noopener" href="clientsinvoices.php?userid='.(int)$s->userid.'&amp;serviceid='.(int)$s->id.'">Ver faturas do serviço</a><br><details><summary style="cursor:pointer">'.count($links).' fatura(s)</summary><div style="margin-top:8px">'.implode('<br>', $links).'</div></details><small>Vencidos: R$ '.number_format($registro['valor'], 2, ',', '.').'</small></td>
+            <td><a target="_blank" rel="noopener" href="clientsinvoices.php?userid='.(int)$s->userid.'&amp;serviceid='.(int)$s->id.'&amp;status=Unpaid">Ver faturas do serviço</a><br><details><summary style="cursor:pointer">'.count($links).' fatura(s)</summary><div style="margin-top:8px">'.implode('<br>', $links).'</div></details><small>Vencidos: R$ '.number_format($registro['valor'], 2, ',', '.').'</small></td>
             <td>'.$identificador.'</td><td>'.$valores.'</td><td>'.$status.'</td><td>'.$acao.'</td></tr>';
     }
     echo '</tbody></table></div>';

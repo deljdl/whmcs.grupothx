@@ -23,9 +23,14 @@ if (realpath($_SERVER['SCRIPT_FILENAME'] ?? '') === __FILE__) {
     $esc = static function ($v) { return htmlspecialchars((string)$v, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); };
     $linhas = [];
     $contagem = [];
-    $adicionar = static function ($dominio, $acao, $detalhes) use (&$linhas, &$contagem, $esc) {
+    $compartilhadasChecklist = [];
+    $linkFaturas = static function ($cliente, $servico) {
+        return 'https://central.grupothx.com.br/admin/clientsinvoices.php?userid='.(int)$cliente.'&serviceid='.(int)$servico.'&status=Unpaid';
+    };
+    $adicionar = static function ($dominio, $acao, $detalhes, $cliente = null, $servico = null) use (&$linhas, &$contagem, $esc, $linkFaturas) {
         $contagem[$acao] = ($contagem[$acao] ?? 0) + 1;
-        $linhas[] = '<tr><td>'.$esc($dominio).'</td><td>'.$esc($acao).'</td><td>'.$esc($detalhes).'</td></tr>';
+        $link = $cliente && $servico ? '<br><a href="'.$esc($linkFaturas($cliente, $servico)).'">Ver faturas em aberto</a>' : '';
+        $linhas[] = '<tr><td>'.$esc($dominio).$link.'</td><td>'.$esc($acao).'</td><td>'.$esc($detalhes).'</td></tr>';
     };
     $lock = fopen(sys_get_temp_dir().'/thx-recuperacao-cron.lock', 'c');
     if (!$lock || !flock($lock, LOCK_EX | LOCK_NB)) { return; }
@@ -46,7 +51,7 @@ if (realpath($_SERVER['SCRIPT_FILENAME'] ?? '') === __FILE__) {
                 recuperacao_thx_criar_proposta($registro);
                 $adicionar($p->dominio, 'Proposta criada', 'Valor R$ '.$p->valor.'; desconto R$ '.$p->perdao.'; faturas '.implode(', ', array_column(json_decode($p->faturas, true), 'id')).'; excluídas por composição: '.implode(', ', $p->compartilhadas));
             } catch (\Throwable $e) {
-                $adicionar($registro['servico']->domain, 'Bloqueado', get_class($e) === RuntimeException::class ? $e->getMessage() : 'Falha na consulta; verificar logs.');
+                $adicionar($registro['servico']->domain, 'Bloqueado', get_class($e) === RuntimeException::class ? $e->getMessage() : 'Falha na consulta; verificar logs.', $registro['servico']->userid, $registro['servico']->id);
             }
         }
         $propostas = \WHMCS\Database\Capsule::table('mod_recuperacao_thx')->get()->keyBy('servico_id');
@@ -60,6 +65,9 @@ if (realpath($_SERVER['SCRIPT_FILENAME'] ?? '') === __FILE__) {
             }
             try {
                 $atual = recuperacao_thx_proposta_atual($p);
+                if ($atual->compartilhadas) {
+                    $compartilhadasChecklist[] = '<li><strong>'.$esc($p->dominio).'</strong>: fatura(s) #'.implode(', #', array_map('intval', $atual->compartilhadas)).' — fora da negociação; não cancelar. Conferir separadamente os itens de cada serviço. <a href="'.$esc($linkFaturas($p->cliente_id, $p->servico_id)).'">Ver faturas em aberto</a></li>';
+                }
                 $detalhes = 'Pix R'.(int)$p->id.'S'.(int)$p->servico_id.'; R$ '.$p->valor.'; faturas '.implode(', ', array_column(json_decode($atual->faturas, true), 'id')).'; compartilhadas excluídas: '.implode(', ', $atual->compartilhadas);
                 if (!empty($p->pagamento_at)) {
                     $acao = 'Regularização pendente';
@@ -88,9 +96,9 @@ if (realpath($_SERVER['SCRIPT_FILENAME'] ?? '') === __FILE__) {
                     }
                     $detalhes .= '; prazo final '.$fim->format('d/m/Y');
                 }
-                $adicionar($p->dominio, $acao, $detalhes);
+                $adicionar($p->dominio, $acao, $detalhes, $p->cliente_id, $p->servico_id);
             } catch (\Throwable $e) {
-                $adicionar($p->dominio, 'Bloqueado', get_class($e) === RuntimeException::class ? $e->getMessage() : 'Falha na consulta; verificar logs.');
+                $adicionar($p->dominio, 'Bloqueado', get_class($e) === RuntimeException::class ? $e->getMessage() : 'Falha na consulta; verificar logs.', $p->cliente_id, $p->servico_id);
             }
         }
     } catch (\Throwable $e) {
@@ -99,6 +107,9 @@ if (realpath($_SERVER['SCRIPT_FILENAME'] ?? '') === __FILE__) {
     $html = '<h2>Recuperação THX — Relatório diário</h2><p>Propostas e comunicações reais. Cancelamentos e encerramentos somente em simulação.</p><ul>';
     foreach ($contagem as $acao => $n) { $html .= '<li>'.$esc($acao).': '.$n.'</li>'; }
     $html .= '</ul><table border="1" cellpadding="6" cellspacing="0"><tr><th>Serviço</th><th>Operação / previsão</th><th>Conferência</th></tr>'.implode('', $linhas).'</table>';
+    if ($compartilhadasChecklist) {
+        $html .= '<h3>Checklist — faturas compartilhadas fora da negociação</h3><ul>'.implode('', $compartilhadasChecklist).'</ul>';
+    }
     $html .= '<h3>Checklist do administrador</h3><ol><li>Conferir elegibilidade, serviço e valores de cada proposta.</li><li>Conferir faturas compartilhadas: domínios e outros serviços não podem ser cancelados.</li><li>Testar a prévia de e-mail e WhatsApp, imagem e link curto no módulo.</li><li>Conferir no banco/recebimentos os Pix visualizados e os pagamentos antes de qualquer baixa.</li><li>Conferir Efí/Asaas, aviso final e serviço antes de qualquer encerramento.</li><li>Revisar erros e impedimentos. Não liberar cancelamentos ou encerramentos enquanto houver divergências ou funções financeiras não testadas.</li></ol><p><a href="https://central.grupothx.com.br/admin/addonmodules.php?module=recuperacao_thx">Abrir módulo de recuperação</a></p>';
     try {
         $email = new \PHPMailer\PHPMailer\PHPMailer();
