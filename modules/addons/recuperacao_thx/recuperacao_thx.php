@@ -310,7 +310,7 @@ function recuperacao_thx_comunicar($p, $tipo)
     $assunto = 'Condição especial para regularizar seus débitos';
     $original = 'R$ '.number_format((float)$p->valor + (float)$p->perdao, 2, ',', '.');
     $valor = 'R$ '.number_format((float)$p->valor, 2, ',', '.');
-    $msg = "Olá, {primeiro_nome}!\n\nPreparamos uma condição especial para regularizar os débitos de seu serviço de hospedagem (".$p->dominio.").\n\nDe ".$original." por apenas ".$valor.".\n\nCom a confirmação do pagamento, os débitos anteriores serão cancelados e o serviço será reativado.\n\nConfira sua proposta:\n".$link;
+    $msg = "Olá, {primeiro_nome}!\n\nPreparamos uma condição especial para regularizar os débitos de seu serviço de hospedagem (".$p->dominio.").\n\nDe ".$original." por apenas ".$valor.".\n\nCom a confirmação do pagamento, os débitos anteriores referentes ao serviço serão cancelados e o serviço será reativado.\n\nConfira sua proposta:\n".$link;
     if ($tipo === 'final') {
         $assunto = 'Aviso final para regularizar sua hospedagem';
         $msg = "Atenção: o prazo para regularizar sua hospedagem está próximo do encerramento. Após esse prazo, o serviço poderá ser finalizado e seus arquivos e e-mails excluídos definitivamente.\n\n".$msg;
@@ -354,7 +354,7 @@ function recuperacao_thx_comunicar($p, $tipo)
                     .'<p style="font-size:14px;color:#415675;margin:0 0 14px">Desconto concedido: R$ '.number_format((float)$p->perdao, 2, ',', '.').'</p>'
                     .'<p style="font-size:17px;margin:0 0 3px">Valor para regularização</p>'
                     .'<p style="font-size:32px;line-height:1.2;font-weight:bold;color:#086344;margin:0 0 15px">'.$esc($valor).'</p>'
-                    .'<p style="font-size:16px;line-height:1.55;margin:0">Com a confirmação do pagamento, os débitos anteriores serão cancelados e o serviço será reativado.</p>'
+                    .'<p style="font-size:16px;line-height:1.55;margin:0">Com a confirmação do pagamento, os débitos anteriores referentes ao serviço serão cancelados e o serviço será reativado.</p>'
                     .'</td></tr></table>'
                     .'<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-top:16px"><tr><td align="center" bgcolor="#17395c" style="background:#17395c;border-radius:6px;padding:0"><a href="'.$esc($link).'" style="display:block;padding:14px 10px;font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;text-decoration:none !important">Quero pagar o acordo</a></td></tr></table>'
                     .'<p style="font-size:12px;line-height:1.5;color:#64748b;margin:16px 0 3px;text-align:center">Caso seu navegador ou programa de e-mail bloqueie o botão acima, copie o link abaixo e cole-o na barra de endereços.</p>'
