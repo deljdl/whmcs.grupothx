@@ -40,7 +40,7 @@ function recuperacao_thx_propostas_tabela()
         'enviada_at' => 'dateTime', 'aceita_at' => 'dateTime',
         'aviso_final_at' => 'dateTime', 'pagamento_at' => 'dateTime',
         'concluida_at' => 'dateTime', 'motivo' => 'string',
-        'mensagem_apoio' => 'text', 'apoio_at' => 'dateTime', 'pix_notificado_at' => 'dateTime', 'visualizada_at' => 'dateTime', 'url_curta' => 'string',
+        'mensagem_apoio' => 'text', 'apoio_at' => 'dateTime', 'pix_notificado_at' => 'dateTime', 'visualizada_at' => 'dateTime', 'url_curta' => 'string', 'ultimo_envio_at' => 'dateTime', 'controle_envios' => 'text',
     ];
     foreach ($campos as $nome => $tipo) {
         if (!Capsule::schema()->hasColumn('mod_recuperacao_thx', $nome)) {
@@ -256,6 +256,125 @@ function recuperacao_thx_link($p, $urlBase)
         logActivity('Recuperação THX: falha ao encurtar proposta #'.(int)$p->id);
     }
     return $url;
+}
+
+
+function recuperacao_thx_prever_cancelamentos($p)
+{
+    $atual = recuperacao_thx_proposta_atual($p);
+    $ids = array_column(json_decode($atual->faturas, true), 'id');
+    $linhas = [];
+    foreach ($ids as $id) {
+        $f = Capsule::table('tblinvoices')->where('id', $id)->first(['id', 'total', 'paymentmethod']);
+        $linhas[] = '#'.$id.' R$ '.$f->total.' ('.$f->paymentmethod.')';
+    }
+    return 'SIMULAÇÃO: conferir e cancelar cobranças nos gateways e faturas exclusivas: '.implode('; ', $linhas)
+        .'. Não cancelar compartilhadas: '.implode(', ', $atual->compartilhadas).'. Conferir pagamentos externos antes de qualquer alteração.';
+}
+
+function recuperacao_thx_prever_encerramento($p)
+{
+    return recuperacao_thx_prever_cancelamentos($p).'; SIMULAÇÃO: finalizar somente serviço #'.(int)$p->servico_id.' ('.$p->dominio.'). Conferir Pix e aviso final antes da exclusão.';
+}
+
+function recuperacao_thx_comunicar($p, $tipo)
+{
+    require_once dirname(__DIR__, 3).'/tarifasTHX.php';
+    $base = rtrim((string)Capsule::table('tblconfiguration')->where('setting', 'SystemURL')->value('value'), '/');
+    $link = recuperacao_thx_link($p, $base);
+    if (!preg_match('~^https://l\.grupothx\.com\.br/[^\s]+$~D', $link)) {
+        throw new RuntimeException('Link curto indisponível; nenhum envio realizado.');
+    }
+    $cliente = Capsule::table('tblclients')->where('id', $p->cliente_id)->first();
+    if (!$cliente) { throw new RuntimeException('Cliente não encontrado.'); }
+    $imagem = $base.'/thx/assets/images/cabecalho-negociacao.jpg';
+    $assunto = 'Condição especial para regularizar seus débitos';
+    $original = 'R$ '.number_format((float)$p->valor + (float)$p->perdao, 2, ',', '.');
+    $valor = 'R$ '.number_format((float)$p->valor, 2, ',', '.');
+    $msg = "Olá, ".$cliente->firstname."!\n\nPreparamos uma condição especial para regularizar os débitos de seu serviço de hospedagem (".$p->dominio.").\n\nDe ".$original." por apenas ".$valor.".\n\nCom a confirmação do pagamento, os débitos anteriores serão cancelados e o serviço será reativado.\n\nConfira sua proposta:\n".$link;
+    if ($tipo === 'final') {
+        $assunto = 'Aviso final para regularizar sua hospedagem';
+        $msg = "Atenção: o prazo para regularizar sua hospedagem está próximo do encerramento. Após esse prazo, o serviço poderá ser finalizado e seus arquivos e e-mails excluídos definitivamente.\n\n".$msg;
+    }
+    $controle = json_decode($p->controle_envios ?? '', true) ?: [];
+    $chave = $tipo === 'final' ? 'final' : 'proposta';
+    $agora = date('Y-m-d H:i:s');
+    $lote = $controle[$chave] ?? [];
+    if ($tipo === 'reenvio' && !empty($lote['concluido'])) { $lote = []; }
+    $salvar = static function () use (&$controle, &$lote, $chave, $p) {
+        $controle[$chave] = $lote;
+        Capsule::table('mod_recuperacao_thx')->where('id', $p->id)->update(['controle_envios' => json_encode($controle)]);
+    };
+    $resultado = [];
+    foreach (['email', 'whatsapp'] as $canal) {
+        if (isset($lote[$canal])) {
+            $resultado[] = $canal.': '.$lote[$canal];
+            continue;
+        }
+        // Registra antes da chamada externa: resultado incerto não será reenviado automaticamente.
+        $lote[$canal] = 'tentativa incerta';
+        $salvar();
+        try {
+            if ($canal === 'email') {
+                if (!filter_var($cliente->email, FILTER_VALIDATE_EMAIL)) { throw new RuntimeException('E-mail inválido'); }
+                $esc = static function ($v) { return htmlspecialchars((string)$v, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); };
+                $email = new \PHPMailer\PHPMailer\PHPMailer();
+                $email->CharSet = 'UTF-8';
+                $email->IsHTML(true);
+                $email->From = 'financeiro@grupothx.com.br';
+                $email->FromName = 'Grupo THX';
+                $email->AddAddress($cliente->email);
+                $email->Subject = $assunto;
+                $email->Body = '<div style="max-width:600px;margin:auto;font-family:Arial"><img src="'.$esc($imagem).'" alt="Grupo THX" style="width:100%;height:auto"><p>'.nl2br($esc($msg)).'</p><p><a href="'.$esc($link).'" style="display:inline-block;padding:12px;background:#173b62;color:white">Abrir proposta</a></p></div>';
+                $email->AltBody = $msg;
+                if (!$email->Send()) { throw new RuntimeException('Envio não confirmado'); }
+                $lote[$canal] = 'aceito';
+            } else {
+                // A preferência de bloqueio do WhatsApp existente é o primeiro campo customizado de cliente.
+                $campo = Capsule::table('tblcustomfields')->where('type', 'client')->orderBy('sortorder')->orderBy('id')->first(['id', 'fieldname']);
+                if (!$campo || !preg_match('/whats/i', $campo->fieldname)) {
+                    $lote[$canal] = 'bloqueado: conferir campo de preferência WhatsApp';
+                } elseif (Capsule::table('tblcustomfieldsvalues')->where('fieldid', $campo->id)->where('relid', $cliente->id)->value('value') === 'on') {
+                    $lote[$canal] = 'bloqueado pelo cliente';
+                } else {
+                    $telefone = normalizaTelefone($cliente->phonenumber);
+                    if ($telefone === '') { throw new RuntimeException('Telefone inválido'); }
+                    $ch = curl_init('https://autoresponder.grupothx.com.br/api/createMessage');
+                    curl_setopt_array($ch, [CURLOPT_RETURNTRANSFER => true, CURLOPT_POST => true,
+                        CURLOPT_POSTFIELDS => json_encode(['whatsnumber' => $telefone, 'mensagem' => $msg,
+                            'imagemcabecalho' => $imagem, 'tipo_msg' => 2, 'arquivo_local' => 'Confira sua negociação',
+                            'tipo_arquivo' => $assunto, 'url_arquivo' => $link, 'prioridade' => 0]),
+                        CURLOPT_HTTPHEADER => ['Content-Type: application/json', 'Accept: application/json'],
+                        CURLOPT_CONNECTTIMEOUT => 2, CURLOPT_TIMEOUT => 5, CURLOPT_FOLLOWLOCATION => false]);
+                    $body = curl_exec($ch);
+                    $http = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                    curl_close($ch);
+                    $resp = json_decode((string)$body, true);
+                    if ($http !== 202 || ($resp['status'] ?? $resp['success'] ?? false) !== true) {
+                        throw new RuntimeException('Fila não confirmada (HTTP '.$http.')');
+                    }
+                    $lote[$canal] = 'na fila';
+                }
+            }
+        } catch (\Throwable $e) {
+            $lote[$canal] = 'revisão necessária: '.(get_class($e) === RuntimeException::class ? $e->getMessage() : 'falha não confirmada');
+        }
+        $salvar();
+        $resultado[] = $canal.': '.$lote[$canal];
+    }
+    $ok = ($lote['email'] ?? '') === 'aceito' || ($lote['whatsapp'] ?? '') === 'na fila';
+    if ($ok && empty($lote['concluido'])) {
+        $update = ['ultimo_envio_at' => $agora];
+        if (empty($p->enviada_at)) {
+            $update['enviada_at'] = $agora;
+        }
+        if ($tipo === 'final') { $update['aviso_final_at'] = $agora; }
+        Capsule::table('mod_recuperacao_thx')->where('id', $p->id)->update($update);
+        Capsule::table('mod_recuperacao_thx')->where('id', $p->id)->where('status', 'criada')->update(['status' => 'enviada']);
+        $lote['concluido'] = $agora;
+        $salvar();
+    }
+    return implode('; ', $resultado);
 }
 
 function recuperacao_thx_output($vars)

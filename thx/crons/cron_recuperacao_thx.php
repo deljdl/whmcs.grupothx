@@ -1,5 +1,5 @@
 <?php
-// Somente diagnóstico: não cria propostas, não envia a clientes, não baixa nem cancela.
+// Comunicações reais; cancelamento e encerramento exclusivamente em simulação.
 if (PHP_SAPI !== 'cli') {
     return;
 }
@@ -18,23 +18,25 @@ require_once dirname(__DIR__, 2).'/modules/addons/recuperacao_thx/recuperacao_th
         $contagem[$acao] = ($contagem[$acao] ?? 0) + 1;
         $linhas[] = '<tr><td>'.$esc($dominio).'</td><td>'.$esc($acao).'</td><td>'.$esc($detalhes).'</td></tr>';
     };
+    $lock = fopen(sys_get_temp_dir().'/thx-recuperacao-cron.lock', 'c');
+    if (!$lock || !flock($lock, LOCK_EX | LOCK_NB)) { return; }
     try {
-        if (!\WHMCS\Database\Capsule::schema()->hasTable('mod_recuperacao_thx')) {
-            throw new RuntimeException('Acesse o módulo administrativo para criar a tabela.');
-        }
+        recuperacao_thx_propostas_tabela();
         [, $servicos] = recuperacao_thx_servicos($hoje, $limite);
         $propostas = \WHMCS\Database\Capsule::table('mod_recuperacao_thx')->get()->keyBy('servico_id');
         foreach ($servicos as $id => $registro) {
             if (isset($propostas[$id])) { continue; }
             try {
                 $p = recuperacao_thx_criar_proposta($registro, true);
-                $adicionar($p->dominio, 'Criar e enviar proposta', 'Valor R$ '.$p->valor.'; desconto R$ '.$p->perdao.'; faturas '.implode(', ', array_column(json_decode($p->faturas, true), 'id')).'; excluídas por composição: '.implode(', ', $p->compartilhadas));
+                recuperacao_thx_criar_proposta($registro);
+                $adicionar($p->dominio, 'Proposta criada', 'Valor R$ '.$p->valor.'; desconto R$ '.$p->perdao.'; faturas '.implode(', ', array_column(json_decode($p->faturas, true), 'id')).'; excluídas por composição: '.implode(', ', $p->compartilhadas));
             } catch (\Throwable $e) {
                 $adicionar($registro['servico']->domain, 'Bloqueado', get_class($e) === RuntimeException::class ? $e->getMessage() : 'Falha na consulta; verificar logs.');
             }
         }
+        $propostas = \WHMCS\Database\Capsule::table('mod_recuperacao_thx')->get()->keyBy('servico_id');
         foreach ($propostas as $p) {
-            if (!in_array($p->status, ['criada', 'enviada', 'pix_visualizado'], true)) {
+            if (!in_array($p->status, ['criada', 'enviada', 'pix_visualizado', 'paga'], true)) {
                 if (!empty($p->pagamento_at) && empty($p->concluida_at)) {
                     $adicionar($p->dominio, 'Regularização pendente', 'Conferir recebimento, gateways, faturas exclusivas, reativação e vencimento.');
                 }
@@ -45,22 +47,26 @@ require_once dirname(__DIR__, 2).'/modules/addons/recuperacao_thx/recuperacao_th
                 $detalhes = 'Pix R'.(int)$p->id.'S'.(int)$p->servico_id.'; R$ '.$p->valor.'; faturas '.implode(', ', array_column(json_decode($atual->faturas, true), 'id')).'; compartilhadas excluídas: '.implode(', ', $atual->compartilhadas);
                 if (!empty($p->pagamento_at)) {
                     $acao = 'Regularização pendente';
+                    $detalhes .= '; '.recuperacao_thx_prever_cancelamentos($p).'; reativação e novo vencimento pendentes de conferência.';
                 } elseif (recuperacao_thx_expirada($p)) {
                     $acao = 'Revisar encerramento';
-                    $detalhes .= '; conferir pagamento Pix, aviso final, gateways e serviço antes de finalizar.';
+                    $detalhes .= '; '.recuperacao_thx_prever_encerramento($p);
                 } elseif ($p->status === 'pix_visualizado') {
                     $acao = 'Conferir recebimento Pix';
                 } elseif (empty($p->enviada_at)) {
-                    $acao = 'Enviar proposta';
+                    $acao = 'Envio de proposta';
+                    $detalhes .= '; '.recuperacao_thx_comunicar($atual, 'inicial');
                 } else {
                     $inicio = new DateTimeImmutable($p->enviada_at, $hoje->getTimezone());
                     $mesFim = $inicio->modify('first day of this month')->modify('+4 months');
                     $fim = $mesFim->setDate((int)$mesFim->format('Y'), (int)$mesFim->format('m'), min((int)$inicio->format('d'), (int)$mesFim->format('t')));
                     $ultimo = new DateTimeImmutable($p->ultimo_envio_at ?? $p->enviada_at, $hoje->getTimezone());
                     if (empty($p->aviso_final_at) && $hoje >= $fim->modify('-30 days')->setTime(0, 0)) {
-                        $acao = 'Aviso final previsto';
+                        $acao = 'Aviso final';
+                        $detalhes .= '; '.recuperacao_thx_comunicar($atual, 'final');
                     } elseif ($hoje >= $ultimo->modify('+7 days')->setTime(0, 0)) {
-                        $acao = 'Reenvio previsto';
+                        $acao = 'Reenvio de proposta';
+                        $detalhes .= '; '.recuperacao_thx_comunicar($atual, 'reenvio');
                     } else {
                         $acao = 'Aguardar';
                     }
@@ -74,17 +80,17 @@ require_once dirname(__DIR__, 2).'/modules/addons/recuperacao_thx/recuperacao_th
     } catch (\Throwable $e) {
         $adicionar('Sistema', 'Erro', get_class($e) === RuntimeException::class ? $e->getMessage() : 'Falha geral na consulta; verificar logs.');
     }
-    $html = '<h2>Recuperação THX — SIMULAÇÃO</h2><p>Nenhuma operação financeira, proposta ou mensagem ao cliente foi executada.</p><ul>';
+    $html = '<h2>Recuperação THX — Relatório diário</h2><p>Propostas e comunicações reais. Cancelamentos e encerramentos somente em simulação.</p><ul>';
     foreach ($contagem as $acao => $n) { $html .= '<li>'.$esc($acao).': '.$n.'</li>'; }
-    $html .= '</ul><table border="1" cellpadding="6" cellspacing="0"><tr><th>Serviço</th><th>O que faria</th><th>Conferência</th></tr>'.implode('', $linhas).'</table>';
-    $html .= '<h3>Checklist do administrador</h3><ol><li>Conferir elegibilidade, serviço e valores de cada proposta.</li><li>Conferir faturas compartilhadas: domínios e outros serviços não podem ser cancelados.</li><li>Testar a prévia de e-mail e WhatsApp, imagem e link curto no módulo.</li><li>Conferir no banco/recebimentos os Pix visualizados e os pagamentos antes de qualquer baixa.</li><li>Conferir Efí/Asaas, aviso final e serviço antes de qualquer encerramento.</li><li>Revisar erros e impedimentos. Não liberar operações reais enquanto houver divergências ou funções financeiras não testadas.</li></ol><p><a href="https://central.grupothx.com.br/admin/addonmodules.php?module=recuperacao_thx">Abrir módulo de recuperação</a></p>';
+    $html .= '</ul><table border="1" cellpadding="6" cellspacing="0"><tr><th>Serviço</th><th>Operação / previsão</th><th>Conferência</th></tr>'.implode('', $linhas).'</table>';
+    $html .= '<h3>Checklist do administrador</h3><ol><li>Conferir elegibilidade, serviço e valores de cada proposta.</li><li>Conferir faturas compartilhadas: domínios e outros serviços não podem ser cancelados.</li><li>Testar a prévia de e-mail e WhatsApp, imagem e link curto no módulo.</li><li>Conferir no banco/recebimentos os Pix visualizados e os pagamentos antes de qualquer baixa.</li><li>Conferir Efí/Asaas, aviso final e serviço antes de qualquer encerramento.</li><li>Revisar erros e impedimentos. Não liberar cancelamentos ou encerramentos enquanto houver divergências ou funções financeiras não testadas.</li></ol><p><a href="https://central.grupothx.com.br/admin/addonmodules.php?module=recuperacao_thx">Abrir módulo de recuperação</a></p>';
     try {
         $email = new \PHPMailer\PHPMailer\PHPMailer();
         $email->IsHTML(true);
         $email->CharSet = 'UTF-8';
         $email->From = 'financeiro@grupothx.com.br';
         $email->FromName = 'Grupo THX';
-        $email->Subject = '[SIMULAÇÃO] Recuperação de clientes — '.$hoje->format('d/m/Y');
+        $email->Subject = '[THX] Recuperação de clientes — '.$hoje->format('d/m/Y');
         $email->Body = $html;
         $email->AddAddress('deljdl@gmail.com', 'Admin');
         if (!$email->Send()) { throw new RuntimeException('Falha no envio do relatório.'); }
