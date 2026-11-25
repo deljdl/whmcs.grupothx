@@ -627,7 +627,9 @@ function recuperacao_thx_output($vars)
             if (($ativa || $p->status === 'paga') && empty($p->concluida_at)) {
                 $urlChecklist = 'addonmodules.php?module=recuperacao_thx&amp;proposta_id='.(int)$p->id.'&amp;checklist=';
                 $acao .= '<br><a class="btn btn-success btn-xs" style="white-space:normal;margin-top:5px" href="'.$urlChecklist.'recuperar#checklist-negociacao">Recuperar cliente</a>';
-                $acao .= '<br><a class="btn btn-danger btn-xs" style="white-space:normal;margin-top:5px" href="'.$urlChecklist.'encerrar#checklist-negociacao">Encerrar negociação</a>';
+                if ($expirada && $p->status === 'enviada' && !empty($p->aviso_final_at) && empty($p->aceita_at) && empty($p->pix_notificado_at) && empty($p->pagamento_at)) {
+                    $acao .= '<br><a class="btn btn-danger btn-xs" style="white-space:normal;margin-top:5px" href="'.$urlChecklist.'encerrar#checklist-negociacao">Encerrar negociação</a>';
+                }
             }
         } elseif (isset($servicos[$s->id])) {
             $acao = '<form method="post"><input type="hidden" name="csrf_recuperacao" value="'.$esc($_SESSION['recuperacao_thx_csrf']).'"><button class="btn btn-primary btn-xs" name="criar_proposta" value="'.(int)$s->id.'" onclick="return confirm(&quot;Enviar proposta real para este serviço?&quot;)">Criar e enviar proposta</button></form>';
