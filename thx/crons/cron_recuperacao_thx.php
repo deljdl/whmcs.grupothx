@@ -1,6 +1,6 @@
 <?php
 // Comunicações reais; cancelamento e encerramento exclusivamente em simulação.
-if (PHP_SAPI !== 'cli') {
+if (PHP_SAPI !== 'cli' && realpath($_SERVER['SCRIPT_FILENAME'] ?? '') !== realpath(__DIR__.'/cron.php')) {
     return;
 }
 require_once dirname(__DIR__, 2).'/init.php';
