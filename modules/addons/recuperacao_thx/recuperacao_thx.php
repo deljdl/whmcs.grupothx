@@ -318,7 +318,29 @@ function recuperacao_thx_comunicar($p, $tipo)
             if ($canal === 'email') {
                 if (!filter_var($cliente->email, FILTER_VALIDATE_EMAIL)) { throw new RuntimeException('E-mail inválido'); }
                 $esc = static function ($v) { return htmlspecialchars((string)$v, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); };
-                $html = '<div style="max-width:600px;margin:auto;font-family:Arial"><img src="'.$esc($imagem).'" alt="Grupo THX" style="width:100%;height:auto"><p>'.nl2br($esc($msg)).'</p><p><a href="'.$esc($link).'" style="display:inline-block;padding:12px;background:#173b62;color:white">Abrir proposta</a></p></div>';
+                $aviso = $tipo === 'final'
+                    ? '<p style="font-size:16px;line-height:1.5;color:#9b2828;margin:0 0 16px"><strong>Aviso final:</strong> o prazo para regularizar sua hospedagem está próximo do encerramento. Após esse prazo, o serviço poderá ser finalizado e seus arquivos e e-mails excluídos definitivamente.</p>'
+                    : '';
+                $html = '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:600px;margin:0 auto;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;color:#142237;background:#ffffff;border:1px solid #d5dfe9;border-radius:14px">'
+                    .'<tr><td><img src="'.$esc($imagem).'" width="600" alt="Grupo THX - Renegociação de dívidas" style="display:block;width:100%;max-width:600px;height:auto;border:0;border-radius:14px 14px 0 0"></td></tr>'
+                    .'<tr><td style="padding:20px">'
+                    .'<p style="font-size:25px;line-height:1.25;font-weight:bold;margin:0 0 10px;color:#142237">Olá, '.$esc($cliente->firstname).'!</p>'
+                    .'<p style="font-size:19px;font-weight:bold;margin:0 0 10px">Proposta de regularização</p>'
+                    .$aviso
+                    .'<p style="font-size:17px;margin:0 0 12px">Preparamos uma condição especial para regularizar os débitos de seu serviço.</p>'
+                    .'<p style="font-size:17px;margin:0 0 16px"><strong>'.$esc($p->dominio).'</strong><br>'.$esc($p->produto).'</p>'
+                    .'<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f1f5f9" style="width:100%;background:#f1f5f9;border-radius:9px"><tr><td style="padding:16px">'
+                    .'<p style="font-size:14px;color:#415675;margin:0 0 4px">Valor total devido</p>'
+                    .'<p style="font-size:18px;font-weight:bold;margin:0 0 4px"><s>'.$esc($original).'</s></p>'
+                    .'<p style="font-size:14px;color:#415675;margin:0 0 14px">Desconto concedido: R$ '.number_format((float)$p->perdao, 2, ',', '.').'</p>'
+                    .'<p style="font-size:17px;margin:0 0 3px">Valor para regularização</p>'
+                    .'<p style="font-size:32px;line-height:1.2;font-weight:bold;color:#086344;margin:0 0 15px">'.$esc($valor).'</p>'
+                    .'<p style="font-size:16px;line-height:1.55;margin:0">Com a confirmação do pagamento, os débitos anteriores serão cancelados e o serviço será reativado.</p>'
+                    .'</td></tr></table>'
+                    .'<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-top:16px"><tr><td align="center" bgcolor="#17395c" style="background:#17395c;border-radius:6px;padding:0"><a href="'.$esc($link).'" style="display:block;padding:14px 10px;font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;text-decoration:none !important">Quero pagar o acordo</a></td></tr></table>'
+                    .'<p style="font-size:12px;line-height:1.5;color:#64748b;margin:16px 0 3px;text-align:center">Caso seu navegador ou programa de e-mail bloqueie o botão acima, copie o link abaixo e cole-o na barra de endereços.</p>'
+                    .'<p style="font-size:13px;line-height:1.5;text-align:center;margin:0;word-break:break-all"><a href="'.$esc($link).'" style="color:#17395c;text-decoration:none !important">'.$esc($link).'</a></p>'
+                    .'</td></tr></table>';
                 $retorno = enviaEmailTHX('', $cliente->id, $assunto, $html, true);
                 if (($retorno['result'] ?? '') !== 'success') {
                     throw new RuntimeException('WHMCS: '.($retorno['message'] ?? 'Envio não confirmado'));
@@ -338,7 +360,7 @@ function recuperacao_thx_comunicar($p, $tipo)
                     curl_setopt_array($ch, [CURLOPT_RETURNTRANSFER => true, CURLOPT_POST => true,
                         CURLOPT_POSTFIELDS => json_encode(['whatsnumber' => $telefone, 'mensagem' => $msg,
                             'imagemcabecalho' => $imagem, 'tipo_msg' => 2, 'arquivo_local' => 'Confira sua negociação',
-                            'tipo_arquivo' => $assunto, 'url_arquivo' => $link, 'prioridade' => 0]),
+                            'tipo_arquivo' => $assunto, 'url_arquivo' => $link, 'prioridade' => 1]),
                         CURLOPT_HTTPHEADER => ['Content-Type: application/json', 'Accept: application/json'],
                         CURLOPT_CONNECTTIMEOUT => 2, CURLOPT_TIMEOUT => 5, CURLOPT_FOLLOWLOCATION => false]);
                     $body = curl_exec($ch);
