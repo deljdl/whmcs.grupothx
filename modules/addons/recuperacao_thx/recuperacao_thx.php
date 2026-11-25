@@ -121,16 +121,19 @@ function recuperacao_thx_criar_proposta($registro, $simular = false)
         throw new RuntimeException('Não há faturas exclusivas do serviço disponíveis para negociação.');
     }
     $ultima = end($dados);
-    $perdao = 0;
-    foreach (array_slice($dados, 0, -1) as $item) {
-        $perdao += (int)round((float)$item['valor'] * 100);
+    $total = 0;
+    foreach ($dados as $item) {
+        $total += (int)round((float)$item['valor'] * 100);
     }
+    $ultimaCentavos = (int)round((float)$ultima['valor'] * 100);
+    $valor = min($total, (int)round($ultimaCentavos * 1.25));
+    $perdao = $total - $valor;
 
     $proposta = [
         'servico_id' => $s->id, 'cliente_id' => $s->userid,
         'token' => $simular ? null : bin2hex(random_bytes(32)), 'dominio' => $s->domain,
         'produto' => $s->produto, 'fatura_pagamento' => $ultima['id'],
-        'faturas' => json_encode($dados), 'valor' => $ultima['valor'],
+        'faturas' => json_encode($dados), 'valor' => number_format($valor / 100, 2, '.', ''),
         'perdao' => number_format($perdao / 100, 2, '.', ''),
         'status' => 'criada', 'created_at' => date('Y-m-d H:i:s'),
     ];
