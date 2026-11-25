@@ -56,7 +56,7 @@ function recuperacao_thx_criar_proposta($registro, $simular = false)
     $s = $registro['servico'];
     $hoje = (new DateTimeImmutable('today', new DateTimeZone('America/Sao_Paulo')))->format('Y-m-d');
     $faturas = array_values(array_filter($registro['faturas'], static function ($f) use ($hoje) {
-        return $f->duedate <= $hoje;
+        return $f->duedate < $hoje;
     }));
     if (!$faturas) {
         throw new RuntimeException('Não há faturas vencidas elegíveis.');
@@ -117,8 +117,8 @@ function recuperacao_thx_criar_proposta($registro, $simular = false)
         $dados[] = ['id' => (int)$i->id, 'vencimento' => $i->duedate, 'valor' => (string)$i->total];
     }
 
-    if (!$dados) {
-        throw new RuntimeException('Não há faturas exclusivas do serviço disponíveis para negociação.');
+    if (count($dados) < 2) {
+        throw new RuntimeException('São necessárias pelo menos duas faturas exclusivas vencidas para negociação.');
     }
     $ultima = end($dados);
     $total = 0;
@@ -128,6 +128,9 @@ function recuperacao_thx_criar_proposta($registro, $simular = false)
     $ultimaCentavos = (int)round((float)$ultima['valor'] * 100);
     $valor = min($total, (int)round($ultimaCentavos * 1.25));
     $perdao = $total - $valor;
+    if ($perdao <= 0) {
+        throw new RuntimeException('A proposta precisa ter desconto maior que zero.');
+    }
 
     $proposta = [
         'servico_id' => $s->id, 'cliente_id' => $s->userid,
@@ -160,6 +163,14 @@ function recuperacao_thx_expirada($p)
 // Consulta as faturas vencidas atuais, preservando o valor pactuado e o registro original.
 function recuperacao_thx_proposta_atual($p)
 {
+    $originais = json_decode($p->faturas, true);
+    $dataCriacao = substr($p->created_at, 0, 10);
+    $vencidasOriginais = array_filter($originais ?: [], static function ($f) use ($dataCriacao) {
+        return !empty($f['vencimento']) && $f['vencimento'] < $dataCriacao;
+    });
+    if (count($vencidasOriginais) < 2 || (float)$p->perdao <= 0) {
+        throw new RuntimeException('Proposta original inválida: menos de duas faturas vencidas ou sem desconto.');
+    }
     $s = Capsule::table('tblhosting as h')->join('tblproducts as pr', 'pr.id', '=', 'h.packageid')
         ->where('h.id', $p->servico_id)->where('h.userid', $p->cliente_id)
         ->whereIn('h.domainstatus', ['Active', 'Suspended'])->whereIn('pr.type', ['hostingaccount', 'reselleraccount'])
@@ -174,7 +185,6 @@ function recuperacao_thx_proposta_atual($p)
         ->select('i.id as fatura_id', 'i.duedate')->distinct()->orderBy('i.duedate')->orderBy('i.id')->get()->all();
     $atual = recuperacao_thx_criar_proposta(['servico' => $s, 'faturas' => $faturas], true);
     $dados = json_decode($atual->faturas, true);
-    $originais = json_decode($p->faturas, true);
     if (!$originais || !$dados) {
         throw new RuntimeException('Proposta inválida.');
     }
@@ -235,6 +245,12 @@ function recuperacao_thx_servicos($hoje, $limite2)
             $servicos[$fatura->id]['valor'] += (float)$fatura->valor;
         }
     }
+
+    $servicos = array_filter($servicos, static function ($registro) use ($hoje) {
+        return count(array_filter($registro['faturas'], static function ($f) use ($hoje) {
+            return $f->duedate < $hoje->format('Y-m-d');
+        })) >= 2;
+    });
 
     return [$faturas, $servicos];
 }
