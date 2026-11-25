@@ -327,7 +327,7 @@ function recuperacao_thx_comunicar($p, $tipo)
                 $email->Subject = $assunto;
                 $email->Body = '<div style="max-width:600px;margin:auto;font-family:Arial"><img src="'.$esc($imagem).'" alt="Grupo THX" style="width:100%;height:auto"><p>'.nl2br($esc($msg)).'</p><p><a href="'.$esc($link).'" style="display:inline-block;padding:12px;background:#173b62;color:white">Abrir proposta</a></p></div>';
                 $email->AltBody = $msg;
-                if (!$email->Send()) { throw new RuntimeException('Envio não confirmado'); }
+                if (!$email->Send()) { throw new RuntimeException('Envio não confirmado: '.$email->ErrorInfo); }
                 $lote[$canal] = 'aceito';
             } else {
                 // A preferência de bloqueio do WhatsApp existente é o primeiro campo customizado de cliente.
@@ -414,6 +414,7 @@ function recuperacao_thx_output($vars)
         } else {
             $selecionados = isset($_POST['criar_proposta']) ? [(int)$_POST['criar_proposta']] : array_map('intval', (array)($_POST['servicos_simulacao'] ?? []));
             echo '<h2>Resultado do envio</h2>';
+            $relatorioEnvio = [];
             if (!$selecionados) {
                 echo '<p>Selecione ao menos uma hospedagem.</p>';
             }
@@ -436,14 +437,32 @@ function recuperacao_thx_output($vars)
                             }
                             $p = recuperacao_thx_proposta_atual($p);
                             $resultado = recuperacao_thx_comunicar($p, 'inicial');
+                            $relatorioEnvio[] = $s->domain.': '.$resultado;
                             echo '<div class="alert alert-info">'.$esc($s->domain).': '.$esc($resultado).'</div>';
                         } catch (\Throwable $e) {
-                            echo '<div class="alert alert-warning">'.$esc($s->domain).': '.$esc(get_class($e) === RuntimeException::class ? $e->getMessage() : 'Falha no processamento; verificar logs.').'</div>';
+                            $relatorioEnvio[] = $s->domain.': '.(get_class($e) === RuntimeException::class ? $e->getMessage() : 'Falha no processamento; verificar logs.');
+                            echo '<div class="alert alert-warning">'.$esc(end($relatorioEnvio)).'</div>';
                         }
                     }
                 } finally {
                     flock($lock, LOCK_UN);
                     fclose($lock);
+                }
+            }
+            if ($relatorioEnvio) {
+                try {
+                    $email = new \PHPMailer\PHPMailer\PHPMailer();
+                    $email->CharSet = 'UTF-8';
+                    $email->IsHTML(true);
+                    $email->From = 'financeiro@grupothx.com.br';
+                    $email->FromName = 'Grupo THX';
+                    $email->AddAddress('deljdl@gmail.com', 'Admin');
+                    $email->Subject = '[THX] Recuperação de clientes — envio manual';
+                    $email->Body = '<h2>Resultado dos envios</h2>'.nl2br($esc(implode("\n", $relatorioEnvio))).'<p>Confira a entrada do WhatsApp na fila, o e-mail e o link curto. Cancelamento e encerramento permanecem em simulação.</p>';
+                    if (!$email->Send()) { throw new RuntimeException($email->ErrorInfo); }
+                    echo '<div class="alert alert-success">Relatório administrativo enviado.</div>';
+                } catch (\Throwable $e) {
+                    echo '<div class="alert alert-warning">Falha no relatório administrativo: '.$esc($e->getMessage()).'</div>';
                 }
             }
             $propostas = Capsule::table('mod_recuperacao_thx')->get()->keyBy('servico_id');
