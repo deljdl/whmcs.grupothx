@@ -6,7 +6,16 @@ if (PHP_SAPI !== 'cli') {
 require_once dirname(__DIR__, 2).'/init.php';
 require_once dirname(__DIR__, 2).'/modules/addons/recuperacao_thx/recuperacao_thx.php';
 
-(function () {
+$recuperacaoServicoTeste = null;
+if (realpath($_SERVER['SCRIPT_FILENAME'] ?? '') === __FILE__) {
+    $args = array_slice($_SERVER['argv'] ?? [], 1);
+    if (count($args) !== 1 || ($args[0] !== '--todos' && !preg_match('/^--servico=([1-9][0-9]*)$/D', $args[0], $m))) {
+        echo "Uso: php thx/crons/cron_recuperacao_thx.php --servico=ID (teste individual) ou --todos (envios reais em lote)\n";
+        return;
+    }
+    $recuperacaoServicoTeste = isset($m[1]) ? (int)$m[1] : null;
+}
+(function () use ($recuperacaoServicoTeste) {
     $hoje = new DateTimeImmutable('today', new DateTimeZone('America/Sao_Paulo'));
     $mes = $hoje->modify('first day of this month')->modify('-2 months');
     $limite = $mes->setDate((int)$mes->format('Y'), (int)$mes->format('m'),
@@ -24,6 +33,12 @@ require_once dirname(__DIR__, 2).'/modules/addons/recuperacao_thx/recuperacao_th
         recuperacao_thx_propostas_tabela();
         [, $servicos] = recuperacao_thx_servicos($hoje, $limite);
         $propostas = \WHMCS\Database\Capsule::table('mod_recuperacao_thx')->get()->keyBy('servico_id');
+        if ($recuperacaoServicoTeste !== null) {
+            $servicos = array_intersect_key($servicos, [$recuperacaoServicoTeste => true]);
+            if (!$servicos && !isset($propostas[$recuperacaoServicoTeste])) {
+                $adicionar('Serviço #'.$recuperacaoServicoTeste, 'Bloqueado', 'Serviço não elegível ou inexistente.');
+            }
+        }
         foreach ($servicos as $id => $registro) {
             if (isset($propostas[$id])) { continue; }
             try {
@@ -36,6 +51,7 @@ require_once dirname(__DIR__, 2).'/modules/addons/recuperacao_thx/recuperacao_th
         }
         $propostas = \WHMCS\Database\Capsule::table('mod_recuperacao_thx')->get()->keyBy('servico_id');
         foreach ($propostas as $p) {
+            if ($recuperacaoServicoTeste !== null && (int)$p->servico_id !== $recuperacaoServicoTeste) { continue; }
             if (!in_array($p->status, ['criada', 'enviada', 'pix_visualizado', 'paga'], true)) {
                 if (!empty($p->pagamento_at) && empty($p->concluida_at)) {
                     $adicionar($p->dominio, 'Regularização pendente', 'Conferir recebimento, gateways, faturas exclusivas, reativação e vencimento.');
@@ -90,7 +106,7 @@ require_once dirname(__DIR__, 2).'/modules/addons/recuperacao_thx/recuperacao_th
         $email->CharSet = 'UTF-8';
         $email->From = 'financeiro@grupothx.com.br';
         $email->FromName = 'Grupo THX';
-        $email->Subject = '[THX] Recuperação de clientes — '.$hoje->format('d/m/Y');
+        $email->Subject = '[THX] Recuperação de clientes — '.$hoje->format('d/m/Y').($recuperacaoServicoTeste !== null ? ' — teste serviço #'.$recuperacaoServicoTeste : '');
         $email->Body = $html;
         $email->AddAddress('deljdl@gmail.com', 'Admin');
         if (!$email->Send()) { throw new RuntimeException('Falha no envio do relatório.'); }

@@ -163,7 +163,7 @@ if ($erroPix === '' && (($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['
         if (!$atual) {
             throw new RuntimeException('Proposta indisponível.');
         }
-        $p = $atual;
+        $p = recuperacao_thx_proposta_atual($atual);
         $pix = $codigo;
         if ($primeira) {
             try {
