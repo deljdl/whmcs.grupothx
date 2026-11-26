@@ -23,7 +23,7 @@ namespace Gerencianet {
   private function request($method,$path,$body=null,$auth=true){
    $h=array('Accept: application/json','Content-Type: application/json');
    $h[]=$auth?'Authorization: Bearer '.$this->token():'Authorization: Basic '.base64_encode($this->clientId.':'.$this->clientSecret);
-   $c=curl_init($this->baseUrl.$path); curl_setopt_array($c,array(CURLOPT_RETURNTRANSFER=>true,CURLOPT_CUSTOMREQUEST=>$method,CURLOPT_HTTPHEADER=>$h,CURLOPT_CONNECTTIMEOUT=>15,CURLOPT_TIMEOUT=>45));
+   $c=curl_init($this->baseUrl.$path); curl_setopt_array($c,array(CURLOPT_RETURNTRANSFER=>true,CURLOPT_CUSTOMREQUEST=>$method,CURLOPT_HTTPHEADER=>$h,CURLOPT_CONNECTTIMEOUT=>15,CURLOPT_TIMEOUT=>90));
    if($body!==null)curl_setopt($c,CURLOPT_POSTFIELDS,json_encode($body));
    $r=curl_exec($c);
    $status=(int)curl_getinfo($c,CURLINFO_HTTP_CODE);
