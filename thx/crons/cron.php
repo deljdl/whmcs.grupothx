@@ -80,11 +80,11 @@ $cronsCronThx = [
         'dias' => [1, 3, 5],
         'horas' => [9],
     ],
-    'libera-mensagens-whatsapp' => [
-        'path' => $rootDirCronThx . '/thx/crons/liberaMensagensWhatsApp.php',
-        'dias' => [1, 2, 3, 4, 5, 6, 7],
-        'horas' => [8],
-    ],
+    // 'libera-mensagens-whatsapp' => [
+    //     'path' => $rootDirCronThx . '/thx/crons/liberaMensagensWhatsApp.php',
+    //     'dias' => [1, 2, 3, 4, 5, 6, 7],
+    //     'horas' => [8],
+    // ],
 ];
 
 $agoraCronThx = new DateTimeImmutable();
@@ -135,7 +135,7 @@ foreach ($cronsCronThx as $arquivoCronThx => $agendaCronThx) {
 
             $jaRodouNessaHoraCronThx = true;
         } catch (\Throwable $e) {
-            $alertaCronThx($arquivoCronThx, get_class($e), $e->getFile(), $e->getLine());
+            $alertaCronThx($arquivoCronThx, get_class($e).': '.$e->getMessage(), $e->getFile(), $e->getLine());
             echo '<br />Falha no cron: ' . $arquivoCronThx . '<hr />';
         } finally {
             $cronAtivoThx = null;
