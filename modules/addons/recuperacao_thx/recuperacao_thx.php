@@ -148,16 +148,34 @@ function recuperacao_thx_criar_proposta($registro, $simular = false)
 }
 
 // Prazo contado do primeiro envio, sem reiniciar a cada lembrete.
-function recuperacao_thx_expirada($p)
+function recuperacao_thx_prazo_final($p)
 {
     if (empty($p->enviada_at)) {
-        return false;
+        return null;
     }
     $inicio = new DateTimeImmutable($p->enviada_at, new DateTimeZone('America/Sao_Paulo'));
     $mes = $inicio->modify('first day of this month')->modify('+1 month');
     $fim = $mes->setDate((int)$mes->format('Y'), (int)$mes->format('m'),
         min((int)$inicio->format('d'), (int)$mes->format('t')));
-    return new DateTimeImmutable('now', new DateTimeZone('America/Sao_Paulo')) >= $fim;
+    if (!empty($p->aviso_final_at)) {
+        $controle = json_decode($p->controle_envios ?? '', true) ?: [];
+        if (!empty($controle['final']['prazo_final'])) {
+            return new DateTimeImmutable($controle['final']['prazo_final'], $inicio->getTimezone());
+        }
+        // Avisos anteriores mantêm o prazo original, nunca inferior a cinco dias.
+        $cincoDias = (new DateTimeImmutable($p->aviso_final_at, $inicio->getTimezone()))->modify('+5 days');
+        return $cincoDias > $fim ? $cincoDias : $fim;
+    }
+    return $fim;
+}
+
+function recuperacao_thx_expirada($p)
+{
+    if (empty($p->aviso_final_at)) {
+        return false;
+    }
+    $fim = recuperacao_thx_prazo_final($p);
+    return $fim && new DateTimeImmutable('now', new DateTimeZone('America/Sao_Paulo')) >= $fim;
 }
 
 // Consulta as faturas vencidas atuais, preservando o valor pactuado e o registro original.
@@ -311,14 +329,19 @@ function recuperacao_thx_comunicar($p, $tipo)
     $original = 'R$ '.number_format((float)$p->valor + (float)$p->perdao, 2, ',', '.');
     $valor = 'R$ '.number_format((float)$p->valor, 2, ',', '.');
     $msg = "Olá, {primeiro_nome}!\n\nPreparamos uma condição especial para regularizar os débitos de seu serviço de hospedagem (".$p->dominio.").\n\nDe ".$original." por apenas ".$valor.".\n\nCom a confirmação do pagamento, os débitos anteriores referentes ao serviço serão cancelados e o serviço será reativado.\n\nConfira sua proposta:\n".$link;
-    if ($tipo === 'final') {
-        $assunto = 'Aviso final para regularizar sua hospedagem';
-        $msg = "Atenção: o prazo para regularizar sua hospedagem está próximo do encerramento. Após esse prazo, o serviço poderá ser finalizado e seus arquivos e e-mails excluídos definitivamente.\n\n".$msg;
-    }
     $controle = json_decode($p->controle_envios ?? '', true) ?: [];
     $chave = $tipo === 'final' ? 'final' : 'proposta';
-    $agora = date('Y-m-d H:i:s');
+    $agora = (new DateTimeImmutable('now', new DateTimeZone('America/Sao_Paulo')))->format('Y-m-d H:i:s');
     $lote = $controle[$chave] ?? [];
+    if ($tipo === 'final') {
+        $lote['inicio_aviso'] = $lote['inicio_aviso'] ?? $agora;
+        $lote['prazo_final'] = $lote['prazo_final'] ?? (new DateTimeImmutable($lote['inicio_aviso'], new DateTimeZone('America/Sao_Paulo')))->modify('+5 days')->format('Y-m-d H:i:s');
+        $dataLimite = (new DateTimeImmutable($lote['prazo_final'], new DateTimeZone('America/Sao_Paulo')))->format('d/m/Y \à\s H:i:s');
+        $servico = $p->produto.(!empty($p->dominio) ? ' ('.$p->dominio.')' : '');
+        $assunto = 'AVISO FINAL — ENCERRAMENTO DE SERVIÇO';
+        $avisoTexto = "Até o momento, não identificamos o pagamento do acordo referente ao serviço ".$servico.".\n\nVocê tem até ".$dataLimite." para regularizar seu serviço.\n\nApós essa data, o serviço será encerrado definitivamente, incluindo a exclusão de todos os arquivos, bancos de dados e contas de e-mail vinculados ao serviço.\n\nAproveite esta última oportunidade para regularizar sua situação.";
+        $msg = "*".$assunto."*\n\nOlá, {primeiro_nome}!\n\n".$avisoTexto."\n\nValor para regularização: ".$valor."\n\nConfira sua proposta:\n".$link;
+    }
     if ($tipo === 'reenvio' && !empty($lote['concluido'])) { $lote = []; }
     $salvar = static function () use (&$controle, &$lote, $chave, $p) {
         $controle[$chave] = $lote;
@@ -338,15 +361,14 @@ function recuperacao_thx_comunicar($p, $tipo)
                 if (!filter_var($cliente->email, FILTER_VALIDATE_EMAIL)) { throw new RuntimeException('E-mail inválido'); }
                 $esc = static function ($v) { return htmlspecialchars((string)$v, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); };
                 $aviso = $tipo === 'final'
-                    ? '<p style="font-size:16px;line-height:1.5;color:#9b2828;margin:0 0 16px"><strong>Aviso final:</strong> o prazo para regularizar sua hospedagem está próximo do encerramento. Após esse prazo, o serviço poderá ser finalizado e seus arquivos e e-mails excluídos definitivamente.</p>'
-                    : '';
+                    ? '<p style="font-size:16px;line-height:1.5;color:#9b2828;margin:0 0 16px">'.nl2br($esc($avisoTexto)).'</p>'
+                    : '<p style="font-size:17px;margin:0 0 12px">Preparamos uma condição especial para regularizar os débitos de seu serviço.</p>';
                 $html = '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:600px;margin:0 auto;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;color:#142237;background:#ffffff;border:1px solid #d5dfe9;border-radius:14px">'
                     .'<tr><td><img src="'.$esc($imagem).'" width="600" alt="Grupo THX - Renegociação de dívidas" style="display:block;width:100%;max-width:600px;height:auto;border:0;border-radius:14px 14px 0 0"></td></tr>'
                     .'<tr><td style="padding:20px">'
                     .'<p style="font-size:25px;line-height:1.25;font-weight:bold;margin:0 0 10px;color:#142237">Olá, '.$esc($cliente->firstname).'!</p>'
-                    .'<p style="font-size:19px;font-weight:bold;margin:0 0 10px">Proposta de regularização</p>'
+                    .'<p style="font-size:19px;font-weight:bold;margin:0 0 10px">'.$esc($tipo === 'final' ? $assunto : 'Proposta de regularização').'</p>'
                     .$aviso
-                    .'<p style="font-size:17px;margin:0 0 12px">Preparamos uma condição especial para regularizar os débitos de seu serviço.</p>'
                     .'<p style="font-size:17px;margin:0 0 16px"><strong>'.$esc($p->dominio).'</strong><br>'.$esc($p->produto).'</p>'
                     .'<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f1f5f9" style="width:100%;background:#f1f5f9;border-radius:9px"><tr><td style="padding:16px">'
                     .'<p style="font-size:14px;color:#415675;margin:0 0 4px">Valor total devido</p>'
@@ -354,7 +376,7 @@ function recuperacao_thx_comunicar($p, $tipo)
                     .'<p style="font-size:14px;color:#415675;margin:0 0 14px">Desconto concedido: R$ '.number_format((float)$p->perdao, 2, ',', '.').'</p>'
                     .'<p style="font-size:17px;margin:0 0 3px">Valor para regularização</p>'
                     .'<p style="font-size:32px;line-height:1.2;font-weight:bold;color:#086344;margin:0 0 15px">'.$esc($valor).'</p>'
-                    .'<p style="font-size:16px;line-height:1.55;margin:0">Com a confirmação do pagamento, os débitos anteriores referentes ao serviço serão cancelados e o serviço será reativado.</p>'
+                    .($tipo === 'final' ? '' : '<p style="font-size:16px;line-height:1.55;margin:0">Com a confirmação do pagamento, os débitos anteriores referentes ao serviço serão cancelados e o serviço será reativado.</p>')
                     .'</td></tr></table>'
                     .'<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-top:16px"><tr><td align="center" bgcolor="#17395c" style="background:#17395c;border-radius:6px;padding:0"><a href="'.$esc($link).'" style="display:block;padding:14px 10px;font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;text-decoration:none !important">Quero pagar o acordo</a></td></tr></table>'
                     .'<p style="font-size:12px;line-height:1.5;color:#64748b;margin:16px 0 3px;text-align:center">Caso seu navegador ou programa de e-mail bloqueie o botão acima, copie o link abaixo e cole-o na barra de endereços.</p>'
@@ -382,7 +404,7 @@ function recuperacao_thx_comunicar($p, $tipo)
         if (empty($p->enviada_at)) {
             $update['enviada_at'] = $agora;
         }
-        if ($tipo === 'final') { $update['aviso_final_at'] = $agora; }
+        if ($tipo === 'final') { $update['aviso_final_at'] = $lote['inicio_aviso']; }
         Capsule::table('mod_recuperacao_thx')->where('id', $p->id)->update($update);
         Capsule::table('mod_recuperacao_thx')->where('id', $p->id)->where('status', 'criada')->update(['status' => 'enviada']);
         $lote['concluido'] = $agora;
