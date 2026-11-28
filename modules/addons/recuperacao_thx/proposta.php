@@ -228,35 +228,7 @@ $real = static function ($v) {
 <div class="cabecalho" role="img" aria-label="Grupo THX"></div>
 <h1>Olá, <?= $esc($clienteNome ?: 'cliente') ?>!</h1>
 <?php $prazoProposta = recuperacao_thx_prazo_final($p); ?>
-<h2>Proposta de regularização<?php if ($prazoProposta): ?> válida até <?= $esc($prazoProposta->format('d/m/Y H:i')) ?><?php endif; ?></h2>
-<?php if ($prazoProposta): ?>
-<p><strong id="cronometroProposta"></strong></p>
-<script nonce="<?= $esc($nonce) ?>">
-(function(){
-    const fim = <?= (int)$prazoProposta->getTimestamp() ?> * 1000;
-    const campo = document.getElementById('cronometroProposta');
-    let timer;
-    function atualizar(){
-        let segundos = Math.max(0, Math.ceil((fim - Date.now()) / 1000));
-        if (!segundos) {
-            campo.textContent = 'Proposta expirada';
-            clearInterval(timer);
-            return;
-        }
-        const unidades = [
-            [Math.floor(segundos / 86400), 'd'],
-            [Math.floor(segundos / 3600) % 24, 'h'],
-            [Math.floor(segundos / 60) % 60, 'm'],
-            [segundos % 60, 's']
-        ];
-        while (unidades.length > 1 && unidades[0][0] === 0) unidades.shift();
-        campo.textContent = unidades.map((u, i) => (i ? String(u[0]).padStart(2, '0') : u[0]) + u[1]).join(' ');
-    }
-    timer = setInterval(atualizar, 1000);
-    atualizar();
-})();
-</script>
-<?php endif; ?>
+<h2>Proposta de regularização<?php if ($prazoProposta): ?> válida até <?= $esc($prazoProposta->format('d/m/Y \à\s H:i')) ?><?php endif; ?></h2>
 <p>Preparamos uma condição especial para regularizar os débitos de seu serviço.</p>
 <p><strong><?= $esc($p->dominio) ?></strong><br><?= $esc($p->produto) ?></p>
 <section>
