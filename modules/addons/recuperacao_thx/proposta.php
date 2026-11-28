@@ -229,8 +229,7 @@ $real = static function ($v) {
 <h1>Olá, <?= $esc($clienteNome ?: 'cliente') ?>!</h1>
 <?php $prazoProposta = recuperacao_thx_prazo_final($p); ?>
 <h2>Proposta de regularização<?php if ($prazoProposta): ?> válida até <?= $esc($prazoProposta->format('d/m/Y \à\s H:i')) ?><?php endif; ?></h2>
-<p>Preparamos uma condição especial para regularizar os débitos de seu serviço.</p>
-<p><strong><?= $esc($p->dominio) ?></strong><br><?= $esc($p->produto) ?></p>
+<p>Preparamos uma condição especial para regularizar os débitos de seu serviço: <?= $esc($p->produto) ?> <strong><?= $esc($p->dominio) ?></strong></p>
 <section>
 <small>Valor total devido</small><br><strong><del><?= $real((float)$p->valor + (float)$p->perdao) ?></del></strong><br><small>Desconto concedido: <?= $real($p->perdao) ?></small>
 <p>Valor para regularização<br><span class="valor"><?= $real($p->valor) ?></span></p>
