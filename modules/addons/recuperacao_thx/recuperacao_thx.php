@@ -349,7 +349,7 @@ function recuperacao_thx_comunicar($p, $tipo)
     $prazo = $tipo === 'final'
         ? new DateTimeImmutable($lote['prazo_final'], new DateTimeZone('America/Sao_Paulo'))
         : recuperacao_thx_prazo_final($propostaPrazo);
-    $tituloProposta = 'Proposta de regularização válida até '.$prazo->format('d/m/Y H:i');
+    $tituloProposta = 'Proposta de regularização válida até '.$prazo->format('d/m/Y \à\s H:i');
     $msg = str_replace("Olá, {primeiro_nome}!\n\n", "Olá, {primeiro_nome}!\n\n*".$tituloProposta."*\n\n", $msg);
     if ($tipo === 'reenvio' && !empty($lote['concluido'])) { $lote = []; }
     $salvar = static function () use (&$controle, &$lote, $chave, $p) {
