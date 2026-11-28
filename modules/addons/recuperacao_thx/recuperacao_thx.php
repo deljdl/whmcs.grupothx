@@ -371,14 +371,14 @@ function recuperacao_thx_comunicar($p, $tipo)
                 $esc = static function ($v) { return htmlspecialchars((string)$v, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); };
                 $aviso = $tipo === 'final'
                     ? '<p style="font-size:16px;line-height:1.5;color:#9b2828;margin:0 0 16px">'.nl2br($esc($avisoTexto)).'</p>'
-                    : '<p style="font-size:17px;margin:0 0 12px">Preparamos uma condição especial para regularizar os débitos de seu serviço.</p>';
+                    : '<p style="font-size:17px;margin:0 0 12px">Preparamos uma condição especial para regularizar os débitos de seu serviço: '.$esc($p->produto).' <strong>'.$esc($p->dominio).'</strong></p>';
                 $html = '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:600px;margin:0 auto;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;color:#142237;background:#ffffff;border:1px solid #d5dfe9;border-radius:14px">'
                     .'<tr><td><img src="'.$esc($imagem).'" width="600" alt="Grupo THX - Renegociação de dívidas" style="display:block;width:100%;max-width:600px;height:auto;border:0;border-radius:14px 14px 0 0"></td></tr>'
                     .'<tr><td style="padding:20px">'
                     .'<p style="font-size:25px;line-height:1.25;font-weight:bold;margin:0 0 10px;color:#142237">Olá, '.$esc($cliente->firstname).'!</p>'
                     .'<p style="font-size:19px;font-weight:bold;margin:0 0 10px">'.$esc($tipo === 'final' ? $assunto : $tituloProposta).'</p>'
                     .$aviso
-                    .'<p style="font-size:17px;margin:0 0 16px"><strong>'.$esc($p->dominio).'</strong><br>'.$esc($p->produto).'</p>'
+                     .($tipo === 'final' ? '<p style="font-size:17px;margin:0 0 16px"><strong>'.$esc($p->dominio).'</strong><br>'.$esc($p->produto).'</p>' : '')
                     .'<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f1f5f9" style="width:100%;background:#f1f5f9;border-radius:9px"><tr><td style="padding:16px">'
                     .'<p style="font-size:14px;color:#415675;margin:0 0 4px">Valor total devido</p>'
                     .'<p style="font-size:18px;font-weight:bold;margin:0 0 4px"><s>'.$esc($original).'</s></p>'
