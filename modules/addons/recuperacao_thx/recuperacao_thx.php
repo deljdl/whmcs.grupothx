@@ -342,6 +342,15 @@ function recuperacao_thx_comunicar($p, $tipo)
         $avisoTexto = "Até o momento, não identificamos o pagamento do acordo referente ao serviço ".$servico.".\n\nVocê tem até ".$dataLimite." para regularizar seu serviço.\n\nApós essa data, o serviço será encerrado definitivamente, incluindo a exclusão de todos os arquivos, bancos de dados e contas de e-mail vinculados ao serviço.\n\nAproveite esta última oportunidade para regularizar sua situação.";
         $msg = "*".$assunto."*\n\nOlá, {primeiro_nome}!\n\n".$avisoTexto."\n\nValor para regularização: ".$valor."\n\nConfira sua proposta:\n".$link;
     }
+    $propostaPrazo = clone $p;
+    if (empty($propostaPrazo->enviada_at)) {
+        $propostaPrazo->enviada_at = $agora;
+    }
+    $prazo = $tipo === 'final'
+        ? new DateTimeImmutable($lote['prazo_final'], new DateTimeZone('America/Sao_Paulo'))
+        : recuperacao_thx_prazo_final($propostaPrazo);
+    $tituloProposta = 'Proposta de regularização válida até '.$prazo->format('d/m/Y H:i');
+    $msg = str_replace("Olá, {primeiro_nome}!\n\n", "Olá, {primeiro_nome}!\n\n*".$tituloProposta."*\n\n", $msg);
     if ($tipo === 'reenvio' && !empty($lote['concluido'])) { $lote = []; }
     $salvar = static function () use (&$controle, &$lote, $chave, $p) {
         $controle[$chave] = $lote;
@@ -367,7 +376,7 @@ function recuperacao_thx_comunicar($p, $tipo)
                     .'<tr><td><img src="'.$esc($imagem).'" width="600" alt="Grupo THX - Renegociação de dívidas" style="display:block;width:100%;max-width:600px;height:auto;border:0;border-radius:14px 14px 0 0"></td></tr>'
                     .'<tr><td style="padding:20px">'
                     .'<p style="font-size:25px;line-height:1.25;font-weight:bold;margin:0 0 10px;color:#142237">Olá, '.$esc($cliente->firstname).'!</p>'
-                    .'<p style="font-size:19px;font-weight:bold;margin:0 0 10px">'.$esc($tipo === 'final' ? $assunto : 'Proposta de regularização').'</p>'
+                    .'<p style="font-size:19px;font-weight:bold;margin:0 0 10px">'.$esc($tipo === 'final' ? $assunto : $tituloProposta).'</p>'
                     .$aviso
                     .'<p style="font-size:17px;margin:0 0 16px"><strong>'.$esc($p->dominio).'</strong><br>'.$esc($p->produto).'</p>'
                     .'<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f1f5f9" style="width:100%;background:#f1f5f9;border-radius:9px"><tr><td style="padding:16px">'
